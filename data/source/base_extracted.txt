@@ -1,0 +1,1234 @@
+--- PAGE 1 ---
+
+1
+
+RESEARCH PAPER
+Experimental Framework and Multi -Response Analysis
+of Support -Assisted Annealing of FFF -Printed PLA for
+Improved Mechanical Performance and Dimensional
+Stability
+Rapid Prototyping, Tooling and Manufacturing
+Production and Industrial Engineering
+Submitted by
+Aadit Jain - 24/PE/001
+Dheeraj Yadav - 24/PE/020
+Ekansh Malhotra - 24/PE/022
+Faculty
+Prof. A. K. Madan
+
+
+--- PAGE 2 ---
+
+2
+Abstract
+Thermal annealing can modify the frozen molecular orientation, crystallization state, residual stress and inter -
+road interfaces of fused -filament-fabricated (FFF) polylactic acid (PLA). These changes may improve heat
+resistance or selected mechanical responses, yet the same increase in chain mobility can cause anisotropic
+shrinkage, thickness growth and warpage. Published studies have examined conventional oven treatment and
+support-assisted routes using sand, ceramic powder, salt, gypsum, liquids and elast omeric encapsulation, but
+their conclusions are difficult to compare because PLA formulation, geometry, print architecture, temperature
+regime and response definitions differ. This paper develops a feasible, standards -informed framework for a
+controlled comparison of as -printed, unconstrained, sand -supported, salt-supported and mechanically fixture -
+constrained PLA. A 25 -specimen screen at 95 C for 60 min is followed by a replicated 3 temperature x 3
+duration x 2 constraint -state factorial, tensile confirmat ion and limited flexural confirmation, for 130 physical
+specimens. Primary responses are ultimate tensile strength, three -axis dimensional change and warpage;
+modulus, strain at break, flexural response and optional differential scanning calorimetry provide supporting
+evidence. Block-aware analysis, interaction modelling, confidence intervals, Pareto comparison and Derringer -
+Suich desirability are specified to balance mechanical performance against dimensional error. Because student
+measurements are not yet  available, the Results and Discussion section is a critical engineering synthesis of
+verified literature rather than a report of local test values. The framework provides a practical basis for
+determining whether low -cost support can preserve useful annealing effects while limiting geometric loss in
+tolerance-sensitive FFF components.
+Keywords: additive manufacturing; fused filament fabrication; polylactic acid; annealing; dimensional
+stability; mechanical properties; design of experiments; multi-response optimization
+
+--- PAGE 3 ---
+
+3
+Table of Contents
+Abstract .................................................................................................................................................................. 2
+1. Introduction ........................................................................................................................................................ 5
+1.1 Research questions ....................................................................................................................................... 5
+1.2 Contribution of the study ............................................................................................................................. 5
+2. Literature Review............................................................................................................................................... 6
+2.1 FDM/FFF additive manufacturing ............................................................................................................... 6
+2.2 PLA material behaviour ............................................................................................................................... 6
+2.3 FDM process parameters .............................................................................................................................. 6
+2.4 Interlayer bonding and anisotropy ................................................................................................................ 7
+2.5 PLA thermal behaviour ................................................................................................................................ 7
+2.6 Annealing of PLA ........................................................................................................................................ 7
+2.7 Mechanical effects of annealing ................................................................................................................... 7
+2.8 Annealing-induced dimensional distortion .................................................................................................. 7
+2.9 Constrained and support-assisted annealing ................................................................................................. 8
+2.10 Research gap .............................................................................................................................................. 9
+3. Research Objectives ........................................................................................................................................... 9
+3.1 Primary objective ......................................................................................................................................... 9
+3.2 Secondary objectives .................................................................................................................................... 9
+4. Research Hypotheses ......................................................................................................................................... 9
+5. Materials and Methods ..................................................................................................................................... 10
+5.1 Material ...................................................................................................................................................... 10
+5.2 FDM process .............................................................................................................................................. 10
+5.3 Specimen geometry .................................................................................................................................... 10
+5.4 Printing and specimen allocation ............................................................................................................... 10
+5.5 Specimen conditioning ............................................................................................................................... 11
+5.6 Baseline measurements .............................................................................................................................. 11
+5.7 Annealing setup .......................................................................................................................................... 11
+5.8 Sand support ............................................................................................................................................... 12
+5.9 Salt support ................................................................................................................................................ 12
+5.10 Mechanical fixture ................................................................................................................................... 12
+5.11 Experimental matrix ................................................................................................................................. 12
+5.12 Tensile testing .......................................................................................................................................... 14
+5.13 Flexural testing ......................................................................................................................................... 14
+5.14 Dimensional measurement ....................................................................................................................... 15
+5.15 Optional thermal and microscopic characterization ................................................................................. 15
+5.16 Standards and measurement methods....................................................................................................... 15
+5.17 Response variables ................................................................................................................................... 15
+5.18 Statistical analysis .................................................................................................................................... 15
+5.19 Safety and feasibility ................................................................................................................................ 16
+6. Results and Discussion - Literature-Based Engineering Analysis ................................................................... 16
+6.1 Effect of annealing temperature ................................................................................................................. 16
+--- PAGE 4 ---
+
+4
+6.2 Effect of annealing duration ....................................................................................................................... 16
+6.3 Effect on tensile strength ............................................................................................................................ 16
+6.4 Effect on tensile modulus and ductility ...................................................................................................... 17
+6.5 Dimensional shrinkage and warpage .......................................................................................................... 17
+6.6 Effect of sand support ................................................................................................................................ 17
+6.7 Effect of salt support .................................................................................................................................. 17
+6.8 Effect of mechanical constraint .................................................................................................................. 17
+7. Multi-Response Optimization Framework ....................................................................................................... 18
+8. Industrial Significance ..................................................................................................................................... 19
+8.1 Advantages of constrained annealing ......................................................................................................... 19
+9. Limitations ....................................................................................................................................................... 20
+10. Future Scope .................................................................................................................................................. 20
+11. Conclusion ..................................................................................................................................................... 20
+References ............................................................................................................................................................ 21
+Appendix A. Complete Experimental Matrix ...................................................................................................... 24
+Appendix B. Specimen Identification Scheme .................................................................................................... 24
+
+
+--- PAGE 5 ---
+
+5
+1. Introduction
+Material extrusion deposits softened thermoplastic roads along programmed toolpaths. Successive roads must
+consolidate while cooling, so bead placement is a transient welding problem rather than simple geometric
+stacking. ISO/ASTM 52900 defines the terminology and ISO 17295 provides the orientation system [1], [2]. At
+interfaces, contact, wetting and molecular interdiffusion compete with cooling; at part scale, raster and build
+direction establish preferred load paths [9]-[17].
+PLA is accessible and comparatively easy to print, but its thermal response depends on stereochemistry, molar
+mass, moisture, additives, pigment and prior cooling [18]-[21]. An FFF coupon is a mesostructured assembly of
+roads, interfaces, voids and frozen orientation, not homogeneous bulk PLA. Identical nominal annealing
+conditions can therefore produce different outcomes across grades and print strategies.
+Annealing is attractive because it can be implemented with relatively simple equipment. Heating above the
+glass-transition region increases segmental mobility, enabling stress relaxation, further crystallization and
+structural rearrangement. Depending on formulation and thermal history, these mechanisms may increase
+useful stiffness, thermal stability or inter -road cohesion [28]-[37]. They also permit the part to move. Length,
+width and thickness may change in different directions; out -of-plane curvature may grow; and a mechanically
+stronger coupon may no longer meet a drawing tolerance. Mechanical improvement and dimensional fidelity
+must therefore be treated as coupled responses rather than independent goals.
+Support-assisted annealing modifies the mechanical boundary condition during heating and cooling. Granular
+media can provide distributed resistance around complex surfaces, whereas a mechanical fixture applies contact
+at designed locations. Published approaches include sand, ceramic powder moulds, salt and gypsum moulds,
+liquid baths, elastomeric encapsulation and related methods [38] -[48]. These processes are not thermally
+equivalent. Support below melting is a constrained annealing treatment; salt treatment near melting can become
+a remoulding or densification process and must not be interpreted as the same mechanism. Support can reduce
+gross movement, but it can also change heating lag, friction, surface cleanliness, contact stress and cooling rate.
+The central research question is: can support -assisted, sub -melting annealing improve or retain useful
+mechanical performance in FFF -printed commercial PLA while reducing the dimensional distortion produced
+by otherwise identical unconstrained annealing? Secondary questions concern temperature, duration, support
+method, interaction effects, statistical significance, practical effect size and industrial feasibility. The paper
+addresses these questions through a literature -supported two-stage design with one controlled print condition,
+paired oven-run blocks, three-axis metrology, tensile and flexural testing, and multi -response optimization. Its
+value lies in a comparable decision framework: constrained annealing itself has precedent, but a common low -
+temperature comparison of unconstrained treatment, multiple granular supports and a quantified fixture remains
+limited.
+1.1 Research questions
+1. How do annealing temperature and hold duration influence signed dimensional change, warpage, tensile
+strength, tensile modulus and strain at break in one controlled FFF PLA process?
+2. Does physical support reduce dimensional distortion relative to unconstrained annealing at the same measured
+thermal exposure?
+3. Which of sand, fine sodium chloride and a mechanical fixture offers the most useful combination of restraint,
+repeatability, cleanliness and safety at a common screening condition?
+4. Do temperature x duration and constraint x thermal -condition interactions change the mechanical -dimensional
+trade-off?
+5. Can a Pareto -efficient and independently confirmed processing window be identified without accepting a
+condition that violates a dimensional or safety limit?
+6. How can a low-cost procedure be made reproducible in an undergraduate material-extrusion laboratory?
+1.2 Contribution of the study
+The contribution is a comparable decision framework, not a universal heat -treatment recipe. It fixes print
+architecture, separates a support screen from the factorial, distinguishes specimens from oven -run replicates,
+retains signed three -axis responses and requires confirmation. If no method passes the screen, that bounded
+negative result still defines the limits of low-cost restraint for the tested PLA.
+--- PAGE 6 ---
+
+6
+2. Literature Review
+2.1 FDM/FFF additive manufacturing
+FFF and FDM commonly denote material extrusion of thermoplastic filament. A drive feeds filament into a hot
+end, and the nozzle deposits softened roads as perimeters, infill and successive layers. The part is an
+accumulation of roads, so its dimensional and mechanical performance depends on the temperature -time
+history of each road and interface [9]-[11].
+
+Figure 1. Original schematic of filament feeding, road deposition and layer-by-layer material extrusion. Not to scale.
+2.2 PLA material behaviour
+PLA grades vary in stereochemistry and molecular architecture. D -lactide content, chain length, branching,
+nucleation, plasticization and degradation history influence transitions, crystallization and mechanics [18]-[20].
+Commercial filament can also contain undisclosed pigments or modifiers, while moisture promotes hydrolysis
+during heating. A valid study therefore retains one documented lot, controls storage and avoids importing
+thermal constants from another formulation.
+Table 1. PLA thermal behaviour relevant to post-print annealing.
+Thermal regime Polymer process Engineering implication Sources
+Below glass
+transition
+Restricted segmental motion; printed
+orientation and residual stress are largely
+frozen.
+Limited structural rearrangement over short holds; low
+distortion risk but modest annealing effect. [18], [19]
+Glass-transition
+region
+Segmental mobility rises and stress
+relaxation becomes possible.
+Shape movement can begin even though the polymer is far
+below melting; grade and history control the interval. [18]-[20]
+Cold-crystallization
+region
+Previously amorphous chains may
+organize when time and mobility are
+sufficient.
+Heat resistance or stiffness may increase, accompanied by
+anisotropic shrinkage or thickness change.
+[20], [28]-
+[33]
+Near melting and
+melting
+Crystal order is lost and macroscopic
+flow or remoulding becomes possible.
+Outside the intended factorial; near-melt salt methods must be
+discussed separately.
+[18], [20],
+[40], [41]
+Thermal
+degradation
+Hydrolysis, oxidation and chain scission
+may alter mass, colour, odour and
+properties.
+Dry handling, verified temperature, ventilation and conservative
+residence time are required. [18]-[20]
+Note: Transition temperatures are formulation- and history-dependent; the tested filament's supplier information and measured oven history take
+precedence over a generic value.
+2.3 FDM process parameters
+Layer height, nozzle temperature, orientation, raster, speed, cooling, infill and shell count alter voids and load
+transfer. Chacon et al. reported orientation -dependent layer-height and feed -rate effects [22]; Lanzotti et al.
+quantified layer, infill and perimeter contributions [23]; and Rajpurohit and Dave examined raster and layer
+variables [24]. Build orientation and infill effects can be strong [25], and strength, modulus and toughness need
+not share an optimum [26], [27]. Printing parameters must therefore be controlled inputs.
+
+--- PAGE 7 ---
+
+7
+2.4 Interlayer bonding and anisotropy
+A deposited road must conform to the previous layer and develop molecular interpenetration. Bellehumeur et
+al. modelled neck growth [12], Sun et al. linked processing to bond quality [13], and Coogan and Kazmer
+separated wetting, contact and diffusion [14]. Thermal studies show how rapidly weld temperature falls [15],
+while PLA work connects cyclic temperature, coalescence and residual alignment to interface strength [16],
+[17]. Annealing may relax orientation, but cannot be assumed to remove every void or raster-induced
+anisotropy.
+2.5 PLA thermal behaviour
+Printed PLA contains amorphous material, orientation and some crystalline order. Reheating enables segmental
+motion, possible cold crystallization and crystal reorganization [20], [28] -[32]. Crystalline form also matters
+[29]; prior processing changes kinetics [30]; and time, temperature, formulation and nucleation interact [31],
+[32]. Annealing response is therefore conditional rather than monotonic.
+
+Figure 2. Competing molecular and geometric responses during sub-melting PLA annealing. Original technical schematic.
+2.6 Annealing of PLA
+FFF studies connect post -print heating with crystallinity, stress, interfaces and dimensions. Wach et al.
+combined structural and mechanical evidence [33]; Lee et al. studied stress relaxation and cooling [34]; Butt
+and Bhaskar reported material -dependent responses [35]; and von Windheim et al. separated porosity,
+crystallinity and adhesion [36]. Grade and orientation alter whether strength, stiffness or heat resistance
+improves [32], [37]. The thermal regime and material must therefore be identified explicitly.
+2.7 Mechanical effects of annealing
+Stress relaxation may reduce frozen stress, crystallization may raise stiffness and interfacial mobility may
+improve selected contacts. Conversely, crystallinity can restrict ductility, hydrolysis can lower molecular mass,
+and shape change alters the section used for stress [28]-[37]. Post-treatment width and thickness must therefore
+be measured, and strength, modulus and strain at break reported separately.
+2.8 Annealing-induced dimensional distortion
+Dimensional movement combines orientation recovery, residual -stress release, thermal expansion,
+crystallization-related volume change, gravity and friction. Raster architecture makes it anisotropic: one axis
+can contract while thickness grows, and gradients can bow the part. Stojkovic et al. evaluated tensile strength
+and dimensional accuracy together [42], while other PLA studies show condition -, orientation - and grade -
+dependence [37], [43], [44]. Length alone can hide width, thickness or flatness failure;  three signed axes and
+warpage are required.
+
+--- PAGE 8 ---
+
+8
+2.9 Constrained and support-assisted annealing
+Support-assisted evidence includes oven, sand, water and glycerol treatments for tough PLA [38], ceramic -
+powder moulds for PLA and ABS [39], and salt or gypsum moulds in regimes that can approach melting [40],
+[41]. Further work compares oven and sand for filled systems [45], performs multi -parameter optimization
+[46], uses salt or elastomeric containment [47], and studies sand-embedded high-heat PLA [48].
+The support physics differ. Sand is conformable, but packing and moisture affect restraint and heating lag. Fine
+salt packs closely, yet is hygroscopic, corrosive when damp and distinct from near -melt remoulding. A fixture
+is reusable and measurable, but excessive load or mismatched expansion can imprint the surface or create
+stress. Screening is more defensible than assuming one method is best.
+Table 2. Synthesis of previous annealing and support-assisted research.
+Study Material Thermal/support condition Principal relevance Limitation for this study
+Wach et al. (2018)
+[33] FFF PLA Annealing with structural and
+mechanical characterization
+Links thermal treatment to
+crystallinity and mechanical
+response.
+No common comparison of granular
+and fixture restraint.
+Wijnbergen et al.
+(2021) [38] Tough PLA Oven, sand, water and
+glycerol
+Treatment medium changes
+deformation and strength.
+Grade and liquid-media physics limit
+transfer to neat commercial PLA.
+Lluch-Cerezo et al.
+(2022) [39] PLA and ABS Ceramic powder mould
+Powder support can limit
+deformation during thermal
+treatment.
+No quantified mechanical fixture in the
+same design.
+Szust and Adamski
+(2022) [40] FFF polymers Annealing and salt treatment
+near melting
+Clarifies the distinction between
+annealing and remelting.
+Near-melt effects cannot be assigned to
+low-temperature support.
+Vorkapic et al.
+(2022) [41]
+PLA and other
+thermoplastics NaCl and gypsum moulds Mould-assisted treatment changes
+tensile behaviour.
+PLA regime approaches remoulding
+rather than only stress relief.
+Stojkovic et al.
+(2023) [42] FFF parts Layer height x temperature x
+time
+Studies tensile response and
+dimensional accuracy together.
+Does not compare support boundary
+conditions.
+Shbanah et al.
+(2023) [43] Printed PLA 55-95 C with extended holds Shows strong dependence on
+orientation and grade.
+Physical support is not the principal
+factor.
+Ghasemkhani et al.
+(2024) [44] Printed PLA Heat-treatment mechanisms Discusses crystallization and
+interlayer-bonding competition.
+Dimensional restraint is not
+systematically varied.
+Butt et al. (2024) [45] Fibre-filled
+systems Oven versus sand Sand response depends on
+composite formulation.
+Not standard neat PLA and no fixture
+comparison.
+Kahya et al. (2025)
+[46] 3D-printed PLA 70-110 C; 40-200 min;
+optimization
+Demonstrates multi-parameter
+thermal optimization.
+Objective structure differs and support
+is not the main factor.
+Chiscop et al. (2025)
+[47] PLA prints Salt and RTV encapsulation Containment can support
+dimensional objectives.
+Application-specific encapsulation limits
+generalization.
+de Assis et al. (2026)
+[48] High-heat PLA Sand-embedded conditioning Recent direct mechanical-
+dimensional trade-off evidence.
+High-heat formulation limits transfer to
+conventional PLA.
+Note: The entries synthesize verified publications [33], [38] -[48]; they are not results obtained at DTU.
+
+Figure 3. Comparison of as-printed, unconstrained, granular-supported and mechanically fixture-constrained boundary conditions.
+Original technical schematic.
+
+--- PAGE 9 ---
+
+9
+2.10 Research gap
+Supported annealing is not unstudied. The gap is comparability: published work varies PLA formulation,
+geometry, orientation, thermal regime, support physics and response definition, and some salt processes
+approach melting. The targeted literature did not identify one peer -reviewed study that screens sand, salt and a
+quantified fixture against unconstrained sub -melting treatment in one commercial PLA, then uses a replicated
+temperature x duration factorial with signed three -axis metrology, warpage, tensile  response, block -aware
+statistics, multi-response optimization and confirmation.
+3. Research Objectives
+3.1 Primary objective
+To evaluate whether physical support during sub -melting annealing can improve or retain useful mechanical
+performance of FFF -printed commercial PLA while reducing three -axis dimensional distortion and warpage
+relative to unconstrained annealing.
+3.2 Secondary objectives
+7. Explain the thermal, crystallization, stress-relaxation and interfacial mechanisms relevant to annealed FFF PLA.
+8. Compare as-printed, unconstrained, sand-supported, salt-supported and gap-controlled fixture conditions at 95 C
+for 60 min.
+9. Quantify temperature, hold-time and constraint effects at 80, 95 and 110 C for 30, 60 and 90 min.
+10. Measure tensile strength, tensile modulus, strain at break, signed length/width/thickness change and out -of-
+plane warpage.
+11. Use a limited three -group flexural comparison to check whether the tensile -based decision transfers to
+bending.
+12. Separate treatment effects from print -plate, oven -run and measurement variation through randomization,
+blocking and repeatability checks.
+13. Develop a transparent multi -response decision that maximizes useful strength and stiffness while
+minimizing dimensional error and warpage.
+14. Assess low-cost implementation, contamination, cleaning, thermal lag, fixture reuse and laboratory safety
+for FFF applications.
+4. Research Hypotheses
+Table 3. Research hypotheses and corresponding null statements.
+Pair Research hypothesis Null statement
+H1 / H01
+At least one support-assisted condition reduces dimensional error and
+warpage relative to thermally matched unconstrained annealing while
+retaining a predefined fraction of its tensile response.
+No practically meaningful paired improvement is
+present within the declared margins.
+H2 / H02
+Temperature has a non-linear influence: increasing mobility and
+crystallization may initially benefit selected responses, while higher
+exposure increases distortion risk.
+Temperature and curvature terms have no effect after
+accounting for other factors and blocks.
+H3 / H03 Hold duration changes mechanical and dimensional responses until a
+kinetic saturation region is approached. Duration has no effect within the tested range.
+H4 / H04 Constraint changes the temperature and/or duration response because
+support modifies motion, friction and heat transfer.
+Constraint x temperature and constraint x duration
+interactions are zero.
+H5 / H05
+One screened support provides a better mechanical-dimensional
+balance than unconstrained treatment under the predeclared selection
+rule.
+No screened support improves that balance beyond
+uncertainty and practical limits.
+H6 / H06 The selected processing condition is reproducible with specimens from
+new print and oven-run blocks.
+Independent confirmation is inconsistent with the
+model interval or acceptance gates.
+Note: Practical dimensional limits and tensile-retention criteria are to be agreed before the screen is evaluated; statistical significance alone does not
+define engineering usefulness.
+--- PAGE 10 ---
+
+10
+5. Materials and Methods
+5.1 Material
+The material is commercial neat PLA filament, nominally 1.75 mm, from one colour and production lot. The
+actual trade name, lot, source, storage history and supplier thermal limits are recorded at procurement rather
+than guessed. Diameter is checked at distributed positions with a calibrated micrometer. The lot is stored sealed
+and dry; any approved drying procedure is applied uniformly. A new lot is not pooled unless it is deliberately
+modelled as a block.
+5.2 FDM process
+One calibrated material -extrusion system is used, with its model and firmware recorded from the laboratory
+machine. Controlled settings are a 0.40 mm brass nozzle, 210 C nozzle, 60 C plate, 0.20 mm layer, 100%
+rectilinear/lines infill, alternating +45/-45 degree raster, 45 mm s-1 nominal speed, flat XY orientation, constant
+validated cooling, three perimeters and five solid top/bottom layers. The slicer release, profile, CAD, mesh and
+G-code are archived.
+Table 4. Controlled FFF printing parameters.
+Variable Specified condition Control status Engineering rationale
+Material Commercial neat PLA; one colour and lot Fixed Controls formulation and moisture history
+Filament diameter 1.75 mm nominal; measured by
+micrometer Recorded Checks feed consistency
+FFF system One calibrated material-extrusion
+machine Fixed Avoids machine-to-machine thermal variation
+Nozzle 0.40 mm brass Fixed Controls road scale and heat transfer
+Nozzle temperature 210 C Fixed Controls melt state and inter-road welding
+Build-plate temperature 60 C Fixed Controls first-layer adhesion and cooling
+Layer height 0.20 mm Fixed Controls interface count and road geometry
+Infill 100%; rectilinear/lines Fixed Limits changes in internal volume fraction
+Raster sequence +45/-45 degrees Fixed Creates a consistent balanced in-plane layup
+Nominal print speed 45 mm s-1 Fixed Controls deposition and cooling history
+Build orientation Flat XY Fixed Controls anisotropy and specimen placement
+Cooling Same validated fan profile Fixed and archived Controls solidification and initial structure
+Shells 3 perimeter walls; 5 solid top and bottom
+layers Fixed Controls shell fraction and edge load path
+Software One recorded slicer release and archived
+profile Fixed Preserves digital process definition
+Note: The printer model, firmware, filament trade name and slicer release are recorded from the actual laboratory resources; they a re not guessed in
+this paper.
+5.3 Specimen geometry
+Tensile coupons follow ASTM D638 -22 Type I where machine and build capacity permit: 165 mm minimum
+overall length, 13 mm narrow width, 57 mm narrow length, 50 mm gauge length, 115 mm nominal grip
+separation and 3.2 mm nominal thickness [4]. If Type IV is necessary, it is adopted for every tensile group
+before printing. ASTM D790 -25 flexural bars use a nominal 127 x 12.7 x 3.2 mm planning geometry [5].
+Actual measured sections govern stress calculations. All coupons are flat XY and reported using ISO
+17295:2023 [2].
+5.4 Printing and specimen allocation
+Identifiers are assigned before printing, and conditions are distributed across plates and randomized positions
+so treatment is not identical to print batch. Records retain plate ID, position, time, operator, ambient conditions
+and defects. Removal and stabilization are consistent. A failed print is documented and replaced with a new
+identifier, never silently excluded.
+--- PAGE 11 ---
+
+11
+5.5 Specimen conditioning
+Specimens are conditioned under ASTM D618 -21 Procedure A for at least 40 h at 23 +/ - 2 C and 50 +/ - 10%
+relative humidity where applicable [6]. The same atmosphere is used after treatment and during testing. Time,
+atmosphere and deviations are recorded because PLA dimensions and properties are moisture- and temperature-
+sensitive.
+5.6 Baseline measurements
+Before heating, overall length, gauge width/thickness, mass and maximum out -of-plane warpage are measured
+at fixed locations. ASTM D5947 -24 guides solid -plastic dimensions [7]. Instrument resolution must be small
+relative to the expected change. Three repeated placements of representative coupons establish short -term
+metrology repeatability and standardize measurement force and orientation.
+
+Figure 4. Measurement locations for length, width, thickness and out-of-plane warpage. Original technical schematic.
+Delta L (%) = [(L_after - L_before) / L_before] x 100 (1)
+Analogous signed changes are calculated for width and thickness. Positive values denote expansion and
+negative values denote contraction. Signed values are retained even when a scalar dimensional-error response is
+used.
+E_RMS (%) = sqrt{[(Delta L)^2 + (Delta W)^2 + (Delta t)^2] / 3} (2)
+If drawing tolerances are available, a tolerance -normalized error is preferred because the allowable deviation
+may differ by axis.
+E_tol = sqrt{[(L_after-L_before)/T_L]^2 + [(W_after-W_before)/T_W]^2 + [(t_after-
+t_before)/T_t]^2} / sqrt(3)
+(3)
+5.7 Annealing setup
+A dedicated ventilated oven receives a spatial-uniformity check. A calibrated probe/logger is placed beside the
+coupon or in a sacrificial support assembly. After the empty oven stabilizes, the tray is loaded and the hold
+starts only when the specimen environment returns within +/ - 2 C of target. The log retains heat -up delay,
+temperature range, excursions and door openings. Treatments are 80, 95 or 110 C for 30, 60 or 90 min [37],
+[42], [43], [46]. The 110 C level proceeds only after a sacrificial coupon s hows no sticking, collapse, smoke or
+abnormal odour.
+After the hold, the hot tray is moved to a heat -resistant surface. The specimen remains constrained until the
+adjacent probe is below 50 C, then is released and cleaned. Cooling location, release time and movement are
+recorded. Early release can permit distortion, while slow cooling can alter crystallization; measured specimen
+temperature, not display setpoint alone, defines exposure.
+
+--- PAGE 12 ---
+
+12
+5.8 Sand support
+Low-dust graded sand is dried to constant mass at 105 +/ - 5 C and cooled sealed. A lidded heat -stable tray
+receives a 20 mm base; the oriented specimen is covered by at least 20 mm and given one fixed gentle vibration
+cycle without tamping the gauge. Grade, mass, fill height, vibration and clearance are recorded because packing
+and thermal lag are part of the process.
+5.9 Salt support
+Fine NaCl is screened only as dry support below melting. It is dried to constant mass at 105 +/ - 5 C, cooled
+sealed, and packed in a dedicated corrosion-resistant tray with the same 20 mm base/cover depths. Grade, mass,
+fill and moisture history are recorded. After cooling, salt is removed without prolonged water exposure and
+cleaning is documented. This differs explicitly from near -melting remoulding [40], [41]; damp salt and
+vulnerable metals are avoided.
+5.10 Mechanical fixture
+Two flat, thermally stable plates use PTFE release films and four symmetric fasteners. Precision stops set the
+hot gap to measured specimen thickness plus 0.05 mm, limiting bow without intentional gauge compression.
+Fasteners seat against the stops diagonally; plate material, flatness, stop thickness and seating -force calibration
+are recorded. Each run is inspected for expansion, bow, imprinting and edge contact. Gap control is more
+reproducible than arbitrary torque.
+
+Figure 5. Boundary-condition details for the support-method screen. The same diagram is repeated here to connect the literature
+concepts with the laboratory procedure.
+5.11 Experimental matrix
+Stage 1 screens AP, U, sand, salt and fixture conditions at n=5; annealed groups use 95 C/60 min. Selection
+applies safety and feasibility gates before dimensional error, warpage, tensile retention, variability and
+cleaning. Stage 2 is a 3 x 3 x 2 factorial of temperature, duration and U versus selected constraint, n=5 per cell.
+AP and the applicable 95 C/60 min screen groups are reused with full traceability.
+Table 5. Experimental factors, levels and control structure.
+Factor Levels Role Control and interpretation
+Stage 1 method AP; U; sand; salt; fixture Five levels Screen at 95 C for 60 min; AP receives no heating
+Temperature 80; 95; 110 C Three levels Verified specimen-environment temperature
+Duration 30; 60; 90 min Three levels Hold starts inside +/- 2 C setpoint band
+Definitive constraint U; selected support Two levels Selected after the screen using declared gates
+Replication n = 5 per condition Independent specimens Paired across five separate oven-run blocks
+
+--- PAGE 13 ---
+
+13
+Factor Levels Role Control and interpretation
+Print nuisance factors Plate, position, print time Recorded/blocked Prevent treatment from being identical to print
+batch
+Thermal nuisance
+factors Oven run and position Recorded/random Separate run variation from specimen residual
+error
+Table 6. Specimen plan and accounting.
+Phase Structure Physical specimens Interpretation
+Constraint screen 5 methods x 5 25 tensile/dimensional Includes AP, U and three support candidates at the
+centre condition
+Definitive additional 16 non-centre cells x 5 80 tensile/dimensional Completes the 18 annealed cells after reusing
+centre U and selected-support groups
+Definitive dataset 18 annealed cells x 5 + AP x
+5 95 tensile/dimensional Primary factorial dataset; 15 records originate in
+the screen
+Tensile confirmation 2 groups x 5 10 tensile/dimensional New selected optimum and thermally matched U
+groups
+Flexural confirmation 3 groups x 5 15 flexural AP, matched U and selected optimum
+Total physical specimens 25 + 80 + 10 + 15 130 115 tensile/dimensional plus 15 flexural
+Note: Five coupons placed together in one oven cycle would be subsamples, not five thermal replicates. The definitive paired design  therefore uses five
+independent oven-run blocks for each temperature-duration cell.
+
+Figure 6. Research methodology and data-traceability workflow. Original technical schematic.
+
+--- PAGE 14 ---
+
+14
+
+Figure 7. Two-stage support screening, factorial study and confirmation logic. Original technical schematic.
+
+Figure 8. Definitive 3 x 3 x 2 factorial and paired oven-run blocking structure. Original technical schematic.
+5.12 Tensile testing
+ASTM D638-22 tensile tests use a calibrated UTM, suitable grips, load cell and extensometer [4]. Type I speed
+is 5 mm min-1 unless the complete method requires otherwise. Post-treatment gauge width/thickness define the
+initial area. Report ultimate strength, extensometer modulus, strain at break, break location and failure mode.
+Crosshead travel does not replace extensometer strain for modulus; invalid failures follow a written rule and
+remain traceable.
+5.13 Flexural testing
+ASTM D790-25 flexure uses three -point loading [5]. Actual mean depth determines the nominal 16:1 support
+span and test rate. Report the deflection method because crosshead and deflectometer values differ. AP,
+thermally matched U and the selected condition are compared at n=5; this confirms transfer to bending rather
+than repeating the full optimization.
+
+--- PAGE 15 ---
+
+15
+5.14 Dimensional measurement
+After cooling and reconditioning, all dimensions, mass and warpage are remeasured at identical locations.
+Calibration and resolution are recorded. Duplicate readings are taken independently and a third resolves
+disagreement beyond repeatability. Report signed axis changes with E_RMS or E_tol, and report warpage with
+its reference plane and placement repeatability.
+5.15 Optional thermal and microscopic characterization
+Optional DSC of representative AP, U and selected-support samples follows ASTM D3418-21 with mass, pan,
+atmosphere, rate and cycle reported [8]. First heating captures the print/anneal history; a later heating is not the
+original state. Report transitions and integration limits. For neat PLA, crystallinity may use the commonly
+adopted 93.0 J g-1 fully crystalline reference [21], with baseline and crystal-form uncertainty stated.
+X_c (%) = [(Delta H_m - Delta H_cc) / (w_PLA x Delta H_m^0)] x 100 (4)
+Here Delta H_m is melting enthalpy, Delta H_cc is cold -crystallization enthalpy expressed as a positive
+magnitude, w_PLA is PLA mass fraction and Delta H_m^0 is the declared fully crystalline reference. No
+crystallinity value is calculated without genuine DSC data. Optical microscopy or SEM may compare voids,
+fracture surfaces and inter -road interfaces only when preparation, magnification, scale bars and sampling
+locations are documented.
+5.16 Standards and measurement methods
+Table 7. Standards used for specimen preparation, testing and reporting.
+Purpose Reference Application in this investigation
+AM terminology ISO/ASTM 52900:2021 [1] Use standard material-extrusion and FFF terminology
+Part orientation ISO 17295:2023 [2] Report build coordinates and specimen orientation
+Polymer AM reporting ASTM F3498-23 [3] Describe material handling, anisotropy, porosity and specimen location
+Tensile properties ASTM D638-22 [4] Control specimen type, dimensions, speed, extensometry and validity
+Flexural properties ASTM D790-25 [5] Use actual depth for span/rate and report deflection method
+Conditioning ASTM D618-21 [6] Apply and report conditioning atmosphere and time
+Dimensions ASTM D5947-24 [7] Standardize measurement of solid-plastic specimen dimensions
+Optional DSC ASTM D3418-21 [8] Report transition and enthalpy method, cycle and integration
+Note: The complete copyrighted standards control the test; this table is a planning summary and not a substitute for laboratory acc ess to the current
+documents.
+5.17 Response variables
+Table 8. Response variables and evidence hierarchy.
+Priority Response Unit Measurement and interpretation
+Primary mechanical Ultimate tensile strength MPa Maximum engineering stress from measured post-
+treatment section
+Primary dimensional Signed Delta L, Delta W, Delta t % Before/after matched metrology
+Primary dimensional E_RMS or E_tol % or
+dimensionless Combined error, reported with all signed axes
+Primary geometric Warpage mm Maximum out-of-plane deviation from reference plane
+Secondary mechanical Tensile modulus GPa Extensometer-based initial stiffness
+Secondary mechanical Strain at break % Extensometer or validated strain method
+Confirmation Flexural strength and modulus MPa; GPa Three-group ASTM D790 comparison
+Process quality Mass change and temperature
+history %; C; min Balance and independent thermal logger
+Optional thermal Tg, Tcc, Tm, enthalpies, Xc C; J g-1; % DSC with declared baselines and cycles
+5.18 Statistical analysis
+Report individual data, mean, standard deviation, coefficient of variation and two -sided 95% confidence
+intervals. Stage 1 compares each support with U using multiplicity control and effect sizes. The definitive
+--- PAGE 16 ---
+
+16
+model includes temperature, duration, constraint, required interactions, curvature and oven run as a
+block/random effect. Paired U -supported coupons improve the constraint contrast; print plate and position
+remain nuisance terms. Randomization, replication and blocking follow DOE principles [49].
+Predeclared tests use alpha = 0.05 with residual, normal -quantile and influence diagnostics. Transformation,
+heteroscedastic models or robust sensitivity checks require justification. Report exact p -values with effects and
+intervals. Statistical significance is not manufacturing importance: a dimension outside tolerance or
+unacceptable warpage fails regardless of strength. Five independent specimens per cell mainly resolve large
+effects; add blocks if key contrasts remain imprecise.
+5.19 Safety and feasibility
+Essential equipment is a calibrated FFF printer, PLA lot, ventilated oven, independent logger, calibrated
+caliper/micrometer, surface plate and warpage indicator, balance, UTM with extensometer, heat -stable trays
+and support/fixture hardware. A flexural fixture is strongly recommended. DSC, TGA, microscopy, SEM and
+profilometry are optional.
+Use thermal gloves, tongs, eye protection and heat -resistant surfaces. Smoke, sticking, strong odour or
+abnormal colour stops oven work. Control sand dust; keep salt dry and away from vulnerable metals; guard
+fixture pinch points. Mechanical testing requires correct grips/load cell, eye protection and a fragment
+exclusion zone. Local DTU risk assessment and supervisor instructions take precedence.
+6. Results and Discussion - Literature-Based Engineering Analysis
+This section analyses published experiments to establish mechanisms, feasible conditions and competing
+trends. Cross -study numerical comparison is limited by different PLA grades, geometries, orientations and
+response definitions. Any numerical value is explicitly source -attributed and is not a measurement of the
+planned DTU coupons.
+6.1 Effect of annealing temperature
+Temperature controls the rate of relaxation and crystallization. At 80 C, many commercial grades are mobile
+without approaching melting; gross distortion may be lower, but short holds may not strongly crystallize a slow
+grade. Even modest treatment can alter dimensions while overall form is retained [34], [37], [42], [43].
+At 95 C, mobility is greater and the level is represented in extended-time and optimization work [43], [46]; it is
+a discriminating screen condition, not a declared optimum. At 110 C, crystallization may accelerate, but so can
+stress release, contact marking and gradients. Kahya et al. tested 70-110 C and 40-200 min, reporting 90 C/120
+min as favourable for their material [46]. This supports a central region while showing why another grade
+cannot inherit that optimum.
+A non -linear response is expected: selected properties may improve initially, while dimensional error
+accelerates with mobility. Three levels can reveal a middle compromise that two levels miss. An unsafe 110 C
+pilot requires a revised safe window, not continued testing for statistical completeness.
+6.2 Effect of annealing duration
+Duration is measured after the specimen environment reaches setpoint, because supports create thermal lag.
+Thirty minutes may allow early relaxation with limited movement; 60 min is a practical screen centre; and 90
+min tests continued change or saturation.
+Longer is not always better: crystallization can plateau while distortion or degradation risk accumulates.
+Extended 55-95 C treatments show orientation and grade dependence [43], and nucleation alters response [32].
+Duration must therefore interact with temperature and support-dependent heating lag.
+6.3 Effect on tensile strength
+Tensile findings are mixed because interface rearrangement and stress relief can improve load transfer, while
+voids, degradation or restricted ductility can reduce performance [33] -[37], [44]. Annealing also changes the
+stress denominator; using nominal rather than measured post -treatment dimensions can create a false strength
+increase.
+--- PAGE 17 ---
+
+17
+Wijnbergen et al. compared four media and found method- and orientation-dependent deformation and strength
+[38]. Sand produced the least ring deformation: 2.04% inner -diameter shrinkage and 1.99% height increase for
+horizontal rings. These source -specific, opposing signs show why one -dimensional shrinkage is inadequate.
+Other mould and sand studies also find containment -dependent mechanics, with limited transfer across grades
+and regimes [39], [41], [45].
+6.4 Effect on tensile modulus and ductility
+Modulus can rise with crystalline order while strength remains controlled by voids and fracture paths; strain at
+break may fall as local strain redistribution becomes harder [28], [29], [32]. This matters for jigs: stiffness can
+improve positioning while brittleness worsens clamping or impact behaviour.
+Extensometer strain is required for modulus, and ductility needs a common validity rule. A specimen that
+breaks outside the gauge after fixture imprinting is not evidence of improved bulk PLA. Failure locations must
+accompany summary statistics.
+6.5 Dimensional shrinkage and warpage
+Dimensional change is structural recovery. Nozzle flow, toolpath turning, flattening and non -uniform cooling
+leave direction-dependent orientation and stress. Reheating can contract a preferred road direction while width
+or thickness grows; crystallization adds volume change, and gradients, gravity and friction convert recovery
+into curvature.
+Printing and annealing variables jointly affect tensile and dimensional response [42], while orientation,
+architecture and grade can reverse trends [37], [43], [44]. A specimen may retain length while bowing or
+changing section. Delta L, Delta W, Delta t, combined error and direct warpage are therefore all retained.
+6.6 Effect of sand support
+Sand provides distributed, conformal restraint without a custom mould. It minimized deformation for the
+tough-PLA ring study [38]; powder restraint is also plausible [39]; and oven -versus-sand response depends on
+composite formulation [45]. These findings justify screening sand but do not prove superiority for neat PLA
+coupons.
+Granular support also varies with particle size, moisture, mass, cover depth and vibration. Denser packing may
+restrain more but delay heating or create pressure gradients; dust and cleaning add burden. The medium,
+packing and measured specimen temperature must therefore be recorded.
+6.7 Effect of salt support
+Dry fine salt fills small gaps and is inexpensive. Published methods show that salt containment can preserve
+shape or support more severe treatment [40], [41], [47], but some approach melting or autoclave conditions.
+Their mechanics do not transfer directly; this screen asks only whether dry salt restrains sub -melting
+movement.
+Salt absorbs moisture, contaminates surfaces, corrodes when damp and may require washing that changes
+conditioning. It should advance only if repeatable benefit justifies dedicated drying, trays and cleaning; a small
+geometric gain with unreliable moisture history is not industrially attractive.
+6.8 Effect of mechanical constraint
+A fixture provides a defined reusable boundary: plates suppress bow, stops define the gap, and release films
+permit in-plane slip. It can be calibrated and rapidly reused. Mould and encapsulation studies exist [39], [41],
+[47], but a low-temperature comparison adding a quantified fixture to sand, salt and U remains limited.
+Over-restraint can store stress, buckle edges, emboss surfaces or transfer fixture expansion into PLA. Poor plate
+flatness can exchange global warp for local thickness error. Gap control avoids intentional compression, and
+imprint/contact damage fails the feasibility gate. Flatness alone cannot select the fixture if tensile scatter or
+surface integrity worsens.
+--- PAGE 18 ---
+
+18
+Table 9. Literature-based comparison of annealing responses in FFF PLA.
+Reference Material Thermal
+condition Support Mechanical response Dimensional response Engineering conclusion
+Wach et al. [33] FFF PLA Study-specific
+thermal annealing
+No external
+support
+reported
+Mechanical and
+structural response
+changed with treatment.
+Dimensional control was not
+the main comparison.
+Thermal history must be
+linked to both structure and
+mechanical response.
+Wijnbergen et
+al. [38] Tough PLA Oven, sand, water,
+glycerol Four media
+Strength response
+depended on method
+and print direction.
+Sand gave the least ring
+deformation; horizontal rings
+showed 2.04% inner-
+diameter shrinkage and
+1.99% height increase.
+Support medium and
+orientation must be treated
+as process variables.
+Lluch-Cerezo et
+al. [39] PLA and ABS Multiple thermal
+conditions
+Ceramic
+powder mould
+Mechanical response
+was material- and
+treatment-dependent.
+Powder moulding limited
+deformation under selected
+conditions.
+Powder support is plausible
+but not universal across
+polymers.
+Vorkapic et al.
+[41]
+PLA and
+other
+thermoplastic
+s
+Includes near-
+melting treatment
+NaCl and
+gypsum
+moulds
+Mould treatment altered
+tensile performance.
+Containment enabled shape
+control in the studied regime.
+Near-melt remoulding must
+be separated from sub-
+melting annealing.
+Stojkovic et al.
+[42]
+FFF
+specimens
+Temperature-time
+factorial with layer
+height
+Unconstrained
+Tensile strength varied
+with the combined
+process factors.
+Dimensional accuracy also
+changed and required joint
+evaluation.
+Optimizing strength alone
+can select an inaccurate
+condition.
+Shbanah et al.
+[43] Printed PLA 55-95 C with
+extended holds Unconstrained
+Mechanical response
+depended on orientation
+and condition.
+No common physical-
+restraint comparison.
+The print architecture limits
+transfer of a thermal result.
+Kahya et al. [46] 3D-printed
+PLA
+70-110 C; 40-200
+min
+Unconstrained
+optimization
+Reported 90 C/120 min
+as the favourable
+combined mechanical
+setting in that design.
+Dimensional restraint was
+not the principal objective.
+Multi-response settings are
+local to material, factors and
+weights.
+de Assis et al.
+[48]
+High-heat
+PLA
+Sand-embedded
+thermal conditioning Sand
+Reported a direct
+mechanical response to
+supported conditioning.
+Dimensional response was
+evaluated with the high-heat
+formulation.
+Recent evidence supports
+the trade-off question but
+not transfer to neat PLA.
+Note: Only the Wijnbergen et al. dimensional values are quoted numerically because they were verified from the source. All other en tries are qualitative
+syntheses and must not be read as measurements of the planned DTU specimens.
+Table 10. Literature-supported trends to be tested experimentally.
+Parameter change Expected trend Engineering reason Required caution
+Temperature rises within a safe
+sub-melting window
+Mobility and crystallization rate generally
+increase initially.
+Segmental motion and chain organization
+become faster.
+Non-linear response; high
+levels may distort
+Excessive thermal exposure Dimensional error, warpage or contact
+imprint may increase.
+Stress release, softening, gradients and
+gravity permit movement.
+Pilot stop rule and direct
+metrology
+Duration increases from 30 to
+90 min
+Structural change may grow and then
+approach saturation.
+Crystallization and relaxation have finite
+kinetics.
+Duration x temperature
+interaction
+Sand support Gross deformation may decrease relative
+to U. Distributed granular reaction resists motion. Packing variability, dust and
+thermal lag
+Salt support Granular restraint may reduce movement. Fine particles surround the surface. Moisture, corrosion and
+cleaning
+Gap-controlled fixture Flatness control may be strongest for
+planar coupons.
+Direct geometric restraint limits out-of-plane
+motion.
+Imprint, stored stress and
+thermal expansion
+Constraint becomes excessive Local thickness error or brittle failure may
+increase.
+Contact stress and locked recovery create
+new stress concentrations.
+Inspect surface and retain
+failure mode
+Note: These are hypotheses derived from published mechanisms and studies; they are not observed DTU outcomes.
+7. Multi-Response Optimization Framework
+Tensile strength alone is an incomplete decision: a stronger part may exceed tolerance, warp or become brittle,
+while minimum distortion may come from an ineffective thermal cycle. The objectives therefore maximize
+useful strength/stiffness and minimize E_RMS or E_tol, warpage and shrinkage. Strain at break has a lower -
+bound desirability; safety, sticking, collapse and surface damage are feasibility gates.
+Each response y_i is converted to desirability d_i from 0 (unacceptable) to 1 (target). Maximize functions rise
+from a minimum acceptable value; minimize functions fall toward a maximum tolerable value. Limits, weights
+and curve shapes are set before outcome review under the Derringer-Suich formulation [50].
+D = [product(d_i ^ w_i)] ^ [1 / sum(w_i)] (5)
+Here d_i is an individual desirability and w_i its predeclared weight. The geometric mean makes D zero when
+any response is unacceptable, so strength cannot hide dimensional failure. Report D with each d_i and raw
+units; vary reasonable weights and limits to test selection stability.
+--- PAGE 19 ---
+
+19
+Pareto analysis complements D. A condition is dominated when another is no worse on every response and
+better on one. The efficient set exposes the strength -dimensional trade-off; selection occurs only after safety
+and tolerance gates. Literature suggests a central thermal region and controlled fixture or sand restraint may be
+favourable, but this is a testable expectation, not an optimum claim.
+
+Figure 9. Conceptual Pareto and desirability decision framework. The diagram contains no experimental points or simulated
+measurements.
+Confirmation uses new print and oven blocks: the selected support and thermally matched U at n=5 each.
+Responses must fall within prediction intervals and pass engineering gates; flexural groups check transfer to
+bending. Failed confirmation triggers review of model and boundary control rather than an optimum label.
+8. Industrial Significance
+A reliable support -assisted cycle could extend the usefulness of PLA in functional prototypes, assembly aids,
+jigs, fixtures, drill or inspection guides, low -volume tooling, replacement parts and components exposed to
+moderate heat. These applications value final geometry and repeatability as strongly as coupon strength. A jig
+that becomes stiffer but moves a locating surface outside tolerance has failed its purpose. The proposed
+response hierarchy reflects this reality by treating mechanical performance an d dimensional accuracy
+simultaneously.
+8.1 Advantages of constrained annealing
+The principal attraction is a potentially low-cost post-process that uses existing FFF equipment and a controlled
+oven. Distributed or fixture restraint may reduce gross movement, improve part -to-part consistency, limit
+redesign iterations and make thermal conditioning more practical for tolerance -sensitive parts. Sand and salt
+can conform to irregular forms without machining a mould. A fixture can be reused and integrated with
+inspection for repeated geometries. The method also creates a disciplined qualif ication route: define the
+drawing need, screen boundary conditions, measure the thermal cycle, model a safe window and independently
+confirm the selected condition.
+Table 11. Industrial comparison of annealing boundary conditions.
+Method Advantages Limitations Most plausible use
+Relative
+implementatio
+n burden
+Unconstrained Lowest tooling cost; simplest
+cleaning
+Free shrinkage and warpage; contact-
+face dependence
+Exploratory coupons and
+geometries with generous
+tolerance
+Low
+Sand Conformable; inexpensive;
+distributed restraint
+Packing variability; dust; cleaning;
+thermal lag
+Irregular low-volume parts
+when cleaning is accessible
+Low to
+moderate
+Salt Fine packing; inexpensive;
+potentially dissolvable
+Moisture; corrosion; contamination;
+washing control
+Selected enclosed forms with
+dedicated corrosion-resistant
+handling
+Moderate
+
+--- PAGE 20 ---
+
+20
+Method Advantages Limitations Most plausible use
+Relative
+implementatio
+n burden
+Gap-controlled
+fixture
+Repeatable geometry; reusable;
+fast changeover for families
+Design effort; thermal expansion;
+contact imprint; limited geometric
+flexibility
+Repeated jigs, guides and
+planar tolerance features
+Moderate
+initially; low per
+cycle
+Note: The comparison is an engineering screening aid. Final selection remains local to the tested PLA, geometry, tolerance and clea ning requirements.
+Transfer beyond coupons requires restraint geometry and thermal lag to be reconsidered. Thick ribs, cavities
+and topology-optimized forms do not heat or recover like a 3.2 mm bar. A production procedure must specify
+the part family, print architecture, support preparation, measured thermal window, release temperature,
+cleaning, inspection and acceptance rule. At minimum, a new filament grade, new wall thickness or new fixture
+material requires confirmation rather than direct extrapolation.
+9. Limitations
+The framework deliberately focuses on one commercial neat PLA lot, one printer, one slicer profile, flat
+coupon geometries and one raster architecture. PLA grades differ widely, so conclusions cannot automatically
+extend to tough, nucleated, high -heat, recycled, pigmented or filled products. Coupon response does not fully
+represent thick walls, sharp thickness transitions, enclosed cavities, assemblies or topology -optimized forms.
+The 80-110 C range is scientifically plausible but still requires a sacrifici al safety pilot for the actual filament
+and oven.
+Five independent specimens per cell are feasible for an undergraduate project but provide limited power for
+small interactions. Additional oven-run blocks may be necessary if residual variation is high. Oven uniformity,
+time to specimen setpoint, granular packing and fixture flatness can introduce variation even with a written
+method. The support screen selects one method for the factorial, so the definitive design does not estimate the
+complete temperature dependence of every support. Flexural testing is c onfirmatory and does not replace
+fatigue, creep, impact or heat-deflection testing.
+Without DSC or microscopy, crystallization and interface explanations remain literature-supported mechanisms
+rather than direct measurements in the tested coupons. Even with DSC, a small cut sample may not represent
+through-thickness or between-road variation. Short-term post-treatment dimensions do not establish long -term
+aging, moisture response or creep under service load. Finally, no local effect estimate, p -value or optimum can
+be stated until specimens have been produced and tested under the documented procedure.
+10. Future Scope
+The most useful next step after the coupon study is geometry -dependent validation. Plates, rings, ribs, holes,
+bosses and mixed -thickness components should be annealed under the selected method and inspected with
+coordinate metrology or structured-light scanning. A dimensional compensation model could then relate stable
+signed shrinkage to CAD oversizing: print the predicted pre -compensated geometry, apply the controlled
+annealing cycle and confirm the final drawing dimensions. This extension should be eval uated with prediction
+intervals and independent parts before it is used as a manufacturing rule.
+Material extensions include PETG, ABS, ASA, nylon, fibre -filled PLA, high -heat PLA and recycled
+formulations. Process extensions include constraint pressure or gap as a designed factor, heat -transfer
+modelling inside granular media, topology -optimized fixtures, controlled heating/cooling ramps, digital image
+correlation, computed tomography, heat-deflection testing, fatigue, creep and environmental aging. DSC, TGA,
+SEM and fracture microscopy could connect macroscopic response with crystallinity, degradatio n, voids and
+road interfaces. Response -surface or Bayesian sequential design may refine a safe window after the present
+factorial establishes curvature and interaction structure; machine-learning prediction is appropriate only when a
+sufficiently large, traceable, geometry-diverse dataset exists.
+11. Conclusion
+Annealing of FFF-printed PLA is a coupled thermal, structural and geometric process. Heating above the glass-
+transition region increases chain mobility and can promote stress relaxation, crystallization and changes at
+inter-road interfaces. Those mechanisms may improve heat resistance, stiffness or selected mechanical
+properties, but they also release the frozen orientation and residual stresses created during deposition. The
+--- PAGE 21 ---
+
+21
+resulting contraction, transverse growth and warpage can make a nominally stronger component unsuitable for
+a tolerance -sensitive application. The literature therefore supports evaluating mechanical performance and
+dimensional stability together rather than ranking conditions by tensile strength alone.
+Physical support offers a plausible means of controlling that trade -off, but sand, salt and mechanical fixtures
+impose different boundary conditions. Sand is conformable and inexpensive, yet its packing and thermal lag
+must be controlled. Salt can provide fine granular restraint but introduces moisture, corrosion and cleaning
+concerns and must be distinguished from near -melting salt remoulding. A gap -controlled fixture provides the
+most explicit and reusable geometric restraint for planar specimens, while r isking contact imprint, stored stress
+and thermal-expansion mismatch. Existing studies demonstrate that supported treatments are feasible; they do
+not provide one universal best method because formulation, geometry, orientation and thermal cycle differ.
+The research design resolves this uncertainty in two stages. A 25 -specimen centre-condition screen compares
+AP, U, sand, salt and fixture boundary conditions at 95 C for 60 min. The selected feasible support then enters
+a replicated 80/95/110 C x 30/60/90 min factorial against U. Reuse of the appropriate screen coupons, followed
+by new tensile and flexural confirmation groups, gives 130 physical specimens. Standards -based specimen
+conditioning, measured three -axis dimensions, direct warpage, extensometer te nsile testing, block -aware
+models, confidence intervals and confirmation protect the comparison from nominal -dimension errors and
+oven-cycle pseudoreplication.
+The multi-response framework is central to the engineering decision. Pareto analysis retains the visible trade -
+off, while predeclared Derringer-Suich desirability combines acceptable mechanical and dimensional responses
+without allowing a severe failure to be hidden by an average score. No local optimum or property improvement
+is asserted before testing. Instead, the completed paper provides a technically defensible method and a
+literature-grounded expectation that an intermediate thermal exposure, combined  with controlled physical
+restraint, may offer a more useful balance than either mild untreated behaviour or severe unconstrained heating.
+Execution of the documented experiments is required before the condition can be recommended for DTU
+laboratory or industrial use.
+References
+[1] ISO and ASTM International, “Additive manufacturing — General principles — Fundamentals and vocabulary,” International Standard
+ISO/ASTM 52900:2021, pp./Art. 28 pp., 2021. Available: https://www.iso.org/standard/74514.html.
+[2] International Organization for Standardization, “Additive manufacturing — General principles — Part positioning, coordinates and
+orientation,” International Standard ISO 17295:2023, 2023. Available: https://www.iso.org/standard/76471.html.
+[3] ASTM International, “Standard Guide for Mechanical Characterization of Polymer Additive Manufacturing Materials,” ASTM F3 489-23,
+2023. doi: 10.1520/F3489-23.
+[4] ASTM International, “Standard Test Method for Tensile Properties of Plastics,” ASTM D638-22, pp./Art. 16 pp., 2022. doi: 10.1520/D0638-
+22.
+[5] ASTM International, “Standard Test Methods for Flexural Properties of Unreinforced and Reinforced Plastics and Electrical  Insulating
+Materials,” ASTM D790-25, pp./Art. 12 pp., 2025. doi: 10.1520/D0790-25.
+[6] ASTM International, “Standard Practice for Conditioning Plastics for Testing,” ASTM D618-21, pp./Art. 4 pp., 2021. doi: 10.1520/D0618-21.
+[7] ASTM International, “Standard Test Methods for Physical Dimensions of Solid Plastics Specimens,” ASTM D5947 -24, 2024. doi:
+10.1520/D5947-24.
+[8] ASTM International, “Standard Test Method for Transition Temperatures and Enthalpies of Fusion and Crystallization of Pol ymers by
+Differential Scanning Calorimetry,” ASTM D3418-21, 2021. doi: 10.1520/D3418-21.
+[9] T. D. Ngo, A. Kashani, G. Imbalzano, K. T. Q. Nguyen, D. Hui, “Additive manufacturing (3D printing): A review of material s, methods,
+applications and challenges,” Composites Part B: Engineering, vol. 143, pp./Art. 172 –196, 2018. doi:
+10.1016/j.compositesb.2018.02.012.
+[10] B. N. Turner, R. Strong, S. A. Gold, “A review of melt extrusion additive manufacturing processes: I. Process design and  modeling,”
+Rapid Prototyping Journal, vol. 20, no. 3, pp./Art. 192–204, 2014. doi: 10.1108/RPJ-01-2013-0012.
+[11] B. N. Turner, S. A. Gold, “A review of melt extrusion additive manufacturing processes: II. Materials, dimensional accur acy, and surface
+roughness,” Rapid Prototyping Journal, vol. 21, no. 3, pp./Art. 250–261, 2015. doi: 10.1108/RPJ-02-2013-0017.
+[12] C. Bellehumeur, L. Li, Q. Sun, P. Gu, “Modeling of Bond Formation Between Polymer Filaments in the Fused Deposition Mode ling
+Process,” Journal of Manufacturing Processes, vol. 6, no. 2, pp./Art. 170–178, 2004. doi: 10.1016/S1526-6125(04)70071-7.
+[13] Q. Sun, G. M. Rizvi, C. T. Bellehumeur, P. Gu, “Effect of processing conditions on the bonding quality of FDM polymer fi laments,” Rapid
+Prototyping Journal, vol. 14, no. 2, pp./Art. 72–80, 2008. doi: 10.1108/13552540810862028.
+[14] T. J. Coogan, D. O. Kazmer, “Bond and part strength in fused deposition modeling,” Rapid Prototyping Journal, vol. 23, n o. 2, pp./Art.
+414–422, 2017. doi: 10.1108/RPJ-03-2016-0050.
+[15] J. E. Seppala, S. H. Han, K. E. Hillgartner, C. S. Davis, K. B. Migler, “Weld formation during material extrusion additi ve manufacturing,”
+Soft Matter, vol. 13, no. 38, pp./Art. 6761–6769, 2017. doi: 10.1039/C7SM00950J.
+[16] A. Kallel, I. Koutiri, E. Babaeitorkamani, A. Khavandi, M. Tamizifar, M. Shirinbayan, A. Tcharkhtchi, “Study of Bonding Formation between
+the Filaments of PLA in FFF Process,” International Polymer Processing, vol. 34, no. 4, pp./Art. 434–444, 2019. doi: 10.3139/217.3718.
+--- PAGE 22 ---
+
+22
+[17] A. Costanzo, R. Spotorno, M. V. Candal, M. M. Fernández, A. J. Müller, R. S. Graham, D. Cavallo, C. McIlroy, “Residual a lignment and
+its effect on weld strength in material -extrusion 3D-printing of polylactic acid,” Additive Manufacturing, vol. 36, pp./Art. 101415, 2020.
+doi: 10.1016/j.addma.2020.101415.
+[18] L.-T. Lim, R. Auras, M. Rubino, “Processing technologies for poly(lactic acid),” Progress in Polymer Science, vol. 33, no. 8, pp ./Art. 820–
+852, 2008. doi: 10.1016/j.progpolymsci.2008.05.004.
+[19] S. Farah, D. G. Anderson, R. Langer, “Physical and mechanical properties of PLA, and their functions in widespread appli cations — A
+comprehensive review,” Advanced Drug Delivery Reviews, vol. 107, pp./Art. 367–392, 2016. doi: 10.1016/j.addr.2016.06.012.
+[20] S. Saeidlou, M. A. Huneault, H. Li, C. B. Park, “Poly(lactic acid) crystallization,” Progress in Polymer Science, vol. 3 7, no. 12, pp./Art.
+1657–1677, 2012. doi: 10.1016/j.progpolymsci.2012.07.005.
+[21] E. W. Fischer, H. J. Sterzel, G. Wegner, “Investigation of the structure of solution grown crystals of lactide copolymer s by means of
+chemical reactions,” Kolloid-Zeitschrift und Zeitschrift für Polymere, vol. 251, no. 11, pp./Art. 980–990, 1973. doi: 10.1007/BF01498927.
+[22] J. M. Chacón, M. A. Caminero, E. García -Plaza, P. J. Núñez, “Additive manufacturing of PLA structures using fused deposition
+modelling: Effect of process parameters on mechanical properties and their optimal selection,” Materials & Design, vol. 124, pp./Art.
+143–157, 2017. doi: 10.1016/j.matdes.2017.03.065.
+[23] A. Lanzotti, M. Grasso, G. Staiano, M. Martorelli, “The impact of process parameters on mechanical properties of parts fabricated in PLA
+with an open-source 3-D printer,” Rapid Prototyping Journal, vol. 21, no. 5, pp./Art. 604–617, 2015. doi: 10.1108/RPJ-09-2014-0135.
+[24] S. R. Rajpurohit, H. K. Dave, “Effect of process parameters on tensile strength of FDM printed PLA part,” Rapid Prototyp ing Journal, vol.
+24, no. 8, pp./Art. 1317–1324, 2018. doi: 10.1108/RPJ-06-2017-0134.
+[25] H. Gonabadi, A. Yadav, S. J. Bull, “The effect of processing parameters on the mechanical characteristics of PLA produced by a 3D FFF
+printer,” International Journal of Advanced Manufacturing Technology, vol. 111, no. 3–4, pp./Art. 695–709, 2020. doi: 10.1007/s00170-
+020-06138-4.
+[26] Y. Zhao, Y. Chen, Y. Zhou, “Novel mechanical models of tensile strength and elastic property of FDM AM PLA materials: Ex perimental
+and theoretical analyses,” Materials & Design, vol. 181, pp./Art. 108089, 2019. doi: 10.1016/j.matdes.2019.108089.
+[27] J. Kiendl, C. Gao, “Controlling toughness and strength of FDM 3D-printed PLA components through the raster layup,” Composites Part B:
+Engineering, vol. 180, pp./Art. 107562, 2020. doi: 10.1016/j.compositesb.2019.107562.
+[28] C. Benwood, A. Anstey, J. Andrzejewski, M. Misra, A. K. Mohanty, “Improving the Impact Strength and Heat Resistance of 3 D Printed
+Models: Structure, Property, and Processing Correlationships during Fused Deposition Modeling (FDM) of Poly(Lactic Acid),” AC S
+Omega, vol. 3, no. 4, pp./Art. 4400–4411, 2018. doi: 10.1021/acsomega.8b00129.
+[29] T. Tábi, S. Hajba, J. G. Kovács, “Effect of crystalline forms (α′ and α) of poly(lactic acid) on its mechanical, thermo -mechanical, heat
+deflection temperature and creep properties,” European Polymer Journal, vol. 82, pp./Art. 232 –243, 2016. doi:
+10.1016/j.eurpolymj.2016.07.024.
+[30] R. Pantani, F. De Santis, A. Sorrentino, F. De Maio, G. Titomanlio, “Crystallization kinetics of virgin and processed po ly(lactic acid),”
+Polymer Degradation and Stability, vol. 95, no. 7, pp./Art. 1148–1159, 2010. doi: 10.1016/j.polymdegradstab.2010.04.018.
+[31] Y. Srithep, P. Nealey, L. -S. Turng, “Effects of annealing time and temperature on the crystallinity and heat resistance behavior of
+injection-molded poly(lactic acid),” Polymer Engineering & Science, vol. 53, no. 3, pp./Art. 580–588, 2013. doi: 10.1002/pen.23304.
+[32] H. Simmons, P. Tiwary, J. E. Colwell, M. Kontopoulou, “Improvements in the crystallinity and mechanical properties of PLA by nucleation
+and annealing,” Polymer Degradation and Stability, vol. 166, pp./Art. 248–257, 2019. doi: 10.1016/j.polymdegradstab.2019.06.001.
+[33] R. A. Wach, P. Wolszczak, A. Adamus-Wlodarczyk, “Enhancement of Mechanical Properties of FDM-PLA Parts via Thermal Annealing,”
+Macromolecular Materials and Engineering, vol. 303, no. 9, pp./Art. 1800169, 2018. doi: 10.1002/mame.201800169.
+[34] S. K. Lee, Y. R. Kim, S. H. Kim, J. H. Kim, “Investigation of the Internal Stress Relaxation in FDM 3D Printing: Anneali ng Conditions,”
+Journal of the Korean Society of Manufacturing Process Engineers, vol. 17, no. 4, pp./Art. 130 –136, 2018. doi:
+10.14775/ksmpe.2018.17.4.130.
+[35] J. Butt, R. Bhaskar, “Investigating the Effects of Annealing on the Mechanical Properties of FFF -Printed Thermoplastics,” Journal of
+Manufacturing and Materials Processing, vol. 4, no. 2, pp./Art. 38, 2020. doi: 10.3390/jmmp4020038.
+[36] N. von Windheim, D. W. Collinson, T. Lau, L. C. Brinson, K. Gall, “The influence of porosity, crystallinity and interlay er adhesion on the
+tensile strength of 3D printed polylactic acid (PLA),” Rapid Prototyping Journal, vol. 27, no. 7, pp./Art. 1327 –1336, 2021. doi:
+10.1108/RPJ-08-2020-0205.
+[37] N. Jayanth, K. Jaswanthraj, S. Sandeep, N. H. Mallaya, S. R. Siddharth, “Effect of heat treatment on mechanical properties of 3D printed
+PLA,” Journal of the Mechanical Behavior of Biomedical Materials, vol. 123, pp./Art. 104764, 2021. doi: 10.1016/j.jmbbm.2021.104764.
+[38] D. C. Wijnbergen, M. van der Stelt, L. M. Verhamme, “The effect of annealing on deformation and mechanical strength of tough PLA and
+its application in 3D printed prosthetic sockets,” Rapid Prototyping Journal, vol. 27, no. 11, pp./Art. 81 –89, 2021. doi: 10.1108/RPJ-04-
+2021-0090.
+[39] J. Lluch -Cerezo, M. D. Meseguer, J. A. García -Manrique, R. Benavente, “Influence of Thermal Annealing Temperatures on Powder
+Mould Effectiveness to Avoid Deformations in ABS and PLA 3D -Printed Parts,” Polymers, vol. 14, no. 13, pp./Art. 2607, 2022. doi:
+10.3390/polym14132607.
+[40] A. Szust, G. Adamski, “Using thermal annealing and salt remelting to increase tensile properties of 3D FDM prints,” Engi neering Failure
+Analysis, vol. 132, pp./Art. 105932, 2022. doi: 10.1016/j.engfailanal.2021.105932.
+[41] M. Vorkapić, I. Mladenović, T. Ivanov, A. Kovačević, M. S. Hasan, A. Simonović, I. Trajković, “Enhancing mechanical prop erties of 3D
+printed thermoplastic polymers by annealing in moulds,” Advances in Mechanical Engineering, vol. 14, no. 8, pp./Art.
+16878132221120737, 2022. doi: 10.1177/16878132221120737.
+[42] J. R. Stojković, R. Turudija, N. Vitković, F. Górski, A. Păcurar, A. Pleşa, A. Ianoşi -Andreeva-Dimitrova, R. Păcurar, “An Experimental
+Study on the Impact of Layer Height and Annealing Parameters on the Tensile Strength and Dimensional Accuracy of FDM 3D Printed
+Parts,” Materials, vol. 16, no. 13, pp./Art. 4574, 2023. doi: 10.3390/ma16134574.
+[43] M. Shbanah, M. Jordanov, Z. Nyikes, L. Tóth, T. A. Kovács, “The Effect of Heat Treatment on a 3D -Printed PLA Polymer’s Mechanical
+Properties,” Polymers, vol. 15, no. 6, pp./Art. 1587, 2023. doi: 10.3390/polym15061587.
+[44] A. Ghasemkhani, G. Pircheraghi, N. Rashidi Mehrabadi, A. Eshraghi, “Effects of heat treatment on the mechanical properti es of 3D -
+printed polylactic acid: Study of competition between crystallization and interlayer bonding,” Materials Today Communications , vol. 39,
+pp./Art. 109266, 2024. doi: 10.1016/j.mtcomm.2024.109266.
+[45] J. Butt, M. A. A. Khan, M. Adnan, V. Mohaghegh, “Performance Analysis of FFF-Printed Carbon Fiber Composites Subjected to Different
+Annealing Methods,” Journal of Manufacturing and Materials Processing, vol. 8, no. 6, pp./Art. 252, 2024. doi: 10.3390/jmmp8060252.
+--- PAGE 23 ---
+
+23
+[46] Ç. Kahya, O. Tunçel, O. Çavuşoğlu, K. Tüfekci, “Thermal annealing optimization for improved mechanical performance of PL A parts
+produced via 3D printing,” Polymer Testing, vol. 144, pp./Art. 108735, 2025. doi: 10.1016/j.polymertesting.2025.108735.
+[47] F. Chiscop, C. -C. Cazacu, D.-A. Cazacu, C. E. Cotet, “Sustainable Thermal Post -Processing of PLA 3D Prints: Increased Dimensional
+Precision and Autoclave Compatibility,” Journal of Functional Biomaterials, vol. 16, no. 9, pp./Art. 334, 2025. doi: 10.3390/jfb16090334.
+[48] C. L. F. de Assis, K. dos Santos Tiene, G. B. Magosse, “Dimensional Stability and Mechanical Performance of Thermally Co nditioned
+High-Heat Polylactic Acid Parts Produced by Fused Filament Fabrication,” Polymer Engineering & Science, vol. 66, no. 2, pp./Art. 941–
+958, 2026. doi: 10.1002/pen.70250.
+[49] D. C. Montgomery, “Design and Analysis of Experiments, 10th ed.,” John Wiley & Sons, 2019. Available: https://www.wiley. com/en-
+us/design-and-analysis-of-experiments-10th-edition-p-9781119492443.
+[50] G. Derringer, R. Suich, “Simultaneous Optimization of Several Response Variables,” Journal of Quality Technology, vol. 1 2, no. 4,
+pp./Art. 214–219, 1980. doi: 10.1080/00224065.1980.11980968.
+
+--- PAGE 24 ---
+
+24
+Appendix A. Complete Experimental Matrix
+The definitive dataset contains a common AP baseline and 18 annealed temperature -duration-constraint cells.
+Each row contains five independently printed coupons. For each temperature -duration cell, the five U coupons
+and five selected-constraint coupons are processed as pairs across five separate oven -run blocks. The 95 C/60
+min U and selected -constraint groups originate in the Stage 1 screen and retain their original immutable
+specimen IDs.
+Table A1. Definitive tensile and dimensional matrix.
+Cell code Temperature (C) Duration (min) Constraint n Specimen source
+AP None None None 5 Baseline; reused from Stage 1
+T80-30-U 80 30 U 5 Definitive additional group
+T80-30-SC 80 30 SC 5 Definitive additional group
+T80-60-U 80 60 U 5 Definitive additional group
+T80-60-SC 80 60 SC 5 Definitive additional group
+T80-90-U 80 90 U 5 Definitive additional group
+T80-90-SC 80 90 SC 5 Definitive additional group
+T95-30-U 95 30 U 5 Definitive additional group
+T95-30-SC 95 30 SC 5 Definitive additional group
+T95-60-U 95 60 U 5 Stage 1 centre group
+T95-60-SC 95 60 SC 5 Stage 1 centre group
+T95-90-U 95 90 U 5 Definitive additional group
+T95-90-SC 95 90 SC 5 Definitive additional group
+T110-30-U 110 30 U 5 Definitive additional group
+T110-30-SC 110 30 SC 5 Definitive additional group
+T110-60-U 110 60 U 5 Definitive additional group
+T110-60-SC 110 60 SC 5 Definitive additional group
+T110-90-U 110 90 U 5 Definitive additional group
+T110-90-SC 110 90 SC 5 Definitive additional group
+Note: SC denotes the support selected after the screen. AP is not assigned a nominal oven temperature or duration. Total definitive  records = 95.
+Table A2. Independent confirmation matrix.
+Group code Test Condition n
+C-U-OPT Tensile/dimensional Thermally matched U at model-selected temperature and duration 5
+C-SC-OPT Tensile/dimensional Selected support at model-selected temperature and duration 5
+F-AP Flexural As-printed baseline 5
+F-U-OPT Flexural Thermally matched U at model-selected condition 5
+F-SC-OPT Flexural Selected support at model-selected condition 5
+Note: OPT is a symbolic code assigned only after model selection; it is not a claimed numerical optimum. These 25 specimens are new  and are not
+reused from the screen or factorial.
+Appendix B. Specimen Identification Scheme
+Identifiers use STAGE -CONDITION-TEMPERATURE-DURATION-REPLICATE. Stage codes are S
+(screen), D (definitive), C (tensile confirmation) and F (flexural confirmation). Condition codes are AP, U,
+SAND, SALT, FIX and SC. Temperatures use T080, T095 or T110; durations use M030, M060 or M090; and
+replicates use R01-R05. AP identifiers omit thermal fields. Examples are S -SAND-T095-M060-R02 and D-U-
+T080-M030-R04. The final support name remains in the original screen ID, while SC is the analysis alias used
+for the selected method in the paired factorial.
+Specimen ID alone does not establish independence. Separate fields retain print plate, oven run, positions,
+operator and machine-data filename. Labels stay outside the gauge section without notching. Replaced IDs are
+retired with the failure reason and are never recycled.

@@ -1,0 +1,352 @@
+[
+  {
+    "base_id": 1,
+    "base_entry_extracted": "ISO and ASTM International, “Additive manufacturing — General principles — Fundamentals and vocabulary,” International Standard ISO/ASTM 52900:2021, pp./Art. 28 pp., 2021. Available: https://www.iso.org/standard/74514.html.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 2,
+    "base_entry_extracted": "International Organization for Standardization, “Additive manufacturing — General principles — Part positioning, coordinates and orientation,” International Standard ISO 17295:2023, 2023. Available: https://www.iso.org/standard/76471.html.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 3,
+    "base_entry_extracted": "ASTM International, “Standard Guide for Mechanical Characterization of Polymer Additive Manufacturing Materials,” ASTM F3 489-23, 2023. doi: 10.1520/F3489-23.",
+    "disposition": "KEEP BUT REWRITE",
+    "verification_status": "retained_limited_scope_checked",
+    "current_id": 3
+  },
+  {
+    "base_id": 4,
+    "base_entry_extracted": "ASTM International, “Standard Test Method for Tensile Properties of Plastics,” ASTM D638-22, pp./Art. 16 pp., 2022. doi: 10.1520/D0638- 22.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 5,
+    "base_entry_extracted": "ASTM International, “Standard Test Methods for Flexural Properties of Unreinforced and Reinforced Plastics and Electrical Insulating Materials,” ASTM D790-25, pp./Art. 12 pp., 2025. doi: 10.1520/D0790-25.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 6,
+    "base_entry_extracted": "ASTM International, “Standard Practice for Conditioning Plastics for Testing,” ASTM D618-21, pp./Art. 4 pp., 2021. doi: 10.1520/D0618-21.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 7,
+    "base_entry_extracted": "ASTM International, “Standard Test Methods for Physical Dimensions of Solid Plastics Specimens,” ASTM D5947 -24, 2024. doi: 10.1520/D5947-24.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 8,
+    "base_entry_extracted": "ASTM International, “Standard Test Method for Transition Temperatures and Enthalpies of Fusion and Crystallization of Pol ymers by Differential Scanning Calorimetry,” ASTM D3418-21, 2021. doi: 10.1520/D3418-21.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 9,
+    "base_entry_extracted": "T. D. Ngo, A. Kashani, G. Imbalzano, K. T. Q. Nguyen, D. Hui, “Additive manufacturing (3D printing): A review of material s, methods, applications and challenges,” Composites Part B: Engineering, vol. 143, pp./Art. 172 –196, 2018. doi: 10.1016/j.compositesb.2018.02.012.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 10,
+    "base_entry_extracted": "B. N. Turner, R. Strong, S. A. Gold, “A review of melt extrusion additive manufacturing processes: I. Process design and modeling,” Rapid Prototyping Journal, vol. 20, no. 3, pp./Art. 192–204, 2014. doi: 10.1108/RPJ-01-2013-0012.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 11,
+    "base_entry_extracted": "B. N. Turner, S. A. Gold, “A review of melt extrusion additive manufacturing processes: II. Materials, dimensional accur acy, and surface roughness,” Rapid Prototyping Journal, vol. 21, no. 3, pp./Art. 250–261, 2015. doi: 10.1108/RPJ-02-2013-0017.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 12,
+    "base_entry_extracted": "C. Bellehumeur, L. Li, Q. Sun, P. Gu, “Modeling of Bond Formation Between Polymer Filaments in the Fused Deposition Mode ling Process,” Journal of Manufacturing Processes, vol. 6, no. 2, pp./Art. 170–178, 2004. doi: 10.1016/S1526-6125(04)70071-7.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 13,
+    "base_entry_extracted": "Q. Sun, G. M. Rizvi, C. T. Bellehumeur, P. Gu, “Effect of processing conditions on the bonding quality of FDM polymer fi laments,” Rapid Prototyping Journal, vol. 14, no. 2, pp./Art. 72–80, 2008. doi: 10.1108/13552540810862028.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 14,
+    "base_entry_extracted": "T. J. Coogan, D. O. Kazmer, “Bond and part strength in fused deposition modeling,” Rapid Prototyping Journal, vol. 23, n o. 2, pp./Art. 414–422, 2017. doi: 10.1108/RPJ-03-2016-0050.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 15,
+    "base_entry_extracted": "J. E. Seppala, S. H. Han, K. E. Hillgartner, C. S. Davis, K. B. Migler, “Weld formation during material extrusion additi ve manufacturing,” Soft Matter, vol. 13, no. 38, pp./Art. 6761–6769, 2017. doi: 10.1039/C7SM00950J.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 16,
+    "base_entry_extracted": "A. Kallel, I. Koutiri, E. Babaeitorkamani, A. Khavandi, M. Tamizifar, M. Shirinbayan, A. Tcharkhtchi, “Study of Bonding Formation between the Filaments of PLA in FFF Process,” International Polymer Processing, vol. 34, no. 4, pp./Art. 434–444, 2019. doi: 10.3139/217.3718. 22",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 17,
+    "base_entry_extracted": "A. Costanzo, R. Spotorno, M. V. Candal, M. M. Fernández, A. J. Müller, R. S. Graham, D. Cavallo, C. McIlroy, “Residual a lignment and its effect on weld strength in material -extrusion 3D-printing of polylactic acid,” Additive Manufacturing, vol. 36, pp./Art. 101415, 2020. doi: 10.1016/j.addma.2020.101415.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 18,
+    "base_entry_extracted": "L.-T. Lim, R. Auras, M. Rubino, “Processing technologies for poly(lactic acid),” Progress in Polymer Science, vol. 33, no. 8, pp ./Art. 820– 852, 2008. doi: 10.1016/j.progpolymsci.2008.05.004.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 19,
+    "base_entry_extracted": "S. Farah, D. G. Anderson, R. Langer, “Physical and mechanical properties of PLA, and their functions in widespread appli cations — A comprehensive review,” Advanced Drug Delivery Reviews, vol. 107, pp./Art. 367–392, 2016. doi: 10.1016/j.addr.2016.06.012.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 20,
+    "base_entry_extracted": "S. Saeidlou, M. A. Huneault, H. Li, C. B. Park, “Poly(lactic acid) crystallization,” Progress in Polymer Science, vol. 3 7, no. 12, pp./Art. 1657–1677, 2012. doi: 10.1016/j.progpolymsci.2012.07.005.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 21,
+    "base_entry_extracted": "E. W. Fischer, H. J. Sterzel, G. Wegner, “Investigation of the structure of solution grown crystals of lactide copolymer s by means of chemical reactions,” Kolloid-Zeitschrift und Zeitschrift für Polymere, vol. 251, no. 11, pp./Art. 980–990, 1973. doi: 10.1007/BF01498927.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 22,
+    "base_entry_extracted": "J. M. Chacón, M. A. Caminero, E. García -Plaza, P. J. Núñez, “Additive manufacturing of PLA structures using fused deposition modelling: Effect of process parameters on mechanical properties and their optimal selection,” Materials & Design, vol. 124, pp./Art. 143–157, 2017. doi: 10.1016/j.matdes.2017.03.065.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 23,
+    "base_entry_extracted": "A. Lanzotti, M. Grasso, G. Staiano, M. Martorelli, “The impact of process parameters on mechanical properties of parts fabricated in PLA with an open-source 3-D printer,” Rapid Prototyping Journal, vol. 21, no. 5, pp./Art. 604–617, 2015. doi: 10.1108/RPJ-09-2014-0135.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 24,
+    "base_entry_extracted": "S. R. Rajpurohit, H. K. Dave, “Effect of process parameters on tensile strength of FDM printed PLA part,” Rapid Prototyp ing Journal, vol. 24, no. 8, pp./Art. 1317–1324, 2018. doi: 10.1108/RPJ-06-2017-0134.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 25,
+    "base_entry_extracted": "H. Gonabadi, A. Yadav, S. J. Bull, “The effect of processing parameters on the mechanical characteristics of PLA produced by a 3D FFF printer,” International Journal of Advanced Manufacturing Technology, vol. 111, no. 3–4, pp./Art. 695–709, 2020. doi: 10.1007/s00170- 020-06138-4.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 26,
+    "base_entry_extracted": "Y. Zhao, Y. Chen, Y. Zhou, “Novel mechanical models of tensile strength and elastic property of FDM AM PLA materials: Ex perimental and theoretical analyses,” Materials & Design, vol. 181, pp./Art. 108089, 2019. doi: 10.1016/j.matdes.2019.108089.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 27,
+    "base_entry_extracted": "J. Kiendl, C. Gao, “Controlling toughness and strength of FDM 3D-printed PLA components through the raster layup,” Composites Part B: Engineering, vol. 180, pp./Art. 107562, 2020. doi: 10.1016/j.compositesb.2019.107562.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 28,
+    "base_entry_extracted": "C. Benwood, A. Anstey, J. Andrzejewski, M. Misra, A. K. Mohanty, “Improving the Impact Strength and Heat Resistance of 3 D Printed Models: Structure, Property, and Processing Correlationships during Fused Deposition Modeling (FDM) of Poly(Lactic Acid),” AC S Omega, vol. 3, no. 4, pp./Art. 4400–4411, 2018. doi: 10.1021/acsomega.8b00129.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 29,
+    "base_entry_extracted": "T. Tábi, S. Hajba, J. G. Kovács, “Effect of crystalline forms (α′ and α) of poly(lactic acid) on its mechanical, thermo -mechanical, heat deflection temperature and creep properties,” European Polymer Journal, vol. 82, pp./Art. 232 –243, 2016. doi: 10.1016/j.eurpolymj.2016.07.024.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 30,
+    "base_entry_extracted": "R. Pantani, F. De Santis, A. Sorrentino, F. De Maio, G. Titomanlio, “Crystallization kinetics of virgin and processed po ly(lactic acid),” Polymer Degradation and Stability, vol. 95, no. 7, pp./Art. 1148–1159, 2010. doi: 10.1016/j.polymdegradstab.2010.04.018.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 31,
+    "base_entry_extracted": "Y. Srithep, P. Nealey, L. -S. Turng, “Effects of annealing time and temperature on the crystallinity and heat resistance behavior of injection-molded poly(lactic acid),” Polymer Engineering & Science, vol. 53, no. 3, pp./Art. 580–588, 2013. doi: 10.1002/pen.23304.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 32,
+    "base_entry_extracted": "H. Simmons, P. Tiwary, J. E. Colwell, M. Kontopoulou, “Improvements in the crystallinity and mechanical properties of PLA by nucleation and annealing,” Polymer Degradation and Stability, vol. 166, pp./Art. 248–257, 2019. doi: 10.1016/j.polymdegradstab.2019.06.001.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 33,
+    "base_entry_extracted": "R. A. Wach, P. Wolszczak, A. Adamus-Wlodarczyk, “Enhancement of Mechanical Properties of FDM-PLA Parts via Thermal Annealing,” Macromolecular Materials and Engineering, vol. 303, no. 9, pp./Art. 1800169, 2018. doi: 10.1002/mame.201800169.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 34,
+    "base_entry_extracted": "S. K. Lee, Y. R. Kim, S. H. Kim, J. H. Kim, “Investigation of the Internal Stress Relaxation in FDM 3D Printing: Anneali ng Conditions,” Journal of the Korean Society of Manufacturing Process Engineers, vol. 17, no. 4, pp./Art. 130 –136, 2018. doi: 10.14775/ksmpe.2018.17.4.130.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 35,
+    "base_entry_extracted": "J. Butt, R. Bhaskar, “Investigating the Effects of Annealing on the Mechanical Properties of FFF -Printed Thermoplastics,” Journal of Manufacturing and Materials Processing, vol. 4, no. 2, pp./Art. 38, 2020. doi: 10.3390/jmmp4020038.",
+    "disposition": "KEEP BUT REWRITE",
+    "verification_status": "retained_limited_scope_checked",
+    "current_id": 1
+  },
+  {
+    "base_id": 36,
+    "base_entry_extracted": "N. von Windheim, D. W. Collinson, T. Lau, L. C. Brinson, K. Gall, “The influence of porosity, crystallinity and interlay er adhesion on the tensile strength of 3D printed polylactic acid (PLA),” Rapid Prototyping Journal, vol. 27, no. 7, pp./Art. 1327 –1336, 2021. doi: 10.1108/RPJ-08-2020-0205.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 37,
+    "base_entry_extracted": "N. Jayanth, K. Jaswanthraj, S. Sandeep, N. H. Mallaya, S. R. Siddharth, “Effect of heat treatment on mechanical properties of 3D printed PLA,” Journal of the Mechanical Behavior of Biomedical Materials, vol. 123, pp./Art. 104764, 2021. doi: 10.1016/j.jmbbm.2021.104764.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 38,
+    "base_entry_extracted": "D. C. Wijnbergen, M. van der Stelt, L. M. Verhamme, “The effect of annealing on deformation and mechanical strength of tough PLA and its application in 3D printed prosthetic sockets,” Rapid Prototyping Journal, vol. 27, no. 11, pp./Art. 81 –89, 2021. doi: 10.1108/RPJ-04- 2021-0090.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 39,
+    "base_entry_extracted": "J. Lluch -Cerezo, M. D. Meseguer, J. A. García -Manrique, R. Benavente, “Influence of Thermal Annealing Temperatures on Powder Mould Effectiveness to Avoid Deformations in ABS and PLA 3D -Printed Parts,” Polymers, vol. 14, no. 13, pp./Art. 2607, 2022. doi: 10.3390/polym14132607.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 40,
+    "base_entry_extracted": "A. Szust, G. Adamski, “Using thermal annealing and salt remelting to increase tensile properties of 3D FDM prints,” Engi neering Failure Analysis, vol. 132, pp./Art. 105932, 2022. doi: 10.1016/j.engfailanal.2021.105932.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 41,
+    "base_entry_extracted": "M. Vorkapić, I. Mladenović, T. Ivanov, A. Kovačević, M. S. Hasan, A. Simonović, I. Trajković, “Enhancing mechanical prop erties of 3D printed thermoplastic polymers by annealing in moulds,” Advances in Mechanical Engineering, vol. 14, no. 8, pp./Art. 16878132221120737, 2022. doi: 10.1177/16878132221120737.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 42,
+    "base_entry_extracted": "J. R. Stojković, R. Turudija, N. Vitković, F. Górski, A. Păcurar, A. Pleşa, A. Ianoşi -Andreeva-Dimitrova, R. Păcurar, “An Experimental Study on the Impact of Layer Height and Annealing Parameters on the Tensile Strength and Dimensional Accuracy of FDM 3D Printed Parts,” Materials, vol. 16, no. 13, pp./Art. 4574, 2023. doi: 10.3390/ma16134574.",
+    "disposition": "KEEP BUT REWRITE",
+    "verification_status": "retained_limited_scope_checked",
+    "current_id": 2
+  },
+  {
+    "base_id": 43,
+    "base_entry_extracted": "M. Shbanah, M. Jordanov, Z. Nyikes, L. Tóth, T. A. Kovács, “The Effect of Heat Treatment on a 3D -Printed PLA Polymer’s Mechanical Properties,” Polymers, vol. 15, no. 6, pp./Art. 1587, 2023. doi: 10.3390/polym15061587.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 44,
+    "base_entry_extracted": "A. Ghasemkhani, G. Pircheraghi, N. Rashidi Mehrabadi, A. Eshraghi, “Effects of heat treatment on the mechanical properti es of 3D - printed polylactic acid: Study of competition between crystallization and interlayer bonding,” Materials Today Communications , vol. 39, pp./Art. 109266, 2024. doi: 10.1016/j.mtcomm.2024.109266.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 45,
+    "base_entry_extracted": "J. Butt, M. A. A. Khan, M. Adnan, V. Mohaghegh, “Performance Analysis of FFF-Printed Carbon Fiber Composites Subjected to Different Annealing Methods,” Journal of Manufacturing and Materials Processing, vol. 8, no. 6, pp./Art. 252, 2024. doi: 10.3390/jmmp8060252. 23",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 46,
+    "base_entry_extracted": "Ç. Kahya, O. Tunçel, O. Çavuşoğlu, K. Tüfekci, “Thermal annealing optimization for improved mechanical performance of PL A parts produced via 3D printing,” Polymer Testing, vol. 144, pp./Art. 108735, 2025. doi: 10.1016/j.polymertesting.2025.108735.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 47,
+    "base_entry_extracted": "F. Chiscop, C. -C. Cazacu, D.-A. Cazacu, C. E. Cotet, “Sustainable Thermal Post -Processing of PLA 3D Prints: Increased Dimensional Precision and Autoclave Compatibility,” Journal of Functional Biomaterials, vol. 16, no. 9, pp./Art. 334, 2025. doi: 10.3390/jfb16090334.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 48,
+    "base_entry_extracted": "C. L. F. de Assis, K. dos Santos Tiene, G. B. Magosse, “Dimensional Stability and Mechanical Performance of Thermally Co nditioned High-Heat Polylactic Acid Parts Produced by Fused Filament Fabrication,” Polymer Engineering & Science, vol. 66, no. 2, pp./Art. 941– 958, 2026. doi: 10.1002/pen.70250.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 49,
+    "base_entry_extracted": "D. C. Montgomery, “Design and Analysis of Experiments, 10th ed.,” John Wiley & Sons, 2019. Available: https://www.wiley. com/en- us/design-and-analysis-of-experiments-10th-edition-p-9781119492443.",
+    "disposition": "MOVE TO SUPPLEMENT",
+    "verification_status": "pending_independent_verification",
+    "current_id": null
+  },
+  {
+    "base_id": 50,
+    "base_entry_extracted": "G. Derringer, R. Suich, “Simultaneous Optimization of Several Response Variables,” Journal of Quality Technology, vol. 1 2, no. 4, pp./Art. 214–219, 1980. doi: 10.1080/00224065.1980.11980968.",
+    "disposition": "KEEP BUT REWRITE",
+    "verification_status": "retained_limited_scope_checked",
+    "current_id": 4
+  }
+]

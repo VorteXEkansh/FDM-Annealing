@@ -1,0 +1,607 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          4
+        ]
+      ],
+      "date-time": "2026-09-04T09:26:42Z",
+      "timestamp": 1788514002983,
+      "version": "build-2803163510"
+    },
+    "reference-count": 46,
+    "publisher": "MDPI AG",
+    "issue": "2",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              4,
+              28
+            ]
+          ],
+          "date-time": "2020-04-28T00:00:00Z",
+          "timestamp": 1588032000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "JMMP"
+    ],
+    "abstract": "<jats:p>Fused filament fabrication (FFF) is a cost-effective additive manufacturing method that makes use of thermoplastics to produce customised products. However, there are several limitations associated with FFF that are adversely affecting its growth including variety of materials, rough surface finish and poor mechanical properties. This has resulted in the development of metal-infused thermoplastics that can provide better properties. Furthermore, FFF-printed parts can be subjected to post-processes to improve their surface finish and mechanical properties. This work takes into consideration two commonly used polymeric materials, i.e., ABS (acrylonitrile butadiene styrene) and PLA (polylactic acid) and compares the results with two metal-infused thermoplastics i.e., copper-enhanced PLA and aluminium-enhanced ASA (acrylonitrile styrene acrylate). The four different materials were subjected to a post-process called annealing to enhance their mechanical properties. The effect of annealing on these four materials was investigated through dimensional analysis, ultrasonic testing, tensile testing, microstructural analysis and hardness testing. The results showed that annealing affects the materials differently. However, a correlation among ultrasonic testing, tensile testing and microstructural analysis was observed for all the materials based on their crystallinity. It was found that the semi-crystalline materials (i.e., PLA and copper enhanced PLA) showed a considerable increase in tensile strength post-annealing. However, the amorphous materials (ABS and aluminium-enhanced ASA) showed a comparatively lower increase in tensile strength, demonstrating that they were less receptive to annealing. These results were supported by higher transmission times and a high percentage of voids in the amorphous materials. The highest hardness values were observed for the ASA material and the lowest for the ABS material. This work provides a good comparison for the metal-infused thermoplastics and their applicability with the commonly used PLA and ABS materials.</jats:p>",
+    "DOI": "10.3390/jmmp4020038",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          4,
+          28
+        ]
+      ],
+      "date-time": "2020-04-28T09:57:21Z",
+      "timestamp": 1588067841000
+    },
+    "page": "38",
+    "update-policy": "https://doi.org/10.3390/mdpi_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 122,
+    "title": [
+      "Investigating the Effects of Annealing on the Mechanical Properties of FFF-Printed Thermoplastics"
+    ],
+    "prefix": "10.3390",
+    "volume": "4",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-8303-6695",
+        "authenticated-orcid": false,
+        "given": "Javaid",
+        "family": "Butt",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Engineering &amp; Built Environment, Anglia Ruskin University, Chelmsford CM1 1SQ, UK"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0009-3935",
+        "authenticated-orcid": false,
+        "given": "Raghunath",
+        "family": "Bhaskar",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Engineering &amp; Built Environment, Anglia Ruskin University, Chelmsford CM1 1SQ, UK"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "1968",
+    "published-online": {
+      "date-parts": [
+        [
+          2020,
+          4,
+          28
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "ref_1",
+        "unstructured": "Standard, A.S.T.M. (2012). Standard Terminology for Additive Manufacturing Technologies, ASTM International F2792-12a."
+      },
+      {
+        "key": "ref_2",
+        "unstructured": "Butt, J. (2016). A Novel Additive Manufacturing Process for the Production of Metal Parts. [Ph.D. Thesis, Anglia Ruskin University]."
+      },
+      {
+        "key": "ref_3",
+        "first-page": "13",
+        "article-title": "Metal rapid prototyping technologies",
+        "volume": "Volume 14",
+        "author": "Petrova",
+        "year": "2017",
+        "journal-title": "Advances in Engineering Research"
+      },
+      {
+        "key": "ref_4",
+        "first-page": "216",
+        "article-title": "Experimental analysis of metal/plastic composites made by a new hybrid method",
+        "volume": "22",
+        "author": "Butt",
+        "year": "2018",
+        "journal-title": "Addit. Manuf."
+      },
+      {
+        "key": "ref_5",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Butt, J., and Shirvani, H. (2018). Additive, subtractive, and hybrid manufacturing processes. Advances in Manufacturing and Processing of Materials and Structures, CRC Press.",
+        "DOI": "10.1201/b22020-9"
+      },
+      {
+        "key": "ref_6",
+        "first-page": "148",
+        "article-title": "Production of multiple material parts using a desktop 3D printer",
+        "volume": "Volume 6",
+        "author": "Gao",
+        "year": "2017",
+        "journal-title": "Advances in Manufacturing Technology XXXI: Proceedings of the 15th International Conference on Manufacturing Research, Incorporating the 32nd National Conference on Manufacturing Research, University of Greenwich, London, UK, 5–7 September 2017"
+      },
+      {
+        "key": "ref_7",
+        "doi-asserted-by": "crossref",
+        "first-page": "A29",
+        "DOI": "10.1364/JOCN.4.000A29",
+        "article-title": "Silicon photonics for next generation FDM/FDMA PON",
+        "volume": "4",
+        "author": "Charbonnier",
+        "year": "2012",
+        "journal-title": "J. Opt. Commun. Netw."
+      },
+      {
+        "key": "ref_8",
+        "doi-asserted-by": "crossref",
+        "first-page": "528",
+        "DOI": "10.1007/s11465-018-0502-1",
+        "article-title": "A desktop 3D printer with dual extruders to produce customised electronic circuitry",
+        "volume": "13",
+        "author": "Butt",
+        "year": "2018",
+        "journal-title": "Front. Mech. Eng."
+      },
+      {
+        "key": "ref_9",
+        "doi-asserted-by": "crossref",
+        "first-page": "369",
+        "DOI": "10.1016/j.compositesb.2015.06.013",
+        "article-title": "Additive manufacturing of carbon fiber reinforced thermoplastic composites using fused deposition modeling",
+        "volume": "80",
+        "author": "Ning",
+        "year": "2015",
+        "journal-title": "Compos. Part B Eng."
+      },
+      {
+        "key": "ref_10",
+        "doi-asserted-by": "crossref",
+        "first-page": "451",
+        "DOI": "10.1177/0021998316646169",
+        "article-title": "Additive manufacturing of carbon fiber-reinforced plastic composites using fused deposition modeling: Effects of process parameters on tensile properties",
+        "volume": "51",
+        "author": "Ning",
+        "year": "2017",
+        "journal-title": "J. Compos. Mater."
+      },
+      {
+        "key": "ref_11",
+        "doi-asserted-by": "crossref",
+        "first-page": "3741",
+        "DOI": "10.1016/j.jmrt.2019.06.034",
+        "article-title": "Mechanical characteristics of wood, ceramic, metal and carbon fiber-based PLA composites fabricated by FDM",
+        "volume": "8",
+        "author": "Liu",
+        "year": "2019",
+        "journal-title": "J. Mater. Res. Technol."
+      },
+      {
+        "key": "ref_12",
+        "first-page": "1257",
+        "article-title": "Dynamic mechanical properties of copper-ABS composites for FDM feedstock",
+        "volume": "3",
+        "author": "Masood",
+        "year": "2013",
+        "journal-title": "Int. J. Eng. Res. Appl."
+      },
+      {
+        "key": "ref_13",
+        "doi-asserted-by": "crossref",
+        "first-page": "108577",
+        "DOI": "10.1016/j.matdes.2020.108577",
+        "article-title": "Development of carbon fiber acrylonitrile styrene acrylate composite for large format additive manufacturing",
+        "volume": "1941",
+        "author": "Sanchez",
+        "year": "2020",
+        "journal-title": "Mater. Des."
+      },
+      {
+        "key": "ref_14",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1016/j.jmatprotec.2017.04.027",
+        "article-title": "Influence of thermal processing conditions in 3D printing on the crystallinity and mechanical properties of PEEK material",
+        "volume": "248",
+        "author": "Yang",
+        "year": "2017",
+        "journal-title": "J. Mater. Process. Technol."
+      },
+      {
+        "key": "ref_15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Liao, Y., Liu, C., Coppola, B., Barra, G., Di Maio, L., Incarnato, L., and Lafdi, K. (2019). Effect of porosity and crystallinity on 3D printed PLA properties. Polymers, 11.",
+        "DOI": "10.3390/polym11091487"
+      },
+      {
+        "key": "ref_16",
+        "first-page": "130",
+        "article-title": "Investigation of the internal stress relaxation in FDM 3D printing: Annealing conditions",
+        "volume": "17",
+        "author": "Lee",
+        "year": "2018",
+        "journal-title": "J. Korean Soc. Manuf. Process Eng."
+      },
+      {
+        "key": "ref_17",
+        "doi-asserted-by": "crossref",
+        "first-page": "144",
+        "DOI": "10.1016/j.trpro.2019.07.024",
+        "article-title": "Research on parameters optimization for the Additive Manufacturing process",
+        "volume": "40",
+        "author": "Beniak",
+        "year": "2019",
+        "journal-title": "Transp. Res. Procedia"
+      },
+      {
+        "key": "ref_18",
+        "unstructured": "Slavković, V., Grujović, N., Dišić, A., and Radovanović, A. (2017, January 19–21). Influence of annealing and printing directions on mechanical properties of PLA shape memory polymer produced by fused deposition modeling. Proceedings of the 6th International Congress of Serbian Society of Mechanics Mountain Tara, Mountain Tara, Serbia."
+      },
+      {
+        "key": "ref_19",
+        "doi-asserted-by": "crossref",
+        "first-page": "1521",
+        "DOI": "10.1007/s00170-018-03276-8",
+        "article-title": "Optimization and reliability analysis to improve surface quality and mechanical characteristics of heat-treated fused filament fabricated parts",
+        "volume": "102",
+        "author": "Singh",
+        "year": "2019",
+        "journal-title": "Int. J. Adv. Manuf. Technol."
+      },
+      {
+        "key": "ref_20",
+        "doi-asserted-by": "crossref",
+        "first-page": "1800169",
+        "DOI": "10.1002/mame.201800169",
+        "article-title": "Enhancement of mechanical properties of FDM-PLA parts via thermal annealing",
+        "volume": "303",
+        "author": "Wach",
+        "year": "2018",
+        "journal-title": "Macromol. Mater. Eng."
+      },
+      {
+        "key": "ref_21",
+        "doi-asserted-by": "crossref",
+        "first-page": "871",
+        "DOI": "10.1007/s11340-019-00511-5",
+        "article-title": "Analysis of the material behavior of 3D printed laminates via FFF",
+        "volume": "59",
+        "author": "Somireddy",
+        "year": "2019",
+        "journal-title": "Exp. Mech."
+      },
+      {
+        "key": "ref_22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Rodríguez-Panes, A., Claver, J., and Camacho, A.M. (2018). The influence of manufacturing parameters on the mechanical behaviour of PLA and ABS pieces manufactured by FDM: A comparative analysis. Materials, 11.",
+        "DOI": "10.3390/ma11081333"
+      },
+      {
+        "key": "ref_23",
+        "doi-asserted-by": "crossref",
+        "unstructured": "García-Domínguez, A., Claver, J., Camacho, A.M., and Sebastián, M.A. (2020). Considerations on the Applicability of Test Methods for Mechanical Characterization of Materials Manufactured by FDM. Materials, 13.",
+        "DOI": "10.3390/ma13010028"
+      },
+      {
+        "key": "ref_24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cuan-Urquizo, E., Barocio, E., Tejada-Ortigoza, V., Pipes, R.B., Rodriguez, C.A., and Roman-Flores, A. (2019). Characterization of the mechanical properties of FFF structures and materials: A review on the experimental, computational and theoretical approaches. Materials, 12.",
+        "DOI": "10.3390/ma12060895"
+      },
+      {
+        "key": "ref_25",
+        "first-page": "7",
+        "article-title": "Warping deformation of desktop 3D printed parts manufactured by open source fused deposition modeling (FDM) system",
+        "volume": "17",
+        "author": "Alsoufi",
+        "year": "2017",
+        "journal-title": "Int. J. Mech. Mechatron. Eng."
+      },
+      {
+        "key": "ref_26",
+        "doi-asserted-by": "crossref",
+        "first-page": "1183",
+        "DOI": "10.1007/s11837-015-1367-y",
+        "article-title": "Mechanical property optimization of FDM PLA in shear with multiple objectives",
+        "volume": "67",
+        "author": "Torres",
+        "year": "2015",
+        "journal-title": "JOM"
+      },
+      {
+        "key": "ref_27",
+        "doi-asserted-by": "crossref",
+        "first-page": "320",
+        "DOI": "10.1108/RPJ-09-2015-0122",
+        "article-title": "Effect of build orientation on the mechanical reliability of 3D printed ABS",
+        "volume": "23",
+        "author": "Blevins",
+        "year": "2017",
+        "journal-title": "Rapid Prototyp. J."
+      },
+      {
+        "key": "ref_28",
+        "doi-asserted-by": "crossref",
+        "first-page": "2031",
+        "DOI": "10.1177/0954405415617447",
+        "article-title": "Failure investigation of fused deposition modelling parts fabricated at different raster angles under tensile and flexural loading",
+        "volume": "231",
+        "author": "Garg",
+        "year": "2017",
+        "journal-title": "Proc. Inst. Mech. Eng. Part B J. Eng. Manuf."
+      },
+      {
+        "key": "ref_29",
+        "unstructured": "BS EN ISO 527-2:2012 (2012). Plastics—Determination of Tensile Properties–Part 2: Test Conditions for Moulding and Extrusion Plastics, British, European and International Standard."
+      },
+      {
+        "key": "ref_30",
+        "unstructured": "BS EN ISO 2039-2: 2000 BS 2782-3: Method 365C:1992 (2000). Plastics—Determination of hardness—Part 2: Rockwell Hardness, British, European and International Standard."
+      },
+      {
+        "key": "ref_31",
+        "doi-asserted-by": "crossref",
+        "first-page": "192",
+        "DOI": "10.1016/j.polymer.2018.04.024",
+        "article-title": "Increased fracture toughness of additively manufactured amorphous thermoplastics via thermal annealing",
+        "volume": "144",
+        "author": "Hart",
+        "year": "2018",
+        "journal-title": "Polymer"
+      },
+      {
+        "key": "ref_32",
+        "doi-asserted-by": "crossref",
+        "first-page": "242",
+        "DOI": "10.1016/j.polymer.2017.03.011",
+        "article-title": "Improving the impact strength of Poly (lactic acid) (PLA) in fused layer modeling (FLM)",
+        "volume": "114",
+        "author": "Wang",
+        "year": "2017",
+        "journal-title": "Polymer"
+      },
+      {
+        "key": "ref_33",
+        "doi-asserted-by": "crossref",
+        "first-page": "165",
+        "DOI": "10.1007/s40964-018-0041-7",
+        "article-title": "Contribution of printing parameters to the interfacial strength of polylactic acid (PLA) in material extrusion additive manufacturing",
+        "volume": "3",
+        "author": "Wang",
+        "year": "2018",
+        "journal-title": "Progr. Addit. Manuf."
+      },
+      {
+        "key": "ref_34",
+        "doi-asserted-by": "crossref",
+        "first-page": "2246",
+        "DOI": "10.1002/app.27261",
+        "article-title": "Improving mechanical performance of injection molded PLA by controlling crystallinity",
+        "volume": "107",
+        "author": "Harris",
+        "year": "2008",
+        "journal-title": "J. Appl. Polym. Sci."
+      },
+      {
+        "key": "ref_35",
+        "doi-asserted-by": "crossref",
+        "first-page": "4400",
+        "DOI": "10.1021/acsomega.8b00129",
+        "article-title": "Improving the impact strength and heat resistance of 3D printed models: Structure, property, and processing correlationships during fused deposition modeling (FDM) of poly (lactic acid)",
+        "volume": "3",
+        "author": "Benwood",
+        "year": "2018",
+        "journal-title": "ACS Omega"
+      },
+      {
+        "key": "ref_36",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Butt, J., Hewavidana, Y., Mohaghegh, V., Sadeghi-Esfahlani, S., and Shirvani, H. (2019). Hybrid manufacturing and experimental testing of glass fiber enhanced thermoplastic composites. J. Manuf. Mater. Process., 3.",
+        "DOI": "10.3390/jmmp3040096"
+      },
+      {
+        "key": "ref_37",
+        "doi-asserted-by": "crossref",
+        "first-page": "659",
+        "DOI": "10.3144/expresspolymlett.2010.80",
+        "article-title": "Crystalline structure of annealed polylactic acid and its relation to processing",
+        "volume": "4",
+        "author": "Tabi",
+        "year": "2010",
+        "journal-title": "Express Polym. Lett."
+      },
+      {
+        "key": "ref_38",
+        "doi-asserted-by": "crossref",
+        "first-page": "154",
+        "DOI": "10.1016/j.matdes.2017.03.051",
+        "article-title": "Measurements of the mechanical response of unidirectional 3D-printed PLA",
+        "volume": "123",
+        "author": "Song",
+        "year": "2017",
+        "journal-title": "Mater. Des."
+      },
+      {
+        "key": "ref_39",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Rangisetty, S., and Peel, L.D. (2017, January 18–20). The effect of infill patterns and annealing on mechanical properties of additively manufactured thermoplastic composites. Proceedings of the ASME 2017 Conference on Smart Materials, Adaptive Structures and Intelligent Systems, Burlington, VT, USA.",
+        "DOI": "10.1115/SMASIS2017-4011"
+      },
+      {
+        "key": "ref_40",
+        "doi-asserted-by": "crossref",
+        "first-page": "1117",
+        "DOI": "10.1007/s00170-015-6893-9",
+        "article-title": "An investigation on distortion of PLA thin-plate part in the FDM process",
+        "volume": "79",
+        "author": "Xinhua",
+        "year": "2015",
+        "journal-title": "Int. J. Adv. Manuf. Technol."
+      },
+      {
+        "key": "ref_41",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gordeev, E.G., Galushko, A.S., and Ananikov, V.P. (2018). Improvement of quality of 3D printed objects by elimination of microscopic structural defects in fused deposition modeling. PLoS ONE, 13.",
+        "DOI": "10.1371/journal.pone.0198370"
+      },
+      {
+        "key": "ref_42",
+        "first-page": "110",
+        "article-title": "The effects of PLA color on material properties of 3-D printed components",
+        "volume": "8",
+        "author": "Wittbrodt",
+        "year": "2015",
+        "journal-title": "Addit. Manuf."
+      },
+      {
+        "key": "ref_43",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Pérez, M., Medina-Sánchez, G., García-Collado, A., Gupta, M., and Carou, D. (2018). Surface quality enhancement of fused deposition modeling (FDM) printed samples based on the selection of critical printing parameters. Materials, 11.",
+        "DOI": "10.3390/ma11081382"
+      },
+      {
+        "key": "ref_44",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1007/s40430-020-2265-y",
+        "article-title": "Investigations on hardness of investment-casted implants fabricated after vapour smoothing of FDM replicas",
+        "volume": "42",
+        "author": "Singh",
+        "year": "2020",
+        "journal-title": "J. Braz. Soc. Mech. Sci. Eng."
+      },
+      {
+        "key": "ref_45",
+        "doi-asserted-by": "crossref",
+        "first-page": "604",
+        "DOI": "10.1108/RPJ-09-2014-0135",
+        "article-title": "The impact of process parameters on mechanical properties of parts fabricated in PLA with an open-source 3-D printer",
+        "volume": "21",
+        "author": "Pei",
+        "year": "2015",
+        "journal-title": "Rapid Prototyp. J."
+      },
+      {
+        "key": "ref_46",
+        "first-page": "55",
+        "article-title": "Effect of surface hardness and roughness produced by turning on the torsion mechanical properties of annealed AISI 1020 steel",
+        "volume": "84",
+        "author": "Aguirre",
+        "year": "2017",
+        "journal-title": "Rev. Fac. Ing. Univ. Antioq."
+      }
+    ],
+    "container-title": [
+      "Journal of Manufacturing and Materials Processing"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.mdpi.com/2504-4494/4/2/38/pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          13
+        ]
+      ],
+      "date-time": "2025-10-13T13:51:31Z",
+      "timestamp": 1760363491000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.mdpi.com/2504-4494/4/2/38"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          4,
+          28
+        ]
+      ]
+    },
+    "references-count": 46,
+    "journal-issue": {
+      "issue": "2",
+      "published-online": {
+        "date-parts": [
+          [
+            2020,
+            6
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "jmmp4020038"
+    ],
+    "URL": "https://doi.org/10.3390/jmmp4020038",
+    "relation": {},
+    "ISSN": [
+      "2504-4494"
+    ],
+    "issn-type": [
+      {
+        "value": "2504-4494",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          4,
+          28
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "stage": 1,
+  "date": "2026-09-12",
+  "checks": [
+    {
+      "check": "Base PDF hash preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Complete 24-page base source",
+      "status": "pass"
+    },
+    {
+      "check": "Disposition KEEP",
+      "status": "pass"
+    },
+    {
+      "check": "Disposition KEEP BUT REWRITE",
+      "status": "pass"
+    },
+    {
+      "check": "Disposition REPLACE",
+      "status": "pass"
+    },
+    {
+      "check": "Disposition DELETE",
+      "status": "pass"
+    },
+    {
+      "check": "Disposition MOVE TO SUPPLEMENT",
+      "status": "pass"
+    },
+    {
+      "check": "Disposition REUSE AS LITERATURE CONTEXT",
+      "status": "pass"
+    },
+    {
+      "check": "All methods subsections audited",
+      "status": "pass"
+    },
+    {
+      "check": "All discussion subsections audited",
+      "status": "pass"
+    },
+    {
+      "check": "Figures inventoried",
+      "status": "pass"
+    },
+    {
+      "check": "Tables inventoried",
+      "status": "pass"
+    },
+    {
+      "check": "Appendix tables inventoried",
+      "status": "pass"
+    },
+    {
+      "check": "All 50 base references cataloged",
+      "status": "pass"
+    },
+    {
+      "check": "Retained references and citations correspond",
+      "status": "pass"
+    },
+    {
+      "check": "Retained DOIs present",
+      "status": "pass"
+    },
+    {
+      "check": "Objectives numbered 1 through 5",
+      "status": "pass"
+    },
+    {
+      "check": "Equations numbered consecutively",
+      "status": "pass"
+    },
+    {
+      "check": "No duplicated or result figures",
+      "status": "pass"
+    },
+    {
+      "check": "No invented data in results/run_registry.csv",
+      "status": "pass"
+    },
+    {
+      "check": "No invented data in data/literature/property_registry.csv",
+      "status": "pass"
+    },
+    {
+      "check": "No invented data in data/literature/validation_registry.csv",
+      "status": "pass"
+    },
+    {
+      "check": "No dummy ANSYS binaries",
+      "status": "pass"
+    },
+    {
+      "check": "PDF reproducible byte-for-byte",
+      "status": "pass"
+    },
+    {
+      "check": "Complete ten-page manuscript without spill pages",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: F3498",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: sqrt\\s*\\(",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: epsilon_ann",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: Delta L",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: 95 C",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: 3 x 3",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: 130 physical specimens",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: \\bTODO\\b",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: \\bTBD\\b",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: \\ufffd",
+      "status": "pass"
+    },
+    {
+      "check": "Evidence absence explicitly reported",
+      "status": "pass"
+    },
+    {
+      "check": "Thermal choices typeset",
+      "status": "pass"
+    },
+    {
+      "check": "Mathematical symbols preserved",
+      "status": "pass"
+    },
+    {
+      "check": "All pages contain substantive text",
+      "status": "pass"
+    },
+    {
+      "check": "All text lies inside page safety bounds",
+      "status": "pass"
+    }
+  ],
+  "count": 40,
+  "pdf_sha256": "097bf08defcd007c6948f52089b937b92c040cc964ac199ccce10574b1fd2406",
+  "manuscript_sha256": "2acaa3834b679f333dc81acdda659c22d5d362d1db81de79f82a96ffad112376",
+  "scope": "Document and evidence integrity only. No solver verification or validation performed."
+}
