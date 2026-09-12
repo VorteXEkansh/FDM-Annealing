@@ -1,5 +1,5 @@
 {
-  "stage": 4,
+  "stage": 5,
   "date": "2026-09-12",
   "checks": [
     {
@@ -159,11 +159,35 @@
       "status": "pass"
     },
     {
+      "check": "Every governing equation has an implementation target",
+      "status": "pass"
+    },
+    {
+      "check": "All 38 constitutive tests passed",
+      "status": "pass"
+    },
+    {
+      "check": "Constitutive test input and code hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Irreversibility and crystallization gaps explicitly retained",
+      "status": "pass"
+    },
+    {
+      "check": "Constitutive reference conversion reproducible byte-for-byte",
+      "status": "pass"
+    },
+    {
       "check": "PDF reproducible byte-for-byte",
       "status": "pass"
     },
     {
-      "check": "Complete twenty-five-page manuscript without spill pages",
+      "check": "Complete manuscript page count matches reviewed stage record",
+      "status": "pass"
+    },
+    {
+      "check": "All pages visually reviewed for the current PDF hash",
       "status": "pass"
     },
     {
@@ -227,9 +251,9 @@
       "status": "pass"
     }
   ],
-  "count": 56,
-  "pdf_sha256": "63b8525659457ab8840bcb46275e1de5991aa1b93101f3d8830f6100fe1eb939",
-  "manuscript_sha256": "fa729c18adb716eeac1a5a482b77c7ea7152bfc9ee1864fb3ff14368bce5c80b",
-  "material_manifest_sha256": "9f6663401733b32084ef8b79699546743fadd2ff260a165c6fa0a0f34bb7c249",
+  "count": 62,
+  "pdf_sha256": "db5594eaa7b9df04f6cd06d48ce4b6fd6a781be21e39a9f5361869d504e45e64",
+  "manuscript_sha256": "3e4509dea4b1d4384716fc39b212bc8d01ed4a2f0db4c1413fbdfc766a67ef2b",
+  "material_manifest_sha256": "d9eeab055d206d082674004be8f85f1f00168d2aa34288526ac1549c91f5652b",
   "scope": "Document, source and property integrity only. No solver verification or validation performed."
 }

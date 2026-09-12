@@ -1,0 +1,169 @@
+{
+  "stage": 5,
+  "date": "2026-09-12",
+  "scope": "Analytical and synthetic material-point verification; not ANSYS results, specimen experiments or independent material validation. Test strain, time and panel choices are numerical fixtures.",
+  "tests_run": 38,
+  "passed": true,
+  "tests": [
+    {
+      "test": "test_constitutive.MaterialRelations.test_arrhenius_absolute_temperature_and_base",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_compliance_inverts_stiffness",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_engineering_to_tensor_shear_factor",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_fixture_elastic_units",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_fixture_extrapolation_rejected",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_fixture_knots_and_interpolation",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_free_reversible_heating_has_no_stress",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_hydrostatic_bulk_response",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_invalid_material_and_tensor_rejected",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_invalid_steps_and_tg_crossing_rejected",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_isothermal_partition_invariance",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_missing_mechanisms_fail_closed",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_nonfinite_input_rejected",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_nonisothermal_strain_update_refinement",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_outside_characterization_domain_rejected",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_plane_stress_reduction_matches_source",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_positive_dissipation_branch_form",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_prony_fractions_admissible",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_ramp_reduced_time_refinement_and_endpoint_error",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_reduced_time_isothermal",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_reduced_time_reversal_and_additivity",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_reference_shift_is_unity",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_relaxation_fast_and_slow_limits",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_relaxation_monotonic_positive",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_restrained_heating_compressive_sign",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_shear_bulk_conversion_preserves_poisson",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_shear_only_relaxation_is_not_constant_poisson",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_shift_continuity_and_direction",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_single_branch_ramp_exact_integral",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_small_time_step_avoids_cancellation",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_source_modulus_sum",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_step_relaxation_matches_analytical_modulus",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_strain_partition_closes",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_thermal_cycle_reversible",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_thermal_expansion_units_and_shear",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_warmer_equal_duration_relaxes_more",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_wlf_published_coefficients",
+      "status": "pass"
+    },
+    {
+      "test": "test_constitutive.MaterialRelations.test_zero_loading_has_no_spontaneous_stress",
+      "status": "pass"
+    }
+  ],
+  "failures": [],
+  "sha256": {
+    "src/constitutive.py": "493ef6f262c3011c858e619f5de82cb97c0b2a1cfe47e4d523d358b99195d41e",
+    "tests/test_constitutive.py": "2e95e3e225ed3b5567370ed4933fb4f0b167c4012e4a81c4c4a0e0405c1ca8ab",
+    "scripts/check_constitutive.py": "c347ac0b4b52552e93ce4a57ad1e3dd5b3afe518266d2944f3db7924159e9273",
+    "material/pla_properties.csv": "b5df9aee11b99a22f978c78efa60388f4bdcada0325ed2ea8d2415d5f6e9f6f7",
+    "material/fixture_properties.csv": "91432d2d04284e2cd118384d12aefd251ff6f24af91d880278bff4d142880a45"
+  }
+}

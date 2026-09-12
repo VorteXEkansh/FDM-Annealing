@@ -29,7 +29,7 @@ check('No unresolved citation keys or doubled HTML entities','[@' not in source 
 check('All journal DOIs in complete manuscript',all(r['doi'] in source for r in rows))
 check('All DOI-bearing material sources in complete manuscript',all(doi in source for doi in property_dois))
 body=source[:source.index('### References')]
-expected_citations=set(range(1,39)) if property_sources else set(range(1,36))
+expected_citations=set(range(1,40)) if "[39] ANSYS" in source else set(range(1,39)) if property_sources else set(range(1,36))
 check('Every bibliography entry cited in body',set(map(int,re.findall(r'\[(\d+)(?:\]|,)',body)))==expected_citations)
 check('No duplicated table labels',not re.search(r'TABLE: Table \d',source))
 for a in json.loads((ROOT/'literature/acquisition_manifest.json').read_text()):
@@ -58,5 +58,5 @@ with zipfile.ZipFile(ROOT/'literature/literature_matrix.xlsx') as z:
  check('Workbook frozen header and record ID',sheet.find('.//s:pane',ns) is not None)
 stage=int(sys.argv[1]) if len(sys.argv)>1 else 2
 report={'stage':stage,'checks':checks,'count':len(checks),'scope':'Bibliography, source hashes and workbook integrity only'}
-(ROOT/('docs/literature_integrity_report.json' if stage==2 else f'docs/stage_{stage:02d}_literature_integrity.json')).write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+(ROOT/('docs/literature_integrity_report.json' if stage==2 else f'docs/stage_{stage:02d}_literature_integrity.json')).write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(f'{len(checks)} literature integrity checks passed')

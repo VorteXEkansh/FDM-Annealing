@@ -1,0 +1,125 @@
+{
+  "stage": 5,
+  "date": "2026-09-12",
+  "checks": [
+    {
+      "check": "Expected record counts",
+      "status": "pass"
+    },
+    {
+      "check": "Every PLA number has complete provenance fields",
+      "status": "pass"
+    },
+    {
+      "check": "Every fixture number has complete provenance fields",
+      "status": "pass"
+    },
+    {
+      "check": "Property source keys are unique",
+      "status": "pass"
+    },
+    {
+      "check": "Every property record resolves to a source",
+      "status": "pass"
+    },
+    {
+      "check": "Every source has an exact locator",
+      "status": "pass"
+    },
+    {
+      "check": "Every source evidence file exists",
+      "status": "pass"
+    },
+    {
+      "check": "Every source evidence hash matches",
+      "status": "pass"
+    },
+    {
+      "check": "Every stored source hash is SHA-256",
+      "status": "pass"
+    },
+    {
+      "check": "Prusament spectrum contains 23 modulus branches",
+      "status": "pass"
+    },
+    {
+      "check": "Prusament spectrum contains 23 relaxation times",
+      "status": "pass"
+    },
+    {
+      "check": "Prony branch identifiers match",
+      "status": "pass"
+    },
+    {
+      "check": "Instantaneous modulus is reproducible arithmetic",
+      "status": "pass"
+    },
+    {
+      "check": "Recorded instantaneous modulus is 1691.594 MPa",
+      "status": "pass"
+    },
+    {
+      "check": "Normalized branch fractions and long-term fraction sum to one",
+      "status": "pass"
+    },
+    {
+      "check": "Reference formulation is named",
+      "status": "pass"
+    },
+    {
+      "check": "No comparator formulation is admitted",
+      "status": "pass"
+    },
+    {
+      "check": "All unresolved bounds are blank",
+      "status": "pass"
+    },
+    {
+      "check": "All unresolved bounds say no bound invented",
+      "status": "pass"
+    },
+    {
+      "check": "No probability distribution was assigned",
+      "status": "pass"
+    },
+    {
+      "check": "Fixture material is consistently AISI 304",
+      "status": "pass"
+    },
+    {
+      "check": "Fixture temperatures bracket 20–110 °C",
+      "status": "pass"
+    },
+    {
+      "check": "Fixture table is complete at every temperature",
+      "status": "pass"
+    },
+    {
+      "check": "Fixture values come from one identified source",
+      "status": "pass"
+    },
+    {
+      "check": "Manifest identifies current material database stage",
+      "status": "pass"
+    },
+    {
+      "check": "Generator hash matches manifest",
+      "status": "pass"
+    },
+    {
+      "check": "Material output hashes match manifest",
+      "status": "pass"
+    },
+    {
+      "check": "Stage 4 evidence hashes match manifest",
+      "status": "pass"
+    },
+    {
+      "check": "Manifest states that no production material card is admitted",
+      "status": "pass"
+    }
+  ],
+  "count": 29,
+  "material_manifest_sha256": "d9eeab055d206d082674004be8f85f1f00168d2aa34288526ac1549c91f5652b",
+  "scope": "Source, transcription, compatibility and arithmetic checks only; no ANSYS or physical validation evidence."
+}

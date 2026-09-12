@@ -1,0 +1,18 @@
+equation,relation,implementation,status,evidence_or_gate
+1,Initial clearance and normalized clearance,Future geometry parameter assignment,design_definition_pending_geometry,No numerical gap selected
+2,Transient heat balance,Future ANSYS transient thermal field solution,pending_thermal_closures,Prusament k(T) and cp(T) absent; heat-source omission needs justification
+3,Strain partition,src/constitutive.py:Prusament.strain_parts and advance,implemented_reference_partition,Annealing law blocked; zero omission only in numerical tests
+4,Reversible thermal strain,src/constitutive.py:Prusament.thermal_strain,implemented_reference,Chapuis2025 Table B.1 constant alpha
+5,Isotropic stiffness action,src/constitutive.py:isotropic_stress and isotropic_strain,implemented_reference,Constant-Poisson three-dimensional extension explicitly assumed
+6,Generalized-Maxwell stress and branch dynamics,src/constitutive.py:Prusament.stress and advance_reduced,implemented_reference,Chapuis2025 spectrum; no bulk initial-state transfer
+7,Instantaneous modulus and shear/bulk normalization,src/constitutive.py:Prusament.instantaneous and normalized_prony and shear_bulk,implemented_reference,Same fractional kernels are an assumption preserving constant Poisson ratio
+8,Isothermal relaxation modulus,src/constitutive.py:Prusament.relaxation_modulus,implemented_reference,Source master curve; not independent physical validation
+9,Piecewise Arrhenius/WLF shift,src/constitutive.py:Prusament.log10_shift and shift,implemented_reference,Chapuis2025 Eq. 6; source UMAT convention; 23–85 deg C guard
+10,Reduced time integral,src/constitutive.py:Prusament.reduced_time,implemented_reference_quadrature,Linear temperature path with Simpson quadrature and split at Tg
+11,Exponential branch update,src/constitutive.py:Prusament.advance_reduced and advance,implemented_reference,Exact linear-reduced-strain substep; midpoint physical-time approximation tested by refinement
+12,Fixture property interpolation,src/constitutive.py:fixture_property,implemented_reference,Meng2026 Table 1; alpha thermal-strain convention unresolved
+13,Quasi-static mechanical equilibrium,Future ANSYS structural field solution,pending_solver,No field solve; primary comparison omits gravity
+14,Ideal unilateral contact,Future ANSYS contact formulation and verification,pending_solver,Complementarity is an ideal target; numerical penalty and heat transfer not specified
+15,Signed directional dimensional response,Future landmark-based displacement postprocessing,pending_geometry_and_solver,No outputs or final landmarks yet
+16,RMS dimensional response,Future signed-response aggregation,pending_solver_outputs,No dimensions calculated from fabricated fields
+17,Best-fit-plane warpage,Future area-weighted surface-fit postprocessing,pending_geometry_and_solver,No surface mesh or solver displacement yet

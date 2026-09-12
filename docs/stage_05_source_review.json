@@ -1,0 +1,38 @@
+{
+  "stage": 5,
+  "date": "2026-09-12",
+  "sources": [
+    {
+      "path": "literature/evidence/stage_05/ANSYS_2026R1_viscoelasticity.html",
+      "url": "https://ansyshelp.ansys.com/public/Views/Secured/corp/v261/en/ans_thry/thy_mat6.html",
+      "title": "ANSYS Mechanical APDL Theory Reference, Release 2026 R1, section 4.9 Viscoelasticity",
+      "sha256": "f03da8bcd5e3c635754ee7838b6eae707a31bf0b72e5390d46006ce170bb8a8c",
+      "role": "implementation convention; not PLA material data; no DOI"
+    }
+  ],
+  "local_evidence_copies": [
+    {
+      "path": "literature/evidence/stage_05/Trofimov2022.pdf",
+      "original": "tmp/literature/Trofimov2022.pdf",
+      "sha256": "42742d361e0fe0e6f1a266676b1022cf18cfe27f156a60415113f8e3db01e198"
+    },
+    {
+      "path": "literature/evidence/stage_05/Bute2024.pdf",
+      "original": "tmp/literature/Bute2024.pdf",
+      "sha256": "9638cf851454a53a48e341e779494e0252555114f94b3d884f5d29e641a389e5"
+    },
+    {
+      "path": "literature/evidence/stage_05/Relaxation2022.xml",
+      "original": "tmp/literature/Relaxation2022.xml",
+      "sha256": "105e3378d16c0cbab778e519f6dc5b92fc7ea8b17f270a83c1e4e2612550a98b"
+    },
+    {
+      "path": "literature/evidence/stage_05/Laminate2025.pdf",
+      "original": "tmp/literature/Laminate2025.pdf",
+      "sha256": "b6ec6b2d8c70b3628e27dbea07735c44b44d30f7dda666a43e94e5585c0180a7"
+    }
+  ],
+  "access_limits": [
+    "ANSYS v261 Material Reference evis page failed in web tool; Theory Reference page obtained."
+  ]
+}

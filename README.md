@@ -2,7 +2,7 @@
 
 Computational research on quantified gap-controlled constraint during sub-melting annealing of FFF-printed PLA.
 
-**Read [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md) first.** This is a staged research repository, not a completed ANSYS study. Stage 4 adds a formulation-specific, source-located PLA property database and a temperature-bracketed AISI 304 fixture dataset. Missing Prusament thermal functions, bulk annealing strain, complete orthotropy and crystallization kinetics remain unresolved; no solver results exist.
+**Read [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md) first.** This is a staged research repository, not a completed ANSYS study. Stage 5 implements and unit-tests the supported Prusament viscoelastic material-point core, including the piecewise temperature clock and constant-Poisson shear/bulk conversion. Missing bulk irreversible strain, thermal functions and the fixture expansion convention still block production ANSYS annealing predictions.
 
 ## Structure
 
@@ -14,6 +14,8 @@ Computational research on quantified gap-controlled constraint during sub-meltin
 - `models/ansys/`: genuine ANSYS model inputs and run documentation, when available.
 - `results/`: solver provenance registry; no placeholder results.
 - `manuscript/`: complete editable manuscript source.
+- `material/`: formulation-specific source tables, uncertainty gaps and calculated reference conversion.
+- `src/`: tested constitutive reference relations; no ANSYS solver wrapper yet.
 - `scripts/`: reproducible PDF build and integrity checks.
 - `tests/`: checks appropriate to the research stage.
 - `output/pdf/`: current complete manuscript PDF.
@@ -25,9 +27,11 @@ Python 3.11 or later, with dependencies in `requirements.txt`, and Poppler for v
 ```text
 python scripts/build_manuscript.py
 python scripts/build_material_database.py
-python scripts/check_materials.py
+python scripts/build_constitutive_reference.py
+python scripts/check_materials.py 5
+python scripts/check_constitutive.py
 python scripts/check_integrity.py
-python scripts/check_literature.py 4
+python scripts/check_literature.py 5
 pdftoppm -r 150 -png output/pdf/Constrained-Annealing-2026-DRAFT.pdf tmp/pdfs/current
 ```
 

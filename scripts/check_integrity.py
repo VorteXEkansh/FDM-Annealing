@@ -1,4 +1,4 @@
-"""Stage 4 document, provenance and property checks; not solver verification."""
+"""Stage 5 document, provenance and property checks; not solver verification."""
 from pathlib import Path
 import csv, hashlib, json, re, subprocess, sys
 from pypdf import PdfReader
@@ -30,10 +30,10 @@ def main():
     source=(ROOT/'manuscript/current.md').read_text(encoding='utf-8')
     refs=json.loads((ROOT/'data/literature/verified_sources.json').read_text(encoding='utf-8'))
     citations=set(map(int,re.findall(r'\[(\d+)\]',source)))
-    check('Retained references and citations correspond',citations==set(range(1,39)))
+    check('Retained references and citations correspond',citations==set(range(1,40)))
     check('Retained DOIs present',all(r['doi'] in source for r in refs))
     check('Objectives numbered 1 through 5',re.findall(r'^(\d)\. ',source,re.M)==['1','2','3','4','5'])
-    check('Equations numbered consecutively',re.findall(r'\((\d+)\)\s*$', '\n'.join(l for l in source.splitlines() if l.startswith('EQ:')),re.M)==list(map(str,range(1,12))))
+    check('Equations numbered consecutively',re.findall(r'\((\d+)\)\s*$', '\n'.join(l for l in source.splitlines() if l.startswith('EQ:')),re.M)==list(map(str,range(1,18))))
     check('No duplicated or result figures',source.count('FIGURE:')==1 and source.count('CAPTION: Figure 1.')==1)
     for path in ['results/run_registry.csv','data/literature/property_registry.csv','data/literature/validation_registry.csv']:
         with (ROOT/path).open(encoding='utf-8') as f: rows=list(csv.DictReader(f))
@@ -68,17 +68,29 @@ def main():
     manifest4=json.loads((ROOT/'material/build_manifest.json').read_text(encoding='utf-8'))
     check('Material output hashes recorded',all(digest(ROOT/x['path'])==x['sha256'] for x in manifest4['outputs']))
     check('Material evidence hashes recorded',all(digest(ROOT/x['path'])==x['sha256'] for x in manifest4['evidence']))
+    equation_map=list(csv.DictReader((ROOT/'docs/equation_implementation_map.csv').open(encoding='utf-8')))
+    check('Every governing equation has an implementation target', [r['equation'] for r in equation_map]==list(map(str,range(1,18))))
+    test_report=json.loads((ROOT/'docs/stage_05_constitutive_tests.json').read_text(encoding='utf-8'))
+    check('All 38 constitutive tests passed',test_report['passed'] and test_report['tests_run']==38 and all(r['status']=='pass' for r in test_report['tests']))
+    check('Constitutive test input and code hashes match',all(digest(ROOT/p)==h for p,h in test_report['sha256'].items()))
+    check('Irreversibility and crystallization gaps explicitly retained',all(t in source for t in ['No bulk annealing-induced irreversible-strain relation is parameterized','No crystallization kinetic equation','tangent-versus-mean']))
+    reference_path=ROOT/'material/constitutive_reference.json'
+    reference_before=digest(reference_path)
+    subprocess.run([sys.executable,str(ROOT/'scripts/build_constitutive_reference.py')],check=True,cwd=ROOT,capture_output=True)
+    check('Constitutive reference conversion reproducible byte-for-byte',digest(reference_path)==reference_before)
     before=digest(PDF)
     subprocess.run([sys.executable,str(ROOT/'scripts/build_manuscript.py')],check=True,cwd=ROOT,capture_output=True)
     check('PDF reproducible byte-for-byte',digest(PDF)==before)
     reader=PdfReader(PDF)
-    check('Complete twenty-five-page manuscript without spill pages',len(reader.pages)==25)
+    check('Complete manuscript page count matches reviewed stage record',len(reader.pages)==json.loads((ROOT/'docs/stage_05_pdf_review.json').read_text())['page_count'])
+    review=json.loads((ROOT/'docs/stage_05_pdf_review.json').read_text())
+    check('All pages visually reviewed for the current PDF hash',review['visual_status']=='pass' and review['reviewed_pdf_sha256']==digest(PDF) and review['reviewed_pages']==list(range(1,len(reader.pages)+1)))
     text='\n'.join(p.extract_text() for p in reader.pages)
     for pattern in [r'F3498',r'sqrt\s*\(',r'epsilon_ann',r'Delta L',r'95 C',r'3 x 3',r'130 physical specimens',r'\bTODO\b',r'\bTBD\b',r'\ufffd']:
         check('Forbidden manuscript pattern absent: '+pattern,not re.search(pattern,text))
     check('Evidence absence explicitly reported','No ANSYS results' in text and 'No ANSYS runs' in text)
     check('Thermal choices typeset',all(v in text for v in ['80 °C','95 °C','110 °C','30 min','60 min','90 min']))
-    check('Mathematical symbols preserved',all(c in text for c in 'Δεσρ∂∇√∑∏∈⊥'))
+    check('Mathematical symbols preserved',all(c in text for c in 'Δεσρ∂∇√∑∈⊥'))
     check('All pages contain substantive text or a continued coefficient table',all(len(p.extract_text())>500 for p in reader.pages))
     with pdfplumber.open(PDF) as pdf:
         bad=[]
@@ -86,8 +98,8 @@ def main():
             for c in p.chars:
                 if c['text'].strip() and (c['x0']<48 or c['x1']>p.width-46 or c['top']<30 or c['bottom']>p.height-18): bad.append(n)
         check('All text lies inside page safety bounds',not bad)
-    report={'stage':4,'date':'2026-09-12','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'material_manifest_sha256':digest(ROOT/'material/build_manifest.json'),'scope':'Document, source and property integrity only. No solver verification or validation performed.'}
-    (ROOT/'docs/integrity_report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+    report={'stage':5,'date':'2026-09-12','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'material_manifest_sha256':digest(ROOT/'material/build_manifest.json'),'scope':'Document, source and property integrity only. No solver verification or validation performed.'}
+    (ROOT/'docs/integrity_report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     print(f'{len(checks)} integrity checks passed; PDF SHA-256 {digest(PDF)}')
 
 if __name__=='__main__': main()

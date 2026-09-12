@@ -6,9 +6,11 @@ import csv
 import hashlib
 import json
 import re
+import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
+STAGE = int(sys.argv[1]) if len(sys.argv)>1 else 5
 
 
 def digest(path: Path) -> str:
@@ -63,21 +65,21 @@ def main() -> None:
     check("Fixture temperatures bracket 20–110 °C", {row["temperature_C"] for row in fixture} == {"20", "100", "200"})
     check("Fixture table is complete at every temperature", all({row["property_symbol"] for row in fixture if row["temperature_C"] == temperature} == {"ρ", "c_p", "k", "α", "E", "ν"} for temperature in {"20", "100", "200"}))
     check("Fixture values come from one identified source", {row["source_key"] for row in fixture} == {"Meng2026"})
-    check("Manifest identifies Stage 4", manifest["stage"] == 4)
+    check("Manifest identifies current material database stage", manifest["stage"] == 5)
     check("Generator hash matches manifest", digest(ROOT / manifest["script"]["path"]) == manifest["script"]["sha256"])
     check("Material output hashes match manifest", all(digest(ROOT / item["path"]) == item["sha256"] for item in manifest["outputs"]))
     check("Stage 4 evidence hashes match manifest", all(digest(ROOT / item["path"]) == item["sha256"] for item in manifest["evidence"]))
     check("Manifest states that no production material card is admitted", any("No ANSYS material card is admitted" in item for item in manifest["limitations"]))
 
     report = {
-        "stage": 4,
+        "stage": STAGE,
         "date": "2026-09-12",
         "checks": checks,
         "count": len(checks),
         "material_manifest_sha256": digest(ROOT / "material/build_manifest.json"),
         "scope": "Source, transcription, compatibility and arithmetic checks only; no ANSYS or physical validation evidence.",
     }
-    (ROOT / "docs/stage_04_material_integrity.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    (ROOT / f"docs/stage_{STAGE:02d}_material_integrity.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8",newline="\n")
     print(f"{len(checks)} material integrity checks passed")
 
 

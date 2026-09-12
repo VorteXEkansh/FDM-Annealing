@@ -6,3 +6,8 @@
 *.xlsx binary
 literature/metadata/*.json -text
 literature/search_logs/*.json -text
+literature/evidence/** -text -diff
+material/*.csv -text
+material/*.json -text
+docs/*integrity*.json -text
+docs/stage_05*.json -text

@@ -1,3 +1,5 @@
-# Stage checks
+# Constitutive unit tests
 
-Stage 1 requires source-manifest integrity, complete audit coverage, bibliography/citation consistency, no invented run records or properties, scientific typography, PDF text/page bounds and visual inspection. `scripts/check_integrity.py` implements these checks. It does not test ANSYS physics, convergence or validation; none exists yet.
+Run `python scripts/check_constitutive.py` from the repository root. The standard-library unittest suite in `test_constitutive.py` checks source-based material relations against analytical or synthetic cases. It does not execute ANSYS or create validation data. Strains, durations, quadrature panels and any toy moduli in tests are explicit numerical fixtures and never enter the property database.
+
+Individual outcomes and input/code hashes are recorded in `docs/stage_05_constitutive_tests.json`. If a test run fails, its report is additionally preserved under `tests/failure_records/` using a content-hash filename.

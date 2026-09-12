@@ -1,6 +1,6 @@
 # Authoritative project state
 
-Stage: **Prompt 4/20 — PLA and fixture material-property database**.
+Stage: **Prompt 5/20 — final supported thermo-mechanical constitutive model**.
 Date: 2026-09-12 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
@@ -29,8 +29,8 @@ Genuine ANSYS runs: **none**. ANSYS availability, license and version: **not est
 Geometry/CAD/mesh: **not selected or generated**.
 Reference PLA formulation: **Prusament PLA selected for constitutive development; production ANSYS material card not admitted**.
 Property tables: **created and source-audited; compatible k(T), c_p(T), bulk irreversible strain and complete orthotropy remain unavailable**.
-Constitutive law/calibration: **23-branch Prusament generalized-Maxwell/WLF–Arrhenius candidate extracted; not implemented or ANSYS-verified**.
-Fixture material: **AISI 304 stainless steel selected as candidate plate material with a 20–200 °C tabulated property set**. Fixture dimensions, numerical gap levels, friction and thermal contact conductance remain unselected.
+Constitutive implementation: **small-strain isotropic 23-branch Prusament reference implemented; 38 analytical/synthetic unit tests pass; no ANSYS adapter or physical calibration/validation**.
+Fixture material: **AISI 304 stainless steel selected as candidate plate material with a 20–200 °C tabulated property set**. Fixture dimensions, numerical gap levels, friction and thermal contact conductance remain unselected. Thermal-strain use of the fixture alpha table is blocked until its tangent/mean convention and reference temperature are established.
 Initial residual stress, recovery strain and crystallization kinetics: **unavailable**.
 Boundary histories, reference temperature, release rule and environmental heat transfer: **not fixed**.
 Mesh/time-step/contact convergence: **not performed**.
@@ -41,7 +41,7 @@ No performance improvement, optimal process condition or experimental confirmati
 ## Decisions and scientific safeguards
 
 1. Use two opposed plate surfaces with stops as the primary GAP fixture concept. Define total initial free clearance at the reference temperature. Do not inherit the unverified 0.05 mm hot clearance as a property or optimum.
-2. Use ANSYS transient thermal and history-dependent structural/contact analysis when justified by material evidence. This is an intended workflow, not an executable model at the current stage.
+2. Use ANSYS transient thermal and history-dependent structural/contact analysis when justified by material evidence. The material-point reference is executable; the full thermal/contact workflow is not yet an executable production model.
 3. Reversible thermoelasticity alone cannot establish permanent annealing recovery. A source-backed irreversible/history-dependent description or explicitly limited phenomenological model is required.
 4. Do not impose symmetry, clamped specimen faces or uniform recovery merely to force low warpage. Quantify rigid-body stabilization and contact effects.
 5. FREE is mechanically traction-free with no fixture contact; GAP is initially centered between opposed faces, without preload. Omit gravity in the primary paired comparison as an explicit isolation assumption. Any supported/gravity-dependent literature reproduction is a separate labeled configuration. Granular supports are literature context; DEM, sand/salt modeling and remelting are excluded.
@@ -64,7 +64,7 @@ Candidate title: **Free and gap-constrained annealing of FFF-printed PLA: a ther
 
 `docs/research_scope.md` records one primary question, five secondary questions (SQ1–SQ5), five objectives and four testable numerical propositions (H1–H4). The manuscript incorporates their full text, an explicit intended contribution and excluded claims. The structured abstract contains context/question, planned approach, results status and intended contribution, without invented numerical findings.
 
-The core study uses one selected formulation, fixed print architecture and representative three-dimensional plate-like coupon geometry. Their identities and dimensions remain evidence-dependent implementation choices, not fabricated finalized inputs. Full deposition-process simulation, printing-parameter optimization and comparisons across PLA grades are outside the primary study.
+The core study uses one selected formulation, fixed print architecture and representative three-dimensional plate-like coupon geometry. The formulation was selected in Stage 4; print architecture and geometry dimensions remain evidence-dependent implementation choices. Full deposition-process simulation, printing-parameter optimization and comparisons across PLA grades are outside the primary study.
 
 The main comparison applies the same external thermal schedule; matched part-temperature diagnostic cases may isolate mechanical restraint. Final responses are evaluated at a common reference temperature with an explicitly declared release/observation time. In-fixture dimensions, released warpage and conditional residual stress remain separate. Hypotheses concern a resolved clearance effect, release effect, interaction and geometric/stress trade-off; none assumes a favorable or monotonic result. Numerical resolution/extraction criteria must be specified before assessing them.
 
@@ -84,8 +84,22 @@ AISI 304 stainless steel is the candidate opposed-plate material. Meng2026 Table
 
 No probability distribution is assigned. Reported supplier intervals and same-source method brackets are preserved without reinterpreting them as confidence intervals. Cross-formulation minima and maxima are not treated as Prusament uncertainty bounds.
 
+## Constitutive-model decision — Stage 5
+
+`docs/constitutive_model_decision.md` and `docs/model_formulation.md` fix the strongest currently supported core: small-strain isotropic thermorheologically simple generalized-Maxwell response for Prusament PLA, with constant ν and reversible α, and the full source Arrhenius/WLF clock. `src/constitutive.py` implements the reference; `material/constitutive_reference.json` records the calculated shear/bulk conversion and evidence gates. It is not an ANSYS material card.
+
+The macroscopic elastic-plus-delayed strain partition is defined through instantaneous compliance; branch stress evolution supplies the delayed response. Identical normalized shear and bulk spectra preserve the assumed constant ν. The source is a plane-stress shell model; its three-dimensional isotropic extension remains a constitutive assumption. No independent E(T) multiplier, orthotropic law, crystallization kinetics or bulk irreversible annealing-strain law is added.
+
+The implemented temperature guard is 23–85 °C, with 23 °C used only as a numerical-test thermal reference and 65 °C as the relaxation reference. The 20 °C PLA start and the inherited 95 °C/110 °C conditions are rejected. The temperature interval does not itself validate 30–90 min holds, arbitrary strains or bulk geometries. The algorithm integrates history through reduced time and requires temperature subdivision at 65 °C; material-point refinement tests are not ANSYS time-step convergence.
+
+Irreversible annealing strain, crystallization, production assembly and fixture thermal strain raise explicit evidence-gap errors. No missing mechanism is defaulted to a physical zero. The AISI 304 table can be interpolated and used for instantaneous elastic reference calculations, but its expansion convention is unresolved. Thermal-field closures, initial printed state, duration/strain applicability and physical validation remain open.
+
+`tests/test_constitutive.py` and `scripts/check_constitutive.py` execute 38 numerical unit tests; individual outcomes and input/code hashes are in `docs/stage_05_constitutive_tests.json`. Analytical checks and synthetic cases are not independent material validation data. No ANSYS run has been executed. `docs/equation_implementation_map.csv` maps every manuscript governing equation to its reference function or designated future field/postprocessing operation. No optional crystallization or desirability equation is retained.
+
+Three ignored temporary comparator evidence files were copied byte-for-byte into `literature/evidence/stage_05/` and the material source paths were repaired. Raw evidence and hashed database/report bytes are protected against Git line-ending conversion. The SUNLU paper's author metadata was corrected to Bertocco et al. without altering reported property values. Stage 4 records are retained as historical snapshots; the current database build manifest is Stage 5.
+
 ## Completion records and stage boundary
 
-Stage 4 quality and integrity: `docs/stage_04_quality.md`, `docs/integrity_report.json`, `docs/stage_04_literature_integrity.json`, `docs/stage_04_material_integrity.json` and `docs/stage_04_manifest.json`. Prior stage records remain historical. The stage-specific delivery record identifies the pushed content commit; the subsequent delivery-record commit is also verified remotely to avoid self-referential hashes.
+Stage 5 quality and integrity records are `docs/stage_05_quality.md`, `docs/integrity_report.json`, `docs/stage_05_literature_integrity.json`, `docs/stage_05_material_integrity.json`, `docs/stage_05_constitutive_tests.json` and `docs/stage_05_manifest.json`. The stage-specific delivery record identifies the pushed content commit; its subsequent record commit is separately checked remotely.
 
-Prompt 4 establishes the material database and its admissibility limits only. No solver run, native ANSYS material card, calibration, numerical verification, validation, sensitivity analysis, propagated uncertainty or optimization is complete. Do not begin Prompt 5 without the user's next numbered instruction.
+Prompt 5 establishes and tests the supported material-point formulation only. The complete production thermo-mechanical annealing model cannot yet be finalized from the admitted evidence. No solver execution, ANSYS material-point verification, mesh/time-step/contact convergence, physical validation, sensitivity, propagated uncertainty or optimization is complete. Do not begin Prompt 6 without the user's next numbered instruction.

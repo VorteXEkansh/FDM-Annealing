@@ -1,10 +1,10 @@
 {
-  "stage": 4,
+  "stage": 5,
   "date": "2026-09-12",
   "method": "manual source transcription plus deterministic calculations in scripts/build_material_database.py",
   "script": {
     "path": "scripts/build_material_database.py",
-    "sha256": "73eae019d9461752392bf78625bf0a2ca3b221ef7cff52a43cc1a2754d7c709a"
+    "sha256": "d9393feab057418bf7b0e00b01d829a26ae75cb4018632137a4fedf68e999608"
   },
   "evidence": [
     {
@@ -36,27 +36,52 @@
       "path": "literature/evidence/stage_04/Prusament_PLA_TDS_2022_EN.pdf",
       "sha256": "6b141fb50fbfd31d58bd69ade88a3d952b182a0e953e2c924241df40e859e811",
       "bytes": 1587840
+    },
+    {
+      "path": "literature/evidence/stage_05/ANSYS_2026R1_viscoelasticity.html",
+      "sha256": "f03da8bcd5e3c635754ee7838b6eae707a31bf0b72e5390d46006ce170bb8a8c",
+      "bytes": 55609
+    },
+    {
+      "path": "literature/evidence/stage_05/Bute2024.pdf",
+      "sha256": "9638cf851454a53a48e341e779494e0252555114f94b3d884f5d29e641a389e5",
+      "bytes": 2495458
+    },
+    {
+      "path": "literature/evidence/stage_05/Laminate2025.pdf",
+      "sha256": "b6ec6b2d8c70b3628e27dbea07735c44b44d30f7dda666a43e94e5585c0180a7",
+      "bytes": 3408195
+    },
+    {
+      "path": "literature/evidence/stage_05/Relaxation2022.xml",
+      "sha256": "105e3378d16c0cbab778e519f6dc5b92fc7ea8b17f270a83c1e4e2612550a98b",
+      "bytes": 115986
+    },
+    {
+      "path": "literature/evidence/stage_05/Trofimov2022.pdf",
+      "sha256": "42742d361e0fe0e6f1a266676b1022cf18cfe27f156a60415113f8e3db01e198",
+      "bytes": 3029547
     }
   ],
   "outputs": [
     {
       "path": "material/pla_properties.csv",
-      "sha256": "2c420a084c436557b810a095b473fa7a14847d4d6505cf85b29915b8d4cc326c",
+      "sha256": "b5df9aee11b99a22f978c78efa60388f4bdcada0325ed2ea8d2415d5f6e9f6f7",
       "rows": 96
     },
     {
       "path": "material/property_sources.csv",
-      "sha256": "0e3d77397a0b84ffb72f68fedde0ccd67ca8c8446e27038207cf30aa4cc3ba80",
+      "sha256": "87363844d92616529c8cc5923abff41d97b1939904df77d109a3a91694899029",
       "rows": 11
     },
     {
       "path": "material/uncertainty_ranges.csv",
-      "sha256": "7d95ed0396b44bc14ff563156a1abb17d5bb0e3d9d6eb902e23a5fb9815f3b8b",
+      "sha256": "77307c17a0242132617197330b7eb7064463e57f9eb177333dc3daa86aa22bb9",
       "rows": 16
     },
     {
       "path": "material/fixture_properties.csv",
-      "sha256": "a5e77551c7fc11c3eb8a357cfe9e86ba75f3d5a3cc05d6ac9c3a46de33518bbe",
+      "sha256": "91432d2d04284e2cd118384d12aefd251ff6f24af91d880278bff4d142880a45",
       "rows": 18
     }
   ],

@@ -74,3 +74,7 @@ Pantani et al. and Sorrentino and Pantani establish formulation- and history-dep
 - `scripts/build_material_database.py`: deterministic database generator.
 
 No ANSYS material card, solver input or numerical result is created in this stage.
+
+## Stage 5 qualification
+
+The source paths now use committed evidence copies, and the SUNLU relaxation paper author field is corrected to Bertocco et al. The source property numbers are unchanged. The AISI 304 expansion table lacks a resolved tangent/mean definition, so fixture thermal-strain conversion is blocked; its interpolation alone remains available. See `docs/constitutive_model_decision.md` for the current implementation and limitations.
