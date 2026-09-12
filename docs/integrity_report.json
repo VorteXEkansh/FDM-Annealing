@@ -1,5 +1,5 @@
 {
-  "stage": 3,
+  "stage": 4,
   "date": "2026-09-12",
   "checks": [
     {
@@ -111,11 +111,59 @@
       "status": "pass"
     },
     {
+      "check": "Material database reproducible byte-for-byte",
+      "status": "pass"
+    },
+    {
+      "check": "Expected property record counts",
+      "status": "pass"
+    },
+    {
+      "check": "Every PLA number has units, temperature, source, formulation, confidence and ANSYS treatment",
+      "status": "pass"
+    },
+    {
+      "check": "All property sources have immutable evidence hashes",
+      "status": "pass"
+    },
+    {
+      "check": "Complete 23-pair Prusament Maxwell spectrum",
+      "status": "pass"
+    },
+    {
+      "check": "Prusament reference modulus arithmetic",
+      "status": "pass"
+    },
+    {
+      "check": "No cross-formulation comparator admitted",
+      "status": "pass"
+    },
+    {
+      "check": "Missing bounds are explicit rather than zero-filled",
+      "status": "pass"
+    },
+    {
+      "check": "No probability distributions assigned",
+      "status": "pass"
+    },
+    {
+      "check": "Fixture table brackets planned range",
+      "status": "pass"
+    },
+    {
+      "check": "Material output hashes recorded",
+      "status": "pass"
+    },
+    {
+      "check": "Material evidence hashes recorded",
+      "status": "pass"
+    },
+    {
       "check": "PDF reproducible byte-for-byte",
       "status": "pass"
     },
     {
-      "check": "Complete twenty-page manuscript without spill pages",
+      "check": "Complete twenty-five-page manuscript without spill pages",
       "status": "pass"
     },
     {
@@ -171,7 +219,7 @@
       "status": "pass"
     },
     {
-      "check": "All pages contain substantive text",
+      "check": "All pages contain substantive text or a continued coefficient table",
       "status": "pass"
     },
     {
@@ -179,8 +227,9 @@
       "status": "pass"
     }
   ],
-  "count": 44,
-  "pdf_sha256": "df2cfd75ea9abbb4a6250e769dfce6bcdf6820b003333a0c001c7586bb111a8b",
-  "manuscript_sha256": "05e19d1214a0ff536e5ec9070039ab64d98fc7daee7c512cb9e6383fc53f4575",
-  "scope": "Document and evidence integrity only. No solver verification or validation performed."
+  "count": 56,
+  "pdf_sha256": "63b8525659457ab8840bcb46275e1de5991aa1b93101f3d8830f6100fe1eb939",
+  "manuscript_sha256": "fa729c18adb716eeac1a5a482b77c7ea7152bfc9ee1864fb3ff14368bce5c80b",
+  "material_manifest_sha256": "9f6663401733b32084ef8b79699546743fadd2ff260a165c6fa0a0f34bb7c249",
+  "scope": "Document, source and property integrity only. No solver verification or validation performed."
 }

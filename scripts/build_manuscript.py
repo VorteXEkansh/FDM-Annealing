@@ -31,9 +31,17 @@ ST = {
     'cell': ParagraphStyle('cell', fontName='Sans', fontSize=9, leading=12, spaceAfter=0),
     'thead': ParagraphStyle('thead', fontName='Sans-Bold', fontSize=9, leading=12, textColor=colors.white),
 }
+ST['tablecaption'] = ParagraphStyle('tablecaption', parent=ST['caption'], keepWithNext=True)
 
 def P(text, style):
     # Explicit fallback avoids silently rendered missing-glyph boxes.
+    for char, replacement in {
+        '₀':'<sub>0</sub>','₁':'<sub>1</sub>','₂':'<sub>2</sub>','₃':'<sub>3</sub>',
+        '₄':'<sub>4</sub>','₅':'<sub>5</sub>','₆':'<sub>6</sub>','₇':'<sub>7</sub>',
+        '₈':'<sub>8</sub>','₉':'<sub>9</sub>','ᵢ':'<sub>i</sub>','ⱼ':'<sub>j</sub>',
+        '⁻':'<super>−</super>','¹':'<super>1</super>','²':'<super>2</super>','³':'<super>3</super>',
+    }.items():
+        text=text.replace(char,replacement)
     for char in '∇∈⊥':
         text=text.replace(char, f'<font name="MathSymbols">{char}</font>')
     paragraph=Paragraph(text,style)
@@ -103,7 +111,7 @@ def build():
         if line=='<!-- PAGE -->': story.append(PageBreak())
         elif line.startswith('TABLE:'):
             table_num+=1
-            story.append(P(f'Table {table_num}. '+line[6:].strip(),ST['caption']))
+            story.append(P(f'Table {table_num}. '+line[6:].strip(),ST['tablecaption']))
             rows=[]; i+=1
             while i<len(lines) and ' | ' in lines[i]:
                 rows.append([v.strip() for v in lines[i].split('|')]); i+=1

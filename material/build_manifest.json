@@ -1,0 +1,73 @@
+{
+  "stage": 4,
+  "date": "2026-09-12",
+  "method": "manual source transcription plus deterministic calculations in scripts/build_material_database.py",
+  "script": {
+    "path": "scripts/build_material_database.py",
+    "sha256": "73eae019d9461752392bf78625bf0a2ca3b221ef7cff52a43cc1a2754d7c709a"
+  },
+  "evidence": [
+    {
+      "path": "literature/evidence/stage_04/Chapuis2025_supplement.pdf",
+      "sha256": "19630d6f0be479f4feacc1c33ca921467406786c651eeadc82db42c8b0513f48",
+      "bytes": 1042722
+    },
+    {
+      "path": "literature/evidence/stage_04/Chapuis2025_UMAT_SMPViscoShells.f",
+      "sha256": "d90a9b48057a432dd380ead7901a53dfcf430b5ae82b02dbdaa86539a9cebcc8",
+      "bytes": 7317
+    },
+    {
+      "path": "literature/evidence/stage_04/Li2024_orthotropic.pdf",
+      "sha256": "4c6ebe7c4ce6dd3fcb1000a21ced9ef7e8d3e16159a462766848c664ec542c17",
+      "bytes": 13934257
+    },
+    {
+      "path": "literature/evidence/stage_04/Luberto2024_PMC.html",
+      "sha256": "b5b344253e538cc5849090a911269cd3911483a2544c26c8470be5c17783f562",
+      "bytes": 189064
+    },
+    {
+      "path": "literature/evidence/stage_04/Meng2026_AISI304_PMC.html",
+      "sha256": "636a917dd78c697b6703ab274b6dd36f61b582967d9a0745a6501b9d285edf1b",
+      "bytes": 214135
+    },
+    {
+      "path": "literature/evidence/stage_04/Prusament_PLA_TDS_2022_EN.pdf",
+      "sha256": "6b141fb50fbfd31d58bd69ade88a3d952b182a0e953e2c924241df40e859e811",
+      "bytes": 1587840
+    }
+  ],
+  "outputs": [
+    {
+      "path": "material/pla_properties.csv",
+      "sha256": "2c420a084c436557b810a095b473fa7a14847d4d6505cf85b29915b8d4cc326c",
+      "rows": 96
+    },
+    {
+      "path": "material/property_sources.csv",
+      "sha256": "0e3d77397a0b84ffb72f68fedde0ccd67ca8c8446e27038207cf30aa4cc3ba80",
+      "rows": 11
+    },
+    {
+      "path": "material/uncertainty_ranges.csv",
+      "sha256": "7d95ed0396b44bc14ff563156a1abb17d5bb0e3d9d6eb902e23a5fb9815f3b8b",
+      "rows": 16
+    },
+    {
+      "path": "material/fixture_properties.csv",
+      "sha256": "a5e77551c7fc11c3eb8a357cfe9e86ba75f3d5a3cc05d6ac9c3a46de33518bbe",
+      "rows": 18
+    }
+  ],
+  "calculation_checks": {
+    "Prusament_E0_MPa": 1691.594,
+    "sum_normalized_branch_fractions": 0.9937349032923976,
+    "long_term_fraction": 0.006265096707602415
+  },
+  "limitations": [
+    "No PLA formulations were numerically merged.",
+    "No probability distributions were assigned.",
+    "No ANSYS material card is admitted for production runs because compatible Prusament thermal functions and bulk irreversible strain remain missing."
+  ]
+}

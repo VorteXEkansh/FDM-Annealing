@@ -1,4 +1,4 @@
-"""Stage 2 bibliographic, workbook and evidence integrity (not solver validation)."""
+"""Bibliographic, workbook and material-source integrity (not solver validation)."""
 from pathlib import Path
 import json,re,hashlib,zipfile,sys,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
@@ -17,16 +17,27 @@ for r in rows:
  dates=r['publication_dates'];earliest=min(tuple(x[0]+[1]*(3-len(x[0]))) for x in dates.values())
  check(r['key']+' available by cutoff',earliest<=(2026,9,12))
 bib=(ROOT/'literature/references.bib').read_text(encoding='utf-8')
-check('BibTeX DOI set corresponds to verified records and ASTM',set(x.lower() for x in re.findall(r'doi = \{([^}]+)\}',bib))=={r['doi'].lower() for r in rows}|{'10.1520/f3489-23'})
+property_sources=[]
+property_path=ROOT/'material/property_sources.csv'
+if property_path.exists():
+ import csv
+ with property_path.open(encoding='utf-8-sig') as f:property_sources=list(csv.DictReader(f))
+property_dois={r['doi_or_reference'].lower() for r in property_sources if re.fullmatch(r'10\.\S+',r['doi_or_reference'])}
+check('BibTeX DOI set corresponds to verified matrix, material sources and ASTM',set(x.lower() for x in re.findall(r'doi = \{([^}]+)\}',bib))=={r['doi'].lower() for r in rows}|property_dois|{'10.1520/f3489-23'})
 source=(ROOT/'manuscript/current.md').read_text(encoding='utf-8')
 check('No unresolved citation keys or doubled HTML entities','[@' not in source and '&amp;amp;' not in source)
 check('All journal DOIs in complete manuscript',all(r['doi'] in source for r in rows))
+check('All DOI-bearing material sources in complete manuscript',all(doi in source for doi in property_dois))
 body=source[:source.index('### References')]
-check('Every bibliography entry cited in body',set(map(int,re.findall(r'\[(\d+)(?:\]|,)',body)))==set(range(1,36)))
+expected_citations=set(range(1,39)) if property_sources else set(range(1,36))
+check('Every bibliography entry cited in body',set(map(int,re.findall(r'\[(\d+)(?:\]|,)',body)))==expected_citations)
 check('No duplicated table labels',not re.search(r'TABLE: Table \d',source))
 for a in json.loads((ROOT/'literature/acquisition_manifest.json').read_text()):
  local=ROOT/a['local_review_copy']
  if local.exists():check(a['key']+' acquisition hash',digest(local)==a['sha256'])
+for r in property_sources:
+ local=ROOT/r['local_evidence']
+ check(r['source_key']+' material-source evidence hash',local.exists() and digest(local)==r['sha256'])
 ns={'s':'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
 with zipfile.ZipFile(ROOT/'literature/literature_matrix.xlsx') as z:
  shared=ET.fromstring(z.read('xl/sharedStrings.xml')) if 'xl/sharedStrings.xml' in z.namelist() else None

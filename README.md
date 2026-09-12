@@ -2,7 +2,7 @@
 
 Computational research on quantified gap-controlled constraint during sub-melting annealing of FFF-printed PLA.
 
-**Read [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md) first.** This is a staged research repository, not a completed ANSYS study. Stage 3 finalizes FREE versus GAP scope, research questions, objectives, propositions and explicit claim limits, using the Stage 2 verified literature. No solver results exist.
+**Read [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md) first.** This is a staged research repository, not a completed ANSYS study. Stage 4 adds a formulation-specific, source-located PLA property database and a temperature-bracketed AISI 304 fixture dataset. Missing Prusament thermal functions, bulk annealing strain, complete orthotropy and crystallization kinetics remain unresolved; no solver results exist.
 
 ## Structure
 
@@ -24,8 +24,10 @@ Python 3.11 or later, with dependencies in `requirements.txt`, and Poppler for v
 
 ```text
 python scripts/build_manuscript.py
+python scripts/build_material_database.py
+python scripts/check_materials.py
 python scripts/check_integrity.py
-python scripts/check_literature.py 3
+python scripts/check_literature.py 4
 pdftoppm -r 150 -png output/pdf/Constrained-Annealing-2026-DRAFT.pdf tmp/pdfs/current
 ```
 

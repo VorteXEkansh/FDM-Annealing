@@ -1,6 +1,6 @@
 # Authoritative project state
 
-Stage: **Prompt 3/20 — research question, scope, objectives and contributions**.
+Stage: **Prompt 4/20 — PLA and fixture material-property database**.
 Date: 2026-09-12 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
@@ -27,9 +27,10 @@ Base source: `data/source/DTU_Constrained_Annealing_Final_Submission.pdf`; immut
 
 Genuine ANSYS runs: **none**. ANSYS availability, license and version: **not established**.
 Geometry/CAD/mesh: **not selected or generated**.
-Material grade and property tables: **not selected**.
-Constitutive law/calibration: **not implemented**.
-Fixture material, dimensions, numerical gap levels, friction and thermal contact conductance: **not selected**.
+Reference PLA formulation: **Prusament PLA selected for constitutive development; production ANSYS material card not admitted**.
+Property tables: **created and source-audited; compatible k(T), c_p(T), bulk irreversible strain and complete orthotropy remain unavailable**.
+Constitutive law/calibration: **23-branch Prusament generalized-Maxwell/WLF–Arrhenius candidate extracted; not implemented or ANSYS-verified**.
+Fixture material: **AISI 304 stainless steel selected as candidate plate material with a 20–200 °C tabulated property set**. Fixture dimensions, numerical gap levels, friction and thermal contact conductance remain unselected.
 Initial residual stress, recovery strain and crystallization kinetics: **unavailable**.
 Boundary histories, reference temperature, release rule and environmental heat transfer: **not fixed**.
 Mesh/time-step/contact convergence: **not performed**.
@@ -55,7 +56,7 @@ A new critical investigation through 12 September 2026 retains 34 DOI-verified j
 
 The complete manuscript now includes the critical literature review, ten closest competitors and narrowed novelty. Supported annealing, ANSYS/irreversible thermal strain, Prony/WLF recovery models, coupled thermal/crystallization mechanics, and annealed PLA FE/optimization all have precedents. The provisional intended contribution is evidence-tested prediction of the clearance–distortion–stress trade-off after cooling and release. No exclusive priority claim is supported. Full protocols for abstract-level competitors must be recovered before publication-level priority assertions.
 
-No literature property or validation target is adopted. Candidate recovery sources include Bute2024 and Laminate2025; potential thermal/warpage comparisons include Wijnen2018 and Trofimov2022. All require compatibility and independence appraisal before data selection. None currently validates the proposed fixture's residual stresses or contact pressures. The Mould2022 final PLA Table 7 temperature conflicts with Tables 2–3; affected values remain unaccepted. Tough, high-heat, recycled and filled PLA remain separate from neat PLA.
+Stage 4 adopts a restricted Prusament constitutive evidence set and a candidate AISI 304 fixture table; no validation target is adopted. Bute2024 remains a recovery-mechanism comparator because it uses Black Devil Design PLA. Wijnen2018 and Trofimov2022 remain thermal/warpage comparators; Trofimov's property table is not merged because it combines Raise3D measurements with transferred literature functions. None validates the proposed fixture's residual stresses or contact pressures. The Mould2022 final PLA Table 7 temperature conflicts with Tables 2–3; affected values remain unaccepted. Tough, high-heat, recycled and filled PLA remain separate from neat PLA.
 
 ## Scope finalized in Stage 3
 
@@ -69,8 +70,22 @@ The main comparison applies the same external thermal schedule; matched part-tem
 
 The intended contribution is an evidence-tested clearance–distortion–stress assessment. It is not an achieved result or exclusive-priority claim. Stress/contact validation cannot be inferred from geometric agreement. No new experiments, strength/ductility enhancement, universal law, granular-support superiority, certification, durability or global optimum are promised. Processing recommendations require an independently supported benefit criterion as well as verified responses.
 
+## Material-property state — Stage 4
+
+Authoritative files are `material/pla_properties.csv`, `material/property_sources.csv`, `material/uncertainty_ranges.csv`, `material/fixture_properties.csv` and `material/build_manifest.json`. `scripts/build_material_database.py` deterministically regenerates the four CSV files. `docs/material_property_audit.md` records the compatibility reasoning. Raw Stage 4 evidence copies and their hashes are preserved under `literature/evidence/stage_04/`.
+
+Prusament PLA is the reference formulation because Chapuis2025 provides grade-specific DMA characterization, k₀ = 10.598 MPa, ν = 0.35, T_g = 65 °C, C₁ = 17.4, C₂ = 51.6 K, C₃ = 35 000 K, α = 68.0 µm m⁻¹ K⁻¹ and 23 Maxwell branch pairs. Direct characterization spans 23–85 °C. The calculated reference instantaneous modulus is E₀ = k₀ + ∑kᵢ = 1691.594 MPa; this is an arithmetic model quantity, not a new experiment. The published piecewise shift uses Arrhenius below T_g and WLF at or above T_g. No native ANSYS conversion has been verified.
+
+The inherited 80 °C candidate lies inside the direct characterization interval. The 95 °C and 110 °C candidates lie outside it and are not admitted through extrapolation. The supplier's ρ = 1240 kg m⁻³ is retained only as a screening value because its test temperature is not reported. No compatible Prusament k(T) or c_p(T) functions, signed bulk irreversible annealing-strain law, complete E₁/E₂/E₃/G₁₂/G₂₃/G₁₃/ν₁₂/ν₂₃/ν₁₃ set, directional α₁/α₂/α₃ set, or crystallization-kinetic coefficients were found. Missing lower/upper bounds remain blank with status `no bound invented`.
+
+The Chapuis programmed ε₁₁^AM values are retained with same-source method brackets but are not accepted as bulk annealing shrinkage. Bute2024 directional irreversible strain, Li2024 FormFutura orthotropy, Relaxation2022 SUNLU PLA Plus relaxation, Luberto2024 unidentified-PLA thermal constants and Trofimov2022 mixed-source Raise3D properties remain clearly labelled comparators. No numerical property is transferred across formulations.
+
+AISI 304 stainless steel is the candidate opposed-plate material. Meng2026 Table 1 provides ρ(T), c_p(T), k(T), α(T), E(T) and ν(T) at 20 °C, 100 °C and 200 °C, bracketing 20–110 °C without extrapolation. The fixture property table is a candidate engineering input. Actual alloy heat, dimensions, surface condition, friction and PLA–steel contact conductance remain open.
+
+No probability distribution is assigned. Reported supplier intervals and same-source method brackets are preserved without reinterpreting them as confidence intervals. Cross-formulation minima and maxima are not treated as Prusament uncertainty bounds.
+
 ## Completion records and stage boundary
 
-Stage 3 quality and integrity: `docs/stage_03_quality.md`, `docs/integrity_report.json`, `docs/stage_03_literature_integrity.json` and `docs/stage_03_manifest.json`. Prior stage records remain historical. The stage-specific delivery record identifies the pushed content commit; the subsequent delivery-record commit is also verified remotely to avoid self-referential hashes.
+Stage 4 quality and integrity: `docs/stage_04_quality.md`, `docs/integrity_report.json`, `docs/stage_04_literature_integrity.json`, `docs/stage_04_material_integrity.json` and `docs/stage_04_manifest.json`. Prior stage records remain historical. The stage-specific delivery record identifies the pushed content commit; the subsequent delivery-record commit is also verified remotely to avoid self-referential hashes.
 
-Prompt 3 finalizes research scope and manuscript framing only. All solver, property, calibration, verification, validation, sensitivity, uncertainty and optimization evidence statuses remain unchanged. Do not begin Prompt 4 without the user's next numbered instruction.
+Prompt 4 establishes the material database and its admissibility limits only. No solver run, native ANSYS material card, calibration, numerical verification, validation, sensitivity analysis, propagated uncertainty or optimization is complete. Do not begin Prompt 5 without the user's next numbered instruction.

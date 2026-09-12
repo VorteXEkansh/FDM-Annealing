@@ -13,7 +13,7 @@ Computational manuscript draft · 12 September 2026
 
 <b>Planned approach.</b> Genuine ANSYS analysis will compare mechanically free annealing with opposed-face gap restraint over an evidence-supported sub-melting domain. Candidate levels are 80&nbsp;°C, 95&nbsp;°C and 110&nbsp;°C, with holds of 30 min, 60 min and 90 min; their admission depends on the selected material evidence. Temperature-dependent, history-dependent behavior and contact will be represented only to the extent supported by data. Thermal histories, signed dimensions and released warpage will be distinguished from contact pressure and conditional stress predictions. Numerical verification, independent literature-based validation and uncertainty assessment will precede multi-objective interpretation.
 
-<b>Results status.</b> No ANSYS results, accepted material law, convergence evidence, validation findings or optimum exist at this stage. Quantitative results and their uncertainty will enter this abstract only after traceable solver execution and the corresponding checks.
+<b>Results status.</b> No ANSYS results, complete ANSYS-ready PLA law, convergence evidence, validation findings or optimum exist at this stage. A grade-specific Prusament PLA viscoelastic dataset and an AISI 304 fixture dataset have been audited; missing compatible thermal functions and bulk irreversible-strain evidence still prevent production annealing runs. Quantitative results and their uncertainty will enter this abstract only after traceable solver execution and the corresponding checks.
 
 <b>Intended contribution.</b> The study will assess the clearance–distortion–stress trade-off and distinguish temporary geometric suppression from released stability. Prior supported annealing and numerical optimization preclude a broad first-of-kind claim. No strength improvement or industrial treatment recommendation is asserted.
 
@@ -206,18 +206,90 @@ A process comparison can apply the same external thermal cycle to constrained an
 
 The intended implementation couples transient thermal analysis to history-dependent structural analysis with contact. Sequential temperature transfer is a candidate only when mechanical feedback on heat transfer is negligible or acceptably bounded. If contact opening materially alters thermal conductance, an iterated or coupled strategy must be justified. ANSYS availability, version, elements and solution controls have not yet been established.
 
+Prusament PLA is selected as the reference formulation for constitutive development because Chapuis et al. [8] report grade-specific dynamic mechanical characterization and the full coefficients of a thermo-viscoelastic model. Their frequency sweeps covered 1–18 Hz at 5 °C increments from 23 °C to 85 °C using at least three ASTM D638 Type IV specimens per material. The source therefore supports later implementation work at 80 °C within its directly characterized temperature interval. It does not directly admit the inherited 95 °C and 110 °C levels.
+
+The Prusament supplier sheet [36] supplies typical density and printed tensile moduli, but it does not report the property-test temperature. Luberto et al. [37] report ρ, c<sub>p</sub> and k at 20 °C for an unidentified PLA filament and then hold them constant in their printing model. Those values cannot supply Prusament temperature functions. The Raise3D table in Trofimov et al. [7] is also kept as a comparator because the authors combined grade measurements with reduction functions and thermal values from other literature. Table 3 records the resulting admissibility decision.
+
+TABLE: Prusament PLA evidence and current ANSYS admissibility
+Property group | Verified evidence | Current decision
+ρ | 1240 kg m⁻³ supplier typical; test temperature unreported [36] | Screening value; not entered until temperature treatment is declared
+k(T), c<sub>p</sub>(T) | No compatible Prusament functions located | Production transient-thermal model blocked; no cross-grade substitution
+ν, α | ν = 0.35 and α = 68.0 µm m⁻¹ K⁻¹ in the 23–85 °C source model [8] | Candidate isotropic constants within the characterized domain
+Viscoelasticity | k₀ = 10.598 MPa; 23 Maxwell branches; piecewise WLF/Arrhenius shifting [8] | Candidate after ANSYS convention and relaxation-curve verification
+Irreversible strain | Thin-bilayer programmed ε<sub>11</sub><sup>AM</sup> depends on nozzle and activation conditions [8] | Not a bulk three-dimensional annealing-strain law
+Orthotropy | Seven room-condition constants exist for FormFutura PLA [16] | Different grade and incomplete matrix; not transferred
+Crystallization | Kinetic precedents are formulation and history dependent [18,19] | No compatible coefficient or heat source admitted
+
 For a continuum description, a candidate heat balance is
 
 EQ: ρc<sub>p</sub> ∂T/∂t = ∇ · (k ∇T) + q. &nbsp;&nbsp; (2)
 
 Here ρ is density, c<sub>p</sub> specific heat capacity, k the conductivity tensor, and q a volumetric heat source, if justified. The symbol t denotes time throughout. Property temperature dependence and any crystallization heat must be supported by evidence; omitting a source term is a model assumption to evaluate, not proof that the underlying mechanism is absent.
 
+### 4.1. Grade-specific relaxation representation
+
+At the reference temperature T<sub>g</sub> = 65 °C, the Chapuis generalized Maxwell model can be written as
+
+EQ: E(t) = k₀ + ∑<sub>i=1</sub><sup>23</sup> k<sub>i</sub> exp[−t/(a<sub>T</sub>τ<sub>i</sub>)]. &nbsp;&nbsp; (3)
+
+The deterministic sum of the published equilibrium and branch stiffnesses is E₀ = k₀ + ∑k<sub>i</sub> = 1691.594 MPa. This arithmetic value is a traceable calculation, not a tensile-test result. Table 4 reproduces every published Prusament branch pair. In a native ANSYS Prony definition, the required normalized shear or bulk fractions depend on the selected material convention. The database records k<sub>i</sub>/E₀ for audit, but those fractions will not be submitted until constant-ν equivalence and a reconstructed relaxation curve have been verified.
+
+TABLE: Prusament PLA generalized-Maxwell coefficients at T<sub>g</sub> = 65 °C from Chapuis et al. [8, supplementary Table B.2]
+i | k<sub>i</sub> (MPa) | τ<sub>i</sub> (s)
+1 | 6.228 | 1.176 × 10<sup>−14</sup>
+2 | 1.806 | 1.228 × 10<sup>−14</sup>
+3 | 7.849 | 2.878 × 10<sup>−14</sup>
+4 | 12.751 | 1.701 × 10<sup>−12</sup>
+5 | 20.857 | 9.178 × 10<sup>−12</sup>
+6 | 31.104 | 6.034 × 10<sup>−11</sup>
+7 | 45.566 | 6.187 × 10<sup>−9</sup>
+8 | 64.036 | 1.102 × 10<sup>−7</sup>
+9 | 92.484 | 1.047 × 10<sup>−6</sup>
+10 | 135.916 | 6.903 × 10<sup>−6</sup>
+11 | 113.488 | 2.582 × 10<sup>−5</sup>
+12 | 128.266 | 5.363 × 10<sup>−5</sup>
+13 | 173.470 | 1.838 × 10<sup>−4</sup>
+14 | 93.393 | 4.386 × 10<sup>−4</sup>
+15 | 163.804 | 7.577 × 10<sup>−4</sup>
+16 | 134.311 | 1.795 × 10<sup>−3</sup>
+17 | 119.266 | 2.292 × 10<sup>−3</sup>
+18 | 100.596 | 6.576 × 10<sup>−3</sup>
+19 | 80.534 | 9.920 × 10<sup>−3</sup>
+20 | 61.624 | 3.290 × 10<sup>−2</sup>
+21 | 44.508 | 5.374 × 10<sup>−2</sup>
+22 | 30.529 | 6.586 × 10<sup>−2</sup>
+23 | 18.610 | 3.503 × 10<sup>1</sup>
+
 <!-- PAGE -->
-### 4.1. Irreversible response and identifiability
+The published temperature shift is piecewise rather than WLF over the entire domain:
+
+EQ: log<sub>10</sub>a<sub>T</sub> = { C₃(1/T − 1/T<sub>g</sub>), T &lt; T<sub>g</sub>; −C₁(T − T<sub>g</sub>)/[C₂ + (T − T<sub>g</sub>)], T ≥ T<sub>g</sub> }. &nbsp;&nbsp; (4)
+
+Here T and T<sub>g</sub> are absolute temperatures in the Arrhenius branch; C₁ = 17.4, C₂ = 51.6 K and C₃ = 35 000 K [8]. The eventual implementation must reproduce the logarithm base, sign, reference temperature and relaxation-time scaling. A WLF-only approximation below T<sub>g</sub> is not the cited model.
+
+Stress-relaxation measurements on SUNLU PLA Plus show approximately 11–13% normalized modulus decay over 500 s across three print orientations [22]. That result supports including time dependence but cannot calibrate Prusament at annealing temperatures. Similarly, the programmed Prusament pre-strains in Chapuis et al. belong to thin bilayers and cannot be combined with an initial residual-stress field without showing that the same recovery is not represented twice.
+
+### 4.2. Fixture material
+
+AISI 304 stainless steel is the candidate plate material. It is stiff relative to the polymer and has a peer-reviewed property table that brackets the complete planned 20–110 °C cycle [38]. The choice does not establish a contact conductance, friction coefficient or fixed hot clearance. Fixture thermal expansion changes the operating gap and must be included when clearance is defined at the reference temperature.
+
+TABLE: Candidate AISI 304 fixture properties from Meng et al. [38, Table 1]
+Property | 20 °C | 100 °C / 200 °C
+ρ | 7910 kg m⁻³ | 7876 / 7840 kg m⁻³
+c<sub>p</sub> | 456 J kg⁻¹ K⁻¹ | 494 / 532 J kg⁻¹ K⁻¹
+k | 16.2 W m⁻¹ K⁻¹ | 16.6 / 17.45 W m⁻¹ K⁻¹
+α | 15.5 µm m⁻¹ K⁻¹ | 16.3 / 16.7 µm m⁻¹ K⁻¹
+E | 200 GPa | 191.4 / 183.5 GPa
+ν | 0.290 | 0.285 / 0.289
+
+ANSYS may linearly interpolate these tabulated fixture properties between temperatures. No extrapolation is needed to 110 °C because the 100 °C and 200 °C rows bracket it. The actual alloy heat and fixture geometry remain to be specified, and the source does not supply PLA–steel interface conductance.
+
+<!-- PAGE -->
+### 4.3. Irreversible response and identifiability
 
 A small-strain bookkeeping form, useful before selecting an implementation, is
 
-EQ: ε = ε<sup>e</sup> + ε<sup>th</sup> + ε<sup>v</sup> + ε<sup>a</sup>, &nbsp;&nbsp; ∇ · σ + ρb = 0. &nbsp;&nbsp; (3)
+EQ: ε = ε<sup>e</sup> + ε<sup>th</sup> + ε<sup>v</sup> + ε<sup>a</sup>, &nbsp;&nbsp; ∇ · σ + ρb = 0. &nbsp;&nbsp; (5)
 
 The terms denote elastic strain, reversible thermal strain, time-dependent mechanical strain and an annealing-related recovery/transformation strain, respectively; σ is stress and b is body acceleration. This is a candidate decomposition, not a calibrated constitutive equation. Its terms must be defined so that the same relaxation or transformation is not counted twice. Finite-deformation kinematics are needed if the observed strains or rotations invalidate the small-strain approximation.
 
@@ -225,11 +297,11 @@ A stress-free body with reversible thermal expansion alone returns to its initia
 
 Required evidence includes temperature-dependent thermal properties, directional stiffness where appropriate, thermal expansion, time-dependent response and the initial printed state. A phenomenological recovery law may be usable within a declared domain, but its parameters must be identifiable and its calibration data distinguished from independent observations. Literature cannot be mixed across neat, filled and modified PLA without an explicit transfer argument and uncertainty treatment.
 
-### 4.2. Contact and release
+### 4.4. Contact and release
 
 For ideal unilateral normal contact, local gap g<sub>n</sub> and compressive pressure p<sub>n</sub> satisfy
 
-EQ: g<sub>n</sub> ≥ 0, &nbsp;&nbsp; p<sub>n</sub> ≥ 0, &nbsp;&nbsp; g<sub>n</sub>p<sub>n</sub> = 0. &nbsp;&nbsp; (4)
+EQ: g<sub>n</sub> ≥ 0, &nbsp;&nbsp; p<sub>n</sub> ≥ 0, &nbsp;&nbsp; g<sub>n</sub>p<sub>n</sub> = 0. &nbsp;&nbsp; (6)
 
 These ideal conditions explain the mechanism; an actual contact algorithm permits a controlled numerical approximation that must be verified. Frictional traction, contact stiffness and heat transfer require documented choices. Contact pressure is an output rather than a synonym for initial clearance. Sharp edges can produce mesh-sensitive local stress maxima, so both local and spatially averaged quantities need declared extraction rules.
 
@@ -240,23 +312,23 @@ Cooling must retain the intended fixture contact until the specified release eve
 
 Use identical material landmarks or consistently defined feature sets before and after treatment. Let d<sub>i,0</sub> and d<sub>i,f</sub> be the reference and final lengths associated with i ∈ {x, y, z}; these may represent length, width and thickness. Remove rigid translation and rotation through a declared alignment before measuring directional dimensions. Do not allow a change of bounding-box orientation to masquerade as recovery.
 
-EQ: Δd<sub>i</sub> = d<sub>i,f</sub> − d<sub>i,0</sub>, &nbsp;&nbsp; δ<sub>i</sub> = 100 Δd<sub>i</sub>/d<sub>i,0</sub>. &nbsp;&nbsp; (5)
+EQ: Δd<sub>i</sub> = d<sub>i,f</sub> − d<sub>i,0</sub>, &nbsp;&nbsp; δ<sub>i</sub> = 100 Δd<sub>i</sub>/d<sub>i,0</sub>. &nbsp;&nbsp; (7)
 
 Positive δ<sub>i</sub> denotes expansion and negative δ<sub>i</sub> denotes contraction. δ<sub>i</sub> is the numerical percentage, reported with %. A scalar summary is
 
-EQ: E<sub>RMS</sub> = √[(δ<sub>x</sub><sup>2</sup> + δ<sub>y</sub><sup>2</sup> + δ<sub>z</sub><sup>2</sup>)/3]. &nbsp;&nbsp; (6)
+EQ: E<sub>RMS</sub> = √[(δ<sub>x</sub><sup>2</sup> + δ<sub>y</sub><sup>2</sup> + δ<sub>z</sub><sup>2</sup>)/3]. &nbsp;&nbsp; (8)
 
 E<sub>RMS</sub> has the same percentage convention. It must accompany all signed components; it cannot reveal whether a part contracted in-plane and grew through its thickness.
 
 If τ<sub>i</sub> is the positive allowed absolute dimensional deviation for axis i, a tolerance-normalized metric is
 
-EQ: E<sub>tol</sub> = √[⅓ ∑<sub>i∈{x,y,z}</sub> (Δd<sub>i</sub>/τ<sub>i</sub>)<sup>2</sup>]. &nbsp;&nbsp; (7)
+EQ: E<sub>tol</sub> = √[⅓ ∑<sub>i∈{x,y,z}</sub> (Δd<sub>i</sub>/τ<sub>i</sub>)<sup>2</sup>]. &nbsp;&nbsp; (9)
 
 No numerical tolerances are assigned here. Passing the aggregate criterion alone is insufficient: each individual |Δd<sub>i</sub>| must satisfy its own τ<sub>i</sub>. Dimensions relative to initial geometry and deviations from a manufacturing drawing are distinct; a future application must identify which target its tolerances refer to.
 
 For a designated surface region S, fit a plane Π by an area-weighted least-squares rule to the final released surface, then define
 
-EQ: w = max<sub>X∈S</sub> |r<sub>⊥</sub>(X, Π)|. &nbsp;&nbsp; (8)
+EQ: w = max<sub>X∈S</sub> |r<sub>⊥</sub>(X, Π)|. &nbsp;&nbsp; (10)
 
 Here r<sub>⊥</sub> is signed normal distance to Π, and w is a length. This best-fit-plane warpage removes rigid tilt and is not the same as maximum nodal displacement, datum-based deviation or minimum-zone flatness. Comparison with published warpage requires the same convention, evaluation region and state; incompatible definitions must not be silently equated.
 
@@ -302,7 +374,7 @@ Pareto comparison retains conditions for which no other feasible condition is no
 
 An optional desirability score can provide a transparent preference rule following the multiple-response approach of Derringer and Suich [4]:
 
-EQ: D = [∏<sub>j=1</sub><sup>m</sup> d<sub>j</sub><sup>ωⱼ</sup>]<sup>1/(∑ⱼ ωⱼ)</sup>, &nbsp;&nbsp; ω<sub>j</sub> &gt; 0, &nbsp;&nbsp; 0 ≤ d<sub>j</sub> ≤ 1. &nbsp;&nbsp; (9)
+EQ: D = [∏<sub>j=1</sub><sup>m</sup> d<sub>j</sub><sup>ωⱼ</sup>]<sup>1/(∑ⱼ ωⱼ)</sup>, &nbsp;&nbsp; ω<sub>j</sub> &gt; 0, &nbsp;&nbsp; 0 ≤ d<sub>j</sub> ≤ 1. &nbsp;&nbsp; (11)
 
 Here d<sub>j</sub> is a response desirability and ω<sub>j</sub> its positive preference weight; m is the number of scored responses. Limits and weights must be declared before selecting a preferred design. Report component desirabilities and vary defensible preferences to assess ranking stability. No weights or computed scores have been chosen.
 
@@ -311,11 +383,13 @@ Candidates selected through a surrogate must be recomputed with the genuine solv
 <!-- PAGE -->
 ### 8. Evidence status, engineering relevance and limitations
 
-The current contribution is a finalized computational scope with one primary and five secondary questions, five objectives and four untested propositions, supported by the verified literature matrix and response definitions. Table 3 identifies what remains necessary before numerical findings can be reported. Missing evidence is not represented by zero values, example contours or synthetic data.
+The current contribution includes a finalized computational scope and a formulation-audited property database. Prusament PLA is the reference constitutive formulation, and AISI 304 is the candidate fixture material. The evidence table below identifies what remains necessary before numerical findings can be reported. Missing evidence is represented by explicit blocked fields rather than zero values, example contours or synthetic data.
 
 TABLE: Evidence required for reportable findings
 Claim family | Current evidence | Admission requirement
 Temperature and deformation | No ANSYS runs | Archived model, input sources, solver outputs and logs
+PLA transient thermal response | No compatible Prusament k(T) or c<sub>p</sub>(T) | Compatible functions or a declared calibration/uncertainty strategy
+Bulk irreversible strain | Only thin-bilayer programmed pre-strain for Prusament | Identifiable signed three-dimensional law without double-counting
 Stress and contact pressure | No model or fields | Verified contact solution and declared extraction rules
 Numerical convergence | Not performed | Genuine mesh/time/contact refinement evidence
 Physical predictive validity | No accepted dataset | Independent compatible observations and uncertainty
@@ -324,13 +398,15 @@ Optimization | Not performed | Verified responses, feasibility rules and solver 
 
 A reliable prediction of released geometry could support decisions for planar guides, locating features and similar tolerance-sensitive parts. This is potential utility, not demonstrated qualification. A selected gap would remain conditional on part dimensions, fixture material, heating/cooling history, initial printed state and the validated material domain. No cost saving, production reliability or service-safety claim follows from the present framework.
 
-Material identifiability is the principal scientific limitation. Sparse final dimensions may not uniquely distinguish residual-stress relaxation, directional recovery and crystallization-related effects. A calibrated law may match those dimensions while predicting different stresses. Contact and thermal boundaries introduce additional uncertainty, and a homogenized continuum may omit road-scale deformation or damage. These limitations must constrain the interpretation of later computed fields.
+Material identifiability remains the principal scientific limitation. The grade-specific relaxation model does not supply the missing transient-thermal or bulk irreversible-strain laws. Sparse final dimensions may not uniquely distinguish residual-stress relaxation, directional recovery and crystallization-related effects. A calibrated law may match those dimensions while predicting different stresses. Contact and thermal boundaries introduce additional uncertainty, and a homogenized continuum may omit road-scale deformation or damage. These limitations must constrain the interpretation of later computed fields.
 
-The candidate temperature range remains unverified for a selected grade. Aging, moisture, fatigue, service creep, damage and strength are outside current evidence. Geometry transfer also requires validation.
+Only 80 °C lies inside the direct 23–85 °C Prusament characterization interval. The 95 °C and 110 °C candidates remain outside that interval and are not admitted by extrapolation. Aging, moisture, fatigue, service creep, damage and strength are outside current evidence. Geometry transfer also requires validation.
 
 ### 9. Conclusions
 
-The literature establishes prior supported annealing, irreversible strain analysis, thermo-viscoelastic finite elements and annealing-related optimization. The proposed contribution is therefore restricted to evidence-tested prediction of the clearance–distortion–stress trade-off after cooling and release, conditional on the remaining validation needs. The scope compares FREE with initially centered GAP restraint for one specified material/architecture/geometry, while retaining signed response and explicitly excluding granular-media simulation and unverified strength claims.
+The literature establishes prior supported annealing, irreversible strain analysis, thermo-viscoelastic finite elements and annealing-related optimization. Stage 4 selects Prusament PLA for constitutive development and AISI 304 for the candidate fixture, while preserving grade boundaries. The Prusament evidence provides ν, α, T<sub>g</sub>, a 23-branch Maxwell spectrum and WLF/Arrhenius shifting over a directly characterized 23–85 °C interval. It does not provide compatible k(T), c<sub>p</sub>(T), complete orthotropy, crystallization kinetics or a bulk irreversible-strain law.
+
+The proposed contribution remains restricted to evidence-tested prediction of the clearance–distortion–stress trade-off after cooling and release. The scope compares FREE with initially centered GAP restraint for one specified material/architecture/geometry, while retaining signed response and excluding granular-media simulation and unverified strength claims.
 
 Numerical findings require genuine ANSYS execution, verified material evidence, discretization assessment and independent validation. No improvement, validated prediction or preferred annealing condition is concluded.
 
@@ -423,14 +499,22 @@ Numerical findings require genuine ANSYS execution, verified material evidence, 
 
 [35] Natrayan Lakshmaiya. Thermo-constrained physics informed neural network based optimization of mechanical performance in recycled PLA additive manufacturing. <i>Results in Engineering</i> 30, 110279 (2026). <link href="https://doi.org/10.1016/j.rineng.2026.110279" color="#24576b">doi:10.1016/j.rineng.2026.110279</link>.
 
+[36] Prusa Polymers a.s. <i>Technical datasheet: Prusament PLA</i>. Version 1.1, 27 July 2022. <link href="https://prusament.com/materials/pla/" color="#24576b">prusament.com/materials/pla</link>.
+
+[37] Luca Luberto, Volker Böß, Kristin M. de Payrebrune. Finite Difference Modeling and Experimental Investigation of Cyclic Thermal Heating in the Fused Filament Fabrication Process. <i>3D Printing and Additive Manufacturing</i> 11(3), e1064–e1072 (2024). <link href="https://doi.org/10.1089/3dp.2022.0282" color="#24576b">doi:10.1089/3dp.2022.0282</link>.
+
+[38] Longhui Meng, Aqib Mashood Khan, Yicai Shan, Khalid A. Al-Ghamdi. Saturation behavior and full-field reconstruction of residual stress in quenched AISI 304 stainless steel via the contour method. <i>Scientific Reports</i> 16, 11694 (2026). <link href="https://doi.org/10.1038/s41598-026-45542-w" color="#24576b">doi:10.1038/s41598-026-45542-w</link>.
+
+<!-- PAGE -->
+
 ### Supplement A. Provenance and reproducibility requirements
 
-The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source and the authoritative research-state record. The base paper is preserved separately from the evolving manuscript. No solver dataset is available in this stage.
+The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record and the Stage 4 property database. The base paper is preserved separately from the evolving manuscript. No solver dataset is available in this stage.
 
 Each future case must preserve a unique identifier, the solver version, geometry and material orientation, input configuration, source references, units, boundary histories, mesh, time-integration and contact settings, execution status, raw-output location and file checksums. Failed cases remain in the record with their failure reason. Postprocessing must identify both the raw field and the script/equation producing each response.
 
 Every quantitative result will be assigned to one of three evidence classes: A, genuine solver output; B, a reproducible numerical calculation; or C, a verified published source with an exact locator. Design choices remain labeled as inputs, never as findings. The temperatures and durations in Table 2 are inherited design choices; its nine-combination count follows directly from three temperature levels multiplied by three duration levels.
 
-The bibliography is deliberately limited to the checked sources cited in this draft. The larger bibliography in the base proposal is archived for later appraisal and is not treated as a validated material database. No published numerical property, deformation value or uncertainty estimate is adopted here without extraction and applicability assessment.
+The bibliography is deliberately limited to the checked sources cited in this draft. The larger bibliography in the base proposal is archived for later appraisal and is not treated as a validated material database. Each Stage 4 numerical property has a source locator, formulation decision and intended ANSYS treatment in the repository. No cross-formulation value is admitted merely because it falls within a plausible PLA range.
 
 Author names and affiliation follow the supplied base paper. Authorship contributions, funding and submission declarations require author confirmation before journal submission; no such declarations are inferred here.
