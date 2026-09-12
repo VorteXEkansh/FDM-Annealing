@@ -1,0 +1,1783 @@
+[
+  {
+    "key": "Bute2024",
+    "doi": "10.5755/j02.ms.35076",
+    "title": "Thermomechanical Analysis and Numerical Simulations of Fused Filament Fabricated Polylactic Acid Parts",
+    "authors": "Irina BUTE; Sergejs TARASOVS; Jevgenijs SEVCENKO; Andrey ANISKEVICH",
+    "journal": "Materials Science",
+    "year": 2024,
+    "publication_dates": {
+      "published": [
+        [
+          2024,
+          5,
+          15
+        ]
+      ],
+      "published-online": [
+        [
+          2024,
+          5,
+          15
+        ]
+      ]
+    },
+    "volume": "30",
+    "issue": "2",
+    "pages": "217-225",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.5755%2Fj02.ms.35076",
+    "metadata_sha256": "e79012d77e899182e5e6bda80903d779fad605055875e45d9e863532b8eef5ea",
+    "PLA grade": "Black Devil Design PLA",
+    "geometry": "Cubes; size and layer thickness varied",
+    "print condition": "210 °C nozzle; 70 °C bed; 20 mm s⁻¹; unidirectional lines; 100% infill (§2.1)",
+    "annealing temperature": "TMA cycles 30–140 °C (§2.2); not an isothermal furnace prescription",
+    "holding time": "Heating rate 1 °C min⁻¹; no hold adopted",
+    "support/constraint": "TMA probe; printing-bed boundary in FE",
+    "mechanical data": "Simulated printing residual stress; correlation with measured irreversible strain",
+    "dimensional data": "Directional irreversible strain and second-cycle expansion",
+    "thermal data": "TMA thermal histories and expansion coefficients",
+    "constitutive properties": "Thermoelastic printing model; distinguish recovery from reversible CTE",
+    "simulation method": "ANSYS transient deposition with progressive element activation",
+    "validation usefulness": "Candidate directional recovery benchmark; no fixture-stress validation",
+    "limitations": "Stress–strain correlation is not a validated contact-annealing prediction",
+    "relevance": "Direct precedent for ANSYS, residual stress and irreversible thermal strain",
+    "source locator": "§§2.1–2.3; §3; Figs 4–5, 9 onward; pp. 218–224",
+    "source URL": "https://matsc.ktu.lt/index.php/MatSc/article/download/35076/16400",
+    "access level": "Full text retrieved; targeted methods/results appraisal",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Wijnen2018",
+    "doi": "10.1007/s40964-018-0052-4",
+    "title": "Improved model and experimental validation of deformation in fused filament fabrication of polylactic acid",
+    "authors": "Bas Wijnen; Paul Sanders; Joshua M. Pearce",
+    "journal": "Progress in Additive Manufacturing",
+    "year": 2018,
+    "publication_dates": {
+      "published": [
+        [
+          2018,
+          5,
+          21
+        ]
+      ],
+      "published-online": [
+        [
+          2018,
+          5,
+          21
+        ]
+      ],
+      "published-print": [
+        [
+          2018,
+          12
+        ]
+      ]
+    },
+    "volume": "3",
+    "issue": "4",
+    "pages": "193-203",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2Fs40964-018-0052-4",
+    "metadata_sha256": "c1509756c89c6fa6425f68263941d727920fa582cbb1ce286523a4f852085708",
+    "PLA grade": "PLA; grade not extracted",
+    "geometry": "Thin vertical walls",
+    "print condition": "FFF without heated chamber",
+    "annealing temperature": "50 °C and 90 °C discussed (abstract)",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Printing substrate; annealing fixture not established in reviewed abstract",
+    "mechanical data": "No stress measurement established by reviewed abstract",
+    "dimensional data": "Curvature validation; signed horizontal and vertical annealing response",
+    "thermal data": "Thermal measurements used for calibration; crystallinity discussion",
+    "constitutive properties": "Thermal deformation model",
+    "simulation method": "Modified printing-warpage model",
+    "validation usefulness": "Candidate free curvature and directional annealing comparison",
+    "limitations": "Primary repository abstract reviewed; full protocol needed before extraction",
+    "relevance": "Warpage modeling and annealing deformation already combined",
+    "source locator": "Author repository abstract; DOI-linked journal abstract",
+    "source URL": "https://doi.org/10.1007/s40964-018-0052-4",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Trofimov2022",
+    "doi": "10.1016/j.addma.2022.102693",
+    "title": "Experimentally validated modeling of the temperature distribution and the distortion during the Fused Filament Fabrication process",
+    "authors": "Anton Trofimov; Jérémy Le Pavic; Sébastien Pautard; Daniel Therriault; Martin Lévesque",
+    "journal": "Additive Manufacturing",
+    "year": 2022,
+    "publication_dates": {
+      "published": [
+        [
+          2022,
+          6
+        ]
+      ],
+      "published-print": [
+        [
+          2022,
+          6
+        ]
+      ]
+    },
+    "volume": "54",
+    "issue": "",
+    "pages": "102693",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.addma.2022.102693",
+    "metadata_sha256": "f9c81714bbbfa0aed73e368a2245348fc695bb4ce762c8d71531ac1169957a0a",
+    "PLA grade": "PLA; grade not extracted",
+    "geometry": "Regular plate and bridge-like structure (Fig. 4)",
+    "print condition": "Measured process histories; G-code-driven deposition",
+    "annealing temperature": "Printing thermal cycle; post-print annealing not the target",
+    "holding time": "Not applicable to a dedicated annealing hold",
+    "support/constraint": "Printing bed; boundary assumptions discussed in §4",
+    "mechanical data": "Predicted distortion and thermo-mechanical response",
+    "dimensional data": "Optical 3D scan comparison",
+    "thermal data": "Infrared thermography comparison",
+    "constitutive properties": "Temperature-dependent mechanical and thermal relations",
+    "simulation method": "Sequential thermal–mechanical FE; progressive activation",
+    "validation usefulness": "Thermal and free-warpage methods; cannot validate annealing fixture contact",
+    "limitations": "Some distortion comparisons qualitative; printing history differs",
+    "relevance": "Coupling and stepwise physical validation are established",
+    "source locator": "§§2–4; Fig. 4; discussion following Fig. 11",
+    "source URL": "https://publications.polymtl.ca/10438/8/2022_Trofimov_Experimentally_validated_modeling_temperature_distribution.pdf",
+    "access level": "Full text retrieved; targeted methods/results appraisal",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Laminate2025",
+    "doi": "10.1088/1361-665x/adeee4",
+    "title": "Thermo-viscoelastic laminate-based finite element modeling of fused filament fabrication direct 4D printing",
+    "authors": "Joël N Chapuis; Gian Teufen; Kristina Shea",
+    "journal": "Smart Materials and Structures",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2025,
+          7,
+          1
+        ]
+      ],
+      "published-online": [
+        [
+          2025,
+          7,
+          22
+        ]
+      ],
+      "published-print": [
+        [
+          2025,
+          7,
+          1
+        ]
+      ]
+    },
+    "volume": "34",
+    "issue": "7",
+    "pages": "075034",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1088%2F1361-665X%2Fadeee4",
+    "metadata_sha256": "39eb44dde3bbcd5d20717fdcd049e304029366dd1544c8c4d612c5e485b3c0e6",
+    "PLA grade": "Prusament PLA; Extrudr PETG as second material",
+    "geometry": "Bilayers, bending/twisting examples and wave spring",
+    "print condition": "Explicit laminate orientation and programmed print pre-strain",
+    "annealing temperature": "PLA characterization 23–85 °C (§2.2.1); activation cycles",
+    "holding time": "No furnace annealing hold adopted",
+    "support/constraint": "Activation/mechanical test boundaries; no clearance-controlled annealing study identified",
+    "mechanical data": "DMA and response-force benchmarks",
+    "dimensional data": "Shape deployment benchmarks",
+    "thermal data": "Frequency sweeps and activation temperatures",
+    "constitutive properties": "Modified generalized Maxwell; Prony; WLF above glass transition, Arrhenius below",
+    "simulation method": "Abaqus UMAT with laminate shell elements",
+    "validation usefulness": "Constitutive/recovery method candidate; independently reserve compatible observations",
+    "limitations": "Programmed 4D structures; calibration range does not cover all proposed temperatures",
+    "relevance": "Temperature-dependent recovery and viscoelastic FE are not novel",
+    "source locator": "§§2.1–2.2; benchmark sections; supplementary parameters referenced, not adopted",
+    "source URL": "https://www.research-collection.ethz.ch/server/api/core/bitstreams/4ee31ad8-b00d-4089-8361-982f0760e6ad/content",
+    "access level": "Full text retrieved; targeted methods/results appraisal",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Prediction2023",
+    "doi": "10.3390/polym15051162",
+    "title": "Prediction of The Mechanical Behavior of Polylactic Acid Parts with Shape Memory Effect Fabricated by FDM",
+    "authors": "Zhamila Issabayeva; Igor Shishkovsky",
+    "journal": "Polymers",
+    "year": 2023,
+    "publication_dates": {
+      "published": [
+        [
+          2023,
+          2,
+          25
+        ]
+      ],
+      "published-online": [
+        [
+          2023,
+          2,
+          25
+        ]
+      ]
+    },
+    "volume": "15",
+    "issue": "5",
+    "pages": "1162",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fpolym15051162",
+    "metadata_sha256": "4654063b7c3cd4d538f8427b823bc08acf419fecafc327b96c988904243707ad",
+    "PLA grade": "PLA shape-memory filament; grade not extracted",
+    "geometry": "Dog-bone, TMA cubes and DMA bars",
+    "print condition": "Five printing variables studied",
+    "annealing temperature": "TMA 0–90 °C then 0–150 °C; DMA to 150 °C (§§2.4–2.5)",
+    "holding time": "TMA initial 0 °C isotherm 10 min; not an annealing dwell recommendation",
+    "support/constraint": "Mechanical/DMA grips and TMA probe",
+    "mechanical data": "Tensile, DMA and shape-memory cycles",
+    "dimensional data": "Directional TMA and recovery",
+    "thermal data": "DSC, TMA, DMA",
+    "constitutive properties": "Mooney–Rivlin plus Prony-series viscoelasticity and temperature shift",
+    "simulation method": "ANSYS Workbench material-response simulation",
+    "validation usefulness": "Potential constituent benchmark; fitted curves are calibration, not independent validation",
+    "limitations": "Finite-strain shape-memory tests differ from spontaneous constrained annealing",
+    "relevance": "ANSYS with Prony and shifting already demonstrated",
+    "source locator": "§§2.3–2.7, especially §2.7.2; results",
+    "source URL": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10006872/fullTextXML",
+    "access level": "Full text retrieved; targeted methods/results appraisal",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Process2025",
+    "doi": "10.3390/ma18194537",
+    "title": "Thermo-Mechanical Approach to Material Extrusion Process During Fused Filament Fabrication of Polymeric Samples",
+    "authors": "Mahmoud Farh; Viktor Gribniak",
+    "journal": "Materials",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2025,
+          9,
+          29
+        ]
+      ],
+      "published-online": [
+        [
+          2025,
+          9,
+          29
+        ]
+      ]
+    },
+    "volume": "18",
+    "issue": "19",
+    "pages": "4537",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fma18194537",
+    "metadata_sha256": "899254334e597b18046479b46b9d287b51f96d264ff990c15222133657e5742a",
+    "PLA grade": "PLA; grade not extracted",
+    "geometry": "Thin printed samples",
+    "print condition": "G-code-to-event-series activation",
+    "annealing temperature": "Printing, cooling and detachment; not furnace annealing",
+    "holding time": "Not applicable to dedicated annealing hold",
+    "support/constraint": "Build-platform adhesion followed by detachment",
+    "mechanical data": "Residual stress and deformation predictions",
+    "dimensional data": "Vertical displacement validation",
+    "thermal data": "Transient FE; temperature-dependent tabulated properties",
+    "constitutive properties": "Thermo-mechanical properties drawn from prior sources",
+    "simulation method": "Abaqus 2020; thermal field drives mechanical step",
+    "validation usefulness": "Detachment and boundary-condition benchmark methodology",
+    "limitations": "Borrowed properties require original-source audit; no opposed fixture clearance",
+    "relevance": "Release-stage modeling is not new by itself",
+    "source locator": "Model-development sections; Table 3; §3.1 and validation discussion",
+    "source URL": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12525860/fullTextXML",
+    "access level": "Full text retrieved; targeted methods/results appraisal",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Mould2022",
+    "doi": "10.3390/polym14132607",
+    "title": "Influence of Thermal Annealing Temperatures on Powder Mould Effectiveness to Avoid Deformations in ABS and PLA 3D-Printed Parts",
+    "authors": "Joaquín Lluch-Cerezo; María Desamparados Meseguer; Juan Antonio García-Manrique; Rut Benavente",
+    "journal": "Polymers",
+    "year": 2022,
+    "publication_dates": {
+      "published": [
+        [
+          2022,
+          6,
+          27
+        ]
+      ],
+      "published-online": [
+        [
+          2022,
+          6,
+          27
+        ]
+      ]
+    },
+    "volume": "14",
+    "issue": "13",
+    "pages": "2607",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fpolym14132607",
+    "metadata_sha256": "f3c8a295e328e76a247fb36f7957fdc8b43fd30f81e4833deb754f1eaf9ef120",
+    "PLA grade": "Ultimaker Pearl White PLA; ABS comparator",
+    "geometry": "80 × 10 × 4 mm bars (§2.1)",
+    "print condition": "215 °C nozzle; 60 °C bed; 60 mm s⁻¹; 0.2 mm layers; 0° lines (§2.1)",
+    "annealing temperature": "PLA: 63, 75, 86, 98, 109, 132, 155 °C (Tables 2–3)",
+    "holding time": "120 min; 10 °C min⁻¹ ramp; cool before unpacking (§2.2)",
+    "support/constraint": "Dry alumina powder mould versus unsupported",
+    "mechanical data": "Flexural tests",
+    "dimensional data": "Signed three-direction changes and mould effectiveness",
+    "thermal data": "Furnace schedule; no transferable contact conductance extracted",
+    "constitutive properties": "No FE constitutive identification",
+    "simulation method": "Polynomial response descriptions, not contact FE",
+    "validation usefulness": "Support comparison context; numerical extraction blocked for inconsistent last Table 7 entry",
+    "limitations": "Table 7 says 240 °C for final PLA row while Tables 2–3 say 155 °C; no silent repair",
+    "relevance": "Constrained annealing and dimensional support efficacy already studied",
+    "source locator": "§§2.1–2.4; Tables 1–3 and 7; §3",
+    "source URL": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9269357/fullTextXML",
+    "access level": "Full text retrieved; targeted methods/results appraisal",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Wijnbergen2021",
+    "doi": "10.1108/rpj-04-2021-0090",
+    "title": "The effect of annealing on deformation and mechanical strength of tough PLA and its application in 3D printed prosthetic sockets",
+    "authors": "Diede Christine Wijnbergen; Merel van der Stelt; Luc Martijn Verhamme",
+    "journal": "Rapid Prototyping Journal",
+    "year": 2021,
+    "publication_dates": {
+      "published": [
+        [
+          2021,
+          8,
+          24
+        ]
+      ],
+      "published-online": [
+        [
+          2021,
+          8,
+          24
+        ]
+      ],
+      "published-print": [
+        [
+          2021,
+          12,
+          17
+        ]
+      ]
+    },
+    "volume": "27",
+    "issue": "11",
+    "pages": "81-89",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1108%2FRPJ-04-2021-0090",
+    "metadata_sha256": "69697b8bea82c5c1a2dbc1aca616af0aefa75ad7f58d861d5625f43da7c4ec3d",
+    "PLA grade": "Tough PLA",
+    "geometry": "Tensile specimens and rings; prosthetic-socket application",
+    "print condition": "Longitudinal and transverse orientations",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Oven, sand, water and glycerol methods",
+    "mechanical data": "Tensile strength comparison",
+    "dimensional data": "Ring dimensional change",
+    "thermal data": "Annealing medium comparison",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Experimental comparison; no FE identified in accessible evidence",
+    "validation usefulness": "Medium/support effects only until grade and thermal protocol match",
+    "limitations": "Tough formulation differs from neat PLA; full protocol not acquired",
+    "relevance": "Support media and directional mechanical response are established",
+    "source locator": "Publisher abstract and accessible article excerpts",
+    "source URL": "https://doi.org/10.1108/rpj-04-2021-0090",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "HighHeat2026",
+    "doi": "10.1002/pen.70250",
+    "title": "Dimensional Stability and Mechanical Performance of Thermally Conditioned High‐Heat Polylactic Acid Parts Produced by Fused Filament Fabrication",
+    "authors": "Cleiton Lazaro Fazolo de Assis; Kelvin dos Santos Tiene; Gabriel Boni Magosse",
+    "journal": "Polymer Engineering & Science",
+    "year": 2026,
+    "publication_dates": {
+      "published": [
+        [
+          2025,
+          11,
+          17
+        ]
+      ],
+      "published-online": [
+        [
+          2025,
+          11,
+          17
+        ]
+      ],
+      "published-print": [
+        [
+          2026,
+          2
+        ]
+      ]
+    },
+    "volume": "66",
+    "issue": "2",
+    "pages": "941-958",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1002%2Fpen.70250",
+    "metadata_sha256": "f38b7b149aef96aaa19faf81736bb3c04f5d70bd7624cf4837fc729a22569651",
+    "PLA grade": "Ingeo 3D850",
+    "geometry": "Standardized specimens; details not extracted",
+    "print condition": "190–260 °C nozzle (publisher abstract)",
+    "annealing temperature": "100 °C (abstract)",
+    "holding time": "4 h (abstract)",
+    "support/constraint": "Not established from accessible primary abstract",
+    "mechanical data": "Tensile response",
+    "dimensional data": "Height, width and length accuracy",
+    "thermal data": "Annealed/non-annealed treatment",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Machine-learning prediction; not fixture-contact FE",
+    "validation usefulness": "High-heat grade comparison only; protocol acquisition required",
+    "limitations": "Online 2025, issue 2026; do not assume sand restraint from secondary descriptions",
+    "relevance": "Joint dimensional/mechanical annealing prediction is established",
+    "source locator": "Publisher abstract; online publication 17 Nov 2025, issue Feb 2026",
+    "source URL": "https://doi.org/10.1002/pen.70250",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Multiscale2026",
+    "doi": "10.1007/s43939-026-00769-2",
+    "title": "Multiscale modeling and multiobjective optimization of the mechanical behavior of annealed and non-annealed material extrusion printed PLA",
+    "authors": "Rania Ben Amor; Slim Souissi",
+    "journal": "Discover Materials",
+    "year": 2026,
+    "publication_dates": {
+      "published": [
+        [
+          2026,
+          6,
+          25
+        ]
+      ],
+      "published-online": [
+        [
+          2026,
+          6,
+          25
+        ]
+      ]
+    },
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2Fs43939-026-00769-2",
+    "metadata_sha256": "64a9fe2efa85b8ea9993632a65c62893ec54f6b6b4861f43bd24fb87206f275c",
+    "PLA grade": "PLA; grade not extracted",
+    "geometry": "Printed tensile structures",
+    "print condition": "Raster orientations 0°, 45°, 90° (abstract)",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Tensile boundary conditions; annealing fixture not established in abstract",
+    "mechanical data": "Tensile stiffness, strength and elongation",
+    "dimensional data": "Released annealing warpage not established in abstract",
+    "thermal data": "Annealed/non-annealed comparison and DSC interpretation",
+    "constitutive properties": "Homogenized anisotropic model",
+    "simulation method": "Multiscale FE and composite desirability optimization",
+    "validation usefulness": "Tensile benchmark; independence of fitted/validation data requires full-text appraisal",
+    "limitations": "Publisher early unedited article; abstract does not establish transient contact physics",
+    "relevance": "Direct counterexample to novelty based on annealing + FE + multi-objective optimization",
+    "source locator": "Publisher abstract and publication history, 25 June 2026; not AI-generated summary",
+    "source URL": "https://doi.org/10.1007/s43939-026-00769-2",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "SCF2023",
+    "doi": "10.1080/20550340.2023.2171940",
+    "title": "Residual stress and warpage of additively manufactured SCF/PLA composite parts",
+    "authors": "Bingnong Jiang; Yuan Chen; Lin Ye; Li Chang; Hang Dong",
+    "journal": "Advanced Manufacturing: Polymer & Composites Science",
+    "year": 2023,
+    "publication_dates": {
+      "published": [
+        [
+          2023,
+          1,
+          2
+        ]
+      ],
+      "published-online": [
+        [
+          2023,
+          2,
+          8
+        ]
+      ],
+      "published-print": [
+        [
+          2023,
+          1,
+          2
+        ]
+      ]
+    },
+    "volume": "9",
+    "issue": "1",
+    "pages": "2171940",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1080%2F20550340.2023.2171940",
+    "metadata_sha256": "bed69e6b962e7a4bd2f4dfe8635cdaf4550659a9135e8d702ed83bf66b5cd946",
+    "PLA grade": "Short-carbon-fibre-reinforced PLA",
+    "geometry": "Square and circular tubes",
+    "print condition": "FFF deposition with active elements",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Printing bed",
+    "mechanical data": "Computed residual stresses",
+    "dimensional data": "Computed warpage",
+    "thermal data": "DSC and temperature-dependent properties",
+    "constitutive properties": "Thermoelasticity and Nakamura crystallization kinetics",
+    "simulation method": "MSC Digimat-AM multiphysics model",
+    "validation usefulness": "Method precedent; composite properties not transferable to neat PLA",
+    "limitations": "Some model parameters fitted to crystallinity; calibration cannot double as validation",
+    "relevance": "Thermal–mechanical–crystallization coupling already exists",
+    "source locator": "Primary article §§3.1–3.2; Fig. 4; Table 1",
+    "source URL": "https://doi.org/10.1080/20550340.2023.2171940",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Orthotropic2024",
+    "doi": "10.1016/j.tws.2024.111800",
+    "title": "Orthotropic mechanical properties of PLA materials fabricated by fused deposition modeling",
+    "authors": "Meiyu Li; Yanan Xu; Jianguang Fang",
+    "journal": "Thin-Walled Structures",
+    "year": 2024,
+    "publication_dates": {
+      "published": [
+        [
+          2024,
+          6
+        ]
+      ],
+      "published-print": [
+        [
+          2024,
+          6
+        ]
+      ]
+    },
+    "volume": "199",
+    "issue": "",
+    "pages": "111800",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.tws.2024.111800",
+    "metadata_sha256": "c8ed93992aa30b65679f99d1099117657f1a05b0e40537f01be9fd7f4d2a72c5",
+    "PLA grade": "PLA",
+    "geometry": "Directional mechanical specimens",
+    "print condition": "Raster and road spacing varied",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Directional elastic and yield response",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Not extracted from accessible evidence; do not assume absent",
+    "constitutive properties": "Orthotropic compliance and Hill-type yield modeling",
+    "simulation method": "Analytical/numerical orthotropic mechanical representation",
+    "validation usefulness": "Candidate orientation-dependent mechanics; not an annealing-range law",
+    "limitations": "Road air gap is distinct from fixture clearance",
+    "relevance": "FFF orthotropy is established and must be grade/architecture-specific",
+    "source locator": "Publisher/author accepted article abstract and mechanical-model description",
+    "source URL": "https://doi.org/10.1016/j.tws.2024.111800",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Pantani2010",
+    "doi": "10.1016/j.polymdegradstab.2010.04.018",
+    "title": "Crystallization kinetics of virgin and processed poly(lactic acid)",
+    "authors": "R. Pantani; F. De Santis; A. Sorrentino; F. De Maio; G. Titomanlio",
+    "journal": "Polymer Degradation and Stability",
+    "year": 2010,
+    "publication_dates": {
+      "published": [
+        [
+          2010,
+          7
+        ]
+      ],
+      "published-print": [
+        [
+          2010,
+          7
+        ]
+      ]
+    },
+    "volume": "95",
+    "issue": "7",
+    "pages": "1148-1159",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.polymdegradstab.2010.04.018",
+    "metadata_sha256": "f9eff261c55b388a97aa673ae73c951f973dd2c4152cfa2475272f62f3a6e0ce",
+    "PLA grade": "Virgin and processed PLA",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Not extracted from accessible evidence; do not assume absent",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Crystallization kinetics under processing histories",
+    "constitutive properties": "Kinetic modeling candidates",
+    "simulation method": "Not extracted from accessible evidence; do not assume absent",
+    "validation usefulness": "Potential DSC calibration; not independent printed dimensional validation",
+    "limitations": "Processing history and grade must match",
+    "relevance": "Cold/melt history cannot be collapsed to a universal kinetics law",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1016/j.polymdegradstab.2010.04.018",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Nucleation2011",
+    "doi": "10.1016/j.tca.2011.05.034",
+    "title": "Nucleation and crystallization kinetics of poly(lactic acid)",
+    "authors": "Felice De Santis; Roberto Pantani; Giuseppe Titomanlio",
+    "journal": "Thermochimica Acta",
+    "year": 2011,
+    "publication_dates": {
+      "published": [
+        [
+          2011,
+          8
+        ]
+      ],
+      "published-print": [
+        [
+          2011,
+          8
+        ]
+      ]
+    },
+    "volume": "522",
+    "issue": "1-2",
+    "pages": "128-134",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.tca.2011.05.034",
+    "metadata_sha256": "2165be34189775f5b4ec550845a4d18ee580ef79c4fda22155edc854f0ac2023",
+    "PLA grade": "PLA",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Not extracted from accessible evidence; do not assume absent",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Nucleation and crystallization kinetics",
+    "constitutive properties": "Crystallization kinetics",
+    "simulation method": "Not extracted from accessible evidence; do not assume absent",
+    "validation usefulness": "Mechanism and kinetic-source candidate",
+    "limitations": "No printed fixture response established in abstract",
+    "relevance": "Crystallization modeling itself is established",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1016/j.tca.2011.05.034",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Kinetics2025",
+    "doi": "10.1002/mame.202500204",
+    "title": "Analysis of Crystallization Kinetics of PLA Filament for Fused Filament Fabrication",
+    "authors": "Targol Hashemi; Sara Liparoti; Valentina Volpe; Dario Cavallo; Maria Laura Di Lorenzo; Roberto Pantani",
+    "journal": "Macromolecular Materials and Engineering",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2025,
+          7,
+          13
+        ]
+      ],
+      "published-online": [
+        [
+          2025,
+          7,
+          13
+        ]
+      ],
+      "published-print": [
+        [
+          2025,
+          12
+        ]
+      ]
+    },
+    "volume": "310",
+    "issue": "12",
+    "pages": "e00204",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1002%2Fmame.202500204",
+    "metadata_sha256": "bfb533de22856e2405b923ae994504d5b64c1099a71f1c25c1d472810a16aabe",
+    "PLA grade": "PLA filament; exact grade not extracted",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Not extracted from accessible evidence; do not assume absent",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Cold versus melt crystallization and thermal history",
+    "constitutive properties": "Filament-specific kinetics",
+    "simulation method": "Not extracted from accessible evidence; do not assume absent",
+    "validation usefulness": "Potential kinetics calibration, pending full parameter extraction",
+    "limitations": "No fixture clearance/contact validation in accessible abstract",
+    "relevance": "FFF-filament crystallization is already modeled",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1002/mame.202500204",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Deformation2025",
+    "doi": "10.1002/pol.20240703",
+    "title": "Crystal Evolution of Amorphous Poly(lactic acid) During Simultaneous Multi‐step Tensile Deformation and Annealing",
+    "authors": "Todsapol Kajornprai; Jiradet Sringam; Anucha Seejuntuek; Dechmongkhon Kaewsuwan; Nuntaporn Kamonsutthipaijit; Sirinart Chio‐Srichan; Nitinat Suppakarn; Tatiya Trongsatitkul",
+    "journal": "Journal of Polymer Science",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2024,
+          10,
+          23
+        ]
+      ],
+      "published-online": [
+        [
+          2024,
+          10,
+          23
+        ]
+      ],
+      "published-print": [
+        [
+          2025,
+          1
+        ]
+      ]
+    },
+    "volume": "63",
+    "issue": "1",
+    "pages": "192-203",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1002%2Fpol.20240703",
+    "metadata_sha256": "1a01dda34e137f873f08e74a56acbabbb238ef5fbbb847bf27abb501def72eff",
+    "PLA grade": "Amorphous PLA",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "70 °C in accessible primary abstract",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Multi-step tensile deformation",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Crystal evolution with deformation and annealing",
+    "constitutive properties": "Stress/deformation–crystallization interaction context",
+    "simulation method": "Not extracted from accessible evidence; do not assume absent",
+    "validation usefulness": "Mechanism only; not free FFF annealing validation",
+    "limitations": "Online 2024, issue 2025; deformation protocol differs",
+    "relevance": "Stress-independent kinetics must be justified",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1002/pol.20240703",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Viscoplastic2017",
+    "doi": "10.1002/pen.24404",
+    "title": "Influence of temperature on viscoelastic–viscoplastic behavior of poly(lactic acid) under loading–unloading",
+    "authors": "Necmi Dusunceli; Aleksey D. Drozdov; Naseem Theilgaard",
+    "journal": "Polymer Engineering & Science",
+    "year": 2017,
+    "publication_dates": {
+      "published": [
+        [
+          2016,
+          8,
+          8
+        ]
+      ],
+      "published-online": [
+        [
+          2016,
+          8,
+          8
+        ]
+      ],
+      "published-print": [
+        [
+          2017,
+          3
+        ]
+      ]
+    },
+    "volume": "57",
+    "issue": "3",
+    "pages": "239-247",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1002%2Fpen.24404",
+    "metadata_sha256": "d1b4faa3badbebb0b3b7379b402542b55fb4ea4c45063d45e69c635dcf7f0044",
+    "PLA grade": "PLA; not established as FFF",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Temperature-dependent loading/unloading and time dependence",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Not extracted from accessible evidence; do not assume absent",
+    "constitutive properties": "Viscoelastic–viscoplastic response",
+    "simulation method": "Not extracted from accessible evidence; do not assume absent",
+    "validation usefulness": "Nonlinearity context; no transferable parameter set extracted",
+    "limitations": "Online 2016, issue 2017; bulk response cannot replace printed law",
+    "relevance": "A linear Prony law may be inadequate under large restraint",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1002/pen.24404",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Relaxation2022",
+    "doi": "10.3390/ma15103509",
+    "title": "Stress Relaxation Behavior of Additively Manufactured Polylactic Acid (PLA)",
+    "authors": "Alcide Bertocco; Matteo Bruno; Enrico Armentani; Luca Esposito; Michele Perrella",
+    "journal": "Materials",
+    "year": 2022,
+    "publication_dates": {
+      "published": [
+        [
+          2022,
+          5,
+          13
+        ]
+      ],
+      "published-online": [
+        [
+          2022,
+          5,
+          13
+        ]
+      ]
+    },
+    "volume": "15",
+    "issue": "10",
+    "pages": "3509",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fma15103509",
+    "metadata_sha256": "d81ec431a789508b252e11c40d6f33cbcbff63157bd815acc00eaa186ec03eef",
+    "PLA grade": "SUNLU PLA plus",
+    "geometry": "120 × 6 × 3 mm rectangular specimens (§2.1)",
+    "print condition": "210 °C nozzle; 50 °C bed; 60 mm s⁻¹; 0.1 mm layer (§2.1)",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "500 s relaxation observation, not annealing dwell (§2.1)",
+    "support/constraint": "Tensile grips; imposed strain",
+    "mechanical data": "Stress relaxation with infill-direction and conditioning effects",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Not extracted from accessible evidence; do not assume absent",
+    "constitutive properties": "Maxwell, standard linear solid and Findley fits",
+    "simulation method": "Analytical curve fitting",
+    "validation usefulness": "Relaxation-law appraisal; independent dataset reservation required",
+    "limitations": "Short relaxation tests do not establish an annealing-range WLF master curve",
+    "relevance": "Relaxation is measured in FFF PLA, not a proposed discovery",
+    "source locator": "§§2.1–2.2; results",
+    "source URL": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9147248/fullTextXML",
+    "access level": "Full text retrieved; targeted methods/results appraisal",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Kahya2025",
+    "doi": "10.1016/j.polymertesting.2025.108735",
+    "title": "Thermal annealing optimization for improved mechanical performance of PLA parts produced via 3D printing",
+    "authors": "Çağlar Kahya; Oğuz Tunçel; Onur Çavuşoğlu; Kenan Tüfekci",
+    "journal": "Polymer Testing",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2025,
+          3
+        ]
+      ],
+      "published-print": [
+        [
+          2025,
+          3
+        ]
+      ]
+    },
+    "volume": "144",
+    "issue": "",
+    "pages": "108735",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.polymertesting.2025.108735",
+    "metadata_sha256": "ac5a9e282b213decbd73cf3b58d1c264425e79648d8bd8d0dafd9470239f0534",
+    "PLA grade": "PLA",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Annealing-dependent mechanical response",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Temperature/time optimization",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Experimental optimization study",
+    "validation usefulness": "Treatment-context source; no fixture-stress validation",
+    "limitations": "Reported optimum is material/test-specific",
+    "relevance": "Optimizing annealing temperature and time is not novel",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1016/j.polymertesting.2025.108735",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Encapsulation2025",
+    "doi": "10.3390/jfb16090334",
+    "title": "Sustainable Thermal Post-Processing of PLA 3D Prints: Increased Dimensional Precision and Autoclave Compatibility",
+    "authors": "Florina Chiscop; Carmen-Cristiana Cazacu; Dragos-Alexandru Cazacu; Costel Emil Cotet",
+    "journal": "Journal of Functional Biomaterials",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2025,
+          9,
+          8
+        ]
+      ],
+      "published-online": [
+        [
+          2025,
+          9,
+          8
+        ]
+      ]
+    },
+    "volume": "16",
+    "issue": "9",
+    "pages": "334",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fjfb16090334",
+    "metadata_sha256": "309482dce7e95b6b523f19d2e32e34fee4cda945d855162586b0ecbcf524c322",
+    "PLA grade": "BASF/Forward AM Ultrafuse PLA Tough",
+    "geometry": "Hollow cylinders, bars, curved beams and application geometry",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Salt and RTV silicone encapsulation",
+    "mechanical data": "Bending/thermal creep and application performance",
+    "dimensional data": "Dimensional precision across geometries",
+    "thermal data": "Thermal processing and sterilization assessment",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Experimental post-processing comparison",
+    "validation usefulness": "Support-method context; not opposed-gap validation",
+    "limitations": "Tough PLA and encapsulation media differ; no adopted contact law",
+    "relevance": "Encapsulation and dimensional preservation already investigated",
+    "source locator": "§§2.1–2.2; subsequent treatment and results sections",
+    "source URL": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12471281/fullTextXML",
+    "access level": "Full text retrieved; targeted methods/results appraisal",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Salt2022",
+    "doi": "10.1016/j.engfailanal.2021.105932",
+    "title": "Using thermal annealing and salt remelting to increase tensile properties of 3D FDM prints",
+    "authors": "Agnieszka Szust; Grzegorz Adamski",
+    "journal": "Engineering Failure Analysis",
+    "year": 2022,
+    "publication_dates": {
+      "published": [
+        [
+          2022,
+          2
+        ]
+      ],
+      "published-print": [
+        [
+          2022,
+          2
+        ]
+      ]
+    },
+    "volume": "132",
+    "issue": "",
+    "pages": "105932",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.engfailanal.2021.105932",
+    "metadata_sha256": "a22d1afe099a5528b04e5dfbca30c9391fdadf631f0b5e8df9c8c9e3df20716f",
+    "PLA grade": "Not extracted from accessible evidence; do not assume absent",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Salt-assisted annealing/remelting",
+    "mechanical data": "Tensile response",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Not extracted from accessible evidence; do not assume absent",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Experimental thermal post-processing",
+    "validation usefulness": "Context only for sub-melting study",
+    "limitations": "Remelting is outside present scope",
+    "relevance": "Salt restraint is not novel",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1016/j.engfailanal.2021.105932",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Moulds2022",
+    "doi": "10.1177/16878132221120737",
+    "title": "Enhancing mechanical properties of 3D printed thermoplastic polymers by annealing in moulds",
+    "authors": "Miloš Vorkapić; Ivana Mladenović; Toni Ivanov; Aleksandar Kovačević; Mohammad Sakib Hasan; Aleksandar Simonović; Isaak Trajković",
+    "journal": "Advances in Mechanical Engineering",
+    "year": 2022,
+    "publication_dates": {
+      "published": [
+        [
+          2022,
+          8
+        ]
+      ],
+      "published-online": [
+        [
+          2022,
+          8,
+          24
+        ]
+      ],
+      "published-print": [
+        [
+          2022,
+          8
+        ]
+      ]
+    },
+    "volume": "14",
+    "issue": "8",
+    "pages": "16878132221120737",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1177%2F16878132221120737",
+    "metadata_sha256": "f37d2fde2b8a275a0aaf4d3e6a09a46ac6d7759d010e3fa047471dcf4728b01b",
+    "PLA grade": "Not extracted from accessible evidence; do not assume absent",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Annealing in moulds",
+    "mechanical data": "Mechanical-property comparisons",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Not extracted from accessible evidence; do not assume absent",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Experimental mould-supported processing",
+    "validation usefulness": "Support precedent; protocol compatibility required",
+    "limitations": "Mould behavior cannot be replaced by ideal fixed faces",
+    "relevance": "Mechanical support during annealing is prior art",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1177/16878132221120737",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Wach2018",
+    "doi": "10.1002/mame.201800169",
+    "title": "Enhancement of Mechanical Properties of FDM‐PLA Parts via Thermal Annealing",
+    "authors": "Radoslaw A. Wach; Piotr Wolszczak; Agnieszka Adamus‐Wlodarczyk",
+    "journal": "Macromolecular Materials and Engineering",
+    "year": 2018,
+    "publication_dates": {
+      "published": [
+        [
+          2018,
+          7,
+          11
+        ]
+      ],
+      "published-online": [
+        [
+          2018,
+          7,
+          11
+        ]
+      ],
+      "published-print": [
+        [
+          2018,
+          9
+        ]
+      ]
+    },
+    "volume": "303",
+    "issue": "9",
+    "pages": "1800169",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1002%2Fmame.201800169",
+    "metadata_sha256": "d305eca19366de44cafb3bb39b46918ed0b2d05e42f3e7141f3c6bf807bf4245",
+    "PLA grade": "FDM PLA",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Annealing-dependent mechanical performance",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Thermal treatment and morphology",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Not extracted from accessible evidence; do not assume absent",
+    "validation usefulness": "Background; grade/architecture matching required",
+    "limitations": "Mechanical enhancement does not validate residual-stress predictions",
+    "relevance": "Thermal post-treatment of FDM PLA is established",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1002/mame.201800169",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Benwood2018",
+    "doi": "10.1021/acsomega.8b00129",
+    "title": "Improving the Impact Strength and Heat Resistance of 3D Printed Models: Structure, Property, and Processing Correlationships during Fused Deposition Modeling (FDM) of Poly(Lactic Acid)",
+    "authors": "Claire Benwood; Andrew Anstey; Jacek Andrzejewski; Manjusri Misra; Amar K. Mohanty",
+    "journal": "ACS Omega",
+    "year": 2018,
+    "publication_dates": {
+      "published": [
+        [
+          2018,
+          4,
+          23
+        ]
+      ],
+      "published-online": [
+        [
+          2018,
+          4,
+          23
+        ]
+      ],
+      "published-print": [
+        [
+          2018,
+          4,
+          30
+        ]
+      ]
+    },
+    "volume": "3",
+    "issue": "4",
+    "pages": "4400-4411",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1021%2Facsomega.8b00129",
+    "metadata_sha256": "07553d7c8e244e3f4d8f3c1ddbbb1cf6e2c73164f56185fab56139a7090c6ceb",
+    "PLA grade": "PLA",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Impact response and heat resistance",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Processing–structure relationships",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Not extracted from accessible evidence; do not assume absent",
+    "validation usefulness": "Mechanistic background",
+    "limitations": "Mechanical and thermal endpoints differ from released fixture warpage",
+    "relevance": "Processing, morphology and properties are linked",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1021/acsomega.8b00129",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Windheim2021",
+    "doi": "10.1108/rpj-08-2020-0205",
+    "title": "The influence of porosity, crystallinity and interlayer adhesion on the tensile strength of 3D printed polylactic acid (PLA)",
+    "authors": "Natalia von Windheim; David W. Collinson; Trent Lau; L. Catherine Brinson; Ken Gall",
+    "journal": "Rapid Prototyping Journal",
+    "year": 2021,
+    "publication_dates": {
+      "published": [
+        [
+          2021,
+          7,
+          5
+        ]
+      ],
+      "published-online": [
+        [
+          2021,
+          7,
+          5
+        ]
+      ],
+      "published-print": [
+        [
+          2021,
+          8,
+          3
+        ]
+      ]
+    },
+    "volume": "27",
+    "issue": "7",
+    "pages": "1327-1336",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1108%2FRPJ-08-2020-0205",
+    "metadata_sha256": "4956a29fc91df709ec50c82e9e245f2def121b0a589922ff05294e5f11a234f5",
+    "PLA grade": "Printed PLA",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Tensile strength and interlayer adhesion",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Crystallinity considered",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Not extracted from accessible evidence; do not assume absent",
+    "validation usefulness": "Mechanistic context; no selected calibration data",
+    "limitations": "Porosity and bonding confound a crystallinity-only strength law",
+    "relevance": "Crystallinity alone cannot justify strength improvement",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1108/rpj-08-2020-0205",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Bonding2024",
+    "doi": "10.1016/j.mtcomm.2024.109266",
+    "title": "Effects of heat treatment on the mechanical properties of 3D-printed polylactic acid: Study of competition between crystallization and interlayer bonding",
+    "authors": "Ali Ghasemkhani; Gholamreza Pircheraghi; Nima Rashidi Mehrabadi; Asma Eshraghi",
+    "journal": "Materials Today Communications",
+    "year": 2024,
+    "publication_dates": {
+      "published": [
+        [
+          2024,
+          6
+        ]
+      ],
+      "published-print": [
+        [
+          2024,
+          6
+        ]
+      ]
+    },
+    "volume": "39",
+    "issue": "",
+    "pages": "109266",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.mtcomm.2024.109266",
+    "metadata_sha256": "f074393245557711e4ef2033dc4b89236031b3d137d3a2fb74bd31a8d29c4678",
+    "PLA grade": "Printed PLA",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Heat-treatment mechanical response",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Crystallization–interlayer-bonding competition",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Not extracted from accessible evidence; do not assume absent",
+    "validation usefulness": "Mechanistic context",
+    "limitations": "No fixture-specific stress validation established",
+    "relevance": "Annealing need not improve every property",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1016/j.mtcomm.2024.109266",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Stojkovic2023",
+    "doi": "10.3390/ma16134574",
+    "title": "An Experimental Study on the Impact of Layer Height and Annealing Parameters on the Tensile Strength and Dimensional Accuracy of FDM 3D Printed Parts",
+    "authors": "Jelena R. Stojković; Rajko Turudija; Nikola Vitković; Filip Górski; Ancuţa Păcurar; Alin Pleşa; Alexandru Ianoşi-Andreeva-Dimitrova; Răzvan Păcurar",
+    "journal": "Materials",
+    "year": 2023,
+    "publication_dates": {
+      "published": [
+        [
+          2023,
+          6,
+          25
+        ]
+      ],
+      "published-online": [
+        [
+          2023,
+          6,
+          25
+        ]
+      ]
+    },
+    "volume": "16",
+    "issue": "13",
+    "pages": "4574",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fma16134574",
+    "metadata_sha256": "c306173ee08ccd35e85db6051dd07c67cdc404872495ee777e1d80c8d7958708",
+    "PLA grade": "FDM printed polymer; PLA study context",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Layer height varied",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Tensile strength",
+    "dimensional data": "Dimensional accuracy",
+    "thermal data": "Annealing temperature and time varied",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Experimental factorial assessment",
+    "validation usefulness": "Candidate dimensional data after compatibility audit",
+    "limitations": "Experimental statistics do not transfer to repeated deterministic FE runs",
+    "relevance": "Joint thermal/process factor studies already exist",
+    "source locator": "Publisher abstract; stage-1 verified source record",
+    "source URL": "https://doi.org/10.3390/ma16134574",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Butt2020",
+    "doi": "10.3390/jmmp4020038",
+    "title": "Investigating the Effects of Annealing on the Mechanical Properties of FFF-Printed Thermoplastics",
+    "authors": "Javaid Butt; Raghunath Bhaskar",
+    "journal": "Journal of Manufacturing and Materials Processing",
+    "year": 2020,
+    "publication_dates": {
+      "published": [
+        [
+          2020,
+          4,
+          28
+        ]
+      ],
+      "published-online": [
+        [
+          2020,
+          4,
+          28
+        ]
+      ]
+    },
+    "volume": "4",
+    "issue": "2",
+    "pages": "38",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fjmmp4020038",
+    "metadata_sha256": "95b202da56705a38237c0822f53077c353b28f47830d183ac94b4a26cc6a4554",
+    "PLA grade": "Several FFF thermoplastics including PLA",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Annealing-dependent mechanical tests",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Thermal post-treatment",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Experimental comparison",
+    "validation usefulness": "Context until matching grade and protocol established",
+    "limitations": "Cross-polymer comparisons cannot supply a universal PLA law",
+    "relevance": "Annealing of FFF thermoplastics is established",
+    "source locator": "Publisher abstract; stage-1 verified source record",
+    "source URL": "https://doi.org/10.3390/jmmp4020038",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Derringer1980",
+    "doi": "10.1080/00224065.1980.11980968",
+    "title": "Simultaneous Optimization of Several Response Variables",
+    "authors": "George Derringer; Ronald Suich",
+    "journal": "Journal of Quality Technology",
+    "year": 1980,
+    "publication_dates": {
+      "published": [
+        [
+          1980,
+          10
+        ]
+      ],
+      "published-online": [
+        [
+          2018,
+          2,
+          22
+        ]
+      ],
+      "published-print": [
+        [
+          1980,
+          10
+        ]
+      ]
+    },
+    "volume": "12",
+    "issue": "4",
+    "pages": "214-219",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1080%2F00224065.1980.11980968",
+    "metadata_sha256": "3c8f7833e247422dc13f607c34ded93613dd3a10cc2be9151a78256d5c24a4a0",
+    "PLA grade": "Not applicable: statistical methodology",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Not extracted from accessible evidence; do not assume absent",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Not extracted from accessible evidence; do not assume absent",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Desirability functions for several responses",
+    "validation usefulness": "Optimization method only, not physical validation",
+    "limitations": "Weights and desirability bounds are analyst choices",
+    "relevance": "Multi-response desirability is not new",
+    "source locator": "Original journal article, pp. 214–219; stage-1 source verification",
+    "source URL": "https://doi.org/10.1080/00224065.1980.11980968",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "WLF1955",
+    "doi": "10.1021/ja01619a008",
+    "title": "The Temperature Dependence of Relaxation Mechanisms in Amorphous Polymers and Other Glass-forming Liquids",
+    "authors": "Malcolm L. Williams; Robert F. Landel; John D. Ferry",
+    "journal": "Journal of the American Chemical Society",
+    "year": 1955,
+    "publication_dates": {
+      "published": [
+        [
+          1955,
+          7
+        ]
+      ],
+      "published-online": [
+        [
+          2002,
+          5,
+          1
+        ]
+      ],
+      "published-print": [
+        [
+          1955,
+          7
+        ]
+      ]
+    },
+    "volume": "77",
+    "issue": "14",
+    "pages": "3701-3707",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1021%2Fja01619a008",
+    "metadata_sha256": "d2d09bce8732f6721270d1ef0b9c8a1ebb50b6a5ad8b0587ababc05bcba073ea",
+    "PLA grade": "Amorphous polymers/glass-forming liquids; not FFF-specific",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Not extracted from accessible evidence; do not assume absent",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Not extracted from accessible evidence; do not assume absent",
+    "constitutive properties": "Temperature–relaxation shift relationship",
+    "simulation method": "Not extracted from accessible evidence; do not assume absent",
+    "validation usefulness": "Foundational method, not PLA parameter evidence",
+    "limitations": "Do not assume universal shift constants or thermorheological simplicity",
+    "relevance": "WLF shifting is established",
+    "source locator": "Original JACS article pp. 3701–3707; publisher bibliographic record",
+    "source URL": "https://doi.org/10.1021/ja01619a008",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Heat2023",
+    "doi": "10.1016/j.jmapro.2023.03.030",
+    "title": "Efficient simulation of the heat transfer in fused filament fabrication",
+    "authors": "Nathalie Ramos; Christoph Mittermeier; Josef Kiendl",
+    "journal": "Journal of Manufacturing Processes",
+    "year": 2023,
+    "publication_dates": {
+      "published": [
+        [
+          2023,
+          5
+        ]
+      ],
+      "published-print": [
+        [
+          2023,
+          5
+        ]
+      ]
+    },
+    "volume": "94",
+    "issue": "",
+    "pages": "550-563",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.jmapro.2023.03.030",
+    "metadata_sha256": "fc212caacca01e93ef2293ae86ef0e01bc62b9531c896db1aecdb11b31996276",
+    "PLA grade": "FFF polymer; exact grade not extracted",
+    "geometry": "Printed infill geometries",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Not extracted from accessible evidence; do not assume absent",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Transient heat transfer and thermal validation",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Hybrid activation and error-based mesh coarsening",
+    "validation usefulness": "Thermal verification/validation methodology",
+    "limitations": "No fixture interface conductance inferred from thermal agreement",
+    "relevance": "Efficient transient thermal FE already developed",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1016/j.jmapro.2023.03.030",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Phase2025",
+    "doi": "10.1007/s40964-024-00891-8",
+    "title": "Phase-field modeling of the morphological and thermal evolution of additively manufactured polylactic acid layers and their influence on the effective elastic mechanical properties",
+    "authors": "Ahmed Elmoghazy; Anselm Heuer; Aron Kneer; Martin Reder; Andreas Prahs; Daniel Schneider; Wilfried V. Liebig; Britta Nestler",
+    "journal": "Progress in Additive Manufacturing",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2024,
+          12,
+          18
+        ]
+      ],
+      "published-online": [
+        [
+          2024,
+          12,
+          18
+        ]
+      ],
+      "published-print": [
+        [
+          2025,
+          8
+        ]
+      ]
+    },
+    "volume": "10",
+    "issue": "8",
+    "pages": "5093-5115",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2Fs40964-024-00891-8",
+    "metadata_sha256": "59d2126e74880bb36fce49d935e9a5664662d796a73eb8b457baeac222668d68",
+    "PLA grade": "PLA layers",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Not extracted from accessible evidence; do not assume absent",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Thermal and morphological evolution",
+    "constitutive properties": "Effective elastic response informed by phase-field morphology",
+    "simulation method": "Phase-field modeling",
+    "validation usefulness": "Multiscale mechanism context",
+    "limitations": "Online 2024, issue 2025; not a fixture-contact validation dataset",
+    "relevance": "Morphology–thermal–mechanical coupling is established",
+    "source locator": "Publisher abstract",
+    "source URL": "https://doi.org/10.1007/s40964-024-00891-8",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "Grades2026",
+    "doi": "10.1002/app.71150",
+    "title": "Thermal Annealing of Injection‐Molded PLA Grades: Trade‐Offs Between Crystallinity Development, Dimensional Stability, Secondary Shrinkage, and Mechanical Performance",
+    "authors": "Edson A. dos Santos Filho; Edda Valentina Veracierta Rodriguez; Simon Debrie; Guilhermino J. M. Fechine; Edcleide M. Araujo; Ludwig Cardon; Mariya Edeleva",
+    "journal": "Journal of Applied Polymer Science",
+    "year": 2026,
+    "publication_dates": {
+      "published": [
+        [
+          2026,
+          7,
+          5
+        ]
+      ],
+      "published-online": [
+        [
+          2026,
+          7,
+          5
+        ]
+      ],
+      "published-print": [
+        [
+          2026,
+          10,
+          5
+        ]
+      ]
+    },
+    "volume": "143",
+    "issue": "37",
+    "pages": "e71150",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1002%2Fapp.71150",
+    "metadata_sha256": "8bf3f9d68621d3d5d733abecde5567eecdedf23774ac632161097f5e526f0f74",
+    "PLA grade": "Injection-moulded PLA grades",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "Not extracted from accessible evidence; do not assume absent",
+    "holding time": "Not extracted from accessible evidence; do not assume absent",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Mechanical performance",
+    "dimensional data": "Dimensional stability",
+    "thermal data": "Crystallinity and secondary shrinkage",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Not extracted from accessible evidence; do not assume absent",
+    "validation usefulness": "Mechanism context only; not FFF validation",
+    "limitations": "Online 5 July 2026 included; October 2026 issue date is later than cutoff",
+    "relevance": "Grade-specific annealing trade-offs remain important",
+    "source locator": "Publisher metadata and author-repository abstract",
+    "source URL": "https://doi.org/10.1002/app.71150",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  },
+  {
+    "key": "PINN2026",
+    "doi": "10.1016/j.rineng.2026.110279",
+    "title": "Thermo-constrained physics informed neural network based optimization of mechanical performance in recycled PLA additive manufacturing",
+    "authors": "Natrayan Lakshmaiya",
+    "journal": "Results in Engineering",
+    "year": 2026,
+    "publication_dates": {
+      "published": [
+        [
+          2026,
+          6
+        ]
+      ],
+      "published-print": [
+        [
+          2026,
+          6
+        ]
+      ]
+    },
+    "volume": "30",
+    "issue": "",
+    "pages": "110279",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.rineng.2026.110279",
+    "metadata_sha256": "ddf4287a926a27bade3f912ff9a88daade0bc37e60e88ce502e167d99c621777",
+    "PLA grade": "Recycled PLA",
+    "geometry": "Not extracted from accessible evidence; do not assume absent",
+    "print condition": "Not extracted from accessible evidence; do not assume absent",
+    "annealing temperature": "75 °C (§3)",
+    "holding time": "3 h (§3)",
+    "support/constraint": "Not extracted from accessible evidence; do not assume absent",
+    "mechanical data": "Strength, stiffness and ductility predictions",
+    "dimensional data": "Not extracted from accessible evidence; do not assume absent",
+    "thermal data": "Crystallinity/annealing state as learning constraints",
+    "constitutive properties": "Not extracted from accessible evidence; do not assume absent",
+    "simulation method": "Physics-informed neural network and Bayesian/Pareto optimization",
+    "validation usefulness": "Published data reuse; examine sample grouping before trusting independence",
+    "limitations": "Thermo-constrained refers to learning constraints, not a mechanical fixture; load-curve records are not independent specimens",
+    "relevance": "Physics-guided PLA optimization is already reported",
+    "source locator": "Publisher abstract and §3 methods; no accuracy values adopted",
+    "source URL": "https://doi.org/10.1016/j.rineng.2026.110279",
+    "access level": "Primary abstract/excerpts; no full protocol extraction",
+    "adoption status": "Literature only; no solver input or validation datum adopted"
+  }
+]

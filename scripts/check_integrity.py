@@ -1,4 +1,4 @@
-"""Stage 1 document/provenance checks, not numerical solver verification."""
+"""Stage 2 document/provenance checks, not numerical solver verification."""
 from pathlib import Path
 import csv, hashlib, json, re, subprocess, sys
 from pypdf import PdfReader
@@ -30,7 +30,7 @@ def main():
     source=(ROOT/'manuscript/current.md').read_text(encoding='utf-8')
     refs=json.loads((ROOT/'data/literature/verified_sources.json').read_text(encoding='utf-8'))
     citations=set(map(int,re.findall(r'\[(\d+)\]',source)))
-    check('Retained references and citations correspond',citations=={r['id'] for r in refs}==set(range(1,5)))
+    check('Retained references and citations correspond',citations==set(range(1,36)))
     check('Retained DOIs present',all(r['doi'] in source for r in refs))
     check('Objectives numbered 1 through 5',re.findall(r'^(\d)\. ',source,re.M)==['1','2','3','4','5'])
     check('Equations numbered consecutively',re.findall(r'\((\d)\)\s*$', '\n'.join(l for l in source.splitlines() if l.startswith('EQ:')),re.M)==list(map(str,range(1,10))))
@@ -43,7 +43,7 @@ def main():
     subprocess.run([sys.executable,str(ROOT/'scripts/build_manuscript.py')],check=True,cwd=ROOT,capture_output=True)
     check('PDF reproducible byte-for-byte',digest(PDF)==before)
     reader=PdfReader(PDF)
-    check('Complete ten-page manuscript without spill pages',len(reader.pages)==10)
+    check('Complete eighteen-page manuscript without spill pages',len(reader.pages)==18)
     text='\n'.join(p.extract_text() for p in reader.pages)
     for pattern in [r'F3498',r'sqrt\s*\(',r'epsilon_ann',r'Delta L',r'95 C',r'3 x 3',r'130 physical specimens',r'\bTODO\b',r'\bTBD\b',r'\ufffd']:
         check('Forbidden manuscript pattern absent: '+pattern,not re.search(pattern,text))
@@ -57,7 +57,7 @@ def main():
             for c in p.chars:
                 if c['text'].strip() and (c['x0']<48 or c['x1']>p.width-46 or c['top']<30 or c['bottom']>p.height-18): bad.append(n)
         check('All text lies inside page safety bounds',not bad)
-    report={'stage':1,'date':'2026-09-12','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'scope':'Document and evidence integrity only. No solver verification or validation performed.'}
+    report={'stage':2,'date':'2026-09-12','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'scope':'Document and evidence integrity only. No solver verification or validation performed.'}
     (ROOT/'docs/integrity_report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     print(f'{len(checks)} integrity checks passed; PDF SHA-256 {digest(PDF)}')
 

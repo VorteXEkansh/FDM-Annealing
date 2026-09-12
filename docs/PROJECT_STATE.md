@@ -1,6 +1,6 @@
 # Authoritative project state
 
-Stage: **Prompt 1/20 — base paper audit and computational conversion**.
+Stage: **Prompt 2/20 — deep literature review and novelty definition**.
 Date: 2026-09-12 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
@@ -12,7 +12,7 @@ Current manuscript: `manuscript/current.md`.
 Current PDF: `output/pdf/Constrained-Annealing-2026-DRAFT.pdf`.
 Base source: `data/source/DTU_Constrained_Annealing_Final_Submission.pdf`; immutable, with SHA-256 in `data/source/manifest.json`.
 
-## Completed at this stage
+## Completed in Stage 1
 
 - Read all 24 base pages, including references, figures, tables and both appendices; visually reviewed the page renders.
 - Created section-level conversion audit, figure/table disposition inventory and restructuring map.
@@ -40,7 +40,7 @@ No performance improvement, optimal process condition or experimental confirmati
 ## Decisions and scientific safeguards
 
 1. Treat two opposed plate surfaces with stops as a candidate fixture concept. Define total initial free clearance at the reference temperature. Do not inherit the unverified 0.05 mm hot clearance as a property or optimum.
-2. Use ANSYS transient thermal and history-dependent structural/contact analysis when justified by material evidence. This is an intended workflow, not an executable model in Stage 1.
+2. Use ANSYS transient thermal and history-dependent structural/contact analysis when justified by material evidence. This is an intended workflow, not an executable model at the current stage.
 3. Reversible thermoelasticity alone cannot establish permanent annealing recovery. A source-backed irreversible/history-dependent description or explicitly limited phenomenological model is required.
 4. Do not impose symmetry, clamped specimen faces or uniform recovery merely to force low warpage. Quantify rigid-body stabilization and contact effects.
 5. Retain unconstrained comparison; granular supports are literature context, not primary numerical domains.
@@ -49,13 +49,16 @@ No performance improvement, optimal process condition or experimental confirmati
 8. Verify numerical error before calibration/validation. Reserve independent literature observations before fitting; calibration agreement is not validation.
 9. Do not assign probability distributions or tolerance thresholds without evidence/declared justification. Deterministic sweeps do not produce experimental confidence intervals.
 
-## Literature state
+## Literature state — Stage 2
 
-Only references retained in the current manuscript are treated as checked for the limited claims shown in `data/literature/verified_sources.json`. The base paper's 50 entries are preserved in an audit catalog; unretained entries have not been promoted to verified evidence merely because the base labels them verified. No quantitative literature values are adopted as material inputs or validation targets at Stage 1.
+A new critical investigation through 12 September 2026 retains 34 DOI-verified journal papers and the previously verified ASTM standard. See `literature/literature_matrix.xlsx`, `literature/literature_matrix.json`, `literature/references.bib`, `literature/doi_verification.json`, `docs/literature_search_strategy.md` and `docs/novelty_audit.md`. Eight full texts were retrieved for targeted appraisal; remaining studies have explicit abstract/excerpt access limits. The old four-entry `data/literature/verified_sources.json` is the immutable Stage 1 admission record, not the complete current bibliography.
+
+The complete manuscript now includes the critical literature review, ten closest competitors and narrowed novelty. Supported annealing, ANSYS/irreversible thermal strain, Prony/WLF recovery models, coupled thermal/crystallization mechanics, and annealed PLA FE/optimization all have precedents. The provisional intended contribution is evidence-tested prediction of the clearance–distortion–stress trade-off after cooling and release. No exclusive priority claim is supported. Full protocols for abstract-level competitors must be recovered before publication-level priority assertions.
+
+No literature property or validation target is adopted. Candidate recovery sources include Bute2024 and Laminate2025; potential thermal/warpage comparisons include Wijnen2018 and Trofimov2022. All require compatibility and independence appraisal before data selection. None currently validates the proposed fixture's residual stresses or contact pressures. The Mould2022 final PLA Table 7 temperature conflicts with Tables 2–3; affected values remain unaccepted. Tough, high-heat, recycled and filled PLA remain separate from neat PLA.
 
 ## Completion records and stage boundary
 
-Integrity and visual review: see `docs/stage_01_quality.md` and `docs/integrity_report.json`.
-Git transport/remote verification is recorded in `docs/stage_01_delivery.json`; it identifies the pushed content commit. That record is committed separately to avoid a self-referential hash. The final delivery-record commit is also checked against the remote.
+Stage 2 quality and integrity: `docs/stage_02_quality.md`, `docs/integrity_report.json`, `docs/stage_02_manifest.json`. Earlier stage quality/transport records remain historical. The stage-specific delivery record identifies the pushed content commit; a subsequent delivery-record commit is also verified remotely to avoid self-referential hashes.
 
-Do not begin Prompt 2 without the user's next numbered instruction. Later stages must resolve the open evidence and implementation items within their assigned scope before promoting any numerical claim.
+Prompt 2 adds literature and document evidence only. All solver, calibration, verification, validation, sensitivity, uncertainty and optimization statuses above remain unchanged. Do not begin Prompt 3 without the user's next numbered instruction.

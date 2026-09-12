@@ -2,3 +2,7 @@
 *.pdf binary
 *.png binary
 *.jpg binary
+
+*.xlsx binary
+literature/metadata/*.json -text
+literature/search_logs/*.json -text

@@ -1,0 +1,1171 @@
+[
+  {
+    "key": "Bute2024",
+    "doi": "10.5755/j02.ms.35076",
+    "title": "Thermomechanical Analysis and Numerical Simulations of Fused Filament Fabricated Polylactic Acid Parts",
+    "authors": "Irina BUTE; Sergejs TARASOVS; Jevgenijs SEVCENKO; Andrey ANISKEVICH",
+    "journal": "Materials Science",
+    "year": 2024,
+    "publication_dates": {
+      "published": [
+        [
+          2024,
+          5,
+          15
+        ]
+      ],
+      "published-online": [
+        [
+          2024,
+          5,
+          15
+        ]
+      ]
+    },
+    "volume": "30",
+    "issue": "2",
+    "pages": "217-225",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.5755%2Fj02.ms.35076",
+    "metadata_sha256": "e79012d77e899182e5e6bda80903d779fad605055875e45d9e863532b8eef5ea"
+  },
+  {
+    "key": "Wijnen2018",
+    "doi": "10.1007/s40964-018-0052-4",
+    "title": "Improved model and experimental validation of deformation in fused filament fabrication of polylactic acid",
+    "authors": "Bas Wijnen; Paul Sanders; Joshua M. Pearce",
+    "journal": "Progress in Additive Manufacturing",
+    "year": 2018,
+    "publication_dates": {
+      "published": [
+        [
+          2018,
+          5,
+          21
+        ]
+      ],
+      "published-online": [
+        [
+          2018,
+          5,
+          21
+        ]
+      ],
+      "published-print": [
+        [
+          2018,
+          12
+        ]
+      ]
+    },
+    "volume": "3",
+    "issue": "4",
+    "pages": "193-203",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2Fs40964-018-0052-4",
+    "metadata_sha256": "c1509756c89c6fa6425f68263941d727920fa582cbb1ce286523a4f852085708"
+  },
+  {
+    "key": "Trofimov2022",
+    "doi": "10.1016/j.addma.2022.102693",
+    "title": "Experimentally validated modeling of the temperature distribution and the distortion during the Fused Filament Fabrication process",
+    "authors": "Anton Trofimov; Jérémy Le Pavic; Sébastien Pautard; Daniel Therriault; Martin Lévesque",
+    "journal": "Additive Manufacturing",
+    "year": 2022,
+    "publication_dates": {
+      "published": [
+        [
+          2022,
+          6
+        ]
+      ],
+      "published-print": [
+        [
+          2022,
+          6
+        ]
+      ]
+    },
+    "volume": "54",
+    "issue": "",
+    "pages": "102693",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.addma.2022.102693",
+    "metadata_sha256": "f9c81714bbbfa0aed73e368a2245348fc695bb4ce762c8d71531ac1169957a0a"
+  },
+  {
+    "key": "Laminate2025",
+    "doi": "10.1088/1361-665x/adeee4",
+    "title": "Thermo-viscoelastic laminate-based finite element modeling of fused filament fabrication direct 4D printing",
+    "authors": "Joël N Chapuis; Gian Teufen; Kristina Shea",
+    "journal": "Smart Materials and Structures",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2025,
+          7,
+          1
+        ]
+      ],
+      "published-online": [
+        [
+          2025,
+          7,
+          22
+        ]
+      ],
+      "published-print": [
+        [
+          2025,
+          7,
+          1
+        ]
+      ]
+    },
+    "volume": "34",
+    "issue": "7",
+    "pages": "075034",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1088%2F1361-665X%2Fadeee4",
+    "metadata_sha256": "39eb44dde3bbcd5d20717fdcd049e304029366dd1544c8c4d612c5e485b3c0e6"
+  },
+  {
+    "key": "Prediction2023",
+    "doi": "10.3390/polym15051162",
+    "title": "Prediction of The Mechanical Behavior of Polylactic Acid Parts with Shape Memory Effect Fabricated by FDM",
+    "authors": "Zhamila Issabayeva; Igor Shishkovsky",
+    "journal": "Polymers",
+    "year": 2023,
+    "publication_dates": {
+      "published": [
+        [
+          2023,
+          2,
+          25
+        ]
+      ],
+      "published-online": [
+        [
+          2023,
+          2,
+          25
+        ]
+      ]
+    },
+    "volume": "15",
+    "issue": "5",
+    "pages": "1162",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fpolym15051162",
+    "metadata_sha256": "4654063b7c3cd4d538f8427b823bc08acf419fecafc327b96c988904243707ad"
+  },
+  {
+    "key": "Process2025",
+    "doi": "10.3390/ma18194537",
+    "title": "Thermo-Mechanical Approach to Material Extrusion Process During Fused Filament Fabrication of Polymeric Samples",
+    "authors": "Mahmoud Farh; Viktor Gribniak",
+    "journal": "Materials",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2025,
+          9,
+          29
+        ]
+      ],
+      "published-online": [
+        [
+          2025,
+          9,
+          29
+        ]
+      ]
+    },
+    "volume": "18",
+    "issue": "19",
+    "pages": "4537",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fma18194537",
+    "metadata_sha256": "899254334e597b18046479b46b9d287b51f96d264ff990c15222133657e5742a"
+  },
+  {
+    "key": "Mould2022",
+    "doi": "10.3390/polym14132607",
+    "title": "Influence of Thermal Annealing Temperatures on Powder Mould Effectiveness to Avoid Deformations in ABS and PLA 3D-Printed Parts",
+    "authors": "Joaquín Lluch-Cerezo; María Desamparados Meseguer; Juan Antonio García-Manrique; Rut Benavente",
+    "journal": "Polymers",
+    "year": 2022,
+    "publication_dates": {
+      "published": [
+        [
+          2022,
+          6,
+          27
+        ]
+      ],
+      "published-online": [
+        [
+          2022,
+          6,
+          27
+        ]
+      ]
+    },
+    "volume": "14",
+    "issue": "13",
+    "pages": "2607",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fpolym14132607",
+    "metadata_sha256": "f3c8a295e328e76a247fb36f7957fdc8b43fd30f81e4833deb754f1eaf9ef120"
+  },
+  {
+    "key": "Wijnbergen2021",
+    "doi": "10.1108/rpj-04-2021-0090",
+    "title": "The effect of annealing on deformation and mechanical strength of tough PLA and its application in 3D printed prosthetic sockets",
+    "authors": "Diede Christine Wijnbergen; Merel van der Stelt; Luc Martijn Verhamme",
+    "journal": "Rapid Prototyping Journal",
+    "year": 2021,
+    "publication_dates": {
+      "published": [
+        [
+          2021,
+          8,
+          24
+        ]
+      ],
+      "published-online": [
+        [
+          2021,
+          8,
+          24
+        ]
+      ],
+      "published-print": [
+        [
+          2021,
+          12,
+          17
+        ]
+      ]
+    },
+    "volume": "27",
+    "issue": "11",
+    "pages": "81-89",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1108%2FRPJ-04-2021-0090",
+    "metadata_sha256": "69697b8bea82c5c1a2dbc1aca616af0aefa75ad7f58d861d5625f43da7c4ec3d"
+  },
+  {
+    "key": "HighHeat2026",
+    "doi": "10.1002/pen.70250",
+    "title": "Dimensional Stability and Mechanical Performance of Thermally Conditioned High‐Heat Polylactic Acid Parts Produced by Fused Filament Fabrication",
+    "authors": "Cleiton Lazaro Fazolo de Assis; Kelvin dos Santos Tiene; Gabriel Boni Magosse",
+    "journal": "Polymer Engineering &amp; Science",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2025,
+          11,
+          17
+        ]
+      ],
+      "published-online": [
+        [
+          2025,
+          11,
+          17
+        ]
+      ],
+      "published-print": [
+        [
+          2026,
+          2
+        ]
+      ]
+    },
+    "volume": "66",
+    "issue": "2",
+    "pages": "941-958",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1002%2Fpen.70250",
+    "metadata_sha256": "f38b7b149aef96aaa19faf81736bb3c04f5d70bd7624cf4837fc729a22569651"
+  },
+  {
+    "key": "Multiscale2026",
+    "doi": "10.1007/s43939-026-00769-2",
+    "title": "Multiscale modeling and multiobjective optimization of the mechanical behavior of annealed and non-annealed material extrusion printed PLA",
+    "authors": "Rania Ben Amor; Slim Souissi",
+    "journal": "Discover Materials",
+    "year": 2026,
+    "publication_dates": {
+      "published": [
+        [
+          2026,
+          6,
+          25
+        ]
+      ],
+      "published-online": [
+        [
+          2026,
+          6,
+          25
+        ]
+      ]
+    },
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2Fs43939-026-00769-2",
+    "metadata_sha256": "64a9fe2efa85b8ea9993632a65c62893ec54f6b6b4861f43bd24fb87206f275c"
+  },
+  {
+    "key": "SCF2023",
+    "doi": "10.1080/20550340.2023.2171940",
+    "title": "Residual stress and warpage of additively manufactured SCF/PLA composite parts",
+    "authors": "Bingnong Jiang; Yuan Chen; Lin Ye; Li Chang; Hang Dong",
+    "journal": "Advanced Manufacturing: Polymer &amp; Composites Science",
+    "year": 2023,
+    "publication_dates": {
+      "published": [
+        [
+          2023,
+          1,
+          2
+        ]
+      ],
+      "published-online": [
+        [
+          2023,
+          2,
+          8
+        ]
+      ],
+      "published-print": [
+        [
+          2023,
+          1,
+          2
+        ]
+      ]
+    },
+    "volume": "9",
+    "issue": "1",
+    "pages": "2171940",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1080%2F20550340.2023.2171940",
+    "metadata_sha256": "bed69e6b962e7a4bd2f4dfe8635cdaf4550659a9135e8d702ed83bf66b5cd946"
+  },
+  {
+    "key": "Orthotropic2024",
+    "doi": "10.1016/j.tws.2024.111800",
+    "title": "Orthotropic mechanical properties of PLA materials fabricated by fused deposition modeling",
+    "authors": "Meiyu Li; Yanan Xu; Jianguang Fang",
+    "journal": "Thin-Walled Structures",
+    "year": 2024,
+    "publication_dates": {
+      "published": [
+        [
+          2024,
+          6
+        ]
+      ],
+      "published-print": [
+        [
+          2024,
+          6
+        ]
+      ]
+    },
+    "volume": "199",
+    "issue": "",
+    "pages": "111800",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.tws.2024.111800",
+    "metadata_sha256": "c8ed93992aa30b65679f99d1099117657f1a05b0e40537f01be9fd7f4d2a72c5"
+  },
+  {
+    "key": "Pantani2010",
+    "doi": "10.1016/j.polymdegradstab.2010.04.018",
+    "title": "Crystallization kinetics of virgin and processed poly(lactic acid)",
+    "authors": "R. Pantani; F. De Santis; A. Sorrentino; F. De Maio; G. Titomanlio",
+    "journal": "Polymer Degradation and Stability",
+    "year": 2010,
+    "publication_dates": {
+      "published": [
+        [
+          2010,
+          7
+        ]
+      ],
+      "published-print": [
+        [
+          2010,
+          7
+        ]
+      ]
+    },
+    "volume": "95",
+    "issue": "7",
+    "pages": "1148-1159",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.polymdegradstab.2010.04.018",
+    "metadata_sha256": "f9eff261c55b388a97aa673ae73c951f973dd2c4152cfa2475272f62f3a6e0ce"
+  },
+  {
+    "key": "Nucleation2011",
+    "doi": "10.1016/j.tca.2011.05.034",
+    "title": "Nucleation and crystallization kinetics of poly(lactic acid)",
+    "authors": "Felice De Santis; Roberto Pantani; Giuseppe Titomanlio",
+    "journal": "Thermochimica Acta",
+    "year": 2011,
+    "publication_dates": {
+      "published": [
+        [
+          2011,
+          8
+        ]
+      ],
+      "published-print": [
+        [
+          2011,
+          8
+        ]
+      ]
+    },
+    "volume": "522",
+    "issue": "1-2",
+    "pages": "128-134",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.tca.2011.05.034",
+    "metadata_sha256": "2165be34189775f5b4ec550845a4d18ee580ef79c4fda22155edc854f0ac2023"
+  },
+  {
+    "key": "Kinetics2025",
+    "doi": "10.1002/mame.202500204",
+    "title": "Analysis of Crystallization Kinetics of PLA Filament for Fused Filament Fabrication",
+    "authors": "Targol Hashemi; Sara Liparoti; Valentina Volpe; Dario Cavallo; Maria Laura Di Lorenzo; Roberto Pantani",
+    "journal": "Macromolecular Materials and Engineering",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2025,
+          7,
+          13
+        ]
+      ],
+      "published-online": [
+        [
+          2025,
+          7,
+          13
+        ]
+      ],
+      "published-print": [
+        [
+          2025,
+          12
+        ]
+      ]
+    },
+    "volume": "310",
+    "issue": "12",
+    "pages": "e00204",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1002%2Fmame.202500204",
+    "metadata_sha256": "bfb533de22856e2405b923ae994504d5b64c1099a71f1c25c1d472810a16aabe"
+  },
+  {
+    "key": "Deformation2025",
+    "doi": "10.1002/pol.20240703",
+    "title": "Crystal Evolution of Amorphous Poly(lactic acid) During Simultaneous Multi‐step Tensile Deformation and Annealing",
+    "authors": "Todsapol Kajornprai; Jiradet Sringam; Anucha Seejuntuek; Dechmongkhon Kaewsuwan; Nuntaporn Kamonsutthipaijit; Sirinart Chio‐Srichan; Nitinat Suppakarn; Tatiya Trongsatitkul",
+    "journal": "Journal of Polymer Science",
+    "year": 2024,
+    "publication_dates": {
+      "published": [
+        [
+          2024,
+          10,
+          23
+        ]
+      ],
+      "published-online": [
+        [
+          2024,
+          10,
+          23
+        ]
+      ],
+      "published-print": [
+        [
+          2025,
+          1
+        ]
+      ]
+    },
+    "volume": "63",
+    "issue": "1",
+    "pages": "192-203",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1002%2Fpol.20240703",
+    "metadata_sha256": "1a01dda34e137f873f08e74a56acbabbb238ef5fbbb847bf27abb501def72eff"
+  },
+  {
+    "key": "Viscoplastic2017",
+    "doi": "10.1002/pen.24404",
+    "title": "Influence of temperature on viscoelastic–viscoplastic behavior of poly(lactic acid) under loading–unloading",
+    "authors": "Necmi Dusunceli; Aleksey D. Drozdov; Naseem Theilgaard",
+    "journal": "Polymer Engineering &amp; Science",
+    "year": 2016,
+    "publication_dates": {
+      "published": [
+        [
+          2016,
+          8,
+          8
+        ]
+      ],
+      "published-online": [
+        [
+          2016,
+          8,
+          8
+        ]
+      ],
+      "published-print": [
+        [
+          2017,
+          3
+        ]
+      ]
+    },
+    "volume": "57",
+    "issue": "3",
+    "pages": "239-247",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1002%2Fpen.24404",
+    "metadata_sha256": "d1b4faa3badbebb0b3b7379b402542b55fb4ea4c45063d45e69c635dcf7f0044"
+  },
+  {
+    "key": "Relaxation2022",
+    "doi": "10.3390/ma15103509",
+    "title": "Stress Relaxation Behavior of Additively Manufactured Polylactic Acid (PLA)",
+    "authors": "Alcide Bertocco; Matteo Bruno; Enrico Armentani; Luca Esposito; Michele Perrella",
+    "journal": "Materials",
+    "year": 2022,
+    "publication_dates": {
+      "published": [
+        [
+          2022,
+          5,
+          13
+        ]
+      ],
+      "published-online": [
+        [
+          2022,
+          5,
+          13
+        ]
+      ]
+    },
+    "volume": "15",
+    "issue": "10",
+    "pages": "3509",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fma15103509",
+    "metadata_sha256": "d81ec431a789508b252e11c40d6f33cbcbff63157bd815acc00eaa186ec03eef"
+  },
+  {
+    "key": "Kahya2025",
+    "doi": "10.1016/j.polymertesting.2025.108735",
+    "title": "Thermal annealing optimization for improved mechanical performance of PLA parts produced via 3D printing",
+    "authors": "Çağlar Kahya; Oğuz Tunçel; Onur Çavuşoğlu; Kenan Tüfekci",
+    "journal": "Polymer Testing",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2025,
+          3
+        ]
+      ],
+      "published-print": [
+        [
+          2025,
+          3
+        ]
+      ]
+    },
+    "volume": "144",
+    "issue": "",
+    "pages": "108735",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.polymertesting.2025.108735",
+    "metadata_sha256": "ac5a9e282b213decbd73cf3b58d1c264425e79648d8bd8d0dafd9470239f0534"
+  },
+  {
+    "key": "Encapsulation2025",
+    "doi": "10.3390/jfb16090334",
+    "title": "Sustainable Thermal Post-Processing of PLA 3D Prints: Increased Dimensional Precision and Autoclave Compatibility",
+    "authors": "Florina Chiscop; Carmen-Cristiana Cazacu; Dragos-Alexandru Cazacu; Costel Emil Cotet",
+    "journal": "Journal of Functional Biomaterials",
+    "year": 2025,
+    "publication_dates": {
+      "published": [
+        [
+          2025,
+          9,
+          8
+        ]
+      ],
+      "published-online": [
+        [
+          2025,
+          9,
+          8
+        ]
+      ]
+    },
+    "volume": "16",
+    "issue": "9",
+    "pages": "334",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fjfb16090334",
+    "metadata_sha256": "309482dce7e95b6b523f19d2e32e34fee4cda945d855162586b0ecbcf524c322"
+  },
+  {
+    "key": "Salt2022",
+    "doi": "10.1016/j.engfailanal.2021.105932",
+    "title": "Using thermal annealing and salt remelting to increase tensile properties of 3D FDM prints",
+    "authors": "Agnieszka Szust; Grzegorz Adamski",
+    "journal": "Engineering Failure Analysis",
+    "year": 2022,
+    "publication_dates": {
+      "published": [
+        [
+          2022,
+          2
+        ]
+      ],
+      "published-print": [
+        [
+          2022,
+          2
+        ]
+      ]
+    },
+    "volume": "132",
+    "issue": "",
+    "pages": "105932",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.engfailanal.2021.105932",
+    "metadata_sha256": "a22d1afe099a5528b04e5dfbca30c9391fdadf631f0b5e8df9c8c9e3df20716f"
+  },
+  {
+    "key": "Moulds2022",
+    "doi": "10.1177/16878132221120737",
+    "title": "Enhancing mechanical properties of 3D printed thermoplastic polymers by annealing in moulds",
+    "authors": "Miloš Vorkapić; Ivana Mladenović; Toni Ivanov; Aleksandar Kovačević; Mohammad Sakib Hasan; Aleksandar Simonović; Isaak Trajković",
+    "journal": "Advances in Mechanical Engineering",
+    "year": 2022,
+    "publication_dates": {
+      "published": [
+        [
+          2022,
+          8
+        ]
+      ],
+      "published-online": [
+        [
+          2022,
+          8,
+          24
+        ]
+      ],
+      "published-print": [
+        [
+          2022,
+          8
+        ]
+      ]
+    },
+    "volume": "14",
+    "issue": "8",
+    "pages": "16878132221120737",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1177%2F16878132221120737",
+    "metadata_sha256": "f37d2fde2b8a275a0aaf4d3e6a09a46ac6d7759d010e3fa047471dcf4728b01b"
+  },
+  {
+    "key": "Wach2018",
+    "doi": "10.1002/mame.201800169",
+    "title": "Enhancement of Mechanical Properties of FDM‐PLA Parts via Thermal Annealing",
+    "authors": "Radoslaw A. Wach; Piotr Wolszczak; Agnieszka Adamus‐Wlodarczyk",
+    "journal": "Macromolecular Materials and Engineering",
+    "year": 2018,
+    "publication_dates": {
+      "published": [
+        [
+          2018,
+          7,
+          11
+        ]
+      ],
+      "published-online": [
+        [
+          2018,
+          7,
+          11
+        ]
+      ],
+      "published-print": [
+        [
+          2018,
+          9
+        ]
+      ]
+    },
+    "volume": "303",
+    "issue": "9",
+    "pages": "1800169",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1002%2Fmame.201800169",
+    "metadata_sha256": "d305eca19366de44cafb3bb39b46918ed0b2d05e42f3e7141f3c6bf807bf4245"
+  },
+  {
+    "key": "Benwood2018",
+    "doi": "10.1021/acsomega.8b00129",
+    "title": "Improving the Impact Strength and Heat Resistance of 3D Printed Models: Structure,\nProperty, and Processing Correlationships during Fused Deposition\nModeling (FDM) of Poly(Lactic Acid)",
+    "authors": "Claire Benwood; Andrew Anstey; Jacek Andrzejewski; Manjusri Misra; Amar K. Mohanty",
+    "journal": "ACS Omega",
+    "year": 2018,
+    "publication_dates": {
+      "published": [
+        [
+          2018,
+          4,
+          23
+        ]
+      ],
+      "published-online": [
+        [
+          2018,
+          4,
+          23
+        ]
+      ],
+      "published-print": [
+        [
+          2018,
+          4,
+          30
+        ]
+      ]
+    },
+    "volume": "3",
+    "issue": "4",
+    "pages": "4400-4411",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1021%2Facsomega.8b00129",
+    "metadata_sha256": "07553d7c8e244e3f4d8f3c1ddbbb1cf6e2c73164f56185fab56139a7090c6ceb"
+  },
+  {
+    "key": "Windheim2021",
+    "doi": "10.1108/rpj-08-2020-0205",
+    "title": "The influence of porosity, crystallinity and interlayer adhesion on the tensile strength of 3D printed polylactic acid (PLA)",
+    "authors": "Natalia von Windheim; David W. Collinson; Trent Lau; L. Catherine Brinson; Ken Gall",
+    "journal": "Rapid Prototyping Journal",
+    "year": 2021,
+    "publication_dates": {
+      "published": [
+        [
+          2021,
+          7,
+          5
+        ]
+      ],
+      "published-online": [
+        [
+          2021,
+          7,
+          5
+        ]
+      ],
+      "published-print": [
+        [
+          2021,
+          8,
+          3
+        ]
+      ]
+    },
+    "volume": "27",
+    "issue": "7",
+    "pages": "1327-1336",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1108%2FRPJ-08-2020-0205",
+    "metadata_sha256": "4956a29fc91df709ec50c82e9e245f2def121b0a589922ff05294e5f11a234f5"
+  },
+  {
+    "key": "Bonding2024",
+    "doi": "10.1016/j.mtcomm.2024.109266",
+    "title": "Effects of heat treatment on the mechanical properties of 3D-printed polylactic acid: Study of competition between crystallization and interlayer bonding",
+    "authors": "Ali Ghasemkhani; Gholamreza Pircheraghi; Nima Rashidi Mehrabadi; Asma Eshraghi",
+    "journal": "Materials Today Communications",
+    "year": 2024,
+    "publication_dates": {
+      "published": [
+        [
+          2024,
+          6
+        ]
+      ],
+      "published-print": [
+        [
+          2024,
+          6
+        ]
+      ]
+    },
+    "volume": "39",
+    "issue": "",
+    "pages": "109266",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.mtcomm.2024.109266",
+    "metadata_sha256": "f074393245557711e4ef2033dc4b89236031b3d137d3a2fb74bd31a8d29c4678"
+  },
+  {
+    "key": "Stojkovic2023",
+    "doi": "10.3390/ma16134574",
+    "title": "An Experimental Study on the Impact of Layer Height and Annealing Parameters on the Tensile Strength and Dimensional Accuracy of FDM 3D Printed Parts",
+    "authors": "Jelena R. Stojković; Rajko Turudija; Nikola Vitković; Filip Górski; Ancuţa Păcurar; Alin Pleşa; Alexandru Ianoşi-Andreeva-Dimitrova; Răzvan Păcurar",
+    "journal": "Materials",
+    "year": 2023,
+    "publication_dates": {
+      "published": [
+        [
+          2023,
+          6,
+          25
+        ]
+      ],
+      "published-online": [
+        [
+          2023,
+          6,
+          25
+        ]
+      ]
+    },
+    "volume": "16",
+    "issue": "13",
+    "pages": "4574",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fma16134574",
+    "metadata_sha256": "c306173ee08ccd35e85db6051dd07c67cdc404872495ee777e1d80c8d7958708"
+  },
+  {
+    "key": "Butt2020",
+    "doi": "10.3390/jmmp4020038",
+    "title": "Investigating the Effects of Annealing on the Mechanical Properties of FFF-Printed Thermoplastics",
+    "authors": "Javaid Butt; Raghunath Bhaskar",
+    "journal": "Journal of Manufacturing and Materials Processing",
+    "year": 2020,
+    "publication_dates": {
+      "published": [
+        [
+          2020,
+          4,
+          28
+        ]
+      ],
+      "published-online": [
+        [
+          2020,
+          4,
+          28
+        ]
+      ]
+    },
+    "volume": "4",
+    "issue": "2",
+    "pages": "38",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fjmmp4020038",
+    "metadata_sha256": "95b202da56705a38237c0822f53077c353b28f47830d183ac94b4a26cc6a4554"
+  },
+  {
+    "key": "Derringer1980",
+    "doi": "10.1080/00224065.1980.11980968",
+    "title": "Simultaneous Optimization of Several Response Variables",
+    "authors": "George Derringer; Ronald Suich",
+    "journal": "Journal of Quality Technology",
+    "year": 1980,
+    "publication_dates": {
+      "published": [
+        [
+          1980,
+          10
+        ]
+      ],
+      "published-online": [
+        [
+          2018,
+          2,
+          22
+        ]
+      ],
+      "published-print": [
+        [
+          1980,
+          10
+        ]
+      ]
+    },
+    "volume": "12",
+    "issue": "4",
+    "pages": "214-219",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1080%2F00224065.1980.11980968",
+    "metadata_sha256": "3c8f7833e247422dc13f607c34ded93613dd3a10cc2be9151a78256d5c24a4a0"
+  },
+  {
+    "key": "WLF1955",
+    "doi": "10.1021/ja01619a008",
+    "title": "The Temperature Dependence of Relaxation Mechanisms in Amorphous Polymers and Other Glass-forming Liquids",
+    "authors": "Malcolm L. Williams; Robert F. Landel; John D. Ferry",
+    "journal": "Journal of the American Chemical Society",
+    "year": 1955,
+    "publication_dates": {
+      "published": [
+        [
+          1955,
+          7
+        ]
+      ],
+      "published-online": [
+        [
+          2002,
+          5,
+          1
+        ]
+      ],
+      "published-print": [
+        [
+          1955,
+          7
+        ]
+      ]
+    },
+    "volume": "77",
+    "issue": "14",
+    "pages": "3701-3707",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1021%2Fja01619a008",
+    "metadata_sha256": "d2d09bce8732f6721270d1ef0b9c8a1ebb50b6a5ad8b0587ababc05bcba073ea"
+  },
+  {
+    "key": "Heat2023",
+    "doi": "10.1016/j.jmapro.2023.03.030",
+    "title": "Efficient simulation of the heat transfer in fused filament fabrication",
+    "authors": "Nathalie Ramos; Christoph Mittermeier; Josef Kiendl",
+    "journal": "Journal of Manufacturing Processes",
+    "year": 2023,
+    "publication_dates": {
+      "published": [
+        [
+          2023,
+          5
+        ]
+      ],
+      "published-print": [
+        [
+          2023,
+          5
+        ]
+      ]
+    },
+    "volume": "94",
+    "issue": "",
+    "pages": "550-563",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.jmapro.2023.03.030",
+    "metadata_sha256": "fc212caacca01e93ef2293ae86ef0e01bc62b9531c896db1aecdb11b31996276"
+  },
+  {
+    "key": "Phase2025",
+    "doi": "10.1007/s40964-024-00891-8",
+    "title": "Phase-field modeling of the morphological and thermal evolution of additively manufactured polylactic acid layers and their influence on the effective elastic mechanical properties",
+    "authors": "Ahmed Elmoghazy; Anselm Heuer; Aron Kneer; Martin Reder; Andreas Prahs; Daniel Schneider; Wilfried V. Liebig; Britta Nestler",
+    "journal": "Progress in Additive Manufacturing",
+    "year": 2024,
+    "publication_dates": {
+      "published": [
+        [
+          2024,
+          12,
+          18
+        ]
+      ],
+      "published-online": [
+        [
+          2024,
+          12,
+          18
+        ]
+      ],
+      "published-print": [
+        [
+          2025,
+          8
+        ]
+      ]
+    },
+    "volume": "10",
+    "issue": "8",
+    "pages": "5093-5115",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2Fs40964-024-00891-8",
+    "metadata_sha256": "59d2126e74880bb36fce49d935e9a5664662d796a73eb8b457baeac222668d68"
+  },
+  {
+    "key": "Grades2026",
+    "doi": "10.1002/app.71150",
+    "title": "Thermal Annealing of Injection‐Molded\n                    <scp>PLA</scp>\n                    Grades: Trade‐Offs Between Crystallinity Development, Dimensional Stability, Secondary Shrinkage, and Mechanical Performance",
+    "authors": "Edson A. dos Santos Filho; Edda Valentina Veracierta Rodriguez; Simon Debrie; Guilhermino J. M. Fechine; Edcleide M. Araujo; Ludwig Cardon; Mariya Edeleva",
+    "journal": "Journal of Applied Polymer Science",
+    "year": 2026,
+    "publication_dates": {
+      "published": [
+        [
+          2026,
+          7,
+          5
+        ]
+      ],
+      "published-online": [
+        [
+          2026,
+          7,
+          5
+        ]
+      ],
+      "published-print": [
+        [
+          2026,
+          10,
+          5
+        ]
+      ]
+    },
+    "volume": "143",
+    "issue": "37",
+    "pages": "e71150",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1002%2Fapp.71150",
+    "metadata_sha256": "8bf3f9d68621d3d5d733abecde5567eecdedf23774ac632161097f5e526f0f74"
+  },
+  {
+    "key": "PINN2026",
+    "doi": "10.1016/j.rineng.2026.110279",
+    "title": "Thermo-constrained physics informed neural network based optimization of mechanical performance in recycled PLA additive manufacturing",
+    "authors": "Natrayan Lakshmaiya",
+    "journal": "Results in Engineering",
+    "year": 2026,
+    "publication_dates": {
+      "published": [
+        [
+          2026,
+          6
+        ]
+      ],
+      "published-print": [
+        [
+          2026,
+          6
+        ]
+      ]
+    },
+    "volume": "30",
+    "issue": "",
+    "pages": "110279",
+    "type": "journal-article",
+    "verification": "Crossref DOI exact match; primary source appraisal recorded separately",
+    "retrieved": "2026-09-12",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.rineng.2026.110279",
+    "metadata_sha256": "ddf4287a926a27bade3f912ff9a88daade0bc37e60e88ce502e167d99c621777"
+  }
+]

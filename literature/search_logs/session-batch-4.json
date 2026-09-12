@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-12",
+  "raw_response_sha256": "8b049d6f4fb76f7e2f317cffd145c434463a5a65a99129f809126167a84688e1",
+  "local_raw_archive": "tmp\\search_raw\\session-batch-4.json",
+  "source_urls": [
+    "https://4spepublications.onlinelibrary.wiley.com/doi/10.1002/pen.70250?af=R",
+    "https://4spepublications.onlinelibrary.wiley.com/doi/10.1002/pen.70551",
+    "https://doi.org/10.1002/pen.70250",
+    "https://doi.org/10.1108/RPJ-04-2021-0090",
+    "https://doi.org/10.3390/polym14132607\u201d",
+    "https://en.wikipedia.org/wiki/3D_printing",
+    "https://link.springer.com/article/10.1007/s00170-025-15455-5",
+    "https://pdfs.semanticscholar.org/6678/055934e6cdbed4a1c954b8d69c287999bedf.pdf",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12471281/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12739180/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9269357/",
+    "https://pubs.acs.org/doi/abs/10.1021/acsapm.4c02083",
+    "https://riunet.upv.es/bitstream/handle/10251/193203/Lluch-CerezoMeseguerGarcia%20-%20Influence%20of%20Thermal%20Annealing%20Temperatures%20on%20Powder%20Mould%20Effectiv....pdf?sequence=1",
+    "https://www.mdpi.com/1996-1944/16/13/4610",
+    "https://www.mdpi.com/journal/polymers\u201d.",
+    "https://www.mendeley.com/catalogue/a7b0e2a4-1a7d-3d4c-8f1f-9001bcabb103/",
+    "https://www.plaleaves.com/polylactic-acid-pla",
+    "https://www.preprints.org/manuscript/202511.0067",
+    "https://www.sciencedirect.com/org/science/article/pii/S1355254621001452",
+    "https://www.uned.es/universidad/dam/inicio/institucional/areas-direccion/vicerrectorados/pdi/documentos/plantilla-de-pdi/concursos-a-plazas-de-pdi/Convocatorias-2026/Convocatoria-215/CVs/Plaza-215.41.pdf",
+    "https://www.upg-ploiesti.ro/sites/default/files/doctorat/ZISOPOL%20FISA%20DE%20VERIFICARE%20A%20INDEPLINIRII%20STANDARDELOR.pdf"
+  ],
+  "note": "Discovery-source index derived from the raw web response. Original response retained locally; article excerpts are not redistributed."
+}

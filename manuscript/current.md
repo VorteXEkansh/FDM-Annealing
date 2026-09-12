@@ -9,7 +9,7 @@ Computational manuscript draft · 12 September 2026
 
 ### Abstract
 
-Annealing of fused-filament-fabricated (FFF) polylactic acid (PLA) raises a coupled question: how can geometric restraint limit distortion without transferring unacceptable stress into the part? This study is formulated around quantified clearance between a printed part and a mechanical fixture during sub-melting thermal treatment. The proposed ANSYS investigation will resolve heating, holding, cooling and fixture release, with signed directional dimensional change and out-of-plane warpage as primary responses. Contact pressure, fixture reactions and residual stress will describe the mechanical cost of restraint. Candidate annealing temperatures of 80 °C, 95 °C and 110 °C and hold durations of 30 min, 60 min and 90 min are retained as design choices; their applicability remains conditional on the selected PLA and constitutive evidence. The framework separates reversible expansion from history-dependent recovery, numerical verification from physical validation, and deterministic parameter effects from uncertainty. Independent published observations must be reserved for validation before calibration, and multi-objective ranking will require verified solver responses and declared acceptance criteria. This draft establishes the computational formulation and evidence requirements. No ANSYS results, validated material law, convergence findings or optimum are reported. The intended contribution is a reproducible assessment of the clearance–distortion–stress trade-off rather than an experimental strength claim.
+Annealing of fused-filament-fabricated (FFF) polylactic acid (PLA) raises a coupled question: how can geometric restraint limit distortion without transferring unacceptable stress into the part? This study is formulated around quantified clearance between a printed part and a mechanical fixture during sub-melting thermal treatment. The proposed ANSYS investigation will resolve heating, holding, cooling and fixture release, with signed directional dimensional change and out-of-plane warpage as primary responses. Contact pressure, fixture reactions and residual stress will describe the mechanical cost of restraint. Candidate annealing temperatures of 80 °C, 95 °C and 110 °C and hold durations of 30 min, 60 min and 90 min are retained as design choices; their applicability remains conditional on the selected PLA and constitutive evidence. The framework separates reversible expansion from history-dependent recovery, numerical verification from physical validation, and deterministic parameter effects from uncertainty. Independent published observations must be reserved for validation before calibration, and multi-objective ranking will require verified solver responses and declared acceptance criteria. A literature investigation through 12 September 2026 identifies prior supported annealing, viscoelastic recovery models and annealing-related numerical optimization. The remaining contribution is provisionally narrowed to a quantified clearance–contact assessment after cooling and release. This draft establishes the computational formulation and evidence requirements. No ANSYS results, validated material law, convergence findings or optimum are reported. The intended contribution is a reproducible assessment of the clearance–distortion–stress trade-off rather than an experimental strength claim.
 
 Keywords: fused filament fabrication; PLA; annealing; fixture clearance; thermo-mechanical modeling; contact; warpage; numerical verification
 
@@ -22,17 +22,82 @@ The present research concerns a virtual printed PLA body restrained by opposed f
 The study is computational. Physical tensile testing, flexural confirmation and a new specimen campaign are outside its methodology. Strength enhancement will not be inferred from a thermal-stress simulation.
 
 <!-- PAGE -->
-### 1.1. Literature context and limits of transfer
+### 1.1. Evidence base and scope of the review
 
-Published annealing studies provide candidate mechanisms and possible comparison datasets, but different grades, print architectures and temperature histories cannot be pooled as though they described the same material. The experimental variables in [2] illustrate why geometry and prior processing must accompany an annealing condition. A temperature–duration pair alone is not a complete specification of the material state or boundary conditions.
+The literature investigation was updated through 12 September 2026 using publisher records, author repositories, Europe PMC full text and DOI registration metadata. The evidence matrix records 34 journal papers, their bibliographic verification, accessible methods, missing fields and intended use. This is a critical, targeted investigation, not a claim of exhaustive systematic-review coverage. DOI verification establishes bibliographic identity; it does not establish methodological quality, transferable properties or independent validation.
 
-ASTM F3489-23 identifies material handling and static mechanical evaluation considerations for polymer material extrusion [3]. It is relevant when appraising published material data and their comparability. It does not certify a thermal-contact simulation, supply a PLA constitutive law or establish the accuracy of predicted recovery. The standard designation and official title used here correct the inconsistent entry in the base proposal.
+The closest work falls into three overlapping groups: supported thermal post-processing, prediction of printing or thermally activated deformation, and annealing-related mechanical optimization. The intersection matters more than any one keyword. A support medium is mechanically different from a plate fixture, printing-induced distortion differs from post-print recovery, and a thermodynamic constraint in a learning algorithm is not physical fixture restraint.
 
-Granular and mould-based support concepts in the base paper remain background candidates for later source appraisal. They are not interchangeable with opposed plate contact: a confining medium has its own thermal and mechanical behavior. This draft does not import their reported outcomes into the computational model.
+### 1.2. What annealing and support studies already establish
 
+Wach et al. [27], Benwood et al. [28], Butt and Bhaskar [1], and Stojković et al. [2] establish substantial prior work on thermal post-treatment and printed-polymer response. Their findings motivate a material-specific balance between dimensional stability and mechanical behavior. They do not justify assuming that all PLA grades benefit from the same cycle. Work on porosity, crystallinity and interlayer adhesion [29], including competition between crystallization and bonding [30], further challenges a simple rule that greater crystallinity necessarily means a stronger printed part.
+
+Constrained annealing has already been studied. Lluch-Cerezo et al. [11] compared alumina-powder mould support with unsupported treatment and measured directional dimensions and flexural behavior. Wijnbergen et al. [12] examined different annealing media for tough PLA, including sand. Mould-supported processing [26] and salt-assisted annealing/remelting [25] are additional precedents. Remelting outcomes belong to a different physical regime and cannot establish performance of the proposed sub-melting process.
+
+Chiscop et al. [24] extended encapsulation-based thermal processing to several geometries using tough PLA. De Assis et al. [13] connected thermal conditioning, dimensional response and mechanical prediction for high-heat PLA. These formulations cannot be treated as interchangeable with neat PLA. Together, the studies rule out novelty based on support, dimensional preservation, annealing itself or combining dimensional and mechanical endpoints.
+
+The powder-mould source also illustrates why exact extraction matters: its PLA treatment tables identify a final temperature of 155 °C, whereas its Table 7 labels the final PLA row 240 °C [11, Tables 2–3 and 7]. The inconsistent row is not accepted as validation data. A plausible correction is not a verified observation.
+
+<!-- PAGE -->
+### 1.3. Thermo-mechanical prediction and irreversible response
+
+Wijnen et al. [6] developed a deformation model for printed PLA walls, calibrated thermal behavior and compared predicted curvature with measurements; they also examined directional annealing changes. Trofimov et al. [7] used sequential thermal and mechanical simulations and separate temperature and distortion comparisons. These are direct precedents for coupled process modeling and physical comparison. Ramos et al. [32] addressed computational efficiency and thermal validation through adaptive treatment of the deposition mesh.
+
+Bute et al. [5] are particularly close to the present problem. They measured irreversible directional thermal strain and distinguished it from expansion during a subsequent thermal cycle. Their ANSYS printing simulations related residual thermal stress to observed recovery. Therefore, neither irreversible annealing strain nor an ANSYS connection between stress and deformation is new. Correlation with printing stress, however, does not by itself demonstrate a predictive annealing-contact law under a variable fixture clearance.
+
+The shape-memory study of Issabayeva and Shishkovsky [9] incorporates thermomechanical characterization and ANSYS modeling with a Prony representation and temperature shifting. Chapuis et al. [8] provide an even stronger constitutive precedent: programmed pre-strain, a modified generalized Maxwell formulation and laminate finite elements predict thermally activated shape change and mechanical response. A first-use claim for temperature-dependent PLA recovery, Prony series, WLF shifting or viscoelastic finite elements would therefore be indefensible.
+
+Temperature–relaxation shifting has a much older foundation in Williams, Landel and Ferry [31]. Its use still requires evidence that the chosen material is sufficiently thermorheologically simple over the modeled range. Relaxation measurements on printed PLA [22] and temperature-dependent viscoelastic–viscoplastic behavior [21] motivate testing the adequacy of a linear law rather than selecting one solely because ANSYS supports it. A fitted DMA curve does not independently validate released warpage or residual stress.
+
+Jiang et al. [15] combined thermal, thermoelastic and crystallization-kinetic models for short-carbon-fibre/PLA printing. Farh and Gribniak [10] modeled printing, cooling and detachment with temperature-dependent behavior. Coupling crystallization with mechanics, or including a release stage, cannot be claimed as new in isolation. Composite-specific data and printing-bed detachment also cannot directly validate opposed-face annealing contact.
+
+Thermal contact remains an evidence need. Existing printing models demonstrate the importance of the thermal boundary, but their bed conditions do not supply a measured conductance for the proposed PLA–fixture interface. Clearance may change both heat transfer and mechanical engagement. Prescribed uniform part temperature would omit that interaction; one-way thermal loading is defensible only if its adequacy is demonstrated.
+
+<!-- PAGE -->
+### 1.4. Anisotropy, crystallization and competing strain mechanisms
+
+Li et al. [16] provide direct evidence and modeling of orthotropic FFF-PLA mechanics. Raster orientation, road spacing and interlayer architecture must therefore accompany a property dataset. The road air gap in a printing study is distinct from the free clearance between an annealing fixture and the finished part. Ambient directional stiffness alone also cannot define behavior throughout heating, holding and cooling.
+
+Crystallization kinetics depend on thermal and processing history. Pantani et al. [17] compared virgin and processed PLA, while nucleation/kinetic work [18] and recent filament-focused analysis [19] supply candidate mechanisms. These studies support distinguishing cold crystallization of a printed state from crystallization after erasing its history by melting. Phase-field work [33] already connects thermal/morphological evolution to effective mechanics. Simultaneous deformation and annealing studies [20] additionally motivate checking whether mechanical restraint changes the kinetics assumed by the model.
+
+Recent injection-moulded grade comparisons [34] address secondary shrinkage and mechanical trade-offs. Their online publication predates this review cutoff even though the assigned issue date is later. They are useful mechanistic context, but their initial state and manufacturing route differ from FFF. No kinetic coefficient, Prony term, shift constant or annealing-strain value is transferred into the present model at this stage.
+
+The physical distinction is consequential: reversible expansion vanishes on return to the reference state, whereas recovery and crystallization-related strain can persist. A single effective expansion curve may reproduce one heating path yet fail after cooling or under restraint. Conversely, adding independently fitted recovery and crystallization terms risks counting the same measured strain twice. Identifiability must be assessed with more than a final dimension; thermal history and compatible time-resolved observations are needed where available.
+
+### 1.5. Optimization is established; the decision target must differ
+
+Kahya et al. [23] already optimized thermal annealing for printed PLA performance. More directly, Ben Amor and Souissi [14], published online in June 2026, combine multiscale finite elements, annealed/non-annealed PLA and multi-objective desirability. Their accessible publisher abstract concerns tensile behavior, raster orientation and strain rate. It does not establish prediction of released geometry under quantified annealing-fixture contact. The early unedited publication nevertheless decisively rules out claiming annealing plus finite elements plus optimization as a new combination.
+
+A 2026 physics-informed learning study [35] also reports annealing-aware optimization of recycled PLA. Its “thermo-constrained” terminology refers to model/optimization restrictions rather than physical fixture contact. Repeated load-curve records must not be treated as independent specimens when appraising validation. Desirability itself is established methodology [4]; novelty must lie in the physical question and supported predictive capability, not the ranking formula.
+
+<!-- PAGE -->
+### 1.6. Closest competing studies and the remaining claim
+
+The ten closest studies were selected by overlap with the intended physical response or computational mechanism, rather than citation count. The order below is an editorial grouping, not a calculated similarity score. The complete matrix records access limits and evidence locators.
+
+TABLE: Closest competing studies and implications for scope
+Study | Established overlap | Distinction still requiring evidence
+Bute et al. [5] | Irreversible strain and ANSYS printing stress | Predictive annealing-clearance/contact relation
+Chapuis et al. [8] | Viscoelastic pre-strain recovery FE | Fixture-controlled dimensional preservation
+Issabayeva and Shishkovsky [9] | ANSYS, DMA, Prony and thermal response | Released fixture geometry and stress
+Wijnen et al. [6] | Warpage model and annealing dimensions | Quantified annealing restraint
+Trofimov et al. [7] | Thermal/deformation prediction and comparison | Post-print annealing contact cycle
+Lluch-Cerezo et al. [11] | Powder-supported dimensional control | Explicit clearance and contact mechanics
+Wijnbergen et al. [12] | Tough-PLA annealing media | Compatible grade and plate-gap prediction
+Chiscop et al. [24] | Encapsulation across geometries | Contact-clearance response under release
+De Assis et al. [13] | Geometry/mechanics and thermal conditioning | Transient fixture-contact model
+Ben Amor and Souissi [14] | Annealed PLA, FE and optimization | Released dimensions–warpage–stress decision
+
+The broad proposed gap is narrowed. In the accessible evidence reviewed, no study was identified that demonstrates the complete chain of a quantified initial annealing-fixture clearance, evolving thermal/mechanical contact, irreversible directional response, and a verified assessment of released dimensions, warpage and residual stress with explicit uncertainty. This is a bounded search finding, not proof of absence or a claim of priority. Partial access to several competitors limits a stronger assertion.
+
+The defensible intended contribution is a reproducible, evidence-tested evaluation of the clearance–distortion–stress trade-off for a specified FFF-PLA material and fixture. Integrating transient thermal exposure, a justified history-dependent material law and irreversible strain is a means to that end. The contribution remains conditional: it must be demonstrated by genuine computations, numerical verification and compatible independent observations. If stress or contact cannot be physically validated, those outputs must remain conditional model predictions, with validation claims restricted to supported observables.
+
+ASTM F3489-23 [3] remains relevant to appraisal of polymer material-extrusion mechanical data. It does not certify the proposed simulation or provide an annealing constitutive law. Published support effects are literature findings, not results of this study.
+
+<!-- PAGE -->
 ### 2. Research questions and objectives
 
-The central question is whether a quantified range of fixture clearance can reduce released dimensional error and warpage while avoiding unfavorable contact and residual-stress responses under a specified sub-melting thermal history. The current literature selection motivates this question but does not establish that no prior study has addressed it.
+The central question is whether a quantified range of fixture clearance can reduce released dimensional error and warpage while avoiding unfavorable contact and residual-stress responses under a specified sub-melting thermal history. The reviewed literature supports investigating this specific trade-off; it does not establish an unprecedented combination of annealing, finite elements and optimization.
 
 1. Define a reproducible virtual geometry, material orientation, reference clearance and thermal–mechanical boundary description for an ANSYS analysis.
 2. Quantify directional dimensional change, warpage and contact/stress response after numerical verification of the relevant solution quantities.
@@ -72,7 +137,7 @@ The unconstrained comparison removes the upper restraining surface while explici
 <!-- PAGE -->
 ### 3.1. Thermal design and reporting states
 
-Table 1 retains the thermal levels requested from the base proposal. They are planned inputs, not measured histories, solver outputs or recommended processing settings. Their sub-melting applicability must be checked for the selected grade and source-supported model range.
+Table 2 retains the thermal levels requested from the base proposal. They are planned inputs, not measured histories, solver outputs or recommended processing settings. Their sub-melting applicability must be checked for the selected grade and source-supported model range.
 
 TABLE: Thermal design choices
 Factor | Candidate levels | Interpretation
@@ -196,7 +261,7 @@ Candidates selected through a surrogate must be recomputed with the genuine solv
 <!-- PAGE -->
 ### 8. Evidence status, engineering relevance and limitations
 
-The current contribution is the conversion to an explicit computational research question, consistent response definitions and a traceable evidence structure. Table 2 identifies what remains necessary before numerical findings can be reported. Missing evidence is not represented by zero values, example contours or synthetic data.
+The current contribution is a critically delimited computational research question, a verified literature matrix, consistent response definitions and a traceable evidence structure. Table 3 identifies what remains necessary before numerical findings can be reported. Missing evidence is not represented by zero values, example contours or synthetic data.
 
 TABLE: Evidence required for reportable findings
 Claim family | Current evidence | Admission requirement
@@ -211,32 +276,110 @@ A reliable prediction of released geometry could support decisions for planar gu
 
 Material identifiability is the principal scientific limitation. Sparse final dimensions may not uniquely distinguish residual-stress relaxation, directional recovery and crystallization-related effects. A calibrated law may match those dimensions while predicting different stresses. Contact and thermal boundaries introduce additional uncertainty, and a homogenized continuum may omit road-scale deformation or damage. These limitations must constrain the interpretation of later computed fields.
 
-The candidate temperature range has not been verified for a selected PLA formulation. Long-term aging, moisture response, fatigue, creep in service, damage and tensile strength are not established. Geometry transfer requires further evidence, and one best-fit-plane warp value cannot demonstrate that every critical feature meets a drawing requirement.
+The candidate temperature range remains unverified for a selected grade. Aging, moisture, fatigue, service creep, damage and strength are outside current evidence. Geometry transfer also requires validation.
 
 ### 9. Conclusions
 
-The base experimental proposal has been restructured into a computational investigation of quantified gap-controlled annealing. The formulation retains signed directional response, warpage, thermal design levels and multi-response decision logic while making fixture clearance, thermal history, constitutive recovery and release explicit.
+The literature establishes prior supported annealing, irreversible strain analysis, thermo-viscoelastic finite elements and annealing-related optimization. The proposed contribution is therefore restricted to evidence-tested prediction of the clearance–distortion–stress trade-off after cooling and release, conditional on the remaining validation needs. The formulation retains signed directional response, warpage, thermal design levels and multi-response decision logic while making fixture clearance, thermal history, constitutive recovery and release explicit.
 
-The defensible next numerical claims depend on genuine ANSYS execution, verified material evidence, discretization assessment and independent literature-based validation. Until those requirements are met, the study supports a research formulation and reproducibility protocol only. No improvement, validated prediction or preferred annealing condition is concluded.
+Numerical findings require genuine ANSYS execution, verified material evidence, discretization assessment and independent validation. No improvement, validated prediction or preferred annealing condition is concluded.
 
 <!-- PAGE -->
 ### References
 
-[1] J. Butt and R. Bhaskar. Investigating the Effects of Annealing on the Mechanical Properties of FFF-Printed Thermoplastics. <i>Journal of Manufacturing and Materials Processing</i> 4(2), 38 (2020). <link href="https://doi.org/10.3390/jmmp4020038" color="#24576b">doi:10.3390/jmmp4020038</link>.
+[1] Javaid Butt, Raghunath Bhaskar. Investigating the Effects of Annealing on the Mechanical Properties of FFF-Printed Thermoplastics. <i>Journal of Manufacturing and Materials Processing</i> 4(2), 38 (2020). <link href="https://doi.org/10.3390/jmmp4020038" color="#24576b">doi:10.3390/jmmp4020038</link>.
 
-[2] J. R. Stojković, R. Turudija, N. Vitković, F. Górski, A. Păcurar, A. Pleşa, A. Ianoşi-Andreeva-Dimitrova and R. Păcurar. An Experimental Study on the Impact of Layer Height and Annealing Parameters on the Tensile Strength and Dimensional Accuracy of FDM 3D Printed Parts. <i>Materials</i> 16(13), 4574 (2023). <link href="https://doi.org/10.3390/ma16134574" color="#24576b">doi:10.3390/ma16134574</link>.
+[2] Jelena R. Stojković, Rajko Turudija, Nikola Vitković et al. An Experimental Study on the Impact of Layer Height and Annealing Parameters on the Tensile Strength and Dimensional Accuracy of FDM 3D Printed Parts. <i>Materials</i> 16(13), 4574 (2023). <link href="https://doi.org/10.3390/ma16134574" color="#24576b">doi:10.3390/ma16134574</link>.
 
 [3] ASTM International. <i>Standard Guide for Additive Manufacturing of Polymers — Material Extrusion — Recommendation for Material Handling and Evaluation of Static Mechanical Properties</i>. ASTM F3489-23 (2023). <link href="https://doi.org/10.1520/F3489-23" color="#24576b">doi:10.1520/F3489-23</link>.
 
-[4] G. Derringer and R. Suich. Simultaneous Optimization of Several Response Variables. <i>Journal of Quality Technology</i> 12(4), 214–219 (1980). <link href="https://doi.org/10.1080/00224065.1980.11980968" color="#24576b">doi:10.1080/00224065.1980.11980968</link>.
+[4] George Derringer, Ronald Suich. Simultaneous Optimization of Several Response Variables. <i>Journal of Quality Technology</i> 12(4), 214-219 (1980). <link href="https://doi.org/10.1080/00224065.1980.11980968" color="#24576b">doi:10.1080/00224065.1980.11980968</link>.
+
+[5] Irina BUTE, Sergejs TARASOVS, Jevgenijs SEVCENKO, Andrey ANISKEVICH. Thermomechanical Analysis and Numerical Simulations of Fused Filament Fabricated Polylactic Acid Parts. <i>Materials Science</i> 30(2), 217-225 (2024). <link href="https://doi.org/10.5755/j02.ms.35076" color="#24576b">doi:10.5755/j02.ms.35076</link>.
+
+[6] Bas Wijnen, Paul Sanders, Joshua M. Pearce. Improved model and experimental validation of deformation in fused filament fabrication of polylactic acid. <i>Progress in Additive Manufacturing</i> 3(4), 193-203 (2018). <link href="https://doi.org/10.1007/s40964-018-0052-4" color="#24576b">doi:10.1007/s40964-018-0052-4</link>.
+
+[7] Anton Trofimov, Jérémy Le Pavic, Sébastien Pautard et al. Experimentally validated modeling of the temperature distribution and the distortion during the Fused Filament Fabrication process. <i>Additive Manufacturing</i> 54, 102693 (2022). <link href="https://doi.org/10.1016/j.addma.2022.102693" color="#24576b">doi:10.1016/j.addma.2022.102693</link>.
+
+[8] Joël N Chapuis, Gian Teufen, Kristina Shea. Thermo-viscoelastic laminate-based finite element modeling of fused filament fabrication direct 4D printing. <i>Smart Materials and Structures</i> 34(7), 075034 (2025). <link href="https://doi.org/10.1088/1361-665x/adeee4" color="#24576b">doi:10.1088/1361-665x/adeee4</link>.
+
+
+<!-- PAGE -->
+### References (continued)
+
+[9] Zhamila Issabayeva, Igor Shishkovsky. Prediction of The Mechanical Behavior of Polylactic Acid Parts with Shape Memory Effect Fabricated by FDM. <i>Polymers</i> 15(5), 1162 (2023). <link href="https://doi.org/10.3390/polym15051162" color="#24576b">doi:10.3390/polym15051162</link>.
+
+[10] Mahmoud Farh, Viktor Gribniak. Thermo-Mechanical Approach to Material Extrusion Process During Fused Filament Fabrication of Polymeric Samples. <i>Materials</i> 18(19), 4537 (2025). <link href="https://doi.org/10.3390/ma18194537" color="#24576b">doi:10.3390/ma18194537</link>.
+
+[11] Joaquín Lluch-Cerezo, María Desamparados Meseguer, Juan Antonio García-Manrique, Rut Benavente. Influence of Thermal Annealing Temperatures on Powder Mould Effectiveness to Avoid Deformations in ABS and PLA 3D-Printed Parts. <i>Polymers</i> 14(13), 2607 (2022). <link href="https://doi.org/10.3390/polym14132607" color="#24576b">doi:10.3390/polym14132607</link>.
+
+[12] Diede Christine Wijnbergen, Merel van der Stelt, Luc Martijn Verhamme. The effect of annealing on deformation and mechanical strength of tough PLA and its application in 3D printed prosthetic sockets. <i>Rapid Prototyping Journal</i> 27(11), 81-89 (2021). <link href="https://doi.org/10.1108/rpj-04-2021-0090" color="#24576b">doi:10.1108/rpj-04-2021-0090</link>.
+
+[13] Cleiton Lazaro Fazolo de Assis, Kelvin dos Santos Tiene, Gabriel Boni Magosse. Dimensional Stability and Mechanical Performance of Thermally Conditioned High‐Heat Polylactic Acid Parts Produced by Fused Filament Fabrication. <i>Polymer Engineering &amp; Science</i> 66(2), 941-958 (2026). <link href="https://doi.org/10.1002/pen.70250" color="#24576b">doi:10.1002/pen.70250</link>.
+
+[14] Rania Ben Amor, Slim Souissi. Multiscale modeling and multiobjective optimization of the mechanical behavior of annealed and non-annealed material extrusion printed PLA. <i>Discover Materials</i>  (2026). <link href="https://doi.org/10.1007/s43939-026-00769-2" color="#24576b">doi:10.1007/s43939-026-00769-2</link>.
+
+[15] Bingnong Jiang, Yuan Chen, Lin Ye et al. Residual stress and warpage of additively manufactured SCF/PLA composite parts. <i>Advanced Manufacturing: Polymer &amp; Composites Science</i> 9(1), 2171940 (2023). <link href="https://doi.org/10.1080/20550340.2023.2171940" color="#24576b">doi:10.1080/20550340.2023.2171940</link>.
+
+[16] Meiyu Li, Yanan Xu, Jianguang Fang. Orthotropic mechanical properties of PLA materials fabricated by fused deposition modeling. <i>Thin-Walled Structures</i> 199, 111800 (2024). <link href="https://doi.org/10.1016/j.tws.2024.111800" color="#24576b">doi:10.1016/j.tws.2024.111800</link>.
+
+
+<!-- PAGE -->
+### References (continued)
+
+[17] R. Pantani, F. De Santis, A. Sorrentino et al. Crystallization kinetics of virgin and processed poly(lactic acid). <i>Polymer Degradation and Stability</i> 95(7), 1148-1159 (2010). <link href="https://doi.org/10.1016/j.polymdegradstab.2010.04.018" color="#24576b">doi:10.1016/j.polymdegradstab.2010.04.018</link>.
+
+[18] Felice De Santis, Roberto Pantani, Giuseppe Titomanlio. Nucleation and crystallization kinetics of poly(lactic acid). <i>Thermochimica Acta</i> 522(1-2), 128-134 (2011). <link href="https://doi.org/10.1016/j.tca.2011.05.034" color="#24576b">doi:10.1016/j.tca.2011.05.034</link>.
+
+[19] Targol Hashemi, Sara Liparoti, Valentina Volpe et al. Analysis of Crystallization Kinetics of PLA Filament for Fused Filament Fabrication. <i>Macromolecular Materials and Engineering</i> 310(12), e00204 (2025). <link href="https://doi.org/10.1002/mame.202500204" color="#24576b">doi:10.1002/mame.202500204</link>.
+
+[20] Todsapol Kajornprai, Jiradet Sringam, Anucha Seejuntuek et al. Crystal Evolution of Amorphous Poly(lactic acid) During Simultaneous Multi‐step Tensile Deformation and Annealing. <i>Journal of Polymer Science</i> 63(1), 192-203 (2025). <link href="https://doi.org/10.1002/pol.20240703" color="#24576b">doi:10.1002/pol.20240703</link>.
+
+[21] Necmi Dusunceli, Aleksey D. Drozdov, Naseem Theilgaard. Influence of temperature on viscoelastic–viscoplastic behavior of poly(lactic acid) under loading–unloading. <i>Polymer Engineering &amp; Science</i> 57(3), 239-247 (2017). <link href="https://doi.org/10.1002/pen.24404" color="#24576b">doi:10.1002/pen.24404</link>.
+
+[22] Alcide Bertocco, Matteo Bruno, Enrico Armentani et al. Stress Relaxation Behavior of Additively Manufactured Polylactic Acid (PLA). <i>Materials</i> 15(10), 3509 (2022). <link href="https://doi.org/10.3390/ma15103509" color="#24576b">doi:10.3390/ma15103509</link>.
+
+[23] Çağlar Kahya, Oğuz Tunçel, Onur Çavuşoğlu, Kenan Tüfekci. Thermal annealing optimization for improved mechanical performance of PLA parts produced via 3D printing. <i>Polymer Testing</i> 144, 108735 (2025). <link href="https://doi.org/10.1016/j.polymertesting.2025.108735" color="#24576b">doi:10.1016/j.polymertesting.2025.108735</link>.
+
+[24] Florina Chiscop, Carmen-Cristiana Cazacu, Dragos-Alexandru Cazacu, Costel Emil Cotet. Sustainable Thermal Post-Processing of PLA 3D Prints: Increased Dimensional Precision and Autoclave Compatibility. <i>Journal of Functional Biomaterials</i> 16(9), 334 (2025). <link href="https://doi.org/10.3390/jfb16090334" color="#24576b">doi:10.3390/jfb16090334</link>.
+
+
+<!-- PAGE -->
+### References (continued)
+
+[25] Agnieszka Szust, Grzegorz Adamski. Using thermal annealing and salt remelting to increase tensile properties of 3D FDM prints. <i>Engineering Failure Analysis</i> 132, 105932 (2022). <link href="https://doi.org/10.1016/j.engfailanal.2021.105932" color="#24576b">doi:10.1016/j.engfailanal.2021.105932</link>.
+
+[26] Miloš Vorkapić, Ivana Mladenović, Toni Ivanov et al. Enhancing mechanical properties of 3D printed thermoplastic polymers by annealing in moulds. <i>Advances in Mechanical Engineering</i> 14(8), 16878132221120737 (2022). <link href="https://doi.org/10.1177/16878132221120737" color="#24576b">doi:10.1177/16878132221120737</link>.
+
+[27] Radoslaw A. Wach, Piotr Wolszczak, Agnieszka Adamus‐Wlodarczyk. Enhancement of Mechanical Properties of FDM‐PLA Parts via Thermal Annealing. <i>Macromolecular Materials and Engineering</i> 303(9), 1800169 (2018). <link href="https://doi.org/10.1002/mame.201800169" color="#24576b">doi:10.1002/mame.201800169</link>.
+
+[28] Claire Benwood, Andrew Anstey, Jacek Andrzejewski et al. Improving the Impact Strength and Heat Resistance of 3D Printed Models: Structure, Property, and Processing Correlationships during Fused Deposition Modeling (FDM) of Poly(Lactic Acid). <i>ACS Omega</i> 3(4), 4400-4411 (2018). <link href="https://doi.org/10.1021/acsomega.8b00129" color="#24576b">doi:10.1021/acsomega.8b00129</link>.
+
+[29] Natalia von Windheim, David W. Collinson, Trent Lau et al. The influence of porosity, crystallinity and interlayer adhesion on the tensile strength of 3D printed polylactic acid (PLA). <i>Rapid Prototyping Journal</i> 27(7), 1327-1336 (2021). <link href="https://doi.org/10.1108/rpj-08-2020-0205" color="#24576b">doi:10.1108/rpj-08-2020-0205</link>.
+
+[30] Ali Ghasemkhani, Gholamreza Pircheraghi, Nima Rashidi Mehrabadi, Asma Eshraghi. Effects of heat treatment on the mechanical properties of 3D-printed polylactic acid: Study of competition between crystallization and interlayer bonding. <i>Materials Today Communications</i> 39, 109266 (2024). <link href="https://doi.org/10.1016/j.mtcomm.2024.109266" color="#24576b">doi:10.1016/j.mtcomm.2024.109266</link>.
+
+[31] Malcolm L. Williams, Robert F. Landel, John D. Ferry. The Temperature Dependence of Relaxation Mechanisms in Amorphous Polymers and Other Glass-forming Liquids. <i>Journal of the American Chemical Society</i> 77(14), 3701-3707 (1955). <link href="https://doi.org/10.1021/ja01619a008" color="#24576b">doi:10.1021/ja01619a008</link>.
+
+[32] Nathalie Ramos, Christoph Mittermeier, Josef Kiendl. Efficient simulation of the heat transfer in fused filament fabrication. <i>Journal of Manufacturing Processes</i> 94, 550-563 (2023). <link href="https://doi.org/10.1016/j.jmapro.2023.03.030" color="#24576b">doi:10.1016/j.jmapro.2023.03.030</link>.
+
+
+<!-- PAGE -->
+### References (continued)
+
+[33] Ahmed Elmoghazy, Anselm Heuer, Aron Kneer et al. Phase-field modeling of the morphological and thermal evolution of additively manufactured polylactic acid layers and their influence on the effective elastic mechanical properties. <i>Progress in Additive Manufacturing</i> 10(8), 5093-5115 (2025). <link href="https://doi.org/10.1007/s40964-024-00891-8" color="#24576b">doi:10.1007/s40964-024-00891-8</link>.
+
+[34] Edson A. dos Santos Filho, Edda Valentina Veracierta Rodriguez, Simon Debrie et al. Thermal Annealing of Injection‐Molded PLA Grades: Trade‐Offs Between Crystallinity Development, Dimensional Stability, Secondary Shrinkage, and Mechanical Performance. <i>Journal of Applied Polymer Science</i> 143(37), e71150 (2026). <link href="https://doi.org/10.1002/app.71150" color="#24576b">doi:10.1002/app.71150</link>.
+
+[35] Natrayan Lakshmaiya. Thermo-constrained physics informed neural network based optimization of mechanical performance in recycled PLA additive manufacturing. <i>Results in Engineering</i> 30, 110279 (2026). <link href="https://doi.org/10.1016/j.rineng.2026.110279" color="#24576b">doi:10.1016/j.rineng.2026.110279</link>.
 
 ### Supplement A. Provenance and reproducibility requirements
 
-The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the base-paper audit, the manuscript restructuring map, the complete current source and the authoritative research-state record. The base paper is preserved separately from the evolving manuscript. No solver dataset is available in this stage.
+The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source and the authoritative research-state record. The base paper is preserved separately from the evolving manuscript. No solver dataset is available in this stage.
 
 Each future case must preserve a unique identifier, the solver version, geometry and material orientation, input configuration, source references, units, boundary histories, mesh, time-integration and contact settings, execution status, raw-output location and file checksums. Failed cases remain in the record with their failure reason. Postprocessing must identify both the raw field and the script/equation producing each response.
 
-Every quantitative result will be assigned to one of three evidence classes: A, genuine solver output; B, a reproducible numerical calculation; or C, a verified published source with an exact locator. Design choices remain labeled as inputs, never as findings. The temperatures and durations in Table 1 are inherited design choices; its nine-combination count follows directly from three temperature levels multiplied by three duration levels.
+Every quantitative result will be assigned to one of three evidence classes: A, genuine solver output; B, a reproducible numerical calculation; or C, a verified published source with an exact locator. Design choices remain labeled as inputs, never as findings. The temperatures and durations in Table 2 are inherited design choices; its nine-combination count follows directly from three temperature levels multiplied by three duration levels.
 
 The bibliography is deliberately limited to the checked sources cited in this draft. The larger bibliography in the base proposal is archived for later appraisal and is not treated as a validated material database. No published numerical property, deformation value or uncertainty estimate is adopted here without extraction and applicability assessment.
 

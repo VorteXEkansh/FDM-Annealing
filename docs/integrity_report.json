@@ -1,5 +1,5 @@
 {
-  "stage": 1,
+  "stage": 2,
   "date": "2026-09-12",
   "checks": [
     {
@@ -99,7 +99,7 @@
       "status": "pass"
     },
     {
-      "check": "Complete ten-page manuscript without spill pages",
+      "check": "Complete eighteen-page manuscript without spill pages",
       "status": "pass"
     },
     {
@@ -164,7 +164,7 @@
     }
   ],
   "count": 40,
-  "pdf_sha256": "097bf08defcd007c6948f52089b937b92c040cc964ac199ccce10574b1fd2406",
-  "manuscript_sha256": "2acaa3834b679f333dc81acdda659c22d5d362d1db81de79f82a96ffad112376",
+  "pdf_sha256": "3c161f109ff48d32293a3e3f6253a3cd13421fc6839302eaa4c665d21e305779",
+  "manuscript_sha256": "98db103741b76bd3b1cfa31cbd70309aa711cacc91d37f269f2cba4687160930",
   "scope": "Document and evidence integrity only. No solver verification or validation performed."
 }

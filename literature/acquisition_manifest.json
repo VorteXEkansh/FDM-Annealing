@@ -1,0 +1,66 @@
+[
+  {
+    "key": "Bute2024",
+    "url": "https://matsc.ktu.lt/index.php/MatSc/article/download/35076/16400",
+    "sha256": "9638cf851454a53a48e341e779494e0252555114f94b3d884f5d29e641a389e5",
+    "access": "full text retrieved",
+    "text_characters": 39603,
+    "local_review_copy": "tmp\\literature\\Bute2024.pdf"
+  },
+  {
+    "key": "Trofimov2022",
+    "url": "https://publications.polymtl.ca/10438/8/2022_Trofimov_Experimentally_validated_modeling_temperature_distribution.pdf",
+    "sha256": "42742d361e0fe0e6f1a266676b1022cf18cfe27f156a60415113f8e3db01e198",
+    "access": "full text retrieved",
+    "text_characters": 66450,
+    "local_review_copy": "tmp\\literature\\Trofimov2022.pdf"
+  },
+  {
+    "key": "Laminate2025",
+    "url": "https://www.research-collection.ethz.ch/server/api/core/bitstreams/4ee31ad8-b00d-4089-8361-982f0760e6ad/content",
+    "sha256": "b6ec6b2d8c70b3628e27dbea07735c44b44d30f7dda666a43e94e5585c0180a7",
+    "access": "full text retrieved",
+    "text_characters": 70786,
+    "local_review_copy": "tmp\\literature\\Laminate2025.pdf"
+  },
+  {
+    "key": "Prediction2023",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10006872/fullTextXML",
+    "sha256": "03d13b6e3b3243956d7a44a90fcdc4587d9c6d3ab90aac96843d7d3bee14e0cf",
+    "access": "full text retrieved",
+    "text_characters": 75319,
+    "local_review_copy": "tmp\\literature\\Prediction2023.xml"
+  },
+  {
+    "key": "Process2025",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12525860/fullTextXML",
+    "sha256": "44269164b96f67934e0b8a5e442434b67b51a7e800ca783b1928c564ac34e596",
+    "access": "full text retrieved",
+    "text_characters": 58830,
+    "local_review_copy": "tmp\\literature\\Process2025.xml"
+  },
+  {
+    "key": "Mould2022",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9269357/fullTextXML",
+    "sha256": "368d1b0cceab0e5eccdc12cb85a0c3f04a6d91826443f5846b5c3c1830247ae4",
+    "access": "full text retrieved",
+    "text_characters": 35392,
+    "local_review_copy": "tmp\\literature\\Mould2022.xml"
+  },
+  {
+    "key": "Encapsulation2025",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12471281/fullTextXML",
+    "sha256": "7af026c25955f5f061a7f9944f1ad3a07d624cb2ddec2fe2ede4a99eb0d14098",
+    "access": "full text retrieved",
+    "text_characters": 75343,
+    "local_review_copy": "tmp\\literature\\Encapsulation2025.xml"
+  },
+  {
+    "key": "Relaxation2022",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9147248/fullTextXML",
+    "sha256": "105e3378d16c0cbab778e519f6dc5b92fc7ea8b17f270a83c1e4e2612550a98b",
+    "access": "full text retrieved",
+    "text_characters": 32315,
+    "local_review_copy": "tmp\\literature\\Relaxation2022.xml"
+  }
+]

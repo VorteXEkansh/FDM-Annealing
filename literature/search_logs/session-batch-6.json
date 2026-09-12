@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-12",
+  "raw_response_sha256": "36232871a7efbe9d3f9c205b77214c6702a7ccedd93491c94dca35c69e5d0e54",
+  "local_raw_archive": "tmp\\search_raw\\session-batch-6.json",
+  "source_urls": [
+    "https://academic.oup.com/pnasnexus/article/5/9/pgag281/8767651",
+    "https://assets-eu.researchsquare.com/files/rs-7454600/v1_covered_3cc514d2-e975-4fb3-9d13-7e09951a19eb.pdf?c=1772203336",
+    "https://doi.org/10.1007/s43939-026-00769-2",
+    "https://doi.org/10.1016/j.rineng.2026.110279Get",
+    "https://ideas.repec.org/a/eee/energy/v347y2026ics0360544226004822.html",
+    "https://journals.sagepub.com/doi/abs/10.1177/09673911261475042",
+    "https://link.springer.com/article/10.1007/s43939-026-00769-2",
+    "https://patents.justia.com/patent/20260214860",
+    "https://s3.amazonaws.com/na-st01.ext.exlibrisgroup.com/01LANL_INST/storage/alma/BB/94/26/CC/55/82/74/4D/69/01/CC/C2/23/C7/B8/8A/Accepted%20Manuscript.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJUYRSPBSIJGGDX6A%2F20260429%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260429T115122Z&X-Amz-Expires=86399&X-Amz-Signature=65e713c56e45c9ba42a9d6575feb8be37f467ab38f1e673be3466b570e69a620&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B+filename%3D%22Accepted%2520Manuscript.pdf%22%3B+filename%2A%3DUTF-8%27%27Accepted%2520Manuscript.pdf&response-content-type=application%2Fpdf",
+    "https://scispace.com/papers/thermal-annealing-optimization-for-improved-mechanical-75bq4iz1abch",
+    "https://www.3d-peim.org/2026-3d-peim-keynote-oral-and-poster-presentations/",
+    "https://www.iieta.org/download/file/fid/194061",
+    "https://www.nature.com/articles/s41598-026-61240-z",
+    "https://www.researchgate.net/publication/388903423_Thermal_Annealing_Optimization_for_Improved_Mechanical_Performance_of_PLA_Parts_Produced_via_3D_Printing",
+    "https://www.researchgate.net/publication/408076001_Multiscale_modeling_and_multiobjective_optimization_of_the_mechanical_behavior_of_annealed_and_non-annealed_material_extrusion_printed_PLA",
+    "https://www.sciencedirect.com/science/article/pii/S2590123026013137",
+    "https://www.sciengine.com/parse/pdf/0254-6124/E4A76BBFDCEE4A9E9BE0F1CB1333F928.pdf",
+    "https://www.solmech2016.ippt.pan.pl/Abstracts/0072.pdf",
+    "https://www.uludag.edu.tr/makine/sci-makaleler-18620",
+    "https://www.upg-ploiesti.ro/wp-content/uploads/2025/06/Ramadan_Ibrahim_FV_2025-fara-semnatura.pdf",
+    "https://www.webofscience.com/wos/wo"
+  ],
+  "note": "Discovery-source index derived from the raw web response. Original response retained locally; article excerpts are not redistributed."
+}

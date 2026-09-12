@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-12",
+  "raw_response_sha256": "2fb911579e1b34f49b224115fc7687cd8fdc539158c3171c8a542a413c67e0e8",
+  "local_raw_archive": "tmp\\search_raw\\session-batch-5.json",
+  "source_urls": [
+    "https://advanced.onlinelibrary.wiley.com/doi/10.1002/admt.202401550",
+    "https://assets-eu.researchsquare.com/files/rs-7454600/v1_covered_e9cdaa52-f2b7-41fe-9de6-8215fd671035.pdf?c=1759465025",
+    "https://doi.org/10.1016/j.polymertesting.2025.108735",
+    "https://link.springer.com/article/10.1007/s40964-024-00732-8",
+    "https://link.springer.com/article/10.1186/s44147-026-01070-y",
+    "https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/3026538/Shanmugam.pdf?sequence=1",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC11756461/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12473619/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7926767/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC8434208/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9413111/",
+    "https://prezi.com/p/gmvmkk3q3k9j/thermal-and-mechanical-characterisation-of-biobased-pla-and-fossil-based-pet-for-textile-applications/",
+    "https://real.mtak.hu/115449/1/POTE.pdf",
+    "https://research-information.bris.ac.uk/ws/portalfiles/portal/483852721/Final_Copy_2026_02_03_Yavuz_B_0_PhD.pdf",
+    "https://upcommons.upc.edu/bitstream/handle/2117/96121/TJC1de1.pdf?isAllowed=y&sequence=1",
+    "https://www.iris.unict.it/retrieve/b2b8d318-bd81-4cac-826b-3c95966669b8/Tesi%20di%20dottorato%20-%20TOSTO%20CLAUDIO%2020211110182957.pdf",
+    "https://www.mdpi.com/2073-4360/18/15/1808",
+    "https://www.researchgate.net/publication/408076001_Multiscale_modeling_and_multiobjective_optimization_of_the_mechanical_behavior_of_annealed_and_non-annealed_material_extrusion_printed_PLA",
+    "https://www.sciencedirect.com/science/article/pii/S1751616118303928"
+  ],
+  "note": "Discovery-source index derived from the raw web response. Original response retained locally; article excerpts are not redistributed."
+}

@@ -9,3 +9,6 @@ __pycache__/
 *.db
 *.wbpj
 *_files/
+
+node_modules/
+*.inspect.ndjson
