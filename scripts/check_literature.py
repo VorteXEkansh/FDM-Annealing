@@ -1,6 +1,6 @@
 """Stage 2 bibliographic, workbook and evidence integrity (not solver validation)."""
 from pathlib import Path
-import json,re,hashlib,zipfile,xml.etree.ElementTree as ET
+import json,re,hashlib,zipfile,sys,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 rows=json.loads((ROOT/'literature/literature_matrix.json').read_text(encoding='utf-8'))
@@ -45,6 +45,7 @@ with zipfile.ZipFile(ROOT/'literature/literature_matrix.xlsx') as z:
  check('Workbook has no error cells',not sheet.findall('.//s:c[@t="e"]',ns))
  check('Workbook has no formulas implying calculated results',not sheet.findall('.//s:f',ns))
  check('Workbook frozen header and record ID',sheet.find('.//s:pane',ns) is not None)
-report={'stage':2,'checks':checks,'count':len(checks),'scope':'Bibliography, source hashes and workbook integrity only'}
-(ROOT/'docs/literature_integrity_report.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+stage=int(sys.argv[1]) if len(sys.argv)>1 else 2
+report={'stage':stage,'checks':checks,'count':len(checks),'scope':'Bibliography, source hashes and workbook integrity only'}
+(ROOT/('docs/literature_integrity_report.json' if stage==2 else f'docs/stage_{stage:02d}_literature_integrity.json')).write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
 print(f'{len(checks)} literature integrity checks passed')

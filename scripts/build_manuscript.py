@@ -121,7 +121,7 @@ def build():
         else: story.append(P(line,ST['body']))
         i+=1
     OUT.parent.mkdir(parents=True,exist_ok=True)
-    doc=SimpleDocTemplate(str(OUT),pagesize=A4,rightMargin=54,leftMargin=54,topMargin=43,bottomMargin=48,title='Gap-controlled constraint during sub-melting annealing of FFF-printed PLA',author='Aadit Jain; Dheeraj Yadav; Ekansh Malhotra',pageCompression=1,invariant=1)
+    doc=SimpleDocTemplate(str(OUT),pagesize=A4,rightMargin=54,leftMargin=54,topMargin=43,bottomMargin=48,title='Free and gap-constrained annealing of FFF-printed PLA: a thermo-mechanical computational study',author='Aadit Jain; Dheeraj Yadav; Ekansh Malhotra',pageCompression=1,invariant=1)
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
     print(OUT)
 

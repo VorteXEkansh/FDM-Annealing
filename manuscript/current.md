@@ -1,5 +1,5 @@
-# Gap-controlled constraint during sub-melting annealing of FFF-printed PLA
-## A computational thermo-mechanical research framework
+# Free and gap-constrained annealing of FFF-printed PLA: a thermo-mechanical computational study
+## Sub-melting exposure, dimensional change and released-state response
 
 Aadit Jain · Dheeraj Yadav · Ekansh Malhotra
 
@@ -7,19 +7,23 @@ Production and Industrial Engineering, Delhi Technological University
 
 Computational manuscript draft · 12 September 2026
 
-### Abstract
+### Abstract — structured research draft
 
-Annealing of fused-filament-fabricated (FFF) polylactic acid (PLA) raises a coupled question: how can geometric restraint limit distortion without transferring unacceptable stress into the part? This study is formulated around quantified clearance between a printed part and a mechanical fixture during sub-melting thermal treatment. The proposed ANSYS investigation will resolve heating, holding, cooling and fixture release, with signed directional dimensional change and out-of-plane warpage as primary responses. Contact pressure, fixture reactions and residual stress will describe the mechanical cost of restraint. Candidate annealing temperatures of 80 °C, 95 °C and 110 °C and hold durations of 30 min, 60 min and 90 min are retained as design choices; their applicability remains conditional on the selected PLA and constitutive evidence. The framework separates reversible expansion from history-dependent recovery, numerical verification from physical validation, and deterministic parameter effects from uncertainty. Independent published observations must be reserved for validation before calibration, and multi-objective ranking will require verified solver responses and declared acceptance criteria. A literature investigation through 12 September 2026 identifies prior supported annealing, viscoelastic recovery models and annealing-related numerical optimization. The remaining contribution is provisionally narrowed to a quantified clearance–contact assessment after cooling and release. This draft establishes the computational formulation and evidence requirements. No ANSYS results, validated material law, convergence findings or optimum are reported. The intended contribution is a reproducible assessment of the clearance–distortion–stress trade-off rather than an experimental strength claim.
+<b>Context and question.</b> Annealing of fused-filament-fabricated (FFF) polylactic acid (PLA) can change dimensions while geometric restraint introduces contact loading. This computational study asks how temperature, holding time and quantified initial fixture clearance influence thermal exposure and the dimensional change, warpage and residual stress assessed after cooling and release for a specified PLA grade, print architecture and geometry.
+
+<b>Planned approach.</b> Genuine ANSYS analysis will compare mechanically free annealing with opposed-face gap restraint over an evidence-supported sub-melting domain. Candidate levels are 80&nbsp;°C, 95&nbsp;°C and 110&nbsp;°C, with holds of 30 min, 60 min and 90 min; their admission depends on the selected material evidence. Temperature-dependent, history-dependent behavior and contact will be represented only to the extent supported by data. Thermal histories, signed dimensions and released warpage will be distinguished from contact pressure and conditional stress predictions. Numerical verification, independent literature-based validation and uncertainty assessment will precede multi-objective interpretation.
+
+<b>Results status.</b> No ANSYS results, accepted material law, convergence evidence, validation findings or optimum exist at this stage. Quantitative results and their uncertainty will enter this abstract only after traceable solver execution and the corresponding checks.
+
+<b>Intended contribution.</b> The study will assess the clearance–distortion–stress trade-off and distinguish temporary geometric suppression from released stability. Prior supported annealing and numerical optimization preclude a broad first-of-kind claim. No strength improvement or industrial treatment recommendation is asserted.
 
 Keywords: fused filament fabrication; PLA; annealing; fixture clearance; thermo-mechanical modeling; contact; warpage; numerical verification
 
 ### 1. Rationale and scope
 
-Post-print thermal treatment can alter the dimensional and mechanical response of FFF thermoplastics. Butt and Bhaskar investigated annealing in several printed thermoplastic systems [1]. Their study motivates material-specific assessment rather than treating a thermal cycle as a universal improvement. Stojković et al. investigated layer height, annealing temperature and time together with strength and dimensional accuracy [2]. These studies support retaining geometric response alongside mechanical considerations; neither supplies validation of the plate fixture proposed here.
+Annealing studies by Butt and Bhaskar [1] and Stojković et al. [2] motivate assessing dimensional response alongside material behavior. They do not validate the proposed plate fixture. The present computational study compares free annealing with quantified fixture clearance, accounting for contact activation, thermal exposure and release.
 
-The present research concerns a virtual printed PLA body restrained by opposed fixture surfaces. The key controlled quantity is the initial free clearance, not an unspecified clamp force or a binary “supported” label. A physically meaningful comparison must account for contact activation, fixture expansion, friction and release. A small shape deviation while the part remains inside the fixture is insufficient evidence of stable final geometry.
-
-The study is computational. Physical tensile testing, flexural confirmation and a new specimen campaign are outside its methodology. Strength enhancement will not be inferred from a thermal-stress simulation.
+Dimensional suppression inside a fixture is insufficient evidence of stable final geometry. The research therefore evaluates cooled, released response and restricts claims to observables supported by independent evidence. New physical testing and strength enhancement inferred from thermal stress are outside scope.
 
 <!-- PAGE -->
 ### 1.1. Evidence base and scope of the review
@@ -90,41 +94,87 @@ Ben Amor and Souissi [14] | Annealed PLA, FE and optimization | Released dimensi
 
 The broad proposed gap is narrowed. In the accessible evidence reviewed, no study was identified that demonstrates the complete chain of a quantified initial annealing-fixture clearance, evolving thermal/mechanical contact, irreversible directional response, and a verified assessment of released dimensions, warpage and residual stress with explicit uncertainty. This is a bounded search finding, not proof of absence or a claim of priority. Partial access to several competitors limits a stronger assertion.
 
-The defensible intended contribution is a reproducible, evidence-tested evaluation of the clearance–distortion–stress trade-off for a specified FFF-PLA material and fixture. Integrating transient thermal exposure, a justified history-dependent material law and irreversible strain is a means to that end. The contribution remains conditional: it must be demonstrated by genuine computations, numerical verification and compatible independent observations. If stress or contact cannot be physically validated, those outputs must remain conditional model predictions, with validation claims restricted to supported observables.
+This evidence motivates a focused comparison of mechanically free annealing and quantified opposed-face gap restraint for one specified FFF-PLA system. The research question, objectives and testable propositions below distinguish transient exposure from cooled, released response. The intended contribution is a conditional clearance–distortion–stress assessment, not a claim of novelty for the component methods. Physical validation will be restricted to independently supported observables.
 
 ASTM F3489-23 [3] remains relevant to appraisal of polymer material-extrusion mechanical data. It does not certify the proposed simulation or provide an annealing constitutive law. Published support effects are literature findings, not results of this study.
 
 <!-- PAGE -->
-### 2. Research questions and objectives
+### 2. Research question and finalized scope
 
-The central question is whether a quantified range of fixture clearance can reduce released dimensional error and warpage while avoiding unfavorable contact and residual-stress responses under a specified sub-melting thermal history. The reviewed literature supports investigating this specific trade-off; it does not establish an unprecedented combination of annealing, finite elements and optimization.
+<b>Primary research question.</b> For a specified FFF-PLA grade, print architecture and geometry, how do annealing temperature, holding time and initial fixture clearance influence transient thermal exposure and the irreversible dimensional change, warpage and residual stress evaluated after cooling and fixture release, relative to free annealing within an evidence-supported sub-melting domain?
 
-1. Define a reproducible virtual geometry, material orientation, reference clearance and thermal–mechanical boundary description for an ANSYS analysis.
-2. Quantify directional dimensional change, warpage and contact/stress response after numerical verification of the relevant solution quantities.
-3. Assess predictive adequacy against independently reserved, compatible literature observations, distinguishing calibration from validation.
-4. Evaluate the influence and uncertainty of material history, thermal boundaries and fixture/contact parameters using justified ranges or distributions.
-5. Identify conditional multi-objective trade-offs using traceable solver evidence and confirm selected candidates with additional genuine computations.
+Temperature and duration are process inputs, while clearance is the total initial part-to-fixture separation at a common reference temperature. Transient quantities are evaluated during heating, holding and cooling. “Residual” refers to the declared cooled, released state and observation time; it does not imply an infinite-time equilibrium. Irreversible dimensional change is evaluated relative to the initial geometry at the same reference temperature, separating it from temporary thermal expansion.
 
-### 2.1. Testable propositions
+### 2.1. Secondary research questions
 
-P1. Changing clearance can change released warpage and directional dimensions relative to an otherwise comparable unconstrained case. An effect must exceed the numerical resolution of the comparison before it is interpreted.
+SQ1. How does fixture presence and contact engagement change part-temperature histories, spatial gradients and thermal lag under the same external heating and cooling schedule?
 
-P2. Suppression of deformation during contact need not persist after release; geometric improvement may coexist with increased contact loading or residual stress. Both in-fixture and released states must therefore be examined.
+SQ2. At a given thermal condition, how does initial clearance change signed directional dimensions and released warpage relative to the free baseline, and which differences persist when part-temperature histories are matched for a diagnostic comparison?
 
-P3. Temperature and hold duration may interact with clearance through evolving material response and contact. Ranking stability must be evaluated against uncertain inputs; a monotonic trend or central optimum is not assumed.
+SQ3. How do contact pressure, fixture reactions and cooled residual-stress measures vary with clearance, and how much of any in-fixture geometric suppression remains after release?
 
-These are untested propositions. Repeating an identical deterministic solution does not generate independent experimental replication or justify a significance test.
+SQ4. Which temperature–duration–clearance interactions and material/contact uncertainties materially affect the predicted responses, and are these effects distinguishable from numerical error and constitutive ambiguity?
+
+SQ5. Within the admissible and verified domain, which conditions offer nondominated dimensional-error, warpage and stress trade-offs, and how stable are those comparisons to uncertainty and declared decision preferences?
+
+### 2.2. Domain and comparison rules
+
+The primary study will use one identified FFF-PLA formulation, one fixed print architecture and one representative three-dimensional plate-like coupon geometry selected for evidence compatibility. Dimensions, grade and property tables are implementation choices still to be established; scope finalization does not supply missing material data. The formulation will retain material directions and a justified irreversible/history-dependent response. It will not require a complete simulation of nozzle deposition: initial printed-state evidence may instead support a calibrated recovery representation without double-counting initial stress.
+
+The two primary conditions are FREE, an ideal mechanically unrestrained body with traction-free surfaces and only numerically verified rigid-body stabilization, and GAP, the same body initially centered between opposed fixture faces with specified total clearance and no applied preload. Gravity is omitted in this primary paired comparison as a declared isolation assumption. A support- or gravity-dependent literature reproduction must be labeled separately; it cannot silently replace FREE. No symmetry restriction may exclude the warpage modes being investigated.
+
+<!-- PAGE -->
+### 2.3. Computational objectives
+
+1. Establish a traceable ANSYS thermal–mechanical/contact model for FREE and GAP, including material orientation, reference clearance, irreversible response, thermal boundaries, cooling and release; document every evidence source and assumption. This addresses SQ1–SQ3.
+2. Quantify thermal histories, signed dimensions, released warpage, contact loading and declared residual-stress measures over admissible temperature, duration and clearance conditions, with mesh, time-step and contact verification. This addresses SQ1–SQ3.
+3. Assess predictive adequacy against independently reserved, compatible published observations and state validation separately for each observable; distinguish calibration, verification and physical validation. This supports all five secondary questions.
+4. Evaluate parameter interactions, uncertainty and identifiability for the responses and compare effects with numerical resolution. This addresses SQ4 and supports SQ5.
+5. Construct conditional multi-objective comparisons using verified solver responses, declared feasibility/benefit criteria and uncertainty-aware interpretation; recompute selected candidates with the genuine solver. This addresses SQ5.
+
+The inherited 80 °C, 95 °C and 110 °C temperatures and 30 min, 60 min and 90 min durations remain candidate design levels. Conditions outside the chosen grade's supported sub-melting or constitutive domain will be excluded or revised with an explicit record. A nominal treatment grid cannot authorize material-law extrapolation. Clearance bounds and any contact, thermal-attainment or acceptance thresholds require a later evidence-based specification before runs are interpreted.
+
+### 2.4. Testable numerical propositions
+
+H1 — Clearance effect. Within the admissible domain, at least one engaged-contact GAP condition changes released warpage or a signed directional dimension relative to FREE by more than the verified numerical resolution. The proposition is unsupported if no such difference is resolved. Thermally matched diagnostic cases will distinguish contact restraint from differing heat exposure.
+
+H2 — Release effect. At least one GAP condition has a resolved change in warpage or directional dimension between its cooled, still-constrained state and its cooled, released state. Compare the same landmarks and reference temperature, recording release relaxation time. No resolved change in the investigated domain leaves this proposition unsupported.
+
+H3 — Interaction. For at least one response, the effect of changing clearance differs between two admissible temperatures or holding durations beyond the uncertainty attributable to numerical solution. Evaluate the difference between paired clearance effects; if those differences are unresolved throughout the tested domain, interaction is not established.
+
+H4 — Trade-off. At least one verified condition that reduces released dimensional error or warpage relative to another admissible condition increases the declared residual-stress measure by a resolved amount. A uniformly improving or unresolved response set does not support this proposition. Contact pressure is reported separately and is not equated with residual stress.
+
+These are untested, domain-limited propositions, not expected findings. Their null interpretations are absence of a resolved effect in the sampled domain, not proof of universal absence. Numerical resolution criteria and extraction rules must be fixed before hypothesis assessment; plausible input uncertainty will then test robustness. Deterministic reruns do not provide independent samples, p-values or experimental confidence intervals.
+
+<!-- PAGE -->
+### 2.5. Intended contribution and limits of claim
+
+The intended contribution is an evidence-tested account of how quantified fixture clearance changes the relationship between annealing exposure and released dimensional stability for a specified FFF-PLA system, together with the accompanying model-predicted stress cost. Its three connected elements are: a reproducible FREE–GAP comparison that separates thermal exposure from restraint; a verified response description distinguishing in-fixture suppression from released geometry; and an uncertainty-aware assessment of conditional design trade-offs. Their scientific value depends on genuine numerical evidence and the independently supported predictive domain.
+
+Prior work already establishes supported annealing, irreversible strain analysis, thermo-viscoelastic recovery modeling and annealing-related numerical optimization [5], [8], [9], [11], [14]. The study therefore makes no claim to invent these ingredients or to be the first constrained-annealing investigation. The reviewed gap remains provisional, especially where closest-study access is limited. The proposed contribution is not yet an achieved numerical result.
+
+The main comparison uses identical external thermal schedules to measure the combined effect of fixture presence and restraint. A separate diagnostic may impose matched part-temperature histories to isolate mechanical effects; it is an attribution calculation, not evidence that the two physical processes share a thermal history. A supported-reference reproduction, if needed for validation, must preserve that source's actual support and release protocol and remain distinct from the primary FREE condition.
+
+Sand, salt, powder moulds and encapsulation remain literature context [11], [12], [24]–[26]. The numerical scope excludes discrete-element modeling of granular media, powder compaction and salt remelting. A two-condition study cannot establish that the proposed plate fixture outperforms these alternatives. Their published deformation reductions will not be treated as results of this model.
+
+The paper will not claim tensile-strength, stiffness or ductility enhancement from residual stress; experimental confirmation by newly manufactured specimens; a universal PLA material law; validated crystallinity or kinetics without compatible evidence; or a unique separation of strain mechanisms from final dimensions alone. It will not claim physical validation of unobserved stress or contact pressure, nor infer such validation from dimensional agreement. These outputs remain conditional predictions if independent evidence is unavailable.
+
+The study will not establish fatigue life, long-term aging, service creep, moisture durability, biological suitability, sterilization qualification, production cost savings or certification. It will not generalize across grades, reinforced/recycled formulations, print architectures or geometries beyond evidence. Neither a globally optimal treatment nor a universally safe stress/contact limit will be claimed from a finite numerical design space.
+
+Multi-objective comparisons are restricted to admissible, numerically verified conditions with explicit response definitions. A low-distortion mild treatment is not automatically useful annealing: any recommendation requires a separately supported processing-benefit or application criterion. If that criterion or independent validation remains unavailable, the paper will report conditional trade-offs and the limitation, not an industrial processing recommendation.
+
+The scope is finalized as a computational research commitment. Solver availability, grade selection, numerical parameters and validation datasets remain open implementation items; no ANSYS results, accepted material law or completed verification are supplied by this stage.
 
 <!-- PAGE -->
 ### 3. Computational domain and controlled constraint
 
-The candidate domain comprises a PLA body and two opposed fixture surfaces separated by stops. A full three-dimensional body is preferred unless a reduced model can retain the deformation modes of interest. The part dimensions, surface landmarks, fixture dimensions, material grade and build/raster axes remain to be selected against available validation evidence. No CAD model or mesh is represented as completed.
+The GAP domain comprises a PLA body and two opposed fixture surfaces separated by stops; FREE contains the same body without fixture contact. A full three-dimensional body is preferred unless a reduced model can retain the deformation modes of interest. The part dimensions, surface landmarks, fixture dimensions, material grade and build/raster axes remain to be selected against available validation evidence. No CAD model or mesh is represented as completed.
 
 Let x and y denote reference in-plane material axes and z the thickness direction. Define h<sub>0</sub> as the initial part thickness and H<sub>0</sub> as the separation between the effective opposing contact surfaces at the common reference temperature T<sub>ref</sub>. Release films, if represented, must be included in those effective surfaces or modeled as separate layers without double-counting their thickness. The total initial clearance and its dimensionless form are
 
 EQ: g<sub>0</sub> = H<sub>0</sub> − h<sub>0</sub>, &nbsp;&nbsp; γ = g<sub>0</sub>/h<sub>0</sub>. &nbsp;&nbsp; (1)
 
-A symmetric initial placement assigns half the total clearance to each face. A gravity-seated arrangement places the part on the lower surface and assigns the available clearance above it. These configurations are mechanically distinct and must be identified in each case. Figure 1 illustrates only the symmetric geometric definition.
+The primary GAP condition is initially centered, with half the total clearance assigned to each face and gravity omitted. A gravity-seated or supported reproduction of a published protocol is a separate validation configuration. Figure 1 illustrates the primary geometric definition; it does not impose a symmetry boundary condition.
 
 FIGURE: gap
 
@@ -132,7 +182,7 @@ CAPTION: Figure 1. Initial clearance definition for opposed fixture surfaces. Sc
 
 The base proposal's single hot allowance is replaced by a parameterized reference gap. Thermal expansion of the plates and stops, plate compliance and part deformation determine subsequent local separation. No numerical clearance levels, friction coefficients, contact conductance or preload are assigned here. Bonding the specimen faces or prescribing zero displacement over them would eliminate the intended gap-controlled mechanism.
 
-The unconstrained comparison removes the upper restraining surface while explicitly documenting any lower support and gravity. Numerical rigid-body stabilization must not suppress shrinkage, lateral slip or bowing. Symmetry conditions require justification; they must not exclude asymmetric warpage by construction.
+FREE has traction-free mechanical surfaces and no fixture contact or gravity in the primary comparison. Numerical rigid-body stabilization must not suppress shrinkage, lateral slip or bowing. A supported part must be labeled as a separate configuration. Symmetry conditions require justification; they must not exclude asymmetric warpage by construction.
 
 <!-- PAGE -->
 ### 3.1. Thermal design and reporting states
@@ -143,7 +193,7 @@ TABLE: Thermal design choices
 Factor | Candidate levels | Interpretation
 Annealing temperature | 80 °C; 95 °C; 110 °C | Inherited design choices; no established optimum
 Hold duration | 30 min; 60 min; 90 min | Inherited choices; attainment rule still required
-Constraint | Unconstrained; gap-controlled fixture | Explicit contact and support definitions required
+Constraint | FREE; GAP fixture | Explicit contact and support definitions required
 Initial clearance | Not selected | Continuous geometric parameter; bounds need justification
 
 The three temperature and three duration levels define nine thermal combinations before clearance, verification or uncertainty cases are added. This is design arithmetic, not a count of completed simulations. The total run count is not yet fixed.
@@ -261,7 +311,7 @@ Candidates selected through a surrogate must be recomputed with the genuine solv
 <!-- PAGE -->
 ### 8. Evidence status, engineering relevance and limitations
 
-The current contribution is a critically delimited computational research question, a verified literature matrix, consistent response definitions and a traceable evidence structure. Table 3 identifies what remains necessary before numerical findings can be reported. Missing evidence is not represented by zero values, example contours or synthetic data.
+The current contribution is a finalized computational scope with one primary and five secondary questions, five objectives and four untested propositions, supported by the verified literature matrix and response definitions. Table 3 identifies what remains necessary before numerical findings can be reported. Missing evidence is not represented by zero values, example contours or synthetic data.
 
 TABLE: Evidence required for reportable findings
 Claim family | Current evidence | Admission requirement
@@ -280,7 +330,7 @@ The candidate temperature range remains unverified for a selected grade. Aging, 
 
 ### 9. Conclusions
 
-The literature establishes prior supported annealing, irreversible strain analysis, thermo-viscoelastic finite elements and annealing-related optimization. The proposed contribution is therefore restricted to evidence-tested prediction of the clearance–distortion–stress trade-off after cooling and release, conditional on the remaining validation needs. The formulation retains signed directional response, warpage, thermal design levels and multi-response decision logic while making fixture clearance, thermal history, constitutive recovery and release explicit.
+The literature establishes prior supported annealing, irreversible strain analysis, thermo-viscoelastic finite elements and annealing-related optimization. The proposed contribution is therefore restricted to evidence-tested prediction of the clearance–distortion–stress trade-off after cooling and release, conditional on the remaining validation needs. The scope compares FREE with initially centered GAP restraint for one specified material/architecture/geometry, while retaining signed response and explicitly excluding granular-media simulation and unverified strength claims.
 
 Numerical findings require genuine ANSYS execution, verified material evidence, discretization assessment and independent validation. No improvement, validated prediction or preferred annealing condition is concluded.
 

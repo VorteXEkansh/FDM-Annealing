@@ -1,0 +1,26 @@
+{
+  "stage": 3,
+  "date": "2026-09-12",
+  "algorithm": "SHA-256",
+  "files": {
+    "docs/PROJECT_STATE.md": "0f580bb024829aaddb8aede9ee777a12048769985f37aee377b2545dfc69ad02",
+    "docs/novelty_audit.md": "741329874b1bf6cfa48b416b678f4c28fb72385c89820a8c33c4d9f925354ee9",
+    "docs/research_scope.md": "38ec1c242dd5dcb4f6355a2a69e6a83d87603fe0b1632e91c8621d7114e4a80e",
+    "docs/manuscript_restructure_map.md": "771e59d31fb8ba527373872e2c885cd4a5108c20b91c0af8da6c72c1da29ec69",
+    "docs/integrity_report.json": "cb5ed7ea2692d6bf7a9b8132fb38631b287b6a35db2d0e737ebfbbea330c31dd",
+    "docs/stage_03_quality.md": "9593de970e3c96d5667d5d0682927949077114b4bd86426ee506806924013b52",
+    "docs/stage_03_literature_integrity.json": "57a5a56dd76045df38b333f068f89e489c7fbc654a797fca7f8a35df5e8c9135",
+    "literature/literature_matrix.json": "376cf77c91be32e4bed0cc43f5004afedeb8ea62031aa2e382364265f29621d1",
+    "literature/literature_matrix.xlsx": "bbaff7ed42241f15a949c3b1203d44fe68e9b5a74c3e99ebaa408ffa82611434",
+    "literature/references.bib": "16e16c1383ceac9e7cf66b7382942dbc21b0cf4ba5975d640d1d181ed50ec07e",
+    "manuscript/current.md": "05e19d1214a0ff536e5ec9070039ab64d98fc7daee7c512cb9e6383fc53f4575",
+    "manuscript/research_scope.md": "ebba29e380b91aec425655bc8a8a8fd988faa2cbcd5d1d88441251163b6f1a14",
+    "scripts/build_manuscript.py": "f5087171b0fa5d36625fcd15e670a67acd57d2670dff2c5bc3b2a9e79a53b502",
+    "scripts/check_integrity.py": "fd46dc62214b45cd1e7bb0da1cbfcad8d6297fd6b02b10ec596c3b7911d84f59",
+    "scripts/check_literature.py": "df8a7061881f3b9a781aaf5c731c058993091246233205cd122196a819e8681c",
+    "scripts/verify_delivery.py": "5269dafe6a6e8d12e6f121158ef4a66abd903432f63a4db8487be04db8714b6c",
+    "scripts/record_stage_manifest.py": "f4cb4f92895e38255aa700e1d9ad08284f8e2660751156c4eeaa3f2d80890904",
+    "output/pdf/Constrained-Annealing-2026-DRAFT.pdf": "df2cfd75ea9abbb4a6250e769dfce6bcdf6820b003333a0c001c7586bb111a8b"
+  },
+  "scope": "Document scope finalization; no solver execution or new quantitative findings."
+}

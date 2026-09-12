@@ -29,3 +29,7 @@ The complete current manuscript replaces the old paper; this is not a notes-only
 After real work exists, split §8 into numerical verification, independent validation, thermo-mechanical results and discussion. Populate sensitivity/uncertainty and optimization only with genuine calculations and provenance. Keep mechanisms in Introduction/Discussion, not in Results as substitutes for local computations.
 
 Figures in the new draft are original conceptual boundary-condition illustrations only. No ANSYS contour, mesh, thermal trace, convergence plot or Pareto front is supplied at this stage.
+
+## Stage 3 scope update
+
+The title and structured abstract now frame FREE versus GAP annealing. The end of §1 leads into §2: one primary question, five secondary questions, comparison rules, five computational objectives, four falsifiable numerical propositions and the intended contribution/non-claims. §§3 and 3.1 align the fixture and thermal comparison with that scope; §9 concludes only the scope decision. Sand/salt remain literature context. Full numerical execution and findings remain future evidence-dependent work.
