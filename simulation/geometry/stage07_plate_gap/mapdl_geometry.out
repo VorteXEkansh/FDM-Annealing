@@ -1,0 +1,347 @@
+
+ Ansys Mechanical Enterprise Academic Student      
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *         ANSYS MAPDL 2026 R1          LEGAL NOTICES          *
+ ***************************************************************
+ *                                                             *
+ * Copyright (c) 2026 Synopsys, Inc. and ANSYS, Inc.           *
+ * All rights reserved.                                        *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of Ansys, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the Ansys, Inc. online documentation or the Ansys, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * Ansys, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * Ansys, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the Ansys, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the Ansys, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ 2026 R1 
+     
+ Point Releases and Patches installed:   
+     
+ Ansys, Inc. License Manager 2026 R1 
+ Discovery (full install) 2026 R1
+ Core WB Files 2026 R1   
+ optiSLang Core UI 2026 R1   
+ CFX (includes CFD-Post) 2026 R1 
+ Chemkin 2026 R1 
+ EnSight 2026 R1 
+ FENSAP-ICE 2026 R1  
+ Fluent (includes CFD-Post) 2026 R1  
+ Polyflow (includes CFD-Post) 2026 R1
+ Forte (includes EnSight) 2026 R1
+ Rocky 2026 R1   
+ TurboGrid 2026 R1   
+ ACIS Geometry Interface 2026 R1 
+ AutoCAD Geometry Interface 2026 R1  
+ Catia, Version 4 Geometry Interface 2026 R1 
+ Catia, Version 5 Geometry Interface 2026 R1 
+ Catia, Version 6 Geometry Interface 2026 R1 
+ Creo Elements/Direct Modeling Geometry Interface 2026 R1
+ Creo Parametric Geometry Interface 2026 R1  
+ Inventor Geometry Interface 2026 R1 
+ JTOpen Geometry Interface 2026 R1   
+ NX Geometry Interface 2026 R1   
+ Parasolid Geometry Interface  2026 R1   
+ Solid Edge Geometry Interface 2026 R1   
+ SOLIDWORKS Geometry Interface 2026 R1   
+ Speos 2026 R1   
+ SpaceClaim 2026 R1  
+ Speos RPC 2026 R1   
+ Zemax OpticStudio 2026 R1   
+ Dynamic Reporting 2026 R1   
+ Aqwa 2026 R1
+ Autodyn 2026 R1 
+ Material Calibration App 2026 R1
+ Mechanical Products 2026 R1 
+ Motion 2026 R1  
+ Academic Student 2026 R1
+
+
+          *****  MAPDL COMMAND LINE ARGUMENTS  *****
+  INITIAL JOBNAME              = stage07_geometry                                                                                                                                                                                                                                        
+  BATCH MODE REQUESTED (-b)    = LIST
+  INPUT FILE COPY MODE (-c)    = COPY
+       1 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
+    TOTAL OF     1 CORES REQUESTED
+  INPUT FILE NAME              = C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\simulation\geometry\stage07_plate_gap\geometry.dat
+  OUTPUT FILE NAME             = C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\simulation\geometry\stage07_plate_gap\mapdl_geometry.out
+
+ RELEASE= 2026 R1              BUILD= 26.1      UP20260202   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=stage07_geometry  12:12:46  SEP 13, 2026  Elapsed Time=       0.172
+
+     1  /BATCH  
+     2  /PREP7  
+     3  ! Stage 7 geometry only. Units: mm. No mesh, material, load, or solve.  
+     4  LSP=60.000000000
+     5  WSP=10.000000000
+     6  HSP=4.000000000 
+     7  LPL=70.000000000
+     8  WPL=20.000000000
+     9  TPL=5.000000000 
+    10  GAP=0.040000000 
+    11  XM=(LPL-LSP)/2  
+    12  YM=(WPL-WSP)/2  
+    13  BLOCK,0,LPL,0,WPL,-TPL-GAP/2,-GAP/2 
+    14  VSEL,S,VOLU,,1  
+    15  CM,LOWER_PLATE,VOLU 
+    16  ALLSEL,ALL  
+    17  BLOCK,XM,XM+LSP,YM,YM+WSP,0,HSP 
+    18  VSEL,S,VOLU,,2  
+    19  CM,SPECIMEN,VOLU
+    20  ALLSEL,ALL  
+    21  BLOCK,0,LPL,0,WPL,HSP+GAP/2,HSP+GAP/2+TPL   
+    22  VSEL,S,VOLU,,3  
+    23  CM,UPPER_PLATE,VOLU 
+    24  ALLSEL,ALL  
+    25  CM,FIXTURE_PLATES,VOLU  
+    26  *GET,NVOL,VOLU,0,COUNT  
+    27  /COM,STAGE7_EXPECTED_VOLUMES=3  
+    28  /COM,STAGE7_TOTAL_GAP_MM=0.040000000
+    29  /COM,STAGE7_GAMMA=0.010000000   
+    30  VSUM
+    31  SAVE,stage07_plate_gap,db   
+    32  /EXIT,NOSAVE
+
+ RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v261\Ansys\apdl\start.ans
+
+ /INPUT FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v261\Ansys\apdl\start.ans  LINE=       0
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   12:12:47  SEP 13, 2026 Elapsed Time=      8.547
+
+                                                                               
+
+
+
+          ***** MAPDL ANALYSIS DEFINITION (PREP7) *****
+
+ PARAMETER LSP =     60.00000000    
+
+ PARAMETER WSP =     10.00000000    
+
+ PARAMETER HSP =     4.000000000    
+
+ PARAMETER LPL =     70.00000000    
+
+ PARAMETER WPL =     20.00000000    
+
+ PARAMETER TPL =     5.000000000    
+
+ PARAMETER GAP =    0.4000000000E-01
+
+ PARAMETER XM =     5.000000000    
+
+ PARAMETER YM =     5.000000000    
+
+ CREATE A HEXAHEDRAL VOLUME WITH
+ X-DISTANCES FROM      0.000000000     TO      70.00000000    
+ Y-DISTANCES FROM      0.000000000     TO      20.00000000    
+ Z-DISTANCES FROM     -5.020000000     TO    -0.2000000000E-01
+
+      OUTPUT VOLUME =     1
+
+ SELECT       FOR ITEM=VOLU COMPONENT=    
+  IN RANGE         1 TO          1 STEP          1
+
+        1  VOLUMES (OF        1  DEFINED) SELECTED BY  VSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = LOWER_PLATE  ENTITY=VOLU
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ CREATE A HEXAHEDRAL VOLUME WITH
+ X-DISTANCES FROM      5.000000000     TO      65.00000000    
+ Y-DISTANCES FROM      5.000000000     TO      15.00000000    
+ Z-DISTANCES FROM      0.000000000     TO      4.000000000    
+
+      OUTPUT VOLUME =     2
+
+ SELECT       FOR ITEM=VOLU COMPONENT=    
+  IN RANGE         2 TO          2 STEP          1
+
+        1  VOLUMES (OF        2  DEFINED) SELECTED BY  VSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SPECIMEN  ENTITY=VOLU
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ CREATE A HEXAHEDRAL VOLUME WITH
+ X-DISTANCES FROM      0.000000000     TO      70.00000000    
+ Y-DISTANCES FROM      0.000000000     TO      20.00000000    
+ Z-DISTANCES FROM      4.020000000     TO      9.020000000    
+
+      OUTPUT VOLUME =     3
+
+ SELECT       FOR ITEM=VOLU COMPONENT=    
+  IN RANGE         3 TO          3 STEP          1
+
+        1  VOLUMES (OF        3  DEFINED) SELECTED BY  VSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = UPPER_PLATE  ENTITY=VOLU
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ DEFINITION OF COMPONENT = FIXTURE_PLATES  ENTITY=VOLU
+
+ *GET  NVOL      FROM  VOLU  ITEM=COUN       VALUE=  3.00000000    
+ STAGE7_EXPECTED_VOLUMES=3
+ STAGE7_TOTAL_GAP_MM=0.040000000
+ STAGE7_GAMMA=0.010000000
+
+ PRINT MASS PROPERTIES ASSOCIATED WITH THE CURRENTLY SELECTED VOLUMES
+
+  TOTAL NUMBER OF VOLUMES SELECTED =     3  (OUT OF      3 DEFINED)
+
+***********************************************
+
+  SUMMATION OF ALL SELECTED VOLUMES
+      TOTAL VOLUME =   16400.    
+      TOTAL MASS   =   16400.    
+      CENTER OF MASS:  XC=  35.000      YC=  10.000      ZC=  2.0000    
+
+                     *** MOMENTS OF INERTIA ***
+
+         ABOUT ORIGIN     ABOUT CENTER OF MASS    PRINCIPAL
+     IXX =   0.25107E+07       0.80506E+06       0.80506E+06
+     IYY =   0.26911E+08       0.67551E+07       0.67551E+07
+     IZZ =   0.28653E+08       0.69233E+07       0.69233E+07
+     IXY =  -0.57400E+07      -0.48698E-19
+     IYZ =  -0.32800E+06      -0.63286E-07
+     IZX =  -0.11480E+07      -0.22009E-06
+
+     PRINCIPAL ORIENTATION VECTORS (X,Y,Z):
+       1.000  0.000  0.000    0.000  1.000  0.000    0.000  0.000  1.000
+       (THXY=    0.000  THYZ=    0.000  THZX=    0.000)
+
+ ALL CURRENT MAPDL DATA WRITTEN TO FILE NAME= stage07_plate_gap.db
+  FOR POSSIBLE RESUME FROM THIS POINT
+
+
+ ***** ROUTINE COMPLETED *****  ELAPSED TIME =         8.651
+
+
+
+ EXIT MAPDL WITHOUT SAVING DATABASE
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          0
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+Release: 2026 R1            Build: 26.1       Update: UP20260202   Platform: WINDOWS x64 
+Date Run: 09/13/2026   Time: 12:12     Process ID: 27624
+Operating System: Windows 11  (Build: 26200)
+
+Processor Model: AMD Ryzen 7 7435HS
+
+Compiler: Intel(R) Fortran Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) C/C++ Compiler Classic Version 2021.9  (Build: 20230302)
+          AOCL-BLAS 5.1.1 Build 20251008
+          Intel(R) oneAPI Math Kernel Library Version 2024.2.3-Product Build 20250403
+
+Number of machines requested            :    1
+Total number of cores available         :   16
+Number of physical cores available      :    8
+Number of processes requested           :    1
+Number of threads per process requested :    1
+Total number of cores requested         :    1 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: stage07_geometry
+Input File: C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\simulation\geometry\stage07_plate_gap\geometry.dat
+Working Directory: C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\simulation\geometry\stage07_plate_gap
+
+Total CPU time for main thread                    :        0.8 seconds
+Total CPU time summed for all threads             :        0.5 seconds
+
+Elapsed time spent obtaining a license            :        2.9 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        0.1 seconds
+Elapsed time spent solution - preprocessing       :        0.0 seconds
+Elapsed time spent computing solution             :        0.0 seconds
+   Elapsed time in element formation & assembly   :        0.0 seconds
+   Elapsed time in equation solver                :        0.0 seconds
+   Elapsed time in element result calculations    :        0.0 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+
+Sum of disk space used on all processes           :        0.2 MB
+
+Sum of memory used on all processes               :       10.0 MB
+Sum of memory allocated on all processes          :     2304.0 MB
+Physical memory available                         :         16 GB
+Total amount of I/O written to disk               :        0.0 GB
+Total amount of I/O read from disk                :        0.0 GB
+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2026 R1         Build 26.1         UP20260202    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)     1024 MB     Scratch Memory Requested   1024 MB |
+ |  Max Database Used(Master)      1 MB     Max Scratch Used(Master)      9 MB |
+ |  Max Database Used(Workers)     0 MB     Max Scratch Used(Workers)     0 MB |
+ |  Sum Database Used(All)         1 MB     Sum Scratch Used(All)         9 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          0.469       Time  =  12:12:57          |
+ |        Elapsed Time (sec) =         18.920       Date  =  09/13/2026        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*

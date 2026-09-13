@@ -1,0 +1,84 @@
+{
+  "stage": 7,
+  "date": "2026-09-13",
+  "passed": true,
+  "checks": [
+    {
+      "check": "Trofimov geometry source and DOI recorded",
+      "status": "pass"
+    },
+    {
+      "check": "Specimen dimensions are 60 by 10 by 4 mm",
+      "status": "pass"
+    },
+    {
+      "check": "Fixture margin arithmetic",
+      "status": "pass"
+    },
+    {
+      "check": "Derived geometry calculations exact",
+      "status": "pass"
+    },
+    {
+      "check": "Five normalized gap levels",
+      "status": "pass"
+    },
+    {
+      "check": "Gap equations reproduced",
+      "status": "pass"
+    },
+    {
+      "check": "All five prompt candidate gaps explicitly evaluated",
+      "status": "pass"
+    },
+    {
+      "check": "Candidate gap normalization is exact",
+      "status": "pass"
+    },
+    {
+      "check": "Candidate dispositions retain coverage without unsupported exclusion",
+      "status": "pass"
+    },
+    {
+      "check": "Geometry MAPDL execution succeeded",
+      "status": "pass"
+    },
+    {
+      "check": "MAPDL build and volume count verified",
+      "status": "pass"
+    },
+    {
+      "check": "MAPDL output has no warning or error",
+      "status": "pass"
+    },
+    {
+      "check": "APDL deck contains no field analysis or mesh command",
+      "status": "pass"
+    },
+    {
+      "check": "Saved database exists and is hashed",
+      "status": "pass"
+    },
+    {
+      "check": "All raw output hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Source/input/table hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Seven geometry unit tests pass",
+      "status": "pass"
+    }
+  ],
+  "count": 17,
+  "scope": "Geometry calculations and geometry-only MAPDL preprocessing; no mesh or field solution.",
+  "sha256": {
+    "definition": "a4e2eae16f311d617d78b2f1448df7032cef9763e4ab3933edc12d43da1a1a94",
+    "builder": "ee488f2c663d5ec39e92068e54e606148038bcbb49fc4284fd485435db525e36",
+    "mapdl_input": "088554e5ff7cfbbcc4ac6c9db098fddf88ef0c178247326434d0c12051406f04",
+    "mapdl_output": "4bc7e999d195b19953abd838408fbebedc6e248e4af973602bdc3f0a4b08e274",
+    "database": "ff203d87fb6f32c7da52b2665a3411815c694ad3d0fed97c957bbe0e9478fc08"
+  }
+}

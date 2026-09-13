@@ -1,0 +1,6 @@
+candidate_total_gap_mm,gamma_for_h0_4mm,disposition,basis
+0.000,0.00000,retained,"Coincident initial contact is the lower endpoint and tests the zero-clearance construction."
+0.025,0.00625,represented within normalized screen,"Mechanically interpretable and inside the selected 0–0.02 gamma interval; not added as a separate level because adjacent normalized levels 0.005 and 0.01 resolve the same near-contact region."
+0.050,0.01250,represented within normalized screen,"Mechanically interpretable and inside the selected 0–0.02 gamma interval; bracketed by normalized levels 0.01 and 0.02."
+0.100,0.02500,deferred,"Exceeds the primary 2% thickness screen and would reduce resolution near contact; no supported deformation scale yet justifies adding it."
+0.200,0.05000,deferred,"Equals 5% of specimen thickness and would allocate a primary level far from coincident contact without a supported deformation scale."

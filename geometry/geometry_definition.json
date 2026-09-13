@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "units": "mm",
+  "coordinate_system": {
+    "x": "specimen length and primary print-path direction",
+    "y": "specimen width",
+    "z": "build and thickness direction"
+  },
+  "specimen": {
+    "shape": "rectangular_plate",
+    "length_mm": 60.0,
+    "width_mm": 10.0,
+    "thickness_mm": 4.0,
+    "source": "Trofimov et al. 2022, Figure 4(a), DOI 10.1016/j.addma.2022.102693",
+    "adoption_status": "declared geometry design; source material and process are not transferred"
+  },
+  "fixture": {
+    "concept": "two opposed rectangular AISI 304 plates with externally maintained separation",
+    "plate_length_mm": 70.0,
+    "plate_width_mm": 20.0,
+    "plate_thickness_mm": 5.0,
+    "planar_margin_each_side_mm": 5.0,
+    "specimen_centered": true,
+    "preload": false,
+    "stop_model": "plate separation H0 is prescribed at the reference state; physical spacer geometry is deferred"
+  },
+  "clearance_design": {
+    "definition": "total initial free clearance g0, split equally above and below the centered specimen",
+    "dimensionless_symbol": "gamma = g0 / h0",
+    "levels_gamma": [0.0, 0.0025, 0.005, 0.01, 0.02],
+    "levels_total_gap_mm": [0.0, 0.01, 0.02, 0.04, 0.08],
+    "geometry_build_level_gamma": 0.01,
+    "status": "declared screening design; not a measured tolerance, optimum, or admitted production range"
+  }
+}
+

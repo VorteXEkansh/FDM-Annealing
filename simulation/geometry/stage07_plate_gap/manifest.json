@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-09-13T06:42:57.927192+00:00",
+  "execution": {
+    "executed": true,
+    "returncode": 0,
+    "command": [
+      "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+      "-b",
+      "-i",
+      "C:\\Users\\asus\\OneDrive\\Documents\\ChatGPT\\FDM ANNEALING\\simulation\\geometry\\stage07_plate_gap\\geometry.dat",
+      "-o",
+      "C:\\Users\\asus\\OneDrive\\Documents\\ChatGPT\\FDM ANNEALING\\simulation\\geometry\\stage07_plate_gap\\mapdl_geometry.out",
+      "-j",
+      "stage07_geometry",
+      "-np",
+      "1"
+    ]
+  },
+  "source_sha256": "a4e2eae16f311d617d78b2f1448df7032cef9763e4ab3933edc12d43da1a1a94",
+  "input_sha256": "088554e5ff7cfbbcc4ac6c9db098fddf88ef0c178247326434d0c12051406f04",
+  "gap_table_sha256": "e6fbd9e1268ac7522b5ce893af7cee05ec85e9d902b48400dc5724bf320ebe7b",
+  "derived_calculations": {
+    "specimen_volume_mm3": 2400.0,
+    "nominal_contact_area_each_face_mm2": 600.0,
+    "length_to_thickness": 15.0,
+    "width_to_thickness": 2.5,
+    "length_to_width": 6.0,
+    "fixture_plate_volume_each_mm3": 7000.0
+  },
+  "output_sha256": {
+    "mapdl_geometry.out": "4bc7e999d195b19953abd838408fbebedc6e248e4af973602bdc3f0a4b08e274",
+    "stage07_plate_gap.db": "ff203d87fb6f32c7da52b2665a3411815c694ad3d0fed97c957bbe0e9478fc08",
+    "stage07_geometry.err": "25fc11454b6208a14c2468edd396adc7a8a9f54e364c57dd85324d6fdb26e3da",
+    "stage07_geometry.log": "8ebcc9f1cf70af874f4c055963692618852be771d8fcf512700b7c9fde926b53"
+  }
+}

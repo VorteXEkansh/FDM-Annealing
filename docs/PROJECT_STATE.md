@@ -1,6 +1,6 @@
 # Authoritative project state
 
-Stage: **Prompt 6/20 — Ansys environment, architecture and automation**.
+Stage: **Prompt 7/20 — parametric specimen and fixture geometry**.
 Date: 2026-09-13 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
@@ -27,11 +27,11 @@ Base source: `data/source/DTU_Constrained_Annealing_Final_Submission.pdf`; immut
 
 Genuine ANSYS field runs: **none**. A zero-analysis MAPDL environment/license probe succeeded; it is not a research simulation or result.
 ANSYS environment: **Ansys Student 2026 R1; MAPDL release 2026 R1, build 26.1, update 20260202; Student Mechanical product checkout confirmed**. Workbench and Mechanical 26.1 plus the named thermal/structural templates are installed, but their GUI entitlements have not been separately exercised. PyMechanical is not installed.
-Geometry/CAD/mesh: **not selected or generated**.
+Geometry/CAD: **60 mm × 10 mm × 4 mm rectangular specimen and two 70 mm × 20 mm × 5 mm plates selected; a geometry-only MAPDL build created and saved three volumes**. Mesh: **not generated**.
 Reference PLA formulation: **Prusament PLA selected for constitutive development; production ANSYS material card not admitted**.
 Property tables: **created and source-audited; compatible k(T), c_p(T), bulk irreversible strain and complete orthotropy remain unavailable**.
 Constitutive implementation: **small-strain isotropic 23-branch Prusament reference implemented; 38 analytical/synthetic unit tests pass; no ANSYS adapter or physical calibration/validation**.
-Fixture material: **AISI 304 stainless steel selected as candidate plate material with a 20–200 °C tabulated property set**. Fixture dimensions, numerical gap levels, friction and thermal contact conductance remain unselected. Thermal-strain use of the fixture alpha table is blocked until its tangent/mean convention and reference temperature are established.
+Fixture material: **AISI 304 stainless steel selected as candidate plate material with a 20–200 °C tabulated property set**. Plate dimensions and normalized reference-gap levels are fixed as geometry design choices. Friction, thermal contact conductance and physical spacer geometry remain unselected. Thermal-strain use of the fixture alpha table is blocked until its tangent/mean convention and reference temperature are established.
 Initial residual stress, recovery strain and crystallization kinetics: **unavailable**.
 Boundary histories, reference temperature, release rule and environmental heat transfer: **not fixed**.
 Mesh/time-step/contact convergence: **not performed**.
@@ -73,7 +73,7 @@ Candidate title: **Free and gap-constrained annealing of FFF-printed PLA: a ther
 
 `docs/research_scope.md` records one primary question, five secondary questions (SQ1–SQ5), five objectives and four testable numerical propositions (H1–H4). The manuscript incorporates their full text, an explicit intended contribution and excluded claims. The structured abstract contains context/question, planned approach, results status and intended contribution, without invented numerical findings.
 
-The core study uses one selected formulation, fixed print architecture and representative three-dimensional plate-like coupon geometry. The formulation was selected in Stage 4; print architecture and geometry dimensions remain evidence-dependent implementation choices. Full deposition-process simulation, printing-parameter optimization and comparisons across PLA grades are outside the primary study.
+The core study uses one selected formulation, fixed print architecture and a three-dimensional 60 mm × 10 mm × 4 mm plate coupon. The formulation was selected in Stage 4 and the geometry in Stage 7; print architecture remains an evidence-dependent implementation choice. Full deposition-process simulation, printing-parameter optimization and comparisons across PLA grades are outside the primary study.
 
 The main comparison applies the same external thermal schedule; matched part-temperature diagnostic cases may isolate mechanical restraint. Final responses are evaluated at a common reference temperature with an explicitly declared release/observation time. In-fixture dimensions, released warpage and conditional residual stress remain separate. Hypotheses concern a resolved clearance effect, release effect, interaction and geometric/stress trade-off; none assumes a favorable or monotonic result. Numerical resolution/extraction criteria must be specified before assessing them.
 
@@ -107,8 +107,18 @@ Irreversible annealing strain, crystallization, production assembly and fixture 
 
 Three ignored temporary comparator evidence files were copied byte-for-byte into `literature/evidence/stage_05/` and the material source paths were repaired. Raw evidence and hashed database/report bytes are protected against Git line-ending conversion. The SUNLU paper's author metadata was corrected to Bertocco et al. without altering reported property values. Stage 4 records are retained as historical snapshots; the current database build manifest is Stage 5.
 
+## Geometry state — Stage 7
+
+`docs/geometry_decision.md` and `geometry/geometry_definition.json` are authoritative for geometry. The specimen dimensions reproduce the regular plate in Trofimov et al. (2022), Figure 4(a), DOI 10.1016/j.addma.2022.102693. Only the geometry is reused: the source's Raise3D Premium PLA, deposition history and response data are not transferred to Prusament PLA. The selected plate has a 2400 mm³ volume, 600 mm² nominal area per opposed face, and aspect ratios L/h = 15, W/h = 2.5 and L/W = 6.
+
+GAP uses two 70 mm × 20 mm × 5 mm AISI 304 plates, each with 5 mm plan margin around the centered specimen. FREE omits those volumes. The total reference clearance is g₀ = H₀ − h₀ and γ = g₀/h₀. Declared screening levels γ = 0, 0.0025, 0.005, 0.01 and 0.02 give g₀ = 0, 0.01, 0.02, 0.04 and 0.08 mm. They are geometric design levels, not measured tolerances or an optimum.
+
+The Prompt 7 absolute candidates are explicitly evaluated in `geometry/candidate_clearance_audit.csv`. The 0 mm endpoint is retained. The 0.025 mm and 0.050 mm candidates are represented inside the normalized near-contact screen rather than added as redundant levels. The 0.100 mm and 0.200 mm candidates are deferred, not ruled out, because no supported free-deformation scale yet justifies reducing near-contact resolution to include 2.5% and 5% thickness gaps.
+
+`scripts/build_geometry.py` validates the definition, calculates the gap table and writes a parameterized MAPDL deck. One geometry-only invocation at γ = 0.01 exited 0, reported three volumes and saved `stage07_plate_gap.db`. The immutable input/output hashes are in `simulation/geometry/stage07_plate_gap/manifest.json`. There is no mesh, element type, material assignment, boundary condition, load, analysis type or solve command. Spacer geometry is deferred because its thermal expansion convention and attachment are unresolved.
+
 ## Completion records and stage boundary
 
-Stage 5 quality and integrity records are `docs/stage_05_quality.md`, `docs/integrity_report.json`, `docs/stage_05_literature_integrity.json`, `docs/stage_05_material_integrity.json`, `docs/stage_05_constitutive_tests.json` and `docs/stage_05_manifest.json`. The stage-specific delivery record identifies the pushed content commit; its subsequent record commit is separately checked remotely.
+Stage 7 quality and integrity records are `docs/stage_07_quality.md`, `docs/integrity_report.json`, `docs/stage_07_geometry_checks.json`, `docs/stage_07_literature_integrity.json`, `docs/stage_07_material_integrity.json`, `docs/stage_07_pdf_review.json` and `docs/stage_07_manifest.json`.
 
-Prompt 5 establishes and tests the supported material-point formulation only. The complete production thermo-mechanical annealing model cannot yet be finalized from the admitted evidence. No solver execution, ANSYS material-point verification, mesh/time-step/contact convergence, physical validation, sensitivity, propagated uncertainty or optimization is complete. Do not begin Prompt 6 without the user's next numbered instruction.
+Prompt 7 establishes the parametric specimen/fixture geometry and preprocessing evidence only. The complete production thermo-mechanical annealing model remains blocked by material and boundary evidence. No mesh, field solution, mesh/time-step/contact convergence, physical validation, sensitivity, propagated uncertainty or optimization is complete. Do not begin Prompt 8 without the user's next numbered instruction.

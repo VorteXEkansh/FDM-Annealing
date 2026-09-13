@@ -1,5 +1,5 @@
 {
-  "stage": 6,
+  "stage": 7,
   "date": "2026-09-13",
   "checks": [
     {
@@ -247,13 +247,22 @@
       "status": "pass"
     },
     {
+      "check": "Geometry preprocessing checks passed",
+      "status": "pass"
+    },
+    {
+      "check": "Geometry evidence remains construction-only",
+      "status": "pass"
+    },
+    {
       "check": "All text lies inside page safety bounds",
       "status": "pass"
     }
   ],
-  "count": 62,
-  "pdf_sha256": "7058ed1b0b6f71d30547e4b7b34fec017c281fe2d9fee988b9faf10747774e68",
-  "manuscript_sha256": "3d63560d54ed84ec216033a33066ae5a078196a1eaec8222c43c6203a43582e2",
+  "count": 64,
+  "pdf_sha256": "7c22e4f03072298ca96ce80cecf6b695020ab1206e4f16507b8c20b14370520f",
+  "manuscript_sha256": "efa4b81058f99b0e08d7858bf13591384b9015e9e86b8752cdbc112006147ab7",
   "material_manifest_sha256": "d9eeab055d206d082674004be8f85f1f00168d2aa34288526ac1549c91f5652b",
-  "scope": "Document, source, property, and installed-environment integrity. One zero-analysis MAPDL probe; no field solution or physical validation."
+  "geometry_manifest_sha256": "d76d855563cb38fa34c51995092edfbb35ead325bc4eb2c3a8bd18fefc0d8369",
+  "scope": "Document, source, property, installed-environment and geometry-preprocessing integrity. One zero-analysis MAPDL probe and one geometry-only MAPDL build; no mesh, field solution or physical validation."
 }

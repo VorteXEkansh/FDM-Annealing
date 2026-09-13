@@ -1,4 +1,4 @@
-"""Stage 6 document, provenance and environment checks; not field verification."""
+"""Stage 7 document, provenance, environment and geometry checks; not field verification."""
 from pathlib import Path
 import csv, hashlib, json, re, subprocess, sys
 from pypdf import PdfReader
@@ -82,23 +82,26 @@ def main():
     subprocess.run([sys.executable,str(ROOT/'scripts/build_manuscript.py')],check=True,cwd=ROOT,capture_output=True)
     check('PDF reproducible byte-for-byte',digest(PDF)==before)
     reader=PdfReader(PDF)
-    check('Complete manuscript page count matches reviewed stage record',len(reader.pages)==json.loads((ROOT/'docs/stage_06_pdf_review.json').read_text())['page_count'])
-    review=json.loads((ROOT/'docs/stage_06_pdf_review.json').read_text())
+    check('Complete manuscript page count matches reviewed stage record',len(reader.pages)==json.loads((ROOT/'docs/stage_07_pdf_review.json').read_text())['page_count'])
+    review=json.loads((ROOT/'docs/stage_07_pdf_review.json').read_text())
     check('All pages visually reviewed for the current PDF hash',review['visual_status']=='pass' and review['reviewed_pdf_sha256']==digest(PDF) and review['reviewed_pages']==list(range(1,len(reader.pages)+1)))
     text='\n'.join(p.extract_text() for p in reader.pages)
     for pattern in [r'F3498',r'sqrt\s*\(',r'epsilon_ann',r'Delta L',r'95 C',r'3 x 3',r'130 physical specimens',r'\bTODO\b',r'\bTBD\b',r'\ufffd']:
         check('Forbidden manuscript pattern absent: '+pattern,not re.search(pattern,text))
-    check('Evidence absence explicitly reported','No ANSYS field results' in text and 'zero-analysis environment probe' in text)
+    check('Evidence absence explicitly reported','No ANSYS field results' in text and 'zero-analysis batch input' in text)
     check('Thermal choices typeset',all(v in text for v in ['80 °C','95 °C','110 °C','30 min','60 min','90 min']))
     check('Mathematical symbols preserved',all(c in text for c in 'Δεσρ∂∇√∑∈⊥'))
     check('All pages contain substantive text or a continued coefficient table',all(len(p.extract_text())>500 for p in reader.pages))
+    geometry=json.loads((ROOT/'docs/stage_07_geometry_checks.json').read_text())
+    check('Geometry preprocessing checks passed',geometry['passed'] and geometry['count']==17 and all(r['status']=='pass' for r in geometry['checks']))
+    check('Geometry evidence remains construction-only',all(t in source for t in ['geometry-only Mechanical APDL build','contains no element type, mesh, material, load, analysis type or solve command','This is a sampling decision, not a prediction that contact cannot occur']))
     with pdfplumber.open(PDF) as pdf:
         bad=[]
         for n,p in enumerate(pdf.pages,1):
             for c in p.chars:
                 if c['text'].strip() and (c['x0']<48 or c['x1']>p.width-46 or c['top']<30 or c['bottom']>p.height-18): bad.append(n)
         check('All text lies inside page safety bounds',not bad)
-    report={'stage':6,'date':'2026-09-13','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'material_manifest_sha256':digest(ROOT/'material/build_manifest.json'),'scope':'Document, source, property, and installed-environment integrity. One zero-analysis MAPDL probe; no field solution or physical validation.'}
+    report={'stage':7,'date':'2026-09-13','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'material_manifest_sha256':digest(ROOT/'material/build_manifest.json'),'geometry_manifest_sha256':digest(ROOT/'simulation/geometry/stage07_plate_gap/manifest.json'),'scope':'Document, source, property, installed-environment and geometry-preprocessing integrity. One zero-analysis MAPDL probe and one geometry-only MAPDL build; no mesh, field solution or physical validation.'}
     (ROOT/'docs/integrity_report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     print(f'{len(checks)} integrity checks passed; PDF SHA-256 {digest(PDF)}')
 

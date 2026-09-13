@@ -5,15 +5,15 @@ Aadit Jain · Dheeraj Yadav · Ekansh Malhotra
 
 Production and Industrial Engineering, Delhi Technological University
 
-Computational manuscript draft · 12 September 2026
+Computational manuscript draft · 13 September 2026
 
 ### Abstract — structured research draft
 
 <b>Context and question.</b> Annealing of fused-filament-fabricated (FFF) polylactic acid (PLA) can change dimensions while geometric restraint introduces contact loading. This computational study asks how temperature, holding time and quantified initial fixture clearance influence thermal exposure and the dimensional change, warpage and residual stress assessed after cooling and release for a specified PLA grade, print architecture and geometry.
 
-<b>Planned approach.</b> Genuine ANSYS analysis will compare mechanically free annealing with opposed-face gap restraint over an evidence-supported sub-melting domain. Candidate levels are 80&nbsp;°C, 95&nbsp;°C and 110&nbsp;°C, with holds of 30 min, 60 min and 90 min; their admission depends on the selected material evidence. Temperature-dependent, history-dependent behavior and contact will be represented only to the extent supported by data. Thermal histories, signed dimensions and released warpage will be distinguished from contact pressure and conditional stress predictions. Numerical verification, independent literature-based validation and uncertainty assessment will precede multi-objective interpretation.
+<b>Planned approach.</b> Genuine ANSYS analysis will compare mechanically free annealing with opposed-face gap restraint for a 60 mm × 10 mm × 4 mm rectangular plate over an evidence-supported sub-melting domain. Candidate levels are 80&nbsp;°C, 95&nbsp;°C and 110&nbsp;°C, with holds of 30 min, 60 min and 90 min; their admission depends on the selected material evidence. Temperature-dependent, history-dependent behavior and contact will be represented only to the extent supported by data. Thermal histories, signed dimensions and released warpage will be distinguished from contact pressure and conditional stress predictions. Numerical verification, independent literature-based validation and uncertainty assessment will precede multi-objective interpretation.
 
-<b>Results status.</b> No ANSYS field results, complete production PLA law, convergence evidence, validation findings or optimum exist at this stage. Ansys Student 2026 R1 and MAPDL build 26.1 update 20260202 are installed; a zero-analysis MAPDL license/environment probe exited successfully. The supported Prusament viscoelastic core is implemented as a material-point reference with 38 passing numerical unit tests. Compatible thermal functions, a bulk irreversible-strain law and the fixture expansion convention remain unresolved. These checks establish software availability and constitutive algebra only; they do not validate annealing predictions.
+<b>Results status.</b> No ANSYS field results, complete production PLA law, convergence evidence, validation findings or optimum exist at this stage. Ansys Student 2026 R1 and MAPDL build 26.1 update 20260202 are installed. A geometry-only MAPDL build created the three intended solid volumes for a representative nonzero clearance and exited successfully without meshing or solving. The supported Prusament viscoelastic core is implemented as a material-point reference with 38 passing numerical unit tests. Compatible thermal functions, a bulk irreversible-strain law and the fixture expansion convention remain unresolved. These checks establish software availability, geometry construction and constitutive algebra only; they do not validate annealing predictions.
 
 <b>Intended contribution.</b> The study will assess the clearance–distortion–stress trade-off and distinguish temporary geometric suppression from released stability. Prior supported annealing and numerical optimization preclude a broad first-of-kind claim. No strength improvement or industrial treatment recommendation is asserted.
 
@@ -25,7 +25,6 @@ Annealing studies by Butt and Bhaskar [1] and Stojković et al. [2] motivate ass
 
 Dimensional suppression inside a fixture is insufficient evidence of stable final geometry. The research therefore evaluates cooled, released response and restricts claims to observables supported by independent evidence. New physical testing and strength enhancement inferred from thermal stress are outside scope.
 
-<!-- PAGE -->
 ### 1.1. Evidence base and scope of the review
 
 The literature investigation was updated through 12 September 2026 using publisher records, author repositories, Europe PMC full text and DOI registration metadata. The evidence matrix records 34 journal papers, their bibliographic verification, accessible methods, missing fields and intended use. This is a critical, targeted investigation, not a claim of exhaustive systematic-review coverage. DOI verification establishes bibliographic identity; it does not establish methodological quality, transferable properties or independent validation.
@@ -163,38 +162,56 @@ The study will not establish fatigue life, long-term aging, service creep, moist
 
 Multi-objective comparisons are restricted to admissible, numerically verified conditions with explicit response definitions. A low-distortion mild treatment is not automatically useful annealing: any recommendation requires a separately supported processing-benefit or application criterion. If that criterion or independent validation remains unavailable, the paper will report conditional trade-offs and the limitation, not an industrial processing recommendation.
 
-The scope is finalized as a computational research commitment. The Prusament reference law is implemented and unit-tested. Ansys Student 2026 R1 and a Mechanical APDL Student checkout are now verified on the host, while GUI-system entitlements, numerical parameters, missing material closures and validation datasets remain open. No ANSYS field result or physical validation is supplied by this stage.
+The scope is finalized as a computational research commitment. The Prusament reference law is implemented and unit-tested. Ansys Student 2026 R1, a Mechanical APDL Student checkout and the parameterized three-volume geometry build are verified on the host, while GUI-system entitlements, discretization, missing material closures and validation datasets remain open. No ANSYS field result or physical validation is supplied by this stage.
 
 <!-- PAGE -->
-### 3. Computational domain and controlled constraint
+### 3. Parametric computational geometry and controlled constraint
 
-The GAP domain comprises a Prusament PLA body and two opposed fixture surfaces separated by stops; FREE contains the same body without fixture contact. A full three-dimensional body is preferred unless a reduced model can retain the deformation modes of interest. The part dimensions, surface landmarks, fixture dimensions and build/raster axes remain to be selected against available validation evidence. No CAD model or mesh is represented as completed.
+The selected specimen is a solid rectangular plate measuring 60 mm × 10 mm × 4 mm in x, y and z. It reproduces the regular-plate dimensions of Trofimov et al. [7, Fig. 4(a)]. That source selected the regular plate for reliable thermal observation and used a separate bridge-like structure for distortion validation. The present study transfers only the dimensions. It does not transfer Raise3D Premium PLA properties, print-induced stress, thermal data or validation outcomes to Prusament PLA.
 
-Let x and y denote reference in-plane material axes and z the thickness direction. Define h<sub>0</sub> as the initial part thickness and H<sub>0</sub> as the separation between the effective opposing contact surfaces at the common reference temperature T<sub>ref</sub>. Release films, if represented, must be included in those effective surfaces or modeled as separate layers without double-counting their thickness. The total initial clearance and its dimensionless form are
+The 60 mm span gives a length-to-thickness ratio of 15 while the width-to-thickness ratio is 2.5. The two nominal fixture-facing surfaces are each 600 mm<super>2</super>. These are geometry calculations. The plate retains three signed dimensions, supports plane-fit released-warpage extraction and avoids the stress concentrators of a tensile coupon. The source bridge is reserved as a possible separate validation geometry because its supports and deck introduce additional boundaries.
+
+GAP contains the specimen and two 70 mm × 20 mm × 5 mm AISI 304 plates. The 5 mm plan margin on every specimen side prevents the fixture edge from coinciding with the nominal contact boundary. Plate dimensions are declared computational design choices. The plates will be deformable when the field model is admitted; they are not ideal rigid walls. FREE contains the same specimen without fixture volumes or contact.
+
+Let x be the specimen length and primary print-path direction, y the width and z the build/thickness direction. Define h<sub>0</sub> as the 4 mm initial thickness and H<sub>0</sub> as the separation between the effective opposing plate faces at T<sub>ref</sub>. The specimen is centered, the total gap is split equally between the two faces and no preload is applied. The total initial clearance and its dimensionless form are
 
 EQ: g<sub>0</sub> = H<sub>0</sub> − h<sub>0</sub>, &nbsp;&nbsp; γ = g<sub>0</sub>/h<sub>0</sub>. &nbsp;&nbsp; (1)
 
-The primary GAP condition is initially centered, with half the total clearance assigned to each face and gravity omitted. A gravity-seated or supported reproduction of a published protocol is a separate validation configuration. Figure 1 illustrates the primary geometric definition; it does not impose a symmetry boundary condition.
+The five declared screening levels are γ ∈ {0, 0.0025, 0.005, 0.01, 0.02}, corresponding to g<sub>0</sub> ∈ {0, 0.01, 0.02, 0.04, 0.08} mm. Thus H<sub>0</sub> ranges from 4.00 mm to 4.08 mm. These levels are design choices, not measured fixture tolerances, material properties or an admitted optimum. They span coincident contact to 2% of thickness and must be revised if contact activation is unresolved relative to the later mesh, numerical tolerances or supported irreversible-strain range.
+
+The proposed absolute gaps 0.000 mm, 0.025 mm, 0.050 mm, 0.100 mm and 0.200 mm correspond to γ = 0, 0.00625, 0.0125, 0.025 and 0.05 for this specimen. Zero gap is retained. The 0.025 mm and 0.050 mm candidates are mechanically interpretable and lie within the normalized screen, where neighboring dimensionless levels provide more systematic near-contact resolution. The 0.100 mm and 0.200 mm candidates are deferred because they exceed the primary 2% thickness screen and no supported free-deformation scale yet justifies spending primary cases at those clearances. This is a sampling decision, not a prediction that contact cannot occur.
+
+The primary GAP condition is initially centered and gravity is omitted. A gravity-seated or supported reproduction of a published protocol is a separate validation configuration. Figure 1 gives top and side views of the geometry; it does not impose a symmetry boundary condition.
 
 FIGURE: gap
 
-CAPTION: Figure 1. Initial clearance definition for opposed fixture surfaces. Schematic, not to scale; no mesh, simulated deformation or solver result is shown. The illustration assumes symmetric placement only.
+CAPTION: Figure 1. Dimensioned specimen and opposed-plate fixture geometry at the reference state. The total clearance g<sub>0</sub> is divided equally above and below the centered 60 mm × 10 mm × 4 mm specimen. Schematic, not to scale; no mesh, deformation or field result is shown.
 
-The base proposal's single hot allowance is replaced by a parameterized reference gap. Thermal expansion of the plates and stops, plate compliance and part deformation determine subsequent local separation. No numerical clearance levels, friction coefficients, contact conductance or preload are assigned here. Bonding the specimen faces or prescribing zero displacement over them would eliminate the intended gap-controlled mechanism.
+TABLE: Geometry definition and status
+Quantity | Selected value | Evidence status
+Specimen | 60 mm × 10 mm × 4 mm | Geometry from Trofimov et al. [7, Fig. 4(a)]; source material data not transferred
+Fixture plates | 70 mm × 20 mm × 5 mm each | Declared AISI 304 design; deformation retained in future field model
+Nominal face area | 600 mm<super>2</super> per specimen face | Reproducible calculation, not actual contact area
+Clearance γ | 0; 0.0025; 0.005; 0.01; 0.02 | Screening design; no measured tolerance or optimum
+Total gap g<sub>0</sub> | 0; 0.01; 0.02; 0.04; 0.08 mm | Calculated from g<sub>0</sub> = γh<sub>0</sub>
+
+The base proposal's single hot allowance is replaced by this normalized reference-gap design. Thermal expansion of the plates and any physical spacers, plate compliance and specimen deformation determine subsequent local separation. Spacer geometry is deferred because its expansion convention and attachment are unresolved; H<sub>0</sub> is an explicit reference-state kinematic dimension. Friction and contact conductance remain unassigned. Bonding the specimen faces or prescribing zero displacement over them would eliminate the intended gap-controlled mechanism.
+
+A geometry-only Mechanical APDL build instantiated the three solid volumes for γ = 0.01, so g<sub>0</sub> = 0.04 mm. MAPDL reported three selected volumes and saved the database. This single clearance is a construction check, not a preferred treatment or simulation case. The input contains no element type, mesh, material, load, analysis type or solve command. The complete thermal–mechanical campaign remains blocked.
 
 FREE has traction-free mechanical surfaces and no fixture contact or gravity in the primary comparison. Numerical rigid-body stabilization must not suppress shrinkage, lateral slip or bowing. A supported part must be labeled as a separate configuration. Symmetry conditions require justification; they must not exclude asymmetric warpage by construction.
 
 <!-- PAGE -->
 ### 3.1. Thermal design and reporting states
 
-Table 2 retains the thermal levels requested from the base proposal. They are planned inputs, not measured histories, solver outputs or recommended processing settings. Their sub-melting applicability must be checked for the selected grade and source-supported model range.
+Table 3 retains the thermal levels requested from the base proposal. They are planned inputs, not measured histories, solver outputs or recommended processing settings. Their sub-melting applicability must be checked for the selected grade and source-supported model range.
 
 TABLE: Thermal design choices
 Factor | Candidate levels | Interpretation
 Annealing temperature | 80 °C; 95 °C; 110 °C | Inherited design choices; no established optimum
 Hold duration | 30 min; 60 min; 90 min | Inherited choices; attainment rule still required
 Constraint | FREE; GAP fixture | Explicit contact and support definitions required
-Initial clearance | Not selected | Continuous geometric parameter; bounds need justification
+Initial clearance | γ = 0–0.02; g<sub>0</sub> = 0–0.08 mm | Declared geometry-screening range; later admission required
 
 The three temperature and three duration levels define nine thermal combinations before clearance, verification or uncertainty cases are added. This is design arithmetic, not a count of completed simulations. The total run count is not yet fixed.
 
@@ -217,7 +234,7 @@ Relaxation | 23 source Maxwell branches [8] | Duration, strain and bulk transfer
 Temperature dependence | Piecewise Arrhenius/WLF clock [8] | No separate same-grade E(T) multiplier
 Irreversible annealing strain | Evidence-gap error | No identified signed bulk law or initial recovery state
 PLA heat transfer | No thermal-field calculation | Compatible k(T) and c<sub>p</sub>(T) missing
-Fixture behavior | AISI 304 interpolation and elastic response [38] | Expansion convention, contact and geometry open
+Fixture behavior | AISI 304 interpolation and elastic response [38] | Expansion convention and contact behavior open
 
 The future ANSYS transient heat balance, with no admitted internal heat source, is
 
@@ -376,7 +393,7 @@ The official 2026 R1 Student description states a structural limit of 128,000 no
 
 The project uses explicit JSON case records and a fail-closed Python runner. A production record must provide annealing temperature in °C, hold time in seconds, fixture gap in mm and a material identifier. Execution is rejected while any geometry, thermal-property, irreversible-strain, material-adapter, boundary-history or extraction gate remains false. This makes parameters reproducible without silently converting unresolved choices into model inputs. PyMechanical was not found in the system environment and is not a dependency of the current direct MAPDL batch path. DesignXplorer and optiSLang are present on disk but were not used; no design study, sensitivity index or optimization result was generated.
 
-Every run directory retains the exact command, case and APDL hashes, return code and hashes of generated logs. Failed cases are preserved. The result-registration script accepts only non-empty exported rows with case, time, quantity, value, unit, location and originating solver file. This provenance interface does not create results and the full simulation campaign remains blocked.
+Every run directory retains the exact command, case and APDL hashes, return code and hashes of generated logs. Failed cases are preserved. The Stage 7 preprocessing-only run additionally stores the MAPDL database, output and five-level gap table. The result-registration script accepts only non-empty exported rows with case, time, quantity, value, unit, location and originating solver file. This provenance interface does not create results and the full simulation campaign remains blocked.
 
 <!-- PAGE -->
 ### 5. Dimensional and mechanical response definitions
@@ -443,11 +460,11 @@ Candidates selected through a surrogate must be recomputed with the genuine solv
 <!-- PAGE -->
 ### 8. Evidence status, engineering relevance and limitations
 
-The current contribution includes a finalized computational scope, a formulation-audited property database and a tested material-point reference implementation. Prusament PLA is the reference constitutive formulation, and AISI 304 is the candidate fixture material. The evidence table below identifies what remains necessary before numerical findings can be reported. Missing evidence is represented by explicit blocked fields rather than zero values, example contours or synthetic data.
+The current contribution includes a finalized computational scope, a formulation-audited property database, a tested material-point reference implementation and a parameterized three-volume geometry. Prusament PLA is the reference constitutive formulation, and AISI 304 is the candidate fixture material. The evidence table below identifies what remains necessary before numerical findings can be reported. Missing evidence is represented by explicit blocked fields rather than zero values, example contours or synthetic data.
 
 TABLE: Evidence required for reportable findings
 Claim family | Current evidence | Admission requirement
-Temperature and deformation | No ANSYS field solve; one zero-analysis environment probe | Archived model, input sources, solver outputs and logs
+Temperature and deformation | No ANSYS field solve; environment probe and geometry-only preprocessing run | Archived model, input sources, solver outputs and logs
 PLA transient thermal response | No compatible Prusament k(T) or c<sub>p</sub>(T) | Compatible functions or a declared calibration/uncertainty strategy
 Bulk irreversible strain | Only thin-bilayer programmed pre-strain for Prusament | Identifiable signed three-dimensional law without double-counting
 Stress and contact pressure | No model or fields | Verified contact solution and declared extraction rules
@@ -464,11 +481,13 @@ Only 80 °C lies inside the direct 23–85 °C Prusament characterization interv
 
 ### 9. Conclusions
 
-The literature establishes prior supported annealing, irreversible strain analysis, thermo-viscoelastic finite elements and annealing-related optimization. Stage 5 fixes and implements the supported Prusament viscoelastic core and the AISI 304 interpolation/elastic relations, while preserving grade boundaries. The Prusament evidence provides ν, α, T<sub>g</sub>, a 23-branch Maxwell spectrum and WLF/Arrhenius shifting over a directly characterized 23–85 °C interval. Thirty-eight analytical and synthetic unit tests verify the reference material relations. Compatible k(T), c<sub>p</sub>(T), complete orthotropy, crystallization kinetics and a bulk irreversible-strain law remain unavailable; fixture thermal strain awaits its expansion convention.
+The literature establishes prior supported annealing, irreversible strain analysis, thermo-viscoelastic finite elements and annealing-related optimization. Stage 5 fixes and implements the supported Prusament viscoelastic core and the AISI 304 interpolation/elastic relations, while preserving grade boundaries. Stage 7 selects the literature-traceable 60 mm × 10 mm × 4 mm plate and two 70 mm × 20 mm × 5 mm fixture plates. Five normalized screening clearances span γ = 0–0.02, equivalent to g<sub>0</sub> = 0–0.08 mm. A geometry-only MAPDL build at γ = 0.01 created and saved the intended three volumes without a mesh or solution.
+
+The Prusament evidence provides ν, α, T<sub>g</sub>, a 23-branch Maxwell spectrum and WLF/Arrhenius shifting over a directly characterized 23–85 °C interval. Thirty-eight analytical and synthetic unit tests verify the reference material relations. Compatible k(T), c<sub>p</sub>(T), complete orthotropy, crystallization kinetics and a bulk irreversible-strain law remain unavailable; fixture thermal strain awaits its expansion convention.
 
 The proposed contribution remains restricted to evidence-tested prediction of the clearance–distortion–stress trade-off after cooling and release. The scope compares FREE with initially centered GAP restraint for one specified material/architecture/geometry, while retaining signed response and excluding granular-media simulation and unverified strength claims.
 
-Numerical findings require genuine ANSYS field execution, verified material evidence, discretization assessment and independent validation. The successful zero-analysis environment probe is not a simulation result. No improvement, validated prediction or preferred annealing condition is concluded.
+Numerical findings require genuine ANSYS field execution, verified material evidence, discretization assessment and independent validation. The successful geometry-only build is not a thermal or mechanical simulation result, and γ = 0.01 is not a preferred clearance. No improvement, validated prediction or preferred annealing condition is concluded.
 
 <!-- PAGE -->
 ### References
@@ -573,11 +592,11 @@ Numerical findings require genuine ANSYS field execution, verified material evid
 
 ### Supplement A. Provenance and reproducibility requirements
 
-The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, the Stage 5 constitutive implementation/test records and the Stage 6 fail-closed Ansys runner. The base paper is preserved separately from the evolving manuscript. The only solver artifact is a zero-analysis environment probe; no field-result dataset is available.
+The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, the Stage 5 constitutive implementation/test records, the Stage 6 fail-closed Ansys runner and the Stage 7 parametric geometry source. The base paper is preserved separately from the evolving manuscript. Solver artifacts remain limited to environment and geometry-only preprocessing; no field-result dataset is available.
 
 Each future case must preserve a unique identifier, the solver version, geometry and material orientation, input configuration, source references, units, boundary histories, mesh, time-integration and contact settings, execution status, raw-output location and file checksums. Failed cases remain in the record with their failure reason. Postprocessing must identify both the raw field and the script/equation producing each response.
 
-Every quantitative result will be assigned to one of three evidence classes: A, genuine solver output; B, a reproducible numerical calculation; or C, a verified published source with an exact locator. Design choices remain labeled as inputs, never as findings. The temperatures and durations in Table 2 are inherited design choices; its nine-combination count follows directly from three temperature levels multiplied by three duration levels.
+Every quantitative result will be assigned to one of three evidence classes: A, genuine solver output; B, a reproducible numerical calculation; or C, a verified published source with an exact locator. Design choices remain labeled as inputs, never as findings. The temperatures and durations in Table 3 are inherited design choices; its nine-combination count follows directly from three temperature levels multiplied by three duration levels.
 
 The bibliography is deliberately limited to the checked sources cited in this draft. The larger bibliography in the base proposal is archived for later appraisal and is not treated as a validated material database. Each Stage 4 numerical property has a source locator, formulation decision and intended ANSYS treatment in the repository. No cross-formulation value is admitted merely because it falls within a plausible PLA range.
 

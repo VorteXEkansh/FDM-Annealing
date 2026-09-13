@@ -2,7 +2,7 @@
 
 Computational research on quantified gap-controlled constraint during sub-melting annealing of FFF-printed PLA.
 
-**Read [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md) first.** This is a staged research repository, not a completed ANSYS study. Stage 5 implements and unit-tests the supported Prusament viscoelastic material-point core, including the piecewise temperature clock and constant-Poisson shear/bulk conversion. Missing bulk irreversible strain, thermal functions and the fixture expansion convention still block production ANSYS annealing predictions.
+**Read [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md) first.** This is a staged research repository, not a completed ANSYS study. Stage 7 defines a 60 mm × 10 mm × 4 mm plate specimen, opposed AISI 304 fixture plates and a normalized clearance screen, and verifies their three-volume construction in a geometry-only MAPDL run. Missing bulk irreversible strain, thermal functions, discretization, contact inputs and the fixture expansion convention still block production ANSYS annealing predictions.
 
 ## Structure
 
@@ -15,6 +15,8 @@ Computational research on quantified gap-controlled constraint during sub-meltin
 - `results/`: solver provenance registry; no placeholder results.
 - `manuscript/`: complete editable manuscript source.
 - `material/`: formulation-specific source tables, uncertainty gaps and calculated reference conversion.
+- `geometry/`: authoritative specimen/fixture definition and candidate-clearance audit.
+- `simulation/geometry/`: hashed geometry-only MAPDL input, raw output and saved database.
 - `src/`: tested constitutive reference relations; no ANSYS solver wrapper yet.
 - `scripts/`: reproducible PDF build and integrity checks.
 - `tests/`: checks appropriate to the research stage.
@@ -30,8 +32,9 @@ python scripts/build_material_database.py
 python scripts/build_constitutive_reference.py
 python scripts/check_materials.py 5
 python scripts/check_constitutive.py
+python scripts/check_geometry.py
 python scripts/check_integrity.py
-python scripts/check_literature.py 5
+python scripts/check_literature.py 7
 pdftoppm -r 150 -png output/pdf/Constrained-Annealing-2026-DRAFT.pdf tmp/pdfs/current
 ```
 
