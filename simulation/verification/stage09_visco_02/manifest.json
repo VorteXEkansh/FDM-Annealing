@@ -1,0 +1,37 @@
+{
+  "accepted": true,
+  "error": "",
+  "returncode": 0,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM-Annealing\\stage09_visco_02\\input.dat",
+    "-o",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM-Annealing\\stage09_visco_02\\mapdl.out",
+    "-j",
+    "structural",
+    "-np",
+    "1"
+  ],
+  "files": {
+    "case.json": "f9a421624d7203e77551005cfe12bb806b4daa5adbbeecfc8957ca005647962c",
+    "comparison.csv": "a695acceedceb41bddcbe16a90a9536c5b6883b485fc3fefc3e8175b21e12154",
+    "input.dat": "341f7d4500a85f5f221cf127e421825e16146776a7883d1bf79ab520ff2d0a67",
+    "mapdl.out": "153bbd117b21ce348e36bb0902211b854720cab9acd884b4133f39b5e4a8d40d",
+    "script_snapshot.py": "0e42e76263e45e926dc6e414885056f3de5c2121e991bf6ddd6e5a0f18668a0d",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "structural.DSP": "d1ed63da643cc0c5af22d4dbb160639f0962ef9f920d1f8e68dcf12bec120662",
+    "structural.err": "dd6c6e1ae21b012265634952dadd59bac83c289079b1d77eb3a30cb4cde23fea",
+    "structural.esav": "3f9fb15e84c063c3dd4935263a57e18c5ae3326995687d5576823a40fcbdb6aa",
+    "structural.full": "84278423b92e5a31a1b4fb525c83d5b3e504179a1f687304e19417303dec753f",
+    "structural.ldhi": "423c33f5a4d3018e8769a09e02f3ab5350841699befadc7dd028eaaaaaeed337",
+    "structural.log": "367fc7adbb48d1f9020bd5f0dc85d27f817e5df8885a87582eaead1ccf404f8e",
+    "structural.mntr": "291f327bedd53e47314a970210953e19938367df1966ec1096ebfebaaf4bd7a9",
+    "structural.r001": "70c4456e798f5078d52fc2810e1933681ad67a078bb22cec866be6457387ff52",
+    "structural.rdb": "0376dc064ae41f3b7537665a8fe3b4ce6c6d31444a55237f7882287f2e73d6ad",
+    "structural.rst": "fbc3fd50ea2dc4386164aabe559b0f4af5460a2b2c98e6e0c0f0f92fc187efee",
+    "values.csv": "13347d9f7f7bf0c5878710ee1829d49f86809eface92409a7b634de849fd2f07"
+  }
+}

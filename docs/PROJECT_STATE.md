@@ -1,6 +1,6 @@
 # Authoritative project state
 
-Stage: **Prompt 8/20 — transient thermal model and analytical verification**.
+Stage: **Prompt 9/20 — structural, retained-strain and contact verification**.
 Date: 2026-09-13 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
@@ -25,12 +25,12 @@ Base source: `data/source/DTU_Constrained_Annealing_Final_Submission.pdf`; immut
 
 ## Evidence status — authoritative
 
-Genuine ANSYS field runs: **one accepted verification-only transient thermal plane-wall solution**. It is not a Prusament PLA coupon prediction or physical validation. A zero-analysis MAPDL environment/license probe and a geometry-only build also succeeded.
+Genuine ANSYS field runs: **one thermal and six accepted structural/contact verification cases**. It is not a Prusament PLA coupon prediction or physical validation. A zero-analysis MAPDL environment/license probe and a geometry-only build also succeeded.
 ANSYS environment: **Ansys Student 2026 R1; MAPDL release 2026 R1, build 26.1, update 20260202; Student Mechanical product checkout confirmed**. Workbench and Mechanical 26.1 plus the named thermal/structural templates are installed, but their GUI entitlements have not been separately exercised. PyMechanical is not installed.
 Geometry/CAD: **60 mm × 10 mm × 4 mm rectangular specimen and two 70 mm × 20 mm × 5 mm plates selected; a geometry-only MAPDL build created and saved three volumes**. Production specimen/fixture mesh: **not generated**. The separate plane-wall verification mesh is documented below.
 Reference PLA formulation: **Prusament PLA selected for constitutive development; production ANSYS material card not admitted**.
 Property tables: **created and source-audited; compatible Prusament k(T), c_p(T), bulk irreversible strain and complete orthotropy remain unavailable**. Stage 8 verification constants are numerical fixtures kept outside the material database.
-Constitutive implementation: **small-strain isotropic 23-branch Prusament reference implemented; 38 analytical/synthetic unit tests pass; no ANSYS adapter or physical calibration/validation**.
+Constitutive implementation: **small-strain isotropic 23-branch Prusament reference implemented; 38 analytical/synthetic unit tests pass; isothermal ANSYS Prony adapter checked in Stage 9; no non-isothermal adapter or physical validation**.
 Fixture material: **AISI 304 stainless steel selected as candidate plate material with a 20–200 °C tabulated property set**. Plate dimensions and normalized reference-gap levels are fixed as geometry design choices. Friction, thermal contact conductance and physical spacer geometry remain unselected. Thermal-strain use of the fixture alpha table is blocked until its tangent/mean convention and reference temperature are established.
 Initial residual stress, recovery strain and crystallization kinetics: **unavailable**.
 Production boundary histories, reference temperature, release rule, convection, radiation and thermal contact: **not fixed**. The separate verification history is fully specified and must not be transferred as a physical protocol.
@@ -45,7 +45,7 @@ No performance improvement, optimal process condition or experimental confirmati
 
 `ansys/run_case.py` provides a direct MAPDL batch path with explicit JSON parameters and admission gates. `simulation/cases/production_template.json` remains blocked because compatible thermal data, irreversible strain, the Ansys constitutive adapter, boundary history and extraction definitions are unresolved. Stage 8 adds `ansys/thermal_model.py` and `simulation/cases/thermal_production_template.json`; they require all thermal phases and reject missing PLA functions, convection, radiation decisions, thermal contact and production extraction rules. `analysis/extract_results.py` rejects empty or untraceable output tables. No production campaign was run.
 
-The only execution is `simulation/runs/stage06_mapdl_smoke/`, generated from `ansys/apdl/environment_smoke.dat`. MAPDL exited 0 after `/STATUS` and `/EXIT,NOSAVE`; it created no geometry, nodes, elements, loads or solution. Its case, input, command, raw log and output hashes are recorded. DesignXplorer and optiSLang 26.1.0 revision 1878 are present on disk but unexercised. Their availability must not be described as a completed optimization capability.
+The Stage 6 execution is `simulation/runs/stage06_mapdl_smoke/`, generated from `ansys/apdl/environment_smoke.dat`. MAPDL exited 0 after `/STATUS` and `/EXIT,NOSAVE`; it created no geometry, nodes, elements, loads or solution. Its case, input, command, raw log and output hashes are recorded. DesignXplorer and optiSLang 26.1.0 revision 1878 are present on disk but unexercised. Their availability must not be described as a completed optimization capability.
 
 ## Decisions and scientific safeguards
 
@@ -83,7 +83,7 @@ The intended contribution is an evidence-tested clearance–distortion–stress 
 
 Authoritative files are `material/pla_properties.csv`, `material/property_sources.csv`, `material/uncertainty_ranges.csv`, `material/fixture_properties.csv` and `material/build_manifest.json`. `scripts/build_material_database.py` deterministically regenerates the four CSV files. `docs/material_property_audit.md` records the compatibility reasoning. Raw Stage 4 evidence copies and their hashes are preserved under `literature/evidence/stage_04/`.
 
-Prusament PLA is the reference formulation because Chapuis2025 provides grade-specific DMA characterization, k₀ = 10.598 MPa, ν = 0.35, T_g = 65 °C, C₁ = 17.4, C₂ = 51.6 K, C₃ = 35 000 K, α = 68.0 µm m⁻¹ K⁻¹ and 23 Maxwell branch pairs. Direct characterization spans 23–85 °C. The calculated reference instantaneous modulus is E₀ = k₀ + ∑kᵢ = 1691.594 MPa; this is an arithmetic model quantity, not a new experiment. The published piecewise shift uses Arrhenius below T_g and WLF at or above T_g. No native ANSYS conversion has been verified.
+Prusament PLA is the reference formulation because Chapuis2025 provides grade-specific DMA characterization, k₀ = 10.598 MPa, ν = 0.35, T_g = 65 °C, C₁ = 17.4, C₂ = 51.6 K, C₃ = 35 000 K, α = 68.0 µm m⁻¹ K⁻¹ and 23 Maxwell branch pairs. Direct characterization spans 23–85 °C. The calculated reference instantaneous modulus is E₀ = k₀ + ∑kᵢ = 1691.594 MPa; this is an arithmetic model quantity, not a new experiment. The published piecewise shift uses Arrhenius below T_g and WLF at or above T_g. The native isothermal Prony conversion is checked in Stage 9; full temperature shifting remains unverified.
 
 The inherited 80 °C candidate lies inside the direct characterization interval. The 95 °C and 110 °C candidates lie outside it and are not admitted through extrapolation. The supplier's ρ = 1240 kg m⁻³ is retained only as a screening value because its test temperature is not reported. No compatible Prusament k(T) or c_p(T) functions, signed bulk irreversible annealing-strain law, complete E₁/E₂/E₃/G₁₂/G₂₃/G₁₃/ν₁₂/ν₂₃/ν₁₃ set, directional α₁/α₂/α₃ set, or crystallization-kinetic coefficients were found. Missing lower/upper bounds remain blank with status `no bound invented`.
 
@@ -158,8 +158,37 @@ predictive validity, dimensional change, warpage or stress. The full FREE/GAP
 thermal model remains blocked; no missing property or boundary coefficient is
 set to zero.
 
+## Structural state — Stage 9
+
+`docs/structural_model.md` defines six separate uniform-field cases: free and
+fixed thermal expansion, free and fixed/released retained eigenstrain, a
+node-to-node gap and 23-branch isothermal Prony response. Each brick is
+10 mm × 1 mm × 1 mm, with one SOLID185 and eight nodes. Contact adds a fixed
+ninth node and one CONTA178. These are verification choices, not the production
+coupon geometry or mesh-convergence evidence.
+
+Elastic constants and the −0.001 isotropic eigenstrain are synthetic fixtures.
+Initial stress −C:εᵃⁿⁿ supplies the retained-eigenstrain test; no calibrated
+bulk annealing-strain evolution law exists. Orthotropy is not used. The Prony
+test uses the source-derived 23 equal normalized shear/bulk spectra at 65 °C,
+with finite loading, holding, unloading and held-zero-strain relaxation.
+It does not verify piecewise temperature shifting or physical validity.
+
+`verification/structural_verification.csv` and `verification/contact_verification.csv`
+record solver/reference values, errors, tolerances and run paths. Every run
+preserves its script snapshot and input/output hashes. Contact sign-conversion
+and license failures and the first relaxation accuracy failure are preserved.
+Subsequent solver runs must be sequential under the observed Student limit.
+Production remains blocked by thermal inputs, irreversible-strain evidence,
+non-isothermal adaptation, fixture expansion convention, surface contact,
+friction, release rules and independent validation.
+
 ## Completion records and stage boundary
 
-Stage 8 quality and integrity records are `docs/stage_08_quality.md`, `docs/integrity_report.json`, `docs/stage_08_thermal_checks.json`, `docs/stage_08_literature_integrity.json`, `docs/stage_08_material_integrity.json`, `docs/stage_08_pdf_review.json` and `docs/stage_08_manifest.json`.
+Current records: `docs/stage_09_structural_checks.json`, `docs/stage_09_quality.md`,
+`docs/stage_09_pdf_review.json`, `docs/stage_09_manifest.json`,
+`docs/stage_09_delivery.json` and `docs/integrity_report.json`.
+No production campaign, physical validation, sensitivity, propagated uncertainty
+or optimization is complete. Do not begin Prompt 10 without user instruction.
 
-Prompt 8 establishes and analytically verifies the transient thermal solver implementation on a declared reference problem. The complete production thermo-mechanical annealing model remains blocked by material and boundary evidence. No production coupon field solution, production mesh/time-step/contact convergence, physical validation, sensitivity, propagated uncertainty or optimization is complete. Do not begin Prompt 9 without the user's next numbered instruction.
+Stage 9 result: all 114 comparisons pass. Maximum stress error is 3.8271 × 10⁻⁶ MPa; maximum reaction error is 3.8280 × 10⁻⁶ N. Accepted runs are free_01, fixed_01, eigen_free_01, eigen_fixed_01, contact_03 and visco_02 under simulation/verification/stage09_.

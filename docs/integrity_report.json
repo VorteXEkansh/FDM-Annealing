@@ -1,5 +1,5 @@
 {
-  "stage": 8,
+  "stage": 9,
   "date": "2026-09-13",
   "checks": [
     {
@@ -271,13 +271,29 @@
       "status": "pass"
     },
     {
+      "check": "Stage 9 comparisons pass",
+      "status": "pass"
+    },
+    {
+      "check": "Stage 9 source hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Structural evidence limits declared",
+      "status": "pass"
+    },
+    {
+      "check": "All structural comparisons admitted",
+      "status": "pass"
+    },
+    {
       "check": "All text lies inside page safety bounds",
       "status": "pass"
     }
   ],
-  "count": 68,
-  "pdf_sha256": "f998e16d59503bd1529dae3925804ee2931181d65f1c16a45c1e771f7df735db",
-  "manuscript_sha256": "74872e014d6e17225773024de0f4ba35fa632363d2422c1a1e0d9cbfee0dc2f4",
+  "count": 72,
+  "pdf_sha256": "03d44d05d75e34cfe73de836331e38daa4c7eeaa35990b5a2d76c53ca9688a03",
+  "manuscript_sha256": "a8b0a55d67868074a95f597ff4ac3fd1074e1ef691c81b82d5d8f0691bd0017c",
   "material_manifest_sha256": "d9eeab055d206d082674004be8f85f1f00168d2aa34288526ac1549c91f5652b",
   "geometry_manifest_sha256": "d76d855563cb38fa34c51995092edfbb35ead325bc4eb2c3a8bd18fefc0d8369",
   "thermal_manifest_sha256": "f1942fd9932f7fbc2a1678edcec6576fde89b602c04b38761c7183f08c85eca1",

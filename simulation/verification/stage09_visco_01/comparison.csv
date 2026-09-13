@@ -1,0 +1,26 @@
+case,time_s,quantity,ansys,reference,absolute_error,relative_error_percent,tolerance,passed,raw_contact_status,evidence
+visco,1.0,ux_mm,0.01,0.01,0.0,0.0,1.0100000000000002e-05,True,,A: MAPDL; B: analytical calculation
+visco,1.0,uy_mm,-0.00035,-0.00035,0.0,0.0,4.5e-07,True,,A: MAPDL; B: analytical calculation
+visco,1.0,uz_mm,-0.000350000000000001,-0.00035,1.0299920638612292e-18,2.9428344681749404e-13,4.5e-07,True,,A: MAPDL; B: analytical calculation
+visco,1.0,stress_x_MPa,0.036951307207346,0.0375574834741345,0.000606176266788501,1.6139959622320519,3.76574834741345e-05,False,,A: MAPDL; B: analytical calculation
+visco,1.0,reaction_x_N,-0.0369513060980449,-0.0375574834741345,0.0006061773760895964,1.6139989158407413,3.76574834741345e-05,False,,A: MAPDL; B: analytical calculation
+visco,11.0,ux_mm,0.01,0.01,0.0,0.0,1.0100000000000002e-05,True,,A: MAPDL; B: analytical calculation
+visco,11.0,uy_mm,-0.00035,-0.00035,0.0,0.0,4.5e-07,True,,A: MAPDL; B: analytical calculation
+visco,11.0,uz_mm,-0.00035,-0.00035,0.0,0.0,4.5e-07,True,,A: MAPDL; B: analytical calculation
+visco,11.0,stress_x_MPa,0.0243886373937129,0.024388637893644954,4.99932054087715e-10,2.049856397343061e-06,2.4488637893644953e-05,True,,A: MAPDL; B: analytical calculation
+visco,11.0,reaction_x_N,-0.0243886378468183,-0.024388637893644954,4.6826653665732465e-11,1.9200192265733e-07,2.4488637893644953e-05,True,,A: MAPDL; B: analytical calculation
+visco,31.0,ux_mm,0.01,0.01,0.0,0.0,1.0100000000000002e-05,True,,A: MAPDL; B: analytical calculation
+visco,31.0,uy_mm,-0.00035,-0.00035,0.0,0.0,4.5e-07,True,,A: MAPDL; B: analytical calculation
+visco,31.0,uz_mm,-0.00035,-0.00035,0.0,0.0,4.5e-07,True,,A: MAPDL; B: analytical calculation
+visco,31.0,stress_x_MPa,0.0183896347880363,0.01838963524255053,4.545142283374215e-10,2.4715782686420655e-06,1.848963524255053e-05,True,,A: MAPDL; B: analytical calculation
+visco,31.0,reaction_x_N,-0.0183896352160937,-0.01838963524255053,2.64568297825285e-11,1.4386815961043012e-07,1.848963524255053e-05,True,,A: MAPDL; B: analytical calculation
+visco,32.0,ux_mm,0.0,0.0,0.0,,1e-07,True,,A: MAPDL; B: analytical calculation
+visco,32.0,uy_mm,3.30187791407783e-19,-0.0,3.30187791407783e-19,,1e-07,True,,A: MAPDL; B: analytical calculation
+visco,32.0,uz_mm,1.81475777011718e-19,-0.0,1.81475777011718e-19,,1e-07,True,,A: MAPDL; B: analytical calculation
+visco,32.0,stress_x_MPa,-0.018780954182148,-0.019387130910873282,0.0006061767287252814,3.1266964230654,1.9487130910873282e-05,False,,A: MAPDL; B: analytical calculation
+visco,32.0,reaction_x_N,0.0187809535604599,0.019387130910873282,0.0006061773504133817,3.126699629770421,1.9487130910873282e-05,False,,A: MAPDL; B: analytical calculation
+visco,62.0,ux_mm,0.0,0.0,0.0,,1e-07,True,,A: MAPDL; B: analytical calculation
+visco,62.0,uy_mm,-1.87740184073919e-19,-0.0,1.87740184073919e-19,,1e-07,True,,A: MAPDL; B: analytical calculation
+visco,62.0,uz_mm,-6.96054785841574e-20,-0.0,6.96054785841574e-20,,1e-07,True,,A: MAPDL; B: analytical calculation
+visco,62.0,stress_x_MPa,-0.00457577453926206,-0.004575774653361068,1.1409900801950812e-10,2.4935451735084546e-06,4.675774653361068e-06,True,,A: MAPDL; B: analytical calculation
+visco,62.0,reaction_x_N,0.00457577463782385,0.004575774653361068,1.5537218213401705e-11,3.395538327480587e-07,4.675774653361068e-06,True,,A: MAPDL; B: analytical calculation

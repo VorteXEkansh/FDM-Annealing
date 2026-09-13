@@ -1,0 +1,16 @@
+case,time_s,quantity,ansys,reference,absolute_error,relative_error_percent,tolerance,passed,raw_contact_status,evidence
+free,1.0,ux_mm,0.0010000000000003,0.001,2.9989032090949053e-16,2.998903209094905e-11,1.1e-06,True,,A: MAPDL; B: analytical calculation
+free,1.0,uy_mm,0.00010000000000003,0.0001,2.9991742596380266e-17,2.9991742596380266e-11,2e-07,True,,A: MAPDL; B: analytical calculation
+free,1.0,uz_mm,0.00010000000000003,0.0001,2.9991742596380266e-17,2.9991742596380266e-11,2e-07,True,,A: MAPDL; B: analytical calculation
+free,1.0,stress_x_MPa,1.15001011430394e-15,0.0,1.15001011430394e-15,,1e-07,True,,A: MAPDL; B: analytical calculation
+free,1.0,reaction_x_N,-1.15001011684911e-15,-0.0,1.15001011684911e-15,,1e-07,True,,A: MAPDL; B: analytical calculation
+free,2.0,ux_mm,0.00600000000000084,0.006,8.396061623727746e-16,1.3993436039546243e-11,6.1e-06,True,,A: MAPDL; B: analytical calculation
+free,2.0,uy_mm,0.000600000000000079,0.0006000000000000001,7.892991815694472e-17,1.3154986359490787e-11,7.000000000000001e-07,True,,A: MAPDL; B: analytical calculation
+free,2.0,uz_mm,0.000600000000000078,0.0006000000000000001,7.795413620170777e-17,1.2992356033617961e-11,7.000000000000001e-07,True,,A: MAPDL; B: analytical calculation
+free,2.0,stress_x_MPa,6.91178884959509e-15,0.0,6.91178884959509e-15,,1e-07,True,,A: MAPDL; B: analytical calculation
+free,2.0,reaction_x_N,-6.91178884959509e-15,-0.0,6.91178884959509e-15,,1e-07,True,,A: MAPDL; B: analytical calculation
+free,3.0,ux_mm,0.0,0.0,0.0,,1e-07,True,,A: MAPDL; B: analytical calculation
+free,3.0,uy_mm,0.0,0.0,0.0,,1e-07,True,,A: MAPDL; B: analytical calculation
+free,3.0,uz_mm,0.0,0.0,0.0,,1e-07,True,,A: MAPDL; B: analytical calculation
+free,3.0,stress_x_MPa,0.0,0.0,0.0,,1e-07,True,,A: MAPDL; B: analytical calculation
+free,3.0,reaction_x_N,0.0,-0.0,0.0,,1e-07,True,,A: MAPDL; B: analytical calculation

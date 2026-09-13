@@ -1,0 +1,28 @@
+{
+  "accepted": false,
+  "error": "solver return code",
+  "returncode": 1,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM-Annealing\\stage09_contact_02\\input.dat",
+    "-o",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM-Annealing\\stage09_contact_02\\mapdl.out",
+    "-j",
+    "structural",
+    "-np",
+    "1"
+  ],
+  "files": {
+    "ansabort.db": "4cc69043887ec3f07d0c9460275c6dbc043895275139ff52eb5938178b96514c",
+    "case.json": "a62ba8d3a13bf2a1737fa23d3a59d575de107e59840232caacca67fbafe52004",
+    "input.dat": "c24c4de663479fd079b13e97644635c850be605df30b35fa1235a10970f92d4a",
+    "mapdl.out": "da9c31dd805b94d1fb0ce6aa41be4f4045eed1afafc982f8217b3a8825c46604",
+    "script_snapshot.py": "58f956c5d58aa2fe37923c2c6e7908acfc7192c3803564972554306d1099425e",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "structural.err": "679f351107755e77216f19bce60906799ac9772d814b45943fc7ef3ad947f508",
+    "structural.log": "4d871054269da960e42bdc477ba82dd8629a3f3e24e30546182f52c241bbcdcc"
+  }
+}

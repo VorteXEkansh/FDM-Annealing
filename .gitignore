@@ -24,3 +24,6 @@ __pycache__/
 
 node_modules/
 *.inspect.ndjson
+
+# Preserve all Stage 9 solver evidence, including rejected attempts.
+!simulation/verification/stage09_*/**

@@ -1,0 +1,960 @@
+
+ Ansys Mechanical Enterprise Academic Student      
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *         ANSYS MAPDL 2026 R1          LEGAL NOTICES          *
+ ***************************************************************
+ *                                                             *
+ * Copyright (c) 2026 Synopsys, Inc. and ANSYS, Inc.           *
+ * All rights reserved.                                        *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of Ansys, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the Ansys, Inc. online documentation or the Ansys, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * Ansys, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * Ansys, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the Ansys, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the Ansys, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ 2026 R1 
+     
+ Point Releases and Patches installed:   
+     
+ Ansys, Inc. License Manager 2026 R1 
+ Discovery (full install) 2026 R1
+ Core WB Files 2026 R1   
+ optiSLang Core UI 2026 R1   
+ CFX (includes CFD-Post) 2026 R1 
+ Chemkin 2026 R1 
+ EnSight 2026 R1 
+ FENSAP-ICE 2026 R1  
+ Fluent (includes CFD-Post) 2026 R1  
+ Polyflow (includes CFD-Post) 2026 R1
+ Forte (includes EnSight) 2026 R1
+ Rocky 2026 R1   
+ TurboGrid 2026 R1   
+ ACIS Geometry Interface 2026 R1 
+ AutoCAD Geometry Interface 2026 R1  
+ Catia, Version 4 Geometry Interface 2026 R1 
+ Catia, Version 5 Geometry Interface 2026 R1 
+ Catia, Version 6 Geometry Interface 2026 R1 
+ Creo Elements/Direct Modeling Geometry Interface 2026 R1
+ Creo Parametric Geometry Interface 2026 R1  
+ Inventor Geometry Interface 2026 R1 
+ JTOpen Geometry Interface 2026 R1   
+ NX Geometry Interface 2026 R1   
+ Parasolid Geometry Interface  2026 R1   
+ Solid Edge Geometry Interface 2026 R1   
+ SOLIDWORKS Geometry Interface 2026 R1   
+ Speos 2026 R1   
+ SpaceClaim 2026 R1  
+ Speos RPC 2026 R1   
+ Zemax OpticStudio 2026 R1   
+ Dynamic Reporting 2026 R1   
+ Aqwa 2026 R1
+ Autodyn 2026 R1 
+ Material Calibration App 2026 R1
+ Mechanical Products 2026 R1 
+ Motion 2026 R1  
+ Academic Student 2026 R1
+
+
+          *****  MAPDL COMMAND LINE ARGUMENTS  *****
+  INITIAL JOBNAME              = structural                                                                                                                                                                                                                                              
+  BATCH MODE REQUESTED (-b)    = LIST
+  INPUT FILE COPY MODE (-c)    = COPY
+       1 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
+    TOTAL OF     1 CORES REQUESTED
+  INPUT FILE NAME              = C:\Users\asus\AppData\Local\Temp\FDM-Annealing\stage09_eigen_fixed_01\input.dat
+  OUTPUT FILE NAME             = C:\Users\asus\AppData\Local\Temp\FDM-Annealing\stage09_eigen_fixed_01\mapdl.out
+
+ RELEASE= 2026 R1              BUILD= 26.1      UP20260202   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=structural  21:44:21  SEP 13, 2026  Elapsed Time=       0.094
+
+     1  /BATCH  
+     2  /FILNAME,structural 
+     3  /PREP7  
+     4  ET,1,185
+     5  MP,EX,1,2000.0  
+     6  MP,PRXY,1,0.3   
+     7  MP,ALPX,1,1e-05 
+     8  TREF,20 
+     9  N,1,0,0,0   
+    10  N,2,10,0,0  
+    11  N,3,10,1,0  
+    12  N,4,0,1,0   
+    13  N,5,0,0,1   
+    14  N,6,10,0,1  
+    15  N,7,10,1,1  
+    16  N,8,0,1,1   
+    17  E,1,2,3,4,5,6,7,8   
+    18  NSEL,S,LOC,X,0  
+    19  D,ALL,UX,0  
+    20  NSEL,S,LOC,Y,0  
+    21  D,ALL,UY,0  
+    22  NSEL,S,LOC,Z,0  
+    23  D,ALL,UZ,0  
+    24  ALLSEL,ALL  
+    25  CP,1,UX,2,3,6,7 
+    26  INISTATE,SET,DTYP,STRE  
+    27  INISTATE,DEFINE,1,,,,5.0,5.0,5.0,0,0,0  
+    28  ALLSEL,ALL  
+    29  FINISH  
+    30  /SOLU   
+    31  ANTYPE,STATIC   
+    32  NLGEOM,OFF  
+    33  OUTRES,ALL,ALL  
+    34  AUTOTS,OFF  
+    35  KBC,0   
+    36  D,2,UX,0
+    37  TIME,1.0
+    38  NSUBST,10,10,10 
+    39  BF,ALL,TEMP,30.0
+    40  SOLVE   
+    41  TIME,2.0
+    42  NSUBST,10,10,10 
+    43  BF,ALL,TEMP,80.0
+    44  SOLVE   
+    45  TIME,3.0
+    46  NSUBST,10,10,10 
+    47  BF,ALL,TEMP,20.0
+    48  SOLVE   
+    49  DDELE,2,UX  
+    50  TIME,4  
+    51  NSUBST,10,10,10 
+    52  SOLVE   
+    53  FINISH  
+    54  /POST1  
+    55  *CFOPEN,values,csv  
+    56  SET,,,,,1.0 
+    57  ALLSEL,ALL  
+    58  *GET,UXV,NODE,2,U,X 
+    59  *GET,UYV,NODE,3,U,Y 
+    60  *GET,UZV,NODE,6,U,Z 
+    61  ETABLE,SXV,S,X  
+    62  *GET,SXX,ELEM,1,ETAB,SXV
+    63  RFV=0   
+    64  *GET,R1,NODE,1,RF,FX
+    65  *GET,R4,NODE,4,RF,FX
+    66  *GET,R5,NODE,5,RF,FX
+    67  *GET,R8,NODE,8,RF,FX
+    68  RFV=R1+R4+R5+R8 
+    69  CFV=0   
+    70  STATV=0 
+    71  GAPV=0  
+    72  TV=1.0  
+    73  *VWRITE,TV,UXV,UYV,UZV,SXX,RFV,CFV,STATV,GAPV   
+    74  (9(E23.15,',')) 
+    75  SET,,,,,2.0 
+    76  ALLSEL,ALL  
+    77  *GET,UXV,NODE,2,U,X 
+    78  *GET,UYV,NODE,3,U,Y 
+    79  *GET,UZV,NODE,6,U,Z 
+    80  ETABLE,SXV,S,X  
+    81  *GET,SXX,ELEM,1,ETAB,SXV
+    82  RFV=0   
+    83  *GET,R1,NODE,1,RF,FX
+    84  *GET,R4,NODE,4,RF,FX
+    85  *GET,R5,NODE,5,RF,FX
+    86  *GET,R8,NODE,8,RF,FX
+    87  RFV=R1+R4+R5+R8 
+    88  CFV=0   
+    89  STATV=0 
+    90  GAPV=0  
+    91  TV=2.0  
+    92  *VWRITE,TV,UXV,UYV,UZV,SXX,RFV,CFV,STATV,GAPV   
+    93  (9(E23.15,',')) 
+    94  SET,,,,,3.0 
+    95  ALLSEL,ALL  
+    96  *GET,UXV,NODE,2,U,X 
+    97  *GET,UYV,NODE,3,U,Y 
+    98  *GET,UZV,NODE,6,U,Z 
+    99  ETABLE,SXV,S,X  
+   100  *GET,SXX,ELEM,1,ETAB,SXV
+   101  RFV=0   
+   102  *GET,R1,NODE,1,RF,FX
+   103  *GET,R4,NODE,4,RF,FX
+   104  *GET,R5,NODE,5,RF,FX
+   105  *GET,R8,NODE,8,RF,FX
+   106  RFV=R1+R4+R5+R8 
+   107  CFV=0   
+   108  STATV=0 
+   109  GAPV=0  
+   110  TV=3.0  
+   111  *VWRITE,TV,UXV,UYV,UZV,SXX,RFV,CFV,STATV,GAPV   
+   112  (9(E23.15,',')) 
+   113  SET,,,,,4.0 
+   114  ALLSEL,ALL  
+   115  *GET,UXV,NODE,2,U,X 
+   116  *GET,UYV,NODE,3,U,Y 
+   117  *GET,UZV,NODE,6,U,Z 
+   118  ETABLE,SXV,S,X  
+   119  *GET,SXX,ELEM,1,ETAB,SXV
+   120  RFV=0   
+   121  *GET,R1,NODE,1,RF,FX
+   122  *GET,R4,NODE,4,RF,FX
+   123  *GET,R5,NODE,5,RF,FX
+   124  *GET,R8,NODE,8,RF,FX
+   125  RFV=R1+R4+R5+R8 
+   126  CFV=0   
+   127  STATV=0 
+   128  GAPV=0  
+   129  TV=4.0  
+   130  *VWRITE,TV,UXV,UYV,UZV,SXX,RFV,CFV,STATV,GAPV   
+   131  (9(E23.15,',')) 
+   132  *CFCLOS 
+   133  FINISH  
+   134  /EXIT,NOSAVE
+
+ RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v261\Ansys\apdl\start.ans
+
+ /INPUT FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v261\Ansys\apdl\start.ans  LINE=       0
+
+ CURRENT JOBNAME REDEFINED AS structural
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   21:44:21  SEP 13, 2026 Elapsed Time=      6.041
+
+                                                                               
+
+
+
+          ***** MAPDL ANALYSIS DEFINITION (PREP7) *****
+
+ ELEMENT TYPE          1 IS SOLID185     3-D 8-NODE STRUCTURAL SOLID 
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY    UZ  
+  THREE-DIMENSIONAL MODEL
+
+ MATERIAL          1     EX   =   2000.000      
+
+ MATERIAL          1     PRXY =  0.3000000      
+
+ MATERIAL          1     ALPX =  0.1000000E-04  
+
+ REFERENCE TEMPERATURE=  20.000  (TUNIF=  20.000)
+
+ NODE          1  KCS=      0  X,Y,Z=  0.0000       0.0000       0.0000     
+
+ NODE          2  KCS=      0  X,Y,Z=  10.000       0.0000       0.0000     
+
+ NODE          3  KCS=      0  X,Y,Z=  10.000       1.0000       0.0000     
+
+ NODE          4  KCS=      0  X,Y,Z=  0.0000       1.0000       0.0000     
+
+ NODE          5  KCS=      0  X,Y,Z=  0.0000       0.0000       1.0000     
+
+ NODE          6  KCS=      0  X,Y,Z=  10.000       0.0000       1.0000     
+
+ NODE          7  KCS=      0  X,Y,Z=  10.000       1.0000       1.0000     
+
+ NODE          8  KCS=      0  X,Y,Z=  0.0000       1.0000       1.0000     
+
+ ELEMENT      1       1      2      3      4      5      6      7      8
+
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+          4  NODES (OF          8  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES            1 TO           8 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SELECT       FOR ITEM=LOC  COMPONENT=Y     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+          4  NODES (OF          8  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            1 TO           8 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SELECT       FOR ITEM=LOC  COMPONENT=Z     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+          4  NODES (OF          8  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES            1 TO           8 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ COUPLED SET =          1  DIRECTION= UX    TOTAL NODES=        4
+ NODES ADDED =           2           3           6           7
+ MAXIMUM COUPLED SET NUMBER =          1
+ The INISTATE,SET command was successfully executed.
+ The INISTATE,DEFINE command successfully executed for element           1
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+
+ ***** ROUTINE COMPLETED *****  ELAPSED TIME =         6.045
+
+
+
+ *****  MAPDL SOLUTION ROUTINE  *****
+
+
+ PERFORM A STATIC ANALYSIS
+  THIS WILL BE A NEW ANALYSIS
+
+ SMALL DEFORMATION ANALYSIS
+
+ WRITE ALL  ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ DO NOT USE AUTOMATIC TIME STEPPING THIS LOAD STEP
+
+ STEP BOUNDARY CONDITION KEY= 0
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES            2 TO           2 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ TIME=  1.0000    
+
+ USE      10 SUBSTEPS INITIALLY THIS LOAD STEP FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE     10 SUBSTEPS AS A MAXIMUM
+   USE     10 SUBSTEPS AS A MINIMUM
+
+ SPECIFIED BODY FORCE TEMP FOR ALL SELECTED NODES SET TO   30.0000000 
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** NOTE ***                            ELAPSED TIME =       6.087   TIME= 21:44:21
+ There is no title defined for this analysis.                            
+
+ *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
+                ---GIVE SUGGESTIONS ONLY---
+
+ ELEMENT TYPE         1 IS SOLID185. IT IS ASSOCIATED WITH LINEAR MATERIALS ONLY
+ AND POISSON'S RATIO IS NOT GREATER THAN 0.49. KEYOPT(2)=3 IS SUGGESTED.
+
+
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   21:44:21  SEP 13, 2026 Elapsed Time=      6.088
+
+                                                                               
+
+
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D                  
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ  
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
+
+ *** NOTE ***                            ELAPSED TIME =       6.089   TIME= 21:44:21
+ The conditions for direct assembly have been met.  No .emat or .erot    
+ files will be produced.                                                 
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000    
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .    10
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL        ALL               
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= structural.mntr                                                                                                                                                                                                                                                     
+
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 3044.51567 at element 1.                                      
+ Minimum = 3044.51567 at element 1.                                      
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+     TYPE    NUMBER     ENAME   TOTAL ELAPSED   AVG ELAPSED
+
+        1         1  SOLID185          0.0014   0.001383700
+ Elapsed Time at end of element matrix formulation = 6.1179119.          
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =           8,    Maximum wavefront =     18
+
+
+  Memory allocated on this process
+  -------------------------------------------------------------------
+  Equation solver memory allocated                     =     0.064 MB
+  Equation solver memory required for in-core mode     =     0.061 MB
+  Equation solver memory required for out-of-core mode =     0.053 MB
+  Total (solver and non-solver) memory allocated       =   349.954 MB
+
+ *** NOTE ***                            ELAPSED TIME =       6.121   TIME= 21:44:21
+ The Sparse Matrix Solver is currently running in the in-core memory     
+ mode.  This memory mode uses the most amount of memory in order to      
+ avoid using the hard drive as much as possible, which most often        
+ results in the fastest solution time.  This mode is recommended if      
+ enough physical memory is present to accommodate all of the solver      
+ data.                                                                   
+ Sparse solver maximum pivot= 3044.51567 at node 3 UY.                   
+ Sparse solver minimum pivot= 1189.9712 at node 8 UZ.                    
+ Sparse solver minimum pivot in absolute value= 1189.9712 at node 8 UZ.  
+
+   *** ELEMENT RESULT CALCULATION TIMES
+     TYPE    NUMBER     ENAME   TOTAL ELAPSED   AVG ELAPSED
+
+        1         1  SOLID185          0.0006   0.000597100
+
+   *** NODAL LOAD CALCULATION TIMES
+     TYPE    NUMBER     ENAME   TOTAL ELAPSED   AVG ELAPSED
+
+        1         1  SOLID185          0.0002   0.000215400
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+ *** TIME =  0.100000         TIME INC =  0.100000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     1   SUBSTEP     2  COMPLETED.    CUM ITER =      2
+ *** TIME =  0.200000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     1   SUBSTEP     3  COMPLETED.    CUM ITER =      3
+ *** TIME =  0.300000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     1   SUBSTEP     4  COMPLETED.    CUM ITER =      4
+ *** TIME =  0.400000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     1   SUBSTEP     5  COMPLETED.    CUM ITER =      5
+ *** TIME =  0.500000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     1   SUBSTEP     6  COMPLETED.    CUM ITER =      6
+ *** TIME =  0.600000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     1   SUBSTEP     7  COMPLETED.    CUM ITER =      7
+ *** TIME =  0.700000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     1   SUBSTEP     8  COMPLETED.    CUM ITER =      8
+ *** TIME =  0.800000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     1   SUBSTEP     9  COMPLETED.    CUM ITER =      9
+ *** TIME =  0.900000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     1   SUBSTEP    10  COMPLETED.    CUM ITER =     10
+ *** TIME =   1.00000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+
+ *** MAPDL BINARY FILE STATISTICS
+  BUFFER SIZE USED= 16384
+        0.062 MB WRITTEN ON ASSEMBLED MATRIX FILE: structural.full
+        0.312 MB WRITTEN ON RESULTS FILE: structural.rst
+
+ TIME=  2.0000    
+
+ USE      10 SUBSTEPS INITIALLY THIS LOAD STEP FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE     10 SUBSTEPS AS A MAXIMUM
+   USE     10 SUBSTEPS AS A MINIMUM
+
+ SPECIFIED BODY FORCE TEMP FOR ALL SELECTED NODES SET TO   80.0000000 
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   21:44:21  SEP 13, 2026 Elapsed Time=      6.211
+
+                                                                               
+
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     2
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  2.0000    
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .    10
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL        ALL               
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= structural.mntr                                                                                                                                                                                                                                                     
+
+ *** LOAD STEP     2   SUBSTEP     1  COMPLETED.    CUM ITER =     11
+ *** TIME =   1.10000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     2  COMPLETED.    CUM ITER =     12
+ *** TIME =   1.20000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     3  COMPLETED.    CUM ITER =     13
+ *** TIME =   1.30000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     4  COMPLETED.    CUM ITER =     14
+ *** TIME =   1.40000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     5  COMPLETED.    CUM ITER =     15
+ *** TIME =   1.50000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     6  COMPLETED.    CUM ITER =     16
+ *** TIME =   1.60000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     7  COMPLETED.    CUM ITER =     17
+ *** TIME =   1.70000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     8  COMPLETED.    CUM ITER =     18
+ *** TIME =   1.80000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     9  COMPLETED.    CUM ITER =     19
+ *** TIME =   1.90000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    10  COMPLETED.    CUM ITER =     20
+ *** TIME =   2.00000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ TIME=  3.0000    
+
+ USE      10 SUBSTEPS INITIALLY THIS LOAD STEP FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE     10 SUBSTEPS AS A MAXIMUM
+   USE     10 SUBSTEPS AS A MINIMUM
+
+ SPECIFIED BODY FORCE TEMP FOR ALL SELECTED NODES SET TO   20.0000000 
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   21:44:21  SEP 13, 2026 Elapsed Time=      6.279
+
+                                                                               
+
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     3
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  3.0000    
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .    10
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL        ALL               
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= structural.mntr                                                                                                                                                                                                                                                     
+
+ *** LOAD STEP     3   SUBSTEP     1  COMPLETED.    CUM ITER =     21
+ *** TIME =   2.10000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     2  COMPLETED.    CUM ITER =     22
+ *** TIME =   2.20000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     3  COMPLETED.    CUM ITER =     23
+ *** TIME =   2.30000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     4  COMPLETED.    CUM ITER =     24
+ *** TIME =   2.40000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     5  COMPLETED.    CUM ITER =     25
+ *** TIME =   2.50000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     6  COMPLETED.    CUM ITER =     26
+ *** TIME =   2.60000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     7  COMPLETED.    CUM ITER =     27
+ *** TIME =   2.70000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     8  COMPLETED.    CUM ITER =     28
+ *** TIME =   2.80000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     9  COMPLETED.    CUM ITER =     29
+ *** TIME =   2.90000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    10  COMPLETED.    CUM ITER =     30
+ *** TIME =   3.00000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ DELETE SPECIFIED CONSTRAINT UX   FOR SELECTED NODES
+  RANGE       2 TO       2 BY       1
+
+ NUMBER OF SPECIFIED CONSTRAINTS DELETED=       1
+
+ TIME=  4.0000    
+
+ USE      10 SUBSTEPS INITIALLY THIS LOAD STEP FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE     10 SUBSTEPS AS A MAXIMUM
+   USE     10 SUBSTEPS AS A MINIMUM
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   21:44:21  SEP 13, 2026 Elapsed Time=      6.350
+
+                                                                               
+
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     4
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  4.0000    
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .    10
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL        ALL               
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= structural.mntr                                                                                                                                                                                                                                                     
+
+ *** LOAD STEP     4   SUBSTEP     1  COMPLETED.    CUM ITER =     31
+ *** TIME =   3.10000         TIME INC =  0.100000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     2  COMPLETED.    CUM ITER =     32
+ *** TIME =   3.20000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     3  COMPLETED.    CUM ITER =     33
+ *** TIME =   3.30000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     4  COMPLETED.    CUM ITER =     34
+ *** TIME =   3.40000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     5  COMPLETED.    CUM ITER =     35
+ *** TIME =   3.50000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     6  COMPLETED.    CUM ITER =     36
+ *** TIME =   3.60000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     7  COMPLETED.    CUM ITER =     37
+ *** TIME =   3.70000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     8  COMPLETED.    CUM ITER =     38
+ *** TIME =   3.80000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     9  COMPLETED.    CUM ITER =     39
+ *** TIME =   3.90000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    10  COMPLETED.    CUM ITER =     40
+ *** TIME =   4.00000         TIME INC =  0.100000      OLD TRIANG MATRIX
+
+ FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  ELAPSED TIME =         6.472
+
+
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   21:44:21  SEP 13, 2026 Elapsed Time=      6.494
+
+                                                                               
+
+
+
+          ***** MAPDL RESULTS INTERPRETATION (POST1) *****
+
+ *** NOTE ***                            ELAPSED TIME =       6.495   TIME= 21:44:21
+ Reading results into the database (SET command) will update the current 
+ displacement and force boundary conditions in the database with the     
+ values from the results file for that load set.  Note that any          
+ subsequent solutions will use these values unless action is taken to    
+ either SAVE the current values or not overwrite them (/EXIT,NOSAVE).    
+
+ OPENED FILE= values.csv FOR COMMAND FILE DATA 
+
+
+
+ USE LOAD STEP     0  SUBSTEP  LAST    FOR LOAD CASE 0 
+ USE DATA SET FOR TIME OR FREQUENCY=  1.0000    
+
+ SET COMMAND GOT LOAD STEP=     1  SUBSTEP=    10  CUMULATIVE ITERATION=    10
+   TIME/FREQUENCY=  1.0000    
+ TITLE=                                                                         
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ *GET  UXV       FROM  NODE      2  ITEM=U    X     VALUE=  0.00000000    
+
+ *GET  UYV       FROM  NODE      3  ITEM=U    Y     VALUE=-0.117000000E-02
+
+ *GET  UZV       FROM  NODE      6  ITEM=U    Z     VALUE=-0.117000000E-02
+
+ STORE SXV      FROM ITEM=S    COMP=X     FOR ALL SELECTED ELEMENTS
+
+ *GET  SXX       FROM  ELEM         1  ITEM=ETAB SXV       VALUE=  1.79999995    
+
+ PARAMETER RFV =     0.000000000    
+
+ *GET  R1        FROM  NODE         1  ITEM=RF   FX    VALUE=-0.450000000     
+
+ *GET  R4        FROM  NODE         4  ITEM=RF   FX    VALUE=-0.450000000     
+
+ *GET  R5        FROM  NODE         5  ITEM=RF   FX    VALUE=-0.450000000     
+
+ *GET  R8        FROM  NODE         8  ITEM=RF   FX    VALUE=-0.450000000     
+
+ PARAMETER RFV =    -1.800000000    
+
+ PARAMETER CFV =     0.000000000    
+
+ PARAMETER STATV =     0.000000000    
+
+ PARAMETER GAPV =     0.000000000    
+
+ PARAMETER TV =     1.000000000    
+
+
+ USE LOAD STEP     0  SUBSTEP  LAST    FOR LOAD CASE 0 
+ USE DATA SET FOR TIME OR FREQUENCY=  2.0000    
+
+ SET COMMAND GOT LOAD STEP=     2  SUBSTEP=    10  CUMULATIVE ITERATION=    20
+   TIME/FREQUENCY=  2.0000    
+ TITLE=                                                                         
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ *GET  UXV       FROM  NODE      2  ITEM=U    X     VALUE=  0.00000000    
+
+ *GET  UYV       FROM  NODE      3  ITEM=U    Y     VALUE=-0.520000000E-03
+
+ *GET  UZV       FROM  NODE      6  ITEM=U    Z     VALUE=-0.520000000E-03
+
+ STORE SXV      FROM ITEM=S    COMP=X     FOR ALL SELECTED ELEMENTS
+
+ *GET  SXX       FROM  ELEM         1  ITEM=ETAB SXV       VALUE= 0.800000012    
+
+ PARAMETER RFV =     0.000000000    
+
+ *GET  R1        FROM  NODE         1  ITEM=RF   FX    VALUE=-0.200000000     
+
+ *GET  R4        FROM  NODE         4  ITEM=RF   FX    VALUE=-0.200000000     
+
+ *GET  R5        FROM  NODE         5  ITEM=RF   FX    VALUE=-0.200000000     
+
+ *GET  R8        FROM  NODE         8  ITEM=RF   FX    VALUE=-0.200000000     
+
+ PARAMETER RFV =   -0.8000000000    
+
+ PARAMETER CFV =     0.000000000    
+
+ PARAMETER STATV =     0.000000000    
+
+ PARAMETER GAPV =     0.000000000    
+
+ PARAMETER TV =     2.000000000    
+
+
+ USE LOAD STEP     0  SUBSTEP  LAST    FOR LOAD CASE 0 
+ USE DATA SET FOR TIME OR FREQUENCY=  3.0000    
+
+ SET COMMAND GOT LOAD STEP=     3  SUBSTEP=    10  CUMULATIVE ITERATION=    30
+   TIME/FREQUENCY=  3.0000    
+ TITLE=                                                                         
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ *GET  UXV       FROM  NODE      2  ITEM=U    X     VALUE=  0.00000000    
+
+ *GET  UYV       FROM  NODE      3  ITEM=U    Y     VALUE=-0.130000000E-02
+
+ *GET  UZV       FROM  NODE      6  ITEM=U    Z     VALUE=-0.130000000E-02
+
+ STORE SXV      FROM ITEM=S    COMP=X     FOR ALL SELECTED ELEMENTS
+
+ *GET  SXX       FROM  ELEM         1  ITEM=ETAB SXV       VALUE=  2.00000000    
+
+ PARAMETER RFV =     0.000000000    
+
+ *GET  R1        FROM  NODE         1  ITEM=RF   FX    VALUE=-0.500000000     
+
+ *GET  R4        FROM  NODE         4  ITEM=RF   FX    VALUE=-0.500000000     
+
+ *GET  R5        FROM  NODE         5  ITEM=RF   FX    VALUE=-0.500000000     
+
+ *GET  R8        FROM  NODE         8  ITEM=RF   FX    VALUE=-0.500000000     
+
+ PARAMETER RFV =    -2.000000000    
+
+ PARAMETER CFV =     0.000000000    
+
+ PARAMETER STATV =     0.000000000    
+
+ PARAMETER GAPV =     0.000000000    
+
+ PARAMETER TV =     3.000000000    
+
+
+ USE LOAD STEP     0  SUBSTEP  LAST    FOR LOAD CASE 0 
+ USE DATA SET FOR TIME OR FREQUENCY=  4.0000    
+
+ SET COMMAND GOT LOAD STEP=     4  SUBSTEP=    10  CUMULATIVE ITERATION=    40
+   TIME/FREQUENCY=  4.0000    
+ TITLE=                                                                         
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ *GET  UXV       FROM  NODE      2  ITEM=U    X     VALUE=-0.100000000E-01
+
+ *GET  UYV       FROM  NODE      3  ITEM=U    Y     VALUE=-0.100000000E-02
+
+ *GET  UZV       FROM  NODE      6  ITEM=U    Z     VALUE=-0.100000000E-02
+
+ STORE SXV      FROM ITEM=S    COMP=X     FOR ALL SELECTED ELEMENTS
+
+ *GET  SXX       FROM  ELEM         1  ITEM=ETAB SXV       VALUE=-0.103250741E-13
+
+ PARAMETER RFV =     0.000000000    
+
+ *GET  R1        FROM  NODE         1  ITEM=RF   FX    VALUE= 0.254073299E-014
+
+ *GET  R4        FROM  NODE         4  ITEM=RF   FX    VALUE= 0.169577469E-014
+
+ *GET  R5        FROM  NODE         5  ITEM=RF   FX    VALUE= 0.316063883E-014
+
+ *GET  R8        FROM  NODE         8  ITEM=RF   FX    VALUE= 0.292792762E-014
+
+ PARAMETER RFV =    0.1032507413E-13
+
+ PARAMETER CFV =     0.000000000    
+
+ PARAMETER STATV =     0.000000000    
+
+ PARAMETER GAPV =     0.000000000    
+
+ PARAMETER TV =     4.000000000    
+
+  COMMAND FILE CLOSED 
+
+
+ EXIT THE MAPDL POST1 DATABASE PROCESSOR
+
+
+ ***** ROUTINE COMPLETED *****  ELAPSED TIME =         6.516
+
+
+
+ EXIT MAPDL WITHOUT SAVING DATABASE
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          0
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+Release: 2026 R1            Build: 26.1       Update: UP20260202   Platform: WINDOWS x64 
+Date Run: 09/13/2026   Time: 21:44     Process ID: 28060
+Operating System: Windows 11  (Build: 26200)
+
+Processor Model: AMD Ryzen 7 7435HS
+
+Compiler: Intel(R) Fortran Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) C/C++ Compiler Classic Version 2021.9  (Build: 20230302)
+          AOCL-BLAS 5.1.1 Build 20251008
+          Intel(R) oneAPI Math Kernel Library Version 2024.2.3-Product Build 20250403
+
+Number of machines requested            :    1
+Total number of cores available         :   16
+Number of physical cores available      :    8
+Number of processes requested           :    1
+Number of threads per process requested :    1
+Total number of cores requested         :    1 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: structural
+Input File: C:\Users\asus\AppData\Local\Temp\FDM-Annealing\stage09_eigen_fixed_01\input.dat
+Working Directory: C:\Users\asus\AppData\Local\Temp\FDM-Annealing\stage09_eigen_fixed_01
+
+Total CPU time for main thread                    :        0.9 seconds
+Total CPU time summed for all threads             :        0.7 seconds
+
+Elapsed time spent obtaining a license            :        1.3 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
+Elapsed time spent solution - preprocessing       :        0.0 seconds
+Elapsed time spent computing solution             :        0.2 seconds
+   Elapsed time in element formation & assembly   :        0.0 seconds
+   Elapsed time in equation solver                :        0.2 seconds
+   Elapsed time in element result calculations    :        0.0 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+Equation solver used                              :            Sparse (symmetric)
+
+Sum of disk space used on all processes           :        0.4 MB
+
+Sum of memory used on all processes               :       42.0 MB
+Sum of memory allocated on all processes          :     2304.0 MB
+Physical memory available                         :         16 GB
+Total amount of I/O written to disk               :        0.0 GB
+Total amount of I/O read from disk                :        0.0 GB
+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2026 R1         Build 26.1         UP20260202    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)     1024 MB     Scratch Memory Requested   1024 MB |
+ |  Max Database Used(Master)      1 MB     Max Scratch Used(Master)     41 MB |
+ |  Max Database Used(Workers)     0 MB     Max Scratch Used(Workers)     0 MB |
+ |  Sum Database Used(All)         1 MB     Sum Scratch Used(All)        41 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          0.703       Time  =  21:44:32          |
+ |        Elapsed Time (sec) =         16.804       Date  =  09/13/2026        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*

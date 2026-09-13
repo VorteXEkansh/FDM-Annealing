@@ -1,0 +1,38 @@
+{
+  "accepted": false,
+  "error": "",
+  "returncode": 0,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM-Annealing\\stage09_contact_01\\input.dat",
+    "-o",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM-Annealing\\stage09_contact_01\\mapdl.out",
+    "-j",
+    "structural",
+    "-np",
+    "1"
+  ],
+  "files": {
+    "case.json": "a62ba8d3a13bf2a1737fa23d3a59d575de107e59840232caacca67fbafe52004",
+    "comparison.csv": "1ef324c8a665b02f4513c0ecb87a2aaa3a8721a44ab6dec091bd2d667d954ccc",
+    "input.dat": "c24c4de663479fd079b13e97644635c850be605df30b35fa1235a10970f92d4a",
+    "mapdl.out": "9bc8d4b2d4469762ef4a97f65413a1224dd9c80ded5143959b3e515b218faa00",
+    "script_snapshot.py": "0e8da40809565242bdca4a128c58dd01691266666d25d43d0599bc2519bb8017",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "structural.DSP": "e6942098069bec87b45f70ca260f46dbca78cf1bd4f10ffd2df1db46d8fd2239",
+    "structural.emat": "8a47678edee55fe7b659e2d67eef19d73fb33b48d1bf94260a86d3a62fb69cf5",
+    "structural.err": "cdeb781910fc9db662e0771d09a7dc3ecd0e2323db3b2ddf94aa9f41735cd46a",
+    "structural.esav": "be10e77cf5f56134c2aa6a906ee44d93a1794be324db5aa966852df12ef05029",
+    "structural.full": "faa2955bbde0416daa14337f12f43880dcbb2f9675a6074411af0c7f4b1c3410",
+    "structural.ldhi": "76c75d270ae92ad6bdc470fcf5b62871e0878d1d5869426073ef254df62b3c25",
+    "structural.log": "192b279eb61e2ae667812e09c7573758f3236810962c1b3307c1e19a2e56de68",
+    "structural.mntr": "e506c1e69deece48937173920f0e9a9215900254fa1e666f37c975d87399a4cc",
+    "structural.r001": "babe3145558004832b62118ecbcb61d9d9da8d044a2bbddf83629c711c8f862f",
+    "structural.rdb": "0883615a911a7ef063fa57179c462fae9caad75634145dc7f6f40001399d923d",
+    "structural.rst": "f3057f12482f405242736458c0c17f4c7a00ac3bce3d6da6f80e127f2c7dc51f",
+    "values.csv": "3efba2c402e97960af08578dbc5081a2d546c70800637312b8560a94b5d85703"
+  }
+}

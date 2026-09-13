@@ -1,0 +1,205 @@
+{
+  "kind": "visco",
+  "units": "N mm s MPa degC",
+  "length": 10.0,
+  "area": 1.0,
+  "E": 1691.594,
+  "nu": 0.35,
+  "alpha": 1e-05,
+  "gap": 0.002,
+  "eigenstrain": -0.001,
+  "absolute_tolerance": 1e-07,
+  "relative_tolerance": 0.001,
+  "purpose": "isothermal source-spectrum implementation test at 65 C; not physical validation",
+  "prony": [
+    {
+      "branch": 1,
+      "shear_fraction": 0.0036817345060339533,
+      "bulk_fraction": 0.0036817345060339533,
+      "reference_relaxation_time_s": 1.176e-14,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 2,
+      "shear_fraction": 0.0010676320677420231,
+      "bulk_fraction": 0.0010676320677420231,
+      "reference_relaxation_time_s": 1.228e-14,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 3,
+      "shear_fraction": 0.00464000227004825,
+      "bulk_fraction": 0.00464000227004825,
+      "reference_relaxation_time_s": 2.878e-14,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 4,
+      "shear_fraction": 0.007537860739633741,
+      "bulk_fraction": 0.007537860739633741,
+      "reference_relaxation_time_s": 1.701e-12,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 5,
+      "shear_fraction": 0.012329790718103752,
+      "bulk_fraction": 0.012329790718103752,
+      "reference_relaxation_time_s": 9.178e-12,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 6,
+      "shear_fraction": 0.01838739082782275,
+      "bulk_fraction": 0.01838739082782275,
+      "reference_relaxation_time_s": 6.034e-11,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 7,
+      "shear_fraction": 0.026936723587338333,
+      "bulk_fraction": 0.026936723587338333,
+      "reference_relaxation_time_s": 6.187e-09,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 8,
+      "shear_fraction": 0.03785541920815515,
+      "bulk_fraction": 0.03785541920815515,
+      "reference_relaxation_time_s": 1.102e-07,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 9,
+      "shear_fraction": 0.054672693329486856,
+      "bulk_fraction": 0.054672693329486856,
+      "reference_relaxation_time_s": 1.047e-06,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 10,
+      "shear_fraction": 0.0803478848943659,
+      "bulk_fraction": 0.0803478848943659,
+      "reference_relaxation_time_s": 6.903e-06,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 11,
+      "shear_fraction": 0.06708938433217426,
+      "bulk_fraction": 0.06708938433217426,
+      "reference_relaxation_time_s": 2.582e-05,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 12,
+      "shear_fraction": 0.07582552314562477,
+      "bulk_fraction": 0.07582552314562477,
+      "reference_relaxation_time_s": 5.363e-05,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 13,
+      "shear_fraction": 0.10254824739269588,
+      "bulk_fraction": 0.10254824739269588,
+      "reference_relaxation_time_s": 0.0001838,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 14,
+      "shear_fraction": 0.05521005631374904,
+      "bulk_fraction": 0.05521005631374904,
+      "reference_relaxation_time_s": 0.0004386,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 15,
+      "shear_fraction": 0.0968341103125218,
+      "bulk_fraction": 0.0968341103125218,
+      "reference_relaxation_time_s": 0.0007577,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 16,
+      "shear_fraction": 0.07939907566472806,
+      "bulk_fraction": 0.07939907566472806,
+      "reference_relaxation_time_s": 0.001795,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 17,
+      "shear_fraction": 0.07050509755887051,
+      "bulk_fraction": 0.07050509755887051,
+      "reference_relaxation_time_s": 0.002292,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 18,
+      "shear_fraction": 0.059468170258348045,
+      "bulk_fraction": 0.059468170258348045,
+      "reference_relaxation_time_s": 0.006576,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 19,
+      "shear_fraction": 0.047608350467074255,
+      "bulk_fraction": 0.047608350467074255,
+      "reference_relaxation_time_s": 0.00992,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 20,
+      "shear_fraction": 0.036429545150905004,
+      "bulk_fraction": 0.036429545150905004,
+      "reference_relaxation_time_s": 0.0329,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 21,
+      "shear_fraction": 0.026311278001695443,
+      "bulk_fraction": 0.026311278001695443,
+      "reference_relaxation_time_s": 0.05374,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 22,
+      "shear_fraction": 0.018047474748669006,
+      "bulk_fraction": 0.018047474748669006,
+      "reference_relaxation_time_s": 0.06586,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    },
+    {
+      "branch": 23,
+      "shear_fraction": 0.01100145779661077,
+      "bulk_fraction": 0.01100145779661077,
+      "reference_relaxation_time_s": 35.03,
+      "temperature_C": 65,
+      "evidence_class": "B: arithmetic from source C; matching bulk spectrum is a constitutive assumption"
+    }
+  ],
+  "temperature_C": 65.0,
+  "strain": 0.001,
+  "ramp_s": 1.0,
+  "dt": 0.0001,
+  "hold_dt": 0.1
+}

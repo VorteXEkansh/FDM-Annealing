@@ -1,0 +1,37 @@
+{
+  "accepted": false,
+  "error": "",
+  "returncode": 0,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM-Annealing\\stage09_visco_01\\input.dat",
+    "-o",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM-Annealing\\stage09_visco_01\\mapdl.out",
+    "-j",
+    "structural",
+    "-np",
+    "1"
+  ],
+  "files": {
+    "case.json": "8ba6ae48e2f929ebbeed87b4e441675add07e344b77f1426d09bf367df51fec1",
+    "comparison.csv": "801cc2077a105fa0269ffeaec6f1f4fd2a6b4080a333839ea7047ff144123ad7",
+    "input.dat": "e200c55c3dd76d90875964e178dbc8ba3972e98460329a31556a00318e51e489",
+    "mapdl.out": "36bf372fb77fb0ca797976a81ccfe45284fa870652a1ee613c3c75c9d232a59b",
+    "script_snapshot.py": "0e8da40809565242bdca4a128c58dd01691266666d25d43d0599bc2519bb8017",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "structural.DSP": "b86901dcdd009c31f17b1b13166062dacf3b3cfc771791d3477f94e418a1e657",
+    "structural.err": "564fb706aecdaa48d7c26d5377caa6402962626921cef72d98a7d6f228f06724",
+    "structural.esav": "e7ac3d9949fd2c6beedb7ee001c1007a8a865c2e56397a1f080e5bf9a39d977a",
+    "structural.full": "b997da8ea47dd8792cffb3a3383918a0792d849764dd0bfd5768f043801821d4",
+    "structural.ldhi": "78c980094cd42677f6e52d066e581bc48892689a9164307e05ef322a701c4d2e",
+    "structural.log": "eb3533b5151ba64d319293707fe3f385b0241ab1fd67d677643fab4fa6e49dcf",
+    "structural.mntr": "bd8e5290aa8321fc814b0c8b5f7ef9d269e6e6c246803d32a071d14608f22df9",
+    "structural.r001": "70740db0efeaf2cf77c9e3f31c1d40c9054e14560f3c89afb4b766d01f9efa12",
+    "structural.rdb": "f3053406a86bbe0feb0a94d109f1ea0699a0f62692d922d480776f5d7bb26d5e",
+    "structural.rst": "fd224f457605cc16766cabb538d695abd70c873c9c116ccc6118f6051f776d6f",
+    "values.csv": "f499defd7acb841041a50a74d4c1f9f9b91788e514fe53ae50ba4007207f8265"
+  }
+}

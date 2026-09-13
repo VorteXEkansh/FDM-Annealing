@@ -1,4 +1,4 @@
-"""Stage 8 document, provenance, thermal verification and production-gate checks."""
+"""Stage 9 document, provenance, thermal verification and production-gate checks."""
 from pathlib import Path
 import csv, hashlib, json, re, subprocess, sys
 from pypdf import PdfReader
@@ -33,7 +33,7 @@ def main():
     check('Retained references and citations correspond',citations==set(range(1,41)))
     check('Retained DOIs present',all(r['doi'] in source for r in refs))
     check('Objectives numbered 1 through 5',re.findall(r'^(\d)\. ',source,re.M)==['1','2','3','4','5'])
-    check('Equations numbered consecutively',re.findall(r'\((\d+)\)\s*$', '\n'.join(l for l in source.splitlines() if l.startswith('EQ:')),re.M)==list(map(str,range(1,19))))
+    check('Equations numbered consecutively',re.findall(r'\((\d+)\)\s*$', '\n'.join(l for l in source.splitlines() if l.startswith('EQ:')),re.M)==list(map(str,range(1,21))))
     check('No duplicated or result figures',source.count('FIGURE:')==1 and source.count('CAPTION: Figure 1.')==1)
     for path in ['results/run_registry.csv','data/literature/property_registry.csv','data/literature/validation_registry.csv']:
         with (ROOT/path).open(encoding='utf-8') as f: rows=list(csv.DictReader(f))
@@ -69,7 +69,7 @@ def main():
     check('Material output hashes recorded',all(digest(ROOT/x['path'])==x['sha256'] for x in manifest4['outputs']))
     check('Material evidence hashes recorded',all(digest(ROOT/x['path'])==x['sha256'] for x in manifest4['evidence']))
     equation_map=list(csv.DictReader((ROOT/'docs/equation_implementation_map.csv').open(encoding='utf-8')))
-    check('Every governing equation has an implementation target', [r['equation'] for r in equation_map]==list(map(str,range(1,19))))
+    check('Every governing equation has an implementation target', [r['equation'] for r in equation_map]==list(map(str,range(1,21))))
     test_report=json.loads((ROOT/'docs/stage_05_constitutive_tests.json').read_text(encoding='utf-8'))
     check('All 38 constitutive tests passed',test_report['passed'] and test_report['tests_run']==38 and all(r['status']=='pass' for r in test_report['tests']))
     check('Constitutive test input and code hashes match',all(digest(ROOT/p)==h for p,h in test_report['sha256'].items()))
@@ -82,13 +82,13 @@ def main():
     subprocess.run([sys.executable,str(ROOT/'scripts/build_manuscript.py')],check=True,cwd=ROOT,capture_output=True)
     check('PDF reproducible byte-for-byte',digest(PDF)==before)
     reader=PdfReader(PDF)
-    check('Complete manuscript page count matches reviewed stage record',len(reader.pages)==json.loads((ROOT/'docs/stage_08_pdf_review.json').read_text())['page_count'])
-    review=json.loads((ROOT/'docs/stage_08_pdf_review.json').read_text())
+    check('Complete manuscript page count matches reviewed stage record',len(reader.pages)==json.loads((ROOT/'docs/stage_09_pdf_review.json').read_text())['page_count'])
+    review=json.loads((ROOT/'docs/stage_09_pdf_review.json').read_text())
     check('All pages visually reviewed for the current PDF hash',review['visual_status']=='pass' and review['reviewed_pdf_sha256']==digest(PDF) and review['reviewed_pages']==list(range(1,len(reader.pages)+1)))
     text='\n'.join(p.extract_text() for p in reader.pages)
     for pattern in [r'F3498',r'sqrt\s*\(',r'epsilon_ann',r'Delta L',r'95 C',r'3 x 3',r'130 physical specimens',r'\bTODO\b',r'\bTBD\b',r'\ufffd']:
         check('Forbidden manuscript pattern absent: '+pattern,not re.search(pattern,text))
-    check('Thermal evidence boundary explicitly reported','verification-only ANSYS transient thermal field solution' in source and 'no production PLA coupon result' in source)
+    check('Thermal evidence boundary explicitly reported','six structural/contact ANSYS reference cases' in source and 'no production PLA coupon result' in source)
     check('Accepted thermal error values reported',all(v in text for v in ['0.005180700 °C','0.001700533%','0.157660518%']))
     check('Thermal choices typeset',all(v in text for v in ['80 °C','95 °C','110 °C','30 min','60 min','90 min']))
     check('Mathematical symbols preserved',all(c in text for c in 'Δεσρ∂∇√∑∈⊥'))
@@ -99,14 +99,19 @@ def main():
     thermal=json.loads((ROOT/'docs/stage_08_thermal_checks.json').read_text())
     check('Stage 8 thermal verification checks passed',thermal['passed'] and thermal['count']==36 and thermal['maximum_absolute_error_C']==0.0051807)
     check('Published thermal comparison equals accepted run',digest(ROOT/'verification/thermal_verification.csv')==digest(ROOT/'simulation/verification/stage08_attempt_05/comparison.csv'))
-    check('Production thermal gaps remain explicit',all(t in source for t in ['Compatible temperature-dependent Prusament functions remain absent','Radiation is omitted from this benchmark','no PLA coupon solution']))
+    check('Production thermal gaps remain explicit',all(t in source for t in ['Compatible temperature-dependent Prusament functions remain absent','Radiation is omitted from this benchmark','no production PLA coupon solution']))
+    structural=json.loads((ROOT/'docs/stage_09_structural_checks.json').read_text())
+    check('Stage 9 comparisons pass',structural['passed'] and structural['comparison_count']==114)
+    check('Stage 9 source hashes match',all(digest(ROOT/p)==h for p,h in structural['source_hashes'].items()))
+    check('Structural evidence limits declared','synthetic eigenstrain' in source and 'non-isothermal clock' in source)
+    check('All structural comparisons admitted',all(r['passed']=='True' for filename in ['structural_verification.csv','contact_verification.csv'] for r in csv.DictReader((ROOT/'verification'/filename).open())))
     with pdfplumber.open(PDF) as pdf:
         bad=[]
         for n,p in enumerate(pdf.pages,1):
             for c in p.chars:
                 if c['text'].strip() and (c['x0']<48 or c['x1']>p.width-46 or c['top']<30 or c['bottom']>p.height-18): bad.append(n)
         check('All text lies inside page safety bounds',not bad)
-    report={'stage':8,'date':'2026-09-13','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'material_manifest_sha256':digest(ROOT/'material/build_manifest.json'),'geometry_manifest_sha256':digest(ROOT/'simulation/geometry/stage07_plate_gap/manifest.json'),'thermal_manifest_sha256':digest(ROOT/'simulation/verification/stage08_attempt_05/manifest.json'),'scope':'Document, source, property, environment, geometry and genuine MAPDL plane-wall thermal verification integrity. No production PLA coupon solution or physical validation.'}
+    report={'stage':9,'date':'2026-09-13','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'material_manifest_sha256':digest(ROOT/'material/build_manifest.json'),'geometry_manifest_sha256':digest(ROOT/'simulation/geometry/stage07_plate_gap/manifest.json'),'thermal_manifest_sha256':digest(ROOT/'simulation/verification/stage08_attempt_05/manifest.json'),'scope':'Document, source, property, environment, geometry and genuine MAPDL plane-wall thermal verification integrity. No production PLA coupon solution or physical validation.'}
     (ROOT/'docs/integrity_report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     print(f'{len(checks)} integrity checks passed; PDF SHA-256 {digest(PDF)}')
 

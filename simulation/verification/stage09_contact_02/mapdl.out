@@ -1,0 +1,508 @@
+
+ ANSYS LICENSE MANAGER ERROR:
+ Maximum licensed number of demo users already reached.
+
+
+ ANSYS LICENSE MANAGER ERROR:
+ No such feature exists.
+ Feature:       mech_2
+ License path:  C:\Users\asus\AppData\Local\Temp\\95d590d4-9f90-4f22-9889-7f8b649b3359;
+ FlexNet Licensing error:-5,357
+
+
+ ANSYS LICENSE MANAGER ERROR:
+ No such feature exists.
+ Feature:       mech_1
+ License path:  C:\Users\asus\AppData\Local\Temp\\95d590d4-9f90-4f22-9889-7f8b649b3359;
+ FlexNet Licensing error:-5,357
+
+
+ ANSYS LICENSE MANAGER ERROR:
+ No such feature exists.
+ Feature:       meba
+ License path:  C:\Users\asus\AppData\Local\Temp\\95d590d4-9f90-4f22-9889-7f8b649b3359;
+ FlexNet Licensing error:-5,357
+
+
+ Ansys Mechanical Enterprise Academic Student      
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *         ANSYS MAPDL 2026 R1          LEGAL NOTICES          *
+ ***************************************************************
+ *                                                             *
+ * Copyright (c) 2026 Synopsys, Inc. and ANSYS, Inc.           *
+ * All rights reserved.                                        *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of Ansys, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the Ansys, Inc. online documentation or the Ansys, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * Ansys, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * Ansys, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the Ansys, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the Ansys, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ 2026 R1 
+     
+ Point Releases and Patches installed:   
+     
+ Ansys, Inc. License Manager 2026 R1 
+ Discovery (full install) 2026 R1
+ Core WB Files 2026 R1   
+ optiSLang Core UI 2026 R1   
+ CFX (includes CFD-Post) 2026 R1 
+ Chemkin 2026 R1 
+ EnSight 2026 R1 
+ FENSAP-ICE 2026 R1  
+ Fluent (includes CFD-Post) 2026 R1  
+ Polyflow (includes CFD-Post) 2026 R1
+ Forte (includes EnSight) 2026 R1
+ Rocky 2026 R1   
+ TurboGrid 2026 R1   
+ ACIS Geometry Interface 2026 R1 
+ AutoCAD Geometry Interface 2026 R1  
+ Catia, Version 4 Geometry Interface 2026 R1 
+ Catia, Version 5 Geometry Interface 2026 R1 
+ Catia, Version 6 Geometry Interface 2026 R1 
+ Creo Elements/Direct Modeling Geometry Interface 2026 R1
+ Creo Parametric Geometry Interface 2026 R1  
+ Inventor Geometry Interface 2026 R1 
+ JTOpen Geometry Interface 2026 R1   
+ NX Geometry Interface 2026 R1   
+ Parasolid Geometry Interface  2026 R1   
+ Solid Edge Geometry Interface 2026 R1   
+ SOLIDWORKS Geometry Interface 2026 R1   
+ Speos 2026 R1   
+ SpaceClaim 2026 R1  
+ Speos RPC 2026 R1   
+ Zemax OpticStudio 2026 R1   
+ Dynamic Reporting 2026 R1   
+ Aqwa 2026 R1
+ Autodyn 2026 R1 
+ Material Calibration App 2026 R1
+ Mechanical Products 2026 R1 
+ Motion 2026 R1  
+ Academic Student 2026 R1
+
+
+          *****  MAPDL COMMAND LINE ARGUMENTS  *****
+  INITIAL JOBNAME              = structural                                                                                                                                                                                                                                              
+  BATCH MODE REQUESTED (-b)    = LIST
+  INPUT FILE COPY MODE (-c)    = COPY
+       1 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
+    TOTAL OF     1 CORES REQUESTED
+  INPUT FILE NAME              = C:\Users\asus\AppData\Local\Temp\FDM-Annealing\stage09_contact_02\input.dat
+  OUTPUT FILE NAME             = C:\Users\asus\AppData\Local\Temp\FDM-Annealing\stage09_contact_02\mapdl.out
+
+ RELEASE= 2026 R1              BUILD= 26.1      UP20260202   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=structural  21:45:19  SEP 13, 2026  Elapsed Time=       0.234
+
+     1  /BATCH  
+     2  /FILNAME,structural 
+     3  /PREP7  
+     4  ET,1,185
+     5  MP,EX,1,2000.0  
+     6  MP,PRXY,1,0.3   
+     7  MP,ALPX,1,1e-05 
+     8  TREF,20 
+     9  N,1,0,0,0   
+    10  N,2,10,0,0  
+    11  N,3,10,1,0  
+    12  N,4,0,1,0   
+    13  N,5,0,0,1   
+    14  N,6,10,0,1  
+    15  N,7,10,1,1  
+    16  N,8,0,1,1   
+    17  E,1,2,3,4,5,6,7,8   
+    18  NSEL,S,LOC,X,0  
+    19  D,ALL,UX,0  
+    20  NSEL,S,LOC,Y,0  
+    21  D,ALL,UY,0  
+    22  NSEL,S,LOC,Z,0  
+    23  D,ALL,UZ,0  
+    24  ALLSEL,ALL  
+    25  CP,1,UX,2,3,6,7 
+    26  N,9,10.002,0,0  
+    27  D,9,ALL,0   
+    28  ET,2,178
+    29  KEYOPT,2,2,4
+    30  KEYOPT,2,5,1
+    31  R,2 
+    32  RMODIF,2,9,-1e-9,-1e-9  
+    33  TYPE,2  
+    34  REAL,2  
+    35  E,2,9   
+    36  ALLSEL,ALL  
+    37  FINISH  
+    38  /SOLU   
+    39  ANTYPE,STATIC   
+    40  NLGEOM,OFF  
+    41  OUTRES,ALL,ALL  
+    42  AUTOTS,OFF  
+    43  KBC,0   
+    44  TIME,1.0
+    45  NSUBST,10,10,10 
+    46  BF,ALL,TEMP,30.0
+    47  SOLVE   
+    48  TIME,2.0
+    49  NSUBST,10,10,10 
+    50  BF,ALL,TEMP,80.0
+    51  SOLVE   
+    52  TIME,3.0
+    53  NSUBST,10,10,10 
+    54  BF,ALL,TEMP,20.0
+    55  SOLVE   
+    56  FINISH  
+    57  /POST1  
+    58  *CFOPEN,values,csv  
+    59  SET,,,,,1.0 
+    60  ALLSEL,ALL  
+    61  *GET,UXV,NODE,2,U,X 
+    62  *GET,UYV,NODE,3,U,Y 
+    63  *GET,UZV,NODE,6,U,Z 
+    64  ETABLE,SXV,S,X  
+    65  *GET,SXX,ELEM,1,ETAB,SXV
+    66  RFV=0   
+    67  *GET,R1,NODE,1,RF,FX
+    68  *GET,R4,NODE,4,RF,FX
+    69  *GET,R5,NODE,5,RF,FX
+    70  *GET,R8,NODE,8,RF,FX
+    71  RFV=R1+R4+R5+R8 
+    72  CFV=0   
+    73  STATV=0 
+    74  GAPV=0  
+    75  ETABLE,CFOR,SMISC,1 
+    76  ETABLE,CSTAT,NMISC,1
+    77  ETABLE,CGAP,NMISC,3 
+    78  *GET,CFV,ELEM,2,ETAB,CFOR   
+    79  *GET,STATV,ELEM,2,ETAB,CSTAT
+    80  *GET,GAPV,ELEM,2,ETAB,CGAP  
+    81  TV=1.0  
+    82  *VWRITE,TV,UXV,UYV,UZV,SXX,RFV,CFV,STATV,GAPV   
+    83  (9(E23.15,',')) 
+    84  SET,,,,,2.0 
+    85  ALLSEL,ALL  
+    86  *GET,UXV,NODE,2,U,X 
+    87  *GET,UYV,NODE,3,U,Y 
+    88  *GET,UZV,NODE,6,U,Z 
+    89  ETABLE,SXV,S,X  
+    90  *GET,SXX,ELEM,1,ETAB,SXV
+    91  RFV=0   
+    92  *GET,R1,NODE,1,RF,FX
+    93  *GET,R4,NODE,4,RF,FX
+    94  *GET,R5,NODE,5,RF,FX
+    95  *GET,R8,NODE,8,RF,FX
+    96  RFV=R1+R4+R5+R8 
+    97  CFV=0   
+    98  STATV=0 
+    99  GAPV=0  
+   100  ETABLE,CFOR,SMISC,1 
+   101  ETABLE,CSTAT,NMISC,1
+   102  ETABLE,CGAP,NMISC,3 
+   103  *GET,CFV,ELEM,2,ETAB,CFOR   
+   104  *GET,STATV,ELEM,2,ETAB,CSTAT
+   105  *GET,GAPV,ELEM,2,ETAB,CGAP  
+   106  TV=2.0  
+   107  *VWRITE,TV,UXV,UYV,UZV,SXX,RFV,CFV,STATV,GAPV   
+   108  (9(E23.15,',')) 
+   109  SET,,,,,3.0 
+   110  ALLSEL,ALL  
+   111  *GET,UXV,NODE,2,U,X 
+   112  *GET,UYV,NODE,3,U,Y 
+   113  *GET,UZV,NODE,6,U,Z 
+   114  ETABLE,SXV,S,X  
+   115  *GET,SXX,ELEM,1,ETAB,SXV
+   116  RFV=0   
+   117  *GET,R1,NODE,1,RF,FX
+   118  *GET,R4,NODE,4,RF,FX
+   119  *GET,R5,NODE,5,RF,FX
+   120  *GET,R8,NODE,8,RF,FX
+   121  RFV=R1+R4+R5+R8 
+   122  CFV=0   
+   123  STATV=0 
+   124  GAPV=0  
+   125  ETABLE,CFOR,SMISC,1 
+   126  ETABLE,CSTAT,NMISC,1
+   127  ETABLE,CGAP,NMISC,3 
+   128  *GET,CFV,ELEM,2,ETAB,CFOR   
+   129  *GET,STATV,ELEM,2,ETAB,CSTAT
+   130  *GET,GAPV,ELEM,2,ETAB,CGAP  
+   131  TV=3.0  
+   132  *VWRITE,TV,UXV,UYV,UZV,SXX,RFV,CFV,STATV,GAPV   
+   133  (9(E23.15,',')) 
+   134  *CFCLOS 
+   135  FINISH  
+   136  /EXIT,NOSAVE
+
+ RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v261\Ansys\apdl\start.ans
+
+ /INPUT FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v261\Ansys\apdl\start.ans  LINE=       0
+
+ CURRENT JOBNAME REDEFINED AS structural
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   21:45:19  SEP 13, 2026 Elapsed Time=      8.529
+
+                                                                               
+
+
+
+          ***** MAPDL ANALYSIS DEFINITION (PREP7) *****
+
+ ELEMENT TYPE          1 IS SOLID185     3-D 8-NODE STRUCTURAL SOLID 
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY    UZ  
+  THREE-DIMENSIONAL MODEL
+
+ MATERIAL          1     EX   =   2000.000      
+
+ MATERIAL          1     PRXY =  0.3000000      
+
+ MATERIAL          1     ALPX =  0.1000000E-04  
+
+ REFERENCE TEMPERATURE=  20.000  (TUNIF=  20.000)
+
+ NODE          1  KCS=      0  X,Y,Z=  0.0000       0.0000       0.0000     
+
+ NODE          2  KCS=      0  X,Y,Z=  10.000       0.0000       0.0000     
+
+ NODE          3  KCS=      0  X,Y,Z=  10.000       1.0000       0.0000     
+
+ NODE          4  KCS=      0  X,Y,Z=  0.0000       1.0000       0.0000     
+
+ NODE          5  KCS=      0  X,Y,Z=  0.0000       0.0000       1.0000     
+
+ NODE          6  KCS=      0  X,Y,Z=  10.000       0.0000       1.0000     
+
+ NODE          7  KCS=      0  X,Y,Z=  10.000       1.0000       1.0000     
+
+ NODE          8  KCS=      0  X,Y,Z=  0.0000       1.0000       1.0000     
+
+ ELEMENT      1       1      2      3      4      5      6      7      8
+
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+          4  NODES (OF          8  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES            1 TO           8 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SELECT       FOR ITEM=LOC  COMPONENT=Y     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+          4  NODES (OF          8  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            1 TO           8 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SELECT       FOR ITEM=LOC  COMPONENT=Z     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+          4  NODES (OF          8  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED CONSTRAINT UZ   FOR SELECTED NODES            1 TO           8 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ COUPLED SET =          1  DIRECTION= UX    TOTAL NODES=        4
+ NODES ADDED =           2           3           6           7
+ MAXIMUM COUPLED SET NUMBER =          1
+
+ NODE          9  KCS=      0  X,Y,Z=  10.002       0.0000       0.0000     
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES            9 TO           9 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+ ADDITIONAL DOFS=  UY    UZ  
+
+ ELEMENT TYPE          2 IS CONTA178     3-D NODE-TO-NODE CONTACT    
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY    UZ  
+  THREE-DIMENSIONAL MODEL
+
+ ELEMENT TYPE       2 IS CONTA178     3-D NODE-TO-NODE CONTACT    
+  KEYOPT( 1- 6)=        0      4      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY    UZ  
+  THREE-DIMENSIONAL MODEL
+
+ ELEMENT TYPE       2 IS CONTA178     3-D NODE-TO-NODE CONTACT    
+  KEYOPT( 1- 6)=        0      4      0        0      1      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY    UZ  
+  THREE-DIMENSIONAL MODEL
+
+ REAL CONSTANT SET          2  ITEMS   1 TO   6
+    0.0000       0.0000       0.0000       0.0000       0.0000       0.0000    
+
+ MODIFY REAL CONSTANTS FOR SET      2  STARTING WITH  9  NEW VALUES ARE
+
+  -0.10000E-08 -0.10000E-08
+
+ ELEMENT TYPE SET TO         2
+
+ REAL CONSTANT NUMBER=        2
+
+ ELEMENT      2       2      9
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+
+ ***** ROUTINE COMPLETED *****  ELAPSED TIME =         8.533
+
+
+
+ *****  MAPDL SOLUTION ROUTINE  *****
+
+
+ PERFORM A STATIC ANALYSIS
+  THIS WILL BE A NEW ANALYSIS
+
+ SMALL DEFORMATION ANALYSIS
+
+ WRITE ALL  ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ DO NOT USE AUTOMATIC TIME STEPPING THIS LOAD STEP
+
+ STEP BOUNDARY CONDITION KEY= 0
+
+ TIME=  1.0000    
+
+ USE      10 SUBSTEPS INITIALLY THIS LOAD STEP FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE     10 SUBSTEPS AS A MAXIMUM
+   USE     10 SUBSTEPS AS A MINIMUM
+
+ SPECIFIED BODY FORCE TEMP FOR ALL SELECTED NODES SET TO   30.0000000 
+
+ ANSYS LICENSE MANAGER ERROR:
+ No such feature exists.
+ Feature:       meba
+ License path:  C:\Users\asus\AppData\Local\Temp\\95d590d4-9f90-4f22-9889-7f8b649b3359;
+ FlexNet Licensing error:-5,357
+
+
+ *** ERROR ***                           ELAPSED TIME =       8.650   TIME= 21:45:19
+ The capability SOLUTION was either not ordered with this Ansys          
+ installation or the appropriate product was not selected for this       
+ session.                                                                
+  Contact your Ansys support person for more information.                
+
+ ALL CURRENT MAPDL DATA WRITTEN TO FILE NAME= ansabort.db
+  FOR POSSIBLE RESUME FROM THIS POINT
+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+Release: 2026 R1            Build: 26.1       Update: UP20260202   Platform: WINDOWS x64 
+Date Run: 09/13/2026   Time: 21:45     Process ID: 9080
+Operating System: Windows 11  (Build: 26200)
+
+Processor Model: AMD Ryzen 7 7435HS
+
+Compiler: Intel(R) Fortran Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) C/C++ Compiler Classic Version 2021.9  (Build: 20230302)
+          AOCL-BLAS 5.1.1 Build 20251008
+          Intel(R) oneAPI Math Kernel Library Version 2024.2.3-Product Build 20250403
+ 
+Number of processes requested           :    1
+Number of threads per process requested :    1
+Total number of cores requested         :    1 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: structural
+Input File: C:\Users\asus\AppData\Local\Temp\FDM-Annealing\stage09_contact_02\input.dat
+Working Directory: C:\Users\asus\AppData\Local\Temp\FDM-Annealing\stage09_contact_02
+
+Total CPU time for main thread                    :        0.8 seconds
+Total CPU time summed for all threads             :        0.6 seconds
+
+Elapsed time spent obtaining a license            :        3.7 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
+Elapsed time spent solution - preprocessing       :        0.0 seconds
+Elapsed time spent computing solution             :        0.0 seconds
+   Elapsed time in element formation & assembly   :        0.0 seconds
+   Elapsed time in equation solver                :        0.0 seconds
+   Elapsed time in element result calculations    :        0.0 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2026 R1         Build 26.1         UP20260202    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)  1024 MB     Scratch Memory Requested      1024 MB |
+ |  Maximum Database Used       1 MB     Maximum Scratch Memory Used      9 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          0.578       Time  =  21:45:29          |
+ |        Elapsed Time (sec) =         18.958       Date  =  09/13/2026        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*

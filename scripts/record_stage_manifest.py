@@ -25,6 +25,11 @@ if args.stage >= 8:
     paths += [str(p.relative_to(ROOT)).replace('\\','/') for p in sorted((ROOT/'simulation/verification/stage08_attempt_05').iterdir()) if p.is_file() and p.suffix.lower() in {'.rth','.rdb','.r001','.full','.esav','.ldhi','.dsp','.mntr'}]
     paths = list(dict.fromkeys(paths))
     scope='Genuine MAPDL plane-wall transient thermal verification and fail-closed production thermal contract; no production PLA coupon solution or physical validation.'
+if args.stage >= 9:
+    paths += ['docs/structural_model.md','docs/stage_09_structural_checks.json','docs/stage_09_pdf_review.json','ansys/structural_model.py','scripts/run_structural_verification.py','scripts/check_structural_stage.py','tests/test_structural_verification.py','verification/structural_verification.csv','verification/contact_verification.csv']
+    paths += [str(p.relative_to(ROOT)).replace('\\','/') for directory in sorted((ROOT/'simulation/verification').glob('stage09_*')) for p in sorted(directory.iterdir()) if p.is_file()]
+    paths = list(dict.fromkeys(paths))
+    scope = 'Thermal plus six genuine structural/contact reference cases; no production annealing or independent physical validation.'
 data={'stage':args.stage,'date':'2026-09-13','algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
 (ROOT/f'docs/stage_{args.stage:02d}_manifest.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(f'Recorded {len(paths)} input/code/output hashes')

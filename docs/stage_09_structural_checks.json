@@ -1,0 +1,46 @@
+{
+  "stage": 9,
+  "passed": true,
+  "accepted_runs": [
+    "free_01",
+    "fixed_01",
+    "eigen_free_01",
+    "eigen_fixed_01",
+    "contact_03",
+    "visco_02"
+  ],
+  "comparisons": {
+    "free": 15,
+    "fixed": 15,
+    "eigen_free": 15,
+    "eigen_fixed": 20,
+    "contact": 24,
+    "visco": 25
+  },
+  "comparison_count": 114,
+  "unit_tests": 6,
+  "warnings": {
+    "free": 0,
+    "fixed": 0,
+    "eigen_free": 0,
+    "eigen_fixed": 0,
+    "contact": 6,
+    "visco": 4
+  },
+  "maximum_error_by_quantity": {
+    "contact_closed": 0,
+    "contact_force_N": 1.1920928799646902e-08,
+    "gap_mm": 9.499489996706023e-11,
+    "reaction_x_N": 3.827983260182993e-06,
+    "stress_x_MPa": 3.827089787883375e-06,
+    "ux_mm": 2.33060098997466e-14,
+    "uy_mm": 8.15733979450847e-16,
+    "uz_mm": 8.1506924055287e-16
+  },
+  "source_hashes": {
+    "scripts/run_structural_verification.py": "d965a924737b203523abc0aaebfe610a00b129faf7763e2e3808377f6dacbeb1",
+    "scripts/check_structural_stage.py": "6825c58cbf066fd420da5f1675a8f76955dc22924f54f28d8c0b653dfa3f5569",
+    "ansys/structural_model.py": "8224d3f2883c245f2f270cf83059402ca58bc458409425785cc17d866f7d381b",
+    "tests/test_structural_verification.py": "895836245e5edc1e3e9a3bee5a8ce7f1862042f0884dbec7226866ff558228a9"
+  }
+}

@@ -13,7 +13,7 @@ Computational manuscript draft · 13 September 2026
 
 <b>Planned approach.</b> Genuine ANSYS analysis will compare mechanically free annealing with opposed-face gap restraint for a 60 mm × 10 mm × 4 mm rectangular plate over an evidence-supported sub-melting domain. Candidate levels are 80&nbsp;°C, 95&nbsp;°C and 110&nbsp;°C, with holds of 30 min, 60 min and 90 min; their admission depends on the selected material evidence. Temperature-dependent, history-dependent behavior and contact will be represented only to the extent supported by data. Thermal histories, signed dimensions and released warpage will be distinguished from contact pressure and conditional stress predictions. Numerical verification, independent literature-based validation and uncertainty assessment will precede multi-objective interpretation.
 
-<b>Results status.</b> One verification-only ANSYS transient thermal field solution is complete; no production PLA coupon result, convergence claim, physical validation finding or optimum exists. For a constant-property plane wall with a ramp–hold–cool ambient history, genuine MAPDL center temperatures agree with a 200-term analytical solution to a maximum absolute error of 0.005180700&nbsp;°C. The maximum conventional relative error is 0.001700533% using kelvin, and the maximum error normalized by temperature excursion is 0.157660518%. The accepted model uses 1025 nodes, 640 SOLID70 elements and a fixed 0.25&nbsp;s step. These constants and temperatures are numerical verification fixtures, not PLA data. The production model remains blocked by compatible Prusament k(T) and c<sub>p</sub>(T), physical boundary/contact inputs and irreversible-strain evidence.
+<b>Results status.</b> One thermal and six structural/contact ANSYS reference cases are verified; no production PLA coupon result, convergence claim, physical validation finding or optimum exists. For a constant-property plane wall with a ramp–hold–cool ambient history, genuine MAPDL center temperatures agree with a 200-term analytical solution to a maximum absolute error of 0.005180700&nbsp;°C. The maximum conventional relative error is 0.001700533% using kelvin, and the maximum error normalized by temperature excursion is 0.157660518%. The accepted model uses 1025 nodes, 640 SOLID70 elements and a fixed 0.25&nbsp;s step. These constants and temperatures are numerical verification fixtures, not PLA data. Stage 9 passes 114 structural/contact comparisons; the maximum isothermal Prony stress error is 3.8271 × 10⁻⁶ MPa. Retained strain is checked with a declared synthetic eigenstrain, not a PLA kinetic law. The production model remains blocked by compatible Prusament k(T) and c<sub>p</sub>(T), physical boundary/contact inputs and irreversible-strain evidence.
 
 <b>Intended contribution.</b> The study will assess the clearance–distortion–stress trade-off and distinguish temporary geometric suppression from released stability. Prior supported annealing and numerical optimization preclude a broad first-of-kind claim. No strength improvement or industrial treatment recommendation is asserted.
 
@@ -278,7 +278,7 @@ The instantaneous modulus and normalized Prony conversion are
 
 EQ: E<sub>inst</sub> = E<sub>∞</sub> + ∑<sub>i=1</sub><sup>23</sup> k<sub>i</sub>, &nbsp; g<sub>i</sub> = k<sub>i</sub>/E<sub>inst</sub>,<br/>G<sub>inst</sub> = E<sub>inst</sub>/[2(1 + ν)], &nbsp; K<sub>inst</sub> = E<sub>inst</sub>/[3(1 − 2ν)]. &nbsp;&nbsp; (7)
 
-The deterministic modulus sum is E<sub>inst</sub> = 1691.594 MPa. Both normalized shear and bulk kernels use the same g<sub>i</sub> and τ<sub>i</sub>, retaining the assumed constant ν. The remaining equilibrium fraction is E<sub>∞</sub>/E<sub>inst</sub>. A shear-only relaxation model with fixed bulk modulus would change this assumption. The conversion is algebraically tested, but an installed ANSYS adapter has not been executed. The official ANSYS theory specifies separate shear and bulk kernels and instantaneous elastic inputs [39].
+The deterministic modulus sum is E<sub>inst</sub> = 1691.594 MPa. Both normalized shear and bulk kernels use the same g<sub>i</sub> and τ<sub>i</sub>, retaining the assumed constant ν. The remaining equilibrium fraction is E<sub>∞</sub>/E<sub>inst</sub>. A shear-only relaxation model with fixed bulk modulus would change this assumption. The conversion is algebraically tested; Stage 9 executes both native ANSYS spectra at 65 °C. Non-isothermal adaptation remains unverified. The official ANSYS theory specifies separate shear and bulk kernels and instantaneous elastic inputs [39].
 
 For an isothermal strain-step test, the tensile relaxation modulus is
 
@@ -377,13 +377,13 @@ For ideal unilateral normal contact, local gap g<sub>n</sub> and compressive pre
 
 EQ: g<sub>n</sub> ≥ 0, &nbsp; p<sub>n</sub> ≥ 0, &nbsp; g<sub>n</sub>p<sub>n</sub> = 0. &nbsp;&nbsp; (14)
 
-These are implementation targets for the future field solver, not executed equations in the material-point tests. The actual contact formulation permits a controlled numerical approximation; its penetration, friction and heat-transfer treatment must be verified. Cooling must retain the intended contact until the declared release event, followed by evaluation at the common reference state. Spatial averaging and extraction rules must distinguish contact pressure from residual stress and avoid unqualified edge maxima.
+Stage 9 checks equilibrium and unilateral contact in uniform reference cases. Production surface-contact implementation remains pending. The actual contact formulation permits a controlled numerical approximation; its penetration, friction and heat-transfer treatment must be verified. Cooling must retain the intended contact until the declared release event, followed by evaluation at the common reference state. Spatial averaging and extraction rules must distinguish contact pressure from residual stress and avoid unqualified edge maxima.
 
 ### 4.6. Material-relation verification status
 
 Thirty-eight numerical unit tests pass for the implemented material relations. They compare source sums and shift conventions, analytical elastic and relaxation limits, exact isothermal increments, thermal reversibility, shear/bulk conversion and numerical refinement for a prescribed temperature ramp. Ten further tests cover the Stage 8 thermal reference and production admission contract. Synthetic test inputs are numerical fixtures, not measured PLA data or coupon simulation results. Missing annealing strain, crystallization and production closures are tested to raise errors.
 
-Each governing equation is mapped to its implemented function or designated future solver/postprocessing operation in the repository. The full test record preserves input and code hashes. The verified thermal case adds genuine ANSYS field evidence for Eq. (2), but only for the declared plane-wall problem. These checks do not establish ANSYS viscoelastic material-point agreement, production mesh convergence, physical validation or validity of the proposed annealing holds.
+Each governing equation is mapped to its implemented function or designated future solver/postprocessing operation in the repository. The full test record preserves input and code hashes. The verified thermal case adds genuine ANSYS field evidence for Eq. (2), but only for the declared plane-wall problem. Stage 9 adds isothermal ANSYS agreement; these checks do not establish production mesh convergence, physical validation or validity of the proposed annealing holds.
 
 ### 4.7. Solver environment and automated execution boundary
 
@@ -448,7 +448,54 @@ Radiation is omitted from this benchmark to preserve the linear analytical bound
 
 Future spatial refinement must track directional dimensions, warpage, contact loading and selected stress measures while retaining the same physical setup. Time-step refinement must resolve ramps, contact transitions and release. Changes in nonlinear tolerances, penalty stiffness or stabilization require separate assessment. Failed cases and unconverged fields cannot enter optimization as valid data.
 
-### 6.2. Calibration and independent evidence
+<!-- PAGE -->
+### 6.2. Structural, retained-strain and contact verification
+
+Six separate MAPDL reference cases use one eight-node SOLID185 brick of 10 mm × 1 mm × 1 mm. The x = 0 face has zero axial displacement; transverse symmetry at y = 0 and z = 0 admits homogeneous expansion and Poisson contraction. The opposing face has coupled axial displacement and is either free or restrained in x. These uniform-field tests check loading and extraction, not production mesh convergence. Orthotropy is not used because a compatible complete property set is unavailable.
+
+For elastic verification only, E = 2000 MPa, ν = 0.3 and α = 10⁻⁵ K⁻¹ are numerical fixtures. The uniform comparison temperature has a 20 °C reference and ramps to 30 °C, 80 °C and back to 20 °C, with ten substeps per ramp. This isolates structural response and does not replace production heat transfer. For e = α(T − T<sub>r</sub>) + ε<super>ann</super>, L = 10 mm and A = 1 mm²,
+
+EQ: u<sub>x</sub> = Le, σ<sub>x</sub> = 0 (free); &nbsp; u<sub>x</sub> = 0, σ<sub>x</sub> = −Ee (fixed);<br/>R<sub>x</sub> = −Aσ<sub>x</sub>, &nbsp; ε<sub>y</sub> = ε<sub>z</sub> = e − νσ<sub>x</sub>/E. &nbsp;&nbsp; (19)
+
+The synthetic retained-eigenstrain cases set ε<super>ann</super> = −0.001 isotropically. INISTATE initializes the equivalent stress −C:ε<super>ann</super>, or 5 MPa in each normal component before equilibration. This checks an imposed stress-free contraction retained through cooling; it supplies no PLA shrinkage coefficient or kinetic law. The fixed case subsequently releases its axial restraint at 20 °C. No fictitious temperature is used to encode permanent contraction.
+
+The contact case adds one frictionless CONTA178 between the axial face master and a fixed stop, with a 0.002 mm geometric gap. Normal Lagrange enforcement uses absolute penetration and tensile-force tolerances of 10⁻⁹ mm and 10⁻⁹ N, with no weak springs. The exact solution is u<sub>x</sub> = min(Le,g), σ<sub>x</sub> = E(u<sub>x</sub>/L − e), and separation is max(g − u<sub>x</sub>,0). Compressive force is negative. Raw status 1 is open; status 2 or 3 is closed. Opening is −USEP. This checks a rigid stop, not a pressure distribution, deformable fixture, friction or thermal contact.
+
+The viscoelastic case uses all 23 Prusament branches [8], with equal normalized shear/bulk spectra, E<sub>inst</sub> = 1691.594 MPa and ν = 0.35. Temperature and thermal reference are both 65 °C. Native TB,PRONY tables are exercised without shifting. Axial strain rises linearly to 0.001 over 0–1 s, stays fixed through 31 s, returns to zero over 31–32 s and remains zero through 62 s. For a ramp [a,b] with strain rate v, q = min(t,b) and q > a, the exact contribution is
+
+EQ: σ(t) = E<sub>∞</sub>v(q − a) + ∑<sub>i=1</sub><sup>23</sup> E<sub>i</sub>vτ<sub>i</sub>[exp(−(t − q)/τ<sub>i</sub>) − exp(−(t − a)/τ<sub>i</sub>)]. &nbsp;&nbsp; (20)
+
+Loading and unloading contributions are summed. The first 0.01 s run missed the fixed error criterion at ramp endpoints. The refined run uses 0.0001 s during ramps and 0.1 s during holds. Post-unload displacement is prescribed as zero; remaining stress is viscoelastic memory at held strain, not free recovery or annealing-induced permanent strain.
+
+Each scalar comparison requires absolute error ≤ 10⁻⁷ in its stated unit plus 0.1% of the absolute reference. Relative error at a zero reference is undefined and left blank. Reactions are summed over the four x = 0 nodes; axial stress is extracted independently from the solid. Contact force, state and gap come from the contact element. Rejected attempts and warnings are preserved. The accepted contact warnings concern transverse constraints, pivoting, near-zero force scaling and an unsupported solid NMISC request; contact outputs come only from element 2. Analytical displacement, force and opening checks independently assess the reported values.
+
+TABLE: Structural reference checks: selected genuine outputs
+Case and state | ANSYS value | Analytical value
+Free, 80 °C: axial displacement | 0.006000000 mm | 0.006000000 mm
+Fixed, 80 °C: axial stress | −1.200000048 MPa | −1.200000000 MPa
+Fixed, 80 °C: left reaction | 1.200000000 N | 1.200000000 N
+Free, cooled: axial displacement | 0 mm | 0 mm
+Retained strain, cooled free: displacement | −0.010000000 mm | −0.010000000 mm
+Retained strain, cooled fixed: stress | 2.000000000 MPa | 2.000000000 MPa
+Retained strain, released: displacement | −0.010000000 mm | −0.010000000 mm
+Contact, 80 °C: axial displacement | 0.002000000 mm | 0.002000000 mm
+Contact, 80 °C: normal force | −0.800000012 N | −0.800000000 N
+Contact, cooled: open separation | 0.002000000095 mm | 0.002000000000 mm
+
+The six accepted cases pass all 114 comparisons, including transverse displacement, reaction, stress and contact state. The maximum axial displacement error is 2.331 × 10⁻¹⁴ mm; the maximum gap error is 9.500 × 10⁻¹¹ mm. Contact is open at 30 °C, closed at 80 °C and open after cooling. The thermally cycled elastic body returns to its original dimensions, whereas the imposed retained-eigenstrain body contracts after cooling and release. These are numerical patch-test findings and prescribed eigenstrain consequences, not measured PLA responses.
+
+TABLE: Isothermal Prony finite-ramp stress verification at 65 °C
+Time (s) | ANSYS stress (MPa) | Analytical stress (MPa) | Absolute error (MPa)
+1 | 0.0375536568 | 0.0375574835 | 0.0000038266
+11 | 0.0243886374 | 0.0243886379 | 0.0000000005
+31 | 0.0183896348 | 0.0183896352 | 0.0000000005
+32 | -0.0193833038 | -0.0193871309 | 0.0000038271
+62 | -0.0045757745 | -0.0045757747 | 0.0000000001
+
+The maximum stress error is 3.8271 × 10⁻⁶ MPa and the maximum stress-relative error is 0.019740%. The maximum reaction error is 3.8280 × 10⁻⁶ N. The refined isothermal adapter passes; the complete non-isothermal clock and bulk irreversible-strain evolution remain unimplemented in ANSYS. The negative stress after unloading is followed under a held-zero-strain boundary, so it does not establish free post-cooling warpage or annealing residual stress.
+
+
+### 6.3. Calibration and independent evidence
 
 Published data may calibrate a material law or test a prediction, but using the same observations for both does not provide independent validation. Reserve validation observations and document that separation before fitting. Independence should be checked by source and specimen/condition lineage, not merely by using different rows exported from the same fitted dataset.
 
@@ -484,10 +531,10 @@ The current contribution includes a finalized computational scope, a formulation
 
 TABLE: Evidence required for reportable findings
 Claim family | Current evidence | Admission requirement
-Temperature and deformation | One accepted ANSYS plane-wall verification; no PLA coupon solution or deformation field | Compatible production properties, boundary history, verified discretization and archived outputs
+Temperature and deformation | One accepted ANSYS plane-wall verification; no production PLA coupon solution or deformation field | Compatible production properties, boundary history, verified discretization and archived outputs
 PLA transient thermal response | No compatible Prusament k(T) or c<sub>p</sub>(T) | Compatible functions or a declared calibration/uncertainty strategy
 Bulk irreversible strain | Only thin-bilayer programmed pre-strain for Prusament | Identifiable signed three-dimensional law without double-counting
-Stress and contact pressure | No model or fields | Verified contact solution and declared extraction rules
+Stress and contact pressure | Structural patch and node-contact verification; no production fields | Verified contact solution and declared extraction rules
 Numerical convergence | Not performed | Genuine mesh/time/contact refinement evidence
 Physical predictive validity | No accepted dataset | Independent compatible observations and uncertainty
 Sensitivity and uncertainty | Not calculated | Justified inputs and reproducible numerical analysis
@@ -504,6 +551,8 @@ Only 80 °C lies inside the direct 23–85 °C Prusament characterization interv
 The literature establishes prior supported annealing, irreversible strain analysis, thermo-viscoelastic finite elements and annealing-related optimization. Stage 5 fixes and implements the supported Prusament viscoelastic core and the AISI 304 interpolation/elastic relations, while preserving grade boundaries. Stage 7 selects the literature-traceable 60 mm × 10 mm × 4 mm plate and two 70 mm × 20 mm × 5 mm fixture plates. Five normalized screening clearances span γ = 0–0.02, equivalent to g<sub>0</sub> = 0–0.08 mm. A geometry-only MAPDL build at γ = 0.01 created and saved the intended three volumes without a mesh or solution.
 
 Stage 8 adds a genuine MAPDL transient thermal reference solution. For the declared plane-wall cycle, the maximum center-temperature difference from the 200-term analytical solution is 0.005180700 °C; the maximum kelvin-based relative error is 0.001700533%, and the maximum excursion-relative error is 0.157660518%. The accepted 0.25 s case satisfies the predeclared 0.05 °C and 0.25% limits. These are verification values for numerical fixtures, not Prusament material response or independent physical validation.
+
+Stage 9 verifies free and restrained expansion, imposed retained strain, unilateral gap closure/reopening and the native 23-branch isothermal Prony response in six reference cases. All 114 comparisons satisfy their fixed tolerances; the maximum stress error is 3.8271 × 10⁻⁶ MPa. This establishes the stated implementation limits without supplying a bulk annealing law, a non-isothermal adapter or production fixture predictions.
 
 The Prusament evidence provides ν, α, T<sub>g</sub>, a 23-branch Maxwell spectrum and WLF/Arrhenius shifting over a directly characterized 23–85 °C interval. Thirty-eight analytical and synthetic unit tests verify the reference material relations. Compatible k(T), c<sub>p</sub>(T), complete orthotropy, crystallization kinetics and a bulk irreversible-strain law remain unavailable; fixture thermal strain awaits its expansion convention.
 
@@ -614,7 +663,7 @@ Numerical findings require genuine ANSYS field execution, verified material evid
 
 ### Supplement A. Provenance and reproducibility requirements
 
-The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, constitutive implementation/tests, parametric geometry and Stage 8 thermal-verification evidence. The base paper is preserved separately from the evolving manuscript. Solver artifacts include the accepted plane-wall thermal field result and all failed attempts; no production PLA field result exists.
+The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, constitutive implementation/tests, parametric geometry and Stage 8–9 thermal/structural verification evidence. The base paper is preserved separately from the evolving manuscript. Solver artifacts include the accepted plane-wall thermal field result and all failed attempts; no production PLA field result exists.
 
 Each future case must preserve a unique identifier, the solver version, geometry and material orientation, input configuration, source references, units, boundary histories, mesh, time-integration and contact settings, execution status, raw-output location and file checksums. Failed cases remain in the record with their failure reason. Postprocessing must identify both the raw field and the script/equation producing each response.
 

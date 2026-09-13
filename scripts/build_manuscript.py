@@ -108,7 +108,8 @@ def build():
             while i<len(lines) and ' | ' in lines[i]:
                 rows.append([v.strip() for v in lines[i].split('|')]); i+=1
             data=[[P(cell,ST['thead'] if r==0 else ST['cell']) for cell in row] for r,row in enumerate(rows)]
-            tab=Table(data,colWidths=[117,143,227],repeatRows=1,hAlign='LEFT')
+            widths = [117,143,227] if len(data[0]) == 3 else [55,145,145,142] if len(data[0]) == 4 else [487/len(data[0])]*len(data[0])
+            tab=Table(data,colWidths=widths,repeatRows=1,hAlign='LEFT')
             tab.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#24576b')),('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),7),('RIGHTPADDING',(0,0),(-1,-1),7),('TOPPADDING',(0,0),(-1,-1),7),('BOTTOMPADDING',(0,0),(-1,-1),7),('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.HexColor('#f0f5f7'),colors.white]),('LINEBELOW',(0,-1),(-1,-1),0.4,colors.HexColor('#ccd8de'))]))
             story.extend([tab,Spacer(1,12)])
             continue

@@ -1,0 +1,34 @@
+{
+  "accepted": true,
+  "error": "",
+  "returncode": 0,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM-Annealing\\stage09_fixed_01\\input.dat",
+    "-o",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM-Annealing\\stage09_fixed_01\\mapdl.out",
+    "-j",
+    "structural",
+    "-np",
+    "1"
+  ],
+  "files": {
+    "case.json": "af2c4ded657f434280136d8d2f5ef586639acaf60cc7d6f395521c3635e25eac",
+    "comparison.csv": "8132c2837dc72e22e5937b799452c2fed6eae1a793ffbd1d99bc27a1078ff575",
+    "input.dat": "9a6c3d4eda4a704bb114d71fa59d6f073fd15c691def48c9b28ae2dd43b1b3b2",
+    "mapdl.out": "e9128d8d8cbd842fc49e4b1addc5ee88b33ac34915ea53113e0d3d03da515b26",
+    "script_snapshot.py": "74b906f44e2e206a19afa8a7445b3c6d65b53dc3c22e6949bd472faede5d7f49",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "structural.DSP": "adbd7242694aaf5def053deb1712158266df95cae210e320f0b908529a724874",
+    "structural.err": "dec929faea4bb6a135e426d507e1c876a5bdaa7601f5467e04ef812d7538a36d",
+    "structural.esav": "8f776d8889a3fb83b45d86328b433121aa0d68f9a835a4ba602678509722c390",
+    "structural.full": "78a9d84c1b23f71d19eee57c286278942553fa16bd832e8e142ae9965abbfd13",
+    "structural.log": "4f6912a96993614010f07060258e6289c8318fe3852cfb1f39c8eb9da7d40278",
+    "structural.mntr": "8b3e11a484663903e86550dc5242a93cdc6cfc599ee97dc242129230baf6ad8a",
+    "structural.rst": "6fea955d855148f1c9d6f6c49f566a12a2e1a407f52c9662aed61aeee82e1760",
+    "values.csv": "6e917271fa409696b8f4d1ad5419b49e1e12bacc5094108058cb2f67fb4e15d6"
+  }
+}
