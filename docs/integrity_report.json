@@ -1,6 +1,6 @@
 {
-  "stage": 5,
-  "date": "2026-09-12",
+  "stage": 6,
+  "date": "2026-09-13",
   "checks": [
     {
       "check": "Base PDF hash preserved",
@@ -252,8 +252,8 @@
     }
   ],
   "count": 62,
-  "pdf_sha256": "db5594eaa7b9df04f6cd06d48ce4b6fd6a781be21e39a9f5361869d504e45e64",
-  "manuscript_sha256": "3e4509dea4b1d4384716fc39b212bc8d01ed4a2f0db4c1413fbdfc766a67ef2b",
+  "pdf_sha256": "7058ed1b0b6f71d30547e4b7b34fec017c281fe2d9fee988b9faf10747774e68",
+  "manuscript_sha256": "3d63560d54ed84ec216033a33066ae5a078196a1eaec8222c43c6203a43582e2",
   "material_manifest_sha256": "d9eeab055d206d082674004be8f85f1f00168d2aa34288526ac1549c91f5652b",
-  "scope": "Document, source and property integrity only. No solver verification or validation performed."
+  "scope": "Document, source, property, and installed-environment integrity. One zero-analysis MAPDL probe; no field solution or physical validation."
 }

@@ -1,0 +1,26 @@
+{
+  "case_id": "stage06_mapdl_smoke",
+  "case_kind": "environment_smoke",
+  "created_utc": "2026-09-13T05:03:31.065772+00:00",
+  "executed": true,
+  "returncode": 0,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\OneDrive\\Documents\\ChatGPT\\FDM ANNEALING\\ansys\\apdl\\environment_smoke.dat",
+    "-o",
+    "C:\\Users\\asus\\OneDrive\\Documents\\ChatGPT\\FDM ANNEALING\\simulation\\runs\\stage06_mapdl_smoke\\mapdl.out",
+    "-j",
+    "stage06_mapdl_smoke",
+    "-np",
+    "1"
+  ],
+  "input_sha256": "a4a2bdcf27d2b401f924248084e0299135d981e65ec4135c33ff26e3b63beb12",
+  "apdl_sha256": "d9c85b037ed72cd6f18e00b04674b14f5894979ee6e9dac2e5e3bd9318a9158f",
+  "outputs": {
+    "mapdl.out": "30fa56bd0d7ac72358cae40b9825867e5d27e01c378b1f1c772d9d38aab80498",
+    "stage06_mapdl_smoke.err": "c9fd508300f44ee0e2b20d4eb636a33e24b099297d7bbbdbaed953a31d891238",
+    "stage06_mapdl_smoke.log": "59fd7b78246d3ea1525e4e104352d3c774d97b387cb294fa299d33e50df7e8bc"
+  }
+}

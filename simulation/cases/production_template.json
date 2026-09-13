@@ -1,0 +1,19 @@
+{
+  "case_id": "replace_with_unique_case_id",
+  "case_kind": "production",
+  "parameters": {
+    "temperature_C": null,
+    "hold_time_s": null,
+    "fixture_gap_mm": null,
+    "material_id": "not_admitted"
+  },
+  "admission": {
+    "geometry_verified": false,
+    "thermal_properties_admitted": false,
+    "irreversible_strain_admitted": false,
+    "ansys_material_adapter_verified": false,
+    "boundary_history_fixed": false,
+    "extraction_contract_fixed": false
+  }
+}
+

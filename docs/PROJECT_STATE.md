@@ -1,7 +1,7 @@
 # Authoritative project state
 
-Stage: **Prompt 5/20 — final supported thermo-mechanical constitutive model**.
-Date: 2026-09-12 (Asia/Calcutta).
+Stage: **Prompt 6/20 — Ansys environment, architecture and automation**.
+Date: 2026-09-13 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
 ## Research identity
@@ -25,7 +25,8 @@ Base source: `data/source/DTU_Constrained_Annealing_Final_Submission.pdf`; immut
 
 ## Evidence status — authoritative
 
-Genuine ANSYS runs: **none**. ANSYS availability, license and version: **not established**.
+Genuine ANSYS field runs: **none**. A zero-analysis MAPDL environment/license probe succeeded; it is not a research simulation or result.
+ANSYS environment: **Ansys Student 2026 R1; MAPDL release 2026 R1, build 26.1, update 20260202; Student Mechanical product checkout confirmed**. Workbench and Mechanical 26.1 plus the named thermal/structural templates are installed, but their GUI entitlements have not been separately exercised. PyMechanical is not installed.
 Geometry/CAD/mesh: **not selected or generated**.
 Reference PLA formulation: **Prusament PLA selected for constitutive development; production ANSYS material card not admitted**.
 Property tables: **created and source-audited; compatible k(T), c_p(T), bulk irreversible strain and complete orthotropy remain unavailable**.
@@ -37,6 +38,14 @@ Mesh/time-step/contact convergence: **not performed**.
 Independent validation datasets: **not extracted or accepted**.
 Sensitivity indices, uncertainty intervals and optimization results: **none**.
 No performance improvement, optimal process condition or experimental confirmation is claimed.
+
+## Software and automation state — Stage 6
+
+`docs/software_environment.md` is the exact environment record. The installed package is R261RC2P01. The host is Windows 11 build 10.0.26200 on an AMD Ryzen 7 7435HS with 8 physical cores, 16 logical processors and 15.82 GiB installed RAM. The official 2026 R1 Student page states a 128,000-node/element structural limit, no geometry export and up to four HPC CPU cores.
+
+`ansys/run_case.py` provides a direct MAPDL batch path with explicit JSON parameters and admission gates. `simulation/cases/production_template.json` remains blocked because geometry, compatible thermal data, irreversible strain, the Ansys constitutive adapter, boundary history and extraction definitions are unresolved. `analysis/extract_results.py` rejects empty or untraceable output tables. No full campaign was run.
+
+The only execution is `simulation/runs/stage06_mapdl_smoke/`, generated from `ansys/apdl/environment_smoke.dat`. MAPDL exited 0 after `/STATUS` and `/EXIT,NOSAVE`; it created no geometry, nodes, elements, loads or solution. Its case, input, command, raw log and output hashes are recorded. DesignXplorer and optiSLang 26.1.0 revision 1878 are present on disk but unexercised. Their availability must not be described as a completed optimization capability.
 
 ## Decisions and scientific safeguards
 

@@ -1,0 +1,10 @@
+{
+  "stage": 6,
+  "date": "2026-09-13",
+  "reviewed_pdf_sha256": "7058ed1b0b6f71d30547e4b7b34fec017c281fe2d9fee988b9faf10747774e68",
+  "page_count": 29,
+  "reviewed_pages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+  "render_resolution_dpi": 100,
+  "visual_status": "pass",
+  "findings": "All pages inspected from fresh raster renders. No clipping, overlap, missing glyphs, duplicated figures, blank pages, or broken tables were observed. Equations, subscripts, superscripts, degree signs, multiplication signs and the fixture schematic render legibly."
+}

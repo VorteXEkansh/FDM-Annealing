@@ -1,0 +1,448 @@
+
+ Ansys Mechanical Enterprise Academic Student      
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *         ANSYS MAPDL 2026 R1          LEGAL NOTICES          *
+ ***************************************************************
+ *                                                             *
+ * Copyright (c) 2026 Synopsys, Inc. and ANSYS, Inc.           *
+ * All rights reserved.                                        *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of Ansys, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the Ansys, Inc. online documentation or the Ansys, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * Ansys, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * Ansys, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the Ansys, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the Ansys, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ 2026 R1 
+     
+ Point Releases and Patches installed:   
+     
+ Ansys, Inc. License Manager 2026 R1 
+ Discovery (full install) 2026 R1
+ Core WB Files 2026 R1   
+ optiSLang Core UI 2026 R1   
+ CFX (includes CFD-Post) 2026 R1 
+ Chemkin 2026 R1 
+ EnSight 2026 R1 
+ FENSAP-ICE 2026 R1  
+ Fluent (includes CFD-Post) 2026 R1  
+ Polyflow (includes CFD-Post) 2026 R1
+ Forte (includes EnSight) 2026 R1
+ Rocky 2026 R1   
+ TurboGrid 2026 R1   
+ ACIS Geometry Interface 2026 R1 
+ AutoCAD Geometry Interface 2026 R1  
+ Catia, Version 4 Geometry Interface 2026 R1 
+ Catia, Version 5 Geometry Interface 2026 R1 
+ Catia, Version 6 Geometry Interface 2026 R1 
+ Creo Elements/Direct Modeling Geometry Interface 2026 R1
+ Creo Parametric Geometry Interface 2026 R1  
+ Inventor Geometry Interface 2026 R1 
+ JTOpen Geometry Interface 2026 R1   
+ NX Geometry Interface 2026 R1   
+ Parasolid Geometry Interface  2026 R1   
+ Solid Edge Geometry Interface 2026 R1   
+ SOLIDWORKS Geometry Interface 2026 R1   
+ Speos 2026 R1   
+ SpaceClaim 2026 R1  
+ Speos RPC 2026 R1   
+ Zemax OpticStudio 2026 R1   
+ Dynamic Reporting 2026 R1   
+ Aqwa 2026 R1
+ Autodyn 2026 R1 
+ Material Calibration App 2026 R1
+ Mechanical Products 2026 R1 
+ Motion 2026 R1  
+ Academic Student 2026 R1
+
+
+          *****  MAPDL COMMAND LINE ARGUMENTS  *****
+  INITIAL JOBNAME              = stage06_mapdl_smoke                                                                                                                                                                                                                                     
+  BATCH MODE REQUESTED (-b)    = LIST
+  INPUT FILE COPY MODE (-c)    = COPY
+       1 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
+    TOTAL OF     1 CORES REQUESTED
+  INPUT FILE NAME              = C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\ansys\apdl\environment_smoke.dat
+  OUTPUT FILE NAME             = C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\simulation\runs\stage06_mapdl_smoke\mapdl.out
+
+ RELEASE= 2026 R1              BUILD= 26.1      UP20260202   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=stage06_mapdl_smoke  10:33:20  SEP 13, 2026  Elapsed Time=       0.141
+
+     1  /BATCH  
+     2  /COM,Stage 6 environment smoke test: no geometry, elements, loads, or solution. 
+     3  /STATUS 
+     4  /EXIT,NOSAVE
+     5      
+
+ RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v261\Ansys\apdl\start.ans
+
+ /INPUT FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v261\Ansys\apdl\start.ans  LINE=       0
+ Stage 6 environment smoke test: no geometry, elements, loads, or solution.
+
+ *** Products *** 
+ Ansys Mechanical Enterprise Academic Student      
+
+ *** PreProcessing Capabilities *** 
+ Piping Input
+ Order, Merge
+ Save, Resume, Select
+ Solid Modeling
+ Solid Meshing
+ Booleans
+ Iges Out
+ Prep7
+ Contact Surfaces
+ Coupling
+ Constraint Equations
+ Node limits=        128000
+ Element limits=     128000
+ Keypoint limits=2000000000
+ Line limits=    2000000000
+ Area limits=    2000000000
+ Volume limits=  2000000000
+ DOF limits=     2000000000
+ Master limits=  2000000000
+
+ *** Aux Capabilities *** 
+ Aux2
+ Aux12
+ Aux15
+
+ *** Solution Options *** 
+ Static Analysis
+ Buckling Analysis
+ Modal Analysis
+ Full Harmonic Analysis
+ Transient Analysis
+ Linear Transient Analysis
+ Reduced Harmonic Analysis
+ Substructures
+ PSD Analysis
+ Stress Stiffness
+ Plastic, Creep, Swelling
+ Large Deflection
+ Optimization
+ Graphics
+ Solution Authorized
+ Temperature DOF
+ Fluid Flow DOF
+ Electrical DOF
+ Magnetics DOF
+ /SYS or /SYP
+
+ *** Post Capabilities *** 
+ Post1
+ Post26
+
+     ***** TITLES *****
+
+ *** YOU ARE IN   ANSYS - ENGINEERING ANALYSIS SYSTEM ***
+ Ansys Mechanical Enterprise Academic Student      
+ RELEASE  2026 R1           BUILD 26.1      UPDATE 20260202   CUSTOMER  01055371
+
+ INITIAL JOBNAME = stage06_mapdl_smoke                                                                                                                                                                                                                                     
+ CURRENT JOBNAME = stage06_mapdl_smoke                                                                                                                                                                                                                                     
+
+ Current Working Directory: C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\simulation\runs\stage06_mapdl_smoke
+
+     ***** UNITS *****
+
+ USER UNIT SET SPECIFIED FOR INTERNAL    
+  LENGTH      =  1.0000     USER UNITS PER METER
+  MASS        =  1.0000     USER UNITS PER KILOGRAM
+  TIME        =  1.0000     USER UNITS PER SECOND
+  TEMPERATURE =  1.0000     USER UNITS PER KELVIN
+  TOFFSET     =  0.0000     USER UNITS FROM ABS ZERO
+  CHARGE      =  1.0000     USER UNITS PER COULOMB
+  FORCE       =  1.0000     USER UNITS PER NEWTON
+  HEAT        =  1.0000     USER UNITS PER JOULE
+
+                      ***** SCRATCH MEMORY STATUS *****
+ Requested Initial Work Space       =     603979772 Words       2304.000 MB
+ Initial Work Space Obtained        =     939524093 Words       3584.000 MB
+
+ MAPDL Scratch Memory Size          =     603979777 Words       2304.000 MB
+ MAPDL Scratch Memory Used          =     337178112 Words       1286.232 MB
+ Available Scratch Memory           =     266801665 Words       1017.768 MB
+
+ Maximum Scratch Memory Used        =     337178112 Words       1286.232 MB
+ Largest Available Contiguous Block =     266799152 Words       1017.758 MB
+
+                      *****    DATABASE STATUS    *****
+ Current Database Position          =          7954 Words          0.030 MB
+ Maximum Database Length            = 2199023124475 Words    8388607.500 MB
+ Memory Resident Database           =     268435456 Words       1024.000 MB
+ Void Space In Database             =           614 Words          0.002 MB
+
+     ***** CONFIG VALUES *****
+ NUMRESLT (NRES) =       10000
+ NUM_BUFR (NBUF) =           4
+ NUM_VPAG (NVPAG)=       16384           1024.000 MB
+ NUM_DPAG        =    67108860        4194303.750 MB
+ SIZ_VPAG        =       16384 Words 
+ VIRT_MEM (-m)   =   603979772 Words     2304.000 MB
+ LOCALFIL (LOCFL)=           0
+ SIZE_BIO (SZBIO)=       16384 Words        0.062 MB
+ CONTACTS (NCONT)=        1000
+ ORDERER  (ORDER)=           2
+ EXT_FILE        =           1
+
+                           G L O B A L   S T A T U S
+
+ MAPDL - Engineering Analysis System            Sep 13, 2026           10:33
+ Release= 2026 R1           Build= 26.1       Customer= 01055371   Version= WINDOWS x64 
+ Distributed Processing Version
+
+ Current working directory: C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\simulation\runs\stage06_mapdl_smoke
+
+ Product(s) enabled: Ansys Mechanical Enterprise Academic Student      
+
+
+ Total connect time. . . . . -10 hours-33 minutes
+ Total CP usage. . . . . . .   0 hours  0 minutes  0.4 seconds
+
+ J O B   I N F O R M A T I O N -----------------------------------------------
+
+ Current jobname . . . . . .stage06_mapdl_smoke                                                                                                                                                                                                                                     
+ Initial jobname . . . . . .stage06_mapdl_smoke                                                                                                                                                                                                                                     
+
+ Units . . . . . . . . . . .unknown         
+
+                                  Available               Used
+ Scratch Memory Space. . . .    2304.000 MB        1286.232 MB ( 55.8%)
+ Database space  . . . . . . 8388607.500 MB           0.030 MB (  0.0%)
+ 
+ Beta features . . . . . . .are not shown in the user interface
+
+ M O D E L   I N F O R M A T I O N --------------------------------------------
+
+ Solid model summary:
+
+                               Maximum          Number          Number
+                                Number         Defined        Selected
+ Keypoints . . . . . . . . .         0               0               0
+ Lines . . . . . . . . . . .         0               0               0
+ Areas . . . . . . . . . . .         0               0               0
+ Volumes . . . . . . . . . .         0               0               0
+
+ Finite element model summary:
+
+                               Maximum          Number          Number
+                                Number         Defined        Selected
+ Nodes . . . . . . . . . . .         0               0               0
+ Elements. . . . . . . . . .         0               0               0
+
+ Element types . . . . . . .         0               0            n.a.
+ Real constant sets. . . . .         0               0            n.a.
+ Material property sets. . .         0               0            n.a.
+ Sections. . . . . . . . . .         0               0            n.a.
+
+ Coupling. . . . . . . . . .         0               0            n.a.
+ Constraint equations. . . .         0               0            n.a.
+ Master DOFs . . . . . . . .         0               0            n.a.
+ Dynamic gap conditions. . .         0               0            n.a.
+
+                                Number         Maximum      Cumulative
+                               Defined            Size            Size
+ Components. . . . . . . . .         0               0               0
+ Array Parameters. . . . . .         0               0               0
+ Table Parameters. . . . . .         0               0               0
+
+ B O U N D A R Y   C O N D I T I O N   I N F O R M A T I O N ------------------
+
+                                              Number
+                                             Defined
+ Constraints on nodes. . . . . . . . . . .         0
+ Constraints on keypoints. . . . . . . . .         0
+ Constraints on lines. . . . . . . . . . .         0
+ Constraints on areas. . . . . . . . . . .         0
+
+ Forces on nodes . . . . . . . . . . . . .         0
+ Forces on keypoints . . . . . . . . . . .         0
+
+ Surface loads on elements . . . . . . . .         0
+ Number of element flagged surfaces  . . .         0
+ Surface loads on lines. . . . . . . . . .         0
+ Surface loads on areas. . . . . . . . . .         0
+
+ Body loads on elements. . . . . . . . . .         0
+ Body loads on areas . . . . . . . . . . .         0
+ Body loads on lines . . . . . . . . . . .         0
+ Body loads on nodes . . . . . . . . . . .         0
+ Body loads on keypoints . . . . . . . . .         0
+
+ Temperatures
+    Uniform temperature. . . . . . . . . .     0.000
+    Reference temperature. . . . . . . . .     0.000
+    Offset from absolute scale . . . . . .     0.000
+
+                                                X           Y           Z
+ Linear acceleration . . . . . . . . . . .  0.0000      0.0000      0.0000    
+ Angular velocity (about global CS). . . .  0.0000      0.0000      0.0000    
+ Angular acceleration (about global CS). .  0.0000      0.0000      0.0000    
+ Location of reference CS. . . . . . . . .  0.0000      0.0000      0.0000    
+ Angular velocity (about reference CS) . .  0.0000      0.0000      0.0000    
+ Angular acceleration (about reference CS)  0.0000      0.0000      0.0000    
+
+ R O U T I N E   I N F O R M A T I O N ---------------------------------------
+
+ Current routine. . . . . . . . . . . .None (BEGIN level)                 
+
+ Active coordinate system . . . . . . .       0 (Cartesian)  
+
+ Display coordinate system. . . . . . .       0 (Cartesian)  
+
+ Analysis type. . . . . . . . . . . . .Static (steady-state)
+
+ Active options for this analysis type:
+    Equation solver to use. . . . . . .Program Chosen     
+
+ Results file . . . . . . . . . . . . .stage06_mapdl_smoke.rst
+
+ Load step number . . . . . . . . . . .     1
+
+ Number of substeps . . . . . . . . . .     1
+    Step change boundary conditions . .No 
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .2-D                  
+   DEGREES OF FREEDOM. . . . . . . . . . . . . . .UNKNOWN
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000    
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .DEFAULT
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS. . . . . . . . . . . .ALL DATA WRITTEN
+                                                  FOR THE LAST SUBSTEP
+
+
+ EXIT MAPDL WITHOUT SAVING DATABASE
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          0
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+Release: 2026 R1            Build: 26.1       Update: UP20260202   Platform: WINDOWS x64 
+Date Run: 09/13/2026   Time: 10:33     Process ID: 26720
+Operating System: Windows 11  (Build: 26200)
+
+Processor Model: AMD Ryzen 7 7435HS
+
+Compiler: Intel(R) Fortran Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) C/C++ Compiler Classic Version 2021.9  (Build: 20230302)
+          AOCL-BLAS 5.1.1 Build 20251008
+          Intel(R) oneAPI Math Kernel Library Version 2024.2.3-Product Build 20250403
+
+Number of machines requested            :    1
+Total number of cores available         :   16
+Number of physical cores available      :    8
+Number of processes requested           :    1
+Number of threads per process requested :    1
+Total number of cores requested         :    1 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: stage06_mapdl_smoke
+Input File: C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\ansys\apdl\environment_smoke.dat
+Working Directory: C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\simulation\runs\stage06_mapdl_smoke
+
+Total CPU time for main thread                    :        0.8 seconds
+Total CPU time summed for all threads             :        0.4 seconds
+
+Elapsed time spent obtaining a license            :        3.3 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
+Elapsed time spent solution - preprocessing       :        0.0 seconds
+Elapsed time spent computing solution             :        0.0 seconds
+   Elapsed time in element formation & assembly   :        0.0 seconds
+   Elapsed time in equation solver                :        0.0 seconds
+   Elapsed time in element result calculations    :        0.0 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+
+Sum of disk space used on all processes           :        0.0 MB
+
+Sum of memory used on all processes               :        7.0 MB
+Sum of memory allocated on all processes          :     2304.0 MB
+Physical memory available                         :         16 GB
+Total amount of I/O written to disk               :        0.0 GB
+Total amount of I/O read from disk                :        0.0 GB
+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2026 R1         Build 26.1         UP20260202    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)     1024 MB     Scratch Memory Requested   1024 MB |
+ |  Max Database Used(Master)      1 MB     Max Scratch Used(Master)      6 MB |
+ |  Max Database Used(Workers)     0 MB     Max Scratch Used(Workers)     0 MB |
+ |  Sum Database Used(All)         1 MB     Sum Scratch Used(All)         6 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          0.438       Time  =  10:33:30          |
+ |        Elapsed Time (sec) =         19.609       Date  =  09/13/2026        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*

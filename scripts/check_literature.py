@@ -29,7 +29,7 @@ check('No unresolved citation keys or doubled HTML entities','[@' not in source 
 check('All journal DOIs in complete manuscript',all(r['doi'] in source for r in rows))
 check('All DOI-bearing material sources in complete manuscript',all(doi in source for doi in property_dois))
 body=source[:source.index('### References')]
-expected_citations=set(range(1,40)) if "[39] ANSYS" in source else set(range(1,39)) if property_sources else set(range(1,36))
+expected_citations=set(range(1,41)) if "[40] Ansys" in source else set(range(1,40)) if "[39] ANSYS" in source else set(range(1,39)) if property_sources else set(range(1,36))
 check('Every bibliography entry cited in body',set(map(int,re.findall(r'\[(\d+)(?:\]|,)',body)))==expected_citations)
 check('No duplicated table labels',not re.search(r'TABLE: Table \d',source))
 for a in json.loads((ROOT/'literature/acquisition_manifest.json').read_text()):

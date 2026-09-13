@@ -1,0 +1,58 @@
+{
+  "stage": 6,
+  "date": "2026-09-13",
+  "passed": true,
+  "checks": [
+    {
+      "check": "MAPDL smoke returned zero",
+      "status": "pass"
+    },
+    {
+      "check": "MAPDL banner is 2026 R1 build 26.1 update 20260202",
+      "status": "pass"
+    },
+    {
+      "check": "Academic Student product checked out",
+      "status": "pass"
+    },
+    {
+      "check": "Smoke deck contains no solve or model commands",
+      "status": "pass"
+    },
+    {
+      "check": "Smoke hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Production template has explicit parameters",
+      "status": "pass"
+    },
+    {
+      "check": "Production gates remain closed",
+      "status": "pass"
+    },
+    {
+      "check": "Automation unit tests pass",
+      "status": "pass"
+    },
+    {
+      "check": "Environment report separates presence and entitlement",
+      "status": "pass"
+    },
+    {
+      "check": "PyMechanical absence documented",
+      "status": "pass"
+    },
+    {
+      "check": "Student structural limit source documented",
+      "status": "pass"
+    }
+  ],
+  "sha256": {
+    "ansys/run_case.py": "adeb32dc454ce3e2a0c5290167fad9b8fcc3c9981b686e7ae878faf5ebad4da9",
+    "ansys/apdl/environment_smoke.dat": "d9c85b037ed72cd6f18e00b04674b14f5894979ee6e9dac2e5e3bd9318a9158f",
+    "simulation/cases/environment_smoke.json": "a4a2bdcf27d2b401f924248084e0299135d981e65ec4135c33ff26e3b63beb12",
+    "simulation/cases/production_template.json": "bd75cd19b50ad1cc7f3bae4279d9bebd71fa54df41edc5d82e679f72663a7621",
+    "analysis/extract_results.py": "8588bca19407bac74433a1034336d82e957b44a0af53ebd573f57d2ea964cb1d"
+  }
+}

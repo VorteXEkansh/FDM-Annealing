@@ -13,7 +13,7 @@ Computational manuscript draft · 12 September 2026
 
 <b>Planned approach.</b> Genuine ANSYS analysis will compare mechanically free annealing with opposed-face gap restraint over an evidence-supported sub-melting domain. Candidate levels are 80&nbsp;°C, 95&nbsp;°C and 110&nbsp;°C, with holds of 30 min, 60 min and 90 min; their admission depends on the selected material evidence. Temperature-dependent, history-dependent behavior and contact will be represented only to the extent supported by data. Thermal histories, signed dimensions and released warpage will be distinguished from contact pressure and conditional stress predictions. Numerical verification, independent literature-based validation and uncertainty assessment will precede multi-objective interpretation.
 
-<b>Results status.</b> No ANSYS results, complete production PLA law, convergence evidence, validation findings or optimum exist at this stage. The supported Prusament viscoelastic core is implemented as a material-point reference with 38 passing numerical unit tests. Compatible thermal functions, a bulk irreversible-strain law and the fixture expansion convention remain unresolved. These tests verify constitutive algebra; they do not validate annealing predictions.
+<b>Results status.</b> No ANSYS field results, complete production PLA law, convergence evidence, validation findings or optimum exist at this stage. Ansys Student 2026 R1 and MAPDL build 26.1 update 20260202 are installed; a zero-analysis MAPDL license/environment probe exited successfully. The supported Prusament viscoelastic core is implemented as a material-point reference with 38 passing numerical unit tests. Compatible thermal functions, a bulk irreversible-strain law and the fixture expansion convention remain unresolved. These checks establish software availability and constitutive algebra only; they do not validate annealing predictions.
 
 <b>Intended contribution.</b> The study will assess the clearance–distortion–stress trade-off and distinguish temporary geometric suppression from released stability. Prior supported annealing and numerical optimization preclude a broad first-of-kind claim. No strength improvement or industrial treatment recommendation is asserted.
 
@@ -163,7 +163,7 @@ The study will not establish fatigue life, long-term aging, service creep, moist
 
 Multi-objective comparisons are restricted to admissible, numerically verified conditions with explicit response definitions. A low-distortion mild treatment is not automatically useful annealing: any recommendation requires a separately supported processing-benefit or application criterion. If that criterion or independent validation remains unavailable, the paper will report conditional trade-offs and the limitation, not an industrial processing recommendation.
 
-The scope is finalized as a computational research commitment. The Prusament reference law is implemented and unit-tested; solver availability, numerical parameters, missing material closures and validation datasets remain open. No ANSYS results or physical validation are supplied by this stage.
+The scope is finalized as a computational research commitment. The Prusament reference law is implemented and unit-tested. Ansys Student 2026 R1 and a Mechanical APDL Student checkout are now verified on the host, while GUI-system entitlements, numerical parameters, missing material closures and validation datasets remain open. No ANSYS field result or physical validation is supplied by this stage.
 
 <!-- PAGE -->
 ### 3. Computational domain and controlled constraint
@@ -368,6 +368,16 @@ Thirty-eight numerical unit tests pass for the implemented material relations. T
 
 Each governing equation is mapped to its implemented function or designated future solver/postprocessing operation in the repository. The full test record preserves input and code hashes. These checks verify algebra and software behavior; they do not establish ANSYS material-point agreement, mesh convergence, physical validation or validity of the proposed annealing holds.
 
+### 4.7. Solver environment and automated execution boundary
+
+The identified host installation is Ansys Student 2026 R1 under the v261 product tree. Workbench `RunWB2.exe` reports product version 26.1; the Mechanical executable `AnsysWBU.exe` reports product version 26.1; and optiSLang reports 26.1.0 revision 1878. Installed Workbench templates include Static Structural, Transient Structural and Transient Thermal. File presence is not treated as a license checkout. Mechanical APDL was therefore invoked separately with a zero-analysis batch input and reported release 2026 R1, build 26.1, update 20260202 and the `Ansys Mechanical Enterprise Academic Student` product before exiting with code zero. The input created no geometry, mesh, load step or solution.
+
+The official 2026 R1 Student description states a structural limit of 128,000 nodes/elements, no geometry export and up to four HPC CPU cores [40]. The host provides eight physical cores, 16 logical processors and 15.82 GiB installed memory; production launch settings will remain within the four-core license statement. Solver-generated contact and auxiliary entities must be included when checking the structural limit. No mesh count is available in this stage.
+
+The project uses explicit JSON case records and a fail-closed Python runner. A production record must provide annealing temperature in °C, hold time in seconds, fixture gap in mm and a material identifier. Execution is rejected while any geometry, thermal-property, irreversible-strain, material-adapter, boundary-history or extraction gate remains false. This makes parameters reproducible without silently converting unresolved choices into model inputs. PyMechanical was not found in the system environment and is not a dependency of the current direct MAPDL batch path. DesignXplorer and optiSLang are present on disk but were not used; no design study, sensitivity index or optimization result was generated.
+
+Every run directory retains the exact command, case and APDL hashes, return code and hashes of generated logs. Failed cases are preserved. The result-registration script accepts only non-empty exported rows with case, time, quantity, value, unit, location and originating solver file. This provenance interface does not create results and the full simulation campaign remains blocked.
+
 <!-- PAGE -->
 ### 5. Dimensional and mechanical response definitions
 
@@ -437,7 +447,7 @@ The current contribution includes a finalized computational scope, a formulation
 
 TABLE: Evidence required for reportable findings
 Claim family | Current evidence | Admission requirement
-Temperature and deformation | No ANSYS runs | Archived model, input sources, solver outputs and logs
+Temperature and deformation | No ANSYS field solve; one zero-analysis environment probe | Archived model, input sources, solver outputs and logs
 PLA transient thermal response | No compatible Prusament k(T) or c<sub>p</sub>(T) | Compatible functions or a declared calibration/uncertainty strategy
 Bulk irreversible strain | Only thin-bilayer programmed pre-strain for Prusament | Identifiable signed three-dimensional law without double-counting
 Stress and contact pressure | No model or fields | Verified contact solution and declared extraction rules
@@ -458,7 +468,7 @@ The literature establishes prior supported annealing, irreversible strain analys
 
 The proposed contribution remains restricted to evidence-tested prediction of the clearance–distortion–stress trade-off after cooling and release. The scope compares FREE with initially centered GAP restraint for one specified material/architecture/geometry, while retaining signed response and excluding granular-media simulation and unverified strength claims.
 
-Numerical findings require genuine ANSYS execution, verified material evidence, discretization assessment and independent validation. No improvement, validated prediction or preferred annealing condition is concluded.
+Numerical findings require genuine ANSYS field execution, verified material evidence, discretization assessment and independent validation. The successful zero-analysis environment probe is not a simulation result. No improvement, validated prediction or preferred annealing condition is concluded.
 
 <!-- PAGE -->
 ### References
@@ -557,11 +567,13 @@ Numerical findings require genuine ANSYS execution, verified material evidence, 
 
 [39] ANSYS, Inc. <i>Mechanical APDL Theory Reference</i>, Release 2026 R1, §4.9, Viscoelasticity. <link href="https://ansyshelp.ansys.com/public/Views/Secured/corp/v261/en/ans_thry/thy_mat6.html" color="#24576b">Official theory reference</link>. Accessed 12 September 2026.
 
+[40] Ansys, Inc. <i>Ansys Student — Free Software Download</i>, 2026 R1 product page. <link href="https://www.ansys.com/en-in/academic/students/ansys-student" color="#24576b">Official product page</link>. Accessed 13 September 2026.
+
 <!-- PAGE -->
 
 ### Supplement A. Provenance and reproducibility requirements
 
-The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database and the Stage 5 constitutive implementation/test records. The base paper is preserved separately from the evolving manuscript. No solver dataset is available in this stage.
+The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, the Stage 5 constitutive implementation/test records and the Stage 6 fail-closed Ansys runner. The base paper is preserved separately from the evolving manuscript. The only solver artifact is a zero-analysis environment probe; no field-result dataset is available.
 
 Each future case must preserve a unique identifier, the solver version, geometry and material orientation, input configuration, source references, units, boundary histories, mesh, time-integration and contact settings, execution status, raw-output location and file checksums. Failed cases remain in the record with their failure reason. Postprocessing must identify both the raw field and the script/equation producing each response.
 

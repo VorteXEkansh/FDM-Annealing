@@ -7,6 +7,7 @@
 literature/metadata/*.json -text
 literature/search_logs/*.json -text
 literature/evidence/** -text -diff
+simulation/runs/** -text -diff
 material/*.csv -text
 material/*.json -text
 docs/*integrity*.json -text

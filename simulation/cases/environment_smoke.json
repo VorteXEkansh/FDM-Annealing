@@ -1,0 +1,9 @@
+{
+  "case_id": "stage06_mapdl_smoke",
+  "case_kind": "environment_smoke",
+  "parameters": {},
+  "admission": {
+    "zero_analysis_only": true
+  }
+}
+
