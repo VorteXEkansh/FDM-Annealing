@@ -1,0 +1,10 @@
+case_id,location,requested_time_s,solver_time_s,ansys_temperature_C,analytical_temperature_C,absolute_error_C,relative_error_percent_K,relative_excursion_error_percent,ansys_evidence_class,reference_evidence_class
+stage08_thermal_plane_wall,slab center,150.000000,150.000000,21.901727403,21.889130841,0.012596562,0.004269455,0.666791416,A: genuine MAPDL solver output,B: reproducible analytical calculation
+stage08_thermal_plane_wall,slab center,300.000000,300.000000,27.647660675,27.625947421,0.021713254,0.007219079,0.284728606,A: genuine MAPDL solver output,B: reproducible analytical calculation
+stage08_thermal_plane_wall,slab center,450.000000,450.000000,34.817214221,34.801718199,0.015496022,0.005031965,0.104690696,A: genuine MAPDL solver output,B: reproducible analytical calculation
+stage08_thermal_plane_wall,slab center,600.000000,600.000000,41.011988632,41.001387994,0.010600638,0.003374373,0.050475894,A: genuine MAPDL solver output,B: reproducible analytical calculation
+stage08_thermal_plane_wall,slab center,900.000000,900.000000,50.969986080,50.966218772,0.003767308,0.001162333,0.012165865,A: genuine MAPDL solver output,B: reproducible analytical calculation
+stage08_thermal_plane_wall,slab center,1050.000000,1050.000000,53.048411339,53.059537028,0.011125689,0.003410596,0.033653494,A: genuine MAPDL solver output,B: reproducible analytical calculation
+stage08_thermal_plane_wall,slab center,1200.000000,1200.000000,50.736932898,50.758912731,0.021979832,0.006785807,0.071458418,A: genuine MAPDL solver output,B: reproducible analytical calculation
+stage08_thermal_plane_wall,slab center,1500.000000,1500.000000,42.893434325,42.906520281,0.013085955,0.004140384,0.057127643,A: genuine MAPDL solver output,B: reproducible analytical calculation
+stage08_thermal_plane_wall,slab center,1800.000000,1800.000000,37.046181376,37.053501761,0.007320385,0.002359865,0.042925995,A: genuine MAPDL solver output,B: reproducible analytical calculation

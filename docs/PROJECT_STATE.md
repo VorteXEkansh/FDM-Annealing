@@ -1,6 +1,6 @@
 # Authoritative project state
 
-Stage: **Prompt 7/20 — parametric specimen and fixture geometry**.
+Stage: **Prompt 8/20 — transient thermal model and analytical verification**.
 Date: 2026-09-13 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
@@ -25,15 +25,15 @@ Base source: `data/source/DTU_Constrained_Annealing_Final_Submission.pdf`; immut
 
 ## Evidence status — authoritative
 
-Genuine ANSYS field runs: **none**. A zero-analysis MAPDL environment/license probe succeeded; it is not a research simulation or result.
+Genuine ANSYS field runs: **one accepted verification-only transient thermal plane-wall solution**. It is not a Prusament PLA coupon prediction or physical validation. A zero-analysis MAPDL environment/license probe and a geometry-only build also succeeded.
 ANSYS environment: **Ansys Student 2026 R1; MAPDL release 2026 R1, build 26.1, update 20260202; Student Mechanical product checkout confirmed**. Workbench and Mechanical 26.1 plus the named thermal/structural templates are installed, but their GUI entitlements have not been separately exercised. PyMechanical is not installed.
-Geometry/CAD: **60 mm × 10 mm × 4 mm rectangular specimen and two 70 mm × 20 mm × 5 mm plates selected; a geometry-only MAPDL build created and saved three volumes**. Mesh: **not generated**.
+Geometry/CAD: **60 mm × 10 mm × 4 mm rectangular specimen and two 70 mm × 20 mm × 5 mm plates selected; a geometry-only MAPDL build created and saved three volumes**. Production specimen/fixture mesh: **not generated**. The separate plane-wall verification mesh is documented below.
 Reference PLA formulation: **Prusament PLA selected for constitutive development; production ANSYS material card not admitted**.
-Property tables: **created and source-audited; compatible k(T), c_p(T), bulk irreversible strain and complete orthotropy remain unavailable**.
+Property tables: **created and source-audited; compatible Prusament k(T), c_p(T), bulk irreversible strain and complete orthotropy remain unavailable**. Stage 8 verification constants are numerical fixtures kept outside the material database.
 Constitutive implementation: **small-strain isotropic 23-branch Prusament reference implemented; 38 analytical/synthetic unit tests pass; no ANSYS adapter or physical calibration/validation**.
 Fixture material: **AISI 304 stainless steel selected as candidate plate material with a 20–200 °C tabulated property set**. Plate dimensions and normalized reference-gap levels are fixed as geometry design choices. Friction, thermal contact conductance and physical spacer geometry remain unselected. Thermal-strain use of the fixture alpha table is blocked until its tangent/mean convention and reference temperature are established.
 Initial residual stress, recovery strain and crystallization kinetics: **unavailable**.
-Boundary histories, reference temperature, release rule and environmental heat transfer: **not fixed**.
+Production boundary histories, reference temperature, release rule, convection, radiation and thermal contact: **not fixed**. The separate verification history is fully specified and must not be transferred as a physical protocol.
 Mesh/time-step/contact convergence: **not performed**.
 Independent validation datasets: **not extracted or accepted**.
 Sensitivity indices, uncertainty intervals and optimization results: **none**.
@@ -43,7 +43,7 @@ No performance improvement, optimal process condition or experimental confirmati
 
 `docs/software_environment.md` is the exact environment record. The installed package is R261RC2P01. The host is Windows 11 build 10.0.26200 on an AMD Ryzen 7 7435HS with 8 physical cores, 16 logical processors and 15.82 GiB installed RAM. The official 2026 R1 Student page states a 128,000-node/element structural limit, no geometry export and up to four HPC CPU cores.
 
-`ansys/run_case.py` provides a direct MAPDL batch path with explicit JSON parameters and admission gates. `simulation/cases/production_template.json` remains blocked because geometry, compatible thermal data, irreversible strain, the Ansys constitutive adapter, boundary history and extraction definitions are unresolved. `analysis/extract_results.py` rejects empty or untraceable output tables. No full campaign was run.
+`ansys/run_case.py` provides a direct MAPDL batch path with explicit JSON parameters and admission gates. `simulation/cases/production_template.json` remains blocked because compatible thermal data, irreversible strain, the Ansys constitutive adapter, boundary history and extraction definitions are unresolved. Stage 8 adds `ansys/thermal_model.py` and `simulation/cases/thermal_production_template.json`; they require all thermal phases and reject missing PLA functions, convection, radiation decisions, thermal contact and production extraction rules. `analysis/extract_results.py` rejects empty or untraceable output tables. No production campaign was run.
 
 The only execution is `simulation/runs/stage06_mapdl_smoke/`, generated from `ansys/apdl/environment_smoke.dat`. MAPDL exited 0 after `/STATUS` and `/EXIT,NOSAVE`; it created no geometry, nodes, elements, loads or solution. Its case, input, command, raw log and output hashes are recorded. DesignXplorer and optiSLang 26.1.0 revision 1878 are present on disk but unexercised. Their availability must not be described as a completed optimization capability.
 
@@ -103,7 +103,7 @@ The implemented temperature guard is 23–85 °C, with 23 °C used only as a num
 
 Irreversible annealing strain, crystallization, production assembly and fixture thermal strain raise explicit evidence-gap errors. No missing mechanism is defaulted to a physical zero. The AISI 304 table can be interpolated and used for instantaneous elastic reference calculations, but its expansion convention is unresolved. Thermal-field closures, initial printed state, duration/strain applicability and physical validation remain open.
 
-`tests/test_constitutive.py` and `scripts/check_constitutive.py` execute 38 numerical unit tests; individual outcomes and input/code hashes are in `docs/stage_05_constitutive_tests.json`. Analytical checks and synthetic cases are not independent material validation data. No ANSYS run has been executed. `docs/equation_implementation_map.csv` maps every manuscript governing equation to its reference function or designated future field/postprocessing operation. No optional crystallization or desirability equation is retained.
+`tests/test_constitutive.py` and `scripts/check_constitutive.py` execute 38 numerical unit tests; individual outcomes and input/code hashes are in `docs/stage_05_constitutive_tests.json`. Analytical checks and synthetic cases are not independent material validation data. At the Stage 5 boundary, no ANSYS run had been executed. `docs/equation_implementation_map.csv` maps every manuscript governing equation to its reference function or designated future field/postprocessing operation. No optional crystallization or desirability equation is retained.
 
 Three ignored temporary comparator evidence files were copied byte-for-byte into `literature/evidence/stage_05/` and the material source paths were repaired. Raw evidence and hashed database/report bytes are protected against Git line-ending conversion. The SUNLU paper's author metadata was corrected to Bertocco et al. without altering reported property values. Stage 4 records are retained as historical snapshots; the current database build manifest is Stage 5.
 
@@ -117,8 +117,49 @@ The Prompt 7 absolute candidates are explicitly evaluated in `geometry/candidate
 
 `scripts/build_geometry.py` validates the definition, calculates the gap table and writes a parameterized MAPDL deck. One geometry-only invocation at γ = 0.01 exited 0, reported three volumes and saved `stage07_plate_gap.db`. The immutable input/output hashes are in `simulation/geometry/stage07_plate_gap/manifest.json`. There is no mesh, element type, material assignment, boundary condition, load, analysis type or solve command. Spacer geometry is deferred because its thermal expansion convention and attachment are unresolved.
 
+## Transient thermal state — Stage 8
+
+`docs/thermal_model.md` is the authoritative thermal-method record. Stage 8
+executes a verification-only 1 mm × 1 mm × 10 mm plane wall with adiabatic side
+faces and convection on both thickness faces. The numerical fixtures are k =
+0.5 W m⁻¹ K⁻¹, c<sub>p</sub> = 1000 J kg⁻¹ K⁻¹, ρ = 1000 kg m⁻³ and h =
+5 W m⁻² K⁻¹, giving Bi = 0.05. They are not PLA properties.
+
+The reference begins at 20 °C, ramps the ambient to 80 °C over 0–300 s, holds
+the ambient at 80 °C through 900 s, ramps it to 20 °C over 900–1200 s and holds
+20 °C through 1800 s. MAPDL 2026 R1 used 640 mapped SOLID70 elements, 1025
+nodes, 40 elements through thickness and a fixed 0.25 s step. The accepted run
+is `simulation/verification/stage08_attempt_05`; it exited 0 with no MAPDL error
+messages. Its exact input, raw binary result, solver output, extracted table,
+code and hashes are preserved.
+
+The reference calculation uses the exact one-dimensional plane-wall step
+response, 200 roots of ζ tan ζ = Bi and Duhamel superposition integrated over
+each linear ambient segment. Nine center temperatures are compared in
+`verification/thermal_verification.csv`. The maximum absolute error is
+0.005180700 °C; the maximum conventional relative error is 0.001700533% using
+kelvin, and the maximum error relative to the temperature excursion is
+0.157660518%. The predeclared acceptance limits were 0.05 °C and 0.25%
+excursion-relative error, so the verification passes.
+
+Four failed solver/postprocessing attempts remain traceable: attempt 01 had an
+unusable APDL extraction; attempts 02 and 03 missed the unchanged numerical
+accuracy limit at 5 s and 1 s; attempt 04 terminated with a Windows file-mapping
+error in the OneDrive working directory. Attempt 05 ran the unchanged 0.25 s
+problem in local scratch and copied closed files back. This is benchmark
+time-integration refinement, not production time-step convergence.
+
+The verification confirms the implemented linear conduction, two-face
+convection, ramp/hold/cooling history and center-temperature extraction only.
+Radiation and thermal contact are omitted to preserve the analytical problem.
+It does not verify Prusament thermal properties, the production coupon/fixture,
+fixture heat transfer, radiation, PLA–steel contact, mesh convergence, physical
+predictive validity, dimensional change, warpage or stress. The full FREE/GAP
+thermal model remains blocked; no missing property or boundary coefficient is
+set to zero.
+
 ## Completion records and stage boundary
 
-Stage 7 quality and integrity records are `docs/stage_07_quality.md`, `docs/integrity_report.json`, `docs/stage_07_geometry_checks.json`, `docs/stage_07_literature_integrity.json`, `docs/stage_07_material_integrity.json`, `docs/stage_07_pdf_review.json` and `docs/stage_07_manifest.json`.
+Stage 8 quality and integrity records are `docs/stage_08_quality.md`, `docs/integrity_report.json`, `docs/stage_08_thermal_checks.json`, `docs/stage_08_literature_integrity.json`, `docs/stage_08_material_integrity.json`, `docs/stage_08_pdf_review.json` and `docs/stage_08_manifest.json`.
 
-Prompt 7 establishes the parametric specimen/fixture geometry and preprocessing evidence only. The complete production thermo-mechanical annealing model remains blocked by material and boundary evidence. No mesh, field solution, mesh/time-step/contact convergence, physical validation, sensitivity, propagated uncertainty or optimization is complete. Do not begin Prompt 8 without the user's next numbered instruction.
+Prompt 8 establishes and analytically verifies the transient thermal solver implementation on a declared reference problem. The complete production thermo-mechanical annealing model remains blocked by material and boundary evidence. No production coupon field solution, production mesh/time-step/contact convergence, physical validation, sensitivity, propagated uncertainty or optimization is complete. Do not begin Prompt 9 without the user's next numbered instruction.

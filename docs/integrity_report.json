@@ -1,5 +1,5 @@
 {
-  "stage": 7,
+  "stage": 8,
   "date": "2026-09-13",
   "checks": [
     {
@@ -231,7 +231,11 @@
       "status": "pass"
     },
     {
-      "check": "Evidence absence explicitly reported",
+      "check": "Thermal evidence boundary explicitly reported",
+      "status": "pass"
+    },
+    {
+      "check": "Accepted thermal error values reported",
       "status": "pass"
     },
     {
@@ -255,14 +259,27 @@
       "status": "pass"
     },
     {
+      "check": "Stage 8 thermal verification checks passed",
+      "status": "pass"
+    },
+    {
+      "check": "Published thermal comparison equals accepted run",
+      "status": "pass"
+    },
+    {
+      "check": "Production thermal gaps remain explicit",
+      "status": "pass"
+    },
+    {
       "check": "All text lies inside page safety bounds",
       "status": "pass"
     }
   ],
-  "count": 64,
-  "pdf_sha256": "7c22e4f03072298ca96ce80cecf6b695020ab1206e4f16507b8c20b14370520f",
-  "manuscript_sha256": "efa4b81058f99b0e08d7858bf13591384b9015e9e86b8752cdbc112006147ab7",
+  "count": 68,
+  "pdf_sha256": "f998e16d59503bd1529dae3925804ee2931181d65f1c16a45c1e771f7df735db",
+  "manuscript_sha256": "74872e014d6e17225773024de0f4ba35fa632363d2422c1a1e0d9cbfee0dc2f4",
   "material_manifest_sha256": "d9eeab055d206d082674004be8f85f1f00168d2aa34288526ac1549c91f5652b",
   "geometry_manifest_sha256": "d76d855563cb38fa34c51995092edfbb35ead325bc4eb2c3a8bd18fefc0d8369",
-  "scope": "Document, source, property, installed-environment and geometry-preprocessing integrity. One zero-analysis MAPDL probe and one geometry-only MAPDL build; no mesh, field solution or physical validation."
+  "thermal_manifest_sha256": "f1942fd9932f7fbc2a1678edcec6576fde89b602c04b38761c7183f08c85eca1",
+  "scope": "Document, source, property, environment, geometry and genuine MAPDL plane-wall thermal verification integrity. No production PLA coupon solution or physical validation."
 }

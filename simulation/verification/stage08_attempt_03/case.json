@@ -1,0 +1,39 @@
+{
+  "case_id": "stage08_thermal_plane_wall",
+  "case_kind": "thermal_verification",
+  "purpose": "Verification-only one-dimensional plane wall with two convective faces; constants are numerical fixtures and are not PLA properties.",
+  "units": "SI: m, kg, s, W, J, degC differences",
+  "geometry": {
+    "length_x_m": 0.001,
+    "width_y_m": 0.001,
+    "thickness_z_m": 0.01,
+    "element_size_m": 0.00025
+  },
+  "verification_material": {
+    "thermal_conductivity_W_mK": 0.5,
+    "specific_heat_J_kgK": 1000.0,
+    "density_kg_m3": 1000.0,
+    "evidence_status": "declared numerical verification fixture; not a physical PLA dataset"
+  },
+  "boundary": {
+    "convection_coefficient_W_m2K": 5.0,
+    "convective_faces": ["z=0", "z=thickness"],
+    "other_faces": "adiabatic",
+    "radiation": "omitted to preserve the closed-form linear reference problem"
+  },
+  "ambient_history": [
+    {"time_s": 0.0, "temperature_C": 20.0, "phase": "initial ambient"},
+    {"time_s": 300.0, "temperature_C": 80.0, "phase": "linear heating ramp"},
+    {"time_s": 900.0, "temperature_C": 80.0, "phase": "hot hold"},
+    {"time_s": 1200.0, "temperature_C": 20.0, "phase": "linear cooling ramp"},
+    {"time_s": 1800.0, "temperature_C": 20.0, "phase": "ambient recovery"}
+  ],
+  "initial_temperature_C": 20.0,
+  "time_step_s": 1.0,
+  "comparison_times_s": [150.0, 300.0, 450.0, 600.0, 900.0, 1050.0, 1200.0, 1500.0, 1800.0],
+  "analytical_series_terms": 200,
+  "predeclared_acceptance": {
+    "maximum_absolute_error_C": 0.05,
+    "maximum_excursion_relative_error_percent": 0.25
+  }
+}

@@ -13,7 +13,7 @@ Computational manuscript draft · 13 September 2026
 
 <b>Planned approach.</b> Genuine ANSYS analysis will compare mechanically free annealing with opposed-face gap restraint for a 60 mm × 10 mm × 4 mm rectangular plate over an evidence-supported sub-melting domain. Candidate levels are 80&nbsp;°C, 95&nbsp;°C and 110&nbsp;°C, with holds of 30 min, 60 min and 90 min; their admission depends on the selected material evidence. Temperature-dependent, history-dependent behavior and contact will be represented only to the extent supported by data. Thermal histories, signed dimensions and released warpage will be distinguished from contact pressure and conditional stress predictions. Numerical verification, independent literature-based validation and uncertainty assessment will precede multi-objective interpretation.
 
-<b>Results status.</b> No ANSYS field results, complete production PLA law, convergence evidence, validation findings or optimum exist at this stage. Ansys Student 2026 R1 and MAPDL build 26.1 update 20260202 are installed. A geometry-only MAPDL build created the three intended solid volumes for a representative nonzero clearance and exited successfully without meshing or solving. The supported Prusament viscoelastic core is implemented as a material-point reference with 38 passing numerical unit tests. Compatible thermal functions, a bulk irreversible-strain law and the fixture expansion convention remain unresolved. These checks establish software availability, geometry construction and constitutive algebra only; they do not validate annealing predictions.
+<b>Results status.</b> One verification-only ANSYS transient thermal field solution is complete; no production PLA coupon result, convergence claim, physical validation finding or optimum exists. For a constant-property plane wall with a ramp–hold–cool ambient history, genuine MAPDL center temperatures agree with a 200-term analytical solution to a maximum absolute error of 0.005180700&nbsp;°C. The maximum conventional relative error is 0.001700533% using kelvin, and the maximum error normalized by temperature excursion is 0.157660518%. The accepted model uses 1025 nodes, 640 SOLID70 elements and a fixed 0.25&nbsp;s step. These constants and temperatures are numerical verification fixtures, not PLA data. The production model remains blocked by compatible Prusament k(T) and c<sub>p</sub>(T), physical boundary/contact inputs and irreversible-strain evidence.
 
 <b>Intended contribution.</b> The study will assess the clearance–distortion–stress trade-off and distinguish temporary geometric suppression from released stability. Prior supported annealing and numerical optimization preclude a broad first-of-kind claim. No strength improvement or industrial treatment recommendation is asserted.
 
@@ -162,7 +162,7 @@ The study will not establish fatigue life, long-term aging, service creep, moist
 
 Multi-objective comparisons are restricted to admissible, numerically verified conditions with explicit response definitions. A low-distortion mild treatment is not automatically useful annealing: any recommendation requires a separately supported processing-benefit or application criterion. If that criterion or independent validation remains unavailable, the paper will report conditional trade-offs and the limitation, not an industrial processing recommendation.
 
-The scope is finalized as a computational research commitment. The Prusament reference law is implemented and unit-tested. Ansys Student 2026 R1, a Mechanical APDL Student checkout and the parameterized three-volume geometry build are verified on the host, while GUI-system entitlements, discretization, missing material closures and validation datasets remain open. No ANSYS field result or physical validation is supplied by this stage.
+The scope is finalized as a computational research commitment. The Prusament reference law is implemented and unit-tested. Ansys Student 2026 R1, a Mechanical APDL Student checkout and the parameterized three-volume geometry build are verified on the host. A separate plane-wall ANSYS field solution verifies the transient conduction and convection implementation against an analytical history; it is not a PLA prediction. Production discretization, missing material closures and validation datasets remain open.
 
 <!-- PAGE -->
 ### 3. Parametric computational geometry and controlled constraint
@@ -215,13 +215,13 @@ Initial clearance | γ = 0–0.02; g<sub>0</sub> = 0–0.08 mm | Declared geomet
 
 The three temperature and three duration levels define nine thermal combinations before clearance, verification or uncertainty cases are added. This is design arithmetic, not a count of completed simulations. The total run count is not yet fixed.
 
-Heating ramps, environmental temperature, convection, possible radiation, cooling and release must be specified with units and source or design justification. Hold time will be distinguished from total exposure: a criterion based on the part temperature field must define attainment. That criterion and its band are not yet fixed. Temperatures used in absolute-temperature laws must be converted consistently to kelvin.
+Heating ramps, environmental temperature, convection, possible radiation, cooling and release must be specified with units and source or design justification. Hold time will be distinguished from total exposure: a criterion based on the part temperature field must define attainment. That criterion and its band are not yet fixed. Temperatures used in absolute-temperature laws must be converted consistently to kelvin. The Stage 8 plane-wall benchmark exercises a complete ramp, hot hold and cooling history, but its declared schedule is a numerical verification fixture and does not fix this production protocol.
 
 A process comparison can apply the same external thermal cycle to constrained and unconstrained domains, allowing part histories to differ. A separate thermally matched comparison is needed to isolate mechanical restraint from fixture-induced thermal lag. The two comparisons answer different questions and must not be conflated.
 
 ### 4. Constitutive decision and governing equations
 
-The strongest parameterized model in the present evidence set is a small-strain isotropic generalized-Maxwell model for Prusament PLA, with reversible thermal expansion and a piecewise temperature shift [8]. Stage 5 implements its material-point reference relations and analytical tests. A complete production annealing model remains blocked by missing thermal functions, bulk irreversible recovery and initial-state evidence. No ANSYS material card or solver result is represented as complete.
+The strongest parameterized model in the present evidence set is a small-strain isotropic generalized-Maxwell model for Prusament PLA, with reversible thermal expansion and a piecewise temperature shift [8]. Stage 5 implements its material-point reference relations and analytical tests. A complete production annealing model remains blocked by missing thermal functions, bulk irreversible recovery and initial-state evidence. No production ANSYS material card or coupon result is represented as complete.
 
 Chapuis et al. [8] characterize Prusament PLA using frequency sweeps of 1–18 Hz across 23–85 °C. This interval defines the code's temperature admission envelope, not proof of validity for every dwell, strain amplitude, ramp or bulk geometry. The inherited 30 min, 60 min and 90 min holds still need time-domain support. The 95 °C and 110 °C levels remain outside the envelope. The reference tests use 23 °C as a thermal-strain reference; this does not fix the production cycle. A 20 °C PLA start is not admitted by extrapolation.
 
@@ -233,14 +233,14 @@ Reversible thermal strain | Constant Prusament α [8] | No directional expansion
 Relaxation | 23 source Maxwell branches [8] | Duration, strain and bulk transfer remain conditional
 Temperature dependence | Piecewise Arrhenius/WLF clock [8] | No separate same-grade E(T) multiplier
 Irreversible annealing strain | Evidence-gap error | No identified signed bulk law or initial recovery state
-PLA heat transfer | No thermal-field calculation | Compatible k(T) and c<sub>p</sub>(T) missing
+PLA heat transfer | Plane-wall verification only | Compatible Prusament k(T) and c<sub>p</sub>(T) missing
 Fixture behavior | AISI 304 interpolation and elastic response [38] | Expansion convention and contact behavior open
 
-The future ANSYS transient heat balance, with no admitted internal heat source, is
+The ANSYS transient heat balance, with no internal heat source in the verified reference problem, is
 
 EQ: ρc<sub>p</sub> ∂T/∂t = ∇ · (k ∇T). &nbsp;&nbsp; (2)
 
-The conductivity k is isotropic in the selected material closure. Compatible thermal functions remain absent. Omitting crystallization and dissipative heating requires a physical justification before production use; the present omission does not establish that these effects vanish. Supplier density [36] and unidentified-PLA constants [37] cannot supply a complete Prusament thermal law.
+The conductivity k is isotropic in the selected material closure. Stage 8 implements Eq. (2) for a constant-property analytical benchmark. Compatible temperature-dependent Prusament functions remain absent. Omitting crystallization and dissipative heating requires a physical justification before production use; the present omission does not establish that these effects vanish. Supplier density [36] and unidentified-PLA constants [37] cannot supply a complete Prusament thermal law.
 
 <!-- PAGE -->
 ### 4.1. Strain partition and reversible expansion
@@ -381,19 +381,19 @@ These are implementation targets for the future field solver, not executed equat
 
 ### 4.6. Material-relation verification status
 
-Thirty-eight numerical unit tests pass for the implemented material relations. They compare source sums and shift conventions, analytical elastic and relaxation limits, exact isothermal increments, thermal reversibility, shear/bulk conversion and numerical refinement for a prescribed temperature ramp. Synthetic test inputs are numerical fixtures, not measured PLA data or coupon simulation results. Missing annealing strain, crystallization and production closures are tested to raise errors.
+Thirty-eight numerical unit tests pass for the implemented material relations. They compare source sums and shift conventions, analytical elastic and relaxation limits, exact isothermal increments, thermal reversibility, shear/bulk conversion and numerical refinement for a prescribed temperature ramp. Ten further tests cover the Stage 8 thermal reference and production admission contract. Synthetic test inputs are numerical fixtures, not measured PLA data or coupon simulation results. Missing annealing strain, crystallization and production closures are tested to raise errors.
 
-Each governing equation is mapped to its implemented function or designated future solver/postprocessing operation in the repository. The full test record preserves input and code hashes. These checks verify algebra and software behavior; they do not establish ANSYS material-point agreement, mesh convergence, physical validation or validity of the proposed annealing holds.
+Each governing equation is mapped to its implemented function or designated future solver/postprocessing operation in the repository. The full test record preserves input and code hashes. The verified thermal case adds genuine ANSYS field evidence for Eq. (2), but only for the declared plane-wall problem. These checks do not establish ANSYS viscoelastic material-point agreement, production mesh convergence, physical validation or validity of the proposed annealing holds.
 
 ### 4.7. Solver environment and automated execution boundary
 
-The identified host installation is Ansys Student 2026 R1 under the v261 product tree. Workbench `RunWB2.exe` reports product version 26.1; the Mechanical executable `AnsysWBU.exe` reports product version 26.1; and optiSLang reports 26.1.0 revision 1878. Installed Workbench templates include Static Structural, Transient Structural and Transient Thermal. File presence is not treated as a license checkout. Mechanical APDL was therefore invoked separately with a zero-analysis batch input and reported release 2026 R1, build 26.1, update 20260202 and the `Ansys Mechanical Enterprise Academic Student` product before exiting with code zero. The input created no geometry, mesh, load step or solution.
+The identified host installation is Ansys Student 2026 R1 under the v261 product tree. Workbench `RunWB2.exe` reports product version 26.1; the Mechanical executable `AnsysWBU.exe` reports product version 26.1; and optiSLang reports 26.1.0 revision 1878. Installed Workbench templates include Static Structural, Transient Structural and Transient Thermal. File presence is not treated as a license checkout. Mechanical APDL reported release 2026 R1, build 26.1, update 20260202 and the `Ansys Mechanical Enterprise Academic Student` product in both the Stage 6 zero-analysis probe and the accepted Stage 8 transient thermal execution.
 
-The official 2026 R1 Student description states a structural limit of 128,000 nodes/elements, no geometry export and up to four HPC CPU cores [40]. The host provides eight physical cores, 16 logical processors and 15.82 GiB installed memory; production launch settings will remain within the four-core license statement. Solver-generated contact and auxiliary entities must be included when checking the structural limit. No mesh count is available in this stage.
+The official 2026 R1 Student description states a structural limit of 128,000 nodes/elements, no geometry export and up to four HPC CPU cores [40]. The host provides eight physical cores, 16 logical processors and 15.82 GiB installed memory; production launch settings will remain within the four-core license statement. Solver-generated contact and auxiliary entities must be included when checking the structural limit. The accepted verification mesh contains 1025 nodes and 640 elements; no production specimen/fixture mesh exists.
 
 The project uses explicit JSON case records and a fail-closed Python runner. A production record must provide annealing temperature in °C, hold time in seconds, fixture gap in mm and a material identifier. Execution is rejected while any geometry, thermal-property, irreversible-strain, material-adapter, boundary-history or extraction gate remains false. This makes parameters reproducible without silently converting unresolved choices into model inputs. PyMechanical was not found in the system environment and is not a dependency of the current direct MAPDL batch path. DesignXplorer and optiSLang are present on disk but were not used; no design study, sensitivity index or optimization result was generated.
 
-Every run directory retains the exact command, case and APDL hashes, return code and hashes of generated logs. Failed cases are preserved. The Stage 7 preprocessing-only run additionally stores the MAPDL database, output and five-level gap table. The result-registration script accepts only non-empty exported rows with case, time, quantity, value, unit, location and originating solver file. This provenance interface does not create results and the full simulation campaign remains blocked.
+Every run directory retains the exact command, case and APDL hashes, return code and hashes of generated logs. Failed cases are preserved. The Stage 7 preprocessing-only run stores the MAPDL database, output and five-level gap table. Stage 8 preserves five thermal attempts, including rejected extraction/accuracy cases and an I/O failure; attempt 05 is the accepted verification run. The full production campaign remains blocked.
 
 <!-- PAGE -->
 ### 5. Dimensional and mechanical response definitions
@@ -418,15 +418,35 @@ Mechanical diagnostics will include the contact-pressure history, reactions and 
 <!-- PAGE -->
 ### 6. Numerical verification and independent validation
 
-Verification must establish that the implemented equations and discretization produce sufficiently resolved responses. It cannot establish that those equations represent a particular printed material. No mesh, time-step or contact convergence has been performed in this stage.
+Verification must establish that the implemented equations and discretization produce sufficiently resolved responses. It cannot establish that those equations represent a particular printed material. Stage 8 verifies one transient thermal reference problem; production mesh, time-step and contact convergence remain unperformed.
 
 ### 6.1. Verification protocol
 
-First check units, heat balance, force balance, temperature transfer and rigid-body treatment. Limiting cases should include free reversible thermal expansion and contact remaining inactive at a sufficiently open gap. A reversible cycle can serve as an implementation check; its zero permanent recovery must not be presented as validated annealing behavior.
+The executed reference is a 1 mm × 1 mm × 10 mm wall with adiabatic side faces and equal convection on its two z faces. Declared verification constants are k = 0.5 W m<super>−1</super> K<super>−1</super>, c<sub>p</sub> = 1000 J kg<super>−1</super> K<super>−1</super>, ρ = 1000 kg m<super>−3</super> and h = 5 W m<super>−2</super> K<super>−1</super>. They are numerical fixtures, not PLA properties. With half-thickness L = 0.005 m, Bi = hL/k = 0.05. The body begins uniformly at 20 °C; the ambient ramps to 80 °C over 0–300 s, remains at 80 °C through 900 s, ramps to 20 °C over 900–1200 s and remains at 20 °C through 1800 s. This schedule tests initial state, heating, approach/hold and cooling without imposing an instantaneous uniform body temperature.
 
-Spatial refinement must track directional dimensions, warpage, contact loading and the selected stress measures while retaining the same physical setup. Time-step refinement must resolve ramps, contact transitions and release. Changes in nonlinear tolerances, penalty stiffness or stabilization require separate assessment so their influence is not mistaken for mesh convergence. Relative differences near a vanishing response require an absolute scale or tolerance.
+For the exact one-dimensional plane-wall center response,
 
-Convergence acceptance levels will be declared before interpreting results and related to the smallest effect or tolerance being discussed. A grid-convergence estimate is appropriate only when its assumptions are supported; non-monotonic refinement must be reported. Failed cases and unconverged fields cannot enter optimization as valid data.
+EQ: S<sub>c</sub>(t) = 1 − ∑<sub>n=0</sub><sup>∞</sup> A<sub>n</sub> exp(−ζ<sub>n</sub><sup>2</sup>αt/L<sup>2</sup>), &nbsp; ζ<sub>n</sub> tan ζ<sub>n</sub> = Bi,<br/>A<sub>n</sub> = 4 sin ζ<sub>n</sub>/(2ζ<sub>n</sub> + sin 2ζ<sub>n</sub>), &nbsp; T<sub>c</sub>(t) = T<sub>i</sub> + ∫<sub>0</sub><sup>t</sup> S<sub>c</sub>(t − τ) dT<sub>∞</sub>(τ). &nbsp;&nbsp; (18)
+
+The reference calculation uses 200 roots and exact integration over each linear ambient segment. MAPDL 2026 R1 used 640 mapped SOLID70 elements, 1025 nodes, 40 elements through thickness and a fixed 0.25 s step. Before the accepted run, the maximum limits were fixed at 0.05 °C absolute error and 0.25% error relative to |T<sub>ref</sub> − 20 °C|. A conventional relative error based on absolute temperature in kelvin is also reported.
+
+TABLE: Genuine ANSYS–analytical center-temperature comparison for the plane-wall verification
+Time (s) | ANSYS / analytical (°C) | Absolute / excursion-relative error
+150 | 21.892109254 / 21.889130841 | 0.002978413 °C / 0.157660518%
+300 | 27.631062216 / 27.625947421 | 0.005114795 °C / 0.067070946%
+450 | 34.805348857 / 34.801718199 | 0.003630658 °C / 0.024528625%
+600 | 41.003870402 / 41.001387994 | 0.002482407 °C / 0.011820207%
+900 | 50.967098637 / 50.966218772 | 0.000879865 °C / 0.002841371%
+1050 | 53.056900023 / 53.059537028 | 0.002637005 °C / 0.007976533%
+1200 | 50.753732030 / 50.758912731 | 0.005180700 °C / 0.016842924%
+1500 | 42.903452036 / 42.906520281 | 0.003068244 °C / 0.013394633%
+1800 | 37.051786082 / 37.053501761 | 0.001715679 °C / 0.010060566%
+
+The maximum absolute error is 0.005180700 °C, the maximum kelvin-based relative error is 0.001700533% and the maximum excursion-relative error is 0.157660518%; both predeclared acceptance limits are satisfied. Four earlier attempts remain archived: an extraction failure, two rejected time-step comparisons and a OneDrive file-mapping termination. The accepted 0.25 s case executed in local scratch and was copied back only after MAPDL closed its files. This verifies the linear conduction, convection, ramp/hold/cooling history and extraction implementation. It is neither production time-step convergence nor physical validation.
+
+Radiation is omitted from this benchmark to preserve the linear analytical boundary. No fixture interface exists in the reference case. The production contract requires a radiation relevance decision, the sourced temperature-dependent AISI 304 properties and PLA–steel thermal-contact conductance. It rejects execution because compatible Prusament k(T) and c<sub>p</sub>(T), convection, emissivity/enclosure history, contact conductance, hold-attainment rule and production extraction definitions remain unresolved. No missing input is set to zero.
+
+Future spatial refinement must track directional dimensions, warpage, contact loading and selected stress measures while retaining the same physical setup. Time-step refinement must resolve ramps, contact transitions and release. Changes in nonlinear tolerances, penalty stiffness or stabilization require separate assessment. Failed cases and unconverged fields cannot enter optimization as valid data.
 
 ### 6.2. Calibration and independent evidence
 
@@ -460,11 +480,11 @@ Candidates selected through a surrogate must be recomputed with the genuine solv
 <!-- PAGE -->
 ### 8. Evidence status, engineering relevance and limitations
 
-The current contribution includes a finalized computational scope, a formulation-audited property database, a tested material-point reference implementation and a parameterized three-volume geometry. Prusament PLA is the reference constitutive formulation, and AISI 304 is the candidate fixture material. The evidence table below identifies what remains necessary before numerical findings can be reported. Missing evidence is represented by explicit blocked fields rather than zero values, example contours or synthetic data.
+The current contribution includes a finalized computational scope, a formulation-audited property database, a tested material-point reference implementation, a parameterized three-volume geometry and an analytically verified transient thermal reference. Prusament PLA is the reference constitutive formulation, and AISI 304 is the candidate fixture material. The verification result establishes code behavior for a declared plane wall; it does not establish a PLA prediction. Missing production evidence is represented by explicit blocked fields rather than zero values, example contours or synthetic data.
 
 TABLE: Evidence required for reportable findings
 Claim family | Current evidence | Admission requirement
-Temperature and deformation | No ANSYS field solve; environment probe and geometry-only preprocessing run | Archived model, input sources, solver outputs and logs
+Temperature and deformation | One accepted ANSYS plane-wall verification; no PLA coupon solution or deformation field | Compatible production properties, boundary history, verified discretization and archived outputs
 PLA transient thermal response | No compatible Prusament k(T) or c<sub>p</sub>(T) | Compatible functions or a declared calibration/uncertainty strategy
 Bulk irreversible strain | Only thin-bilayer programmed pre-strain for Prusament | Identifiable signed three-dimensional law without double-counting
 Stress and contact pressure | No model or fields | Verified contact solution and declared extraction rules
@@ -482,6 +502,8 @@ Only 80 °C lies inside the direct 23–85 °C Prusament characterization interv
 ### 9. Conclusions
 
 The literature establishes prior supported annealing, irreversible strain analysis, thermo-viscoelastic finite elements and annealing-related optimization. Stage 5 fixes and implements the supported Prusament viscoelastic core and the AISI 304 interpolation/elastic relations, while preserving grade boundaries. Stage 7 selects the literature-traceable 60 mm × 10 mm × 4 mm plate and two 70 mm × 20 mm × 5 mm fixture plates. Five normalized screening clearances span γ = 0–0.02, equivalent to g<sub>0</sub> = 0–0.08 mm. A geometry-only MAPDL build at γ = 0.01 created and saved the intended three volumes without a mesh or solution.
+
+Stage 8 adds a genuine MAPDL transient thermal reference solution. For the declared plane-wall cycle, the maximum center-temperature difference from the 200-term analytical solution is 0.005180700 °C; the maximum kelvin-based relative error is 0.001700533%, and the maximum excursion-relative error is 0.157660518%. The accepted 0.25 s case satisfies the predeclared 0.05 °C and 0.25% limits. These are verification values for numerical fixtures, not Prusament material response or independent physical validation.
 
 The Prusament evidence provides ν, α, T<sub>g</sub>, a 23-branch Maxwell spectrum and WLF/Arrhenius shifting over a directly characterized 23–85 °C interval. Thirty-eight analytical and synthetic unit tests verify the reference material relations. Compatible k(T), c<sub>p</sub>(T), complete orthotropy, crystallization kinetics and a bulk irreversible-strain law remain unavailable; fixture thermal strain awaits its expansion convention.
 
@@ -592,7 +614,7 @@ Numerical findings require genuine ANSYS field execution, verified material evid
 
 ### Supplement A. Provenance and reproducibility requirements
 
-The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, the Stage 5 constitutive implementation/test records, the Stage 6 fail-closed Ansys runner and the Stage 7 parametric geometry source. The base paper is preserved separately from the evolving manuscript. Solver artifacts remain limited to environment and geometry-only preprocessing; no field-result dataset is available.
+The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, constitutive implementation/tests, parametric geometry and Stage 8 thermal-verification evidence. The base paper is preserved separately from the evolving manuscript. Solver artifacts include the accepted plane-wall thermal field result and all failed attempts; no production PLA field result exists.
 
 Each future case must preserve a unique identifier, the solver version, geometry and material orientation, input configuration, source references, units, boundary histories, mesh, time-integration and contact settings, execution status, raw-output location and file checksums. Failed cases remain in the record with their failure reason. Postprocessing must identify both the raw field and the script/equation producing each response.
 

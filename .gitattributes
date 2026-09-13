@@ -7,9 +7,14 @@
 literature/metadata/*.json -text
 literature/search_logs/*.json -text
 literature/evidence/** -text -diff
+literature/literature_matrix.json -text -diff
+literature/references.bib -text -diff
 simulation/runs/** -text -diff
 simulation/geometry/** -text -diff
+simulation/verification/** -text -diff
+verification/*.csv -text -diff
 material/*.csv -text
 material/*.json -text
 docs/*integrity*.json -text
 docs/stage_05*.json -text
+docs/stage_*.json -text -diff

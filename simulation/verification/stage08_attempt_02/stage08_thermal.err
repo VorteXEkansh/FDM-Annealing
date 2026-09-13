@@ -1,0 +1,6 @@
+/COM,ANSYS RELEASE 2026 R1           BUILD 26.1      UP20260202       16:34:39
+
+ *** WARNING ***                         ELAPSED TIME =      12.748   TIME= 16:34:48
+ Degree of freedom constraints and/or load data are not consistent for   
+ all nodes across data sets.  Resulting boundary conditions, load data,  
+ and reaction forces may be erroneous.                                   

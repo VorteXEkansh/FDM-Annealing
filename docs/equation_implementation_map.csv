@@ -1,6 +1,6 @@
 equation,relation,implementation,status,evidence_or_gate
-1,Initial clearance and normalized clearance,Future geometry parameter assignment,design_definition_pending_geometry,No numerical gap selected
-2,Transient heat balance,Future ANSYS transient thermal field solution,pending_thermal_closures,Prusament k(T) and cp(T) absent; heat-source omission needs justification
+1,Initial clearance and normalized clearance,geometry/geometry_definition.json and scripts/build_geometry.py,implemented_geometry_definition,Five declared gap levels; no optimum inferred
+2,Transient heat balance,scripts/run_thermal_verification.py APDL deck and accepted attempt 05,implemented_for_reference_problem,Constant verification fixtures only; production Prusament k(T) and cp(T) absent
 3,Strain partition,src/constitutive.py:Prusament.strain_parts and advance,implemented_reference_partition,Annealing law blocked; zero omission only in numerical tests
 4,Reversible thermal strain,src/constitutive.py:Prusament.thermal_strain,implemented_reference,Chapuis2025 Table B.1 constant alpha
 5,Isotropic stiffness action,src/constitutive.py:isotropic_stress and isotropic_strain,implemented_reference,Constant-Poisson three-dimensional extension explicitly assumed
@@ -16,3 +16,4 @@ equation,relation,implementation,status,evidence_or_gate
 15,Signed directional dimensional response,Future landmark-based displacement postprocessing,pending_geometry_and_solver,No outputs or final landmarks yet
 16,RMS dimensional response,Future signed-response aggregation,pending_solver_outputs,No dimensions calculated from fabricated fields
 17,Best-fit-plane warpage,Future area-weighted surface-fit postprocessing,pending_geometry_and_solver,No surface mesh or solver displacement yet
+18,Plane-wall center step response and Duhamel history,scripts/run_thermal_verification.py:center_step_modes and analytical_center_temperature,implemented_and_compared_to_ANSYS,Verification-only constants; not a PLA property or physical validation

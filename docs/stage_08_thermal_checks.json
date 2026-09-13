@@ -1,0 +1,157 @@
+{
+  "stage": 8,
+  "date": "2026-09-13",
+  "passed": true,
+  "checks": [
+    {
+      "check": "Accepted MAPDL execution returned zero",
+      "status": "pass"
+    },
+    {
+      "check": "Exact MAPDL build and Student product recorded",
+      "status": "pass"
+    },
+    {
+      "check": "MAPDL emitted no error messages",
+      "status": "pass"
+    },
+    {
+      "check": "One explained result-set boundary warning",
+      "status": "pass"
+    },
+    {
+      "check": "Verification case is explicitly not PLA",
+      "status": "pass"
+    },
+    {
+      "check": "Complete ramp-hold-cooling schedule",
+      "status": "pass"
+    },
+    {
+      "check": "Biot number reproduced",
+      "status": "pass"
+    },
+    {
+      "check": "Accepted input code and output hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Nine exact comparison times exported",
+      "status": "pass"
+    },
+    {
+      "check": "Analytical temperature reproduced at 150 s",
+      "status": "pass"
+    },
+    {
+      "check": "ANSYS temperature preserved at 150 s",
+      "status": "pass"
+    },
+    {
+      "check": "Analytical temperature reproduced at 300 s",
+      "status": "pass"
+    },
+    {
+      "check": "ANSYS temperature preserved at 300 s",
+      "status": "pass"
+    },
+    {
+      "check": "Analytical temperature reproduced at 450 s",
+      "status": "pass"
+    },
+    {
+      "check": "ANSYS temperature preserved at 450 s",
+      "status": "pass"
+    },
+    {
+      "check": "Analytical temperature reproduced at 600 s",
+      "status": "pass"
+    },
+    {
+      "check": "ANSYS temperature preserved at 600 s",
+      "status": "pass"
+    },
+    {
+      "check": "Analytical temperature reproduced at 900 s",
+      "status": "pass"
+    },
+    {
+      "check": "ANSYS temperature preserved at 900 s",
+      "status": "pass"
+    },
+    {
+      "check": "Analytical temperature reproduced at 1050 s",
+      "status": "pass"
+    },
+    {
+      "check": "ANSYS temperature preserved at 1050 s",
+      "status": "pass"
+    },
+    {
+      "check": "Analytical temperature reproduced at 1200 s",
+      "status": "pass"
+    },
+    {
+      "check": "ANSYS temperature preserved at 1200 s",
+      "status": "pass"
+    },
+    {
+      "check": "Analytical temperature reproduced at 1500 s",
+      "status": "pass"
+    },
+    {
+      "check": "ANSYS temperature preserved at 1500 s",
+      "status": "pass"
+    },
+    {
+      "check": "Analytical temperature reproduced at 1800 s",
+      "status": "pass"
+    },
+    {
+      "check": "ANSYS temperature preserved at 1800 s",
+      "status": "pass"
+    },
+    {
+      "check": "Absolute acceptance threshold passed",
+      "status": "pass"
+    },
+    {
+      "check": "Excursion-relative acceptance threshold passed",
+      "status": "pass"
+    },
+    {
+      "check": "Mapped mesh count preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Failed attempt 01 remains traceable",
+      "status": "pass"
+    },
+    {
+      "check": "Failed attempt 02 remains traceable",
+      "status": "pass"
+    },
+    {
+      "check": "Failed attempt 03 remains traceable",
+      "status": "pass"
+    },
+    {
+      "check": "Failed attempt 04 remains traceable",
+      "status": "pass"
+    },
+    {
+      "check": "Production thermal model remains fail closed",
+      "status": "pass"
+    },
+    {
+      "check": "Ten thermal unit tests pass",
+      "status": "pass"
+    }
+  ],
+  "count": 36,
+  "accepted_run": "simulation/verification/stage08_attempt_05",
+  "maximum_absolute_error_C": 0.0051807,
+  "maximum_relative_error_percent_K": 0.001700533,
+  "maximum_excursion_relative_error_percent": 0.157660518,
+  "scope": "Genuine MAPDL plane-wall transient thermal code verification and fail-closed production thermal contract; no PLA coupon prediction or physical validation."
+}

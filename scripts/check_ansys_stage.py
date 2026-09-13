@@ -1,5 +1,5 @@
 """Stage 6 environment and automation integrity checks."""
-import hashlib, json, re, subprocess, sys, unittest
+import hashlib, io, json, re, subprocess, sys, unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
@@ -21,7 +21,7 @@ def main():
     check('Production template has explicit parameters',set(prod['parameters'])=={'temperature_C','hold_time_s','fixture_gap_mm','material_id'})
     check('Production gates remain closed',all(v is False for v in prod['admission'].values()))
     suite=unittest.defaultTestLoader.discover(str(ROOT/'tests'),pattern='test_ansys_automation.py')
-    result=unittest.TextTestRunner(stream=open(Path.cwd()/'tmp_ansys_tests.txt','w'),verbosity=1).run(suite)
+    result=unittest.TextTestRunner(stream=io.StringIO(),verbosity=1).run(suite)
     check('Automation unit tests pass',result.wasSuccessful() and result.testsRun==6)
     env=(ROOT/'docs/software_environment.md').read_text(encoding='utf-8')
     check('Environment report separates presence and entitlement',all(x in env for x in ['Present on disk','Invocation status','License/availability conclusion']))

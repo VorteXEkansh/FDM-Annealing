@@ -1,0 +1,43 @@
+{
+  "case_id": "replace_with_unique_thermal_case_id",
+  "case_kind": "transient_thermal_production",
+  "geometry_definition": "geometry/geometry_definition.json",
+  "condition": "FREE_or_GAP",
+  "target_temperature_C": null,
+  "hold_duration_s": null,
+  "material": {
+    "pla_formulation": "Prusament PLA",
+    "density_table": null,
+    "thermal_conductivity_table": null,
+    "specific_heat_table": null,
+    "fixture_table": "material/fixture_properties.csv"
+  },
+  "cycle": {
+    "initial_ambient": {"end_time_s": 0.0, "oven_temperature_C": null},
+    "heating": {"end_time_s": null, "oven_temperature_C": null},
+    "approach_to_target": {"attainment_rule": null, "attainment_band_C": null},
+    "holding": {"start_time_s": null, "end_time_s": null, "oven_temperature_C": null},
+    "cooling": {"end_time_s": null, "ambient_temperature_C": null},
+    "final_observation": {"time_s": null, "temperature_C": null}
+  },
+  "boundaries": {
+    "convection": {"coefficient_W_m2K": null, "source_or_design_basis": null},
+    "radiation": {"enabled": null, "surface_emissivity": null, "enclosure_temperature_history": null},
+    "fixture_heat_transfer": {"enabled_for_GAP": true, "plate_initial_temperature_C": null},
+    "thermal_contact": {"conductance_W_m2K": null, "pressure_gap_temperature_dependence": null}
+  },
+  "extraction": {
+    "temperature_locations": null,
+    "volume_average_rule": null,
+    "energy_balance_rule": null
+  },
+  "admission": {
+    "geometry_verified": true,
+    "compatible_PLA_thermal_properties_admitted": false,
+    "complete_boundary_history_fixed": false,
+    "convection_evidenced": false,
+    "radiation_evidenced_or_justified": false,
+    "thermal_contact_evidenced": false,
+    "production_extraction_contract_fixed": false
+  }
+}

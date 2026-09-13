@@ -1,0 +1,30 @@
+{
+  "run_id": "stage08_attempt_01",
+  "case_id": "stage08_thermal_plane_wall",
+  "created_utc": "2026-09-13T11:04:27.448085+00:00",
+  "status": "postprocessing_failed_header_and_vector_write",
+  "accepted": false,
+  "solver": "Ansys Mechanical APDL Student 2026 R1",
+  "returncode": 0,
+  "failure_reason": "MAPDL completed without solver errors, but the APDL CSV header was truncated and array-valued VWRITE emitted triangular duplicate rows; no comparison was accepted.",
+  "sha256": {
+    "simulation/cases/thermal_verification_plane_wall.json": "d37518b18bfd07eda553868d77d501caf0e959111779f4e903df544ab67fb765",
+    "scripts/run_thermal_verification.py": "24ce1866dff97293eede9181a0529d46966bb597cc2013fbc50579ca97425862",
+    "input.dat": "9b8f6ff249800e6172cb17d35bed139f9274ad8a1eaefc6b7ac811b7ca567e0b",
+    "mapdl.out": "dd3a52f7c1403a2d326476a81ac4d94ab7243285eb8ce507699cf6e0ccb813c8",
+    "mesh_counts.csv": "7bd9e656a459b574d794b5151df8a9c5c2f47cbb2a69a01141449b026835e97d",
+    "runner_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runner_stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "solver_center_temperature.csv": "6bf48c985048b7f9219c9dd173015d4d0416f2280860400e1edebeca8d2fe37f",
+    "stage08_thermal.DSP": "c4753e27fd0e30c6c2f3ddb089ee8769031d63ab7c25884e7210f17f4632b1ff",
+    "stage08_thermal.err": "e759f085a863931c95b32c8c1aec843a391d0891d829bff1727d7b7cf070eb8e",
+    "stage08_thermal.esav": "2445bee6cade28243813c4aeae6e7ea6e1793cf38118df5e88022dfca758f769",
+    "stage08_thermal.full": "e2dd8671459f5527e3859dab0e9370013721fbb77d655331886afd6f20284790",
+    "stage08_thermal.ldhi": "9117764f86e3cdbdcedf6a3eb33da0f2dc6148660bdb2a19fa8cfab89a4ea2f3",
+    "stage08_thermal.log": "3a0b374581c2e7ce1ee8f4ae8185076d07bd81eb7b6ce6358d92447571247203",
+    "stage08_thermal.mntr": "3dad22e9f4874058d86e92e331fa7d5d9beec7ba209046f8a83f4d88c2f071d5",
+    "stage08_thermal.r001": "f07591b40cd62a90037f74d7206e1d08686314a1db3624013591956b1a1b03ee",
+    "stage08_thermal.rdb": "43b1e6bba12801dfaef28faf2004576b905de8801149a92c0ca3e4d28c878086",
+    "stage08_thermal.rth": "b0ad01f2339c1b3ef4648d37d5e0151dae3eb3bc163d99acdd547133b6a1b11d"
+  }
+}

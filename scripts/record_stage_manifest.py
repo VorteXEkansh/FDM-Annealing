@@ -18,6 +18,13 @@ if args.stage >= 6:
 if args.stage >= 7:
     paths += ['.gitignore','docs/geometry_decision.md','docs/stage_07_geometry_checks.json','docs/stage_07_pdf_review.json','geometry/geometry_definition.json','geometry/candidate_clearance_audit.csv','scripts/build_geometry.py','scripts/check_geometry.py','tests/test_geometry.py','simulation/geometry/stage07_plate_gap/geometry.dat','simulation/geometry/stage07_plate_gap/gap_design.csv','simulation/geometry/stage07_plate_gap/mapdl_geometry.out','simulation/geometry/stage07_plate_gap/stage07_geometry.err','simulation/geometry/stage07_plate_gap/stage07_geometry.log','simulation/geometry/stage07_plate_gap/stage07_plate_gap.db','simulation/geometry/stage07_plate_gap/manifest.json']
     scope='Parametric specimen/fixture geometry and geometry-only MAPDL construction verification; no mesh, field solution or simulation campaign.'
+if args.stage >= 8:
+    paths += ['docs/thermal_model.md','docs/stage_08_thermal_checks.json','docs/stage_08_pdf_review.json','ansys/thermal_model.py','scripts/run_thermal_verification.py','scripts/check_thermal_stage.py','tests/test_thermal_verification.py','tests/test_thermal_model.py','simulation/cases/thermal_verification_plane_wall.json','simulation/cases/thermal_production_template.json','verification/thermal_verification.csv']
+    durable_names={'manifest.json','input.dat','case.json','mapdl.out','comparison.csv','solver_center_temperature.csv','mesh_counts.csv','runner_stdout.log','runner_stderr.log','script_snapshot.py'}
+    paths += [str(p.relative_to(ROOT)).replace('\\','/') for p in sorted((ROOT/'simulation/verification').rglob('*')) if p.is_file() and p.name in durable_names]
+    paths += [str(p.relative_to(ROOT)).replace('\\','/') for p in sorted((ROOT/'simulation/verification/stage08_attempt_05').iterdir()) if p.is_file() and p.suffix.lower() in {'.rth','.rdb','.r001','.full','.esav','.ldhi','.dsp','.mntr'}]
+    paths = list(dict.fromkeys(paths))
+    scope='Genuine MAPDL plane-wall transient thermal verification and fail-closed production thermal contract; no production PLA coupon solution or physical validation.'
 data={'stage':args.stage,'date':'2026-09-13','algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
 (ROOT/f'docs/stage_{args.stage:02d}_manifest.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(f'Recorded {len(paths)} input/code/output hashes')

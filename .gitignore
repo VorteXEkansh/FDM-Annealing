@@ -8,6 +8,17 @@ __pycache__/
 *.rth
 *.db
 !simulation/geometry/**/*.db
+*.DSP
+*.esav
+*.full
+*.ldhi
+*.mntr
+*.r001
+*.rdb
+*.page
+*.bat
+*.lock
+!simulation/verification/stage08_attempt_05/**
 *.wbpj
 *_files/
 

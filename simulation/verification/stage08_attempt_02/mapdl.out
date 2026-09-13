@@ -1,0 +1,1964 @@
+
+ Ansys Mechanical Enterprise Academic Student      
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *         ANSYS MAPDL 2026 R1          LEGAL NOTICES          *
+ ***************************************************************
+ *                                                             *
+ * Copyright (c) 2026 Synopsys, Inc. and ANSYS, Inc.           *
+ * All rights reserved.                                        *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of Ansys, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the Ansys, Inc. online documentation or the Ansys, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * Ansys, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * Ansys, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the Ansys, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the Ansys, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ 2026 R1 
+     
+ Point Releases and Patches installed:   
+     
+ Ansys, Inc. License Manager 2026 R1 
+ Discovery (full install) 2026 R1
+ Core WB Files 2026 R1   
+ optiSLang Core UI 2026 R1   
+ CFX (includes CFD-Post) 2026 R1 
+ Chemkin 2026 R1 
+ EnSight 2026 R1 
+ FENSAP-ICE 2026 R1  
+ Fluent (includes CFD-Post) 2026 R1  
+ Polyflow (includes CFD-Post) 2026 R1
+ Forte (includes EnSight) 2026 R1
+ Rocky 2026 R1   
+ TurboGrid 2026 R1   
+ ACIS Geometry Interface 2026 R1 
+ AutoCAD Geometry Interface 2026 R1  
+ Catia, Version 4 Geometry Interface 2026 R1 
+ Catia, Version 5 Geometry Interface 2026 R1 
+ Catia, Version 6 Geometry Interface 2026 R1 
+ Creo Elements/Direct Modeling Geometry Interface 2026 R1
+ Creo Parametric Geometry Interface 2026 R1  
+ Inventor Geometry Interface 2026 R1 
+ JTOpen Geometry Interface 2026 R1   
+ NX Geometry Interface 2026 R1   
+ Parasolid Geometry Interface  2026 R1   
+ Solid Edge Geometry Interface 2026 R1   
+ SOLIDWORKS Geometry Interface 2026 R1   
+ Speos 2026 R1   
+ SpaceClaim 2026 R1  
+ Speos RPC 2026 R1   
+ Zemax OpticStudio 2026 R1   
+ Dynamic Reporting 2026 R1   
+ Aqwa 2026 R1
+ Autodyn 2026 R1 
+ Material Calibration App 2026 R1
+ Mechanical Products 2026 R1 
+ Motion 2026 R1  
+ Academic Student 2026 R1
+
+
+          *****  MAPDL COMMAND LINE ARGUMENTS  *****
+  INITIAL JOBNAME              = stage08_thermal                                                                                                                                                                                                                                         
+  BATCH MODE REQUESTED (-b)    = LIST
+  INPUT FILE COPY MODE (-c)    = COPY
+       1 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
+    TOTAL OF     1 CORES REQUESTED
+  INPUT FILE NAME              = C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\simulation\verification\stage08_attempt_02\input.dat
+  OUTPUT FILE NAME             = C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\simulation\verification\stage08_attempt_02\mapdl.out
+
+ RELEASE= 2026 R1              BUILD= 26.1      UP20260202   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=stage08_thermal  16:34:41  SEP 13, 2026  Elapsed Time=       0.188
+
+     1  /BATCH  
+     2  /FILNAME,stage08_thermal
+     3  /TITLE,Stage 8 analytical plane-wall thermal verification only  
+     4  /PREP7  
+     5  ET,1,70 
+     6  MP,KXX,1,0.5
+     7  MP,KYY,1,0.5
+     8  MP,KZZ,1,0.5
+     9  MP,C,1,1000 
+    10  MP,DENS,1,1000  
+    11  BLOCK,0,0.001,0,0.001,0,0.01
+    12  MSHAPE,0,3D 
+    13  MSHKEY,1
+    14  ESIZE,0.00025   
+    15  VMESH,ALL   
+    16  ALLSEL,ALL  
+    17  FINISH  
+    18  /SOLU   
+    19  ANTYPE,TRANS
+    20  TRNOPT,FULL 
+    21  AUTOTS,OFF  
+    22  *DIM,TS,ARRAY,9 
+    23  TS(1)=150   
+    24  TS(2)=300   
+    25  TS(3)=450   
+    26  TS(4)=600   
+    27  TS(5)=900   
+    28  TS(6)=1050  
+    29  TS(7)=1200  
+    30  TS(8)=1500  
+    31  TS(9)=1800  
+    32  OUTRES,ERASE
+    33  OUTRES,NSOL,%TS%
+    34  TUNIF,20
+    35  ASEL,S,LOC,Z,0  
+    36  ASEL,A,LOC,Z,0.01   
+    37  SFA,ALL,1,CONV,5,20 
+    38  ALLSEL,ALL  
+    39  TIME,1e-6   
+    40  KBC,1   
+    41  NSUBST,1,1,1
+    42  SOLVE   
+    43  ASEL,S,LOC,Z,0  
+    44  ASEL,A,LOC,Z,0.01   
+    45  SFA,ALL,1,CONV,5,80 
+    46  ALLSEL,ALL  
+    47  TIME,300
+    48  KBC,0   
+    49  DELTIM,5,5,5,ON 
+    50  SOLVE   
+    51  ASEL,S,LOC,Z,0  
+    52  ASEL,A,LOC,Z,0.01   
+    53  SFA,ALL,1,CONV,5,80 
+    54  ALLSEL,ALL  
+    55  TIME,900
+    56  KBC,0   
+    57  DELTIM,5,5,5,ON 
+    58  SOLVE   
+    59  ASEL,S,LOC,Z,0  
+    60  ASEL,A,LOC,Z,0.01   
+    61  SFA,ALL,1,CONV,5,20 
+    62  ALLSEL,ALL  
+    63  TIME,1200   
+    64  KBC,0   
+    65  DELTIM,5,5,5,ON 
+    66  SOLVE   
+    67  ASEL,S,LOC,Z,0  
+    68  ASEL,A,LOC,Z,0.01   
+    69  SFA,ALL,1,CONV,5,20 
+    70  ALLSEL,ALL  
+    71  TIME,1800   
+    72  KBC,0   
+    73  DELTIM,5,5,5,ON 
+    74  SOLVE   
+    75  FINISH  
+    76  /POST1  
+    77  ALLSEL,ALL  
+    78  NSEL,S,LOC,X,0.0005 
+    79  NSEL,R,LOC,Y,0.0005 
+    80  NSEL,R,LOC,Z,0.005  
+    81  *GET,CNODE,NODE,0,NUM,MIN   
+    82  ALLSEL,ALL  
+    83  *CFOPEN,solver_center_temperature,csv   
+    84  *VWRITE,'requested_time_s,solver_time_s,ansys_center_temperature_C' 
+    85  (A65)   
+    86  *DO,II,1,9  
+    87  TREQ=TS(II) 
+    88  SET,,,,,TREQ
+    89  *GET,TNOW,ACTIVE,0,SET,TIME 
+    90  *GET,TC,NODE,CNODE,TEMP 
+    91  *VWRITE,TREQ,TNOW,TC
+    92  (F16.6,',',F16.6,',',E24.16)
+    93  *ENDDO  
+    94  *CFCLOS 
+    95  ALLSEL,ALL  
+    96  *GET,NN,NODE,0,COUNT
+    97  *GET,NE,ELEM,0,COUNT
+    98  *CFOPEN,mesh_counts,csv 
+    99  *VWRITE,'nodes,elements,center_node'
+   100  (A30)   
+   101  *VWRITE,NN,NE,CNODE 
+   102  (F16.0,',',F16.0,',',F16.0) 
+   103  *CFCLOS 
+   104  FINISH  
+   105  /EXIT,NOSAVE
+
+ RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v261\Ansys\apdl\start.ans
+
+ /INPUT FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v261\Ansys\apdl\start.ans  LINE=       0
+
+ CURRENT JOBNAME REDEFINED AS stage08_thermal
+
+ TITLE= 
+ Stage 8 analytical plane-wall thermal verification only                       
+
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   16:34:41  SEP 13, 2026 Elapsed Time=      5.917
+
+ Stage 8 analytical plane-wall thermal verification only                       
+
+
+
+          ***** MAPDL ANALYSIS DEFINITION (PREP7) *****
+
+ ELEMENT TYPE          1 IS SOLID70      3-D THERMAL SOLID           
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  TEMP
+  THREE-DIMENSIONAL MODEL
+
+ MATERIAL          1     KXX  =  0.5000000      
+
+ MATERIAL          1     KYY  =  0.5000000      
+
+ MATERIAL          1     KZZ  =  0.5000000      
+
+ MATERIAL          1     C    =   1000.000      
+
+ MATERIAL          1     DENS =   1000.000      
+
+ CREATE A HEXAHEDRAL VOLUME WITH
+ X-DISTANCES FROM      0.000000000     TO     0.1000000000E-02
+ Y-DISTANCES FROM      0.000000000     TO     0.1000000000E-02
+ Z-DISTANCES FROM      0.000000000     TO     0.1000000000E-01
+
+      OUTPUT VOLUME =     1
+ PRODUCE ALL HEXAHEDRAL ELEMENTS IN 3D.
+ USE THE MAPPED MESHER.
+
+ DEFAULT ELEMENT DIVISIONS PER LINE BASED ON ELEMENT SIZE =  0.250E-03
+
+ GENERATE NODES AND ELEMENTS   IN  ALL  SELECTED VOLUMES  
+
+ NUMBER OF VOLUMES MESHED   =         1
+ MAXIMUM NODE NUMBER        =      1025
+ MAXIMUM ELEMENT NUMBER     =       640
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+
+ ***** ROUTINE COMPLETED *****  ELAPSED TIME =         5.931
+
+
+
+ *****  MAPDL SOLUTION ROUTINE  *****
+
+
+ PERFORM A TRANSIENT ANALYSIS
+  THIS WILL BE A NEW ANALYSIS
+
+ PERFORM A FULL TRANSIENT ANALYSIS
+  USING NEWMARK ALGORITHM
+
+ DO NOT USE AUTOMATIC TIME STEPPING THIS LOAD STEP
+
+ SET PARAMETER DIMENSIONS ON  TS TYPE=ARRA  DIMENSIONS=     9     1     1
+
+ PARAMETER TS(1) =     150.0000000    
+
+ PARAMETER TS(2) =     300.0000000    
+
+ PARAMETER TS(3) =     450.0000000    
+
+ PARAMETER TS(4) =     600.0000000    
+
+ PARAMETER TS(5) =     900.0000000    
+
+ PARAMETER TS(6) =     1050.000000    
+
+ PARAMETER TS(7) =     1200.000000    
+
+ PARAMETER TS(8) =     1500.000000    
+
+ PARAMETER TS(9) =     1800.000000    
+
+ ERASE THE CURRENT DATABASE OUTPUT CONTROL TABLE.
+
+
+ WRITE NSOL ITEMS TO THE DATABASE AT TIME POINTS GIVEN BY ARRAY PARAMETER : TS      
+   FOR ALL APPLICABLE ENTITIES
+
+ UNIFORM TEMPERATURE=    20.000  (TREF=     0.000)
+
+ SELECT       FOR ITEM=LOC  COMPONENT=Z     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+        1  AREAS (OF        6  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=LOC  COMPONENT=Z     BETWEEN 0.10000E-01 AND  0.10000E-01
+   KABS=  0.  TOLERANCE= 0.500000E-04
+
+        2  AREAS (OF        6  DEFINED) SELECTED BY ASEL  COMMAND.
+
+ SURFACE LOAD ON ALL SELECTED AREAS 
+     LOAD KEY =1         LOAD LABEL = CONV
+     VALUES =           5.0000              20.000    
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ TIME= 0.10000E-05
+
+ STEP BOUNDARY CONDITION KEY= 1
+
+ USE       1 SUBSTEPS INITIALLY THIS LOAD STEP FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE      1 SUBSTEPS AS A MAXIMUM
+   USE      1 SUBSTEPS AS A MINIMUM
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
+      SURFACE LOADS  TRANSFERRED FROM AREAS         =     32
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   16:34:41  SEP 13, 2026 Elapsed Time=      5.944
+
+ Stage 8 analytical plane-wall thermal verification only                       
+
+
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D                  
+   DEGREES OF FREEDOM. . . . . . TEMP
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .TRANSIENT            
+      SOLUTION METHOD. . . . . . . . . . . . . . .FULL                 
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
+
+ *** NOTE ***                            ELAPSED TIME =       5.946   TIME= 16:34:41
+ The conditions for direct assembly have been met.  No .emat or .erot    
+ files will be produced.                                                 
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   TIME AT END OF THE LOAD STEP. . . . . . . . . . 0.10000E-05
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .   YES
+   TRANSIENT (INERTIA) EFFECTS
+      THERMAL DOFS . . . . . . . . . . . . . . . .    ON
+   TRANSIENT INTEGRATION PARAMETERS
+      THETA. . . . . . . . . . . . . . . . . . . .  1.0000    
+      OSCILLATION LIMIT CRITERION. . . . . . . . . 0.50000    
+      TOLERANCE. . . . . . . . . . . . . . . . . .  0.0000    
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+      NSOL      TS                                                                                                                                                                                                                                                              
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= stage08_thermal.mntr                                                                                                                                                                                                                                                
+
+
+
+
+            **** CENTER OF MASS, MASS, AND MASS MOMENTS OF INERTIA ****
+
+  CALCULATIONS ASSUME ELEMENT MASS AT ELEMENT CENTROID
+
+  TOTAL MASS =  0.10000E-04
+
+                           MOM. OF INERTIA         MOM. OF INERTIA
+  CENTER OF MASS            ABOUT ORIGIN        ABOUT CENTER OF MASS
+
+  XC =  0.50000E-03      IXX =   0.3366E-09      IXX =   0.8406E-10
+  YC =  0.50000E-03      IYY =   0.3366E-09      IYY =   0.8406E-10
+  ZC =  0.50000E-02      IZZ =   0.6563E-11      IZZ =   0.1563E-11
+                         IXY =  -0.2500E-11      IXY =  -0.2787E-25
+                         IYZ =  -0.2500E-10      IYZ =  -0.2779E-24
+                         IZX =  -0.2500E-10      IZX =  -0.2553E-24
+
+
+  *** MASS SUMMARY BY ELEMENT TYPE ***
+
+  TYPE      MASS
+     1  0.100000E-04
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 4.174479167E-05 at element 629.                               
+ Minimum = 4.166666667E-05 at element 433.                               
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+     TYPE    NUMBER     ENAME   TOTAL ELAPSED   AVG ELAPSED
+
+        1       640   SOLID70          0.0131   0.000020421
+ Elapsed Time at end of element matrix formulation = 6.2104361.          
+
+ ALL CURRENT MAPDL DATA WRITTEN TO FILE NAME= stage08_thermal.rdb
+  FOR POSSIBLE RESUME FROM THIS POINT
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =        1025,    Maximum wavefront =     21
+
+
+  Memory allocated on this process
+  -------------------------------------------------------------------
+  Equation solver memory allocated                     =     1.253 MB
+  Equation solver memory required for in-core mode     =     1.207 MB
+  Equation solver memory required for out-of-core mode =     0.735 MB
+  Total (solver and non-solver) memory allocated       =   361.831 MB
+
+ *** NOTE ***                            ELAPSED TIME =       6.267   TIME= 16:34:41
+ The Sparse Matrix Solver is currently running in the in-core memory     
+ mode.  This memory mode uses the most amount of memory in order to      
+ avoid using the hard drive as much as possible, which most often        
+ results in the fastest solution time.  This mode is recommended if      
+ enough physical memory is present to accommodate all of the solver      
+ data.                                                                   
+ Sparse solver maximum pivot= 15.6253333 at node 978 TEMP.               
+ Sparse solver minimum pivot= 1.95316674 at node 31 TEMP.                
+ Sparse solver minimum pivot in absolute value= 1.95316674 at node 31    
+ TEMP.                                                                   
+
+   *** ELEMENT RESULT CALCULATION TIMES
+     TYPE    NUMBER     ENAME   TOTAL ELAPSED   AVG ELAPSED
+
+        1       640   SOLID70          0.0137   0.000021376
+
+   *** NODAL LOAD CALCULATION TIMES
+     TYPE    NUMBER     ENAME   TOTAL ELAPSED   AVG ELAPSED
+
+        1       640   SOLID70          0.0113   0.000017694
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+ *** TIME =  0.100000E-05     TIME INC =  0.100000E-05  NEW TRIANG MATRIX
+
+
+ *** MAPDL BINARY FILE STATISTICS
+  BUFFER SIZE USED= 16384
+        0.250 MB WRITTEN ON ASSEMBLED MATRIX FILE: stage08_thermal.full
+        0.688 MB WRITTEN ON RESULTS FILE: stage08_thermal.rth
+
+ SELECT       FOR ITEM=LOC  COMPONENT=Z     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+        1  AREAS (OF        6  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=LOC  COMPONENT=Z     BETWEEN 0.10000E-01 AND  0.10000E-01
+   KABS=  0.  TOLERANCE= 0.500000E-04
+
+        2  AREAS (OF        6  DEFINED) SELECTED BY ASEL  COMMAND.
+
+ SURFACE LOAD ON ALL SELECTED AREAS 
+     LOAD KEY =1         LOAD LABEL = CONV
+     VALUES =           5.0000              80.000    
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ TIME=  300.00    
+
+ STEP BOUNDARY CONDITION KEY= 0
+
+ USE INITIAL TIME STEP SIZE OF  5.000000     FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE  5.000000     AS THE MINIMUM TIME STEP SIZE
+   USE  5.000000     AS THE MAXIMUM TIME STEP SIZE
+   USE THE FINAL TIME STEP SIZE OF THE PREVIOUS LOAD STEP
+     AS THE STARTING TIME STEP SIZE.
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
+      SURFACE LOADS  TRANSFERRED FROM AREAS         =     32
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   16:34:41  SEP 13, 2026 Elapsed Time=      6.340
+
+ Stage 8 analytical plane-wall thermal verification only                       
+
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     2
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  300.00    
+   TIME STEP SIZE. . . . . . . . . . . . . . . . .  5.0000    
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   TRANSIENT (INERTIA) EFFECTS
+      THERMAL DOFS . . . . . . . . . . . . . . . .    ON
+   TRANSIENT INTEGRATION PARAMETERS
+      THETA. . . . . . . . . . . . . . . . . . . .  1.0000    
+      OSCILLATION LIMIT CRITERION. . . . . . . . . 0.50000    
+      TOLERANCE. . . . . . . . . . . . . . . . . .  0.0000    
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+      NSOL      TS                                                                                                                                                                                                                                                              
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= stage08_thermal.mntr                                                                                                                                                                                                                                                
+
+ *** LOAD STEP     2   SUBSTEP     1  COMPLETED.    CUM ITER =      2
+ *** TIME =   5.00000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     2  COMPLETED.    CUM ITER =      3
+ *** TIME =   10.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     3  COMPLETED.    CUM ITER =      4
+ *** TIME =   15.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     4  COMPLETED.    CUM ITER =      5
+ *** TIME =   20.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     5  COMPLETED.    CUM ITER =      6
+ *** TIME =   25.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     6  COMPLETED.    CUM ITER =      7
+ *** TIME =   30.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     7  COMPLETED.    CUM ITER =      8
+ *** TIME =   35.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     8  COMPLETED.    CUM ITER =      9
+ *** TIME =   40.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP     9  COMPLETED.    CUM ITER =     10
+ *** TIME =   45.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    10  COMPLETED.    CUM ITER =     11
+ *** TIME =   50.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    11  COMPLETED.    CUM ITER =     12
+ *** TIME =   55.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    12  COMPLETED.    CUM ITER =     13
+ *** TIME =   60.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    13  COMPLETED.    CUM ITER =     14
+ *** TIME =   65.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    14  COMPLETED.    CUM ITER =     15
+ *** TIME =   70.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    15  COMPLETED.    CUM ITER =     16
+ *** TIME =   75.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    16  COMPLETED.    CUM ITER =     17
+ *** TIME =   80.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    17  COMPLETED.    CUM ITER =     18
+ *** TIME =   85.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    18  COMPLETED.    CUM ITER =     19
+ *** TIME =   90.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    19  COMPLETED.    CUM ITER =     20
+ *** TIME =   95.0000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    20  COMPLETED.    CUM ITER =     21
+ *** TIME =   100.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    21  COMPLETED.    CUM ITER =     22
+ *** TIME =   105.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    22  COMPLETED.    CUM ITER =     23
+ *** TIME =   110.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    23  COMPLETED.    CUM ITER =     24
+ *** TIME =   115.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    24  COMPLETED.    CUM ITER =     25
+ *** TIME =   120.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    25  COMPLETED.    CUM ITER =     26
+ *** TIME =   125.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    26  COMPLETED.    CUM ITER =     27
+ *** TIME =   130.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    27  COMPLETED.    CUM ITER =     28
+ *** TIME =   135.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    28  COMPLETED.    CUM ITER =     29
+ *** TIME =   140.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    29  COMPLETED.    CUM ITER =     30
+ *** TIME =   145.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    30  COMPLETED.    CUM ITER =     31
+ *** TIME =   150.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    31  COMPLETED.    CUM ITER =     32
+ *** TIME =   155.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    32  COMPLETED.    CUM ITER =     33
+ *** TIME =   160.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    33  COMPLETED.    CUM ITER =     34
+ *** TIME =   165.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    34  COMPLETED.    CUM ITER =     35
+ *** TIME =   170.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    35  COMPLETED.    CUM ITER =     36
+ *** TIME =   175.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    36  COMPLETED.    CUM ITER =     37
+ *** TIME =   180.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    37  COMPLETED.    CUM ITER =     38
+ *** TIME =   185.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    38  COMPLETED.    CUM ITER =     39
+ *** TIME =   190.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    39  COMPLETED.    CUM ITER =     40
+ *** TIME =   195.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    40  COMPLETED.    CUM ITER =     41
+ *** TIME =   200.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    41  COMPLETED.    CUM ITER =     42
+ *** TIME =   205.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    42  COMPLETED.    CUM ITER =     43
+ *** TIME =   210.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    43  COMPLETED.    CUM ITER =     44
+ *** TIME =   215.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    44  COMPLETED.    CUM ITER =     45
+ *** TIME =   220.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    45  COMPLETED.    CUM ITER =     46
+ *** TIME =   225.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    46  COMPLETED.    CUM ITER =     47
+ *** TIME =   230.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    47  COMPLETED.    CUM ITER =     48
+ *** TIME =   235.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    48  COMPLETED.    CUM ITER =     49
+ *** TIME =   240.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    49  COMPLETED.    CUM ITER =     50
+ *** TIME =   245.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    50  COMPLETED.    CUM ITER =     51
+ *** TIME =   250.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    51  COMPLETED.    CUM ITER =     52
+ *** TIME =   255.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    52  COMPLETED.    CUM ITER =     53
+ *** TIME =   260.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    53  COMPLETED.    CUM ITER =     54
+ *** TIME =   265.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    54  COMPLETED.    CUM ITER =     55
+ *** TIME =   270.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    55  COMPLETED.    CUM ITER =     56
+ *** TIME =   275.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    56  COMPLETED.    CUM ITER =     57
+ *** TIME =   280.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    57  COMPLETED.    CUM ITER =     58
+ *** TIME =   285.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    58  COMPLETED.    CUM ITER =     59
+ *** TIME =   290.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    59  COMPLETED.    CUM ITER =     60
+ *** TIME =   295.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     2   SUBSTEP    60  COMPLETED.    CUM ITER =     61
+ *** TIME =   300.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ SELECT       FOR ITEM=LOC  COMPONENT=Z     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+        1  AREAS (OF        6  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=LOC  COMPONENT=Z     BETWEEN 0.10000E-01 AND  0.10000E-01
+   KABS=  0.  TOLERANCE= 0.500000E-04
+
+        2  AREAS (OF        6  DEFINED) SELECTED BY ASEL  COMMAND.
+
+ SURFACE LOAD ON ALL SELECTED AREAS 
+     LOAD KEY =1         LOAD LABEL = CONV
+     VALUES =           5.0000              80.000    
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ TIME=  900.00    
+
+ STEP BOUNDARY CONDITION KEY= 0
+
+ USE INITIAL TIME STEP SIZE OF  5.000000     FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE  5.000000     AS THE MINIMUM TIME STEP SIZE
+   USE  5.000000     AS THE MAXIMUM TIME STEP SIZE
+   USE THE FINAL TIME STEP SIZE OF THE PREVIOUS LOAD STEP
+     AS THE STARTING TIME STEP SIZE.
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
+      SURFACE LOADS  TRANSFERRED FROM AREAS         =     32
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   16:34:43  SEP 13, 2026 Elapsed Time=      7.543
+
+ Stage 8 analytical plane-wall thermal verification only                       
+
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     3
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  900.00    
+   TIME STEP SIZE. . . . . . . . . . . . . . . . .  5.0000    
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   TRANSIENT (INERTIA) EFFECTS
+      THERMAL DOFS . . . . . . . . . . . . . . . .    ON
+   TRANSIENT INTEGRATION PARAMETERS
+      THETA. . . . . . . . . . . . . . . . . . . .  1.0000    
+      OSCILLATION LIMIT CRITERION. . . . . . . . . 0.50000    
+      TOLERANCE. . . . . . . . . . . . . . . . . .  0.0000    
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+      NSOL      TS                                                                                                                                                                                                                                                              
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= stage08_thermal.mntr                                                                                                                                                                                                                                                
+
+ *** LOAD STEP     3   SUBSTEP     1  COMPLETED.    CUM ITER =     62
+ *** TIME =   305.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     2  COMPLETED.    CUM ITER =     63
+ *** TIME =   310.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     3  COMPLETED.    CUM ITER =     64
+ *** TIME =   315.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     4  COMPLETED.    CUM ITER =     65
+ *** TIME =   320.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     5  COMPLETED.    CUM ITER =     66
+ *** TIME =   325.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     6  COMPLETED.    CUM ITER =     67
+ *** TIME =   330.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     7  COMPLETED.    CUM ITER =     68
+ *** TIME =   335.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     8  COMPLETED.    CUM ITER =     69
+ *** TIME =   340.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP     9  COMPLETED.    CUM ITER =     70
+ *** TIME =   345.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    10  COMPLETED.    CUM ITER =     71
+ *** TIME =   350.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    11  COMPLETED.    CUM ITER =     72
+ *** TIME =   355.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    12  COMPLETED.    CUM ITER =     73
+ *** TIME =   360.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    13  COMPLETED.    CUM ITER =     74
+ *** TIME =   365.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    14  COMPLETED.    CUM ITER =     75
+ *** TIME =   370.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    15  COMPLETED.    CUM ITER =     76
+ *** TIME =   375.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    16  COMPLETED.    CUM ITER =     77
+ *** TIME =   380.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    17  COMPLETED.    CUM ITER =     78
+ *** TIME =   385.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    18  COMPLETED.    CUM ITER =     79
+ *** TIME =   390.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    19  COMPLETED.    CUM ITER =     80
+ *** TIME =   395.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    20  COMPLETED.    CUM ITER =     81
+ *** TIME =   400.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    21  COMPLETED.    CUM ITER =     82
+ *** TIME =   405.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    22  COMPLETED.    CUM ITER =     83
+ *** TIME =   410.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    23  COMPLETED.    CUM ITER =     84
+ *** TIME =   415.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    24  COMPLETED.    CUM ITER =     85
+ *** TIME =   420.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    25  COMPLETED.    CUM ITER =     86
+ *** TIME =   425.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    26  COMPLETED.    CUM ITER =     87
+ *** TIME =   430.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    27  COMPLETED.    CUM ITER =     88
+ *** TIME =   435.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    28  COMPLETED.    CUM ITER =     89
+ *** TIME =   440.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    29  COMPLETED.    CUM ITER =     90
+ *** TIME =   445.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    30  COMPLETED.    CUM ITER =     91
+ *** TIME =   450.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    31  COMPLETED.    CUM ITER =     92
+ *** TIME =   455.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    32  COMPLETED.    CUM ITER =     93
+ *** TIME =   460.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    33  COMPLETED.    CUM ITER =     94
+ *** TIME =   465.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    34  COMPLETED.    CUM ITER =     95
+ *** TIME =   470.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    35  COMPLETED.    CUM ITER =     96
+ *** TIME =   475.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    36  COMPLETED.    CUM ITER =     97
+ *** TIME =   480.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    37  COMPLETED.    CUM ITER =     98
+ *** TIME =   485.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    38  COMPLETED.    CUM ITER =     99
+ *** TIME =   490.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    39  COMPLETED.    CUM ITER =    100
+ *** TIME =   495.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    40  COMPLETED.    CUM ITER =    101
+ *** TIME =   500.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    41  COMPLETED.    CUM ITER =    102
+ *** TIME =   505.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    42  COMPLETED.    CUM ITER =    103
+ *** TIME =   510.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    43  COMPLETED.    CUM ITER =    104
+ *** TIME =   515.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    44  COMPLETED.    CUM ITER =    105
+ *** TIME =   520.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    45  COMPLETED.    CUM ITER =    106
+ *** TIME =   525.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    46  COMPLETED.    CUM ITER =    107
+ *** TIME =   530.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    47  COMPLETED.    CUM ITER =    108
+ *** TIME =   535.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    48  COMPLETED.    CUM ITER =    109
+ *** TIME =   540.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    49  COMPLETED.    CUM ITER =    110
+ *** TIME =   545.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    50  COMPLETED.    CUM ITER =    111
+ *** TIME =   550.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    51  COMPLETED.    CUM ITER =    112
+ *** TIME =   555.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    52  COMPLETED.    CUM ITER =    113
+ *** TIME =   560.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    53  COMPLETED.    CUM ITER =    114
+ *** TIME =   565.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    54  COMPLETED.    CUM ITER =    115
+ *** TIME =   570.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    55  COMPLETED.    CUM ITER =    116
+ *** TIME =   575.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    56  COMPLETED.    CUM ITER =    117
+ *** TIME =   580.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    57  COMPLETED.    CUM ITER =    118
+ *** TIME =   585.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    58  COMPLETED.    CUM ITER =    119
+ *** TIME =   590.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    59  COMPLETED.    CUM ITER =    120
+ *** TIME =   595.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    60  COMPLETED.    CUM ITER =    121
+ *** TIME =   600.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    61  COMPLETED.    CUM ITER =    122
+ *** TIME =   605.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    62  COMPLETED.    CUM ITER =    123
+ *** TIME =   610.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    63  COMPLETED.    CUM ITER =    124
+ *** TIME =   615.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    64  COMPLETED.    CUM ITER =    125
+ *** TIME =   620.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    65  COMPLETED.    CUM ITER =    126
+ *** TIME =   625.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    66  COMPLETED.    CUM ITER =    127
+ *** TIME =   630.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    67  COMPLETED.    CUM ITER =    128
+ *** TIME =   635.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    68  COMPLETED.    CUM ITER =    129
+ *** TIME =   640.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    69  COMPLETED.    CUM ITER =    130
+ *** TIME =   645.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    70  COMPLETED.    CUM ITER =    131
+ *** TIME =   650.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    71  COMPLETED.    CUM ITER =    132
+ *** TIME =   655.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    72  COMPLETED.    CUM ITER =    133
+ *** TIME =   660.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    73  COMPLETED.    CUM ITER =    134
+ *** TIME =   665.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    74  COMPLETED.    CUM ITER =    135
+ *** TIME =   670.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    75  COMPLETED.    CUM ITER =    136
+ *** TIME =   675.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    76  COMPLETED.    CUM ITER =    137
+ *** TIME =   680.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    77  COMPLETED.    CUM ITER =    138
+ *** TIME =   685.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    78  COMPLETED.    CUM ITER =    139
+ *** TIME =   690.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    79  COMPLETED.    CUM ITER =    140
+ *** TIME =   695.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    80  COMPLETED.    CUM ITER =    141
+ *** TIME =   700.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    81  COMPLETED.    CUM ITER =    142
+ *** TIME =   705.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    82  COMPLETED.    CUM ITER =    143
+ *** TIME =   710.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    83  COMPLETED.    CUM ITER =    144
+ *** TIME =   715.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    84  COMPLETED.    CUM ITER =    145
+ *** TIME =   720.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    85  COMPLETED.    CUM ITER =    146
+ *** TIME =   725.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    86  COMPLETED.    CUM ITER =    147
+ *** TIME =   730.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    87  COMPLETED.    CUM ITER =    148
+ *** TIME =   735.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    88  COMPLETED.    CUM ITER =    149
+ *** TIME =   740.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    89  COMPLETED.    CUM ITER =    150
+ *** TIME =   745.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    90  COMPLETED.    CUM ITER =    151
+ *** TIME =   750.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    91  COMPLETED.    CUM ITER =    152
+ *** TIME =   755.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    92  COMPLETED.    CUM ITER =    153
+ *** TIME =   760.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    93  COMPLETED.    CUM ITER =    154
+ *** TIME =   765.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    94  COMPLETED.    CUM ITER =    155
+ *** TIME =   770.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    95  COMPLETED.    CUM ITER =    156
+ *** TIME =   775.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    96  COMPLETED.    CUM ITER =    157
+ *** TIME =   780.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    97  COMPLETED.    CUM ITER =    158
+ *** TIME =   785.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    98  COMPLETED.    CUM ITER =    159
+ *** TIME =   790.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP    99  COMPLETED.    CUM ITER =    160
+ *** TIME =   795.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   100  COMPLETED.    CUM ITER =    161
+ *** TIME =   800.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   101  COMPLETED.    CUM ITER =    162
+ *** TIME =   805.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   102  COMPLETED.    CUM ITER =    163
+ *** TIME =   810.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   103  COMPLETED.    CUM ITER =    164
+ *** TIME =   815.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   104  COMPLETED.    CUM ITER =    165
+ *** TIME =   820.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   105  COMPLETED.    CUM ITER =    166
+ *** TIME =   825.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   106  COMPLETED.    CUM ITER =    167
+ *** TIME =   830.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   107  COMPLETED.    CUM ITER =    168
+ *** TIME =   835.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   108  COMPLETED.    CUM ITER =    169
+ *** TIME =   840.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   109  COMPLETED.    CUM ITER =    170
+ *** TIME =   845.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   110  COMPLETED.    CUM ITER =    171
+ *** TIME =   850.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   111  COMPLETED.    CUM ITER =    172
+ *** TIME =   855.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   112  COMPLETED.    CUM ITER =    173
+ *** TIME =   860.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   113  COMPLETED.    CUM ITER =    174
+ *** TIME =   865.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   114  COMPLETED.    CUM ITER =    175
+ *** TIME =   870.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   115  COMPLETED.    CUM ITER =    176
+ *** TIME =   875.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   116  COMPLETED.    CUM ITER =    177
+ *** TIME =   880.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   117  COMPLETED.    CUM ITER =    178
+ *** TIME =   885.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   118  COMPLETED.    CUM ITER =    179
+ *** TIME =   890.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   119  COMPLETED.    CUM ITER =    180
+ *** TIME =   895.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     3   SUBSTEP   120  COMPLETED.    CUM ITER =    181
+ *** TIME =   900.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ SELECT       FOR ITEM=LOC  COMPONENT=Z     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+        1  AREAS (OF        6  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=LOC  COMPONENT=Z     BETWEEN 0.10000E-01 AND  0.10000E-01
+   KABS=  0.  TOLERANCE= 0.500000E-04
+
+        2  AREAS (OF        6  DEFINED) SELECTED BY ASEL  COMMAND.
+
+ SURFACE LOAD ON ALL SELECTED AREAS 
+     LOAD KEY =1         LOAD LABEL = CONV
+     VALUES =           5.0000              20.000    
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ TIME=  1200.0    
+
+ STEP BOUNDARY CONDITION KEY= 0
+
+ USE INITIAL TIME STEP SIZE OF  5.000000     FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE  5.000000     AS THE MINIMUM TIME STEP SIZE
+   USE  5.000000     AS THE MAXIMUM TIME STEP SIZE
+   USE THE FINAL TIME STEP SIZE OF THE PREVIOUS LOAD STEP
+     AS THE STARTING TIME STEP SIZE.
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
+      SURFACE LOADS  TRANSFERRED FROM AREAS         =     32
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   16:34:45  SEP 13, 2026 Elapsed Time=      9.894
+
+ Stage 8 analytical plane-wall thermal verification only                       
+
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     4
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1200.0    
+   TIME STEP SIZE. . . . . . . . . . . . . . . . .  5.0000    
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   TRANSIENT (INERTIA) EFFECTS
+      THERMAL DOFS . . . . . . . . . . . . . . . .    ON
+   TRANSIENT INTEGRATION PARAMETERS
+      THETA. . . . . . . . . . . . . . . . . . . .  1.0000    
+      OSCILLATION LIMIT CRITERION. . . . . . . . . 0.50000    
+      TOLERANCE. . . . . . . . . . . . . . . . . .  0.0000    
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+      NSOL      TS                                                                                                                                                                                                                                                              
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= stage08_thermal.mntr                                                                                                                                                                                                                                                
+
+ *** LOAD STEP     4   SUBSTEP     1  COMPLETED.    CUM ITER =    182
+ *** TIME =   905.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     2  COMPLETED.    CUM ITER =    183
+ *** TIME =   910.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     3  COMPLETED.    CUM ITER =    184
+ *** TIME =   915.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     4  COMPLETED.    CUM ITER =    185
+ *** TIME =   920.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     5  COMPLETED.    CUM ITER =    186
+ *** TIME =   925.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     6  COMPLETED.    CUM ITER =    187
+ *** TIME =   930.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     7  COMPLETED.    CUM ITER =    188
+ *** TIME =   935.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     8  COMPLETED.    CUM ITER =    189
+ *** TIME =   940.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP     9  COMPLETED.    CUM ITER =    190
+ *** TIME =   945.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    10  COMPLETED.    CUM ITER =    191
+ *** TIME =   950.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    11  COMPLETED.    CUM ITER =    192
+ *** TIME =   955.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    12  COMPLETED.    CUM ITER =    193
+ *** TIME =   960.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    13  COMPLETED.    CUM ITER =    194
+ *** TIME =   965.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    14  COMPLETED.    CUM ITER =    195
+ *** TIME =   970.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    15  COMPLETED.    CUM ITER =    196
+ *** TIME =   975.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    16  COMPLETED.    CUM ITER =    197
+ *** TIME =   980.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    17  COMPLETED.    CUM ITER =    198
+ *** TIME =   985.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    18  COMPLETED.    CUM ITER =    199
+ *** TIME =   990.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    19  COMPLETED.    CUM ITER =    200
+ *** TIME =   995.000         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    20  COMPLETED.    CUM ITER =    201
+ *** TIME =   1000.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    21  COMPLETED.    CUM ITER =    202
+ *** TIME =   1005.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    22  COMPLETED.    CUM ITER =    203
+ *** TIME =   1010.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    23  COMPLETED.    CUM ITER =    204
+ *** TIME =   1015.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    24  COMPLETED.    CUM ITER =    205
+ *** TIME =   1020.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    25  COMPLETED.    CUM ITER =    206
+ *** TIME =   1025.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    26  COMPLETED.    CUM ITER =    207
+ *** TIME =   1030.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    27  COMPLETED.    CUM ITER =    208
+ *** TIME =   1035.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    28  COMPLETED.    CUM ITER =    209
+ *** TIME =   1040.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    29  COMPLETED.    CUM ITER =    210
+ *** TIME =   1045.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    30  COMPLETED.    CUM ITER =    211
+ *** TIME =   1050.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    31  COMPLETED.    CUM ITER =    212
+ *** TIME =   1055.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    32  COMPLETED.    CUM ITER =    213
+ *** TIME =   1060.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    33  COMPLETED.    CUM ITER =    214
+ *** TIME =   1065.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    34  COMPLETED.    CUM ITER =    215
+ *** TIME =   1070.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    35  COMPLETED.    CUM ITER =    216
+ *** TIME =   1075.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    36  COMPLETED.    CUM ITER =    217
+ *** TIME =   1080.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    37  COMPLETED.    CUM ITER =    218
+ *** TIME =   1085.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    38  COMPLETED.    CUM ITER =    219
+ *** TIME =   1090.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    39  COMPLETED.    CUM ITER =    220
+ *** TIME =   1095.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    40  COMPLETED.    CUM ITER =    221
+ *** TIME =   1100.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    41  COMPLETED.    CUM ITER =    222
+ *** TIME =   1105.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    42  COMPLETED.    CUM ITER =    223
+ *** TIME =   1110.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    43  COMPLETED.    CUM ITER =    224
+ *** TIME =   1115.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    44  COMPLETED.    CUM ITER =    225
+ *** TIME =   1120.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    45  COMPLETED.    CUM ITER =    226
+ *** TIME =   1125.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    46  COMPLETED.    CUM ITER =    227
+ *** TIME =   1130.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    47  COMPLETED.    CUM ITER =    228
+ *** TIME =   1135.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    48  COMPLETED.    CUM ITER =    229
+ *** TIME =   1140.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    49  COMPLETED.    CUM ITER =    230
+ *** TIME =   1145.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    50  COMPLETED.    CUM ITER =    231
+ *** TIME =   1150.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    51  COMPLETED.    CUM ITER =    232
+ *** TIME =   1155.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    52  COMPLETED.    CUM ITER =    233
+ *** TIME =   1160.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    53  COMPLETED.    CUM ITER =    234
+ *** TIME =   1165.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    54  COMPLETED.    CUM ITER =    235
+ *** TIME =   1170.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    55  COMPLETED.    CUM ITER =    236
+ *** TIME =   1175.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    56  COMPLETED.    CUM ITER =    237
+ *** TIME =   1180.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    57  COMPLETED.    CUM ITER =    238
+ *** TIME =   1185.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    58  COMPLETED.    CUM ITER =    239
+ *** TIME =   1190.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    59  COMPLETED.    CUM ITER =    240
+ *** TIME =   1195.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     4   SUBSTEP    60  COMPLETED.    CUM ITER =    241
+ *** TIME =   1200.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ SELECT       FOR ITEM=LOC  COMPONENT=Z     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+        1  AREAS (OF        6  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=LOC  COMPONENT=Z     BETWEEN 0.10000E-01 AND  0.10000E-01
+   KABS=  0.  TOLERANCE= 0.500000E-04
+
+        2  AREAS (OF        6  DEFINED) SELECTED BY ASEL  COMMAND.
+
+ SURFACE LOAD ON ALL SELECTED AREAS 
+     LOAD KEY =1         LOAD LABEL = CONV
+     VALUES =           5.0000              20.000    
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ TIME=  1800.0    
+
+ STEP BOUNDARY CONDITION KEY= 0
+
+ USE INITIAL TIME STEP SIZE OF  5.000000     FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE  5.000000     AS THE MINIMUM TIME STEP SIZE
+   USE  5.000000     AS THE MAXIMUM TIME STEP SIZE
+   USE THE FINAL TIME STEP SIZE OF THE PREVIOUS LOAD STEP
+     AS THE STARTING TIME STEP SIZE.
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
+      SURFACE LOADS  TRANSFERRED FROM AREAS         =     32
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   16:34:46  SEP 13, 2026 Elapsed Time=     10.876
+
+ Stage 8 analytical plane-wall thermal verification only                       
+
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     5
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1800.0    
+   TIME STEP SIZE. . . . . . . . . . . . . . . . .  5.0000    
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   TRANSIENT (INERTIA) EFFECTS
+      THERMAL DOFS . . . . . . . . . . . . . . . .    ON
+   TRANSIENT INTEGRATION PARAMETERS
+      THETA. . . . . . . . . . . . . . . . . . . .  1.0000    
+      OSCILLATION LIMIT CRITERION. . . . . . . . . 0.50000    
+      TOLERANCE. . . . . . . . . . . . . . . . . .  0.0000    
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+      NSOL      TS                                                                                                                                                                                                                                                              
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= stage08_thermal.mntr                                                                                                                                                                                                                                                
+
+ *** LOAD STEP     5   SUBSTEP     1  COMPLETED.    CUM ITER =    242
+ *** TIME =   1205.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP     2  COMPLETED.    CUM ITER =    243
+ *** TIME =   1210.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP     3  COMPLETED.    CUM ITER =    244
+ *** TIME =   1215.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP     4  COMPLETED.    CUM ITER =    245
+ *** TIME =   1220.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP     5  COMPLETED.    CUM ITER =    246
+ *** TIME =   1225.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP     6  COMPLETED.    CUM ITER =    247
+ *** TIME =   1230.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP     7  COMPLETED.    CUM ITER =    248
+ *** TIME =   1235.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP     8  COMPLETED.    CUM ITER =    249
+ *** TIME =   1240.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP     9  COMPLETED.    CUM ITER =    250
+ *** TIME =   1245.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    10  COMPLETED.    CUM ITER =    251
+ *** TIME =   1250.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    11  COMPLETED.    CUM ITER =    252
+ *** TIME =   1255.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    12  COMPLETED.    CUM ITER =    253
+ *** TIME =   1260.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    13  COMPLETED.    CUM ITER =    254
+ *** TIME =   1265.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    14  COMPLETED.    CUM ITER =    255
+ *** TIME =   1270.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    15  COMPLETED.    CUM ITER =    256
+ *** TIME =   1275.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    16  COMPLETED.    CUM ITER =    257
+ *** TIME =   1280.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    17  COMPLETED.    CUM ITER =    258
+ *** TIME =   1285.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    18  COMPLETED.    CUM ITER =    259
+ *** TIME =   1290.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    19  COMPLETED.    CUM ITER =    260
+ *** TIME =   1295.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    20  COMPLETED.    CUM ITER =    261
+ *** TIME =   1300.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    21  COMPLETED.    CUM ITER =    262
+ *** TIME =   1305.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    22  COMPLETED.    CUM ITER =    263
+ *** TIME =   1310.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    23  COMPLETED.    CUM ITER =    264
+ *** TIME =   1315.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    24  COMPLETED.    CUM ITER =    265
+ *** TIME =   1320.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    25  COMPLETED.    CUM ITER =    266
+ *** TIME =   1325.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    26  COMPLETED.    CUM ITER =    267
+ *** TIME =   1330.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    27  COMPLETED.    CUM ITER =    268
+ *** TIME =   1335.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    28  COMPLETED.    CUM ITER =    269
+ *** TIME =   1340.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    29  COMPLETED.    CUM ITER =    270
+ *** TIME =   1345.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    30  COMPLETED.    CUM ITER =    271
+ *** TIME =   1350.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    31  COMPLETED.    CUM ITER =    272
+ *** TIME =   1355.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    32  COMPLETED.    CUM ITER =    273
+ *** TIME =   1360.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    33  COMPLETED.    CUM ITER =    274
+ *** TIME =   1365.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    34  COMPLETED.    CUM ITER =    275
+ *** TIME =   1370.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    35  COMPLETED.    CUM ITER =    276
+ *** TIME =   1375.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    36  COMPLETED.    CUM ITER =    277
+ *** TIME =   1380.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    37  COMPLETED.    CUM ITER =    278
+ *** TIME =   1385.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    38  COMPLETED.    CUM ITER =    279
+ *** TIME =   1390.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    39  COMPLETED.    CUM ITER =    280
+ *** TIME =   1395.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    40  COMPLETED.    CUM ITER =    281
+ *** TIME =   1400.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    41  COMPLETED.    CUM ITER =    282
+ *** TIME =   1405.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    42  COMPLETED.    CUM ITER =    283
+ *** TIME =   1410.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    43  COMPLETED.    CUM ITER =    284
+ *** TIME =   1415.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    44  COMPLETED.    CUM ITER =    285
+ *** TIME =   1420.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    45  COMPLETED.    CUM ITER =    286
+ *** TIME =   1425.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    46  COMPLETED.    CUM ITER =    287
+ *** TIME =   1430.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    47  COMPLETED.    CUM ITER =    288
+ *** TIME =   1435.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    48  COMPLETED.    CUM ITER =    289
+ *** TIME =   1440.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    49  COMPLETED.    CUM ITER =    290
+ *** TIME =   1445.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    50  COMPLETED.    CUM ITER =    291
+ *** TIME =   1450.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    51  COMPLETED.    CUM ITER =    292
+ *** TIME =   1455.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    52  COMPLETED.    CUM ITER =    293
+ *** TIME =   1460.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    53  COMPLETED.    CUM ITER =    294
+ *** TIME =   1465.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    54  COMPLETED.    CUM ITER =    295
+ *** TIME =   1470.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    55  COMPLETED.    CUM ITER =    296
+ *** TIME =   1475.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    56  COMPLETED.    CUM ITER =    297
+ *** TIME =   1480.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    57  COMPLETED.    CUM ITER =    298
+ *** TIME =   1485.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    58  COMPLETED.    CUM ITER =    299
+ *** TIME =   1490.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    59  COMPLETED.    CUM ITER =    300
+ *** TIME =   1495.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    60  COMPLETED.    CUM ITER =    301
+ *** TIME =   1500.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    61  COMPLETED.    CUM ITER =    302
+ *** TIME =   1505.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    62  COMPLETED.    CUM ITER =    303
+ *** TIME =   1510.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    63  COMPLETED.    CUM ITER =    304
+ *** TIME =   1515.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    64  COMPLETED.    CUM ITER =    305
+ *** TIME =   1520.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    65  COMPLETED.    CUM ITER =    306
+ *** TIME =   1525.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    66  COMPLETED.    CUM ITER =    307
+ *** TIME =   1530.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    67  COMPLETED.    CUM ITER =    308
+ *** TIME =   1535.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    68  COMPLETED.    CUM ITER =    309
+ *** TIME =   1540.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    69  COMPLETED.    CUM ITER =    310
+ *** TIME =   1545.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    70  COMPLETED.    CUM ITER =    311
+ *** TIME =   1550.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    71  COMPLETED.    CUM ITER =    312
+ *** TIME =   1555.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    72  COMPLETED.    CUM ITER =    313
+ *** TIME =   1560.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    73  COMPLETED.    CUM ITER =    314
+ *** TIME =   1565.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    74  COMPLETED.    CUM ITER =    315
+ *** TIME =   1570.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    75  COMPLETED.    CUM ITER =    316
+ *** TIME =   1575.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    76  COMPLETED.    CUM ITER =    317
+ *** TIME =   1580.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    77  COMPLETED.    CUM ITER =    318
+ *** TIME =   1585.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    78  COMPLETED.    CUM ITER =    319
+ *** TIME =   1590.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    79  COMPLETED.    CUM ITER =    320
+ *** TIME =   1595.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    80  COMPLETED.    CUM ITER =    321
+ *** TIME =   1600.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    81  COMPLETED.    CUM ITER =    322
+ *** TIME =   1605.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    82  COMPLETED.    CUM ITER =    323
+ *** TIME =   1610.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    83  COMPLETED.    CUM ITER =    324
+ *** TIME =   1615.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    84  COMPLETED.    CUM ITER =    325
+ *** TIME =   1620.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    85  COMPLETED.    CUM ITER =    326
+ *** TIME =   1625.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    86  COMPLETED.    CUM ITER =    327
+ *** TIME =   1630.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    87  COMPLETED.    CUM ITER =    328
+ *** TIME =   1635.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    88  COMPLETED.    CUM ITER =    329
+ *** TIME =   1640.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    89  COMPLETED.    CUM ITER =    330
+ *** TIME =   1645.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    90  COMPLETED.    CUM ITER =    331
+ *** TIME =   1650.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    91  COMPLETED.    CUM ITER =    332
+ *** TIME =   1655.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    92  COMPLETED.    CUM ITER =    333
+ *** TIME =   1660.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    93  COMPLETED.    CUM ITER =    334
+ *** TIME =   1665.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    94  COMPLETED.    CUM ITER =    335
+ *** TIME =   1670.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    95  COMPLETED.    CUM ITER =    336
+ *** TIME =   1675.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    96  COMPLETED.    CUM ITER =    337
+ *** TIME =   1680.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    97  COMPLETED.    CUM ITER =    338
+ *** TIME =   1685.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    98  COMPLETED.    CUM ITER =    339
+ *** TIME =   1690.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP    99  COMPLETED.    CUM ITER =    340
+ *** TIME =   1695.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   100  COMPLETED.    CUM ITER =    341
+ *** TIME =   1700.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   101  COMPLETED.    CUM ITER =    342
+ *** TIME =   1705.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   102  COMPLETED.    CUM ITER =    343
+ *** TIME =   1710.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   103  COMPLETED.    CUM ITER =    344
+ *** TIME =   1715.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   104  COMPLETED.    CUM ITER =    345
+ *** TIME =   1720.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   105  COMPLETED.    CUM ITER =    346
+ *** TIME =   1725.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   106  COMPLETED.    CUM ITER =    347
+ *** TIME =   1730.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   107  COMPLETED.    CUM ITER =    348
+ *** TIME =   1735.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   108  COMPLETED.    CUM ITER =    349
+ *** TIME =   1740.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   109  COMPLETED.    CUM ITER =    350
+ *** TIME =   1745.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   110  COMPLETED.    CUM ITER =    351
+ *** TIME =   1750.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   111  COMPLETED.    CUM ITER =    352
+ *** TIME =   1755.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   112  COMPLETED.    CUM ITER =    353
+ *** TIME =   1760.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   113  COMPLETED.    CUM ITER =    354
+ *** TIME =   1765.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   114  COMPLETED.    CUM ITER =    355
+ *** TIME =   1770.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   115  COMPLETED.    CUM ITER =    356
+ *** TIME =   1775.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   116  COMPLETED.    CUM ITER =    357
+ *** TIME =   1780.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   117  COMPLETED.    CUM ITER =    358
+ *** TIME =   1785.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   118  COMPLETED.    CUM ITER =    359
+ *** TIME =   1790.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   119  COMPLETED.    CUM ITER =    360
+ *** TIME =   1795.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ *** LOAD STEP     5   SUBSTEP   120  COMPLETED.    CUM ITER =    361
+ *** TIME =   1800.00         TIME INC =   5.00000      NEW TRIANG MATRIX
+
+ FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  ELAPSED TIME =        12.726
+
+
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   16:34:48  SEP 13, 2026 Elapsed Time=     12.742
+
+ Stage 8 analytical plane-wall thermal verification only                       
+
+
+
+          ***** MAPDL RESULTS INTERPRETATION (POST1) *****
+
+ *** NOTE ***                            ELAPSED TIME =      12.743   TIME= 16:34:48
+ Reading results into the database (SET command) will update the current 
+ displacement and force boundary conditions in the database with the     
+ values from the results file for that load set.  Note that any          
+ subsequent solutions will use these values unless action is taken to    
+ either SAVE the current values or not overwrite them (/EXIT,NOSAVE).    
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN 0.50000E-03 AND  0.50000E-03
+   KABS=  0.  TOLERANCE= 0.250000E-05
+
+        205  NODES (OF       1025  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ RESELECT     FOR ITEM=LOC  COMPONENT=Y     BETWEEN 0.50000E-03 AND  0.50000E-03
+   KABS=  0.  TOLERANCE= 0.250000E-05
+
+         41  NODES (OF       1025  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ RESELECT     FOR ITEM=LOC  COMPONENT=Z     BETWEEN 0.50000E-02 AND  0.50000E-02
+   KABS=  0.  TOLERANCE= 0.250000E-04
+
+          1  NODES (OF       1025  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ *GET  CNODE     FROM  NODE  ITEM=NUM  MIN   VALUE=  850.000000     
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ OPENED FILE= solver_center_temperature.csv FOR COMMAND FILE DATA 
+
+
+ *DO LOOP ON PARAMETER= II FROM  1.0000     TO  9.0000     BY  1.0000    
+
+ PARAMETER TREQ =     150.0000000    
+
+
+ USE LOAD STEP     0  SUBSTEP  LAST    FOR LOAD CASE 0 
+ USE DATA SET FOR TIME OR FREQUENCY=  150.00    
+
+ *** WARNING ***                         ELAPSED TIME =      12.748   TIME= 16:34:48
+ Degree of freedom constraints and/or load data are not consistent for   
+ all nodes across data sets.  Resulting boundary conditions, load data,  
+ and reaction forces may be erroneous.                                   
+
+ SET COMMAND GOT LOAD STEP=     0  SUBSTEP=     0  CUMULATIVE ITERATION=     0
+   TIME/FREQUENCY=  150.00    
+ TITLE= Stage 8 analytical plane-wall thermal verification only                 
+
+ *GET  TNOW      FROM  ACTI  ITEM=SET  TIME  VALUE=  150.000000    
+
+ *GET  TC        FROM  NODE    850  ITEM=TEMP       VALUE=  21.9528738    
+
+ *ENDDO  INDEX= II                              
+
+  COMMAND FILE CLOSED 
+
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ *GET  NN        FROM  NODE  ITEM=COUN       VALUE=  1025.00000     
+
+ *GET  NE        FROM  ELEM  ITEM=COUN           VALUE=  640.000000    
+
+ OPENED FILE= mesh_counts.csv FOR COMMAND FILE DATA 
+
+
+  COMMAND FILE CLOSED 
+
+
+ EXIT THE MAPDL POST1 DATABASE PROCESSOR
+
+
+ ***** ROUTINE COMPLETED *****  ELAPSED TIME =        12.794
+
+
+
+ EXIT MAPDL WITHOUT SAVING DATABASE
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          1
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+Release: 2026 R1            Build: 26.1       Update: UP20260202   Platform: WINDOWS x64 
+Date Run: 09/13/2026   Time: 16:34     Process ID: 30852
+Operating System: Windows 11  (Build: 26200)
+
+Processor Model: AMD Ryzen 7 7435HS
+
+Compiler: Intel(R) Fortran Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) C/C++ Compiler Classic Version 2021.9  (Build: 20230302)
+          AOCL-BLAS 5.1.1 Build 20251008
+          Intel(R) oneAPI Math Kernel Library Version 2024.2.3-Product Build 20250403
+
+Number of machines requested            :    1
+Total number of cores available         :   16
+Number of physical cores available      :    8
+Number of processes requested           :    1
+Number of threads per process requested :    1
+Total number of cores requested         :    1 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: stage08_thermal
+Input File: C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\simulation\verification\stage08_attempt_02\input.dat
+Working Directory: C:\Users\asus\OneDrive\Documents\ChatGPT\FDM ANNEALING\simulation\verification\stage08_attempt_02
+
+Total CPU time for main thread                    :        7.0 seconds
+Total CPU time summed for all threads             :        6.8 seconds
+
+Elapsed time spent obtaining a license            :        1.3 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
+Elapsed time spent solution - preprocessing       :        0.1 seconds
+Elapsed time spent computing solution             :        6.6 seconds
+   Elapsed time in element formation & assembly   :        2.8 seconds
+   Elapsed time in equation solver                :        2.9 seconds
+   Elapsed time in element result calculations    :        0.5 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.1 seconds
+ 
+Equation solver used                              :            Sparse (symmetric)
+
+Sum of disk space used on all processes           :        2.5 MB
+
+Sum of memory used on all processes               :       47.0 MB
+Sum of memory allocated on all processes          :     2304.0 MB
+Physical memory available                         :         16 GB
+Total amount of I/O written to disk               :        0.0 GB
+Total amount of I/O read from disk                :        0.0 GB
+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2026 R1         Build 26.1         UP20260202    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)     1024 MB     Scratch Memory Requested   1024 MB |
+ |  Max Database Used(Master)      4 MB     Max Scratch Used(Master)     43 MB |
+ |  Max Database Used(Workers)     0 MB     Max Scratch Used(Workers)     0 MB |
+ |  Sum Database Used(All)         4 MB     Sum Scratch Used(All)        43 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          6.766       Time  =  16:34:59          |
+ |        Elapsed Time (sec) =         23.850       Date  =  09/13/2026        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*

@@ -1,0 +1,17 @@
+{
+  "run_id": "stage08_deck_check",
+  "case_id": "stage08_thermal_plane_wall",
+  "created_utc": "2026-09-13T11:02:47.191773+00:00",
+  "status": "deck_only",
+  "accepted": false,
+  "solver": "Ansys Mechanical APDL Student 2026 R1",
+  "returncode": null,
+  "command": null,
+  "benchmark_Biot_number": 0.05,
+  "evidence_boundary": "Verification-only one-dimensional plane wall with two convective faces; constants are numerical fixtures and are not PLA properties.",
+  "sha256": {
+    "simulation/cases/thermal_verification_plane_wall.json": "d37518b18bfd07eda553868d77d501caf0e959111779f4e903df544ab67fb765",
+    "scripts/run_thermal_verification.py": "24ce1866dff97293eede9181a0529d46966bb597cc2013fbc50579ca97425862",
+    "input.dat": "9b8f6ff249800e6172cb17d35bed139f9274ad8a1eaefc6b7ac811b7ca567e0b"
+  }
+}

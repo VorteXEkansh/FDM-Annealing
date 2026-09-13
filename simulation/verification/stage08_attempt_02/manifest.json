@@ -1,0 +1,32 @@
+{
+  "run_id": "stage08_attempt_02",
+  "case_id": "stage08_thermal_plane_wall",
+  "status": "comparison_failed_predeclared_acceptance",
+  "accepted": false,
+  "returncode": 0,
+  "failure_reason": "MAPDL completed with zero errors. Postprocessed result exceeded unchanged acceptance limits: maximum absolute error 0.111278504 \u00b0C and maximum excursion-relative error 3.374195718%. The 5 s time step was rejected.",
+  "sha256": {
+    "simulation/cases/thermal_verification_plane_wall.json": "d37518b18bfd07eda553868d77d501caf0e959111779f4e903df544ab67fb765",
+    "scripts/run_thermal_verification.py": "db6aa1069002bc8deb99a59536a60ae37c55612d70011fb0d3e12440d2b236c0",
+    "case.json": "d37518b18bfd07eda553868d77d501caf0e959111779f4e903df544ab67fb765",
+    "input.dat": "54afd1ceca8caa500026da496d15d7c8573f68e928dba57008d293283c2f9e88",
+    "mapdl.out": "ba559e757991825e78d5ef04ead18c439148e8f01e56cf6e166da345054d3da4",
+    "mesh_counts.csv": "cbb17232b205b3102d3c88784f9744253bacde34c786650f401c56b6d40d00bc",
+    "runner_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runner_stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "solver_center_temperature.csv": "b9c0130bebeaa305499622df1c1fe611b955d3d2d8f83d1311b5d33c7ea48db9",
+    "stage08_thermal.DSP": "e0caa3894e3a5485e3847fd273f14d2e291c1acc6c7aac570c27eb009a7e14e5",
+    "stage08_thermal.err": "9fae364fde4e94af73249e478e96425f51141cb750ab5509b411dcbffd4a0222",
+    "stage08_thermal.esav": "2df9691e03f1474a74803663d2419546be5d579ea22de3a5aaadaa3e4f19d1d2",
+    "stage08_thermal.full": "f8353e7098ef6fb26d5f7f0bcac03d0cb8568f09b729db49973d11ed6fa8c99b",
+    "stage08_thermal.ldhi": "1df5cdf31f97fb1c967d19f727e238e5e46aab077d36a01cbc7f0973ce2d3253",
+    "stage08_thermal.log": "817f5ca0c020f3b30621af3014d06d6c76bbb55a685bb50eea8710b13279d881",
+    "stage08_thermal.mntr": "c69024bb7e04bb863dc6835278b80cfea3831a514cd8406a757bd6b2658d57ce",
+    "stage08_thermal.r001": "1b48721569bc2212653c9538d68032618eb21498138eda0842f7f192aa634a8a",
+    "stage08_thermal.rdb": "3f19042127e380a1a123bb4b0a657ee7b4c529bdb00835c89d083c886fedc6a2",
+    "stage08_thermal.rth": "da9b77f8216098a6acb193f340c074047d55e6d3006d48d7c9c34f83db5f6659",
+    "comparison.csv": "6a847147c48d74ad717dc6cc550d40d7a9d765d14d14f5a57d2ffcad9c7358ba"
+  },
+  "observed_maximum_absolute_error_C": 0.111278504,
+  "observed_maximum_excursion_relative_error_percent": 3.374195718
+}
