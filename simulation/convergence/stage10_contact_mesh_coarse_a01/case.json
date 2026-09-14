@@ -1,0 +1,14 @@
+{
+  "family": "contact_mesh",
+  "level": "coarse",
+  "nx": 10,
+  "ny": 4,
+  "algorithm": "augmented_lagrange",
+  "FKN_factor": 1.0,
+  "friction_coefficient": 0.0,
+  "case_id": "contact_mesh_coarse",
+  "attempt": 1,
+  "design_sha256": "5afcfa150b2073ad1633b74eac36c362915e1287a894832b0698a653509c533a",
+  "structural_revision_sha256": null,
+  "evidence_status": "genuine MAPDL numerical verification; not a production PLA annealing result"
+}

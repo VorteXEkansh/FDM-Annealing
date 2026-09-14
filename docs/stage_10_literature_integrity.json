@@ -1,0 +1,543 @@
+{
+  "stage": 10,
+  "checks": [
+    {
+      "check": "34 unique DOI-verified journal records",
+      "status": "pass"
+    },
+    {
+      "check": "Bute2024 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Bute2024 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Bute2024 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Wijnen2018 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Wijnen2018 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Wijnen2018 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Trofimov2022 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Trofimov2022 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Trofimov2022 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Laminate2025 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Laminate2025 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Laminate2025 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Prediction2023 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Prediction2023 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Prediction2023 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Process2025 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Process2025 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Process2025 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Mould2022 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Mould2022 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Mould2022 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Wijnbergen2021 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Wijnbergen2021 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Wijnbergen2021 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "HighHeat2026 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "HighHeat2026 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "HighHeat2026 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Multiscale2026 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Multiscale2026 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Multiscale2026 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "SCF2023 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "SCF2023 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "SCF2023 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Orthotropic2024 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Orthotropic2024 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Orthotropic2024 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Pantani2010 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Pantani2010 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Pantani2010 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Nucleation2011 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Nucleation2011 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Nucleation2011 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Kinetics2025 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Kinetics2025 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Kinetics2025 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Deformation2025 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Deformation2025 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Deformation2025 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Viscoplastic2017 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Viscoplastic2017 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Viscoplastic2017 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Relaxation2022 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Relaxation2022 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Relaxation2022 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Kahya2025 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Kahya2025 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Kahya2025 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Encapsulation2025 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Encapsulation2025 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Encapsulation2025 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Salt2022 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Salt2022 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Salt2022 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Moulds2022 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Moulds2022 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Moulds2022 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Wach2018 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Wach2018 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Wach2018 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Benwood2018 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Benwood2018 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Benwood2018 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Windheim2021 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Windheim2021 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Windheim2021 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Bonding2024 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Bonding2024 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Bonding2024 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Stojkovic2023 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Stojkovic2023 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Stojkovic2023 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Butt2020 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Butt2020 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Butt2020 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Derringer1980 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Derringer1980 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Derringer1980 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "WLF1955 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "WLF1955 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "WLF1955 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Heat2023 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Heat2023 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Heat2023 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Phase2025 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Phase2025 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Phase2025 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "Grades2026 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "Grades2026 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "Grades2026 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "PINN2026 DOI identity and immutable metadata hash",
+      "status": "pass"
+    },
+    {
+      "check": "PINN2026 complete appraisal schema",
+      "status": "pass"
+    },
+    {
+      "check": "PINN2026 available by cutoff",
+      "status": "pass"
+    },
+    {
+      "check": "BibTeX DOI set corresponds to verified matrix, material sources and ASTM",
+      "status": "pass"
+    },
+    {
+      "check": "No unresolved citation keys or doubled HTML entities",
+      "status": "pass"
+    },
+    {
+      "check": "All journal DOIs in complete manuscript",
+      "status": "pass"
+    },
+    {
+      "check": "All DOI-bearing material sources in complete manuscript",
+      "status": "pass"
+    },
+    {
+      "check": "Every bibliography entry cited in body",
+      "status": "pass"
+    },
+    {
+      "check": "No duplicated table labels",
+      "status": "pass"
+    },
+    {
+      "check": "Bute2024 acquisition hash",
+      "status": "pass"
+    },
+    {
+      "check": "Trofimov2022 acquisition hash",
+      "status": "pass"
+    },
+    {
+      "check": "Laminate2025 acquisition hash",
+      "status": "pass"
+    },
+    {
+      "check": "Prediction2023 acquisition hash",
+      "status": "pass"
+    },
+    {
+      "check": "Process2025 acquisition hash",
+      "status": "pass"
+    },
+    {
+      "check": "Mould2022 acquisition hash",
+      "status": "pass"
+    },
+    {
+      "check": "Encapsulation2025 acquisition hash",
+      "status": "pass"
+    },
+    {
+      "check": "Relaxation2022 acquisition hash",
+      "status": "pass"
+    },
+    {
+      "check": "PrusamentTDS2022 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Chapuis2025 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Luberto2024 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Trofimov2022 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Li2024 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Bute2024 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Relaxation2022 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Pantani2010 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Nucleation2011 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "WLF1955 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Meng2026 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Workbook has 34 complete data rows",
+      "status": "pass"
+    },
+    {
+      "check": "Workbook record identities match JSON",
+      "status": "pass"
+    },
+    {
+      "check": "Workbook years are numeric",
+      "status": "pass"
+    },
+    {
+      "check": "Workbook has no error cells",
+      "status": "pass"
+    },
+    {
+      "check": "Workbook has no formulas implying calculated results",
+      "status": "pass"
+    },
+    {
+      "check": "Workbook frozen header and record ID",
+      "status": "pass"
+    }
+  ],
+  "count": 134,
+  "scope": "Bibliography, source hashes and workbook integrity only"
+}

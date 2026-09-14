@@ -1,0 +1,9 @@
+{
+  "stage": 10,
+  "revision": 7,
+  "date": "2026-09-14",
+  "applies_to": "contact-control sensitivity and supplemental contact mesh cases",
+  "trigger": "With KEYOPT(10) = 2, MAPDL updated normal contact stiffness at every equilibrium iteration and the corrected FKN = 0.1 trial converged to the same final response as the prior default-stiffness result.",
+  "change": "Set KEYOPT(10) = 1 so the initial contact stiffness is held during the load step and requested FKN sensitivity is observable.",
+  "disposition": "Retain contact_penalty_fkn_0p1_a02 as a rejected sensitivity design. All accepted contact-control cases must use revision 7."
+}

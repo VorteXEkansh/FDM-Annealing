@@ -1,0 +1,38 @@
+{
+  "stage": 10,
+  "date": "2026-09-14",
+  "passed": true,
+  "raw_run_directory_count": 43,
+  "selected_run_count": 28,
+  "excluded_or_rejected_run_count": 15,
+  "mesh_rows": 39,
+  "timestep_rows": 24,
+  "contact_sensitivity_rows": 9,
+  "verification_discretization": {
+    "structural": "90 x 12 elements confirmed by 120 x 16; verification benchmark only",
+    "thermal": "32 through-thickness elements confirmed by 64; verification benchmark only",
+    "contact": "40 contact elements on a 40 x 16 solid grid confirmed by 60 on 60 x 24; normal Lagrange; verification benchmark only",
+    "thermal_time_step": "0.25 s confirmed by 0.125 s",
+    "structural_time_steps": "0.01 s ramps and 0.1 s holds confirmed by 0.005 s and 0.05 s"
+  },
+  "final_pair_checks": {
+    "structural_mesh_extra_to_ultra": true,
+    "thermal_mesh_fine_to_extra": true,
+    "contact_mesh_fine_to_extra": true,
+    "structural_time_fine_to_extra": true,
+    "thermal_time_fine_to_extra": true
+  },
+  "production_mesh_selected": false,
+  "production_sweeps_admitted": false,
+  "reason": "Production material, irreversible strain, thermal boundary/contact and three-dimensional contact definitions remain evidence-gated; verification convergence cannot qualify an unbuilt production model.",
+  "source_hashes": {
+    "scripts/run_convergence_study.py": "0fe12a573353708499e10320a8e98a7089ab54e7c69e816f09201978adb5c125",
+    "scripts/check_convergence_stage.py": "d5568c753081b26592e79396f0d6c782f0df9b5fd83792977b59dda5ce8337d3",
+    "simulation/cases/stage10_convergence_design.json": "5afcfa150b2073ad1633b74eac36c362915e1287a894832b0698a653509c533a",
+    "simulation/cases/stage10_convergence_design_revision_03.json": "952b7c42d761a3be65b82dc97677c44a66d940642c8920cdc5265441c0e2042f",
+    "simulation/cases/stage10_convergence_design_revision_04.json": "549a565c63c6c53622f27de6d84863073434ef4eaac4c0729bfb15471e6db32e",
+    "simulation/cases/stage10_convergence_design_revision_05.json": "a038fe267494c2d3aa5cfe9dbaa6e9e639618d92e6dd0f038ef45c5dff831302",
+    "simulation/cases/stage10_convergence_design_revision_06.json": "bd758c08276af08a575bf52b2d7bd0745d76af917c4ea7f6d0a9532edbf5e538",
+    "simulation/cases/stage10_convergence_design_revision_07.json": "a586752839b3a462002b24cf1d6916f3c12fe6a0ae656cb5ebb6689489c8b42e"
+  }
+}

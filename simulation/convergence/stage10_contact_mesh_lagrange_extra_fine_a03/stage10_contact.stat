@@ -1,0 +1,4 @@
+ Element Output        Element=    1000  Cum. Iter.=     31     Elapsed Time=    19.621
+ Time=  1.0000     Load Step=     1 Substep=    11 Equilibrium Iteration=    2
+    F Convergence Norm= 0.38993E-06  Previous Norm= 0.34105E-04
+    U Convergence Norm= 0.71898E-07  Previous Norm= 0.39385E-04

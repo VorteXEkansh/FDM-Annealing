@@ -5,7 +5,7 @@ Aadit Jain · Dheeraj Yadav · Ekansh Malhotra
 
 Production and Industrial Engineering, Delhi Technological University
 
-Computational manuscript draft · 13 September 2026
+Computational manuscript draft · 14 September 2026
 
 ### Abstract — structured research draft
 
@@ -13,7 +13,7 @@ Computational manuscript draft · 13 September 2026
 
 <b>Planned approach.</b> Genuine ANSYS analysis will compare mechanically free annealing with opposed-face gap restraint for a 60 mm × 10 mm × 4 mm rectangular plate over an evidence-supported sub-melting domain. Candidate levels are 80&nbsp;°C, 95&nbsp;°C and 110&nbsp;°C, with holds of 30 min, 60 min and 90 min; their admission depends on the selected material evidence. Temperature-dependent, history-dependent behavior and contact will be represented only to the extent supported by data. Thermal histories, signed dimensions and released warpage will be distinguished from contact pressure and conditional stress predictions. Numerical verification, independent literature-based validation and uncertainty assessment will precede multi-objective interpretation.
 
-<b>Results status.</b> One thermal and six structural/contact ANSYS reference cases are verified; no production PLA coupon result, convergence claim, physical validation finding or optimum exists. For a constant-property plane wall with a ramp–hold–cool ambient history, genuine MAPDL center temperatures agree with a 200-term analytical solution to a maximum absolute error of 0.005180700&nbsp;°C. The maximum conventional relative error is 0.001700533% using kelvin, and the maximum error normalized by temperature excursion is 0.157660518%. The accepted model uses 1025 nodes, 640 SOLID70 elements and a fixed 0.25&nbsp;s step. These constants and temperatures are numerical verification fixtures, not PLA data. Stage 9 passes 114 structural/contact comparisons; the maximum isothermal Prony stress error is 3.8271 × 10⁻⁶ MPa. Retained strain is checked with a declared synthetic eigenstrain, not a PLA kinetic law. The production model remains blocked by compatible Prusament k(T) and c<sub>p</sub>(T), physical boundary/contact inputs and irreversible-strain evidence.
+<b>Results status.</b> One Stage 8 thermal and six Stage 9 structural/contact ANSYS reference cases are verified. Stage 10 adds formal mesh, time-step and contact-control refinement for three declared numerical configurations. A 90 × 12 two-layer Prony grid is confirmed by 120 × 16 elements: W<sub>max</sub>, residual displacement and the interior 95th-percentile stress change by 0.9327%, 0.5821% and 2.0266%. A 32-element plane-wall grid is confirmed by 64 elements, with 0.0009423% and 0.0060073% changes in 300 s thermal lag and temperature gradient. A 40-element normal-Lagrange interface is confirmed by 60 elements, with 0.12698% and 0.36127% changes in mean and peak pressure and zero reported penetration. The selected verification increments also pass confirmation. These are genuine solver values for numerical fixtures, not production PLA coupon predictions. No production mesh, physical validation finding or optimum exists.
 
 <b>Intended contribution.</b> The study will assess the clearance–distortion–stress trade-off and distinguish temporary geometric suppression from released stability. Prior supported annealing and numerical optimization preclude a broad first-of-kind claim. No strength improvement or industrial treatment recommendation is asserted.
 
@@ -377,23 +377,23 @@ For ideal unilateral normal contact, local gap g<sub>n</sub> and compressive pre
 
 EQ: g<sub>n</sub> ≥ 0, &nbsp; p<sub>n</sub> ≥ 0, &nbsp; g<sub>n</sub>p<sub>n</sub> = 0. &nbsp;&nbsp; (14)
 
-Stage 9 checks equilibrium and unilateral contact in uniform reference cases. Production surface-contact implementation remains pending. The actual contact formulation permits a controlled numerical approximation; its penetration, friction and heat-transfer treatment must be verified. Cooling must retain the intended contact until the declared release event, followed by evaluation at the common reference state. Spatial averaging and extraction rules must distinguish contact pressure from residual stress and avoid unqualified edge maxima.
+Stage 9 checks equilibrium and unilateral contact in uniform reference cases. Stage 10 adds a two-dimensional CONTA172/TARGE169 surface-contact verification and separates enforcement, stiffness and friction sensitivities. Production three-dimensional surface contact remains pending. Cooling must retain the intended contact until the declared release event, followed by evaluation at the common reference state. Spatial averaging and extraction rules must distinguish contact pressure from residual stress and avoid unqualified edge maxima.
 
 ### 4.6. Material-relation verification status
 
 Thirty-eight numerical unit tests pass for the implemented material relations. They compare source sums and shift conventions, analytical elastic and relaxation limits, exact isothermal increments, thermal reversibility, shear/bulk conversion and numerical refinement for a prescribed temperature ramp. Ten further tests cover the Stage 8 thermal reference and production admission contract. Synthetic test inputs are numerical fixtures, not measured PLA data or coupon simulation results. Missing annealing strain, crystallization and production closures are tested to raise errors.
 
-Each governing equation is mapped to its implemented function or designated future solver/postprocessing operation in the repository. The full test record preserves input and code hashes. The verified thermal case adds genuine ANSYS field evidence for Eq. (2), but only for the declared plane-wall problem. Stage 9 adds isothermal ANSYS agreement; these checks do not establish production mesh convergence, physical validation or validity of the proposed annealing holds.
+Each governing equation is mapped to its implemented function or designated future solver/postprocessing operation in the repository. The full test record preserves input and code hashes. The verified thermal case adds genuine ANSYS field evidence for Eq. (2), but only for the declared plane-wall problem. Stage 9 adds isothermal ANSYS agreement. Stage 10 establishes discretization independence for declared verification configurations; it does not establish production mesh convergence, physical validation or validity of the proposed annealing holds.
 
 ### 4.7. Solver environment and automated execution boundary
 
 The identified host installation is Ansys Student 2026 R1 under the v261 product tree. Workbench `RunWB2.exe` reports product version 26.1; the Mechanical executable `AnsysWBU.exe` reports product version 26.1; and optiSLang reports 26.1.0 revision 1878. Installed Workbench templates include Static Structural, Transient Structural and Transient Thermal. File presence is not treated as a license checkout. Mechanical APDL reported release 2026 R1, build 26.1, update 20260202 and the `Ansys Mechanical Enterprise Academic Student` product in both the Stage 6 zero-analysis probe and the accepted Stage 8 transient thermal execution.
 
-The official 2026 R1 Student description states a structural limit of 128,000 nodes/elements, no geometry export and up to four HPC CPU cores [40]. The host provides eight physical cores, 16 logical processors and 15.82 GiB installed memory; production launch settings will remain within the four-core license statement. Solver-generated contact and auxiliary entities must be included when checking the structural limit. The accepted verification mesh contains 1025 nodes and 640 elements; no production specimen/fixture mesh exists.
+The official 2026 R1 Student description states a structural limit of 128,000 nodes/elements, no geometry export and up to four HPC CPU cores [40]. The host provides eight physical cores, 16 logical processors and 15.82 GiB installed memory; production launch settings will remain within the four-core license statement. Solver-generated contact and auxiliary entities must be included when checking the structural limit. Stage 10's largest selected structural confirmation uses 1920 plane-stress elements and remains below the stated limit. No production specimen/fixture mesh exists.
 
 The project uses explicit JSON case records and a fail-closed Python runner. A production record must provide annealing temperature in °C, hold time in seconds, fixture gap in mm and a material identifier. Execution is rejected while any geometry, thermal-property, irreversible-strain, material-adapter, boundary-history or extraction gate remains false. This makes parameters reproducible without silently converting unresolved choices into model inputs. PyMechanical was not found in the system environment and is not a dependency of the current direct MAPDL batch path. DesignXplorer and optiSLang are present on disk but were not used; no design study, sensitivity index or optimization result was generated.
 
-Every run directory retains the exact command, case and APDL hashes, return code and hashes of generated logs. Failed cases are preserved. The Stage 7 preprocessing-only run stores the MAPDL database, output and five-level gap table. Stage 8 preserves five thermal attempts, including rejected extraction/accuracy cases and an I/O failure; attempt 05 is the accepted verification run. The full production campaign remains blocked.
+Every run directory retains the exact command, case and APDL hashes, return code and hashes of generated logs. Failed and superseded cases are preserved. The Stage 7 preprocessing-only run stores the MAPDL database, output and five-level gap table. Stage 8 preserves five thermal attempts, including rejected extraction/accuracy cases and an I/O failure; attempt 05 is the accepted verification run. Stage 10 preserves 43 technical run directories, of which 28 unique runs contribute to the convergence tables and 15 are excluded after documented measurand or contact-control defects. The full production campaign remains blocked.
 
 <!-- PAGE -->
 ### 5. Dimensional and mechanical response definitions
@@ -418,7 +418,7 @@ Mechanical diagnostics will include the contact-pressure history, reactions and 
 <!-- PAGE -->
 ### 6. Numerical verification and independent validation
 
-Verification must establish that the implemented equations and discretization produce sufficiently resolved responses. It cannot establish that those equations represent a particular printed material. Stage 8 verifies one transient thermal reference problem; production mesh, time-step and contact convergence remain unperformed.
+Verification must establish that the implemented equations and discretization produce sufficiently resolved responses. It cannot establish that those equations represent a particular printed material. Stages 8 and 9 verify thermal and structural/contact implementations; Stage 10 performs mesh, time-step and contact-control refinement for declared verification configurations. Production convergence remains unperformed because the production model is not admitted.
 
 ### 6.1. Verification protocol
 
@@ -494,8 +494,59 @@ Time (s) | ANSYS stress (MPa) | Analytical stress (MPa) | Absolute error (MPa)
 
 The maximum stress error is 3.8271 × 10⁻⁶ MPa and the maximum stress-relative error is 0.019740%. The maximum reaction error is 3.8280 × 10⁻⁶ N. The refined isothermal adapter passes; the complete non-isothermal clock and bulk irreversible-strain evolution remain unimplemented in ANSYS. The negative stress after unloading is followed under a held-zero-strain boundary, so it does not establish free post-cooling warpage or annealing residual stress.
 
+### 6.3. Mesh, time-step and contact-control convergence
 
-### 6.3. Calibration and independent evidence
+Stage 10 evaluates numerical convergence on three verification configurations. It does not run the production coupon/fixture model. For adjacent response values,
+
+EQ: δ<sub>q</sub> = |q<sub>fine</sub> − q<sub>medium</sub>| / |q<sub>fine</sub>| × 100%. &nbsp;&nbsp; (21)
+
+The same definition is applied to extra-fine versus fine and to a supplemental structural level. Before execution, limits were fixed at 2% for global mesh responses, 5% for local stress or peak pressure, 1% for global time-step responses and 3% for local time-step stress. If the denominator is zero, percentage change is undefined; when both values are zero, only the zero absolute change is asserted.
+
+The structural benchmark is a 60 mm × 4 mm plane-stress cantilever of unit thickness at 65 °C. Both layers use the Prusament instantaneous modulus, ν = 0.35, and all 23 normalized shear and bulk Prony amplitudes [8]. To create an identifiable refinement problem with simultaneous post-unload curvature and self-equilibrated stress, the upper-layer relaxation times are multiplied by 10 while the lower-layer times remain unchanged. This factor and the −0.001 N end load are numerical fixtures, not measured layer properties or uncertainty bounds. The load ramps over 0–1 s, holds to 31 s, returns to zero by 32 s and remains zero to 62 s. W<sub>max</sub> is the maximum normal residual from a least-squares line fitted to the deformed top edge; residual stress is the 95th percentile of interior element-centroid von Mises stress over 6 mm ≤ x ≤ 54 mm.
+
+The initial free-recovery design produced stress at the numerical-noise scale; a second endpoint-supported design produced curvature at the noise scale. Both solved cases remain archived but are rejected from convergence conclusions. On the accepted mismatch benchmark, medium-to-fine changes remained 9.9345% for W<sub>max</sub>, 7.9763% for residual displacement and 29.8796% for stress, so the original fine mesh failed. A 90 × 12 extra-fine grid was then checked against a 120 × 16 supplemental grid and passed all limits.
+
+TABLE: Selected verification meshes and confirmation changes
+Configuration | Selected / confirmation grid | Confirmation changes, δ<sub>q</sub>
+Two-layer Prony cantilever | 90 × 12 / 120 × 16 elements | W<sub>max</sub> 0.9327%; displacement 0.5821%; σ<sub>res,95</sub> 2.0266%
+Plane-wall thermal field | 32 / 64 elements through thickness | 300 s lag 0.0009423%; gradient 0.0060073%
+Normal-Lagrange contact | 40 / 60 interface elements | Mean pressure 0.12698%; peak pressure 0.36127%; reaction 0.13831%
+
+IMAGE: figures/mesh_convergence.png
+CAPTION: Figure 2. Mesh refinement for genuine MAPDL verification configurations. The structural, thermal and contact values are numerical-fixture responses; they are not production PLA annealing predictions. Every plotted point is linked to an archived solver run.
+
+The thermal sequence reuses the Stage 8 constant-property plane wall at fixed Δt = 0.25 s. It stores profiles at 300 s, 900 s, 1200 s and 1800 s and evaluates both the 300 s center lag and center-to-surface gradient. The contact sequence uses a 10 mm × 4 mm plane-strain block, a 0.020 mm rigid-stop gap and declared elastic/expansion fixtures. The first augmented-Lagrange mesh sequence remained penalty-stiffness dependent. The accepted normal-Lagrange sequence has zero reported penetration and passes both integral and peak-pressure limits.
+
+The thermal time-step strategies are 5 s, 1 s, 0.25 s and 0.125 s on the 64-element wall. The structural ramp/hold pairs are 0.1/1 s, 0.05/0.5 s, 0.01/0.1 s and 0.005/0.05 s on a fixed 60 × 8 grid. The thermal profile measure is the L₂ norm of temperature excursion from 20 °C over all stored locations and times; the pointwise profile RMSE is also retained.
+
+TABLE: Selected verification time increments and confirmation changes
+Configuration | Selected / confirmation increments | Confirmation changes, δ<sub>q</sub>
+Plane-wall thermal history | 0.25 s / 0.125 s | Lag 0.005285%; gradient 0.005369%; profile L₂ 0.002811%; profile RMSE 0.00202088 °C
+Two-layer structural history | 0.01/0.1 s / 0.005/0.05 s ramp/hold | W<sub>max</sub> 0.003094%; displacement 0.003213%; σ<sub>res,95</sub> 0.13636%
+
+IMAGE: figures/timestep_convergence.png
+CAPTION: Figure 3. Time-step refinement for thermal and two-layer viscoelastic verification histories. The horizontal axes decrease toward the right so visual convergence appears as a plateau.
+
+The surface-contact input was corrected after MAPDL showed that the first FKN value occupied the rigid-target geometry slot. A corrected trial was also rejected because updating stiffness every equilibrium iteration erased the requested sensitivity. Accepted runs place F<sub>KN</sub> in contact real-constant slot 3 and hold the initial stiffness through the load step; every solver summary is checked against the requested algorithm and factor.
+
+TABLE: Contact-control sensitivity on the 40-element interface
+Control | Maximum penetration (mm) | Mean / peak pressure (MPa)
+Penalty or augmented, F<sub>KN</sub> = 0.1 | 1.12141 × 10<super>−3</super> | 16.9989 / 17.9426
+Penalty or augmented, F<sub>KN</sub> = 1 | 1.52677 × 10<super>−4</super> | 17.5368 / 24.4284
+Penalty or augmented, F<sub>KN</sub> = 10 | 1.80923 × 10<super>−5</super> | 17.6242 / 28.9476
+Normal Lagrange, μ = 0 | 0 | 17.5721 / 21.3788
+Augmented, F<sub>KN</sub> = 1, μ = 0.1 | 1.97427 × 10<super>−4</super> | 18.4343 / 31.5883
+Augmented, F<sub>KN</sub> = 1, μ = 0.3 | 3.24243 × 10<super>−4</super> | 20.0334 / 51.8788
+
+At F<sub>KN</sub> = 10, one edge element has zero pressure and the all-elements-closed requirement fails even though MAPDL converges. In this monotonic frictionless benchmark, penalty and augmented-Lagrange solutions coincide at each tested factor; that limited finding is not general algorithm equivalence. Increasing μ from 0 to 0.3 raises mean and peak pressure and increases the converged-message count from 31 to 133. Because PLA–steel friction is not sourced, no production μ is selected.
+
+IMAGE: figures/contact_sensitivity.png
+CAPTION: Figure 4. Contact-control sensitivity. F<sub>KN</sub> controls penalty penetration in the declared numerical fixture, while friction changes the pressure field and nonlinear solution effort. No curve supplies a production interface parameter.
+
+All final verification refinement pairs pass their predeclared limits. The selected settings apply only to the exact verification configurations: 90 × 12 structural elements, 32 thermal elements through thickness, 40 normal-Lagrange interface elements over a 40 × 16 solid grid, Δt = 0.25 s for the thermal history and 0.01/0.1 s for structural ramps/holds. The three-dimensional coupon/fixture changes topology, contact dimensionality, thermal/contact properties, irreversible strain and release behavior. Therefore no production mesh or time step is selected, and no production sweep is admitted.
+
+<!-- PAGE -->
+### 6.4. Calibration and independent evidence
 
 Published data may calibrate a material law or test a prediction, but using the same observations for both does not provide independent validation. Reserve validation observations and document that separation before fitting. Independence should be checked by source and specimen/condition lineage, not merely by using different rows exported from the same fitted dataset.
 
@@ -527,15 +578,15 @@ Candidates selected through a surrogate must be recomputed with the genuine solv
 <!-- PAGE -->
 ### 8. Evidence status, engineering relevance and limitations
 
-The current contribution includes a finalized computational scope, a formulation-audited property database, a tested material-point reference implementation, a parameterized three-volume geometry and an analytically verified transient thermal reference. Prusament PLA is the reference constitutive formulation, and AISI 304 is the candidate fixture material. The verification result establishes code behavior for a declared plane wall; it does not establish a PLA prediction. Missing production evidence is represented by explicit blocked fields rather than zero values, example contours or synthetic data.
+The current contribution includes a finalized computational scope, a formulation-audited property database, a tested material-point reference implementation, a parameterized three-volume geometry, analytically verified thermal/structural reference cases and formal discretization studies for three numerical configurations. Prusament PLA is the reference constitutive formulation, and AISI 304 is the candidate fixture material. The verification results establish code and discretization behavior for declared problems; they do not establish a production PLA prediction. Missing production evidence is represented by explicit blocked fields rather than zero values, example contours or synthetic data.
 
 TABLE: Evidence required for reportable findings
 Claim family | Current evidence | Admission requirement
-Temperature and deformation | One accepted ANSYS plane-wall verification; no production PLA coupon solution or deformation field | Compatible production properties, boundary history, verified discretization and archived outputs
+Temperature and deformation | Verified plane-wall and two-layer discretization studies; no production PLA coupon solution | Compatible production properties, boundary history, production convergence and archived outputs
 PLA transient thermal response | No compatible Prusament k(T) or c<sub>p</sub>(T) | Compatible functions or a declared calibration/uncertainty strategy
 Bulk irreversible strain | Only thin-bilayer programmed pre-strain for Prusament | Identifiable signed three-dimensional law without double-counting
-Stress and contact pressure | Structural patch and node-contact verification; no production fields | Verified contact solution and declared extraction rules
-Numerical convergence | Not performed | Genuine mesh/time/contact refinement evidence
+Stress and contact pressure | Structural patch tests plus 2D surface-contact mesh/control sensitivity; no production fields | Admitted 3D production contact, friction evidence and declared extraction rules
+Numerical convergence | Final mesh/time/contact pairs pass for three verification configurations | Repeat on the admitted production assembly before sweeps
 Physical predictive validity | No accepted dataset | Independent compatible observations and uncertainty
 Sensitivity and uncertainty | Not calculated | Justified inputs and reproducible numerical analysis
 Optimization | Not performed | Verified responses, feasibility rules and solver confirmation
@@ -554,11 +605,13 @@ Stage 8 adds a genuine MAPDL transient thermal reference solution. For the decla
 
 Stage 9 verifies free and restrained expansion, imposed retained strain, unilateral gap closure/reopening and the native 23-branch isothermal Prony response in six reference cases. All 114 comparisons satisfy their fixed tolerances; the maximum stress error is 3.8271 × 10⁻⁶ MPa. This establishes the stated implementation limits without supplying a bulk annealing law, a non-isothermal adapter or production fixture predictions.
 
+Stage 10 adds genuine MAPDL refinement for thermal, two-layer viscoelastic and surface-contact verification configurations. A 90 × 12 structural grid is confirmed by 120 × 16 elements; W<sub>max</sub>, displacement and the interior stress percentile change by 0.9327%, 0.5821% and 2.0266%. A 32-element plane-wall grid is confirmed by 64 elements; lag and gradient change by 0.0009423% and 0.0060073%. A 40-element normal-Lagrange interface is confirmed by 60 elements; mean and peak pressure change by 0.12698% and 0.36127%, with zero reported penetration. Thermal and structural time-step confirmations also pass. These settings qualify only their verification configurations.
+
 The Prusament evidence provides ν, α, T<sub>g</sub>, a 23-branch Maxwell spectrum and WLF/Arrhenius shifting over a directly characterized 23–85 °C interval. Thirty-eight analytical and synthetic unit tests verify the reference material relations. Compatible k(T), c<sub>p</sub>(T), complete orthotropy, crystallization kinetics and a bulk irreversible-strain law remain unavailable; fixture thermal strain awaits its expansion convention.
 
 The proposed contribution remains restricted to evidence-tested prediction of the clearance–distortion–stress trade-off after cooling and release. The scope compares FREE with initially centered GAP restraint for one specified material/architecture/geometry, while retaining signed response and excluding granular-media simulation and unverified strength claims.
 
-Numerical findings require genuine ANSYS field execution, verified material evidence, discretization assessment and independent validation. The successful geometry-only build is not a thermal or mechanical simulation result, and γ = 0.01 is not a preferred clearance. No improvement, validated prediction or preferred annealing condition is concluded.
+Numerical findings require genuine ANSYS field execution, verified material evidence, production discretization assessment and independent validation. Verification convergence cannot qualify the unbuilt three-dimensional production model. The successful geometry-only build is not a thermal or mechanical simulation result, and γ = 0.01 is not a preferred clearance. No production mesh, improvement, validated prediction or preferred annealing condition is concluded; production sweeps remain blocked.
 
 <!-- PAGE -->
 ### References
@@ -663,7 +716,7 @@ Numerical findings require genuine ANSYS field execution, verified material evid
 
 ### Supplement A. Provenance and reproducibility requirements
 
-The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, constitutive implementation/tests, parametric geometry and Stage 8–9 thermal/structural verification evidence. The base paper is preserved separately from the evolving manuscript. Solver artifacts include the accepted plane-wall thermal field result and all failed attempts; no production PLA field result exists.
+The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, constitutive implementation/tests, parametric geometry and Stage 8–10 verification and convergence evidence. The base paper is preserved separately from the evolving manuscript. Solver artifacts include accepted results and all failed or superseded attempts; no production PLA field result exists.
 
 Each future case must preserve a unique identifier, the solver version, geometry and material orientation, input configuration, source references, units, boundary histories, mesh, time-integration and contact settings, execution status, raw-output location and file checksums. Failed cases remain in the record with their failure reason. Postprocessing must identify both the raw field and the script/equation producing each response.
 

@@ -27,3 +27,6 @@ node_modules/
 
 # Preserve all Stage 9 solver evidence, including rejected attempts.
 !simulation/verification/stage09_*/**
+
+# Preserve all Stage 10 solver evidence, including rejected attempts.
+!simulation/convergence/stage10_*/**

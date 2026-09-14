@@ -1,0 +1,39 @@
+{
+  "accepted": true,
+  "error": "",
+  "returncode": 0,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM_stage10_contact_mesh_extra_fine_ijrojalb\\input.dat",
+    "-o",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM_stage10_contact_mesh_extra_fine_ijrojalb\\mapdl.out",
+    "-j",
+    "stage10",
+    "-np",
+    "1"
+  ],
+  "files": {
+    "case.json": "1b7a4c155e8bd9456884bfc0c8bc5cfaa56bd226d3541cae8b56fdf705e10ef4",
+    "contact_values.csv": "d32dacdf4b090f2010bcd18eeb272085f8927b90970501839650850f849f9f40",
+    "input.dat": "ad87974f0c3298fc3dd2772dc0cef8df159b52fb04c8fdc9eefe451b4ed19427",
+    "mapdl.out": "811d832fcbabeb232ea847964fbbfc491cbd8069ce89f44ef414a0f25766f650",
+    "reaction.csv": "45ece56bb1c286ecd77ce1eb5d423de60d0d44d20733078d2142c01b90cf9d39",
+    "result.json": "bc19c06ff34c931b97c69f2209ca0de5d7273905707b942aa9e0ac6d95a1c9d3",
+    "script_snapshot.py": "373a321b29ed6f710288e02edd87c3dc06a2d5496a8d88aa396ea84d7d1e0a03",
+    "stage10.err": "83848f95f2aa8155e33deda45e382ca33171ec53dc6cf0ac15af55a5c4ae0e29",
+    "stage10.log": "40e99f97abc2995e407879c5334cba567ac37db95addd4249ff49ce79ceaa7a4",
+    "stage10_contact.DSP": "f94d2b87f24475e875e79bc1873273317e3004754ffdabf96838981ba7aacf8d",
+    "stage10_contact.esav": "ca35704f0698ec68c0f9da49b64df1736edd6fdb9243dec71b3cd5253ee19e43",
+    "stage10_contact.full": "72cde3f9494b1b6d5fc81da1e1159373c23d3dfb1e40b1a9c8e4e63b4f9a1712",
+    "stage10_contact.ldhi": "6744ed5be6c8dc697a694b91bf036fc79e908c3c04f8d3f42569a7b000e550cd",
+    "stage10_contact.mntr": "f6aeaa4c0dcaf4c5c2743db8b8fed8ff2bbe42c00b4f345bfd309fec426d1add",
+    "stage10_contact.r001": "215d495a6b0c2a5e4cbffb9a46ae6b6b43d2c7408182783923130cfc1fb2fc15",
+    "stage10_contact.rdb": "ea0ba8d0955ebe6034c6f16994f66650aef23ff5485498cba557732ada81404e",
+    "stage10_contact.rst": "3268de2de3cf46be0e65844e88b82aaa0475c93ff3feee25003f7e11d9e02691",
+    "stage10_contact.stat": "122e0fa914d2429692a55af3419b3ea621dc38824119626ae46d100be0c3b44c",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

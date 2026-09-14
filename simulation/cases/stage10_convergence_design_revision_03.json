@@ -1,0 +1,12 @@
+{
+  "stage": 10,
+  "revision": 3,
+  "date": "2026-09-14",
+  "applies_to": "structural mesh and structural time-step cases only",
+  "disposition_of_revision_2": "Retain stage10_structural_mesh_coarse_a02 as a rejected measurand design because the endpoint support produced stress but top-edge curvature and residual displacement at the numerical-noise scale.",
+  "revised_material_fixture": "Both layers use the Chapuis Prusament instantaneous modulus, Poisson ratio and normalized 23-branch amplitudes at a 65 degC reference. The upper half uses the source relaxation times multiplied by 10; the lower half uses the source times unchanged.",
+  "revised_boundary": "The end traction is removed over 31-32 s and the free edge remains traction-free through 62 s.",
+  "purpose": "Create an identifiable, smooth two-layer mismatch benchmark with simultaneous post-unload curvature, residual displacement and self-equilibrated stress for numerical refinement only.",
+  "interpretation": "The factor of 10 is a declared synthetic fixture, not a measured layer property, temperature shift, uncertainty bound or production PLA parameter.",
+  "acceptance": "Unchanged from stage10_convergence_design.json."
+}

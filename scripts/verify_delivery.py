@@ -22,7 +22,7 @@ def main():
     local_blob=run('git','hash-object',pdf)
     remote_blob=run('gh','api','--method','GET','repos/VorteXEkansh/FDM-Annealing/contents/'+pdf,'-f','ref='+head,'--jq','.sha')
     assert local_blob==remote_blob,'Remote PDF differs'
-    record={'stage':args.stage,'repository':'https://github.com/VorteXEkansh/FDM-Annealing','branch':branch,'content_commit':head,'remote_commit':remote,'github_api_commit':api,'pdf_git_blob':remote_blob,'pdf_sha256':hashlib.sha256((ROOT/pdf).read_bytes()).hexdigest(),'status':'Push, remote branch, GitHub commit and PDF blob verified','date':'2026-09-13'}
+    record={'stage':args.stage,'repository':'https://github.com/VorteXEkansh/FDM-Annealing','branch':branch,'content_commit':head,'remote_commit':remote,'github_api_commit':api,'pdf_git_blob':remote_blob,'pdf_sha256':hashlib.sha256((ROOT/pdf).read_bytes()).hexdigest(),'status':'Push, remote branch, GitHub commit and PDF blob verified','date':('2026-09-14' if args.stage >= 10 else '2026-09-13')}
     if args.record:
         (ROOT/f'docs/stage_{args.stage:02d}_delivery.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps(record,indent=2))

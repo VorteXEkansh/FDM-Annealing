@@ -1,0 +1,19 @@
+{
+  "family": "contact_mesh_lagrange",
+  "design_revision": 6,
+  "level": "medium",
+  "nx": 20,
+  "ny": 8,
+  "algorithm": "normal_lagrange",
+  "FKN_factor": 1.0,
+  "friction_coefficient": 0.0,
+  "case_id": "contact_mesh_lagrange_medium",
+  "attempt": 3,
+  "design_sha256": "5afcfa150b2073ad1633b74eac36c362915e1287a894832b0698a653509c533a",
+  "structural_revision_sha256": null,
+  "supplemental_revision_sha256": null,
+  "contact_mapping_revision_sha256": "a038fe267494c2d3aa5cfe9dbaa6e9e639618d92e6dd0f038ef45c5dff831302",
+  "contact_control_revision_sha256": "a586752839b3a462002b24cf1d6916f3c12fe6a0ae656cb5ebb6689489c8b42e",
+  "contact_mesh_revision_sha256": "bd758c08276af08a575bf52b2d7bd0745d76af917c4ea7f6d0a9532edbf5e538",
+  "evidence_status": "genuine MAPDL numerical verification; not a production PLA annealing result"
+}

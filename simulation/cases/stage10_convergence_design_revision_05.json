@@ -1,0 +1,10 @@
+{
+  "stage": 10,
+  "revision": 5,
+  "date": "2026-09-14",
+  "applies_to": "all two-dimensional surface-contact cases",
+  "defect": "The initial decks placed FKN in real-constant slot 1, which MAPDL reported as target geometry R1; the contact pair retained default FKN = 1.0. The intended surface-contact mapping is FKN in slot 3, FTOLN in slot 4 and PINB in slot 6.",
+  "disposition": "All attempt-01 surface-contact cases are retained but rejected from stiffness, friction and mesh conclusions because their shared target/contact real set was ambiguously populated.",
+  "corrected_mapping": "R,3,0,0,FKN,0.1,0,2",
+  "verification": "Each accepted rerun must have its solver contact summary checked against the requested algorithm and FKN."
+}

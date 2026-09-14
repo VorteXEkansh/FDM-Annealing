@@ -1,0 +1,27 @@
+/COM,ANSYS RELEASE 2026 R1           BUILD 26.1      UP20260202       21:15:51
+
+ *** WARNING ***                         ELAPSED TIME =       5.894   TIME= 21:15:52
+ The node numbering is highly uncompressed with a maximum defined node   
+ of 900002 compared to 57 defined nodes.  This will likely result in     
+ reduced performance and increased memory allocation requirements.       
+ Consider using the NUMCMP command to create a more compressed           
+ numbering scheme to improve the performance.                            
+
+ *** WARNING ***                         ELAPSED TIME =       5.972   TIME= 21:15:52
+ All selected contact pairs are initially open.  Rigid body motion can   
+ occur.  You may use auto CNOF by setting KEYOPT(5) to close small       
+ gaps.                                                                   
+
+ *** WARNING ***                         ELAPSED TIME =       6.249   TIME= 21:15:53
+ Pivoting has been activated for the Sparse Matrix Solver.  The memory   
+ required may greatly exceed the predicted amount.  In that event, use   
+ the DSPOPTION command to change the memory mode and/or memory size      
+ used by the Sparse Matrix Solver.                                       
+
+ *** WARNING ***                         ELAPSED TIME =       6.288   TIME= 21:15:53
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 1.071893917E-09 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      

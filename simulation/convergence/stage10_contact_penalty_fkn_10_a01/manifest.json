@@ -1,0 +1,38 @@
+{
+  "accepted": true,
+  "error": "",
+  "returncode": 0,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM_stage10_contact_penalty_fkn_10_ma9emhqb\\input.dat",
+    "-o",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM_stage10_contact_penalty_fkn_10_ma9emhqb\\mapdl.out",
+    "-j",
+    "stage10",
+    "-np",
+    "1"
+  ],
+  "files": {
+    "case.json": "b966c0e74b291d65dbc47928ba146d728cc021116ee037d913fdb20e7bba2357",
+    "contact_values.csv": "f6c3946264163d870196bbfad4c028abf3b6f2bfcd196beb8cf2c28811b8fd7b",
+    "input.dat": "b94e91f7f0a4158bcb53ad491e85c373941f2aa14cc6996d14132abc27d23370",
+    "mapdl.out": "8520e000b0a380e68d304302705c2abf25030024d3cf5c86e87387eca3b9a5a0",
+    "reaction.csv": "2f84db61662274135327a094af7e42ed895f9c62be94a4807df5fc5018df1d67",
+    "result.json": "23ca102e27cd1f90c8d1d0dbb9526067b8c0c0e3ece6eed4f1a8707325d21dc5",
+    "script_snapshot.py": "373a321b29ed6f710288e02edd87c3dc06a2d5496a8d88aa396ea84d7d1e0a03",
+    "stage10.err": "00b53df057364f693b3c747f4c80e1a20568ebb78f85b7dda6b12e6a0e37478c",
+    "stage10.log": "fe57a9d7ddf0e0497fd2d99a0bf31e57188d60f11ded8903a96a8949dfe996a1",
+    "stage10_contact.DSP": "7d7b4ec49cbdd88f81e71d1be88be32f4a314a4871d847a876802ecded218ff9",
+    "stage10_contact.esav": "dcc1ca592d9c01969ab42a79e2ade21116d526215e03c3eb7c21c9faaf02db8c",
+    "stage10_contact.full": "4590a942095c69ce02b62e3bf776aef0a33ad832baf5ae5b10d8ad50af3b23ef",
+    "stage10_contact.ldhi": "6e8bc1abb6ee855cfca6ae16f941ae7bc192d9a70452760e1ea42168ac960b1b",
+    "stage10_contact.mntr": "9f74fd487589b0a57e8f7f9f9fa31523d8e74437709ebef78a4c0732c4c16d9d",
+    "stage10_contact.r001": "ac76c9aa627b3e56235571f229c6a81dbc118fc5f3579a5c911d5cdd9ed22629",
+    "stage10_contact.rdb": "3909ee435d6d52b350e8a1803b261fc7355a186b48a4084fa8801fc69cb6ef7a",
+    "stage10_contact.rst": "2cf26a628d7c2fea5d7db29f17002c264267858be6b7121fae8d4d2f556b0ba3",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

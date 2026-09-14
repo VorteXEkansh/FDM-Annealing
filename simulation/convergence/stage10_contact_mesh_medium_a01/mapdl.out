@@ -1,0 +1,2467 @@
+
+ Ansys Mechanical Enterprise Academic Student      
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *         ANSYS MAPDL 2026 R1          LEGAL NOTICES          *
+ ***************************************************************
+ *                                                             *
+ * Copyright (c) 2026 Synopsys, Inc. and ANSYS, Inc.           *
+ * All rights reserved.                                        *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of Ansys, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the Ansys, Inc. online documentation or the Ansys, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * Ansys, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * Ansys, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the Ansys, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the Ansys, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ 2026 R1 
+     
+ Point Releases and Patches installed:   
+     
+ Ansys, Inc. License Manager 2026 R1 
+ Discovery (full install) 2026 R1
+ Core WB Files 2026 R1   
+ optiSLang Core UI 2026 R1   
+ CFX (includes CFD-Post) 2026 R1 
+ Chemkin 2026 R1 
+ EnSight 2026 R1 
+ FENSAP-ICE 2026 R1  
+ Fluent (includes CFD-Post) 2026 R1  
+ Polyflow (includes CFD-Post) 2026 R1
+ Forte (includes EnSight) 2026 R1
+ Rocky 2026 R1   
+ TurboGrid 2026 R1   
+ ACIS Geometry Interface 2026 R1 
+ AutoCAD Geometry Interface 2026 R1  
+ Catia, Version 4 Geometry Interface 2026 R1 
+ Catia, Version 5 Geometry Interface 2026 R1 
+ Catia, Version 6 Geometry Interface 2026 R1 
+ Creo Elements/Direct Modeling Geometry Interface 2026 R1
+ Creo Parametric Geometry Interface 2026 R1  
+ Inventor Geometry Interface 2026 R1 
+ JTOpen Geometry Interface 2026 R1   
+ NX Geometry Interface 2026 R1   
+ Parasolid Geometry Interface  2026 R1   
+ Solid Edge Geometry Interface 2026 R1   
+ SOLIDWORKS Geometry Interface 2026 R1   
+ Speos 2026 R1   
+ SpaceClaim 2026 R1  
+ Speos RPC 2026 R1   
+ Zemax OpticStudio 2026 R1   
+ Dynamic Reporting 2026 R1   
+ Aqwa 2026 R1
+ Autodyn 2026 R1 
+ Material Calibration App 2026 R1
+ Mechanical Products 2026 R1 
+ Motion 2026 R1  
+ Academic Student 2026 R1
+
+
+          *****  MAPDL COMMAND LINE ARGUMENTS  *****
+  INITIAL JOBNAME              = stage10                                                                                                                                                                                                                                                 
+  BATCH MODE REQUESTED (-b)    = LIST
+  INPUT FILE COPY MODE (-c)    = COPY
+       1 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
+    TOTAL OF     1 CORES REQUESTED
+  INPUT FILE NAME              = C:\Users\asus\AppData\Local\Temp\FDM_stage10_contact_mesh_medium_s1r6rwec\input.dat
+  OUTPUT FILE NAME             = C:\Users\asus\AppData\Local\Temp\FDM_stage10_contact_mesh_medium_s1r6rwec\mapdl.out
+
+ RELEASE= 2026 R1              BUILD= 26.1      UP20260202   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=stage10  21:06:13  SEP 14, 2026  Elapsed Time=       0.188
+
+     1  /BATCH  
+     2  /FILNAME,stage10_contact
+     3  /TITLE,Stage 10 contact-control verification
+     4  /PREP7  
+     5  ET,1,182
+     6  KEYOPT,1,3,2
+     7  ET,2,169
+     8  ET,3,172
+     9  KEYOPT,3,2,0
+    10  KEYOPT,3,4,0
+    11  KEYOPT,3,10,2   
+    12  R,1,1   
+    13  R,3,1,0.1,0,2   
+    14  MP,EX,1,2000
+    15  MP,PRXY,1,0.3   
+    16  MP,ALPX,1,0.0001
+    17  MP,MU,1,0   
+    18  TYPE,1  
+    19  REAL,1  
+    20  MAT,1   
+    21  N,1,0,0,0   
+    22  N,2,0.5,0,0 
+    23  N,3,1,0,0   
+    24  N,4,1.5,0,0 
+    25  N,5,2,0,0   
+    26  N,6,2.5,0,0 
+    27  N,7,3,0,0   
+    28  N,8,3.5,0,0 
+    29  N,9,4,0,0   
+    30  N,10,4.5,0,0
+    31  N,11,5,0,0  
+    32  N,12,5.5,0,0
+    33  N,13,6,0,0  
+    34  N,14,6.5,0,0
+    35  N,15,7,0,0  
+    36  N,16,7.5,0,0
+    37  N,17,8,0,0  
+    38  N,18,8.5,0,0
+    39  N,19,9,0,0  
+    40  N,20,9.5,0,0
+    41  N,21,10,0,0 
+    42  N,22,0,0.5,0
+    43  N,23,0.5,0.5,0  
+    44  N,24,1,0.5,0
+    45  N,25,1.5,0.5,0  
+    46  N,26,2,0.5,0
+    47  N,27,2.5,0.5,0  
+    48  N,28,3,0.5,0
+    49  N,29,3.5,0.5,0  
+    50  N,30,4,0.5,0
+    51  N,31,4.5,0.5,0  
+    52  N,32,5,0.5,0
+    53  N,33,5.5,0.5,0  
+    54  N,34,6,0.5,0
+    55  N,35,6.5,0.5,0  
+    56  N,36,7,0.5,0
+    57  N,37,7.5,0.5,0  
+    58  N,38,8,0.5,0
+    59  N,39,8.5,0.5,0  
+    60  N,40,9,0.5,0
+    61  N,41,9.5,0.5,0  
+    62  N,42,10,0.5,0   
+    63  N,43,0,1,0  
+    64  N,44,0.5,1,0
+    65  N,45,1,1,0  
+    66  N,46,1.5,1,0
+    67  N,47,2,1,0  
+    68  N,48,2.5,1,0
+    69  N,49,3,1,0  
+    70  N,50,3.5,1,0
+    71  N,51,4,1,0  
+    72  N,52,4.5,1,0
+    73  N,53,5,1,0  
+    74  N,54,5.5,1,0
+    75  N,55,6,1,0  
+    76  N,56,6.5,1,0
+    77  N,57,7,1,0  
+    78  N,58,7.5,1,0
+    79  N,59,8,1,0  
+    80  N,60,8.5,1,0
+    81  N,61,9,1,0  
+    82  N,62,9.5,1,0
+    83  N,63,10,1,0 
+    84  N,64,0,1.5,0
+    85  N,65,0.5,1.5,0  
+    86  N,66,1,1.5,0
+    87  N,67,1.5,1.5,0  
+    88  N,68,2,1.5,0
+    89  N,69,2.5,1.5,0  
+    90  N,70,3,1.5,0
+    91  N,71,3.5,1.5,0  
+    92  N,72,4,1.5,0
+    93  N,73,4.5,1.5,0  
+    94  N,74,5,1.5,0
+    95  N,75,5.5,1.5,0  
+    96  N,76,6,1.5,0
+    97  N,77,6.5,1.5,0  
+    98  N,78,7,1.5,0
+    99  N,79,7.5,1.5,0  
+   100  N,80,8,1.5,0
+   101  N,81,8.5,1.5,0  
+   102  N,82,9,1.5,0
+   103  N,83,9.5,1.5,0  
+   104  N,84,10,1.5,0   
+   105  N,85,0,2,0  
+   106  N,86,0.5,2,0
+   107  N,87,1,2,0  
+   108  N,88,1.5,2,0
+   109  N,89,2,2,0  
+   110  N,90,2.5,2,0
+   111  N,91,3,2,0  
+   112  N,92,3.5,2,0
+   113  N,93,4,2,0  
+   114  N,94,4.5,2,0
+   115  N,95,5,2,0  
+   116  N,96,5.5,2,0
+   117  N,97,6,2,0  
+   118  N,98,6.5,2,0
+   119  N,99,7,2,0  
+   120  N,100,7.5,2,0   
+   121  N,101,8,2,0 
+   122  N,102,8.5,2,0   
+   123  N,103,9,2,0 
+   124  N,104,9.5,2,0   
+   125  N,105,10,2,0
+   126  N,106,0,2.5,0   
+   127  N,107,0.5,2.5,0 
+   128  N,108,1,2.5,0   
+   129  N,109,1.5,2.5,0 
+   130  N,110,2,2.5,0   
+   131  N,111,2.5,2.5,0 
+   132  N,112,3,2.5,0   
+   133  N,113,3.5,2.5,0 
+   134  N,114,4,2.5,0   
+   135  N,115,4.5,2.5,0 
+   136  N,116,5,2.5,0   
+   137  N,117,5.5,2.5,0 
+   138  N,118,6,2.5,0   
+   139  N,119,6.5,2.5,0 
+   140  N,120,7,2.5,0   
+   141  N,121,7.5,2.5,0 
+   142  N,122,8,2.5,0   
+   143  N,123,8.5,2.5,0 
+   144  N,124,9,2.5,0   
+   145  N,125,9.5,2.5,0 
+   146  N,126,10,2.5,0  
+   147  N,127,0,3,0 
+   148  N,128,0.5,3,0   
+   149  N,129,1,3,0 
+   150  N,130,1.5,3,0   
+   151  N,131,2,3,0 
+   152  N,132,2.5,3,0   
+   153  N,133,3,3,0 
+   154  N,134,3.5,3,0   
+   155  N,135,4,3,0 
+   156  N,136,4.5,3,0   
+   157  N,137,5,3,0 
+   158  N,138,5.5,3,0   
+   159  N,139,6,3,0 
+   160  N,140,6.5,3,0   
+   161  N,141,7,3,0 
+   162  N,142,7.5,3,0   
+   163  N,143,8,3,0 
+   164  N,144,8.5,3,0   
+   165  N,145,9,3,0 
+   166  N,146,9.5,3,0   
+   167  N,147,10,3,0
+   168  N,148,0,3.5,0   
+   169  N,149,0.5,3.5,0 
+   170  N,150,1,3.5,0   
+   171  N,151,1.5,3.5,0 
+   172  N,152,2,3.5,0   
+   173  N,153,2.5,3.5,0 
+   174  N,154,3,3.5,0   
+   175  N,155,3.5,3.5,0 
+   176  N,156,4,3.5,0   
+   177  N,157,4.5,3.5,0 
+   178  N,158,5,3.5,0   
+   179  N,159,5.5,3.5,0 
+   180  N,160,6,3.5,0   
+   181  N,161,6.5,3.5,0 
+   182  N,162,7,3.5,0   
+   183  N,163,7.5,3.5,0 
+   184  N,164,8,3.5,0   
+   185  N,165,8.5,3.5,0 
+   186  N,166,9,3.5,0   
+   187  N,167,9.5,3.5,0 
+   188  N,168,10,3.5,0  
+   189  N,169,0,4,0 
+   190  N,170,0.5,4,0   
+   191  N,171,1,4,0 
+   192  N,172,1.5,4,0   
+   193  N,173,2,4,0 
+   194  N,174,2.5,4,0   
+   195  N,175,3,4,0 
+   196  N,176,3.5,4,0   
+   197  N,177,4,4,0 
+   198  N,178,4.5,4,0   
+   199  N,179,5,4,0 
+   200  N,180,5.5,4,0   
+   201  N,181,6,4,0 
+   202  N,182,6.5,4,0   
+   203  N,183,7,4,0 
+   204  N,184,7.5,4,0   
+   205  N,185,8,4,0 
+   206  N,186,8.5,4,0   
+   207  N,187,9,4,0 
+   208  N,188,9.5,4,0   
+   209  N,189,10,4,0
+   210  E,1,2,23,22 
+   211  E,2,3,24,23 
+   212  E,3,4,25,24 
+   213  E,4,5,26,25 
+   214  E,5,6,27,26 
+   215  E,6,7,28,27 
+   216  E,7,8,29,28 
+   217  E,8,9,30,29 
+   218  E,9,10,31,30
+   219  E,10,11,32,31   
+   220  E,11,12,33,32   
+   221  E,12,13,34,33   
+   222  E,13,14,35,34   
+   223  E,14,15,36,35   
+   224  E,15,16,37,36   
+   225  E,16,17,38,37   
+   226  E,17,18,39,38   
+   227  E,18,19,40,39   
+   228  E,19,20,41,40   
+   229  E,20,21,42,41   
+   230  E,22,23,44,43   
+   231  E,23,24,45,44   
+   232  E,24,25,46,45   
+   233  E,25,26,47,46   
+   234  E,26,27,48,47   
+   235  E,27,28,49,48   
+   236  E,28,29,50,49   
+   237  E,29,30,51,50   
+   238  E,30,31,52,51   
+   239  E,31,32,53,52   
+   240  E,32,33,54,53   
+   241  E,33,34,55,54   
+   242  E,34,35,56,55   
+   243  E,35,36,57,56   
+   244  E,36,37,58,57   
+   245  E,37,38,59,58   
+   246  E,38,39,60,59   
+   247  E,39,40,61,60   
+   248  E,40,41,62,61   
+   249  E,41,42,63,62   
+   250  E,43,44,65,64   
+   251  E,44,45,66,65   
+   252  E,45,46,67,66   
+   253  E,46,47,68,67   
+   254  E,47,48,69,68   
+   255  E,48,49,70,69   
+   256  E,49,50,71,70   
+   257  E,50,51,72,71   
+   258  E,51,52,73,72   
+   259  E,52,53,74,73   
+   260  E,53,54,75,74   
+   261  E,54,55,76,75   
+   262  E,55,56,77,76   
+   263  E,56,57,78,77   
+   264  E,57,58,79,78   
+   265  E,58,59,80,79   
+   266  E,59,60,81,80   
+   267  E,60,61,82,81   
+   268  E,61,62,83,82   
+   269  E,62,63,84,83   
+   270  E,64,65,86,85   
+   271  E,65,66,87,86   
+   272  E,66,67,88,87   
+   273  E,67,68,89,88   
+   274  E,68,69,90,89   
+   275  E,69,70,91,90   
+   276  E,70,71,92,91   
+   277  E,71,72,93,92   
+   278  E,72,73,94,93   
+   279  E,73,74,95,94   
+   280  E,74,75,96,95   
+   281  E,75,76,97,96   
+   282  E,76,77,98,97   
+   283  E,77,78,99,98   
+   284  E,78,79,100,99  
+   285  E,79,80,101,100 
+   286  E,80,81,102,101 
+   287  E,81,82,103,102 
+   288  E,82,83,104,103 
+   289  E,83,84,105,104 
+   290  E,85,86,107,106 
+   291  E,86,87,108,107 
+   292  E,87,88,109,108 
+   293  E,88,89,110,109 
+   294  E,89,90,111,110 
+   295  E,90,91,112,111 
+   296  E,91,92,113,112 
+   297  E,92,93,114,113 
+   298  E,93,94,115,114 
+   299  E,94,95,116,115 
+   300  E,95,96,117,116 
+   301  E,96,97,118,117 
+   302  E,97,98,119,118 
+   303  E,98,99,120,119 
+   304  E,99,100,121,120
+   305  E,100,101,122,121   
+   306  E,101,102,123,122   
+   307  E,102,103,124,123   
+   308  E,103,104,125,124   
+   309  E,104,105,126,125   
+   310  E,106,107,128,127   
+   311  E,107,108,129,128   
+   312  E,108,109,130,129   
+   313  E,109,110,131,130   
+   314  E,110,111,132,131   
+   315  E,111,112,133,132   
+   316  E,112,113,134,133   
+   317  E,113,114,135,134   
+   318  E,114,115,136,135   
+   319  E,115,116,137,136   
+   320  E,116,117,138,137   
+   321  E,117,118,139,138   
+   322  E,118,119,140,139   
+   323  E,119,120,141,140   
+   324  E,120,121,142,141   
+   325  E,121,122,143,142   
+   326  E,122,123,144,143   
+   327  E,123,124,145,144   
+   328  E,124,125,146,145   
+   329  E,125,126,147,146   
+   330  E,127,128,149,148   
+   331  E,128,129,150,149   
+   332  E,129,130,151,150   
+   333  E,130,131,152,151   
+   334  E,131,132,153,152   
+   335  E,132,133,154,153   
+   336  E,133,134,155,154   
+   337  E,134,135,156,155   
+   338  E,135,136,157,156   
+   339  E,136,137,158,157   
+   340  E,137,138,159,158   
+   341  E,138,139,160,159   
+   342  E,139,140,161,160   
+   343  E,140,141,162,161   
+   344  E,141,142,163,162   
+   345  E,142,143,164,163   
+   346  E,143,144,165,164   
+   347  E,144,145,166,165   
+   348  E,145,146,167,166   
+   349  E,146,147,168,167   
+   350  E,148,149,170,169   
+   351  E,149,150,171,170   
+   352  E,150,151,172,171   
+   353  E,151,152,173,172   
+   354  E,152,153,174,173   
+   355  E,153,154,175,174   
+   356  E,154,155,176,175   
+   357  E,155,156,177,176   
+   358  E,156,157,178,177   
+   359  E,157,158,179,178   
+   360  E,158,159,180,179   
+   361  E,159,160,181,180   
+   362  E,160,161,182,181   
+   363  E,161,162,183,182   
+   364  E,162,163,184,183   
+   365  E,163,164,185,184   
+   366  E,164,165,186,185   
+   367  E,165,166,187,186   
+   368  E,166,167,188,187   
+   369  E,167,168,189,188   
+   370  D,1,UY,0
+   371  D,2,UY,0
+   372  D,3,UY,0
+   373  D,4,UY,0
+   374  D,5,UY,0
+   375  D,6,UY,0
+   376  D,7,UY,0
+   377  D,8,UY,0
+   378  D,9,UY,0
+   379  D,10,UY,0   
+   380  D,11,UY,0   
+   381  D,12,UY,0   
+   382  D,13,UY,0   
+   383  D,14,UY,0   
+   384  D,15,UY,0   
+   385  D,16,UY,0   
+   386  D,17,UY,0   
+   387  D,18,UY,0   
+   388  D,19,UY,0   
+   389  D,20,UY,0   
+   390  D,21,UY,0   
+   391  D,1,UX,0
+   392  N,900001,0,4.02,0   
+   393  N,900002,10,4.02,0  
+   394  D,900001,ALL,0  
+   395  D,900002,ALL,0  
+   396  TYPE,2  
+   397  REAL,3  
+   398  MAT,1   
+   399  E,900001,900002 
+   400  TYPE,3  
+   401  REAL,3  
+   402  MAT,1   
+   403  E,170,169   
+   404  E,171,170   
+   405  E,172,171   
+   406  E,173,172   
+   407  E,174,173   
+   408  E,175,174   
+   409  E,176,175   
+   410  E,177,176   
+   411  E,178,177   
+   412  E,179,178   
+   413  E,180,179   
+   414  E,181,180   
+   415  E,182,181   
+   416  E,183,182   
+   417  E,184,183   
+   418  E,185,184   
+   419  E,186,185   
+   420  E,187,186   
+   421  E,188,187   
+   422  E,189,188   
+   423  ALLSEL,ALL  
+   424  FINISH  
+   425  /SOLU   
+   426  ANTYPE,STATIC   
+   427  NLGEOM,ON   
+   428  AUTOTS,ON   
+   429  KBC,0   
+   430  NROPT,FULL  
+   431  OUTRES,ALL,LAST 
+   432  TREF,20 
+   433  NSEL,S,NODE,,1,189  
+   434  BF,ALL,TEMP,120 
+   435  ALLSEL,ALL  
+   436  TIME,1  
+   437  NSUBST,20,200,5 
+   438  SOLVE   
+   439  FINISH  
+   440  /POST1  
+   441  SET,LAST
+   442  ETABLE,CPRES,CONT,PRES  
+   443  ETABLE,PENE,CONT,PENE   
+   444  ETABLE,CSTAT,CONT,STAT  
+   445  ETABLE,CSFRIC,CONT,SFRIC
+   446  *CFOPEN,contact_values,csv  
+   447  EIDV=162
+   448  XV=0.25 
+   449  *GET,PV,ELEM,162,ETAB,CPRES 
+   450  *GET,PENV,ELEM,162,ETAB,PENE
+   451  *GET,STATV,ELEM,162,ETAB,CSTAT  
+   452  *GET,FRICV,ELEM,162,ETAB,CSFRIC 
+   453  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   454  (6(E24.16,',')) 
+   455  EIDV=163
+   456  XV=0.75 
+   457  *GET,PV,ELEM,163,ETAB,CPRES 
+   458  *GET,PENV,ELEM,163,ETAB,PENE
+   459  *GET,STATV,ELEM,163,ETAB,CSTAT  
+   460  *GET,FRICV,ELEM,163,ETAB,CSFRIC 
+   461  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   462  (6(E24.16,',')) 
+   463  EIDV=164
+   464  XV=1.25 
+   465  *GET,PV,ELEM,164,ETAB,CPRES 
+   466  *GET,PENV,ELEM,164,ETAB,PENE
+   467  *GET,STATV,ELEM,164,ETAB,CSTAT  
+   468  *GET,FRICV,ELEM,164,ETAB,CSFRIC 
+   469  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   470  (6(E24.16,',')) 
+   471  EIDV=165
+   472  XV=1.75 
+   473  *GET,PV,ELEM,165,ETAB,CPRES 
+   474  *GET,PENV,ELEM,165,ETAB,PENE
+   475  *GET,STATV,ELEM,165,ETAB,CSTAT  
+   476  *GET,FRICV,ELEM,165,ETAB,CSFRIC 
+   477  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   478  (6(E24.16,',')) 
+   479  EIDV=166
+   480  XV=2.25 
+   481  *GET,PV,ELEM,166,ETAB,CPRES 
+   482  *GET,PENV,ELEM,166,ETAB,PENE
+   483  *GET,STATV,ELEM,166,ETAB,CSTAT  
+   484  *GET,FRICV,ELEM,166,ETAB,CSFRIC 
+   485  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   486  (6(E24.16,',')) 
+   487  EIDV=167
+   488  XV=2.75 
+   489  *GET,PV,ELEM,167,ETAB,CPRES 
+   490  *GET,PENV,ELEM,167,ETAB,PENE
+   491  *GET,STATV,ELEM,167,ETAB,CSTAT  
+   492  *GET,FRICV,ELEM,167,ETAB,CSFRIC 
+   493  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   494  (6(E24.16,',')) 
+   495  EIDV=168
+   496  XV=3.25 
+   497  *GET,PV,ELEM,168,ETAB,CPRES 
+   498  *GET,PENV,ELEM,168,ETAB,PENE
+   499  *GET,STATV,ELEM,168,ETAB,CSTAT  
+   500  *GET,FRICV,ELEM,168,ETAB,CSFRIC 
+   501  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   502  (6(E24.16,',')) 
+   503  EIDV=169
+   504  XV=3.75 
+   505  *GET,PV,ELEM,169,ETAB,CPRES 
+   506  *GET,PENV,ELEM,169,ETAB,PENE
+   507  *GET,STATV,ELEM,169,ETAB,CSTAT  
+   508  *GET,FRICV,ELEM,169,ETAB,CSFRIC 
+   509  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   510  (6(E24.16,',')) 
+   511  EIDV=170
+   512  XV=4.25 
+   513  *GET,PV,ELEM,170,ETAB,CPRES 
+   514  *GET,PENV,ELEM,170,ETAB,PENE
+   515  *GET,STATV,ELEM,170,ETAB,CSTAT  
+   516  *GET,FRICV,ELEM,170,ETAB,CSFRIC 
+   517  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   518  (6(E24.16,',')) 
+   519  EIDV=171
+   520  XV=4.75 
+   521  *GET,PV,ELEM,171,ETAB,CPRES 
+   522  *GET,PENV,ELEM,171,ETAB,PENE
+   523  *GET,STATV,ELEM,171,ETAB,CSTAT  
+   524  *GET,FRICV,ELEM,171,ETAB,CSFRIC 
+   525  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   526  (6(E24.16,',')) 
+   527  EIDV=172
+   528  XV=5.25 
+   529  *GET,PV,ELEM,172,ETAB,CPRES 
+   530  *GET,PENV,ELEM,172,ETAB,PENE
+   531  *GET,STATV,ELEM,172,ETAB,CSTAT  
+   532  *GET,FRICV,ELEM,172,ETAB,CSFRIC 
+   533  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   534  (6(E24.16,',')) 
+   535  EIDV=173
+   536  XV=5.75 
+   537  *GET,PV,ELEM,173,ETAB,CPRES 
+   538  *GET,PENV,ELEM,173,ETAB,PENE
+   539  *GET,STATV,ELEM,173,ETAB,CSTAT  
+   540  *GET,FRICV,ELEM,173,ETAB,CSFRIC 
+   541  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   542  (6(E24.16,',')) 
+   543  EIDV=174
+   544  XV=6.25 
+   545  *GET,PV,ELEM,174,ETAB,CPRES 
+   546  *GET,PENV,ELEM,174,ETAB,PENE
+   547  *GET,STATV,ELEM,174,ETAB,CSTAT  
+   548  *GET,FRICV,ELEM,174,ETAB,CSFRIC 
+   549  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   550  (6(E24.16,',')) 
+   551  EIDV=175
+   552  XV=6.75 
+   553  *GET,PV,ELEM,175,ETAB,CPRES 
+   554  *GET,PENV,ELEM,175,ETAB,PENE
+   555  *GET,STATV,ELEM,175,ETAB,CSTAT  
+   556  *GET,FRICV,ELEM,175,ETAB,CSFRIC 
+   557  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   558  (6(E24.16,',')) 
+   559  EIDV=176
+   560  XV=7.25 
+   561  *GET,PV,ELEM,176,ETAB,CPRES 
+   562  *GET,PENV,ELEM,176,ETAB,PENE
+   563  *GET,STATV,ELEM,176,ETAB,CSTAT  
+   564  *GET,FRICV,ELEM,176,ETAB,CSFRIC 
+   565  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   566  (6(E24.16,',')) 
+   567  EIDV=177
+   568  XV=7.75 
+   569  *GET,PV,ELEM,177,ETAB,CPRES 
+   570  *GET,PENV,ELEM,177,ETAB,PENE
+   571  *GET,STATV,ELEM,177,ETAB,CSTAT  
+   572  *GET,FRICV,ELEM,177,ETAB,CSFRIC 
+   573  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   574  (6(E24.16,',')) 
+   575  EIDV=178
+   576  XV=8.25 
+   577  *GET,PV,ELEM,178,ETAB,CPRES 
+   578  *GET,PENV,ELEM,178,ETAB,PENE
+   579  *GET,STATV,ELEM,178,ETAB,CSTAT  
+   580  *GET,FRICV,ELEM,178,ETAB,CSFRIC 
+   581  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   582  (6(E24.16,',')) 
+   583  EIDV=179
+   584  XV=8.75 
+   585  *GET,PV,ELEM,179,ETAB,CPRES 
+   586  *GET,PENV,ELEM,179,ETAB,PENE
+   587  *GET,STATV,ELEM,179,ETAB,CSTAT  
+   588  *GET,FRICV,ELEM,179,ETAB,CSFRIC 
+   589  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   590  (6(E24.16,',')) 
+   591  EIDV=180
+   592  XV=9.25 
+   593  *GET,PV,ELEM,180,ETAB,CPRES 
+   594  *GET,PENV,ELEM,180,ETAB,PENE
+   595  *GET,STATV,ELEM,180,ETAB,CSTAT  
+   596  *GET,FRICV,ELEM,180,ETAB,CSFRIC 
+   597  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   598  (6(E24.16,',')) 
+   599  EIDV=181
+   600  XV=9.75 
+   601  *GET,PV,ELEM,181,ETAB,CPRES 
+   602  *GET,PENV,ELEM,181,ETAB,PENE
+   603  *GET,STATV,ELEM,181,ETAB,CSTAT  
+   604  *GET,FRICV,ELEM,181,ETAB,CSFRIC 
+   605  *VWRITE,EIDV,XV,PV,PENV,STATV,FRICV 
+   606  (6(E24.16,',')) 
+   607  *CFCLOS 
+   608  *CFOPEN,reaction,csv
+   609  RFY=0   
+   610  *GET,RV,NODE,1,RF,FY
+   611  RFY=RFY+RV  
+   612  *GET,RV,NODE,2,RF,FY
+   613  RFY=RFY+RV  
+   614  *GET,RV,NODE,3,RF,FY
+   615  RFY=RFY+RV  
+   616  *GET,RV,NODE,4,RF,FY
+   617  RFY=RFY+RV  
+   618  *GET,RV,NODE,5,RF,FY
+   619  RFY=RFY+RV  
+   620  *GET,RV,NODE,6,RF,FY
+   621  RFY=RFY+RV  
+   622  *GET,RV,NODE,7,RF,FY
+   623  RFY=RFY+RV  
+   624  *GET,RV,NODE,8,RF,FY
+   625  RFY=RFY+RV  
+   626  *GET,RV,NODE,9,RF,FY
+   627  RFY=RFY+RV  
+   628  *GET,RV,NODE,10,RF,FY   
+   629  RFY=RFY+RV  
+   630  *GET,RV,NODE,11,RF,FY   
+   631  RFY=RFY+RV  
+   632  *GET,RV,NODE,12,RF,FY   
+   633  RFY=RFY+RV  
+   634  *GET,RV,NODE,13,RF,FY   
+   635  RFY=RFY+RV  
+   636  *GET,RV,NODE,14,RF,FY   
+   637  RFY=RFY+RV  
+   638  *GET,RV,NODE,15,RF,FY   
+   639  RFY=RFY+RV  
+   640  *GET,RV,NODE,16,RF,FY   
+   641  RFY=RFY+RV  
+   642  *GET,RV,NODE,17,RF,FY   
+   643  RFY=RFY+RV  
+   644  *GET,RV,NODE,18,RF,FY   
+   645  RFY=RFY+RV  
+   646  *GET,RV,NODE,19,RF,FY   
+   647  RFY=RFY+RV  
+   648  *GET,RV,NODE,20,RF,FY   
+   649  RFY=RFY+RV  
+   650  *GET,RV,NODE,21,RF,FY   
+   651  RFY=RFY+RV  
+   652  *VWRITE,RFY 
+   653  (E24.16)
+   654  *CFCLOS 
+   655  FINISH  
+   656  /EXIT,NOSAVE
+
+ RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v261\Ansys\apdl\start.ans
+
+ /INPUT FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v261\Ansys\apdl\start.ans  LINE=       0
+
+ CURRENT JOBNAME REDEFINED AS stage10_contact
+
+ TITLE= 
+ Stage 10 contact-control verification                                         
+
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   21:06:13  SEP 14, 2026 Elapsed Time=      6.170
+
+ Stage 10 contact-control verification                                         
+
+
+
+          ***** MAPDL ANALYSIS DEFINITION (PREP7) *****
+
+ ELEMENT TYPE          1 IS PLANE182     2-D 4-NODE PLANE STRS SOLID 
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ ELEMENT TYPE       1 IS PLANE182     2-D 4-NODE PLANE STRN SOLID 
+  KEYOPT( 1- 6)=        0      0      2        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ ELEMENT TYPE          2 IS TARGE169     2-D TARGET SEGMENT          
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ ELEMENT TYPE          3 IS CONTA172     2D 3-NODE SURF-SURF CONTACT 
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ ELEMENT TYPE       3 IS CONTA172     2D 3-NODE SURF-SURF CONTACT 
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ ELEMENT TYPE       3 IS CONTA172     2D 3-NODE SURF-SURF CONTACT 
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ ELEMENT TYPE       3 IS CONTA172     2D 3-NODE SURF-SURF CONTACT 
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        2      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ REAL CONSTANT SET          1  ITEMS   1 TO   6
+    1.0000       0.0000       0.0000       0.0000       0.0000       0.0000    
+
+ REAL CONSTANT SET          3  ITEMS   1 TO   6
+    1.0000      0.10000       0.0000       2.0000       0.0000       0.0000    
+
+ MATERIAL          1     EX   =   2000.000      
+
+ MATERIAL          1     PRXY =  0.3000000      
+
+ MATERIAL          1     ALPX =  0.1000000E-03  
+
+ MATERIAL          1     MU   =   0.000000      
+
+ ELEMENT TYPE SET TO         1
+
+ REAL CONSTANT NUMBER=        1
+
+ MATERIAL NUMBER SET TO         1
+
+ NODE          1  KCS=      0  X,Y,Z=  0.0000       0.0000       0.0000     
+
+ NODE          2  KCS=      0  X,Y,Z= 0.50000       0.0000       0.0000     
+
+ NODE          3  KCS=      0  X,Y,Z=  1.0000       0.0000       0.0000     
+
+ NODE          4  KCS=      0  X,Y,Z=  1.5000       0.0000       0.0000     
+
+ NODE          5  KCS=      0  X,Y,Z=  2.0000       0.0000       0.0000     
+
+ NODE          6  KCS=      0  X,Y,Z=  2.5000       0.0000       0.0000     
+
+ NODE          7  KCS=      0  X,Y,Z=  3.0000       0.0000       0.0000     
+
+ NODE          8  KCS=      0  X,Y,Z=  3.5000       0.0000       0.0000     
+
+ NODE          9  KCS=      0  X,Y,Z=  4.0000       0.0000       0.0000     
+
+ NODE         10  KCS=      0  X,Y,Z=  4.5000       0.0000       0.0000     
+
+ NODE         11  KCS=      0  X,Y,Z=  5.0000       0.0000       0.0000     
+
+ NODE         12  KCS=      0  X,Y,Z=  5.5000       0.0000       0.0000     
+
+ NODE         13  KCS=      0  X,Y,Z=  6.0000       0.0000       0.0000     
+
+ NODE         14  KCS=      0  X,Y,Z=  6.5000       0.0000       0.0000     
+
+ NODE         15  KCS=      0  X,Y,Z=  7.0000       0.0000       0.0000     
+
+ NODE         16  KCS=      0  X,Y,Z=  7.5000       0.0000       0.0000     
+
+ NODE         17  KCS=      0  X,Y,Z=  8.0000       0.0000       0.0000     
+
+ NODE         18  KCS=      0  X,Y,Z=  8.5000       0.0000       0.0000     
+
+ NODE         19  KCS=      0  X,Y,Z=  9.0000       0.0000       0.0000     
+
+ NODE         20  KCS=      0  X,Y,Z=  9.5000       0.0000       0.0000     
+
+ NODE         21  KCS=      0  X,Y,Z=  10.000       0.0000       0.0000     
+
+ NODE         22  KCS=      0  X,Y,Z=  0.0000      0.50000       0.0000     
+
+ NODE         23  KCS=      0  X,Y,Z= 0.50000      0.50000       0.0000     
+
+ NODE         24  KCS=      0  X,Y,Z=  1.0000      0.50000       0.0000     
+
+ NODE         25  KCS=      0  X,Y,Z=  1.5000      0.50000       0.0000     
+
+ NODE         26  KCS=      0  X,Y,Z=  2.0000      0.50000       0.0000     
+
+ NODE         27  KCS=      0  X,Y,Z=  2.5000      0.50000       0.0000     
+
+ NODE         28  KCS=      0  X,Y,Z=  3.0000      0.50000       0.0000     
+
+ NODE         29  KCS=      0  X,Y,Z=  3.5000      0.50000       0.0000     
+
+ NODE         30  KCS=      0  X,Y,Z=  4.0000      0.50000       0.0000     
+
+ NODE         31  KCS=      0  X,Y,Z=  4.5000      0.50000       0.0000     
+
+ NODE         32  KCS=      0  X,Y,Z=  5.0000      0.50000       0.0000     
+
+ NODE         33  KCS=      0  X,Y,Z=  5.5000      0.50000       0.0000     
+
+ NODE         34  KCS=      0  X,Y,Z=  6.0000      0.50000       0.0000     
+
+ NODE         35  KCS=      0  X,Y,Z=  6.5000      0.50000       0.0000     
+
+ NODE         36  KCS=      0  X,Y,Z=  7.0000      0.50000       0.0000     
+
+ NODE         37  KCS=      0  X,Y,Z=  7.5000      0.50000       0.0000     
+
+ NODE         38  KCS=      0  X,Y,Z=  8.0000      0.50000       0.0000     
+
+ NODE         39  KCS=      0  X,Y,Z=  8.5000      0.50000       0.0000     
+
+ NODE         40  KCS=      0  X,Y,Z=  9.0000      0.50000       0.0000     
+
+ NODE         41  KCS=      0  X,Y,Z=  9.5000      0.50000       0.0000     
+
+ NODE         42  KCS=      0  X,Y,Z=  10.000      0.50000       0.0000     
+
+ NODE         43  KCS=      0  X,Y,Z=  0.0000       1.0000       0.0000     
+
+ NODE         44  KCS=      0  X,Y,Z= 0.50000       1.0000       0.0000     
+
+ NODE         45  KCS=      0  X,Y,Z=  1.0000       1.0000       0.0000     
+
+ NODE         46  KCS=      0  X,Y,Z=  1.5000       1.0000       0.0000     
+
+ NODE         47  KCS=      0  X,Y,Z=  2.0000       1.0000       0.0000     
+
+ NODE         48  KCS=      0  X,Y,Z=  2.5000       1.0000       0.0000     
+
+ NODE         49  KCS=      0  X,Y,Z=  3.0000       1.0000       0.0000     
+
+ NODE         50  KCS=      0  X,Y,Z=  3.5000       1.0000       0.0000     
+
+ NODE         51  KCS=      0  X,Y,Z=  4.0000       1.0000       0.0000     
+
+ NODE         52  KCS=      0  X,Y,Z=  4.5000       1.0000       0.0000     
+
+ NODE         53  KCS=      0  X,Y,Z=  5.0000       1.0000       0.0000     
+
+ NODE         54  KCS=      0  X,Y,Z=  5.5000       1.0000       0.0000     
+
+ NODE         55  KCS=      0  X,Y,Z=  6.0000       1.0000       0.0000     
+
+ NODE         56  KCS=      0  X,Y,Z=  6.5000       1.0000       0.0000     
+
+ NODE         57  KCS=      0  X,Y,Z=  7.0000       1.0000       0.0000     
+
+ NODE         58  KCS=      0  X,Y,Z=  7.5000       1.0000       0.0000     
+
+ NODE         59  KCS=      0  X,Y,Z=  8.0000       1.0000       0.0000     
+
+ NODE         60  KCS=      0  X,Y,Z=  8.5000       1.0000       0.0000     
+
+ NODE         61  KCS=      0  X,Y,Z=  9.0000       1.0000       0.0000     
+
+ NODE         62  KCS=      0  X,Y,Z=  9.5000       1.0000       0.0000     
+
+ NODE         63  KCS=      0  X,Y,Z=  10.000       1.0000       0.0000     
+
+ NODE         64  KCS=      0  X,Y,Z=  0.0000       1.5000       0.0000     
+
+ NODE         65  KCS=      0  X,Y,Z= 0.50000       1.5000       0.0000     
+
+ NODE         66  KCS=      0  X,Y,Z=  1.0000       1.5000       0.0000     
+
+ NODE         67  KCS=      0  X,Y,Z=  1.5000       1.5000       0.0000     
+
+ NODE         68  KCS=      0  X,Y,Z=  2.0000       1.5000       0.0000     
+
+ NODE         69  KCS=      0  X,Y,Z=  2.5000       1.5000       0.0000     
+
+ NODE         70  KCS=      0  X,Y,Z=  3.0000       1.5000       0.0000     
+
+ NODE         71  KCS=      0  X,Y,Z=  3.5000       1.5000       0.0000     
+
+ NODE         72  KCS=      0  X,Y,Z=  4.0000       1.5000       0.0000     
+
+ NODE         73  KCS=      0  X,Y,Z=  4.5000       1.5000       0.0000     
+
+ NODE         74  KCS=      0  X,Y,Z=  5.0000       1.5000       0.0000     
+
+ NODE         75  KCS=      0  X,Y,Z=  5.5000       1.5000       0.0000     
+
+ NODE         76  KCS=      0  X,Y,Z=  6.0000       1.5000       0.0000     
+
+ NODE         77  KCS=      0  X,Y,Z=  6.5000       1.5000       0.0000     
+
+ NODE         78  KCS=      0  X,Y,Z=  7.0000       1.5000       0.0000     
+
+ NODE         79  KCS=      0  X,Y,Z=  7.5000       1.5000       0.0000     
+
+ NODE         80  KCS=      0  X,Y,Z=  8.0000       1.5000       0.0000     
+
+ NODE         81  KCS=      0  X,Y,Z=  8.5000       1.5000       0.0000     
+
+ NODE         82  KCS=      0  X,Y,Z=  9.0000       1.5000       0.0000     
+
+ NODE         83  KCS=      0  X,Y,Z=  9.5000       1.5000       0.0000     
+
+ NODE         84  KCS=      0  X,Y,Z=  10.000       1.5000       0.0000     
+
+ NODE         85  KCS=      0  X,Y,Z=  0.0000       2.0000       0.0000     
+
+ NODE         86  KCS=      0  X,Y,Z= 0.50000       2.0000       0.0000     
+
+ NODE         87  KCS=      0  X,Y,Z=  1.0000       2.0000       0.0000     
+
+ NODE         88  KCS=      0  X,Y,Z=  1.5000       2.0000       0.0000     
+
+ NODE         89  KCS=      0  X,Y,Z=  2.0000       2.0000       0.0000     
+
+ NODE         90  KCS=      0  X,Y,Z=  2.5000       2.0000       0.0000     
+
+ NODE         91  KCS=      0  X,Y,Z=  3.0000       2.0000       0.0000     
+
+ NODE         92  KCS=      0  X,Y,Z=  3.5000       2.0000       0.0000     
+
+ NODE         93  KCS=      0  X,Y,Z=  4.0000       2.0000       0.0000     
+
+ NODE         94  KCS=      0  X,Y,Z=  4.5000       2.0000       0.0000     
+
+ NODE         95  KCS=      0  X,Y,Z=  5.0000       2.0000       0.0000     
+
+ NODE         96  KCS=      0  X,Y,Z=  5.5000       2.0000       0.0000     
+
+ NODE         97  KCS=      0  X,Y,Z=  6.0000       2.0000       0.0000     
+
+ NODE         98  KCS=      0  X,Y,Z=  6.5000       2.0000       0.0000     
+
+ NODE         99  KCS=      0  X,Y,Z=  7.0000       2.0000       0.0000     
+
+ NODE        100  KCS=      0  X,Y,Z=  7.5000       2.0000       0.0000     
+
+ NODE        101  KCS=      0  X,Y,Z=  8.0000       2.0000       0.0000     
+
+ NODE        102  KCS=      0  X,Y,Z=  8.5000       2.0000       0.0000     
+
+ NODE        103  KCS=      0  X,Y,Z=  9.0000       2.0000       0.0000     
+
+ NODE        104  KCS=      0  X,Y,Z=  9.5000       2.0000       0.0000     
+
+ NODE        105  KCS=      0  X,Y,Z=  10.000       2.0000       0.0000     
+
+ NODE        106  KCS=      0  X,Y,Z=  0.0000       2.5000       0.0000     
+
+ NODE        107  KCS=      0  X,Y,Z= 0.50000       2.5000       0.0000     
+
+ NODE        108  KCS=      0  X,Y,Z=  1.0000       2.5000       0.0000     
+
+ NODE        109  KCS=      0  X,Y,Z=  1.5000       2.5000       0.0000     
+
+ NODE        110  KCS=      0  X,Y,Z=  2.0000       2.5000       0.0000     
+
+ NODE        111  KCS=      0  X,Y,Z=  2.5000       2.5000       0.0000     
+
+ NODE        112  KCS=      0  X,Y,Z=  3.0000       2.5000       0.0000     
+
+ NODE        113  KCS=      0  X,Y,Z=  3.5000       2.5000       0.0000     
+
+ NODE        114  KCS=      0  X,Y,Z=  4.0000       2.5000       0.0000     
+
+ NODE        115  KCS=      0  X,Y,Z=  4.5000       2.5000       0.0000     
+
+ NODE        116  KCS=      0  X,Y,Z=  5.0000       2.5000       0.0000     
+
+ NODE        117  KCS=      0  X,Y,Z=  5.5000       2.5000       0.0000     
+
+ NODE        118  KCS=      0  X,Y,Z=  6.0000       2.5000       0.0000     
+
+ NODE        119  KCS=      0  X,Y,Z=  6.5000       2.5000       0.0000     
+
+ NODE        120  KCS=      0  X,Y,Z=  7.0000       2.5000       0.0000     
+
+ NODE        121  KCS=      0  X,Y,Z=  7.5000       2.5000       0.0000     
+
+ NODE        122  KCS=      0  X,Y,Z=  8.0000       2.5000       0.0000     
+
+ NODE        123  KCS=      0  X,Y,Z=  8.5000       2.5000       0.0000     
+
+ NODE        124  KCS=      0  X,Y,Z=  9.0000       2.5000       0.0000     
+
+ NODE        125  KCS=      0  X,Y,Z=  9.5000       2.5000       0.0000     
+
+ NODE        126  KCS=      0  X,Y,Z=  10.000       2.5000       0.0000     
+
+ NODE        127  KCS=      0  X,Y,Z=  0.0000       3.0000       0.0000     
+
+ NODE        128  KCS=      0  X,Y,Z= 0.50000       3.0000       0.0000     
+
+ NODE        129  KCS=      0  X,Y,Z=  1.0000       3.0000       0.0000     
+
+ NODE        130  KCS=      0  X,Y,Z=  1.5000       3.0000       0.0000     
+
+ NODE        131  KCS=      0  X,Y,Z=  2.0000       3.0000       0.0000     
+
+ NODE        132  KCS=      0  X,Y,Z=  2.5000       3.0000       0.0000     
+
+ NODE        133  KCS=      0  X,Y,Z=  3.0000       3.0000       0.0000     
+
+ NODE        134  KCS=      0  X,Y,Z=  3.5000       3.0000       0.0000     
+
+ NODE        135  KCS=      0  X,Y,Z=  4.0000       3.0000       0.0000     
+
+ NODE        136  KCS=      0  X,Y,Z=  4.5000       3.0000       0.0000     
+
+ NODE        137  KCS=      0  X,Y,Z=  5.0000       3.0000       0.0000     
+
+ NODE        138  KCS=      0  X,Y,Z=  5.5000       3.0000       0.0000     
+
+ NODE        139  KCS=      0  X,Y,Z=  6.0000       3.0000       0.0000     
+
+ NODE        140  KCS=      0  X,Y,Z=  6.5000       3.0000       0.0000     
+
+ NODE        141  KCS=      0  X,Y,Z=  7.0000       3.0000       0.0000     
+
+ NODE        142  KCS=      0  X,Y,Z=  7.5000       3.0000       0.0000     
+
+ NODE        143  KCS=      0  X,Y,Z=  8.0000       3.0000       0.0000     
+
+ NODE        144  KCS=      0  X,Y,Z=  8.5000       3.0000       0.0000     
+
+ NODE        145  KCS=      0  X,Y,Z=  9.0000       3.0000       0.0000     
+
+ NODE        146  KCS=      0  X,Y,Z=  9.5000       3.0000       0.0000     
+
+ NODE        147  KCS=      0  X,Y,Z=  10.000       3.0000       0.0000     
+
+ NODE        148  KCS=      0  X,Y,Z=  0.0000       3.5000       0.0000     
+
+ NODE        149  KCS=      0  X,Y,Z= 0.50000       3.5000       0.0000     
+
+ NODE        150  KCS=      0  X,Y,Z=  1.0000       3.5000       0.0000     
+
+ NODE        151  KCS=      0  X,Y,Z=  1.5000       3.5000       0.0000     
+
+ NODE        152  KCS=      0  X,Y,Z=  2.0000       3.5000       0.0000     
+
+ NODE        153  KCS=      0  X,Y,Z=  2.5000       3.5000       0.0000     
+
+ NODE        154  KCS=      0  X,Y,Z=  3.0000       3.5000       0.0000     
+
+ NODE        155  KCS=      0  X,Y,Z=  3.5000       3.5000       0.0000     
+
+ NODE        156  KCS=      0  X,Y,Z=  4.0000       3.5000       0.0000     
+
+ NODE        157  KCS=      0  X,Y,Z=  4.5000       3.5000       0.0000     
+
+ NODE        158  KCS=      0  X,Y,Z=  5.0000       3.5000       0.0000     
+
+ NODE        159  KCS=      0  X,Y,Z=  5.5000       3.5000       0.0000     
+
+ NODE        160  KCS=      0  X,Y,Z=  6.0000       3.5000       0.0000     
+
+ NODE        161  KCS=      0  X,Y,Z=  6.5000       3.5000       0.0000     
+
+ NODE        162  KCS=      0  X,Y,Z=  7.0000       3.5000       0.0000     
+
+ NODE        163  KCS=      0  X,Y,Z=  7.5000       3.5000       0.0000     
+
+ NODE        164  KCS=      0  X,Y,Z=  8.0000       3.5000       0.0000     
+
+ NODE        165  KCS=      0  X,Y,Z=  8.5000       3.5000       0.0000     
+
+ NODE        166  KCS=      0  X,Y,Z=  9.0000       3.5000       0.0000     
+
+ NODE        167  KCS=      0  X,Y,Z=  9.5000       3.5000       0.0000     
+
+ NODE        168  KCS=      0  X,Y,Z=  10.000       3.5000       0.0000     
+
+ NODE        169  KCS=      0  X,Y,Z=  0.0000       4.0000       0.0000     
+
+ NODE        170  KCS=      0  X,Y,Z= 0.50000       4.0000       0.0000     
+
+ NODE        171  KCS=      0  X,Y,Z=  1.0000       4.0000       0.0000     
+
+ NODE        172  KCS=      0  X,Y,Z=  1.5000       4.0000       0.0000     
+
+ NODE        173  KCS=      0  X,Y,Z=  2.0000       4.0000       0.0000     
+
+ NODE        174  KCS=      0  X,Y,Z=  2.5000       4.0000       0.0000     
+
+ NODE        175  KCS=      0  X,Y,Z=  3.0000       4.0000       0.0000     
+
+ NODE        176  KCS=      0  X,Y,Z=  3.5000       4.0000       0.0000     
+
+ NODE        177  KCS=      0  X,Y,Z=  4.0000       4.0000       0.0000     
+
+ NODE        178  KCS=      0  X,Y,Z=  4.5000       4.0000       0.0000     
+
+ NODE        179  KCS=      0  X,Y,Z=  5.0000       4.0000       0.0000     
+
+ NODE        180  KCS=      0  X,Y,Z=  5.5000       4.0000       0.0000     
+
+ NODE        181  KCS=      0  X,Y,Z=  6.0000       4.0000       0.0000     
+
+ NODE        182  KCS=      0  X,Y,Z=  6.5000       4.0000       0.0000     
+
+ NODE        183  KCS=      0  X,Y,Z=  7.0000       4.0000       0.0000     
+
+ NODE        184  KCS=      0  X,Y,Z=  7.5000       4.0000       0.0000     
+
+ NODE        185  KCS=      0  X,Y,Z=  8.0000       4.0000       0.0000     
+
+ NODE        186  KCS=      0  X,Y,Z=  8.5000       4.0000       0.0000     
+
+ NODE        187  KCS=      0  X,Y,Z=  9.0000       4.0000       0.0000     
+
+ NODE        188  KCS=      0  X,Y,Z=  9.5000       4.0000       0.0000     
+
+ NODE        189  KCS=      0  X,Y,Z=  10.000       4.0000       0.0000     
+
+ ELEMENT      1       1      2     23     22
+
+ ELEMENT      2       2      3     24     23
+
+ ELEMENT      3       3      4     25     24
+
+ ELEMENT      4       4      5     26     25
+
+ ELEMENT      5       5      6     27     26
+
+ ELEMENT      6       6      7     28     27
+
+ ELEMENT      7       7      8     29     28
+
+ ELEMENT      8       8      9     30     29
+
+ ELEMENT      9       9     10     31     30
+
+ ELEMENT     10      10     11     32     31
+
+ ELEMENT     11      11     12     33     32
+
+ ELEMENT     12      12     13     34     33
+
+ ELEMENT     13      13     14     35     34
+
+ ELEMENT     14      14     15     36     35
+
+ ELEMENT     15      15     16     37     36
+
+ ELEMENT     16      16     17     38     37
+
+ ELEMENT     17      17     18     39     38
+
+ ELEMENT     18      18     19     40     39
+
+ ELEMENT     19      19     20     41     40
+
+ ELEMENT     20      20     21     42     41
+
+ ELEMENT     21      22     23     44     43
+
+ ELEMENT     22      23     24     45     44
+
+ ELEMENT     23      24     25     46     45
+
+ ELEMENT     24      25     26     47     46
+
+ ELEMENT     25      26     27     48     47
+
+ ELEMENT     26      27     28     49     48
+
+ ELEMENT     27      28     29     50     49
+
+ ELEMENT     28      29     30     51     50
+
+ ELEMENT     29      30     31     52     51
+
+ ELEMENT     30      31     32     53     52
+
+ ELEMENT     31      32     33     54     53
+
+ ELEMENT     32      33     34     55     54
+
+ ELEMENT     33      34     35     56     55
+
+ ELEMENT     34      35     36     57     56
+
+ ELEMENT     35      36     37     58     57
+
+ ELEMENT     36      37     38     59     58
+
+ ELEMENT     37      38     39     60     59
+
+ ELEMENT     38      39     40     61     60
+
+ ELEMENT     39      40     41     62     61
+
+ ELEMENT     40      41     42     63     62
+
+ ELEMENT     41      43     44     65     64
+
+ ELEMENT     42      44     45     66     65
+
+ ELEMENT     43      45     46     67     66
+
+ ELEMENT     44      46     47     68     67
+
+ ELEMENT     45      47     48     69     68
+
+ ELEMENT     46      48     49     70     69
+
+ ELEMENT     47      49     50     71     70
+
+ ELEMENT     48      50     51     72     71
+
+ ELEMENT     49      51     52     73     72
+
+ ELEMENT     50      52     53     74     73
+
+ ELEMENT     51      53     54     75     74
+
+ ELEMENT     52      54     55     76     75
+
+ ELEMENT     53      55     56     77     76
+
+ ELEMENT     54      56     57     78     77
+
+ ELEMENT     55      57     58     79     78
+
+ ELEMENT     56      58     59     80     79
+
+ ELEMENT     57      59     60     81     80
+
+ ELEMENT     58      60     61     82     81
+
+ ELEMENT     59      61     62     83     82
+
+ ELEMENT     60      62     63     84     83
+
+ ELEMENT     61      64     65     86     85
+
+ ELEMENT     62      65     66     87     86
+
+ ELEMENT     63      66     67     88     87
+
+ ELEMENT     64      67     68     89     88
+
+ ELEMENT     65      68     69     90     89
+
+ ELEMENT     66      69     70     91     90
+
+ ELEMENT     67      70     71     92     91
+
+ ELEMENT     68      71     72     93     92
+
+ ELEMENT     69      72     73     94     93
+
+ ELEMENT     70      73     74     95     94
+
+ ELEMENT     71      74     75     96     95
+
+ ELEMENT     72      75     76     97     96
+
+ ELEMENT     73      76     77     98     97
+
+ ELEMENT     74      77     78     99     98
+
+ ELEMENT     75      78     79    100     99
+
+ ELEMENT     76      79     80    101    100
+
+ ELEMENT     77      80     81    102    101
+
+ ELEMENT     78      81     82    103    102
+
+ ELEMENT     79      82     83    104    103
+
+ ELEMENT     80      83     84    105    104
+
+ ELEMENT     81      85     86    107    106
+
+ ELEMENT     82      86     87    108    107
+
+ ELEMENT     83      87     88    109    108
+
+ ELEMENT     84      88     89    110    109
+
+ ELEMENT     85      89     90    111    110
+
+ ELEMENT     86      90     91    112    111
+
+ ELEMENT     87      91     92    113    112
+
+ ELEMENT     88      92     93    114    113
+
+ ELEMENT     89      93     94    115    114
+
+ ELEMENT     90      94     95    116    115
+
+ ELEMENT     91      95     96    117    116
+
+ ELEMENT     92      96     97    118    117
+
+ ELEMENT     93      97     98    119    118
+
+ ELEMENT     94      98     99    120    119
+
+ ELEMENT     95      99    100    121    120
+
+ ELEMENT     96     100    101    122    121
+
+ ELEMENT     97     101    102    123    122
+
+ ELEMENT     98     102    103    124    123
+
+ ELEMENT     99     103    104    125    124
+
+ ELEMENT    100     104    105    126    125
+
+ ELEMENT    101     106    107    128    127
+
+ ELEMENT    102     107    108    129    128
+
+ ELEMENT    103     108    109    130    129
+
+ ELEMENT    104     109    110    131    130
+
+ ELEMENT    105     110    111    132    131
+
+ ELEMENT    106     111    112    133    132
+
+ ELEMENT    107     112    113    134    133
+
+ ELEMENT    108     113    114    135    134
+
+ ELEMENT    109     114    115    136    135
+
+ ELEMENT    110     115    116    137    136
+
+ ELEMENT    111     116    117    138    137
+
+ ELEMENT    112     117    118    139    138
+
+ ELEMENT    113     118    119    140    139
+
+ ELEMENT    114     119    120    141    140
+
+ ELEMENT    115     120    121    142    141
+
+ ELEMENT    116     121    122    143    142
+
+ ELEMENT    117     122    123    144    143
+
+ ELEMENT    118     123    124    145    144
+
+ ELEMENT    119     124    125    146    145
+
+ ELEMENT    120     125    126    147    146
+
+ ELEMENT    121     127    128    149    148
+
+ ELEMENT    122     128    129    150    149
+
+ ELEMENT    123     129    130    151    150
+
+ ELEMENT    124     130    131    152    151
+
+ ELEMENT    125     131    132    153    152
+
+ ELEMENT    126     132    133    154    153
+
+ ELEMENT    127     133    134    155    154
+
+ ELEMENT    128     134    135    156    155
+
+ ELEMENT    129     135    136    157    156
+
+ ELEMENT    130     136    137    158    157
+
+ ELEMENT    131     137    138    159    158
+
+ ELEMENT    132     138    139    160    159
+
+ ELEMENT    133     139    140    161    160
+
+ ELEMENT    134     140    141    162    161
+
+ ELEMENT    135     141    142    163    162
+
+ ELEMENT    136     142    143    164    163
+
+ ELEMENT    137     143    144    165    164
+
+ ELEMENT    138     144    145    166    165
+
+ ELEMENT    139     145    146    167    166
+
+ ELEMENT    140     146    147    168    167
+
+ ELEMENT    141     148    149    170    169
+
+ ELEMENT    142     149    150    171    170
+
+ ELEMENT    143     150    151    172    171
+
+ ELEMENT    144     151    152    173    172
+
+ ELEMENT    145     152    153    174    173
+
+ ELEMENT    146     153    154    175    174
+
+ ELEMENT    147     154    155    176    175
+
+ ELEMENT    148     155    156    177    176
+
+ ELEMENT    149     156    157    178    177
+
+ ELEMENT    150     157    158    179    178
+
+ ELEMENT    151     158    159    180    179
+
+ ELEMENT    152     159    160    181    180
+
+ ELEMENT    153     160    161    182    181
+
+ ELEMENT    154     161    162    183    182
+
+ ELEMENT    155     162    163    184    183
+
+ ELEMENT    156     163    164    185    184
+
+ ELEMENT    157     164    165    186    185
+
+ ELEMENT    158     165    166    187    186
+
+ ELEMENT    159     166    167    188    187
+
+ ELEMENT    160     167    168    189    188
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            1 TO           1 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            2 TO           2 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            3 TO           3 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            4 TO           4 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            5 TO           5 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            6 TO           6 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            7 TO           7 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            8 TO           8 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            9 TO           9 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES           10 TO          10 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES           11 TO          11 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES           12 TO          12 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES           13 TO          13 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES           14 TO          14 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES           15 TO          15 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES           16 TO          16 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES           17 TO          17 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES           18 TO          18 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES           19 TO          19 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES           20 TO          20 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES           21 TO          21 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES            1 TO           1 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ NODE     900001  KCS=      0  X,Y,Z=  0.0000       4.0200       0.0000     
+
+ NODE     900002  KCS=      0  X,Y,Z=  10.000       4.0200       0.0000     
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       900001 TO      900001 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+ ADDITIONAL DOFS=  UY  
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES       900002 TO      900002 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+ ADDITIONAL DOFS=  UY  
+
+ ELEMENT TYPE SET TO         2
+
+ REAL CONSTANT NUMBER=        3
+
+ MATERIAL NUMBER SET TO         1
+
+ ELEMENT    161  900001 900002      0
+
+ ELEMENT TYPE SET TO         3
+
+ REAL CONSTANT NUMBER=        3
+
+ MATERIAL NUMBER SET TO         1
+
+ ELEMENT    162     170    169      0
+
+ ELEMENT    163     171    170      0
+
+ ELEMENT    164     172    171      0
+
+ ELEMENT    165     173    172      0
+
+ ELEMENT    166     174    173      0
+
+ ELEMENT    167     175    174      0
+
+ ELEMENT    168     176    175      0
+
+ ELEMENT    169     177    176      0
+
+ ELEMENT    170     178    177      0
+
+ ELEMENT    171     179    178      0
+
+ ELEMENT    172     180    179      0
+
+ ELEMENT    173     181    180      0
+
+ ELEMENT    174     182    181      0
+
+ ELEMENT    175     183    182      0
+
+ ELEMENT    176     184    183      0
+
+ ELEMENT    177     185    184      0
+
+ ELEMENT    178     186    185      0
+
+ ELEMENT    179     187    186      0
+
+ ELEMENT    180     188    187      0
+
+ ELEMENT    181     189    188      0
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+
+ ***** ROUTINE COMPLETED *****  ELAPSED TIME =         6.197
+
+
+
+ *****  MAPDL SOLUTION ROUTINE  *****
+
+
+ PERFORM A STATIC ANALYSIS
+  THIS WILL BE A NEW ANALYSIS
+
+ LARGE DEFORMATION ANALYSIS
+
+ USE AUTOMATIC TIME STEPPING THIS LOAD STEP
+
+ STEP BOUNDARY CONDITION KEY= 0
+
+ USE THE FULL NEWTON-RAPHSON OPTION FOR  ALL DEGREES OF FREEDOM
+   AND USE THE DEFAULT ADAPTIVE DESCENT OPTION
+
+ WRITE ALL  ITEMS TO THE DATABASE WITH A FREQUENCY OF LAST
+   FOR ALL APPLICABLE ENTITIES
+
+ REFERENCE TEMPERATURE=  20.000  (TUNIF=  20.000)
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO        189 STEP          1
+
+        189  NODES (OF        191  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED BODY FORCE TEMP FOR ALL SELECTED NODES SET TO   120.000000 
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ TIME=  1.0000    
+
+ USE      20 SUBSTEPS INITIALLY THIS LOAD STEP FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE    200 SUBSTEPS AS A MAXIMUM
+   USE      5 SUBSTEPS AS A MINIMUM
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
+                ---GIVE SUGGESTIONS ONLY---
+
+ ELEMENT TYPE  1 IS PLANE182 WITH PLANE STRAIN OPTION. IT IS ASSOCIATED WITH
+ LINEAR MATERIALS ONLY AND POISSON'S RATIO IS NOT GREATER THAN 0.49.
+ KEYOPT(1)=3 IS SUGGESTED.
+
+
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   21:06:13  SEP 14, 2026 Elapsed Time=      6.261
+
+ Stage 10 contact-control verification                                         
+
+
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .2-D                  
+   DEGREES OF FREEDOM. . . . . . UX   UY  
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   NONLINEAR GEOMETRIC EFFECTS . . . . . . . . . .ON
+   NEWTON-RAPHSON OPTION . . . . . . . . . . . . .FULL             
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
+
+ *** NOTE ***                            ELAPSED TIME =       6.263   TIME= 21:06:13
+ The conditions for direct assembly have been met.  No .emat or .erot    
+ files will be produced.                                                 
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000    
+   AUTOMATIC TIME STEPPING . . . . . . . . . . . .    ON
+      INITIAL NUMBER OF SUBSTEPS . . . . . . . . .    20
+      MAXIMUM NUMBER OF SUBSTEPS . . . . . . . . .   200
+      MINIMUM NUMBER OF SUBSTEPS . . . . . . . . .     5
+   MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS. . . .    15
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   STRESS-STIFFENING . . . . . . . . . . . . . . .    ON
+   TERMINATE ANALYSIS IF NOT CONVERGED . . . . . .YES (EXIT)  
+   CONVERGENCE CONTROLS. . . . . . . . . . . . . .USE DEFAULTS
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL       LAST               
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= stage10_contact.mntr                                                                                                                                                                                                                                                
+
+ *** NOTE ***                            ELAPSED TIME =       6.362   TIME= 21:06:13
+ Rigid-deformable contact pair identified by real constant set 3 and     
+ contact element type 3 has been set up.  Please verify constraints on   
+ target nodes which may be automatically fixed by MAPDL.                 
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Target element geometry R1                    1.0000    
+ Default contact stiffness factor FKN          1.0000    
+ The resulting initial contact stiffness       4000.0    
+ Penetration tolerance factor FTOLN            2.0000    
+ The resulting penetration tolerance           1.0000    
+ Frictionless contact pair is defined
+ Update contact stiffness at each iteration
+ Average contact surface length               0.50000    
+ Average contact pair depth                   0.50000    
+ Average target surface length                 10.000    
+ Default pinball region factor PINB            2.0000    
+ The resulting pinball region                  1.0000    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            ELAPSED TIME =       6.363   TIME= 21:06:13
+ Min.  Initial gap 2.E-02 was detected between contact element 164 and   
+ target element 161.                                                     
+ You may move entire target surface by: x= 0, y= -2.E-02, z= 0, to bring 
+ it in contact.                                                          
+ ****************************************
+  
+
+ *** WARNING ***                         ELAPSED TIME =       6.363   TIME= 21:06:13
+ All selected contact pairs are initially open.  Rigid body motion can   
+ occur.  You may use auto CNOF by setting KEYOPT(5) to close small       
+ gaps.                                                                   
+  
+  
+ MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS HAS BEEN MODIFIED              
+  TO BE, NEQIT = 25, BY SOLUTION CONTROL LOGIC.                          
+
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 993.589744 at element 140.                                    
+ Minimum = 993.589744 at element 128.                                    
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+     TYPE    NUMBER     ENAME   TOTAL ELAPSED   AVG ELAPSED
+
+        1       160  PLANE182          0.0175   0.000109631
+        2         1  TARGE169          0.0000   0.000002600
+        3        20  CONTA172          0.0018   0.000090530
+ Elapsed Time at end of element matrix formulation = 6.5655599.          
+
+ ALL CURRENT MAPDL DATA WRITTEN TO FILE NAME= stage10_contact.rdb
+  FOR POSSIBLE RESUME FROM THIS POINT
+     FORCE CONVERGENCE VALUE  =   7.315      CRITERION=  0.3658E-01
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =         356,    Maximum wavefront =     14
+
+
+  Memory allocated on this process
+  -------------------------------------------------------------------
+  Equation solver memory allocated                     =     0.308 MB
+  Equation solver memory required for in-core mode     =     0.297 MB
+  Equation solver memory required for out-of-core mode =     0.240 MB
+  Total (solver and non-solver) memory allocated       =   392.394 MB
+
+ *** NOTE ***                            ELAPSED TIME =       6.619   TIME= 21:06:13
+ The Sparse Matrix Solver is currently running in the in-core memory     
+ mode.  This memory mode uses the most amount of memory in order to      
+ avoid using the hard drive as much as possible, which most often        
+ results in the fastest solution time.  This mode is recommended if      
+ enough physical memory is present to accommodate all of the solver      
+ data.                                                                   
+ Sparse solver maximum pivot= 3974.35897 at node 136 UX.                 
+ Sparse solver minimum pivot= 338.792555 at node 116 UX.                 
+ Sparse solver minimum pivot in absolute value= 338.792555 at node 116   
+ UX.                                                                     
+     DISP CONVERGENCE VALUE   =  0.6500E-02  CRITERION=  0.3250E-03
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.6500E-02
+     DISP CONVERGENCE VALUE   =  0.6500E-02  CRITERION=  0.3250E-03
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC =  0.6500E-02
+     FORCE CONVERGENCE VALUE  =  0.2378E-02  CRITERION=  0.5000E-04
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2113E-05
+     DISP CONVERGENCE VALUE   =  0.2113E-05  CRITERION=  0.3251E-03 <<< CONVERGED
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC =  0.2113E-05
+     FORCE CONVERGENCE VALUE  =  0.1005E-08  CRITERION=  0.5000E-04 <<< CONVERGED
+
+ *** WARNING ***                         ELAPSED TIME =       6.712   TIME= 21:06:13
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 7.627876569E-10 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+
+   *** ELEMENT RESULT CALCULATION TIMES
+     TYPE    NUMBER     ENAME   TOTAL ELAPSED   AVG ELAPSED
+
+        1       160  PLANE182          0.0131   0.000081688
+        3        20  CONTA172          0.0010   0.000052360
+
+   *** NODAL LOAD CALCULATION TIMES
+     TYPE    NUMBER     ENAME   TOTAL ELAPSED   AVG ELAPSED
+
+        1       160  PLANE182          0.0003   0.000001849
+        3        20  CONTA172          0.0000   0.000001735
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      2
+ *** TIME =  0.500000E-01     TIME INC =  0.500000E-01
+ *** AUTO STEP TIME:  NEXT TIME INC = 0.50000E-01  UNCHANGED
+
+     FORCE CONVERGENCE VALUE  =  0.4758E-02  CRITERION=  0.4598E-01
+     DISP CONVERGENCE VALUE   =  0.4230E-05  CRITERION=  0.3253E-03 <<< CONVERGED
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.4230E-05
+     DISP CONVERGENCE VALUE   =  0.4228E-05  CRITERION=  0.3253E-03 <<< CONVERGED
+     LINE SEARCH PARAMETER =  0.9994     SCALED MAX DOF INC =  0.4228E-05
+     FORCE CONVERGENCE VALUE  =  0.6433E-12  CRITERION=  0.5000E-04 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+ *** LOAD STEP     1   SUBSTEP     2  COMPLETED.    CUM ITER =      3
+ *** TIME =  0.100000         TIME INC =  0.500000E-01
+ *** AUTO TIME STEP:  NEXT TIME INC = 0.75000E-01  INCREASED (FACTOR = 1.5000)
+
+     FORCE CONVERGENCE VALUE  =  0.8929E-02  CRITERION=  0.6903E-01
+     DISP CONVERGENCE VALUE   =  0.7941E-05  CRITERION=  0.4884E-03 <<< CONVERGED
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.7941E-05
+     DISP CONVERGENCE VALUE   =  0.7933E-05  CRITERION=  0.4884E-03 <<< CONVERGED
+     LINE SEARCH PARAMETER =  0.9990     SCALED MAX DOF INC =  0.7933E-05
+     FORCE CONVERGENCE VALUE  =  0.3454E-11  CRITERION=  0.5000E-04 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+ *** LOAD STEP     1   SUBSTEP     3  COMPLETED.    CUM ITER =      4
+ *** TIME =  0.175000         TIME INC =  0.750000E-01
+ *** AUTO TIME STEP:  NEXT TIME INC = 0.11250      INCREASED (FACTOR = 1.5000)
+
+     FORCE CONVERGENCE VALUE  =  0.2011E-01  CRITERION=  0.1037    
+     DISP CONVERGENCE VALUE   =  0.1790E-04  CRITERION=  0.7335E-03 <<< CONVERGED
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1790E-04
+     DISP CONVERGENCE VALUE   =  0.1787E-04  CRITERION=  0.7335E-03 <<< CONVERGED
+     LINE SEARCH PARAMETER =  0.9985     SCALED MAX DOF INC =  0.1787E-04
+     FORCE CONVERGENCE VALUE  =  0.2613E-10  CRITERION=  0.5000E-04 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+ *** LOAD STEP     1   SUBSTEP     4  COMPLETED.    CUM ITER =      5
+ *** TIME =  0.287500         TIME INC =  0.112500    
+ *** AUTO TIME STEP:  NEXT TIME INC = 0.16875      INCREASED (FACTOR = 1.5000)
+
+     FORCE CONVERGENCE VALUE  =   6.681      CRITERION=  0.2186    
+     DISP CONVERGENCE VALUE   =  0.2469E-02  CRITERION=  0.1224E-02
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2469E-02
+     DISP CONVERGENCE VALUE   =  0.2464E-02  CRITERION=  0.1224E-02
+     LINE SEARCH PARAMETER =  0.9980     SCALED MAX DOF INC =  0.2464E-02
+     FORCE CONVERGENCE VALUE  =  0.3839E-02  CRITERION=  0.6398E-01 <<< CONVERGED
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.6609E-05
+     DISP CONVERGENCE VALUE   =  0.6609E-05  CRITERION=  0.1224E-02 <<< CONVERGED
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC = -0.6609E-05
+     FORCE CONVERGENCE VALUE  =  0.1323E-07  CRITERION=  0.6399E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+ *** LOAD STEP     1   SUBSTEP     5  COMPLETED.    CUM ITER =      7
+ *** TIME =  0.456250         TIME INC =  0.168750    
+ *** AUTO TIME STEP:  NEXT TIME INC = 0.20000      INCREASED (FACTOR = 1.1852)
+
+     FORCE CONVERGENCE VALUE  =   10.57      CRITERION=  0.4151    
+     DISP CONVERGENCE VALUE   =  0.3905E-02  CRITERION=  0.1645E-02
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.3905E-02
+     DISP CONVERGENCE VALUE   =  0.3898E-02  CRITERION=  0.1645E-02
+     LINE SEARCH PARAMETER =  0.9981     SCALED MAX DOF INC =  0.3898E-02
+     FORCE CONVERGENCE VALUE  =  0.6856E-02  CRITERION=  0.2411     <<< CONVERGED
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1182E-04
+     DISP CONVERGENCE VALUE   =  0.1182E-04  CRITERION=  0.1645E-02 <<< CONVERGED
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC = -0.1182E-04
+     FORCE CONVERGENCE VALUE  =  0.8489E-07  CRITERION=  0.2411     <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+ *** LOAD STEP     1   SUBSTEP     6  COMPLETED.    CUM ITER =      9
+ *** TIME =  0.656250         TIME INC =  0.200000    
+ *** AUTO STEP TIME:  NEXT TIME INC = 0.20000      UNCHANGED
+
+     FORCE CONVERGENCE VALUE  =   1.666      CRITERION=  0.4267    
+     DISP CONVERGENCE VALUE   =  0.4903E-02  CRITERION=  0.1657E-02
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.4903E-02
+     DISP CONVERGENCE VALUE   =  0.4903E-02  CRITERION=  0.1657E-02
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC =  0.4903E-02
+     FORCE CONVERGENCE VALUE  =  0.2497E-01  CRITERION=  0.4135     <<< CONVERGED
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.8476E-04
+     DISP CONVERGENCE VALUE   =  0.8476E-04  CRITERION=  0.1661E-02 <<< CONVERGED
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC =  0.8476E-04
+     FORCE CONVERGENCE VALUE  =  0.2018E-03  CRITERION=  0.4134     <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+ *** LOAD STEP     1   SUBSTEP     7  COMPLETED.    CUM ITER =     11
+ *** TIME =  0.856250         TIME INC =  0.200000    
+ *** AUTO TIME STEP:  NEXT TIME INC = 0.14375      DECREASED (FACTOR = 0.7188)
+
+     FORCE CONVERGENCE VALUE  =  0.6931      CRITERION=  0.5415    
+     DISP CONVERGENCE VALUE   =  0.2027E-02  CRITERION=  0.1661E-02
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.2027E-02
+     DISP CONVERGENCE VALUE   =  0.2027E-02  CRITERION=  0.1661E-02
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC = -0.2027E-02
+     FORCE CONVERGENCE VALUE  =  0.8888E-02  CRITERION=  0.5405     <<< CONVERGED
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.4765E-04
+     DISP CONVERGENCE VALUE   =  0.4765E-04  CRITERION=  0.1661E-02 <<< CONVERGED
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC = -0.4765E-04
+     FORCE CONVERGENCE VALUE  =  0.1033E-03  CRITERION=  0.5405     <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+ *** LOAD STEP     1   SUBSTEP     8  COMPLETED.    CUM ITER =     13
+ *** TIME =   1.00000         TIME INC =  0.143750    
+
+
+ *** MAPDL BINARY FILE STATISTICS
+  BUFFER SIZE USED= 16384
+        0.438 MB WRITTEN ON ELEMENT SAVED DATA FILE: stage10_contact.esav
+        0.062 MB WRITTEN ON ASSEMBLED MATRIX FILE: stage10_contact.full
+        0.438 MB WRITTEN ON RESULTS FILE: stage10_contact.rst
+
+ FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  ELAPSED TIME =         7.451
+
+
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2026 R1          26.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   21:06:14  SEP 14, 2026 Elapsed Time=      7.470
+
+ Stage 10 contact-control verification                                         
+
+
+
+          ***** MAPDL RESULTS INTERPRETATION (POST1) *****
+
+ *** NOTE ***                            ELAPSED TIME =       7.470   TIME= 21:06:14
+ Reading results into the database (SET command) will update the current 
+ displacement and force boundary conditions in the database with the     
+ values from the results file for that load set.  Note that any          
+ subsequent solutions will use these values unless action is taken to    
+ either SAVE the current values or not overwrite them (/EXIT,NOSAVE).    
+
+
+ USE LAST SUBSTEP ON RESULT FILE  FOR LOAD CASE 0 
+
+ SET COMMAND GOT LOAD STEP=     1  SUBSTEP=     8  CUMULATIVE ITERATION=    13
+   TIME/FREQUENCY=  1.0000    
+ TITLE= Stage 10 contact-control verification                                   
+
+ STORE CPRES    FROM ITEM=CONT COMP=PRES  FOR ALL SELECTED ELEMENTS
+
+ STORE PENE     FROM ITEM=CONT COMP=PENE  FOR ALL SELECTED ELEMENTS
+
+ STORE CSTAT    FROM ITEM=CONT COMP=STAT  FOR ALL SELECTED ELEMENTS
+
+ STORE CSFRIC   FROM ITEM=CONT COMP=SFRI  FOR ALL SELECTED ELEMENTS
+
+ OPENED FILE= contact_values.csv FOR COMMAND FILE DATA 
+
+
+ PARAMETER EIDV =     162.0000000    
+
+ PARAMETER XV =    0.2500000000    
+
+ *GET  PV        FROM  ELEM       162  ITEM=ETAB CPRES     VALUE=  10.4619198    
+
+ *GET  PENV      FROM  ELEM       162  ITEM=ETAB PENE      VALUE= 0.130773997E-01
+
+ *GET  STATV     FROM  ELEM       162  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       162  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     163.0000000    
+
+ PARAMETER XV =    0.7500000000    
+
+ *GET  PV        FROM  ELEM       163  ITEM=ETAB CPRES     VALUE=  10.4603839    
+
+ *GET  PENV      FROM  ELEM       163  ITEM=ETAB PENE      VALUE= 0.130754798E-01
+
+ *GET  STATV     FROM  ELEM       163  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       163  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     164.0000000    
+
+ PARAMETER XV =     1.250000000    
+
+ *GET  PV        FROM  ELEM       164  ITEM=ETAB CPRES     VALUE=  10.4583163    
+
+ *GET  PENV      FROM  ELEM       164  ITEM=ETAB PENE      VALUE= 0.130728958E-01
+
+ *GET  STATV     FROM  ELEM       164  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       164  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     165.0000000    
+
+ PARAMETER XV =     1.750000000    
+
+ *GET  PV        FROM  ELEM       165  ITEM=ETAB CPRES     VALUE=  10.4556794    
+
+ *GET  PENV      FROM  ELEM       165  ITEM=ETAB PENE      VALUE= 0.130695989E-01
+
+ *GET  STATV     FROM  ELEM       165  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       165  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     166.0000000    
+
+ PARAMETER XV =     2.250000000    
+
+ *GET  PV        FROM  ELEM       166  ITEM=ETAB CPRES     VALUE=  10.4525080    
+
+ *GET  PENV      FROM  ELEM       166  ITEM=ETAB PENE      VALUE= 0.130656343E-01
+
+ *GET  STATV     FROM  ELEM       166  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       166  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     167.0000000    
+
+ PARAMETER XV =     2.750000000    
+
+ *GET  PV        FROM  ELEM       167  ITEM=ETAB CPRES     VALUE=  10.4487944    
+
+ *GET  PENV      FROM  ELEM       167  ITEM=ETAB PENE      VALUE= 0.130609930E-01
+
+ *GET  STATV     FROM  ELEM       167  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       167  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     168.0000000    
+
+ PARAMETER XV =     3.250000000    
+
+ *GET  PV        FROM  ELEM       168  ITEM=ETAB CPRES     VALUE=  10.4445119    
+
+ *GET  PENV      FROM  ELEM       168  ITEM=ETAB PENE      VALUE= 0.130556398E-01
+
+ *GET  STATV     FROM  ELEM       168  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       168  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     169.0000000    
+
+ PARAMETER XV =     3.750000000    
+
+ *GET  PV        FROM  ELEM       169  ITEM=ETAB CPRES     VALUE=  10.4396892    
+
+ *GET  PENV      FROM  ELEM       169  ITEM=ETAB PENE      VALUE= 0.130496109E-01
+
+ *GET  STATV     FROM  ELEM       169  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       169  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     170.0000000    
+
+ PARAMETER XV =     4.250000000    
+
+ *GET  PV        FROM  ELEM       170  ITEM=ETAB CPRES     VALUE=  10.4344969    
+
+ *GET  PENV      FROM  ELEM       170  ITEM=ETAB PENE      VALUE= 0.130431210E-01
+
+ *GET  STATV     FROM  ELEM       170  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       170  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     171.0000000    
+
+ PARAMETER XV =     4.750000000    
+
+ *GET  PV        FROM  ELEM       171  ITEM=ETAB CPRES     VALUE=  10.4293756    
+
+ *GET  PENV      FROM  ELEM       171  ITEM=ETAB PENE      VALUE= 0.130367195E-01
+
+ *GET  STATV     FROM  ELEM       171  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       171  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     172.0000000    
+
+ PARAMETER XV =     5.250000000    
+
+ *GET  PV        FROM  ELEM       172  ITEM=ETAB CPRES     VALUE=  10.4251494    
+
+ *GET  PENV      FROM  ELEM       172  ITEM=ETAB PENE      VALUE= 0.130314366E-01
+
+ *GET  STATV     FROM  ELEM       172  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       172  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     173.0000000    
+
+ PARAMETER XV =     5.750000000    
+
+ *GET  PV        FROM  ELEM       173  ITEM=ETAB CPRES     VALUE=  10.4233556    
+
+ *GET  PENV      FROM  ELEM       173  ITEM=ETAB PENE      VALUE= 0.130291944E-01
+
+ *GET  STATV     FROM  ELEM       173  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       173  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     174.0000000    
+
+ PARAMETER XV =     6.250000000    
+
+ *GET  PV        FROM  ELEM       174  ITEM=ETAB CPRES     VALUE=  10.4263287    
+
+ *GET  PENV      FROM  ELEM       174  ITEM=ETAB PENE      VALUE= 0.130329104E-01
+
+ *GET  STATV     FROM  ELEM       174  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       174  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     175.0000000    
+
+ PARAMETER XV =     6.750000000    
+
+ *GET  PV        FROM  ELEM       175  ITEM=ETAB CPRES     VALUE=  10.4386649    
+
+ *GET  PENV      FROM  ELEM       175  ITEM=ETAB PENE      VALUE= 0.130483308E-01
+
+ *GET  STATV     FROM  ELEM       175  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       175  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     176.0000000    
+
+ PARAMETER XV =     7.250000000    
+
+ *GET  PV        FROM  ELEM       176  ITEM=ETAB CPRES     VALUE=  10.4661193    
+
+ *GET  PENV      FROM  ELEM       176  ITEM=ETAB PENE      VALUE= 0.130826486E-01
+
+ *GET  STATV     FROM  ELEM       176  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       176  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     177.0000000    
+
+ PARAMETER XV =     7.750000000    
+
+ *GET  PV        FROM  ELEM       177  ITEM=ETAB CPRES     VALUE=  10.5254111    
+
+ *GET  PENV      FROM  ELEM       177  ITEM=ETAB PENE      VALUE= 0.131567642E-01
+
+ *GET  STATV     FROM  ELEM       177  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       177  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     178.0000000    
+
+ PARAMETER XV =     8.250000000    
+
+ *GET  PV        FROM  ELEM       178  ITEM=ETAB CPRES     VALUE=  10.6303768    
+
+ *GET  PENV      FROM  ELEM       178  ITEM=ETAB PENE      VALUE= 0.132879713E-01
+
+ *GET  STATV     FROM  ELEM       178  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       178  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     179.0000000    
+
+ PARAMETER XV =     8.750000000    
+
+ *GET  PV        FROM  ELEM       179  ITEM=ETAB CPRES     VALUE=  10.8794851    
+
+ *GET  PENV      FROM  ELEM       179  ITEM=ETAB PENE      VALUE= 0.135993566E-01
+
+ *GET  STATV     FROM  ELEM       179  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       179  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     180.0000000    
+
+ PARAMETER XV =     9.250000000    
+
+ *GET  PV        FROM  ELEM       180  ITEM=ETAB CPRES     VALUE=  11.3756285    
+
+ *GET  PENV      FROM  ELEM       180  ITEM=ETAB PENE      VALUE= 0.142195350E-01
+
+ *GET  STATV     FROM  ELEM       180  ITEM=ETAB CSTAT     VALUE=  2.00000000    
+
+ *GET  FRICV     FROM  ELEM       180  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+ PARAMETER EIDV =     181.0000000    
+
+ PARAMETER XV =     9.750000000    
+
+ *GET  PV        FROM  ELEM       181  ITEM=ETAB CPRES     VALUE=  6.26036119    
+
+ *GET  PENV      FROM  ELEM       181  ITEM=ETAB PENE      VALUE= 0.782545097E-02
+
+ *GET  STATV     FROM  ELEM       181  ITEM=ETAB CSTAT     VALUE=  1.50000000    
+
+ *GET  FRICV     FROM  ELEM       181  ITEM=ETAB CSFRIC    VALUE=  0.00000000    
+
+  COMMAND FILE CLOSED 
+
+
+ OPENED FILE= reaction.csv FOR COMMAND FILE DATA 
+
+
+ PARAMETER RFY =     0.000000000    
+
+ *GET  RV        FROM  NODE         1  ITEM=RF   FY    VALUE=  2.63329402     
+
+ PARAMETER RFY =     2.633294024    
+
+ *GET  RV        FROM  NODE         2  ITEM=RF   FY    VALUE=  5.32336903     
+
+ PARAMETER RFY =     7.956663053    
+
+ *GET  RV        FROM  NODE         3  ITEM=RF   FY    VALUE=  5.32562302     
+
+ PARAMETER RFY =     13.28228607    
+
+ *GET  RV        FROM  NODE         4  ITEM=RF   FY    VALUE=  5.32457621     
+
+ PARAMETER RFY =     18.60686229    
+
+ *GET  RV        FROM  NODE         5  ITEM=RF   FY    VALUE=  5.32680521     
+
+ PARAMETER RFY =     23.93366750    
+
+ *GET  RV        FROM  NODE         6  ITEM=RF   FY    VALUE=  5.32953200     
+
+ PARAMETER RFY =     29.26319949    
+
+ *GET  RV        FROM  NODE         7  ITEM=RF   FY    VALUE=  5.33328759     
+
+ PARAMETER RFY =     34.59648709    
+
+ *GET  RV        FROM  NODE         8  ITEM=RF   FY    VALUE=  5.33767876     
+
+ PARAMETER RFY =     39.93416584    
+
+ *GET  RV        FROM  NODE         9  ITEM=RF   FY    VALUE=  5.34236205     
+
+ PARAMETER RFY =     45.27652790    
+
+ *GET  RV        FROM  NODE        10  ITEM=RF   FY    VALUE=  5.34657001     
+
+ PARAMETER RFY =     50.62309791    
+
+ *GET  RV        FROM  NODE        11  ITEM=RF   FY    VALUE=  5.34895263     
+
+ PARAMETER RFY =     55.97205054    
+
+ *GET  RV        FROM  NODE        12  ITEM=RF   FY    VALUE=  5.34726526     
+
+ PARAMETER RFY =     61.31931580    
+
+ *GET  RV        FROM  NODE        13  ITEM=RF   FY    VALUE=  5.33797991     
+
+ PARAMETER RFY =     66.65729571    
+
+ *GET  RV        FROM  NODE        14  ITEM=RF   FY    VALUE=  5.31621467     
+
+ PARAMETER RFY =     71.97351038    
+
+ *GET  RV        FROM  NODE        15  ITEM=RF   FY    VALUE=  5.27606793     
+
+ PARAMETER RFY =     77.24957831    
+
+ *GET  RV        FROM  NODE        16  ITEM=RF   FY    VALUE=  5.21240226     
+
+ PARAMETER RFY =     82.46198056    
+
+ *GET  RV        FROM  NODE        17  ITEM=RF   FY    VALUE=  5.12374753     
+
+ PARAMETER RFY =     87.58572809    
+
+ *GET  RV        FROM  NODE        18  ITEM=RF   FY    VALUE=  5.01583845     
+
+ PARAMETER RFY =     92.60156654    
+
+ *GET  RV        FROM  NODE        19  ITEM=RF   FY    VALUE=  4.90363869     
+
+ PARAMETER RFY =     97.50520523    
+
+ *GET  RV        FROM  NODE        20  ITEM=RF   FY    VALUE=  4.80925902     
+
+ PARAMETER RFY =     102.3144643    
+
+ *GET  RV        FROM  NODE        21  ITEM=RF   FY    VALUE=  2.38308403     
+
+ PARAMETER RFY =     104.6975483    
+
+  COMMAND FILE CLOSED 
+
+
+ EXIT THE MAPDL POST1 DATABASE PROCESSOR
+
+
+ ***** ROUTINE COMPLETED *****  ELAPSED TIME =         7.492
+
+
+
+ EXIT MAPDL WITHOUT SAVING DATABASE
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          2
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+Release: 2026 R1            Build: 26.1       Update: UP20260202   Platform: WINDOWS x64 
+Date Run: 09/14/2026   Time: 21:06     Process ID: 31668
+Operating System: Windows 11  (Build: 26200)
+
+Processor Model: AMD Ryzen 7 7435HS
+
+Compiler: Intel(R) Fortran Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) C/C++ Compiler Classic Version 2021.9  (Build: 20230302)
+          AOCL-BLAS 5.1.1 Build 20251008
+          Intel(R) oneAPI Math Kernel Library Version 2024.2.3-Product Build 20250403
+
+Number of machines requested            :    1
+Total number of cores available         :   16
+Number of physical cores available      :    8
+Number of processes requested           :    1
+Number of threads per process requested :    1
+Total number of cores requested         :    1 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: stage10_contact
+Input File: C:\Users\asus\AppData\Local\Temp\FDM_stage10_contact_mesh_medium_s1r6rwec\input.dat
+Working Directory: C:\Users\asus\AppData\Local\Temp\FDM_stage10_contact_mesh_medium_s1r6rwec
+
+Total CPU time for main thread                    :        1.9 seconds
+Total CPU time summed for all threads             :        1.6 seconds
+
+Elapsed time spent obtaining a license            :        1.6 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
+Elapsed time spent solution - preprocessing       :        0.1 seconds
+Elapsed time spent computing solution             :        1.1 seconds
+   Elapsed time in element formation & assembly   :        0.4 seconds
+   Elapsed time in equation solver                :        0.1 seconds
+   Elapsed time in element result calculations    :        0.1 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+Equation solver used                              :            Sparse (symmetric)
+
+Sum of disk space used on all processes           :        1.5 MB
+
+Sum of memory used on all processes               :       60.0 MB
+Sum of memory allocated on all processes          :     2304.0 MB
+Physical memory available                         :         16 GB
+Total amount of I/O written to disk               :        0.0 GB
+Total amount of I/O read from disk                :        0.0 GB
+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2026 R1         Build 26.1         UP20260202    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)     1024 MB     Scratch Memory Requested   1024 MB |
+ |  Max Database Used(Master)     15 MB     Max Scratch Used(Master)     45 MB |
+ |  Max Database Used(Workers)     0 MB     Max Scratch Used(Workers)     0 MB |
+ |  Sum Database Used(All)        15 MB     Sum Scratch Used(All)        45 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          1.641       Time  =  21:06:25          |
+ |        Elapsed Time (sec) =         18.121       Date  =  09/14/2026        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*

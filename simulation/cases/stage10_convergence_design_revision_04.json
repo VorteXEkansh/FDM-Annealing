@@ -1,0 +1,9 @@
+{
+  "stage": 10,
+  "revision": 4,
+  "date": "2026-09-14",
+  "applies_to": "supplemental structural spatial refinement only",
+  "trigger": "The 90 x 12 extra-fine W_max remained 2.31 percent above the 60 x 8 fine result, exceeding the predeclared 2 percent global-response limit.",
+  "added_case": "A 120 x 16 element ultra-fine grid with the unchanged revision-3 material, load history, time increments and extraction rules.",
+  "acceptance": "Unchanged from stage10_convergence_design.json; compare ultra-fine against extra-fine."
+}

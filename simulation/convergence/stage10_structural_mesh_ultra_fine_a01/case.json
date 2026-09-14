@@ -1,0 +1,15 @@
+{
+  "family": "structural_mesh",
+  "design_revision": 3,
+  "level": "ultra_fine",
+  "nx": 120,
+  "nz": 16,
+  "ramp_dt_s": 0.01,
+  "hold_dt_s": 0.1,
+  "case_id": "structural_mesh_ultra_fine",
+  "attempt": 1,
+  "design_sha256": "5afcfa150b2073ad1633b74eac36c362915e1287a894832b0698a653509c533a",
+  "structural_revision_sha256": "952b7c42d761a3be65b82dc97677c44a66d940642c8920cdc5265441c0e2042f",
+  "supplemental_revision_sha256": "549a565c63c6c53622f27de6d84863073434ef4eaac4c0729bfb15471e6db32e",
+  "evidence_status": "genuine MAPDL numerical verification; not a production PLA annealing result"
+}

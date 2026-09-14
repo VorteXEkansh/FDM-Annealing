@@ -1,0 +1,9 @@
+{
+  "stage": 10,
+  "revision": 6,
+  "date": "2026-09-14",
+  "applies_to": "supplemental contact mesh sequence",
+  "trigger": "The initial augmented-Lagrange mesh series showed unresolved pressure and penetration changes because penalty stiffness scales with element dimensions.",
+  "added_cases": "Repeat coarse, medium, fine and extra-fine contact grids with normal Lagrange enforcement, corrected real-constant mapping and friction coefficient zero.",
+  "acceptance": "Use the unchanged global and local mesh limits. If the local peak remains unresolved because of an edge singularity, no production contact mesh may be selected from that metric; report the integral pressure separately."
+}

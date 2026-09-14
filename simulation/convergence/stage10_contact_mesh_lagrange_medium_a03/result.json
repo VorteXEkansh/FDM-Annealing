@@ -1,0 +1,20 @@
+{
+  "mean_contact_pressure_MPa": 17.449091529846193,
+  "max_contact_pressure_MPa": 20.98779296875,
+  "max_penetration_mm": 0.0,
+  "normal_reaction_N_per_mm": 177.26461942569,
+  "closed_fraction": 0.95,
+  "max_friction_stress_MPa": 0.0,
+  "contact_element_count": 20,
+  "contact_width_mm": 10.0,
+  "raw_pressure_min_MPa": 11.01618003845215,
+  "raw_pressure_max_MPa": 20.98779296875,
+  "raw_penetration_min_mm": 0.0,
+  "raw_penetration_max_mm": 0.0,
+  "raw_status_min": 1.5,
+  "raw_status_max": 2.0,
+  "mapdl_warning_count": 3,
+  "mapdl_error_count": 0,
+  "converged_message_count": 63,
+  "solver_return_code": 0
+}

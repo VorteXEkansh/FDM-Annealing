@@ -1,0 +1,12 @@
+{
+  "stage": 10,
+  "revision": 2,
+  "date": "2026-09-14",
+  "applies_to": "structural mesh and structural time-step cases only",
+  "parent_design_sha256": "PLACEHOLDER_REPLACED_BY_RUNNER_CASE_RECORD",
+  "trigger": "The technically successful coarse free-recovery run produced a 95th-percentile residual stress of approximately 1.75e-8 MPa, below a useful percentage-convergence scale.",
+  "disposition_of_initial_run": "Retain stage10_structural_mesh_coarse_a01 as a rejected measurand design; do not include it in convergence tables.",
+  "revised_boundary": "After the force is ramped to zero over 31-32 s, all nodes on the free-end edge are held at UY = 0 through 62 s while remaining free in UX.",
+  "interpretation": "The 62 s stress is a conditional post-unload stress under an endpoint support, and the top-edge W_max is curvature relative to a least-squares line. Neither is a released annealed-coupon prediction.",
+  "acceptance": "Unchanged from stage10_convergence_design.json."
+}

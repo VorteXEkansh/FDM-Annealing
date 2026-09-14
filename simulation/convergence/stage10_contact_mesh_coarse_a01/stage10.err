@@ -1,0 +1,21 @@
+/COM,ANSYS RELEASE 2026 R1           BUILD 26.1      UP20260202       20:25:57
+
+ *** WARNING ***                         ELAPSED TIME =       5.947   TIME= 20:25:59
+ The node numbering is highly uncompressed with a maximum defined node   
+ of 900002 compared to 57 defined nodes.  This will likely result in     
+ reduced performance and increased memory allocation requirements.       
+ Consider using the NUMCMP command to create a more compressed           
+ numbering scheme to improve the performance.                            
+
+ *** WARNING ***                         ELAPSED TIME =       6.034   TIME= 20:25:59
+ All selected contact pairs are initially open.  Rigid body motion can   
+ occur.  You may use auto CNOF by setting KEYOPT(5) to close small       
+ gaps.                                                                   
+
+ *** WARNING ***                         ELAPSED TIME =       6.342   TIME= 20:25:59
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 1.071894462E-09 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      

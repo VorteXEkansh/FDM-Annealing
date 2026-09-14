@@ -1,0 +1,39 @@
+{
+  "accepted": true,
+  "error": "",
+  "returncode": 0,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM_stage10_structural_mesh_ultra_fine_53kezn7k\\input.dat",
+    "-o",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM_stage10_structural_mesh_ultra_fine_53kezn7k\\mapdl.out",
+    "-j",
+    "stage10",
+    "-np",
+    "1"
+  ],
+  "files": {
+    "case.json": "7aaffd6d5623b72e4ef824e00df5178c954ecc0ec87a334f287d590302c1e285",
+    "element_stress.csv": "d090d3b9a336dc0ed01ed3c187f7668e4237448b7c734f8bb0950c70e04ed05d",
+    "input.dat": "7db788cc22d49cc68f6f09d4f962cedaa92fb02ecb7172af1fea054f47951f5c",
+    "mapdl.out": "295363659e53d717ca871b16c6775961327e77fb2a9512e42e7f33361014381c",
+    "result.json": "c0145ac5321325754eb75353b33e72f459fe098445d9443f51012c8083d0f864",
+    "script_snapshot.py": "373a321b29ed6f710288e02edd87c3dc06a2d5496a8d88aa396ea84d7d1e0a03",
+    "stage10.err": "750303c399fac0ec17502562525ed8fdb66a610f3761fd846576d6effb5e2bc2",
+    "stage10.log": "d9688ab1608d51071356fd6ff1d41c7406b462b510687abe38abc43dee55b13f",
+    "stage10_structural.DSP": "a654f7ca881ed0e0c3c51090c62ccfea5e8b8ac054b71a99c4f042b689252f79",
+    "stage10_structural.esav": "ee9ec0be98f7284e310e38303a2b26892ed03f0cc7c28d646ddef332f2c54406",
+    "stage10_structural.full": "90903fb2fb1b39896ff9575742953ec291ee689a1c46d56f7731f5256aba7f8d",
+    "stage10_structural.ldhi": "27ddebbd3201cd4b7c2a1c64ef725a2de9eaca677d483ce1151a4abfaacf66d1",
+    "stage10_structural.mntr": "81f68fcd61c781afbf3700df330afc059d04afa49d95c3712142c952dc6d4a40",
+    "stage10_structural.r001": "0984a731666dffccb80bff7170b85d73cfbb50ae7eb34f4477e47f2c7ed3694f",
+    "stage10_structural.rdb": "98d2a3031599338e713c6a0c147d1afed7f6c65deacaf7fad09ed5eee59ddcf0",
+    "stage10_structural.rst": "f2e22d72a5df05a1934c62707e07526814ded2a8a3fc800bb9c5106c928a6488",
+    "stage10_structural.stat": "31da47cdb2b509f109d970c8add7cecf600568a25af019d744313c921b281cd5",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "top_nodes.csv": "053e4533f844b457778ec2034bd97af2fc63f2e66b839164e5e0fd7349fb84e9"
+  }
+}

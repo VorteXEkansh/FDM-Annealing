@@ -30,6 +30,11 @@ if args.stage >= 9:
     paths += [str(p.relative_to(ROOT)).replace('\\','/') for directory in sorted((ROOT/'simulation/verification').glob('stage09_*')) for p in sorted(directory.iterdir()) if p.is_file()]
     paths = list(dict.fromkeys(paths))
     scope = 'Thermal plus six genuine structural/contact reference cases; no production annealing or independent physical validation.'
-data={'stage':args.stage,'date':'2026-09-13','algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
+if args.stage >= 10:
+    paths += ['docs/convergence_study.md','docs/stage_10_attempt_log.md','docs/stage_10_convergence_checks.json','docs/stage_10_pdf_review.json','scripts/run_convergence_study.py','scripts/check_convergence_stage.py','tests/test_convergence.py','simulation/cases/stage10_convergence_design.json','simulation/cases/stage10_convergence_design_revision_02.json','simulation/cases/stage10_convergence_design_revision_03.json','simulation/cases/stage10_convergence_design_revision_04.json','simulation/cases/stage10_convergence_design_revision_05.json','simulation/cases/stage10_convergence_design_revision_06.json','simulation/cases/stage10_convergence_design_revision_07.json','convergence/mesh_convergence.csv','convergence/timestep_convergence.csv','convergence/contact_sensitivity.csv','figures/mesh_convergence.png','figures/timestep_convergence.png','figures/contact_sensitivity.png','requirements.txt']
+    paths += [str(p.relative_to(ROOT)).replace('\\','/') for p in sorted((ROOT/'simulation/convergence').rglob('*')) if p.is_file()]
+    paths = list(dict.fromkeys(paths))
+    scope = 'Genuine MAPDL mesh, time-step and contact-control convergence for verification configurations; no production mesh, production sweep or physical validation.'
+data={'stage':args.stage,'date':('2026-09-14' if args.stage >= 10 else '2026-09-13'),'algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
 (ROOT/f'docs/stage_{args.stage:02d}_manifest.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(f'Recorded {len(paths)} input/code/output hashes')

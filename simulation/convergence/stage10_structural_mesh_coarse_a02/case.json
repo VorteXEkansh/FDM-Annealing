@@ -1,0 +1,14 @@
+{
+  "family": "structural_mesh",
+  "design_revision": 2,
+  "level": "coarse",
+  "nx": 15,
+  "nz": 2,
+  "ramp_dt_s": 0.01,
+  "hold_dt_s": 0.1,
+  "case_id": "structural_mesh_coarse",
+  "attempt": 2,
+  "design_sha256": "5afcfa150b2073ad1633b74eac36c362915e1287a894832b0698a653509c533a",
+  "structural_revision_sha256": "f0f10798ebd1c7f5b63c1df09b025917238449f23ea4e3bf5cb3a825462a8f91",
+  "evidence_status": "genuine MAPDL numerical verification; not a production PLA annealing result"
+}

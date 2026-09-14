@@ -1,6 +1,6 @@
 {
-  "stage": 9,
-  "date": "2026-09-13",
+  "stage": 10,
+  "date": "2026-09-14",
   "checks": [
     {
       "check": "Base PDF hash preserved",
@@ -75,7 +75,7 @@
       "status": "pass"
     },
     {
-      "check": "No duplicated or result figures",
+      "check": "All four figures occur once",
       "status": "pass"
     },
     {
@@ -231,7 +231,7 @@
       "status": "pass"
     },
     {
-      "check": "Thermal evidence boundary explicitly reported",
+      "check": "Evidence boundary explicitly reported",
       "status": "pass"
     },
     {
@@ -287,15 +287,36 @@
       "status": "pass"
     },
     {
+      "check": "Stage 10 final refinement pairs pass",
+      "status": "pass"
+    },
+    {
+      "check": "Stage 10 retains production gate",
+      "status": "pass"
+    },
+    {
+      "check": "Stage 10 published row counts",
+      "status": "pass"
+    },
+    {
+      "check": "Stage 10 plots present",
+      "status": "pass"
+    },
+    {
+      "check": "Stage 10 limits and selected verification meshes reported",
+      "status": "pass"
+    },
+    {
       "check": "All text lies inside page safety bounds",
       "status": "pass"
     }
   ],
-  "count": 72,
-  "pdf_sha256": "03d44d05d75e34cfe73de836331e38daa4c7eeaa35990b5a2d76c53ca9688a03",
-  "manuscript_sha256": "a8b0a55d67868074a95f597ff4ac3fd1074e1ef691c81b82d5d8f0691bd0017c",
+  "count": 77,
+  "pdf_sha256": "c66d29e46a432b11c5ffb19eed5ffbd407ac73621d320c39281cd4bf2bec6eca",
+  "manuscript_sha256": "39a0eb913760a34170a946c93a88864ea3fa31144d4e8edbc3774cbd30d7709b",
   "material_manifest_sha256": "d9eeab055d206d082674004be8f85f1f00168d2aa34288526ac1549c91f5652b",
   "geometry_manifest_sha256": "d76d855563cb38fa34c51995092edfbb35ead325bc4eb2c3a8bd18fefc0d8369",
   "thermal_manifest_sha256": "f1942fd9932f7fbc2a1678edcec6576fde89b602c04b38761c7183f08c85eca1",
-  "scope": "Document, source, property, environment, geometry and genuine MAPDL plane-wall thermal verification integrity. No production PLA coupon solution or physical validation."
+  "convergence_report_sha256": "718349134512c2bf01bb114c575b96b04fdccd38224979510f36f55156dbfb08",
+  "scope": "Document, source, property, environment, geometry, genuine MAPDL verification and verification-configuration convergence integrity. No production PLA coupon solution, production mesh or physical validation."
 }

@@ -414,7 +414,7 @@
       "status": "pass"
     },
     {
-      "check": "BibTeX DOI set corresponds to verified records and ASTM",
+      "check": "BibTeX DOI set corresponds to verified matrix, material sources and ASTM",
       "status": "pass"
     },
     {
@@ -423,6 +423,10 @@
     },
     {
       "check": "All journal DOIs in complete manuscript",
+      "status": "pass"
+    },
+    {
+      "check": "All DOI-bearing material sources in complete manuscript",
       "status": "pass"
     },
     {
@@ -466,6 +470,50 @@
       "status": "pass"
     },
     {
+      "check": "PrusamentTDS2022 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Chapuis2025 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Luberto2024 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Trofimov2022 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Li2024 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Bute2024 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Relaxation2022 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Pantani2010 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Nucleation2011 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "WLF1955 material-source evidence hash",
+      "status": "pass"
+    },
+    {
+      "check": "Meng2026 material-source evidence hash",
+      "status": "pass"
+    },
+    {
       "check": "Workbook has 34 complete data rows",
       "status": "pass"
     },
@@ -490,6 +538,6 @@
       "status": "pass"
     }
   ],
-  "count": 122,
+  "count": 134,
   "scope": "Bibliography, source hashes and workbook integrity only"
 }

@@ -12,10 +12,11 @@ equation,relation,implementation,status,evidence_or_gate
 11,Exponential branch update,src/constitutive.py:Prusament.advance_reduced and advance,implemented_reference,Exact linear-reduced-strain substep; midpoint physical-time approximation tested by refinement
 12,Fixture property interpolation,src/constitutive.py:fixture_property,implemented_reference,Meng2026 Table 1; alpha thermal-strain convention unresolved
 13,Quasi-static mechanical equilibrium,scripts/run_structural_verification.py:deck,verified_uniform_cases,Production coupon and fixture pending
-14,Ideal unilateral contact,scripts/run_structural_verification.py:deck and references,verified_node_contact,CONTA178 normal Lagrange; surface contact and thermal conductance pending
+14,Ideal unilateral contact,scripts/run_structural_verification.py:deck and scripts/run_convergence_study.py:contact_deck,verified_node_and_2D_surface_contact,CONTA178 node contact and CONTA172/TARGE169 control sensitivity; production 3D contact and thermal conductance pending
 15,Signed directional dimensional response,Future landmark-based displacement postprocessing,pending_geometry_and_solver,No outputs or final landmarks yet
 16,RMS dimensional response,Future signed-response aggregation,pending_solver_outputs,No dimensions calculated from fabricated fields
-17,Best-fit-plane warpage,Future area-weighted surface-fit postprocessing,pending_geometry_and_solver,No surface mesh or solver displacement yet
+17,Best-fit-plane warpage,scripts/run_convergence_study.py:parse_structural,verified_2D_line_analogue,Top-edge least-squares line only; production 3D area-weighted plane fit pending
 18,Plane-wall center step response and Duhamel history,scripts/run_thermal_verification.py:center_step_modes and analytical_center_temperature,implemented_and_compared_to_ANSYS,Verification-only constants; not a PLA property or physical validation
 19,Uniform elastic and eigenstrain reference,scripts/run_structural_verification.py:references,verified_against_SOLID185,Synthetic fixtures only
 20,Finite-ramp Prony convolution,scripts/run_structural_verification.py:references,verified_against_SOLID185,65 C isothermal source spectrum; shifting unverified
+21,Adjacent discretization change,scripts/check_convergence_stage.py:delta_percent,implemented_for_mesh_and_time_tables,Verification configurations only; zero denominator rule explicit

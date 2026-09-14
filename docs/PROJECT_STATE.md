@@ -1,7 +1,7 @@
 # Authoritative project state
 
-Stage: **Prompt 9/20 — structural, retained-strain and contact verification**.
-Date: 2026-09-13 (Asia/Calcutta).
+Stage: **Prompt 10/20 — numerical convergence and discretization study**.
+Date: 2026-09-14 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
 ## Research identity
@@ -25,7 +25,7 @@ Base source: `data/source/DTU_Constrained_Annealing_Final_Submission.pdf`; immut
 
 ## Evidence status — authoritative
 
-Genuine ANSYS field runs: **one thermal and six accepted structural/contact verification cases**. It is not a Prusament PLA coupon prediction or physical validation. A zero-analysis MAPDL environment/license probe and a geometry-only build also succeeded.
+Genuine ANSYS field evidence now includes **one accepted Stage 8 thermal reference case, six accepted Stage 9 structural/contact reference cases, and 28 unique Stage 10 runs selected for convergence tables**. Stage 10 preserves 43 technical run directories in total; 15 superseded or defective-measurand/input-control attempts are excluded from conclusions. None is a Prusament PLA coupon prediction or physical validation. A zero-analysis MAPDL environment/license probe and a geometry-only build also succeeded.
 ANSYS environment: **Ansys Student 2026 R1; MAPDL release 2026 R1, build 26.1, update 20260202; Student Mechanical product checkout confirmed**. Workbench and Mechanical 26.1 plus the named thermal/structural templates are installed, but their GUI entitlements have not been separately exercised. PyMechanical is not installed.
 Geometry/CAD: **60 mm × 10 mm × 4 mm rectangular specimen and two 70 mm × 20 mm × 5 mm plates selected; a geometry-only MAPDL build created and saved three volumes**. Production specimen/fixture mesh: **not generated**. The separate plane-wall verification mesh is documented below.
 Reference PLA formulation: **Prusament PLA selected for constitutive development; production ANSYS material card not admitted**.
@@ -34,7 +34,7 @@ Constitutive implementation: **small-strain isotropic 23-branch Prusament refere
 Fixture material: **AISI 304 stainless steel selected as candidate plate material with a 20–200 °C tabulated property set**. Plate dimensions and normalized reference-gap levels are fixed as geometry design choices. Friction, thermal contact conductance and physical spacer geometry remain unselected. Thermal-strain use of the fixture alpha table is blocked until its tangent/mean convention and reference temperature are established.
 Initial residual stress, recovery strain and crystallization kinetics: **unavailable**.
 Production boundary histories, reference temperature, release rule, convection, radiation and thermal contact: **not fixed**. The separate verification history is fully specified and must not be transferred as a physical protocol.
-Mesh/time-step/contact convergence: **not performed**.
+Mesh/time-step/contact convergence: **passed for three declared Stage 10 verification configurations only**. Structural, thermal, and normal-Lagrange contact benchmark grids plus thermal and structural time increments were selected and confirmed. No three-dimensional production mesh or production time step is selected.
 Independent validation datasets: **not extracted or accepted**.
 Sensitivity indices, uncertainty intervals and optimization results: **none**.
 No performance improvement, optimal process condition or experimental confirmation is claimed.
@@ -183,12 +183,60 @@ Production remains blocked by thermal inputs, irreversible-strain evidence,
 non-isothermal adaptation, fixture expansion convention, surface contact,
 friction, release rules and independent validation.
 
+## Convergence state — Stage 10
+
+`docs/convergence_study.md` is authoritative for the numerical study. Raw MAPDL
+evidence is under `simulation/convergence/`; every directory retains its input,
+script snapshot, solver files, extraction, result and manifest hashes. The
+published tables are `convergence/mesh_convergence.csv`,
+`convergence/timestep_convergence.csv` and
+`convergence/contact_sensitivity.csv`.
+
+The structural benchmark is a 60 mm × 4 mm plane-stress, two-layer isothermal
+Prony cantilever at 65 °C. A declared 10× relaxation-time mismatch creates
+simultaneous post-unload curvature, displacement and self-equilibrated stress;
+it is a numerical fixture, not a measured PLA layer property. A 90 × 12 grid is
+confirmed by 120 × 16: changes are 0.9327% for Wₘₐₓ, 0.5821% for residual
+displacement and 2.0266% for the interior 95th-percentile residual stress.
+
+The Stage 8 plane-wall benchmark uses 8, 16, 32 and 64 through-thickness
+elements. The 32-element grid is confirmed by 64; the 300 s lag and gradient
+change by 0.0009423% and 0.0060073%. The selected verification step Δt = 0.25 s
+is confirmed by 0.125 s; lag, gradient and the L₂ profile-excursion measure
+change by 0.005285%, 0.005369% and 0.002811%.
+
+The corrected 2D contact benchmark uses CONTA172/TARGE169. Normal Lagrange with
+40 interface elements on a 40 × 16 solid grid is confirmed by 60 interface
+elements on 60 × 24: mean pressure, peak pressure and reaction change by
+0.12698%, 0.36127% and 0.13831%, and reported penetration remains 0 mm. This
+selects a verification configuration only. Penalty/augmented FKN and μ = 0,
+0.1, 0.3 sensitivities are genuine numerical fixtures; no production friction
+coefficient is selected.
+
+The structural time pair 0.01 s on ramps and 0.1 s on holds is confirmed by
+0.005 s and 0.05 s; Wₘₐₓ, displacement and stress change by 0.003094%,
+0.003213% and 0.13636%. All final verification refinement pairs meet the
+predeclared limits. The earlier non-passing or defective attempts remain listed
+in `docs/stage_10_attempt_log.md`.
+
+Production discretization remains blocked because the production material,
+irreversible strain, thermal boundary/contact, friction, release and 3D surface
+contact definitions do not exist. Verification convergence cannot qualify an
+unbuilt production model. No production sweep was run.
+
 ## Completion records and stage boundary
 
-Current records: `docs/stage_09_structural_checks.json`, `docs/stage_09_quality.md`,
-`docs/stage_09_pdf_review.json`, `docs/stage_09_manifest.json`,
-`docs/stage_09_delivery.json` and `docs/integrity_report.json`.
+Current records: `docs/stage_10_convergence_checks.json`,
+`docs/stage_10_quality.md`, `docs/stage_10_attempt_log.md`,
+`docs/stage_10_pdf_review.json`, `docs/stage_10_manifest.json`,
+`docs/stage_10_delivery.json` and `docs/integrity_report.json`.
 No production campaign, physical validation, sensitivity, propagated uncertainty
-or optimization is complete. Do not begin Prompt 10 without user instruction.
+or optimization is complete. Stage 10 contact-control variation is numerical
+model sensitivity, not the later global physical-input sensitivity study. Do
+not begin Prompt 11 without user instruction.
 
 Stage 9 result: all 114 comparisons pass. Maximum stress error is 3.8271 × 10⁻⁶ MPa; maximum reaction error is 3.8280 × 10⁻⁶ N. Accepted runs are free_01, fixed_01, eigen_free_01, eigen_fixed_01, contact_03 and visco_02 under simulation/verification/stage09_.
+
+Stage 10 result: all final verification refinement pairs pass the predeclared
+limits. The authoritative values are the three CSV files under `convergence/`.
+No production mesh, physical validation result or production response is claimed.

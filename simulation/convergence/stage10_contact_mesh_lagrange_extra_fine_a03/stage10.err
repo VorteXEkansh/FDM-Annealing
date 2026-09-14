@@ -1,0 +1,20 @@
+/COM,ANSYS RELEASE 2026 R1           BUILD 26.1      UP20260202       21:16:54
+
+ *** WARNING ***                         ELAPSED TIME =       6.210   TIME= 21:16:56
+ All selected contact pairs are initially open.  Rigid body motion can   
+ occur.  You may use auto CNOF by setting KEYOPT(5) to close small       
+ gaps.                                                                   
+
+ *** WARNING ***                         ELAPSED TIME =       6.738   TIME= 21:16:57
+ Pivoting has been activated for the Sparse Matrix Solver.  The memory   
+ required may greatly exceed the predicted amount.  In that event, use   
+ the DSPOPTION command to change the memory mode and/or memory size      
+ used by the Sparse Matrix Solver.                                       
+
+ *** WARNING ***                         ELAPSED TIME =       7.426   TIME= 21:16:57
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 4.422500481E-10 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      

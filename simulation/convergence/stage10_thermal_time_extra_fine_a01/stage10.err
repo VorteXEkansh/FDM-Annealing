@@ -1,0 +1,11 @@
+/COM,ANSYS RELEASE 2026 R1           BUILD 26.1      UP20260202       21:02:59
+
+ *** WARNING ***                         ELAPSED TIME =     181.772   TIME= 21:05:56
+ During this session the elapsed time exceeds the CPU time by 231%.      
+ This often indicates either a lack of physical memory (RAM) required    
+ to efficiently handle this simulation or a particularly slow hard       
+ drive configuration.  This simulation can be expected to run faster on  
+ identical hardware if additional RAM or a faster hard drive             
+ configuration is made available.  For more details, please see the      
+ Mechanical APDL Performance Guide which is part of the Ansys Help       
+ system.                                                                 

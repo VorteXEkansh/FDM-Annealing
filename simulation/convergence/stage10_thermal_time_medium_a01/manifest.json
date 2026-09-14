@@ -1,0 +1,37 @@
+{
+  "accepted": true,
+  "error": "",
+  "returncode": 0,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM_stage10_thermal_time_medium_2fphx897\\input.dat",
+    "-o",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM_stage10_thermal_time_medium_2fphx897\\mapdl.out",
+    "-j",
+    "stage10",
+    "-np",
+    "1"
+  ],
+  "files": {
+    "case.json": "9e26dd1a78c4cbf84769c8feb3bfba61dab7daedfe155e188460e263ff1d89eb",
+    "input.dat": "a399cf727376fcc181c5b82851ac79e4d45bf0341af62903746c45db806ae09a",
+    "mapdl.out": "1f19e96873abdaa39e51482708ffd10fe4e1cb73265d8d0d847ba70ffc4bd160",
+    "result.json": "a01ea636417224c3a4c47517cc9db57193e8abcc93ec9033ee3d8eb2a1a0be66",
+    "script_snapshot.py": "373a321b29ed6f710288e02edd87c3dc06a2d5496a8d88aa396ea84d7d1e0a03",
+    "stage10.err": "33b02f2a8ab63d2c65e03eb9b12cc08d2e9a9d87f1f2a52bf986e6afbd1faea4",
+    "stage10.log": "f8081c42833f1b53f0bebc6db5d9dda595243e16ec83b67d2c41d89d252d2eb5",
+    "stage10_thermal.DSP": "f9e170d104eee94f061d778727b8efc1cf726b8fea56b1b31908e5e926af36dd",
+    "stage10_thermal.esav": "eb44c6c8d5161143da09d91d259c64a4d758a217299ffeb7dc97b4390824aa79",
+    "stage10_thermal.full": "ae13db1444be7c5eb92baf7b88d6c12463d8de5dc1a9ed0752ac2a7e050da22c",
+    "stage10_thermal.ldhi": "bd368ffbe0fe894473aeb8b937043cb51ece1f01047abb148da10af35541fbae",
+    "stage10_thermal.mntr": "8737d32193c36418bff39f4847d11fa5c6b59989cf0f45aee39ef9580d1327ec",
+    "stage10_thermal.r001": "dddf18435fc4b1e971c865e844d98ee42c2d3fb4e3c9a33c15739b762c384865",
+    "stage10_thermal.rdb": "128d00f45cc8ca81e056c26143424ab425efe99592f2e2539d817615c09dee8a",
+    "stage10_thermal.rth": "7c1ccdb9e2e36db0d7ce5f5fdfe205fcf6d7331fedd7afada2d181c2e4b9113d",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "temperature_profile.csv": "0e388bd1875c3b97f16c6f9dad6768a743e11af359763224fa11fffb0812d632"
+  }
+}

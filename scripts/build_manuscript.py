@@ -10,7 +10,7 @@ from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_LEFT, TA_CENTER
 from reportlab.lib.pagesizes import A4
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle, Flowable
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle, Flowable, Image
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'output/pdf/Constrained-Annealing-2026-DRAFT.pdf'
@@ -114,6 +114,12 @@ def build():
             story.extend([tab,Spacer(1,12)])
             continue
         elif line.startswith('FIGURE:'): story.append(GapFigure())
+        elif line.startswith('IMAGE:'):
+            image_path=ROOT/line[6:].strip()
+            figure=Image(str(image_path))
+            figure._restrictSize(487,360)
+            figure.hAlign='CENTER'
+            story.append(figure)
         elif line.startswith('CAPTION:'): story.append(P(line[8:].strip(),ST['caption']))
         elif line.startswith('EQ:'): story.append(P(line[3:].strip(),ST['equation']))
         elif line.startswith('### '): story.append(P(line[4:],ST['heading']))

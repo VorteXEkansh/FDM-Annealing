@@ -1,0 +1,11 @@
+{
+  "w_max_mm": 0.008170220501255265,
+  "residual_displacement_mm": 0.05963922363170715,
+  "residual_stress_p95_MPa": 9.96500026145145e-05,
+  "top_node_count": 16,
+  "element_count": 30,
+  "mapdl_warning_count": 3,
+  "mapdl_error_count": 0,
+  "converged_message_count": 2405,
+  "solver_return_code": 0
+}

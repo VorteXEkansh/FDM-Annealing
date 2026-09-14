@@ -1,0 +1,38 @@
+{
+  "accepted": true,
+  "error": "",
+  "returncode": 0,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM_stage10_structural_mesh_medium_6fb8iv3m\\input.dat",
+    "-o",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM_stage10_structural_mesh_medium_6fb8iv3m\\mapdl.out",
+    "-j",
+    "stage10",
+    "-np",
+    "1"
+  ],
+  "files": {
+    "case.json": "55bd1efad6f304e8411a3d9edfd5338f24e4a0dd5dab52bd5dc3040db1fd010a",
+    "element_stress.csv": "ce470a8ce5f99ad22d8c172c66a4b881602701987fa88ebe84ef7150ae6c3da5",
+    "input.dat": "43e7f9849189073a83955bfef355beae084711f23a24fdc8da1e8a70c5455a26",
+    "mapdl.out": "6781e929ab2eb5bb300666a92413f975113222b49309000af1cc5a9efc1e05a3",
+    "result.json": "fd526114122011ed8e162502131e4d2795a447e84c17da778a5f2697c8979207",
+    "script_snapshot.py": "480fda88084cfefd3663a85803baf21818f2f84e4875f3fd75667f7fc8d941c7",
+    "stage10.err": "efe3c6e22f5c9a045a903a9ba2f0c76e2bd733a579a0418c238f7fffd19a45d1",
+    "stage10.log": "12c1ace1a599173a608cd79937d3390355c7eea4c4f8568ec7580d09d3ed121e",
+    "stage10_structural.DSP": "13a3515da336b650d815860e688f6aaad8a48785f338c3e01a3e8354dddda5fb",
+    "stage10_structural.esav": "d162d27d75d73073718bff73b1fac4d34873deab80fc673cab2868d1d8b18c67",
+    "stage10_structural.full": "d0bf91102dc838ce533b6da70a2ea96a0751bd6a535c866014aa51037e5eed43",
+    "stage10_structural.ldhi": "845864fc82f198a238610fe2488c37d7aca5b05d26d910ec88ad5f2599c68117",
+    "stage10_structural.mntr": "e778ac097470d63bfa74f14fc6b1300bd1b7168b0aef00e5bd25f0ca2a41d7d1",
+    "stage10_structural.r001": "734b95923c698556c1703d56ce373693da54e1b64572a2b589c41479e5587583",
+    "stage10_structural.rdb": "289fef2f08ff69270310698360e6d57662b31c0ba919a31dfc2b2806cac6ea56",
+    "stage10_structural.rst": "1adf6276404a6748e874c64a175c66641e7c4e7a13319d3c1a39764ed1b58307",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "top_nodes.csv": "56f54e2a91ca2bddf486ee73faebbb6e79c932b03f5e0bc83776415df361c9ad"
+  }
+}
