@@ -35,6 +35,11 @@ if args.stage >= 10:
     paths += [str(p.relative_to(ROOT)).replace('\\','/') for p in sorted((ROOT/'simulation/convergence').rglob('*')) if p.is_file()]
     paths = list(dict.fromkeys(paths))
     scope = 'Genuine MAPDL mesh, time-step and contact-control convergence for verification configurations; no production mesh, production sweep or physical validation.'
-data={'stage':args.stage,'date':('2026-09-14' if args.stage >= 10 else '2026-09-13'),'algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
+if args.stage >= 11:
+    paths += ['docs/validation_protocol.md','docs/stage_11_validation_checks.json','docs/stage_11_pdf_review.json','scripts/build_validation_dataset.py','scripts/check_validation_stage.py','analysis/validation_metrics.py','tests/test_validation_metrics.py']
+    paths += [p.relative_to(ROOT).as_posix() for folder in ['validation','literature/evidence/stage_11'] for p in sorted((ROOT/folder).rglob('*')) if p.is_file()]
+    paths = list(dict.fromkeys(paths))
+    scope = 'Independent literature validation design and reserved source observations; no validation solve or production sweep.'
+data={'stage':args.stage,'date':('2026-09-28' if args.stage >= 11 else '2026-09-14' if args.stage >= 10 else '2026-09-13'),'algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
 (ROOT/f'docs/stage_{args.stage:02d}_manifest.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(f'Recorded {len(paths)} input/code/output hashes')

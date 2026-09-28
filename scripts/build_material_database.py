@@ -156,7 +156,9 @@ def main() -> None:
             fixture_rows.append(dict(record_id=f"FIX-{len(fixture_rows)+1:03d}",fixture_material="AISI 304 stainless steel (candidate plate fixture)",property_symbol=symbol,property_name=name,value=str(value),unit=unit,temperature_C=str(temp),source_key="Meng2026",doi_or_reference="10.1038/s41598-026-45542-w",confidence_relevance="moderate; peer-reviewed compiled input table, product heat not yet specified; alpha convention unresolved",how_used_in_ANSYS="Tabulated isotropic thermal/structural fixture property; linear interpolation across temperature",source_locator="Table 1",notes="20, 100 and 200 °C rows bracket the planned 20–110 °C domain; no extrapolation required; alpha tangent/mean convention must be resolved before thermal-strain integration"))
     write_csv(OUT / "fixture_properties.csv", fixture_fields, fixture_rows)
 
-    evidence_paths = sorted((ROOT / "literature/evidence").rglob("*"))
+    # Fixed material evidence roots: later validation sources are held separately.
+    evidence_paths = sorted(p for stage in ("stage_04", "stage_05")
+                            for p in (ROOT / "literature/evidence" / stage).rglob("*"))
     outputs = [OUT / "pla_properties.csv", OUT / "property_sources.csv", OUT / "uncertainty_ranges.csv", OUT / "fixture_properties.csv"]
     manifest = {
         "stage": 5,

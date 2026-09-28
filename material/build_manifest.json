@@ -4,7 +4,7 @@
   "method": "manual source transcription plus deterministic calculations in scripts/build_material_database.py",
   "script": {
     "path": "scripts/build_material_database.py",
-    "sha256": "d9393feab057418bf7b0e00b01d829a26ae75cb4018632137a4fedf68e999608"
+    "sha256": "9335fcccc4c035abd1ac2f5940c4a9c379cd5360f0a06531e2d17b219f700dbc"
   },
   "evidence": [
     {

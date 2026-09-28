@@ -1,0 +1,29 @@
+{
+  "stage": 11,
+  "sources": [
+    {
+      "source_key": "Mould2022",
+      "doi": "10.3390/polym14132607",
+      "title": "Influence of Thermal Annealing Temperatures on Powder Mould Effectiveness to Avoid Deformations in ABS and PLA 3D-Printed Parts",
+      "retrieved": "2026-09-28",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9269357/fullTextXML",
+      "path": "literature/evidence/stage_11/Mould2022.xml",
+      "sha256": "368d1b0cceab0e5eccdc12cb85a0c3f04a6d91826443f5846b5c3c1830247ae4",
+      "metadata_path": "literature/evidence/stage_11/Mould2022_crossref.json",
+      "metadata_sha256": "5479039172cdf0ede39263ac94435a7135b40c48af10d99d7abdef52603caf32",
+      "doi_verified": true
+    },
+    {
+      "source_key": "Stojkovic2023",
+      "doi": "10.3390/ma16134574",
+      "title": "An Experimental Study on the Impact of Layer Height and Annealing Parameters on the Tensile Strength and Dimensional Accuracy of FDM 3D Printed Parts",
+      "retrieved": "2026-09-28",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10342851/fullTextXML",
+      "path": "literature/evidence/stage_11/Stojkovic2023.xml",
+      "sha256": "ce9bb67510a3830e3c2dda9c631b5eb2c496473e2df9167bb94c7bb34e96d9d5",
+      "metadata_path": "literature/evidence/stage_11/Stojkovic2023_crossref.json",
+      "metadata_sha256": "65f32fb69be4a8eb90b84aa5ba8e26951a0997054417dd8051825e22702a6d06",
+      "doi_verified": true
+    }
+  ]
+}

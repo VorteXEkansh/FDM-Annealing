@@ -5,7 +5,7 @@ Aadit Jain · Dheeraj Yadav · Ekansh Malhotra
 
 Production and Industrial Engineering, Delhi Technological University
 
-Computational manuscript draft · 14 September 2026
+Computational manuscript draft · 28 September 2026
 
 ### Abstract — structured research draft
 
@@ -13,7 +13,7 @@ Computational manuscript draft · 14 September 2026
 
 <b>Planned approach.</b> Genuine ANSYS analysis will compare mechanically free annealing with opposed-face gap restraint for a 60 mm × 10 mm × 4 mm rectangular plate over an evidence-supported sub-melting domain. Candidate levels are 80&nbsp;°C, 95&nbsp;°C and 110&nbsp;°C, with holds of 30 min, 60 min and 90 min; their admission depends on the selected material evidence. Temperature-dependent, history-dependent behavior and contact will be represented only to the extent supported by data. Thermal histories, signed dimensions and released warpage will be distinguished from contact pressure and conditional stress predictions. Numerical verification, independent literature-based validation and uncertainty assessment will precede multi-objective interpretation.
 
-<b>Results status.</b> One Stage 8 thermal and six Stage 9 structural/contact ANSYS reference cases are verified. Stage 10 adds formal mesh, time-step and contact-control refinement for three declared numerical configurations. A 90 × 12 two-layer Prony grid is confirmed by 120 × 16 elements: W<sub>max</sub>, residual displacement and the interior 95th-percentile stress change by 0.9327%, 0.5821% and 2.0266%. A 32-element plane-wall grid is confirmed by 64 elements, with 0.0009423% and 0.0060073% changes in 300 s thermal lag and temperature gradient. A 40-element normal-Lagrange interface is confirmed by 60 elements, with 0.12698% and 0.36127% changes in mean and peak pressure and zero reported penetration. The selected verification increments also pass confirmation. These are genuine solver values for numerical fixtures, not production PLA coupon predictions. No production mesh, physical validation finding or optimum exists.
+<b>Results status.</b> One Stage 8 thermal and six Stage 9 structural/contact ANSYS reference cases are verified. Stage 10 adds formal mesh, time-step and contact-control refinement for three declared numerical configurations. A 90 × 12 two-layer Prony grid is confirmed by 120 × 16 elements: W<sub>max</sub>, residual displacement and the interior 95th-percentile stress change by 0.9327%, 0.5821% and 2.0266%. A 32-element plane-wall grid is confirmed by 64 elements, with 0.0009423% and 0.0060073% changes in 300 s thermal lag and temperature gradient. A 40-element normal-Lagrange interface is confirmed by 60 elements, with 0.12698% and 0.36127% changes in mean and peak pressure and zero reported penetration. The selected verification increments also pass confirmation. These are genuine solver values for numerical fixtures, not production PLA coupon predictions. Stage 11 reserves 18 external dimensional means for a separate source-specific reproduction; three selected maxima from a second study remain quarantined. No validation solve, physical validation finding or optimum exists.
 
 <b>Intended contribution.</b> The study will assess the clearance–distortion–stress trade-off and distinguish temporary geometric suppression from released stability. Prior supported annealing and numerical optimization preclude a broad first-of-kind claim. No strength improvement or industrial treatment recommendation is asserted.
 
@@ -546,15 +546,47 @@ CAPTION: Figure 4. Contact-control sensitivity. F<sub>KN</sub> controls penalty 
 All final verification refinement pairs pass their predeclared limits. The selected settings apply only to the exact verification configurations: 90 × 12 structural elements, 32 thermal elements through thickness, 40 normal-Lagrange interface elements over a 40 × 16 solid grid, Δt = 0.25 s for the thermal history and 0.01/0.1 s for structural ramps/holds. The three-dimensional coupon/fixture changes topology, contact dimensionality, thermal/contact properties, irreversible strain and release behavior. Therefore no production mesh or time step is selected, and no production sweep is admitted.
 
 <!-- PAGE -->
-### 6.4. Calibration and independent evidence
+### 6.4. Independent literature validation design
 
-Published data may calibrate a material law or test a prediction, but using the same observations for both does not provide independent validation. Reserve validation observations and document that separation before fitting. Independence should be checked by source and specimen/condition lineage, not merely by using different rows exported from the same fitted dataset.
+Stage 11 reserves published dimensional observations before any validation solve. The primary source is Lluch-Cerezo et al. [11, Table 5]; its material is Ultimaker Pearl White PLA. The bar measures 80 mm × 10 mm × 4 mm, with unidirectional roads along its length, 100% infill and 0.2 mm layers. The reported furnace schedule uses a 10 °C min⁻¹ ramp and a 120 min treatment. The mould is cooled in the furnace to room temperature before unpacking. The corresponding mould-free cooling/support path, part-temperature history and observation delay remain unresolved.
 
-Compatibility requires matching or bounding material grade, print architecture, geometry, support, thermal cycle, cooling/release and response definition. Values digitized from a figure require the figure/panel identity, axis units, digitization procedure and uncertainty. A publication's fitted model or literature compilation is not automatically an independent experimental target.
+The primary reservation contains six mould-free temperature groups from 63 °C to 132 °C, each with signed length, width and height changes averaged over five specimens. Table 13 presents the published observations to make the target explicit; they are not predictions from the present work. The source measures width and height at three sections. Caliper resolution is 0.01 mm and stated accuracy is ±0.03 mm; within-condition dimensional scatter and individual initial dimensions are unavailable. Nominal geometry therefore cannot be used to reconstruct unreported absolute changes or specimen-level uncertainty.
 
-Validation should report prediction–observation discrepancy together with numerical and observational uncertainty and a declared acceptance rationale. Dimensional agreement does not validate unobserved contact stress. An unconstrained comparison can support recovery behavior but does not by itself validate a constrained-contact prediction. Qualitative trends offer weaker evidence than compatible quantitative observations.
+TABLE: Reserved experimental dimensional means from Lluch-Cerezo et al. [11, Table 5], without mould
+T (°C) | Length change (%) | Width change (%) | Height change (%)
+63 | −0.13 | −0.06 | 0.00
+75 | −1.60 | −0.11 | 2.74
+86 | −2.30 | −0.16 | 2.62
+98 | −2.88 | 0.15 | 2.60
+109 | −3.05 | 0.30 | 3.94
+132 | −3.58 | 0.18 | 3.69
 
-If no adequate independent constrained dataset can be found, the manuscript must retain that limitation and restrict the claim. Agreement obtained by altering parameters after viewing reserved observations requires a new independent test. No validation data have yet been extracted or accepted.
+All 42 PLA observations from Table 5 are preserved in the data archive, including the excluded cases. Powder-supported observations cannot validate a plate-gap fixture. The 155 °C cases overlap the reported 145–160 °C melting interval and are excluded from this sub-melting validation design. The inconsistent final temperature in the source's Table 7 is not repaired or used; the unambiguous lower-temperature Table 5 entries remain separately traceable. These six source temperatures do not revise the primary production design.
+
+The secondary source is Stojković et al. [2, Table 8], using PrimaSelect PLA PRO with 75% cubic infill and a dog-bone specimen. Three reported dimensional maxima are archived, but quarantined from quantitative validation. They are selected extremes rather than condition means; the pooled standard deviations mix process conditions. Their signs are unresolved, and the source's percentage equations use a different denominator from Eq. (15). A thin sand layer on steel, the porous architecture and the different formulation also require a separate reproduction. Neither source provides residual-stress, contact-pressure or warpage-field validation data.
+
+<!-- PAGE -->
+### 6.5. Calibration separation and response comparison
+
+Chapuis et al. [8] supply the inherited Prusament constitutive calibration: DMA/master-curve parameters, Maxwell coefficients and temperature shifting. Their bilayer curvature-to-pre-strain fit is also calibration-related. Those observations are excluded from independent validation. The reserved data from [11] have not informed parameter estimation in this project; all directions from a condition remain grouped. The reservation is prospective relative to fitting and solving, but is not blinded because the published outcomes have been inspected for appraisal.
+
+Material identity limits the inference. Reproducing [11] requires an independently supported Ultimaker material model, its printed state and compatible thermal/support boundaries. Prusament coefficients cannot be transferred merely because both products are PLA. Initial eigenstrain, convection, cooling or contact must not be fitted to the reserved outcomes. If any target guides tuning or model selection, its entire condition and correlated directions become calibration data and a new independent test is required.
+
+Before solving, the case manifest must fix the material law and provenance, source geometry, road axes, heating/holding/cooling histories, observation state, support/gravity and response extraction. Numerical convergence must be demonstrated for that reproduction. Unknown part-temperature or support histories require independently supported scenarios; missing inputs cannot be replaced by the idealized FREE boundary or arbitrary zero values. The source protocol defines the intended comparison but does not yet define a uniquely executable validation model.
+
+For matched predicted and observed values pᵢ and yᵢ, define
+
+EQ: eᵢ = pᵢ − yᵢ, aᵢ = |eᵢ|, rᵢ = 100aᵢ/|yᵢ| (yᵢ ≠ 0). (22)
+
+EQ: MAE = (1/n)∑ᵢ aᵢ, RMSE = √[(1/n)∑ᵢ eᵢ²]. (23)
+
+The implemented metrics retain signed errors and leave relative error undefined at zero. Absolute errors in directional percentage change are reported in percentage points. Near-zero observations are interpreted primarily through absolute error. Summaries are calculated separately for length, width and height across the six reserved temperature groups, with every point and the worst absolute error retained. Correlated directions are not independent replicates; millimetres, percentages, formulations and selected maxima are not pooled. R² and specimen-level confidence claims are not used.
+
+Acceptance is a bounded discrepancy assessment, not a universal error-percentage rule. If independently established numerical and measurement bounds b<sub>num</sub> and b<sub>meas</sub> exist in the same units, the predeclared compatibility screen is
+
+EQ: aᵢ ≤ b<sub>num, i</sub> + b<sub>meas, i</sub>. (24)
+
+Bounds must be fixed before solving and cannot be enlarged to absorb a discrepancy. Compatibility with their deterministic sum is not a statistical confidence statement or proof of validity. If either bound is missing, the classification is indeterminate. Current metrology and response-scatter gaps prevent a defensible validation pass/fail claim, although later descriptive errors may be reported with that limitation. Four synthetic arithmetic tests check the metric implementation; no validation error, prediction or physical validation outcome has been generated. Any eventual success will be restricted to the reproduced observable, formulation and protocol.
 
 <!-- PAGE -->
 ### 7. Sensitivity, uncertainty and multi-objective decisions
@@ -587,7 +619,7 @@ PLA transient thermal response | No compatible Prusament k(T) or c<sub>p</sub>(T
 Bulk irreversible strain | Only thin-bilayer programmed pre-strain for Prusament | Identifiable signed three-dimensional law without double-counting
 Stress and contact pressure | Structural patch tests plus 2D surface-contact mesh/control sensitivity; no production fields | Admitted 3D production contact, friction evidence and declared extraction rules
 Numerical convergence | Final mesh/time/contact pairs pass for three verification configurations | Repeat on the admitted production assembly before sweeps
-Physical predictive validity | No accepted dataset | Independent compatible observations and uncertainty
+Physical predictive validity | 18 reserved source-specific means; no validation solve | Independent material/boundary closures and comparison uncertainty
 Sensitivity and uncertainty | Not calculated | Justified inputs and reproducible numerical analysis
 Optimization | Not performed | Verified responses, feasibility rules and solver confirmation
 
@@ -606,6 +638,8 @@ Stage 8 adds a genuine MAPDL transient thermal reference solution. For the decla
 Stage 9 verifies free and restrained expansion, imposed retained strain, unilateral gap closure/reopening and the native 23-branch isothermal Prony response in six reference cases. All 114 comparisons satisfy their fixed tolerances; the maximum stress error is 3.8271 × 10⁻⁶ MPa. This establishes the stated implementation limits without supplying a bulk annealing law, a non-isothermal adapter or production fixture predictions.
 
 Stage 10 adds genuine MAPDL refinement for thermal, two-layer viscoelastic and surface-contact verification configurations. A 90 × 12 structural grid is confirmed by 120 × 16 elements; W<sub>max</sub>, displacement and the interior stress percentile change by 0.9327%, 0.5821% and 2.0266%. A 32-element plane-wall grid is confirmed by 64 elements; lag and gradient change by 0.0009423% and 0.0060073%. A 40-element normal-Lagrange interface is confirmed by 60 elements; mean and peak pressure change by 0.12698% and 0.36127%, with zero reported penetration. Thermal and structural time-step confirmations also pass. These settings qualify only their verification configurations.
+
+Stage 11 adds an auditable independent-validation design. Eighteen signed dimensional means from six mould-free conditions in [11] are reserved before fitting or solving. A second published dataset [2] is archived with selected-extreme and sign limitations. Calibration lineage, response mapping, error metrics and uncertainty-dependent interpretation are fixed. This establishes a validation protocol, not a validated material or fixture model.
 
 The Prusament evidence provides ν, α, T<sub>g</sub>, a 23-branch Maxwell spectrum and WLF/Arrhenius shifting over a directly characterized 23–85 °C interval. Thirty-eight analytical and synthetic unit tests verify the reference material relations. Compatible k(T), c<sub>p</sub>(T), complete orthotropy, crystallization kinetics and a bulk irreversible-strain law remain unavailable; fixture thermal strain awaits its expansion convention.
 
@@ -716,7 +750,7 @@ Numerical findings require genuine ANSYS field execution, verified material evid
 
 ### Supplement A. Provenance and reproducibility requirements
 
-The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, constitutive implementation/tests, parametric geometry and Stage 8–10 verification and convergence evidence. The base paper is preserved separately from the evolving manuscript. Solver artifacts include accepted results and all failed or superseded attempts; no production PLA field result exists.
+The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, constitutive implementation/tests, parametric geometry and Stage 8–10 verification and convergence evidence and the Stage 11 validation protocol. The base paper is preserved separately from the evolving manuscript. Solver artifacts include accepted results and all failed or superseded attempts; no production PLA field result exists.
 
 Each future case must preserve a unique identifier, the solver version, geometry and material orientation, input configuration, source references, units, boundary histories, mesh, time-integration and contact settings, execution status, raw-output location and file checksums. Failed cases remain in the record with their failure reason. Postprocessing must identify both the raw field and the script/equation producing each response.
 

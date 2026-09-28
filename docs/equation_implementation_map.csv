@@ -20,3 +20,6 @@ equation,relation,implementation,status,evidence_or_gate
 19,Uniform elastic and eigenstrain reference,scripts/run_structural_verification.py:references,verified_against_SOLID185,Synthetic fixtures only
 20,Finite-ramp Prony convolution,scripts/run_structural_verification.py:references,verified_against_SOLID185,65 C isothermal source spectrum; shifting unverified
 21,Adjacent discretization change,scripts/check_convergence_stage.py:delta_percent,implemented_for_mesh_and_time_tables,Verification configurations only; zero denominator rule explicit
+22,Signed absolute and relative validation errors,analysis/validation_metrics.py:compare,implemented_not_applied_to_solver_predictions,Zero observed value leaves relative error undefined
+23,MAE and RMSE,analysis/validation_metrics.py:compare,implemented_not_applied_to_solver_predictions,Separate response units and directions; no validation solve
+24,Deterministic discrepancy compatibility,analysis/validation_metrics.py:bounded_interpretation,implemented_not_applied_to_solver_predictions,Missing bounds are indeterminate; not statistical validation

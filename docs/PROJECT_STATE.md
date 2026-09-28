@@ -1,7 +1,7 @@
 # Authoritative project state
 
-Stage: **Prompt 10/20 — numerical convergence and discretization study**.
-Date: 2026-09-14 (Asia/Calcutta).
+Stage: **Prompt 11/20 — independent literature validation design**.
+Date: 2026-09-28 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
 ## Research identity
@@ -35,7 +35,7 @@ Fixture material: **AISI 304 stainless steel selected as candidate plate materia
 Initial residual stress, recovery strain and crystallization kinetics: **unavailable**.
 Production boundary histories, reference temperature, release rule, convection, radiation and thermal contact: **not fixed**. The separate verification history is fully specified and must not be transferred as a physical protocol.
 Mesh/time-step/contact convergence: **passed for three declared Stage 10 verification configurations only**. Structural, thermal, and normal-Lagrange contact benchmark grids plus thermal and structural time increments were selected and confirmed. No three-dimensional production mesh or production time step is selected.
-Independent validation datasets: **not extracted or accepted**.
+Independent validation datasets: **45 published observations extracted; 18 mould-free means reserved for conditional source-specific reproduction, 24 context records excluded, and three secondary maxima quarantined. No validation solve or physical validity claim.**
 Sensitivity indices, uncertainty intervals and optimization results: **none**.
 No performance improvement, optimal process condition or experimental confirmation is claimed.
 
@@ -232,11 +232,27 @@ Current records: `docs/stage_10_convergence_checks.json`,
 `docs/stage_10_delivery.json` and `docs/integrity_report.json`.
 No production campaign, physical validation, sensitivity, propagated uncertainty
 or optimization is complete. Stage 10 contact-control variation is numerical
-model sensitivity, not the later global physical-input sensitivity study. Do
-not begin Prompt 11 without user instruction.
+model sensitivity, not the later global physical-input sensitivity study. Stage 11 is now authorized and documented below. Do not begin Prompt 12 without user instruction.
 
 Stage 9 result: all 114 comparisons pass. Maximum stress error is 3.8271 × 10⁻⁶ MPa; maximum reaction error is 3.8280 × 10⁻⁶ N. Accepted runs are free_01, fixed_01, eigen_free_01, eigen_fixed_01, contact_03 and visco_02 under simulation/verification/stage09_.
 
 Stage 10 result: all final verification refinement pairs pass the predeclared
 limits. The authoritative values are the three CSV files under `convergence/`.
 No production mesh, physical validation result or production response is claimed.
+
+
+## Validation design — Stage 11 (current)
+
+docs/validation_protocol.md is the pre-solve protocol. The existing literature matrix was screened; two primary full-text XML sources and fresh Crossref DOI metadata are archived under literature/evidence/stage_11/, with hashes in validation/source_manifest.json. The old literature matrix is a historical appraisal; this protocol supersedes its candidate-validation status without overwriting evidence.
+
+validation/validation_dataset.csv contains 45 actual published observations, reproducibly extracted by scripts/build_validation_dataset.py: all 42 PLA entries in Lluch-Cerezo et al. (2022), Table 5, plus the three PLA maxima in Stojković et al. (2023), Table 8. Predictions, errors and unavailable response scatter remain blank.
+
+The primary reserved set is 18 directional means at 63, 75, 86, 98, 109 and 132 °C without a powder mould. It requires a separate 80 mm × 10 mm × 4 mm Ultimaker Pearl White PLA reproduction; the project Prusament coefficients are not transferable. Powder-supported values remain context. The 155 °C group is excluded for overlap with the source melting range; the Table 7 temperature conflict remains unresolved. Lower-temperature Table 5 rows are independently unambiguous. Actual cooling/support histories, material law, initial state and response uncertainty still gate execution.
+
+The secondary PrimaSelect PLA PRO records are reported maxima, not case means, and their sign/selection semantics and detailed protocol are insufficient for admitted quantitative validation. They remain quarantined. No R², pooled dimensional score, stress/contact/warpage validation or uncertainty intervals are claimed.
+
+validation/calibration_register.csv fixes Chapuis2025 DMA/Maxwell/shift and bilayer pre-strain lineage as calibration-related. External reserved observations have not been used for fitting. Reservation is prospective but not blinded. Any tuning to a reserved condition reclassifies all its correlated directions as calibration and requires a new independent set.
+
+analysis/validation_metrics.py implements signed and absolute error, zero-safe relative error, MAE, RMSE and deterministic discrepancy interpretation. Four synthetic arithmetic tests pass. Missing measurement or numerical bounds yield indeterminate status; compatible bounds are not proof of validity. Six condition means per direction are not independent specimen residuals. The complete manuscript now includes source selection, the reserved experimental table, split rules, response mapping, metrics and admission limits.
+
+Stage 11 creates no new solver output and no production sweep. The production model and physical validation remain blocked by the previously identified material, boundary and metrology gaps. Current records are docs/stage_11_validation_checks.json, docs/stage_11_quality.md, docs/stage_11_pdf_review.json, docs/stage_11_manifest.json, docs/stage_11_delivery.json and docs/integrity_report.json. Stop at Prompt 11.

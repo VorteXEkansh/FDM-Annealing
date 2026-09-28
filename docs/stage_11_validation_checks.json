@@ -1,0 +1,92 @@
+{
+  "stage": 11,
+  "date": "2026-09-28",
+  "passed": true,
+  "count": 17,
+  "checks": [
+    {
+      "check": "CSV reproduces source XML exactly",
+      "status": "pass"
+    },
+    {
+      "check": "Unique observation IDs",
+      "status": "pass"
+    },
+    {
+      "check": "18 primary means: six conditions and three directions",
+      "status": "pass"
+    },
+    {
+      "check": "Primary selection excludes powder restraint and melting case",
+      "status": "pass"
+    },
+    {
+      "check": "Secondary maxima quarantined",
+      "status": "pass"
+    },
+    {
+      "check": "No fabricated predictions, errors or scatter",
+      "status": "pass"
+    },
+    {
+      "check": "All observed rows unused in calibration",
+      "status": "pass"
+    },
+    {
+      "check": "Reserved validation evidence excluded from material database",
+      "status": "pass"
+    },
+    {
+      "check": "Calibration source distinct from external observations",
+      "status": "pass"
+    },
+    {
+      "check": "Signed primary observations preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Secondary source extrema preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Mould2022 source and metadata hashes",
+      "status": "pass"
+    },
+    {
+      "check": "Mould2022 DOI exact match",
+      "status": "pass"
+    },
+    {
+      "check": "Stojkovic2023 source and metadata hashes",
+      "status": "pass"
+    },
+    {
+      "check": "Stojkovic2023 DOI exact match",
+      "status": "pass"
+    },
+    {
+      "check": "Four synthetic metric tests pass",
+      "status": "pass"
+    },
+    {
+      "check": "Nonblind reservation and uncertainty limit explicit",
+      "status": "pass"
+    }
+  ],
+  "observation_count": 45,
+  "reserved_primary_count": 18,
+  "excluded_context_count": 24,
+  "secondary_quarantined_count": 3,
+  "solver_validation_executed": false,
+  "physical_validation_pass_claimed": false,
+  "source_hashes": {
+    "validation/validation_dataset.csv": "ceff7f0fffe3561e092e1218475275387fe269099b01b781fb064ea0f75adb84",
+    "validation/source_manifest.json": "5337e762a72ba3d6da921aff1fa8b051129a2fceaa3a43c0d3ff455f82866722",
+    "validation/calibration_register.csv": "55f8fd35a1411ac115deda499b30f21b31d21f59cce13a61ac406d8093abdc28",
+    "docs/validation_protocol.md": "defe486d7dbef0024bdd6e41d7cf6cd839b14071e2a731bd597ada5ff4c87831",
+    "scripts/build_validation_dataset.py": "a93a49585f7bbd062f9fd83b57fc685a56f93ddc52e99ebe593a06f3a3cacfec",
+    "scripts/check_validation_stage.py": "7e61948cb21f4750f429272d354c0a4f94627208593ff75d0855706a1f93c7fe",
+    "analysis/validation_metrics.py": "8f7b5e27824220652dfc4a3c4cc628dea108d5bbd989d6c1c9b613b3d8156fac",
+    "tests/test_validation_metrics.py": "561525d95d2eb65c3e2729aaf76f3eec85ee4f79aad60b6e60d2debbc95c9046"
+  }
+}
