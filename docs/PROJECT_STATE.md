@@ -1,7 +1,7 @@
 # Authoritative project state
 
-Stage: **Prompt 11/20 — independent literature validation design**.
-Date: 2026-09-28 (Asia/Calcutta).
+Stage: **Prompt 12/20 — independent validation execution assessment; scientific execution blocked**.
+Date: 2026-09-29 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
 ## Research identity
@@ -232,7 +232,7 @@ Current records: `docs/stage_10_convergence_checks.json`,
 `docs/stage_10_delivery.json` and `docs/integrity_report.json`.
 No production campaign, physical validation, sensitivity, propagated uncertainty
 or optimization is complete. Stage 10 contact-control variation is numerical
-model sensitivity, not the later global physical-input sensitivity study. Stage 11 is now authorized and documented below. Do not begin Prompt 12 without user instruction.
+model sensitivity, not the later global physical-input sensitivity study. Stages 11 and 12 are documented below; the original Stage 10 records remain historical.
 
 Stage 9 result: all 114 comparisons pass. Maximum stress error is 3.8271 × 10⁻⁶ MPa; maximum reaction error is 3.8280 × 10⁻⁶ N. Accepted runs are free_01, fixed_01, eigen_free_01, eigen_fixed_01, contact_03 and visco_02 under simulation/verification/stage09_.
 
@@ -241,7 +241,7 @@ limits. The authoritative values are the three CSV files under `convergence/`.
 No production mesh, physical validation result or production response is claimed.
 
 
-## Validation design — Stage 11 (current)
+## Validation design — Stage 11 (frozen protocol)
 
 docs/validation_protocol.md is the pre-solve protocol. The existing literature matrix was screened; two primary full-text XML sources and fresh Crossref DOI metadata are archived under literature/evidence/stage_11/, with hashes in validation/source_manifest.json. The old literature matrix is a historical appraisal; this protocol supersedes its candidate-validation status without overwriting evidence.
 
@@ -255,4 +255,17 @@ validation/calibration_register.csv fixes Chapuis2025 DMA/Maxwell/shift and bila
 
 analysis/validation_metrics.py implements signed and absolute error, zero-safe relative error, MAE, RMSE and deterministic discrepancy interpretation. Four synthetic arithmetic tests pass. Missing measurement or numerical bounds yield indeterminate status; compatible bounds are not proof of validity. Six condition means per direction are not independent specimen residuals. The complete manuscript now includes source selection, the reserved experimental table, split rules, response mapping, metrics and admission limits.
 
-Stage 11 creates no new solver output and no production sweep. The production model and physical validation remain blocked by the previously identified material, boundary and metrology gaps. Current records are docs/stage_11_validation_checks.json, docs/stage_11_quality.md, docs/stage_11_pdf_review.json, docs/stage_11_manifest.json, docs/stage_11_delivery.json and docs/integrity_report.json. Stop at Prompt 11.
+Stage 11 creates no new solver output and no production sweep. The production model and physical validation remain blocked by the previously identified material, boundary and metrology gaps. Current records are docs/stage_11_validation_checks.json, docs/stage_11_quality.md, docs/stage_11_pdf_review.json, docs/stage_11_manifest.json, docs/stage_11_delivery.json and docs/integrity_report.json. Stage 12 was subsequently authorized; retain this protocol unchanged.
+
+
+## Validation execution — Stage 12 (current)
+
+Scientific status: **independent validation remains incomplete and blocked**. No ANSYS validation run started. The six source-specific case specifications in simulation/cases/validation/ retain the published nominal geometry, architecture, oven ramp and treatment. Missing material/history/boundary inputs remain null. scripts/run_validation_cases.py --execute rejected all six before solver launch; simulation/validation/stage12_admission_01/admission.json preserves nine blockers per case and input/code hashes. This is an evidence rejection, not a numerical convergence failure or a measured mismatch.
+
+The primary source protocol was re-read and a targeted supplier/material search was conducted on 29 September 2026. The three-page manufacturer PLA data sheet is archived with its URL and hash in literature/evidence/stage_12/. It does not supply the required annealing recovery law or thermal functions and uses different print conditions. No coefficients were transferred into the material database. The Stage 11 protocol, calibration register, observed values, metric implementation and material values remain unchanged. No recalibration occurred.
+
+validation/validation_results.csv records all 18 primary means with blank predictions/errors. validation/validation_metrics.csv retains three groups with six expected conditions and zero matched predictions; no MAE or RMSE is computable. validation/validation_deviations.csv records the known differences and unresolved matches. validation/validation_report.md explains the attempted admission, limitations, source search and required recovery. figures/validation_observations.png and .svg show only source observations; no parity plot can exist without predictions.
+
+Four evidence-admission tests and the full 81-test repository suite pass. These are code tests, not physical validation. Required recovery includes source-compatible thermal/mechanical/irreversible-strain characterization and initial state, complete specimen thermal and mechanical boundaries, observation mapping, non-isothermal adapter, source-specific convergence and comparison uncertainty. New fitting needs an explicitly declared calibration lineage and cannot consume the reserved observations without reclassification and a new independent validation set.
+
+The full manuscript has an integrated validation-execution results/diagnosis section and revised abstract, evidence status and conclusions. Current integrity/delivery records use the stage_12 prefix. No validation success, production sweep, optimization or physical recommendation is authorized by this outcome. Documentation is complete; the requested numerical validation remains scientifically unachieved. Stop at Prompt 12; do not proceed automatically to Prompt 13.

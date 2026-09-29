@@ -13,6 +13,7 @@ simulation/runs/** -text -diff
 simulation/geometry/** -text -diff
 simulation/verification/** -text -diff
 simulation/convergence/** -text -diff
+simulation/validation/** -text -diff
 verification/*.csv -text -diff
 material/*.csv -text
 material/*.json -text

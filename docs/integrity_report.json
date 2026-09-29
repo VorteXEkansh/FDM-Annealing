@@ -1,6 +1,6 @@
 {
-  "stage": 11,
-  "date": "2026-09-28",
+  "stage": 12,
+  "date": "2026-09-29",
   "checks": [
     {
       "check": "Base PDF hash preserved",
@@ -75,7 +75,7 @@
       "status": "pass"
     },
     {
-      "check": "All four figures occur once",
+      "check": "All five figures occur once",
       "status": "pass"
     },
     {
@@ -319,13 +319,25 @@
       "status": "pass"
     },
     {
+      "check": "Stage 12 admission and missing-result checks pass",
+      "status": "pass"
+    },
+    {
+      "check": "Stage 12 code and output hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Blocked validation outcome integrated",
+      "status": "pass"
+    },
+    {
       "check": "All text lies inside page safety bounds",
       "status": "pass"
     }
   ],
-  "count": 80,
-  "pdf_sha256": "bfd9e28fdac7ed50e0c25d7d54964866fb24f949fd99381524ab56899ad5fb3f",
-  "manuscript_sha256": "cb4fa48ff4f5f3f4b4a3a0a918812f1e32513f308338e9fe6769a57426aaaea0",
+  "count": 83,
+  "pdf_sha256": "05bfa04cb2790e67f4a1faebb8c09f9c7153fcbcbf1ec346180ff30ff01fe9e2",
+  "manuscript_sha256": "cec73a1266c5ee5bd1dc8f362624f9518ad541daa13ea4856d1b10332f1f6a86",
   "material_manifest_sha256": "362ef609095cd253f3e62def720fd486cb7a27301395b82a95a67a3a5b0b3083",
   "geometry_manifest_sha256": "d76d855563cb38fa34c51995092edfbb35ead325bc4eb2c3a8bd18fefc0d8369",
   "thermal_manifest_sha256": "f1942fd9932f7fbc2a1678edcec6576fde89b602c04b38761c7183f08c85eca1",

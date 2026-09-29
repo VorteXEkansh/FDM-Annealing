@@ -1,0 +1,16 @@
+item,source_requirement,available_project_state,stage12_treatment,impact
+formulation,Ultimaker Pearl White PLA,Prusament calibration,No transfer; missing source-compatible law,Blocks prediction
+nominal_geometry,80 by 10 by 4 mm,60 by 10 by 4 mm production concept,Source geometry recorded in six specifications; no production geometry substituted,Needs source-specific mesh
+orientation,All roads longitudinal XY+0; build along height,Isotropic core only,Road axes recorded; no directional recovery coefficients invented,Blocks directional recovery prediction
+print_architecture,100 percent infill; 0.2 mm layers; 0.5 mm lines,No source-compatible initial printed state,Exact reported print settings recorded; no residual stress initialized,Blocks recovery prediction
+thermal_properties,Source-compatible temperature functions,No admitted Ultimaker thermal card,Missing inputs remain null,Blocks transient thermal solution
+temperature_domain,Six targets 63 to 132 degrees Celsius,Prusament direct characterization 23 to 85 degrees Celsius,No grade transfer even for 63 and 75; no extrapolation for higher targets,Blocks constitutive use
+holding_time,120 min treatment,Production candidates 30 to 90 min,Source duration retained; part-temperature attainment unresolved,Blocks complete history
+heating,10 degrees Celsius per minute oven ramp,No source convection or part-temperature record,Oven ramp preserved; no instantaneous uniform specimen temperature imposed,Blocks thermal history
+cooling,Furnace to room temperature explicitly described for mould,Mould-free cooling equivalence unresolved,No cooling curve or ambient value invented,Blocks residual observation state
+support_and_gravity,Mould-free supporting surface and friction unresolved,Idealized production FREE omits gravity,No FREE or plate-gap boundary substituted,Blocks mechanical boundary definition
+observation,Final cooled dimensions; W and H average three sections,Exact landmark and delay mapping not implemented,Section convention retained; no hot result substituted,Blocks matched extraction
+metrology,Percent change of actual initial dimensions; five specimen means,No raw initial dimensions or within-condition scatter,No nominal-dimension conversion or fabricated error bars,Blocks complete acceptance uncertainty
+adapter,History-dependent source-specific thermal and mechanical solution,Only material-point and isothermal ANSYS verification,No non-isothermal adapter or solver deck falsely claimed,Blocks solver launch
+discretization,Convergence for source-specific reproduction,Stage 10 numerical benchmark convergence only,No benchmark mesh transferred as qualified validation mesh,Blocks numerical qualification
+secondary_data,Signed condition-level response required,Selected positive maxima with unresolved sign,Remain quarantined; no metric score,Not admitted for validation

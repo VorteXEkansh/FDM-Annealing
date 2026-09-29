@@ -5,7 +5,7 @@ Aadit Jain · Dheeraj Yadav · Ekansh Malhotra
 
 Production and Industrial Engineering, Delhi Technological University
 
-Computational manuscript draft · 28 September 2026
+Computational manuscript draft · 29 September 2026
 
 ### Abstract — structured research draft
 
@@ -13,7 +13,7 @@ Computational manuscript draft · 28 September 2026
 
 <b>Planned approach.</b> Genuine ANSYS analysis will compare mechanically free annealing with opposed-face gap restraint for a 60 mm × 10 mm × 4 mm rectangular plate over an evidence-supported sub-melting domain. Candidate levels are 80&nbsp;°C, 95&nbsp;°C and 110&nbsp;°C, with holds of 30 min, 60 min and 90 min; their admission depends on the selected material evidence. Temperature-dependent, history-dependent behavior and contact will be represented only to the extent supported by data. Thermal histories, signed dimensions and released warpage will be distinguished from contact pressure and conditional stress predictions. Numerical verification, independent literature-based validation and uncertainty assessment will precede multi-objective interpretation.
 
-<b>Results status.</b> One Stage 8 thermal and six Stage 9 structural/contact ANSYS reference cases are verified. Stage 10 adds formal mesh, time-step and contact-control refinement for three declared numerical configurations. A 90 × 12 two-layer Prony grid is confirmed by 120 × 16 elements: W<sub>max</sub>, residual displacement and the interior 95th-percentile stress change by 0.9327%, 0.5821% and 2.0266%. A 32-element plane-wall grid is confirmed by 64 elements, with 0.0009423% and 0.0060073% changes in 300 s thermal lag and temperature gradient. A 40-element normal-Lagrange interface is confirmed by 60 elements, with 0.12698% and 0.36127% changes in mean and peak pressure and zero reported penetration. The selected verification increments also pass confirmation. These are genuine solver values for numerical fixtures, not production PLA coupon predictions. Stage 11 reserves 18 external dimensional means for a separate source-specific reproduction; three selected maxima from a second study remain quarantined. No validation solve, physical validation finding or optimum exists.
+<b>Results status.</b> One Stage 8 thermal and six Stage 9 structural/contact ANSYS reference cases are verified. Stage 10 adds formal mesh, time-step and contact-control refinement for three declared numerical configurations. A 90 × 12 two-layer Prony grid is confirmed by 120 × 16 elements: W<sub>max</sub>, residual displacement and the interior 95th-percentile stress change by 0.9327%, 0.5821% and 2.0266%. A 32-element plane-wall grid is confirmed by 64 elements, with 0.0009423% and 0.0060073% changes in 300 s thermal lag and temperature gradient. A 40-element normal-Lagrange interface is confirmed by 60 elements, with 0.12698% and 0.36127% changes in mean and peak pressure and zero reported penetration. The selected verification increments also pass confirmation. These are genuine solver values for numerical fixtures, not production PLA coupon predictions. Stage 11 reserves 18 external dimensional means for a separate source-specific reproduction; three selected maxima from a second study remain quarantined. Stage 12 assessed all six reserved conditions and rejected them before solver launch because the source-specific material, thermal history and support definitions are incomplete. No validation prediction, error metric, physical validation finding or optimum exists.
 
 <b>Intended contribution.</b> The study will assess the clearance–distortion–stress trade-off and distinguish temporary geometric suppression from released stability. Prior supported annealing and numerical optimization preclude a broad first-of-kind claim. No strength improvement or industrial treatment recommendation is asserted.
 
@@ -589,6 +589,31 @@ EQ: aᵢ ≤ b<sub>num, i</sub> + b<sub>meas, i</sub>. (24)
 Bounds must be fixed before solving and cannot be enlarged to absorb a discrepancy. Compatibility with their deterministic sum is not a statistical confidence statement or proof of validity. If either bound is missing, the classification is indeterminate. Current metrology and response-scatter gaps prevent a defensible validation pass/fail claim, although later descriptive errors may be reported with that limitation. Four synthetic arithmetic tests check the metric implementation; no validation error, prediction or physical validation outcome has been generated. Any eventual success will be restricted to the reproduced observable, formulation and protocol.
 
 <!-- PAGE -->
+### 6.6. Independent validation execution assessment: results and diagnosis
+
+All six predeclared source-specific cases were assessed for execution in Stage 12. Their specifications preserve the 80 mm × 10 mm × 4 mm source bar, longitudinal roads, oven ramp, 120 min treatment and the six reserved temperatures. Each case was rejected before ANSYS launch. No source-specific material card or solver deck is admitted, and no independent validation solution exists. This is a missing-input outcome, not an ANSYS convergence failure or evidence of poor agreement.
+
+TABLE: Source-reproduction requirements and current execution outcome
+Requirement | Available evidence | Consequence
+Geometry and architecture | Nominal dimensions and road/build axes from [11]; exact source settings retained | Requires source-specific mesh and extraction; the shorter production coupon is not substituted
+Material and initial state | Existing Prusament relaxation calibration [8]; target is Ultimaker Pearl White [11] | No grade transfer, directional recovery law or initial stress is admitted
+Thermal cycle and support | Oven ramp and treatment known; part/cooling histories and mould-free support unresolved | No arbitrary convection, cooling curve, friction or uniform specimen temperature is imposed
+Implementation and discretization | Earlier reference problems pass verification | No non-isothermal source-specific adapter or reproduction convergence is available
+Observation and uncertainty | Published signed means; no raw initial dimensions or condition scatter | No matched predictions or complete discrepancy bounds; acceptance cannot be assessed
+
+The execution record retains all six rejected cases and all 18 observations, with missing predictions and errors explicitly uncomputed. Each directional metric group therefore contains six expected conditions and no matched prediction. Equations (22)–(24) cannot produce a validation error, MAE, RMSE or acceptance decision without those inputs. Missing results are not zero error. No R², parity correlation, uncertainty interval or physical-validation pass is reported.
+
+<!-- PAGE -->
+IMAGE: figures/validation_observations.png
+CAPTION: Figure 5. Reserved published observations from [11, Table 5], reproduced solely to document the intended comparison. Each point is the reported mean for five specimens; three directions within a condition are correlated. Error bars are absent because condition-specific dimensional scatter is unavailable. No ANSYS predictions exist for these cases, so this is an observation-only figure and not a parity plot or a simulation result.
+
+The existing calibration data cannot close the gap by themselves. Prusament relaxation parameters do not establish Ultimaker Pearl White recovery, and the current isotropic core does not supply a source-compatible directional irreversible-strain law or initial printed state. The oven program alone does not establish the part-temperature trajectory. Substituting the idealized FREE boundary for an unknown support would also change the physical problem. Geometry is sufficiently described to specify the nominal bar, but that does not qualify a mesh or reconstruct individual initial measurements.
+
+No recalibration was performed. Fitting the reserved dimensional changes as imposed strain would use the validation response as an input and defeat independence. The cause of a prediction–measurement discrepancy cannot be diagnosed because no matched prediction exists. Grade, constitutive assumptions, thermal boundary, annealing-strain evidence and metrology are documented as prospective obstacles, not fitted explanations of residuals. Independent source-compatible characterization and boundary evidence, an implemented history-dependent solver model and reproduction-specific convergence are required before a new execution record can be admitted.
+
+The current model cannot be credibly independently validated against these observations. This conclusion concerns the present evidence and implementation; it is not evidence that a fully specified model would fail. Production sweeps remain blocked, and dimensional agreement in any future reproduction would not by itself validate fixture contact pressure, released warpage or residual stress.
+
+<!-- PAGE -->
 ### 7. Sensitivity, uncertainty and multi-objective decisions
 
 The intended analysis separates numerical error, uncertain inputs and model discrepancy. Candidate uncertain quantities include recovery-law parameters, initial state, expansion, relaxation, heat transfer, fixture gap and friction. Their bounds, dependence and probability distributions must come from sources or explicit engineering assumptions. A convenience range is not a measured distribution.
@@ -619,7 +644,7 @@ PLA transient thermal response | No compatible Prusament k(T) or c<sub>p</sub>(T
 Bulk irreversible strain | Only thin-bilayer programmed pre-strain for Prusament | Identifiable signed three-dimensional law without double-counting
 Stress and contact pressure | Structural patch tests plus 2D surface-contact mesh/control sensitivity; no production fields | Admitted 3D production contact, friction evidence and declared extraction rules
 Numerical convergence | Final mesh/time/contact pairs pass for three verification configurations | Repeat on the admitted production assembly before sweeps
-Physical predictive validity | 18 reserved source-specific means; no validation solve | Independent material/boundary closures and comparison uncertainty
+Physical predictive validity | Six source-specific cases rejected before launch; 18 reserved means remain unmatched | Independent material/boundary closures and comparison uncertainty
 Sensitivity and uncertainty | Not calculated | Justified inputs and reproducible numerical analysis
 Optimization | Not performed | Verified responses, feasibility rules and solver confirmation
 
@@ -637,11 +662,11 @@ Stage 8 adds a genuine MAPDL transient thermal reference solution. For the decla
 
 Stage 9 verifies free and restrained expansion, imposed retained strain, unilateral gap closure/reopening and the native 23-branch isothermal Prony response in six reference cases. All 114 comparisons satisfy their fixed tolerances; the maximum stress error is 3.8271 × 10⁻⁶ MPa. This establishes the stated implementation limits without supplying a bulk annealing law, a non-isothermal adapter or production fixture predictions.
 
-Stage 10 adds genuine MAPDL refinement for thermal, two-layer viscoelastic and surface-contact verification configurations. A 90 × 12 structural grid is confirmed by 120 × 16 elements; W<sub>max</sub>, displacement and the interior stress percentile change by 0.9327%, 0.5821% and 2.0266%. A 32-element plane-wall grid is confirmed by 64 elements; lag and gradient change by 0.0009423% and 0.0060073%. A 40-element normal-Lagrange interface is confirmed by 60 elements; mean and peak pressure change by 0.12698% and 0.36127%, with zero reported penetration. Thermal and structural time-step confirmations also pass. These settings qualify only their verification configurations.
+Stage 10 adds genuine MAPDL refinement for thermal, two-layer viscoelastic and surface-contact verification configurations. Structural, thermal and contact confirmation meshes and time-step pairs pass their predeclared limits. These settings qualify only the numerical reference configurations; no production mesh or time step is selected.
 
-Stage 11 adds an auditable independent-validation design. Eighteen signed dimensional means from six mould-free conditions in [11] are reserved before fitting or solving. A second published dataset [2] is archived with selected-extreme and sign limitations. Calibration lineage, response mapping, error metrics and uncertainty-dependent interpretation are fixed. This establishes a validation protocol, not a validated material or fixture model.
+Stage 11 adds an auditable independent-validation design. Eighteen signed dimensional means from six mould-free conditions in [11] are reserved before fitting or solving. A second published dataset [2] is archived with selected-extreme and sign limitations. Calibration lineage, response mapping, error metrics and uncertainty-dependent interpretation are fixed. Stage 12 then evaluated all six specifications and rejected execution before solver launch because the required material and physical-history definitions remain incomplete. No ANSYS validation prediction or comparison metric could be obtained. Neither a material model nor the fixture has been independently validated.
 
-The Prusament evidence provides ν, α, T<sub>g</sub>, a 23-branch Maxwell spectrum and WLF/Arrhenius shifting over a directly characterized 23–85 °C interval. Thirty-eight analytical and synthetic unit tests verify the reference material relations. Compatible k(T), c<sub>p</sub>(T), complete orthotropy, crystallization kinetics and a bulk irreversible-strain law remain unavailable; fixture thermal strain awaits its expansion convention.
+The implemented Prusament core remains restricted to its directly characterized 23–85 °C interval. Compatible thermal functions, bulk irreversible strain and initial-state evidence are missing. The tested material relations and successful reference problems cannot supply those physical inputs.
 
 The proposed contribution remains restricted to evidence-tested prediction of the clearance–distortion–stress trade-off after cooling and release. The scope compares FREE with initially centered GAP restraint for one specified material/architecture/geometry, while retaining signed response and excluding granular-media simulation and unverified strength claims.
 
@@ -750,7 +775,7 @@ Numerical findings require genuine ANSYS field execution, verified material evid
 
 ### Supplement A. Provenance and reproducibility requirements
 
-The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, constitutive implementation/tests, parametric geometry and Stage 8–10 verification and convergence evidence and the Stage 11 validation protocol. The base paper is preserved separately from the evolving manuscript. Solver artifacts include accepted results and all failed or superseded attempts; no production PLA field result exists.
+The project repository is <link href="https://github.com/VorteXEkansh/FDM-Annealing" color="#24576b">VorteXEkansh/FDM-Annealing</link>. It contains the DOI-verified literature matrix, novelty audit, search strategy, base-paper audit, the manuscript restructuring map, the complete current source, the authoritative research-state record, the property database, constitutive implementation/tests, parametric geometry and Stage 8–10 verification and convergence evidence the Stage 11 validation protocol and the Stage 12 case specifications, admission record, deviation register and validation report. The base paper is preserved separately from the evolving manuscript. Solver artifacts include accepted results and all failed or superseded attempts; no production PLA field result exists.
 
 Each future case must preserve a unique identifier, the solver version, geometry and material orientation, input configuration, source references, units, boundary histories, mesh, time-integration and contact settings, execution status, raw-output location and file checksums. Failed cases remain in the record with their failure reason. Postprocessing must identify both the raw field and the script/equation producing each response.
 

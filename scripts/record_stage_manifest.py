@@ -40,6 +40,12 @@ if args.stage >= 11:
     paths += [p.relative_to(ROOT).as_posix() for folder in ['validation','literature/evidence/stage_11'] for p in sorted((ROOT/folder).rglob('*')) if p.is_file()]
     paths = list(dict.fromkeys(paths))
     scope = 'Independent literature validation design and reserved source observations; no validation solve or production sweep.'
-data={'stage':args.stage,'date':('2026-09-28' if args.stage >= 11 else '2026-09-14' if args.stage >= 10 else '2026-09-13'),'algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
+if args.stage >= 12:
+    paths += ['docs/stage_12_validation_checks.json','docs/stage_12_pdf_review.json','scripts/build_validation_cases.py','scripts/run_validation_cases.py','scripts/build_validation_results.py','scripts/check_validation_execution.py','tests/test_validation_admission.py','figures/validation_observations.png','figures/validation_observations.svg']
+    paths += [p.relative_to(ROOT).as_posix() for folder in ['simulation/cases/validation','simulation/validation','literature/evidence/stage_12'] for p in sorted((ROOT/folder).rglob('*')) if p.is_file()]
+    paths = list(dict.fromkeys(paths))
+    scope = 'Six predeclared validation specifications rejected before solver execution; physical validation incomplete; no predictions, error metrics or production sweep.'
+
+data={'stage':args.stage,'date':('2026-09-29' if args.stage >= 12 else '2026-09-28' if args.stage >= 11 else '2026-09-14' if args.stage >= 10 else '2026-09-13'),'algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
 (ROOT/f'docs/stage_{args.stage:02d}_manifest.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(f'Recorded {len(paths)} input/code/output hashes')

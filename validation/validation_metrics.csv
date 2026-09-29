@@ -1,0 +1,4 @@
+direction,expected_conditions,matched_predictions,MAE_percentage_points,RMSE_percentage_points,worst_absolute_error_percentage_points,status
+L,6,0,,,,not_computable_no_prediction
+W,6,0,,,,not_computable_no_prediction
+H,6,0,,,,not_computable_no_prediction

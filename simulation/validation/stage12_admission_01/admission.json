@@ -1,0 +1,174 @@
+{
+  "stage": 12,
+  "date": "2026-09-29",
+  "execution_requested": true,
+  "cases": [
+    {
+      "case_id": "LC22_free_109",
+      "temperature_C": 109,
+      "status": "blocked_before_solver",
+      "blockers": [
+        "source_compatible_thermal_functions",
+        "source_compatible_mechanical_law",
+        "irreversible_strain_and_initial_state",
+        "complete_part_thermal_history",
+        "support_gravity_and_release",
+        "observation_state_and_landmarks",
+        "validated_nonisothermal_adapter",
+        "case_specific_convergence",
+        "source_specific_solver_adapter_not_implemented"
+      ],
+      "observation_ids": [
+        "LC22_109_without_mould_L",
+        "LC22_109_without_mould_W",
+        "LC22_109_without_mould_H"
+      ],
+      "solver_started": false,
+      "solver_command": null,
+      "solver_returncode": null,
+      "comparison_status": "not_evaluated_no_prediction"
+    },
+    {
+      "case_id": "LC22_free_132",
+      "temperature_C": 132,
+      "status": "blocked_before_solver",
+      "blockers": [
+        "source_compatible_thermal_functions",
+        "source_compatible_mechanical_law",
+        "irreversible_strain_and_initial_state",
+        "complete_part_thermal_history",
+        "support_gravity_and_release",
+        "observation_state_and_landmarks",
+        "validated_nonisothermal_adapter",
+        "case_specific_convergence",
+        "source_specific_solver_adapter_not_implemented"
+      ],
+      "observation_ids": [
+        "LC22_132_without_mould_L",
+        "LC22_132_without_mould_W",
+        "LC22_132_without_mould_H"
+      ],
+      "solver_started": false,
+      "solver_command": null,
+      "solver_returncode": null,
+      "comparison_status": "not_evaluated_no_prediction"
+    },
+    {
+      "case_id": "LC22_free_63",
+      "temperature_C": 63,
+      "status": "blocked_before_solver",
+      "blockers": [
+        "source_compatible_thermal_functions",
+        "source_compatible_mechanical_law",
+        "irreversible_strain_and_initial_state",
+        "complete_part_thermal_history",
+        "support_gravity_and_release",
+        "observation_state_and_landmarks",
+        "validated_nonisothermal_adapter",
+        "case_specific_convergence",
+        "source_specific_solver_adapter_not_implemented"
+      ],
+      "observation_ids": [
+        "LC22_63_without_mould_L",
+        "LC22_63_without_mould_W",
+        "LC22_63_without_mould_H"
+      ],
+      "solver_started": false,
+      "solver_command": null,
+      "solver_returncode": null,
+      "comparison_status": "not_evaluated_no_prediction"
+    },
+    {
+      "case_id": "LC22_free_75",
+      "temperature_C": 75,
+      "status": "blocked_before_solver",
+      "blockers": [
+        "source_compatible_thermal_functions",
+        "source_compatible_mechanical_law",
+        "irreversible_strain_and_initial_state",
+        "complete_part_thermal_history",
+        "support_gravity_and_release",
+        "observation_state_and_landmarks",
+        "validated_nonisothermal_adapter",
+        "case_specific_convergence",
+        "source_specific_solver_adapter_not_implemented"
+      ],
+      "observation_ids": [
+        "LC22_75_without_mould_L",
+        "LC22_75_without_mould_W",
+        "LC22_75_without_mould_H"
+      ],
+      "solver_started": false,
+      "solver_command": null,
+      "solver_returncode": null,
+      "comparison_status": "not_evaluated_no_prediction"
+    },
+    {
+      "case_id": "LC22_free_86",
+      "temperature_C": 86,
+      "status": "blocked_before_solver",
+      "blockers": [
+        "source_compatible_thermal_functions",
+        "source_compatible_mechanical_law",
+        "irreversible_strain_and_initial_state",
+        "complete_part_thermal_history",
+        "support_gravity_and_release",
+        "observation_state_and_landmarks",
+        "validated_nonisothermal_adapter",
+        "case_specific_convergence",
+        "source_specific_solver_adapter_not_implemented"
+      ],
+      "observation_ids": [
+        "LC22_86_without_mould_L",
+        "LC22_86_without_mould_W",
+        "LC22_86_without_mould_H"
+      ],
+      "solver_started": false,
+      "solver_command": null,
+      "solver_returncode": null,
+      "comparison_status": "not_evaluated_no_prediction"
+    },
+    {
+      "case_id": "LC22_free_98",
+      "temperature_C": 98,
+      "status": "blocked_before_solver",
+      "blockers": [
+        "source_compatible_thermal_functions",
+        "source_compatible_mechanical_law",
+        "irreversible_strain_and_initial_state",
+        "complete_part_thermal_history",
+        "support_gravity_and_release",
+        "observation_state_and_landmarks",
+        "validated_nonisothermal_adapter",
+        "case_specific_convergence",
+        "source_specific_solver_adapter_not_implemented"
+      ],
+      "observation_ids": [
+        "LC22_98_without_mould_L",
+        "LC22_98_without_mould_W",
+        "LC22_98_without_mould_H"
+      ],
+      "solver_started": false,
+      "solver_command": null,
+      "solver_returncode": null,
+      "comparison_status": "not_evaluated_no_prediction"
+    }
+  ],
+  "solver_cases_started": 0,
+  "validation_completed": false,
+  "input_hashes": {
+    "simulation/cases/validation/LC22_free_109.json": "71ee6c50bc91a03bbf50be8689a6fab18a291c20f3fb21d7acf77dafef26645b",
+    "simulation/cases/validation/LC22_free_132.json": "2c211b2f353aa4c9234c8c2216ae99e73b6916ee8492bf2544b1e01b56daf6be",
+    "simulation/cases/validation/LC22_free_63.json": "b15bcc79b28fb7d839a75a8daf4ff09cf941cc74eaf9a2cb3389da307f55b258",
+    "simulation/cases/validation/LC22_free_75.json": "0bee69afe6ada481891fc6670afe655d853d2f3fe609c8612c40a4a95cee0684",
+    "simulation/cases/validation/LC22_free_86.json": "8bc6ed5079a588f1173b0211a21e3d865a789c1f1c648681996cb4d859b9e1f3",
+    "simulation/cases/validation/LC22_free_98.json": "2292f0ef414c6dd8cf022a700b5906e95917d7c0bc170f44345b9c59535d323f",
+    "scripts/run_validation_cases.py": "5ed4c0fbbe48e46d6b1ec5e24a611d200c6da040af3a084646a023734605dd6f",
+    "scripts/build_validation_cases.py": "87f785df54063744919fe378b152f689f89b435513a6a1b3c9db6daa6be221d2",
+    "docs/validation_protocol.md": "defe486d7dbef0024bdd6e41d7cf6cd839b14071e2a731bd597ada5ff4c87831",
+    "validation/validation_dataset.csv": "ceff7f0fffe3561e092e1218475275387fe269099b01b781fb064ea0f75adb84",
+    "validation/calibration_register.csv": "55f8fd35a1411ac115deda499b30f21b31d21f59cce13a61ac406d8093abdc28",
+    "material/pla_properties.csv": "b5df9aee11b99a22f978c78efa60388f4bdcada0325ed2ea8d2415d5f6e9f6f7"
+  },
+  "meaning": "Pre-solver evidence rejection, not an ANSYS failure or numerical solution"
+}

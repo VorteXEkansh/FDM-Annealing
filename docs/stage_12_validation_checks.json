@@ -1,0 +1,78 @@
+{
+  "stage": 12,
+  "date": "2026-09-29",
+  "passed": true,
+  "count": 13,
+  "checks": [
+    {
+      "check": "Six frozen conditions considered",
+      "status": "pass"
+    },
+    {
+      "check": "No solver launch or invented solver status",
+      "status": "pass"
+    },
+    {
+      "check": "Every case rejected for nine recorded blockers",
+      "status": "pass"
+    },
+    {
+      "check": "Immutable admission input hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Protocol data calibration properties and metric code unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "All 18 reserved observations retained exactly",
+      "status": "pass"
+    },
+    {
+      "check": "Missing solver values and errors remain blank",
+      "status": "pass"
+    },
+    {
+      "check": "Three uncomputed groups; no fabricated MAE or RMSE",
+      "status": "pass"
+    },
+    {
+      "check": "Supplier evidence archived with verified bytes",
+      "status": "pass"
+    },
+    {
+      "check": "Observation plot and vector source exist",
+      "status": "pass"
+    },
+    {
+      "check": "Non-validation and no recalibration explicit",
+      "status": "pass"
+    },
+    {
+      "check": "No counterfeit solver artifacts",
+      "status": "pass"
+    },
+    {
+      "check": "Four evidence rejection tests pass",
+      "status": "pass"
+    }
+  ],
+  "solver_cases_started": 0,
+  "physical_validation_completed": false,
+  "validation_metrics_computed": false,
+  "source_hashes": {
+    "validation/validation_results.csv": "9020921ab31cb21636d39cb55566968e9a5419409a4b58e81651de7234fe0259",
+    "validation/validation_metrics.csv": "691d6afd094b3fcb7108aa5d3ef4e975c299289ced89c534199120d316938ec3",
+    "validation/validation_report.md": "4c48dc9bac472bef41f1c4315e13e7c03a10f45d13548d6f35ff746379b1517c",
+    "validation/validation_deviations.csv": "153f5228c23a883f5f7eafbef5cccb3c37d5449bb912aeffd0cc53cf2bcd83b6",
+    "simulation/validation/stage12_admission_01/admission.json": "54b1501adffb895ad86b5323954cf3ac9347bd5d6d995c9631311c785addb799",
+    "scripts/build_validation_cases.py": "87f785df54063744919fe378b152f689f89b435513a6a1b3c9db6daa6be221d2",
+    "scripts/run_validation_cases.py": "5ed4c0fbbe48e46d6b1ec5e24a611d200c6da040af3a084646a023734605dd6f",
+    "scripts/build_validation_results.py": "6846db325b8f67d1fae5964f04884cec2dc554385dbb662a2afb99654360e4e4",
+    "scripts/check_validation_execution.py": "dc5949695c4f1f90bb608053b844da6f85c7ab38eaec7544876c6c14cc2c2c0c",
+    "tests/test_validation_admission.py": "35973b706f1bdcfcf945e6341a7f40d99cbbe7c5df431836137fa44bad98735a",
+    "figures/validation_observations.png": "4a8d6879636fde4e1c10096d44483d8fde5066e4305638fef0f94cf8cfd6213c",
+    "figures/validation_observations.svg": "af0a8972c776bd5e6089dbcc6ba3f6377fc8c3772c025c0e6d63f9eff4bb41e3",
+    "literature/evidence/stage_12/source_manifest.json": "089ccfa2698817f60b529a1a6f7b6339c551252141db0e6f7628a43d86052ffe"
+  }
+}
