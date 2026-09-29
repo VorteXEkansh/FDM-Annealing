@@ -1,0 +1,10 @@
+analysis,status,required_evidence,eligible_stage14_cases,absolute_change,percentage_change,response_minimum,response_maximum,response_range,plot_path
+thermal_history,not_computable_no_stage14_solver_outputs,Part and ambient temperature versus time with locations and phase definitions,0,,,,,,
+fixture_gap_onset,not_computable_no_stage14_solver_outputs,Actual local gap and contact status versus time; pressure penetration and solver tolerances,0,,,,,,
+temperature_effects,not_computable_no_stage14_solver_outputs,Matched cases differing in temperature within admitted material domain,0,,,,,,
+holding_time_effects,not_computable_no_stage14_solver_outputs,Matched cases differing in attained-temperature holding time,0,,,,,,
+warpage_suppression,not_computable_no_stage14_solver_outputs,Matched FREE and GAP released-state warpage with the same reference fit and observation time,0,,,,,,
+dimensional_change,not_computable_no_stage14_solver_outputs,Signed directional initial and final landmark dimensions at the same observation state,0,,,,,,
+residual_stress,not_computable_no_stage14_solver_outputs,Matched cooled and released stress fields with a fixed scalar and region definition,0,,,,,,
+contact_pressure,not_computable_no_stage14_solver_outputs,Pressure contact-area and reaction histories under matched restraint definitions,0,,,,,,
+constraint_tradeoffs,not_computable_no_stage14_solver_outputs,Matched dimensional warpage and stress responses from admitted case pairs,0,,,,,,

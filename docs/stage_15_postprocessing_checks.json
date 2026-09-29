@@ -1,0 +1,21 @@
+{
+  "stage": 15,
+  "date": "2026-09-30",
+  "passed": true,
+  "scope": "Availability and provenance audit only; no numerical result analysis",
+  "eligible_stage14_cases": 0,
+  "matched_free_gap_pairs": 0,
+  "analysis_topics": 9,
+  "numerical_analysis_completed": false,
+  "plots_generated": 0,
+  "unexpected_trend_review": "not_possible_no_outputs",
+  "smoothing_applied": false,
+  "source_hashes": {
+    "data/processed/all_cases.csv": "0d8eb1ef94f52ea4d39b712caf52b8dc2c9c2f825317f7426b4daf9b98f493e1",
+    "data/processed/postprocessing_availability.csv": "2bc9df3d76d960acf52c43239290257d8978ad9f1ca83bf70bfaa2a42dbc0b67",
+    "data/raw/README.md": "1203a36e8eadffd9f75df8d9777d325b0c19332a5fd65bab2e4c8a790896d219",
+    "docs/stage_14_campaign_checks.json": "1f46d2cae0a4f52b8a4e867ee6daaa474678e2ae8e888b12703d53f60b699d24",
+    "docs/postprocessing_status.md": "dcb0e2a001ba818e4d6798ffb0628f4921f0eb944726e87eec38d54bcdd7eba1",
+    "scripts/check_postprocessing_stage.py": "3243f8bc7217873003d618a1cfc1d952e561bf7af8458104c88ef9ef64165b58"
+  }
+}
