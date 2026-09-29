@@ -1,0 +1,70 @@
+{
+  "stage": 14,
+  "date": "2026-09-29",
+  "passed": true,
+  "count": 8,
+  "checks": [
+    {
+      "check": "Validation and dry-run prerequisites remain unmet",
+      "status": "pass"
+    },
+    {
+      "check": "No approved or fabricated campaign cases",
+      "status": "pass"
+    },
+    {
+      "check": "All planned case IDs accounted for without invented exclusions",
+      "status": "pass"
+    },
+    {
+      "check": "Requested response and version fields have explicit schemas",
+      "status": "pass"
+    },
+    {
+      "check": "No raw production output or dummy result files",
+      "status": "pass"
+    },
+    {
+      "check": "Design validation and property evidence unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "All prior raw reference evidence unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Blocked scope and unrun anomaly screens explicit",
+      "status": "pass"
+    }
+  ],
+  "campaign_status": "blocked_no_approved_cases_and_validation_dry_run_unmet",
+  "campaign_completed": false,
+  "approved_cases": 0,
+  "launched_cases": 0,
+  "case_status_counts": {
+    "SUCCESS": 0,
+    "FAILED": 0,
+    "EXCLUDED WITH DOCUMENTED REASON": 0
+  },
+  "anomaly_screens": {
+    "NaNs": "not_run_no_production_output",
+    "failed_convergence": "not_run_no_production_output",
+    "contact_penetration": "not_run_no_production_output",
+    "rigid_body_motion": "not_run_no_production_output",
+    "material_validity": "not_run_no_production_output",
+    "unrealistic_values": "not_run_no_production_output"
+  },
+  "source_hashes": {
+    "simulation/design_matrix.csv": "4728ae88c3fb2c348814caee41be10c6a18d4c7a8a8ee5ca8e80c1ce821b69c0",
+    "simulation/case_manifest.csv": "96e7dfd82f2e69603a2bb555e308e65fb95e43767b90c08e459a4ba348b8ad1e",
+    "validation/validation_results.csv": "9020921ab31cb21636d39cb55566968e9a5419409a4b58e81651de7234fe0259",
+    "validation/calibration_register.csv": "55f8fd35a1411ac115deda499b30f21b31d21f59cce13a61ac406d8093abdc28",
+    "material/pla_properties.csv": "b5df9aee11b99a22f978c78efa60388f4bdcada0325ed2ea8d2415d5f6e9f6f7",
+    "simulation/validation/stage12_admission_01/admission.json": "54b1501adffb895ad86b5323954cf3ac9347bd5d6d995c9631311c785addb799",
+    "docs/campaign_execution.md": "d7857fac601f9f7b981187ca6009ccbc8824a427b9a2aae3137b23cd64da1c94",
+    "data/raw/README.md": "1203a36e8eadffd9f75df8d9777d325b0c19332a5fd65bab2e4c8a790896d219",
+    "data/processed/all_cases.csv": "0d8eb1ef94f52ea4d39b712caf52b8dc2c9c2f825317f7426b4daf9b98f493e1",
+    "scripts/check_campaign_stage.py": "3d1712bca14fd8c7df66c08255fa75296f371b3c88decc874091ce72ea01c38b",
+    "docs/stage_13_design_checks.json": "de8a58795294a63367ecab9ac7c16d69f2518de57b7cefd7c10b6a224e0d2e40"
+  }
+}

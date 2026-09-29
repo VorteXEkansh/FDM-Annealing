@@ -51,6 +51,11 @@ if args.stage >= 13:
     paths = list(dict.fromkeys(paths))
     scope = 'Production entry condition unmet; empty registries; no finalized design, dry run or full campaign.'
 
+if args.stage >= 14:
+    paths += ['docs/campaign_execution.md','docs/stage_14_campaign_checks.json','docs/stage_14_pdf_review.json','scripts/check_campaign_stage.py','data/raw/README.md','data/processed/README.md','data/processed/all_cases.csv']
+    paths = list(dict.fromkeys(paths))
+    scope = 'Campaign blocked with zero approved cases; no new raw production output or processed numerical response.'
+
 data={'stage':args.stage,'date':('2026-09-29' if args.stage >= 12 else '2026-09-28' if args.stage >= 11 else '2026-09-14' if args.stage >= 10 else '2026-09-13'),'algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
 (ROOT/f'docs/stage_{args.stage:02d}_manifest.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(f'Recorded {len(paths)} input/code/output hashes')

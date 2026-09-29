@@ -1,6 +1,6 @@
 # Authoritative project state
 
-Stage: **Prompt 13/20 — production design entry blocked by unmet validation prerequisite**.
+Stage: **Prompt 14/20 — parametric campaign blocked; no approved cases**.
 Date: 2026-09-29 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
@@ -271,7 +271,7 @@ Four evidence-admission tests and the full 81-test repository suite pass. These 
 The full manuscript has an integrated validation-execution results/diagnosis section and revised abstract, evidence status and conclusions. Current integrity/delivery records use the stage_12 prefix. No validation success, production sweep, optimization or physical recommendation is authorized by this outcome. Documentation is complete; the requested numerical validation remains scientifically unachieved. Stop at Prompt 12; do not proceed automatically to Prompt 13.
 
 
-## Production design entry — Stage 13 (current)
+## Production design entry — Stage 13 (unchanged prerequisite)
 
 The user's condition “Only proceed if validation is acceptable for the research objectives” is not met. Stage 12 supplies no validation predictions or errors, and the production grade and fixture objectives remain unvalidated. The production matrix is not finalized and no representative low/middle/severe run starts.
 
@@ -280,3 +280,12 @@ simulation/design_matrix.csv and simulation/case_manifest.csv are header-only re
 scripts/check_simulation_design.py verifies the blocked condition and empty registries. Passing these integrity checks is not a passing automation dry run. Production automation, field extraction, convergence and raw-output preservation have not been tested on production cases. The manuscript's simulation-design section, abstract and conclusions now reflect that boundary.
 
 Current stage records use stage_13. Documentation and delivery are complete when those records pass; production design and dry-run objectives remain unachieved. Recovery first requires acceptable independent validation and applicability to the admitted production material, domain and objectives, followed by production-specific convergence. Do not advance to Prompt 14 or execute a full sweep.
+
+
+## Parametric campaign — Stage 14 (current)
+
+No approved rows exist in simulation/design_matrix.csv; the case manifest is also empty. Independent validation and representative dry-run prerequisites remain unmet. No production ANSYS job was launched and no full campaign was completed. SUCCESS, FAILED and EXCLUDED case counts are all zero because the approved plan is empty, not because a sweep succeeded. No candidate cases were fabricated as exclusions.
+
+Created data/processed/all_cases.csv as a header-only response/metadata registry. data/raw/ contains only its storage policy; no actual production export exists. Prior immutable solver verification evidence stays at its original paths and is not relabeled. docs/campaign_execution.md records scope, units, absent responses and recovery conditions. scripts/check_campaign_stage.py checks actual approved-case accounting, frozen inputs and prior raw-evidence hashes. All production anomaly screens remain not run, including NaNs, convergence, penetration, rigid-body motion, material validity and plausibility; none is claimed to pass.
+
+The full manuscript now integrates production result availability and campaign status with revised abstract/conclusions. Stage 14 integrity records distinguish documentation from scientific completion. Required recovery remains independent validation, applicability to the production objectives/domain, an approved design and a passed representative dry run. No sensitivity, optimization or processing claim is enabled. Stop at Prompt 14; do not advance automatically to Prompt 15.

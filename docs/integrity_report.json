@@ -1,5 +1,5 @@
 {
-  "stage": 13,
+  "stage": 14,
   "date": "2026-09-29",
   "checks": [
     {
@@ -343,13 +343,25 @@
       "status": "pass"
     },
     {
+      "check": "Stage 14 campaign is blocked with no approved cases",
+      "status": "pass"
+    },
+    {
+      "check": "Stage 14 campaign hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Production result absence is explicit",
+      "status": "pass"
+    },
+    {
       "check": "All text lies inside page safety bounds",
       "status": "pass"
     }
   ],
-  "count": 86,
-  "pdf_sha256": "b72c47e77a2e7ebca94ae463ab1254ce7f228958224d8cd2b40b0c4bc40db141",
-  "manuscript_sha256": "db39f7b01ca065e3b0ddc2c54a74f84ff814a5a78625db86e2c99f90a8213fbd",
+  "count": 89,
+  "pdf_sha256": "921e8d62a969557e71496ddc55b240c2ccf2d0b43317929085f4a3222d52c1e2",
+  "manuscript_sha256": "a59d896dc28d6ec999a776463a6e3e8961867dbd6dddc31b72ea447f2a55d9bd",
   "material_manifest_sha256": "362ef609095cd253f3e62def720fd486cb7a27301395b82a95a67a3a5b0b3083",
   "geometry_manifest_sha256": "d76d855563cb38fa34c51995092edfbb35ead325bc4eb2c3a8bd18fefc0d8369",
   "thermal_manifest_sha256": "f1942fd9932f7fbc2a1678edcec6576fde89b602c04b38761c7183f08c85eca1",
