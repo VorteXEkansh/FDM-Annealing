@@ -1,0 +1,53 @@
+{
+  "stage": 13,
+  "date": "2026-09-29",
+  "passed": true,
+  "count": 7,
+  "checks": [
+    {
+      "check": "Validation remains unexecuted",
+      "status": "pass"
+    },
+    {
+      "check": "All six external cases remain blocked",
+      "status": "pass"
+    },
+    {
+      "check": "simulation/design_matrix.csv schema and zero approved cases",
+      "status": "pass"
+    },
+    {
+      "check": "simulation/case_manifest.csv schema and zero approved cases",
+      "status": "pass"
+    },
+    {
+      "check": "Validation and material evidence unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Existing production gates remain closed",
+      "status": "pass"
+    },
+    {
+      "check": "No dry-run success or production approval",
+      "status": "pass"
+    }
+  ],
+  "entry_condition_met": false,
+  "design_finalized": false,
+  "production_cases_approved": 0,
+  "dry_run_status": "not_started_validation_prerequisite_unmet",
+  "full_sweep_authorized": false,
+  "source_hashes": {
+    "docs/validation_protocol.md": "defe486d7dbef0024bdd6e41d7cf6cd839b14071e2a731bd597ada5ff4c87831",
+    "validation/validation_results.csv": "9020921ab31cb21636d39cb55566968e9a5419409a4b58e81651de7234fe0259",
+    "validation/calibration_register.csv": "55f8fd35a1411ac115deda499b30f21b31d21f59cce13a61ac406d8093abdc28",
+    "material/pla_properties.csv": "b5df9aee11b99a22f978c78efa60388f4bdcada0325ed2ea8d2415d5f6e9f6f7",
+    "simulation/validation/stage12_admission_01/admission.json": "54b1501adffb895ad86b5323954cf3ac9347bd5d6d995c9631311c785addb799",
+    "simulation/design_matrix.csv": "4728ae88c3fb2c348814caee41be10c6a18d4c7a8a8ee5ca8e80c1ce821b69c0",
+    "simulation/case_manifest.csv": "96e7dfd82f2e69603a2bb555e308e65fb95e43767b90c08e459a4ba348b8ad1e",
+    "docs/simulation_design.md": "83a752862f19097241ce2725268d996f4a1df6180d6bd97e548eeedc5a646f5e",
+    "scripts/check_simulation_design.py": "df7e71b219083ede8e1b9d69a4a6e6f84550cd32599dd90c56a00674bf1f9bc0",
+    "simulation/cases/production_template.json": "bd75cd19b50ad1cc7f3bae4279d9bebd71fa54df41edc5d82e679f72663a7621"
+  }
+}

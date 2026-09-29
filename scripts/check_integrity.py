@@ -1,4 +1,4 @@
-"""Stage 12 document, provenance, verification and convergence checks."""
+"""Stage 13 document, provenance, verification and convergence checks."""
 from pathlib import Path
 import csv, hashlib, json, re, subprocess, sys
 from pypdf import PdfReader
@@ -82,8 +82,8 @@ def main():
     subprocess.run([sys.executable,str(ROOT/'scripts/build_manuscript.py')],check=True,cwd=ROOT,capture_output=True)
     check('PDF reproducible byte-for-byte',digest(PDF)==before)
     reader=PdfReader(PDF)
-    check('Complete manuscript page count matches reviewed stage record',len(reader.pages)==json.loads((ROOT/'docs/stage_12_pdf_review.json').read_text())['page_count'])
-    review=json.loads((ROOT/'docs/stage_12_pdf_review.json').read_text())
+    check('Complete manuscript page count matches reviewed stage record',len(reader.pages)==json.loads((ROOT/'docs/stage_13_pdf_review.json').read_text())['page_count'])
+    review=json.loads((ROOT/'docs/stage_13_pdf_review.json').read_text())
     check('All pages visually reviewed for the current PDF hash',review['visual_status']=='pass' and review['reviewed_pdf_sha256']==digest(PDF) and review['reviewed_pages']==list(range(1,len(reader.pages)+1)))
     text='\n'.join(p.extract_text() for p in reader.pages)
     for pattern in [r'F3498',r'sqrt\s*\(',r'epsilon_ann',r'Delta L',r'95 C',r'3 x 3',r'130 physical specimens',r'\bTODO\b',r'\bTBD\b',r'\ufffd']:
@@ -119,13 +119,17 @@ def main():
     check('Stage 12 admission and missing-result checks pass',execution['passed'] and not execution['physical_validation_completed'] and execution['solver_cases_started']==0)
     check('Stage 12 code and output hashes match',all(digest(ROOT/p)==h for p,h in execution['source_hashes'].items()))
     check('Blocked validation outcome integrated',all(t in source for t in ['Each case was rejected before ANSYS launch','No recalibration was performed','not a parity plot','Production sweeps remain blocked']))
+    design=json.loads((ROOT/'docs/stage_13_design_checks.json').read_text())
+    check('Stage 13 entry remains blocked',design['passed'] and not design['entry_condition_met'] and not design['design_finalized'] and not design['full_sweep_authorized'])
+    check('Stage 13 evidence and registry hashes match',all(digest(ROOT/p)==h for p,h in design['source_hashes'].items()))
+    check('Production design decision integrated','production design matrix and case manifest contain no approved cases' in source and 'No low, middle or severe case was selected or launched' in source)
     with pdfplumber.open(PDF) as pdf:
         bad=[]
         for n,p in enumerate(pdf.pages,1):
             for c in p.chars:
                 if c['text'].strip() and (c['x0']<48 or c['x1']>p.width-46 or c['top']<30 or c['bottom']>p.height-18): bad.append(n)
         check('All text lies inside page safety bounds',not bad)
-    report={'stage':12,'date':'2026-09-29','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'material_manifest_sha256':digest(ROOT/'material/build_manifest.json'),'geometry_manifest_sha256':digest(ROOT/'simulation/geometry/stage07_plate_gap/manifest.json'),'thermal_manifest_sha256':digest(ROOT/'simulation/verification/stage08_attempt_05/manifest.json'),'convergence_report_sha256':digest(ROOT/'docs/stage_10_convergence_checks.json'),'scope':'Document, source, property, environment, geometry, genuine MAPDL verification and verification-configuration convergence integrity. No production PLA coupon solution, production mesh or physical validation.'}
+    report={'stage':13,'date':'2026-09-29','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'material_manifest_sha256':digest(ROOT/'material/build_manifest.json'),'geometry_manifest_sha256':digest(ROOT/'simulation/geometry/stage07_plate_gap/manifest.json'),'thermal_manifest_sha256':digest(ROOT/'simulation/verification/stage08_attempt_05/manifest.json'),'convergence_report_sha256':digest(ROOT/'docs/stage_10_convergence_checks.json'),'scope':'Document, source, property, environment, geometry, genuine MAPDL verification and verification-configuration convergence integrity. No production PLA coupon solution, production mesh or physical validation.'}
     (ROOT/'docs/integrity_report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     print(f'{len(checks)} integrity checks passed; PDF SHA-256 {digest(PDF)}')
 

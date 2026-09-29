@@ -1,5 +1,5 @@
 {
-  "stage": 12,
+  "stage": 13,
   "date": "2026-09-29",
   "checks": [
     {
@@ -331,13 +331,25 @@
       "status": "pass"
     },
     {
+      "check": "Stage 13 entry remains blocked",
+      "status": "pass"
+    },
+    {
+      "check": "Stage 13 evidence and registry hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Production design decision integrated",
+      "status": "pass"
+    },
+    {
       "check": "All text lies inside page safety bounds",
       "status": "pass"
     }
   ],
-  "count": 83,
-  "pdf_sha256": "05bfa04cb2790e67f4a1faebb8c09f9c7153fcbcbf1ec346180ff30ff01fe9e2",
-  "manuscript_sha256": "cec73a1266c5ee5bd1dc8f362624f9518ad541daa13ea4856d1b10332f1f6a86",
+  "count": 86,
+  "pdf_sha256": "b72c47e77a2e7ebca94ae463ab1254ce7f228958224d8cd2b40b0c4bc40db141",
+  "manuscript_sha256": "db39f7b01ca065e3b0ddc2c54a74f84ff814a5a78625db86e2c99f90a8213fbd",
   "material_manifest_sha256": "362ef609095cd253f3e62def720fd486cb7a27301395b82a95a67a3a5b0b3083",
   "geometry_manifest_sha256": "d76d855563cb38fa34c51995092edfbb35ead325bc4eb2c3a8bd18fefc0d8369",
   "thermal_manifest_sha256": "f1942fd9932f7fbc2a1678edcec6576fde89b602c04b38761c7183f08c85eca1",

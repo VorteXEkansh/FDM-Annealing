@@ -1,6 +1,6 @@
 # Authoritative project state
 
-Stage: **Prompt 12/20 — independent validation execution assessment; scientific execution blocked**.
+Stage: **Prompt 13/20 — production design entry blocked by unmet validation prerequisite**.
 Date: 2026-09-29 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
@@ -258,7 +258,7 @@ analysis/validation_metrics.py implements signed and absolute error, zero-safe r
 Stage 11 creates no new solver output and no production sweep. The production model and physical validation remain blocked by the previously identified material, boundary and metrology gaps. Current records are docs/stage_11_validation_checks.json, docs/stage_11_quality.md, docs/stage_11_pdf_review.json, docs/stage_11_manifest.json, docs/stage_11_delivery.json and docs/integrity_report.json. Stage 12 was subsequently authorized; retain this protocol unchanged.
 
 
-## Validation execution — Stage 12 (current)
+## Validation execution — Stage 12 (unchanged evidence)
 
 Scientific status: **independent validation remains incomplete and blocked**. No ANSYS validation run started. The six source-specific case specifications in simulation/cases/validation/ retain the published nominal geometry, architecture, oven ramp and treatment. Missing material/history/boundary inputs remain null. scripts/run_validation_cases.py --execute rejected all six before solver launch; simulation/validation/stage12_admission_01/admission.json preserves nine blockers per case and input/code hashes. This is an evidence rejection, not a numerical convergence failure or a measured mismatch.
 
@@ -269,3 +269,14 @@ validation/validation_results.csv records all 18 primary means with blank predic
 Four evidence-admission tests and the full 81-test repository suite pass. These are code tests, not physical validation. Required recovery includes source-compatible thermal/mechanical/irreversible-strain characterization and initial state, complete specimen thermal and mechanical boundaries, observation mapping, non-isothermal adapter, source-specific convergence and comparison uncertainty. New fitting needs an explicitly declared calibration lineage and cannot consume the reserved observations without reclassification and a new independent validation set.
 
 The full manuscript has an integrated validation-execution results/diagnosis section and revised abstract, evidence status and conclusions. Current integrity/delivery records use the stage_12 prefix. No validation success, production sweep, optimization or physical recommendation is authorized by this outcome. Documentation is complete; the requested numerical validation remains scientifically unachieved. Stop at Prompt 12; do not proceed automatically to Prompt 13.
+
+
+## Production design entry — Stage 13 (current)
+
+The user's condition “Only proceed if validation is acceptable for the research objectives” is not met. Stage 12 supplies no validation predictions or errors, and the production grade and fixture objectives remain unvalidated. The production matrix is not finalized and no representative low/middle/severe run starts.
+
+simulation/design_matrix.csv and simulation/case_manifest.csv are header-only registries with zero approved cases. docs/simulation_design.md documents the entry decision, candidate-versus-approved distinction, deferred identifier/units contract and requirements for resumption. Example G025/G050 names do not approve new gaps. FREE is not zero-gap contact. No identifiers or production solver jobs are generated. The frozen validation protocol, calibration split, material database and Stage 12 evidence remain unchanged.
+
+scripts/check_simulation_design.py verifies the blocked condition and empty registries. Passing these integrity checks is not a passing automation dry run. Production automation, field extraction, convergence and raw-output preservation have not been tested on production cases. The manuscript's simulation-design section, abstract and conclusions now reflect that boundary.
+
+Current stage records use stage_13. Documentation and delivery are complete when those records pass; production design and dry-run objectives remain unachieved. Recovery first requires acceptable independent validation and applicability to the admitted production material, domain and objectives, followed by production-specific convergence. Do not advance to Prompt 14 or execute a full sweep.
