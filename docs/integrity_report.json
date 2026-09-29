@@ -1,5 +1,5 @@
 {
-  "stage": 15,
+  "stage": 16,
   "date": "2026-09-30",
   "checks": [
     {
@@ -367,13 +367,25 @@
       "status": "pass"
     },
     {
+      "check": "Stage 16 audit preserves absent numerical results",
+      "status": "pass"
+    },
+    {
+      "check": "Stage 16 evidence hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Surrogate and uncertainty protocol integrated",
+      "status": "pass"
+    },
+    {
       "check": "All text lies inside page safety bounds",
       "status": "pass"
     }
   ],
-  "count": 92,
-  "pdf_sha256": "1bf78e93949c5d57d94bba0324a561ba50a5929f52f7da4ba866628396065523",
-  "manuscript_sha256": "fa08293e68fbeb1c3f0c92a68be122d932694c0e5edfa4789b1919f8462295d3",
+  "count": 95,
+  "pdf_sha256": "7130444afd46dce3bb009a013605ef4db9bfebbe276f213aa3186117f9e271a7",
+  "manuscript_sha256": "ae1ab3392adbec18a14b795fb1a7cbc553f338dae46c975680f30bf5c1b296c2",
   "material_manifest_sha256": "362ef609095cd253f3e62def720fd486cb7a27301395b82a95a67a3a5b0b3083",
   "geometry_manifest_sha256": "d76d855563cb38fa34c51995092edfbb35ead325bc4eb2c3a8bd18fefc0d8369",
   "thermal_manifest_sha256": "f1942fd9932f7fbc2a1678edcec6576fde89b602c04b38761c7183f08c85eca1",

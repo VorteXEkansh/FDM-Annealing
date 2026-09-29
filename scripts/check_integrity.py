@@ -1,4 +1,4 @@
-"""Stage 15 document, provenance, verification and convergence checks."""
+"""Stage 16 document, provenance, verification and convergence checks."""
 from pathlib import Path
 import csv, hashlib, json, re, subprocess, sys
 from pypdf import PdfReader
@@ -82,8 +82,8 @@ def main():
     subprocess.run([sys.executable,str(ROOT/'scripts/build_manuscript.py')],check=True,cwd=ROOT,capture_output=True)
     check('PDF reproducible byte-for-byte',digest(PDF)==before)
     reader=PdfReader(PDF)
-    check('Complete manuscript page count matches reviewed stage record',len(reader.pages)==json.loads((ROOT/'docs/stage_15_pdf_review.json').read_text())['page_count'])
-    review=json.loads((ROOT/'docs/stage_15_pdf_review.json').read_text())
+    check('Complete manuscript page count matches reviewed stage record',len(reader.pages)==json.loads((ROOT/'docs/stage_16_pdf_review.json').read_text())['page_count'])
+    review=json.loads((ROOT/'docs/stage_16_pdf_review.json').read_text())
     check('All pages visually reviewed for the current PDF hash',review['visual_status']=='pass' and review['reviewed_pdf_sha256']==digest(PDF) and review['reviewed_pages']==list(range(1,len(reader.pages)+1)))
     text='\n'.join(p.extract_text() for p in reader.pages)
     for pattern in [r'F3498',r'sqrt\s*\(',r'epsilon_ann',r'Delta L',r'95 C',r'3 x 3',r'130 physical specimens',r'\bTODO\b',r'\bTBD\b',r'\ufffd']:
@@ -131,13 +131,17 @@ def main():
     check('Stage 15 uses no substitute numerical evidence',post['passed'] and post['eligible_stage14_cases']==0 and post['matched_free_gap_pairs']==0 and not post['numerical_analysis_completed'])
     check('Stage 15 source and availability hashes match',all(digest(ROOT/p)==h for p,h in post['source_hashes'].items()))
     check('Results and mechanistic limitations integrated','No absolute change, percentage change' in source and 'Mechanisms cannot be attributed without production evidence' in source)
+    surrogate=json.loads((ROOT/'docs/stage_16_surrogate_checks.json').read_text())
+    check('Stage 16 audit preserves absent numerical results',surrogate['passed'] and surrogate['eligible_cases']==surrogate['surrogates_fitted']==0 and not any(surrogate[k] for k in ['cross_validation_executed','global_sensitivity_executed','uncertainty_propagated']))
+    check('Stage 16 evidence hashes match',all(digest(ROOT/p)==h for p,h in surrogate['source_hashes'].items()))
+    check('Surrogate and uncertainty protocol integrated',all(t in source for t in ['Prospective surrogate assessment','Separate error and uncertainty accounts','training-only inner split','no admitted probability distribution']))
     with pdfplumber.open(PDF) as pdf:
         bad=[]
         for n,p in enumerate(pdf.pages,1):
             for c in p.chars:
                 if c['text'].strip() and (c['x0']<48 or c['x1']>p.width-46 or c['top']<30 or c['bottom']>p.height-18): bad.append(n)
         check('All text lies inside page safety bounds',not bad)
-    report={'stage':15,'date':'2026-09-30','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'material_manifest_sha256':digest(ROOT/'material/build_manifest.json'),'geometry_manifest_sha256':digest(ROOT/'simulation/geometry/stage07_plate_gap/manifest.json'),'thermal_manifest_sha256':digest(ROOT/'simulation/verification/stage08_attempt_05/manifest.json'),'convergence_report_sha256':digest(ROOT/'docs/stage_10_convergence_checks.json'),'scope':'Document, source, property, environment, geometry, genuine MAPDL verification and verification-configuration convergence integrity. No production PLA coupon solution, production mesh or physical validation.'}
+    report={'stage':16,'date':'2026-09-30','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'material_manifest_sha256':digest(ROOT/'material/build_manifest.json'),'geometry_manifest_sha256':digest(ROOT/'simulation/geometry/stage07_plate_gap/manifest.json'),'thermal_manifest_sha256':digest(ROOT/'simulation/verification/stage08_attempt_05/manifest.json'),'convergence_report_sha256':digest(ROOT/'docs/stage_10_convergence_checks.json'),'scope':'Document, source, property, environment, geometry, genuine MAPDL verification and verification-configuration convergence integrity. No production PLA coupon solution, production mesh or physical validation.'}
     (ROOT/'docs/integrity_report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     print(f'{len(checks)} integrity checks passed; PDF SHA-256 {digest(PDF)}')
 

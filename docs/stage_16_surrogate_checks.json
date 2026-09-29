@@ -1,0 +1,29 @@
+{
+  "stage": 16,
+  "date": "2026-09-30",
+  "passed": true,
+  "scope": "Evidence admission audit only; no fitting, sensitivity or propagation",
+  "eligible_cases": 0,
+  "response_count": 4,
+  "uncertain_input_count": 8,
+  "surrogates_fitted": 0,
+  "cross_validation_executed": false,
+  "global_sensitivity_executed": false,
+  "uncertainty_propagated": false,
+  "source_hashes": {
+    "data/processed/all_cases.csv": "0d8eb1ef94f52ea4d39b712caf52b8dc2c9c2f825317f7426b4daf9b98f493e1",
+    "simulation/design_matrix.csv": "4728ae88c3fb2c348814caee41be10c6a18d4c7a8a8ee5ca8e80c1ce821b69c0",
+    "simulation/case_manifest.csv": "96e7dfd82f2e69603a2bb555e308e65fb95e43767b90c08e459a4ba348b8ad1e",
+    "material/uncertainty_ranges.csv": "77307c17a0242132617197330b7eb7064463e57f9eb177333dc3daa86aa22bb9",
+    "material/pla_properties.csv": "b5df9aee11b99a22f978c78efa60388f4bdcada0325ed2ea8d2415d5f6e9f6f7",
+    "material/fixture_properties.csv": "91432d2d04284e2cd118384d12aefd251ff6f24af91d880278bff4d142880a45",
+    "docs/stage_15_postprocessing_checks.json": "90fd2f68a9b1b01a1edcfeb72251af61bc40f6b16e0b1feaad8db232e3d79756",
+    "data/processed/surrogate_availability.csv": "3ee757a87f80ef4a4a07acf405346374d6b8e5e4ab04cf63049dbadbd0a3619f",
+    "data/processed/uncertainty_input_audit.csv": "f3e981114a8ec2595bb6d2017c76b3e9856a411a7ef855c153c5970da889865b",
+    "docs/surrogate_uncertainty_protocol.md": "c0d62ef7d6a2c3018cf7b0f5bf0f6dec268345eb66188ecdadf59ecdf9241888",
+    "docs/thermal_model.md": "d44dc44edfe702ae79fe0b4a3dcb77c06b6018fed17be6dcf01861a3185c857b",
+    "docs/structural_model.md": "99bc12c2baddbd3f1264e11fa75c81435225b983b274fc099df34789d00fe16b",
+    "docs/material_property_audit.md": "e494ba931c29bfb1337c42bffaaa50b29b1818d1f6d32618bc0e4b8079ad4507",
+    "scripts/check_surrogate_stage.py": "7b2daab01f0ebaeb5e127fde71e7888943fe029f724f1d90819a4d19948ce3f4"
+  }
+}

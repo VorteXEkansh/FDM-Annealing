@@ -1,0 +1,5 @@
+response,status,eligible_cases,model,cv_mae,cv_rmse,cv_r_squared,temperature_sensitivity,holding_time_sensitivity,gap_sensitivity,interval_lower,interval_upper,interval_interpretation
+warpage,blocked_no_production_outputs,0,,,,,,,,,,
+dimensional_error,blocked_no_production_outputs,0,,,,,,,,,,
+residual_stress,blocked_no_production_outputs,0,,,,,,,,,,
+contact_pressure,blocked_no_production_outputs,0,,,,,,,,,,

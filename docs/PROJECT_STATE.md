@@ -1,6 +1,6 @@
 # Authoritative project state
 
-Stage: **Prompt 15/20 — postprocessing blocked; no Stage 14 solver outputs**.
+Stage: **Prompt 16/20 — surrogate, sensitivity and uncertainty execution blocked**.
 Date: 2026-09-30 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
@@ -291,10 +291,21 @@ Created data/processed/all_cases.csv as a header-only response/metadata registry
 The full manuscript now integrates production result availability and campaign status with revised abstract/conclusions. Stage 14 integrity records distinguish documentation from scientific completion. Required recovery remains independent validation, applicability to the production objectives/domain, an approved design and a passed representative dry run. No sensitivity, optimization or processing claim is enabled. Stop at Prompt 14; do not advance automatically to Prompt 15.
 
 
-## Postprocessing — Stage 15 (current)
+## Postprocessing — Stage 15 (unchanged source evidence)
 
 The user restricts numerical analysis to Stage 14 genuine solver outputs. There are none: all_cases.csv is header-only, data/raw/ contains only its policy, and no matched FREE/GAP pair exists. No earlier verification case or literature observation is substituted. No additional simulation, smoothing, imputation, trend fit or numerical plot was performed.
 
 scripts/check_postprocessing_stage.py audits this source boundary and generates data/processed/postprocessing_availability.csv for the nine requested analysis topics. All actual-change, percentage-change and range cells are blank, not zero. docs/postprocessing_status.md records the comparison and interpretation limits. docs/stage_15_postprocessing_checks.json records exact source hashes and explicitly incomplete numerical analysis.
 
 Results were rewritten around the unavailable comparisons and observable requirements. Discussion now distinguishes mechanistic hypotheses from inferred causes and explains why thermal expansion, relaxation, irreversible strain, stiffness, contact and cooling cannot be attributed without actual matched fields/histories. No unexpected trend was observed or ruled out, no inconvenient result removed and no fixture benefit claimed. The full manuscript, state and delivery evidence are updated. Actual postprocessing remains unachieved until the validation, admitted design, dry-run and campaign prerequisites are resolved. Stop at Prompt 15; do not proceed automatically to Prompt 16.
+
+
+## Surrogates, global sensitivity and uncertainty — Stage 16 (current)
+
+No eligible production response exists for fitting or held-out assessment. No surrogate, cross-validation metric, sensitivity index or uncertainty interval was calculated. Reference verification runs and reserved experimental observations are not substitutes. Source material tables and uncertainty ranges remain unchanged; no probability distribution is admitted.
+
+The new docs/surrogate_uncertainty_protocol.md defines conditional case eligibility, grouped outer validation, training-only preprocessing/tuning, response-specific error reporting, FREE/GAP separation, contact-regime checks and solver confirmation. It separates deterministic process variation, physical-input uncertainty, production discretization error, surrogate approximation and model discrepancy. No model family, fold count, sampling budget or distribution is invented before the input/domain evidence exists.
+
+scripts/check_surrogate_stage.py verifies the frozen inputs and generates data/processed/surrogate_availability.csv for four response families and data/processed/uncertainty_input_audit.csv for eight requested uncertain inputs. Metric/interval/distribution fields remain blank. docs/stage_16_surrogate_checks.json records source, script and output hashes. Passing these checks establishes audit integrity only, not successful fitting or propagation.
+
+The complete manuscript replaces the earlier brief sensitivity plan with the explicit surrogate assessment and uncertainty-admission method, and updates abstract, evidence table, conclusions and provenance. Recovery requires model/boundary evidence, non-isothermal implementation, production convergence, acceptable independent validation, approved design/dry run and genuine campaign data, followed by supported uncertainty inputs. Stop at Prompt 16; do not proceed automatically to optimization.

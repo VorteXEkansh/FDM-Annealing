@@ -1,0 +1,9 @@
+parameter,evidence_location,admission_reason,status,probability_distribution,joint_dependence
+E,"material/uncertainty_ranges.csv:U-001,U-002,U-010",Supplier intervals are cross-checks; no admitted temperature-dependent modulus distribution,not_admitted_for_propagation,,
+alpha,material/uncertainty_ranges.csv:U-012,Reference expansion value does not establish uncertain bounds or distribution,not_admitted_for_propagation,,
+k,material/uncertainty_ranges.csv:U-008,Compatible thermal conductivity function and bounds unavailable,not_admitted_for_propagation,,
+c_p,material/uncertainty_ranges.csv:U-009,Compatible heat capacity function and bounds unavailable,not_admitted_for_propagation,,
+annealing_strain,"material/uncertainty_ranges.csv:U-003 to U-006,U-016",Bilayer method brackets are not bulk irreversible-strain uncertainty,not_admitted_for_propagation,,
+convection,docs/thermal_model.md,Production boundary coefficient and source-supported bounds not fixed,not_admitted_for_propagation,,
+friction,docs/structural_model.md,Verification values are numerical choices; production friction not sourced,not_admitted_for_propagation,,
+fixture_CTE,material/fixture_properties.csv;docs/material_property_audit.md,Candidate table has unresolved expansion convention; uncertainty bounds unavailable,not_admitted_for_propagation,,
