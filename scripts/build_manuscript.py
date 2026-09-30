@@ -10,7 +10,7 @@ from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_LEFT, TA_CENTER
 from reportlab.lib.pagesizes import A4
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle, Flowable, Image
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle, Flowable, Image, KeepTogether
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'output/pdf/Constrained-Annealing-2026-DRAFT.pdf'
@@ -22,7 +22,7 @@ pdfmetrics.registerFontFamily('Body', normal='Body', bold='Body-Bold', italic='B
 pdfmetrics.registerFontFamily('Sans', normal='Sans', bold='Sans-Bold', italic='Sans', boldItalic='Sans-Bold')
 
 ST = {
-    'body': ParagraphStyle('body', fontName='Body', fontSize=11, leading=14, spaceAfter=7, alignment=TA_LEFT),
+    'body': ParagraphStyle('body', fontName='Body', fontSize=11, leading=14, spaceAfter=7, alignment=TA_LEFT, allowWidows=0, allowOrphans=0),
     'title': ParagraphStyle('title', fontName='Sans-Bold', fontSize=21, leading=26, spaceAfter=12, textColor=colors.HexColor('#193b4b')),
     'subtitle': ParagraphStyle('subtitle', fontName='Sans', fontSize=13, leading=18, spaceAfter=14, textColor=colors.HexColor('#24576b')),
     'heading': ParagraphStyle('heading', fontName='Sans-Bold', fontSize=12.5, leading=16, spaceBefore=9, spaceAfter=8, keepWithNext=True, textColor=colors.HexColor('#193b4b')),
@@ -96,14 +96,20 @@ def build():
     story=[]
     i=0
     table_num=0
+    supplement_num=0
     while i<len(lines):
         line=lines[i].strip()
         if not line:
             i+=1; continue
         if line=='<!-- PAGE -->': story.append(PageBreak())
-        elif line.startswith('TABLE:'):
-            table_num+=1
-            story.append(P(f'Table {table_num}. '+line[6:].strip(),ST['tablecaption']))
+        elif line.startswith(('TABLE:', 'SUPPTABLE:')):
+            if line.startswith('SUPPTABLE:'):
+                supplement_num+=1
+                caption=f'Table S{supplement_num}. '+line[10:].strip()
+            else:
+                table_num+=1
+                caption=f'Table {table_num}. '+line[6:].strip()
+            story.append(P(caption,ST['tablecaption']))
             rows=[]; i+=1
             while i<len(lines) and ' | ' in lines[i]:
                 rows.append([v.strip() for v in lines[i].split('|')]); i+=1
@@ -119,16 +125,29 @@ def build():
             figure=Image(str(image_path))
             figure._restrictSize(487,360)
             figure.hAlign='CENTER'
-            story.append(figure)
+            following=i+1
+            while following<len(lines) and not lines[following].strip(): following+=1
+            if following<len(lines) and lines[following].startswith('CAPTION:'):
+                story.append(KeepTogether([figure,P(lines[following][8:].strip(),ST['caption'])]))
+                i=following
+            else:
+                story.append(figure)
         elif line.startswith('CAPTION:'): story.append(P(line[8:].strip(),ST['caption']))
         elif line.startswith('EQ:'): story.append(P(line[3:].strip(),ST['equation']))
         elif line.startswith('### '): story.append(P(line[4:],ST['heading']))
         elif line.startswith('## '): story.append(P(line[3:],ST['subtitle']))
         elif line.startswith('# '): story.append(P(line[2:],ST['title']))
-        else: story.append(P(line,ST['body']))
+        else:
+            paragraph=P(line,ST['body'])
+            following=i+1
+            while following<len(lines) and not lines[following].strip(): following+=1
+            if following<len(lines) and lines[following].startswith('EQ:'):
+                paragraph.keepWithNext=True
+            story.append(KeepTogether([paragraph]) if re.match(r'^\[\d+\]',line) else paragraph)
         i+=1
     OUT.parent.mkdir(parents=True,exist_ok=True)
-    doc=SimpleDocTemplate(str(OUT),pagesize=A4,rightMargin=54,leftMargin=54,topMargin=43,bottomMargin=48,title='Free and gap-constrained annealing of FFF-printed PLA: a thermo-mechanical computational study',author='Aadit Jain; Dheeraj Yadav; Ekansh Malhotra',pageCompression=1,invariant=1)
+    title=next(line[2:] for line in lines if line.startswith('# '))
+    doc=SimpleDocTemplate(str(OUT),pagesize=A4,rightMargin=54,leftMargin=54,topMargin=43,bottomMargin=48,title=title,author='Aadit Jain; Dheeraj Yadav; Ekansh Malhotra',pageCompression=1,invariant=1)
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
     print(OUT)
 

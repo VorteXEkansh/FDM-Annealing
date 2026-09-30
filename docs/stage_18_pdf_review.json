@@ -1,0 +1,33 @@
+{
+  "stage": 18,
+  "date": "2026-09-30",
+  "page_count": 22,
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "reviewed_pdf_sha256": "fc4567322b65e6fe230da104a3d7297cc1893b4a3e79a8875d8b431cf472b31b",
+  "visual_status": "pass",
+  "render_directory": "tmp/pdfs/stage18",
+  "inspection": "All 22 final article/supplement pages visually reviewed at 90 dpi in contact sheets. Final pagination and publication-plot changes on pages 7,8,11,12,17,18 reinspected; other pages byte-identical to the fully inspected preceding render. Corrected blank page, equation lead-ins, widow lines and split bibliography entries. No clipping, overlap or missing glyphs observed."
+}

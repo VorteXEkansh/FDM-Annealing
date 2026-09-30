@@ -1,0 +1,93 @@
+{
+  "stage": 18,
+  "date": "2026-09-30",
+  "passed": true,
+  "count": 15,
+  "checks": [
+    {
+      "check": "Main article sections",
+      "status": "pass"
+    },
+    {
+      "check": "Sixteen methodology and eighteen Results subsections",
+      "status": "pass"
+    },
+    {
+      "check": "Twenty-one consecutive equations",
+      "status": "pass"
+    },
+    {
+      "check": "All current equations mapped to implemented relations",
+      "status": "pass"
+    },
+    {
+      "check": "Unimplemented extraction formulas removed",
+      "status": "pass"
+    },
+    {
+      "check": "Executable strain partition omits absent irreversible law",
+      "status": "pass"
+    },
+    {
+      "check": "Supplement has seven detailed tables",
+      "status": "pass"
+    },
+    {
+      "check": "Seven quantitative conclusions",
+      "status": "pass"
+    },
+    {
+      "check": "All regression tests passed",
+      "status": "pass"
+    },
+    {
+      "check": "No completed production or submission claim",
+      "status": "pass"
+    },
+    {
+      "check": "Empty actual registry: data/processed/all_cases.csv",
+      "status": "pass"
+    },
+    {
+      "check": "Empty actual registry: optimization/pareto.csv",
+      "status": "pass"
+    },
+    {
+      "check": "Empty actual registry: optimization/confirmation.csv",
+      "status": "pass"
+    },
+    {
+      "check": "Prior numerical and literature evidence unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Same-control friction endpoints preserve actual values",
+      "status": "pass"
+    }
+  ],
+  "equations": 21,
+  "unit_tests": 81,
+  "frozen_evidence_files_checked": 1121,
+  "new_solver_runs": 0,
+  "production_science_complete": false,
+  "source_hashes": {
+    "manuscript/current.md": "4f3e3e54f068b3b50e4da9b6f1f90ad6c2e229b0273b0dda1fa00653752b39a3",
+    "docs/manuscript_equation_map.csv": "85ceae54dae84f2a75427e55ef11a1455a4046d4bad551cb668f84e724049381",
+    "docs/manuscript_reconstruction_audit.md": "250772281904320fde5df0a7fce778fe1d9d683188f9d3f7ae19eb9f45cfe582",
+    "docs/stage_18_tests.txt": "cccf3b4b484ffc47402279f659c5eb8eeb4b310a8b1961a0d77f8a444b32d8a9",
+    "scripts/check_reconstruction_stage.py": "7a6f08b1997ae9cc5672ac00e57ef34dac7ce56d56c85ffadc69a7e8337afdcd",
+    "scripts/build_manuscript.py": "19ccce7a76032f4f9f91c8bb1ca0bf0e0a2483fd5a32714a831dedf583d01af4",
+    "src/constitutive.py": "493ef6f262c3011c858e619f5de82cb97c0b2a1cfe47e4d523d358b99195d41e",
+    "scripts/run_thermal_verification.py": "56055877d5ff06e42e59a211b3032d9632e8b62f40efe2242ede842442c15a6d",
+    "scripts/run_structural_verification.py": "d965a924737b203523abc0aaebfe610a00b129faf7763e2e3808377f6dacbeb1",
+    "scripts/run_convergence_study.py": "0fe12a573353708499e10320a8e98a7089ab54e7c69e816f09201978adb5c125",
+    "scripts/check_convergence_stage.py": "d5568c753081b26592e79396f0d6c782f0df9b5fd83792977b59dda5ce8337d3",
+    "analysis/validation_metrics.py": "8f7b5e27824220652dfc4a3c4cc628dea108d5bbd989d6c1c9b613b3d8156fac",
+    "verification/thermal_verification.csv": "8ad7a3de225d0a0b06ef0edc56ecf0f802e49f806540c163403c49c6b4bfa23c",
+    "verification/structural_verification.csv": "9518bb3f499cae06bea531da673bdaa1f7759e78ac0c38d15e6293189418eb68",
+    "verification/contact_verification.csv": "7afc002d29e21ac9eb8bd5eb5864d86f74d2eec3483cb7866a20fe4711b9f9ed",
+    "convergence/mesh_convergence.csv": "6871a7828e7237bc0901771666d4b76458dd8580ff3d67eec32cedb06ceddfd4",
+    "convergence/timestep_convergence.csv": "690b2e1aa8badfd330be756ffc64ed4c25f609d91c0a3080cc78495b56f4481a",
+    "convergence/contact_sensitivity.csv": "6b8fb4558c71b63c59d2fd719b9f92b785820425575f928d57c8924cc565eff5"
+  }
+}

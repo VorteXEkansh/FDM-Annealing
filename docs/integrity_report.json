@@ -1,5 +1,5 @@
 {
-  "stage": 17,
+  "stage": 18,
   "date": "2026-09-30",
   "checks": [
     {
@@ -67,7 +67,7 @@
       "status": "pass"
     },
     {
-      "check": "Objectives numbered 1 through 5",
+      "check": "Seven quantitative conclusions",
       "status": "pass"
     },
     {
@@ -75,7 +75,7 @@
       "status": "pass"
     },
     {
-      "check": "All five figures occur once",
+      "check": "Four scientific figures occur once",
       "status": "pass"
     },
     {
@@ -95,15 +95,15 @@
       "status": "pass"
     },
     {
-      "check": "One primary research question",
+      "check": "Research question explicit",
       "status": "pass"
     },
     {
-      "check": "Five secondary research questions",
+      "check": "Complete methodology structure",
       "status": "pass"
     },
     {
-      "check": "Four testable propositions",
+      "check": "Complete Results structure",
       "status": "pass"
     },
     {
@@ -303,7 +303,7 @@
       "status": "pass"
     },
     {
-      "check": "Stage 10 limits and selected verification meshes reported",
+      "check": "Verification selections are not production settings",
       "status": "pass"
     },
     {
@@ -395,13 +395,25 @@
       "status": "pass"
     },
     {
+      "check": "Stage 18 reconstruction and equation audit passed",
+      "status": "pass"
+    },
+    {
+      "check": "Stage 18 reconstruction hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Publication figures retain traceable numerical sources",
+      "status": "pass"
+    },
+    {
       "check": "All text lies inside page safety bounds",
       "status": "pass"
     }
   ],
-  "count": 99,
-  "pdf_sha256": "80bad8e6e00122e46ee103f947ab74c34f82f670b8a3e7a99514b118846b6f6e",
-  "manuscript_sha256": "ca526381e6554ccaf2777759d54a772ee1a06090909b842634bf36844715e364",
+  "count": 102,
+  "pdf_sha256": "fc4567322b65e6fe230da104a3d7297cc1893b4a3e79a8875d8b431cf472b31b",
+  "manuscript_sha256": "4f3e3e54f068b3b50e4da9b6f1f90ad6c2e229b0273b0dda1fa00653752b39a3",
   "material_manifest_sha256": "362ef609095cd253f3e62def720fd486cb7a27301395b82a95a67a3a5b0b3083",
   "geometry_manifest_sha256": "d76d855563cb38fa34c51995092edfbb35ead325bc4eb2c3a8bd18fefc0d8369",
   "thermal_manifest_sha256": "f1942fd9932f7fbc2a1678edcec6576fde89b602c04b38761c7183f08c85eca1",

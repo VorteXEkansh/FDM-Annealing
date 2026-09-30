@@ -1,6 +1,6 @@
 # Authoritative project state
 
-Stage: **Prompt 17/20 — optimization and new confirmation blocked**.
+Stage: **Prompt 18/20 — complete manuscript reconstruction; production study remains incomplete**.
 Date: 2026-09-30 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
@@ -311,10 +311,21 @@ scripts/check_surrogate_stage.py verifies the frozen inputs and generates data/p
 The complete manuscript replaces the earlier brief sensitivity plan with the explicit surrogate assessment and uncertainty-admission method, and updates abstract, evidence table, conclusions and provenance. Recovery requires model/boundary evidence, non-isothermal implementation, production convergence, acceptable independent validation, approved design/dry run and genuine campaign data, followed by supported uncertainty inputs. Stop at Prompt 16; do not proceed automatically to optimization.
 
 
-## Multi-objective optimization and confirmation — Stage 17 (current)
+## Multi-objective optimization and confirmation — Stage 17 (unchanged source evidence)
 
 There are no eligible production predictions or validated surrogates, no propagated input uncertainty and no admissible basis for selecting confirmation points. No Pareto set was computed, feasibility was not evaluated and no robust window or optimum was identified. No new ANSYS confirmation run was launched; no prediction error exists. The empty registries do not mean the feasible set was found empty.
 
 Created optimization/pareto.csv and optimization/confirmation.csv with headers only. optimization/README.md defines objective/confirmation field semantics; docs/optimization_protocol.md records the conditional objective, feasibility, preference, robustness and new-run requirements. Equal, dimensional-fidelity and stress/contact priorities remain unexecuted; no numerical weights, limits or desirability thresholds were invented. Strength is excluded. The requested recommendation, two neighbors and thermally matched FREE roles have no assigned case IDs or coordinates.
 
 scripts/check_optimization_stage.py audits frozen source hashes and prevents overwriting populated registries. docs/stage_17_optimization_checks.json distinguishes integrity from scientific execution. No raw data, material properties or earlier validation/calibration records were altered. The manuscript now integrates unavailable optimization results, conditional priorities, explicit confirmation requirements and limitations in Discussion and Conclusions. Recovery requires the earlier model, validation, production and uncertainty prerequisites. Stop at Prompt 17; do not advance automatically.
+
+
+## Journal-article reconstruction — Stage 18 (current)
+
+The current title is **Numerical verification of a thermo-mechanical framework for gap-constrained annealing of FFF-printed PLA**. This supersedes the earlier candidate title to reflect achieved evidence. The original research question is retained; production annealing, independent validation, surrogate/UQ, optimization and confirmation remain unachieved. The instruction's assumption that all computation is complete is not supported and is not asserted.
+
+The full manuscript is rebuilt with Introduction, Background, 16 methodology subsections, 18 Results subsections, Discussion, seven quantitative reference-case Conclusions, data/code availability, declarations, references and integrated Supplementary Information. Real verification and convergence values enter the new abstract and conclusions. No production or experimental findings are invented. Oversized source/coefficient/comparison tables move to Supplementary Tables S1–S7. The observation-only validation plot remains in the repository but is removed from the main article.
+
+Current numbered equations map through docs/manuscript_equation_map.csv. There are 21 implemented reference/calculation relations. The former three unimplemented production extraction formulas are omitted, and the strain partition now matches the actual thermal-plus-viscoelastic update without an unimplemented bulk annealing term. The earlier equation map remains historical. docs/manuscript_reconstruction_audit.md details scope, corrections and quantitative provenance.
+
+All 81 repository unit tests were rerun successfully in this stage; no new solver run occurred. Publication readiness is not claimed: required production science and author declarations remain missing. Stop at Prompt 18; do not automatically continue.

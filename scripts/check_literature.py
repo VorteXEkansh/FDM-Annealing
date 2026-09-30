@@ -30,7 +30,17 @@ check('All journal DOIs in complete manuscript',all(r['doi'] in source for r in 
 check('All DOI-bearing material sources in complete manuscript',all(doi in source for doi in property_dois))
 body=source[:source.index('### References')]
 expected_citations=set(range(1,41)) if "[40] Ansys" in source else set(range(1,40)) if "[39] ANSYS" in source else set(range(1,39)) if property_sources else set(range(1,36))
-check('Every bibliography entry cited in body',set(map(int,re.findall(r'\[(\d+)(?:\]|,)',body)))==expected_citations)
+def citation_numbers(text):
+ """Read numeric citation groups/ranges, excluding trailing source locators."""
+ numbers=set()
+ for group in re.findall(r'\[(\d+(?:\s*[–-]\s*\d+)?(?:\s*,\s*\d+(?:\s*[–-]\s*\d+)?)*)\s*(?=\]|,)',text):
+  for item in group.split(','):
+   bounds=re.split(r'\s*[–-]\s*',item.strip())
+   if len(bounds)==1:numbers.add(int(bounds[0]))
+   else:numbers.update(range(int(bounds[0]),int(bounds[1])+1))
+ return numbers
+check('Citation parser handles groups, ranges and source locators',citation_numbers('[1,2,27,28] [17–20] [8, supplementary Tables B.1–B.2] [7, Fig. 4(a)] [35-36]')=={1,2,7,8,17,18,19,20,27,28,35,36})
+check('Every bibliography entry cited in body',citation_numbers(body)==expected_citations)
 check('No duplicated table labels',not re.search(r'TABLE: Table \d',source))
 for a in json.loads((ROOT/'literature/acquisition_manifest.json').read_text()):
  local=ROOT/a['local_review_copy']

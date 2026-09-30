@@ -1,0 +1,22 @@
+equation,relation,implementation,status,evidence_or_gate,prior_equation
+1,Initial clearance and normalized clearance,geometry/geometry_definition.json and scripts/build_geometry.py,implemented_geometry_definition,Five declared gap levels; no optimum inferred,1
+2,Fixture property interpolation,src/constitutive.py:fixture_property,implemented_reference,Meng2026 Table 1; alpha thermal-strain convention unresolved,12
+3,Executable elastic-delayed-thermal partition without bulk annealing term,src/constitutive.py:Prusament.strain_parts and advance,implemented_reference_partition,Matches advance subtracting thermal strain only; bulk irreversible law absent,3
+4,Reversible thermal strain,src/constitutive.py:Prusament.thermal_strain,implemented_reference,Chapuis2025 Table B.1 constant alpha,4
+5,Isotropic stiffness action,src/constitutive.py:isotropic_stress and isotropic_strain,implemented_reference,Constant-Poisson three-dimensional extension explicitly assumed,5
+6,Generalized-Maxwell stress and branch dynamics,src/constitutive.py:Prusament.stress and advance_reduced,implemented_reference,Chapuis2025 spectrum; no bulk initial-state transfer,6
+7,Instantaneous modulus and shear/bulk normalization,src/constitutive.py:Prusament.instantaneous and normalized_prony and shear_bulk,implemented_reference,Same fractional kernels are an assumption preserving constant Poisson ratio,7
+8,Isothermal relaxation modulus,src/constitutive.py:Prusament.relaxation_modulus,implemented_reference,Source master curve; not independent physical validation,8
+9,Piecewise Arrhenius/WLF shift,src/constitutive.py:Prusament.log10_shift and shift,implemented_reference,Chapuis2025 Eq. 6; source UMAT convention; 23–85 deg C guard,9
+10,Reduced time integral,src/constitutive.py:Prusament.reduced_time,implemented_reference_quadrature,Linear temperature path with Simpson quadrature and split at Tg,10
+11,Exponential branch update,src/constitutive.py:Prusament.advance_reduced and advance,implemented_reference,Exact linear-reduced-strain substep; midpoint physical-time approximation tested by refinement,11
+12,Transient heat balance,scripts/run_thermal_verification.py APDL deck and accepted attempt 05,implemented_for_reference_problem,Constant verification fixtures only; production Prusament k(T) and cp(T) absent,2
+13,Quasi-static mechanical equilibrium,scripts/run_structural_verification.py:deck,verified_uniform_cases,Production coupon and fixture pending,13
+14,Ideal unilateral contact,scripts/run_structural_verification.py:deck and scripts/run_convergence_study.py:contact_deck,verified_node_and_2D_surface_contact,CONTA178 node contact and CONTA172/TARGE169 control sensitivity; production 3D contact and thermal conductance pending,14
+15,Adjacent discretization change,scripts/check_convergence_stage.py:delta_percent,implemented_for_mesh_and_time_tables,Verification configurations only; zero denominator rule explicit,21
+16,Plane-wall center step response and Duhamel history,scripts/run_thermal_verification.py:center_step_modes and analytical_center_temperature,implemented_and_compared_to_ANSYS,Verification-only constants; not a PLA property or physical validation,18
+17,Uniform elastic and eigenstrain reference,scripts/run_structural_verification.py:references,verified_against_SOLID185,Synthetic fixtures only,19
+18,Finite-ramp Prony convolution,scripts/run_structural_verification.py:references,verified_against_SOLID185,65 C isothermal source spectrum; shifting unverified,20
+19,Signed absolute and relative validation errors,analysis/validation_metrics.py:compare,implemented_not_applied_to_solver_predictions,Zero observed value leaves relative error undefined,22
+20,MAE and RMSE,analysis/validation_metrics.py:compare,implemented_not_applied_to_solver_predictions,Separate response units and directions; no validation solve,23
+21,Deterministic discrepancy compatibility,analysis/validation_metrics.py:bounded_interpretation,implemented_not_applied_to_solver_predictions,Missing bounds are indeterminate; not statistical validation,24

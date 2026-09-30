@@ -1,0 +1,13 @@
+{
+  "stage": 18,
+  "scope": "Redrawn archived verification data; titles updated, numeric values unchanged",
+  "source_hashes": {
+    "convergence/mesh_convergence.csv": "6871a7828e7237bc0901771666d4b76458dd8580ff3d67eec32cedb06ceddfd4",
+    "convergence/timestep_convergence.csv": "690b2e1aa8badfd330be756ffc64ed4c25f609d91c0a3080cc78495b56f4481a",
+    "convergence/contact_sensitivity.csv": "6b8fb4558c71b63c59d2fd719b9f92b785820425575f928d57c8924cc565eff5",
+    "scripts/build_publication_figures.py": "b3c7c6c11f1996093b622b648eebd0b2a058b90c59705608a75126d5ac0d0242",
+    "figures/publication/contact_sensitivity.png": "d149fc1e6acbdd613d291ae6ef4d33373d238e6ca1482a167a58d16e3494db07",
+    "figures/publication/mesh_convergence.png": "84ac527a1dc000cb2b6013fa429fe2a9b659e2eb6a0b3c8110271520d44e0f0a",
+    "figures/publication/timestep_convergence.png": "8151d65739912433f13af934cb4f218bdc58b557325c49d114d2018a8ddbd78f"
+  }
+}

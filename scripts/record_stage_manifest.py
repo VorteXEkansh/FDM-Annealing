@@ -71,6 +71,11 @@ if args.stage >= 17:
     paths = list(dict.fromkeys(paths))
     scope = 'Optimization and confirmation admission audit; no Pareto set, recommendation, robust window, new confirmation run or prediction error.'
 
+if args.stage >= 18:
+    paths += ['docs/manuscript_reconstruction_audit.md','docs/manuscript_equation_map.csv','docs/stage_18_reconstruction_checks.json','docs/stage_18_pdf_review.json','docs/stage_18_tests.txt','scripts/check_reconstruction_stage.py','scripts/build_publication_figures.py','docs/stage_18_figure_manifest.json','figures/publication/mesh_convergence.png','figures/publication/timestep_convergence.png','figures/publication/contact_sensitivity.png']
+    paths = list(dict.fromkeys(paths))
+    scope = 'Full verification-focused article reconstruction and regression checks; missing production science is explicitly unachieved.'
+
 data={'stage':args.stage,'date':('2026-09-30' if args.stage >= 15 else '2026-09-29' if args.stage >= 12 else '2026-09-28' if args.stage >= 11 else '2026-09-14' if args.stage >= 10 else '2026-09-13'),'algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
 (ROOT/f'docs/stage_{args.stage:02d}_manifest.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(f'Recorded {len(paths)} input/code/output hashes')
