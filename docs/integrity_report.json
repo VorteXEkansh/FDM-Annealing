@@ -1,5 +1,5 @@
 {
-  "stage": 16,
+  "stage": 17,
   "date": "2026-09-30",
   "checks": [
     {
@@ -379,13 +379,29 @@
       "status": "pass"
     },
     {
+      "check": "Stage 17 preserves unavailable optimization and confirmation",
+      "status": "pass"
+    },
+    {
+      "check": "Stage 17 frozen evidence and output hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Requested optimization registries contain no fabricated rows",
+      "status": "pass"
+    },
+    {
+      "check": "Optimization limits integrated in full manuscript",
+      "status": "pass"
+    },
+    {
       "check": "All text lies inside page safety bounds",
       "status": "pass"
     }
   ],
-  "count": 95,
-  "pdf_sha256": "7130444afd46dce3bb009a013605ef4db9bfebbe276f213aa3186117f9e271a7",
-  "manuscript_sha256": "ae1ab3392adbec18a14b795fb1a7cbc553f338dae46c975680f30bf5c1b296c2",
+  "count": 99,
+  "pdf_sha256": "80bad8e6e00122e46ee103f947ab74c34f82f670b8a3e7a99514b118846b6f6e",
+  "manuscript_sha256": "ca526381e6554ccaf2777759d54a772ee1a06090909b842634bf36844715e364",
   "material_manifest_sha256": "362ef609095cd253f3e62def720fd486cb7a27301395b82a95a67a3a5b0b3083",
   "geometry_manifest_sha256": "d76d855563cb38fa34c51995092edfbb35ead325bc4eb2c3a8bd18fefc0d8369",
   "thermal_manifest_sha256": "f1942fd9932f7fbc2a1678edcec6576fde89b602c04b38761c7183f08c85eca1",

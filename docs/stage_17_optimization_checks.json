@@ -1,0 +1,30 @@
+{
+  "stage": 17,
+  "date": "2026-09-30",
+  "passed": true,
+  "scope": "Evidence admission and empty registry integrity only",
+  "eligible_predictions": 0,
+  "pareto_computed": false,
+  "feasibility_evaluated": false,
+  "priorities_evaluated": [],
+  "desirability_used": false,
+  "robust_window_identified": false,
+  "confirmation_points_selected": 0,
+  "new_ansys_runs_launched": 0,
+  "confirmation_completed": false,
+  "prediction_errors_computed": false,
+  "source_hashes": {
+    "data/processed/all_cases.csv": "0d8eb1ef94f52ea4d39b712caf52b8dc2c9c2f825317f7426b4daf9b98f493e1",
+    "simulation/design_matrix.csv": "4728ae88c3fb2c348814caee41be10c6a18d4c7a8a8ee5ca8e80c1ce821b69c0",
+    "simulation/case_manifest.csv": "96e7dfd82f2e69603a2bb555e308e65fb95e43767b90c08e459a4ba348b8ad1e",
+    "docs/stage_16_surrogate_checks.json": "73a81b87b26e29b758f92c2e8df02e407a49dde096c6b8d1aefdd02d956da7d1",
+    "data/processed/surrogate_availability.csv": "3ee757a87f80ef4a4a07acf405346374d6b8e5e4ab04cf63049dbadbd0a3619f",
+    "material/uncertainty_ranges.csv": "77307c17a0242132617197330b7eb7064463e57f9eb177333dc3daa86aa22bb9",
+    "docs/stage_12_validation_checks.json": "18db37771934ce547ec4ab69b9b616fe72bda8b07f8a992dfc02a07332895eca",
+    "optimization/pareto.csv": "cbad79cdde979cb2df85e5b92b9ebc0a43592c4987ff381fbd96be9cb943374f",
+    "optimization/confirmation.csv": "835afc764f131defce420ef30f020d9e9895499311959e0f390a91dbe74226b1",
+    "optimization/README.md": "7b6503f2d010ae155432e14c7e338da2a5c934121bc479a511f357c11475cbff",
+    "docs/optimization_protocol.md": "b25912d703fd2df54b43458eb3a76edeb79d0190eaba57152110a7d0f82a233f",
+    "scripts/check_optimization_stage.py": "a30d4beebf5165a41a3920304864761b3c64d13b3b758d3218fdc26c75d01a90"
+  }
+}

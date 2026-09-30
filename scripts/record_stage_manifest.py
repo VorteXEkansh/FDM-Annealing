@@ -66,6 +66,11 @@ if args.stage >= 16:
     paths = list(dict.fromkeys(paths))
     scope = 'Surrogate and uncertainty admission audit; no eligible production responses, fitted models, sensitivity indices or propagated intervals.'
 
+if args.stage >= 17:
+    paths += ['docs/optimization_protocol.md','docs/stage_17_optimization_checks.json','docs/stage_17_pdf_review.json','scripts/check_optimization_stage.py','optimization/README.md','optimization/pareto.csv','optimization/confirmation.csv']
+    paths = list(dict.fromkeys(paths))
+    scope = 'Optimization and confirmation admission audit; no Pareto set, recommendation, robust window, new confirmation run or prediction error.'
+
 data={'stage':args.stage,'date':('2026-09-30' if args.stage >= 15 else '2026-09-29' if args.stage >= 12 else '2026-09-28' if args.stage >= 11 else '2026-09-14' if args.stage >= 10 else '2026-09-13'),'algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
 (ROOT/f'docs/stage_{args.stage:02d}_manifest.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(f'Recorded {len(paths)} input/code/output hashes')

@@ -1,6 +1,6 @@
 # Authoritative project state
 
-Stage: **Prompt 16/20 — surrogate, sensitivity and uncertainty execution blocked**.
+Stage: **Prompt 17/20 — optimization and new confirmation blocked**.
 Date: 2026-09-30 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
@@ -300,7 +300,7 @@ scripts/check_postprocessing_stage.py audits this source boundary and generates 
 Results were rewritten around the unavailable comparisons and observable requirements. Discussion now distinguishes mechanistic hypotheses from inferred causes and explains why thermal expansion, relaxation, irreversible strain, stiffness, contact and cooling cannot be attributed without actual matched fields/histories. No unexpected trend was observed or ruled out, no inconvenient result removed and no fixture benefit claimed. The full manuscript, state and delivery evidence are updated. Actual postprocessing remains unachieved until the validation, admitted design, dry-run and campaign prerequisites are resolved. Stop at Prompt 15; do not proceed automatically to Prompt 16.
 
 
-## Surrogates, global sensitivity and uncertainty — Stage 16 (current)
+## Surrogates, global sensitivity and uncertainty — Stage 16 (unchanged source evidence)
 
 No eligible production response exists for fitting or held-out assessment. No surrogate, cross-validation metric, sensitivity index or uncertainty interval was calculated. Reference verification runs and reserved experimental observations are not substitutes. Source material tables and uncertainty ranges remain unchanged; no probability distribution is admitted.
 
@@ -309,3 +309,12 @@ The new docs/surrogate_uncertainty_protocol.md defines conditional case eligibil
 scripts/check_surrogate_stage.py verifies the frozen inputs and generates data/processed/surrogate_availability.csv for four response families and data/processed/uncertainty_input_audit.csv for eight requested uncertain inputs. Metric/interval/distribution fields remain blank. docs/stage_16_surrogate_checks.json records source, script and output hashes. Passing these checks establishes audit integrity only, not successful fitting or propagation.
 
 The complete manuscript replaces the earlier brief sensitivity plan with the explicit surrogate assessment and uncertainty-admission method, and updates abstract, evidence table, conclusions and provenance. Recovery requires model/boundary evidence, non-isothermal implementation, production convergence, acceptable independent validation, approved design/dry run and genuine campaign data, followed by supported uncertainty inputs. Stop at Prompt 16; do not proceed automatically to optimization.
+
+
+## Multi-objective optimization and confirmation — Stage 17 (current)
+
+There are no eligible production predictions or validated surrogates, no propagated input uncertainty and no admissible basis for selecting confirmation points. No Pareto set was computed, feasibility was not evaluated and no robust window or optimum was identified. No new ANSYS confirmation run was launched; no prediction error exists. The empty registries do not mean the feasible set was found empty.
+
+Created optimization/pareto.csv and optimization/confirmation.csv with headers only. optimization/README.md defines objective/confirmation field semantics; docs/optimization_protocol.md records the conditional objective, feasibility, preference, robustness and new-run requirements. Equal, dimensional-fidelity and stress/contact priorities remain unexecuted; no numerical weights, limits or desirability thresholds were invented. Strength is excluded. The requested recommendation, two neighbors and thermally matched FREE roles have no assigned case IDs or coordinates.
+
+scripts/check_optimization_stage.py audits frozen source hashes and prevents overwriting populated registries. docs/stage_17_optimization_checks.json distinguishes integrity from scientific execution. No raw data, material properties or earlier validation/calibration records were altered. The manuscript now integrates unavailable optimization results, conditional priorities, explicit confirmation requirements and limitations in Discussion and Conclusions. Recovery requires the earlier model, validation, production and uncertainty prerequisites. Stop at Prompt 17; do not advance automatically.

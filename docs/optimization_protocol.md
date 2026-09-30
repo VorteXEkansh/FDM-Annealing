@@ -1,0 +1,31 @@
+# Stage 17 optimization and independent confirmation
+
+Date: 30 September 2026. **Optimization and confirmation are blocked.** There are no eligible production responses, fitted surrogates or propagated input uncertainties. Independent physical validation and production convergence remain incomplete. No Pareto set was computed, no processing condition was selected and no new ANSYS confirmation job was launched. This is not an empty feasible set established by optimization; feasibility was not evaluable.
+
+## Objective and feasibility contract
+
+Only admitted model outputs can become objectives. Candidate responses are released residual warpage, combined dimensional error and a fixed residual-stress measure. Preserve the signed directional dimensional responses underlying any scalar error. Report each response's definition, units, extraction region, reference fit and cooling/release time. Contact pressure requires a stated statistic and in-fixture time basis; a contact-pressure limit requires an independently justified allowable threshold. No limit or dimensional normalization is assigned in this stage. Processing duration requires the complete heating/holding/cooling/release history; nominal hold time alone is not total cycle time or evidence of excessive treatment.
+
+Tensile strength is excluded: no independently validated strength or fracture model exists. A short cycle with little distortion does not demonstrate an annealing benefit. Any engineering recommendation also needs a source-supported benefit criterion, admissible material domain and application tolerances. FREE remains distinct from zero-clearance GAP. The inherited candidate factors and geometry-only gaps are not approved optimization bounds.
+
+## Pareto comparison and priorities
+
+When eligible cases exist, retain a condition as nondominated only if no other feasible condition is no worse in every declared minimized objective and strictly better in at least one. Preserve ties, units, raw response provenance and the complete eligible comparison set. Label a front computed from finite cases as a sampled nondominated set, not the global continuous front. Apparent dominance smaller than numerical or surrogate resolution requires an unresolved interpretation; do not hide it by rounding.
+
+Equal priority, dimensional-fidelity priority and stress/contact priority are requested decision perspectives, not numerical results. Equal priority would require explicit dimensionless scaling before aggregation; dimensional priority would emphasize dimensional error/warpage while respecting justified stress/contact limits; stress/contact priority would reverse that emphasis with explicit fidelity limits. The objective scales, limits, tie rules and weights have not been supplied or derived and are not invented here. All three assessments remain unexecuted. Report the raw Pareto set before any preference ranking. Derringer–Suich desirability is not used, so no desirability thresholds or scores are assigned.
+
+## Robust processing window
+
+A processing window needs an admitted domain, genuine response coverage, explicit feasibility/benefit criteria and supported uncertainty treatment. Its boundary must survive the declared physical-input scenarios or probability criterion and numerical/approximation checks. Deterministic response ranges, Gaussian-process spread or verification-mesh percentages alone do not establish a robust window. No window or universal optimum can be identified from the current evidence.
+
+## Conditional new confirmation design
+
+The requested roles are a recommended point, two distinct feasible neighboring points and a thermally matched FREE case. None has a selected coordinate, case identifier or run directory. A future neighbor rule must declare distance/scaling or grid adjacency in the admitted temperature/hold/gap space before observing confirmation errors; choose distinct local points and disclose one-sided boundary coverage. If two feasible neighbors do not exist, report that limitation rather than inventing them.
+
+Thermal matching must use actual specimen histories and a declared space/time comparison metric and tolerance over heating, attainment, hold and cooling. Identical oven setpoints alone do not establish matching. The FREE case must retain the same material, geometry and cooled/released observation rule; any external schedule adjustment to match specimen temperatures must be documented. No target specimen history currently exists, so neither a matching tolerance nor a matched schedule is assigned.
+
+Freeze the selected coordinates and optimization/surrogate predictions with hashes before new solves. New runs need production-specific mesh/time/contact refinement, immutable raw exports, warnings, solver status, material applicability and extraction checks. A label of high fidelity does not replace refinement evidence. Do not reuse Stage 8–10 reference outputs or run a synthetic verification case as a confirmation. Compare the frozen prediction with the new solution using signed error (prediction minus new solution), absolute error and relative absolute error referenced to the nonzero new solution. Report errors separately in each response's units; a zero reference leaves relative error undefined. Freeze response-specific acceptance rules against the decision resolution and numerical error before solving; no arbitrary percentage tolerance is imposed here. New solver agreement checks approximation and selection, not independent physical validity. Confirmation points must remain outside the original fit; if used for refitting, disclose that use and obtain another independent confirmation.
+
+## Artifacts and outcome
+
+`optimization/pareto.csv` and `optimization/confirmation.csv` are header-only registries. They contain no fictitious candidate, zero response, assigned rank, prediction or error. `optimization/README.md` defines their semantics. `scripts/check_optimization_stage.py` verifies frozen prior inputs and records hashes plus explicit incomplete execution flags in `docs/stage_17_optimization_checks.json`. Audit success is not optimization success. Recover the earlier model, boundary, convergence, validation, design, campaign and uncertainty prerequisites before executing this protocol. Stop at Prompt 17.
