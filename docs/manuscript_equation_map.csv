@@ -11,9 +11,9 @@ equation,relation,implementation,status,evidence_or_gate,prior_equation
 10,Reduced time integral,src/constitutive.py:Prusament.reduced_time,implemented_reference_quadrature,Linear temperature path with Simpson quadrature and split at Tg,10
 11,Exponential branch update,src/constitutive.py:Prusament.advance_reduced and advance,implemented_reference,Exact linear-reduced-strain substep; midpoint physical-time approximation tested by refinement,11
 12,Transient heat balance,scripts/run_thermal_verification.py APDL deck and accepted attempt 05,implemented_for_reference_problem,Constant verification fixtures only; production Prusament k(T) and cp(T) absent,2
-13,Quasi-static mechanical equilibrium,scripts/run_structural_verification.py:deck,verified_uniform_cases,Production coupon and fixture pending,13
+13,Quasi-static mechanical equilibrium,scripts/run_structural_verification.py:deck and scripts/run_convergence_study.py:contact_deck,verified_reference_equilibrium,Small deformation for uniform and cantilever tests; current configuration for NLGEOM ON surface contact,13
 14,Ideal unilateral contact,scripts/run_structural_verification.py:deck and scripts/run_convergence_study.py:contact_deck,verified_node_and_2D_surface_contact,CONTA178 node contact and CONTA172/TARGE169 control sensitivity; production 3D contact and thermal conductance pending,14
-15,Adjacent discretization change,scripts/check_convergence_stage.py:delta_percent,implemented_for_mesh_and_time_tables,Verification configurations only; zero denominator rule explicit,21
+15,Adjacent discretization change,analysis/review_metrics.py:relative_change,implemented_for_mesh_and_time_tables,Verification configurations only; zero denominator rule explicit,21
 16,Plane-wall center step response and Duhamel history,scripts/run_thermal_verification.py:center_step_modes and analytical_center_temperature,implemented_and_compared_to_ANSYS,Verification-only constants; not a PLA property or physical validation,18
 17,Uniform elastic and eigenstrain reference,scripts/run_structural_verification.py:references,verified_against_SOLID185,Synthetic fixtures only,19
 18,Finite-ramp Prony convolution,scripts/run_structural_verification.py:references,verified_against_SOLID185,65 C isothermal source spectrum; shifting unverified,20

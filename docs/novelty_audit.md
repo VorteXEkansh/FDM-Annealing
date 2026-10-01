@@ -59,3 +59,8 @@ Defensible intended novelty: an evidence-tested, reproducible assessment of the 
 - PINN2026 uses “thermo-constrained” for learning restrictions. It is not evidence of a mechanical fixture. Repeated records along a load curve cannot be treated as independent physical samples.
 
 No numerical result, material law, optimum or validated fixture design is created by this audit.
+
+
+## Stage 19 correction — 30 September 2026
+
+Hussam et al. (2025), DOI 10.1007/s00170-025-15455-5, explicitly compare 1.0 mm and 0.6 mm mould clearances for ABS annealing (Section 2.2, Figure 4). Therefore quantified annealing clearance itself is prior art, even though this study does not establish the proposed PLA coupled predictive framework. Reference 41 and docs/stage_19_literature_audit.md record the addition. The intended PLA contribution remains contingent on future physical validation and actual predictions; present work establishes component verification only.

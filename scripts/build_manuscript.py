@@ -133,7 +133,13 @@ def build():
             else:
                 story.append(figure)
         elif line.startswith('CAPTION:'): story.append(P(line[8:].strip(),ST['caption']))
-        elif line.startswith('EQ:'): story.append(P(line[3:].strip(),ST['equation']))
+        elif line.startswith('EQ:'):
+            equation=P(line[3:].strip(),ST['equation'])
+            following=i+1
+            while following<len(lines) and not lines[following].strip(): following+=1
+            if following<len(lines) and lines[following].startswith('EQ:'):
+                equation.keepWithNext=True
+            story.append(equation)
         elif line.startswith('### '): story.append(P(line[4:],ST['heading']))
         elif line.startswith('## '): story.append(P(line[3:],ST['subtitle']))
         elif line.startswith('# '): story.append(P(line[2:],ST['title']))

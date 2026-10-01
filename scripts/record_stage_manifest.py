@@ -76,6 +76,12 @@ if args.stage >= 18:
     paths = list(dict.fromkeys(paths))
     scope = 'Full verification-focused article reconstruction and regression checks; missing production science is explicitly unachieved.'
 
-data={'stage':args.stage,'date':('2026-09-30' if args.stage >= 15 else '2026-09-29' if args.stage >= 12 else '2026-09-28' if args.stage >= 11 else '2026-09-14' if args.stage >= 10 else '2026-09-13'),'algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
+if args.stage >= 19:
+    paths += ['docs/peer_review_audit.md','docs/stage_19_literature_audit.md','docs/stage_19_numerical_audit.json','docs/stage_19_originality_screen.json','docs/stage_19_pdf_review.json','docs/stage_19_tests.txt','analysis/review_metrics.py','tests/test_review_metrics.py','scripts/audit_peer_review.py','scripts/check_originality_stage19.py','scripts/build_review_figures.py','docs/stage_19_figure_manifest.json','convergence/stage_19_audited_refinement.csv','literature/stage_19_reference_additions.json','literature/manuscript_citation_map.json']
+    paths += [p.relative_to(ROOT).as_posix() for directory in ['figures/publication_stage19','literature/evidence/stage_19'] for p in sorted((ROOT/directory).iterdir()) if p.is_file()]
+    paths = list(dict.fromkeys(paths))
+    scope = 'Six-perspective internal scientific audit, corrected measurands and derived percentages, independent raw-export recomputation and focused prior-art update. No new solver run or production science completion.'
+
+data={'stage':args.stage,'date':('2026-10-01' if args.stage >= 19 else '2026-09-30' if args.stage >= 15 else '2026-09-29' if args.stage >= 12 else '2026-09-28' if args.stage >= 11 else '2026-09-14' if args.stage >= 10 else '2026-09-13'),'algorithm':'SHA-256','files':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths},'scope':scope}
 (ROOT/f'docs/stage_{args.stage:02d}_manifest.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(f'Recorded {len(paths)} input/code/output hashes')

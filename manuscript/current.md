@@ -1,4 +1,4 @@
-# Numerical verification of a thermo-mechanical framework for gap-constrained annealing of FFF-printed PLA
+# Thermal, viscoelastic and contact verification toward gap-constrained annealing of FFF-printed PLA
 
 Aadit Jain · Dheeraj Yadav · Ekansh Malhotra
 
@@ -8,7 +8,7 @@ Computational research manuscript · 30 September 2026
 
 ### Abstract
 
-Quantified fixture clearance is a potential means of controlling deformation during annealing of fused-filament-fabricated polylactic acid, but prediction requires compatible material data and verified thermal, mechanical and contact implementations. This study develops and numerically verifies components of such a framework using Ansys Mechanical APDL 2026 R1. A formulation-specific, 23-branch generalized-Maxwell reference is combined with separate thermal, structural and contact benchmarks. The transient plane-wall comparison gives a maximum temperature error of 0.005180700 °C and maximum excursion-relative error of 0.157660518%. Six structural/contact reference cases pass 114 scalar comparisons; the isothermal Prony calculation has maximum stress error 3.8271 × 10⁻⁶ MPa. Refinement from a 90 × 12 to a 120 × 16 structural grid changes benchmark warpage by 0.9327% and interior residual stress by 2.0266%. A 40-to-60-element normal-Lagrange contact refinement changes mean pressure by 0.12698%, with zero reported penetration. These results verify declared numerical configurations, not production annealing behavior. Compatible thermal functions, bulk irreversible strain, a non-isothermal ANSYS adapter and independent physical validation remain incomplete. Consequently no production clearance benefit, processing optimum or uncertainty interval is established. The contribution is a reproducible verification foundation and an explicit account of the evidence still required for predictive constrained-annealing analysis.
+Quantified fixture clearance is a potential means of controlling deformation during annealing of fused-filament-fabricated polylactic acid, but prediction requires compatible material data and verified thermal, mechanical and contact implementations. This study develops and numerically verifies components of such a framework using Ansys Mechanical APDL 2026 R1. A formulation-specific, 23-branch generalized-Maxwell reference is evaluated alongside separate thermal, structural and contact benchmarks; these do not constitute a coupled annealing simulation. The transient plane-wall comparison gives a maximum sampled center-temperature error of 0.005180700 °C and maximum excursion-relative error of 0.157660518%. Six structural/contact reference cases pass 114 scalar comparisons; the isothermal Prony calculation has maximum stress error 3.8271 × 10⁻⁶ MPa. Refinement from a 90 × 12 to a 120 × 16 structural grid changes benchmark vertical warpage by 0.9327% and interior residual stress by 2.0266%. A 40-to-60-element normal-Lagrange contact refinement changes mean pressure by 0.12698%, with zero reported penetration. These results verify declared numerical configurations, not production annealing behavior. Compatible thermal functions, bulk irreversible strain, a non-isothermal ANSYS adapter and independent physical validation remain incomplete. Consequently no production clearance benefit, processing optimum or uncertainty interval is established. The contribution is a reproducible verification foundation and an explicit account of the evidence still required for predictive constrained-annealing analysis.
 
 <b>Keywords:</b> fused filament fabrication; polylactic acid; annealing; fixture clearance; numerical verification; viscoelasticity; contact
 
@@ -31,9 +31,8 @@ Orthotropic FFF mechanics [16], thermal/deformation calculations [10], composite
 
 Annealing optimization [23], multiscale FE/desirability analysis [14] and physics-informed recycled-PLA optimization [35] precede this work. Derringer–Suich desirability [4] is established methodology, not evidence of physical validity. ASTM F3489-23 [3] supports appraisal of material-extrusion mechanical data; it does not certify a simulation or supply an annealing law.
 
-The targeted review covers verified records through 12 September 2026; it is not an exhaustive search through this revision date. In the accessible evidence, no study was identified demonstrating the entire chain of quantified annealing-fixture clearance, evolving contact, irreversible directional response and independently supported released geometry/stress with uncertainty. This is a bounded search finding, not proof of absence. Supplementary Table S1 compares the ten closest studies. The proposed gap remains an evidence requirement, not an achieved predictive capability.
+The original targeted review covers verified records through 12 September 2026. A focused audit search on 30 September 2026 additionally identified an explicit mould-clearance precedent: Hussam et al. [41, Section 2.2 and Fig. 4] compare 1.0 mm and 0.6 mm clearances during ABS annealing. Thus even quantified annealing-mould clearance is not novel by itself. ABS observations do not supply PLA parameters or validate the proposed fixture. The focused update is not an exhaustive systematic review. In the accessible evidence, the reviewed sources did not establish the entire chain of quantified annealing-fixture clearance, evolving contact, irreversible directional response and independently supported released geometry/stress with uncertainty. This is a bounded search finding, not proof of absence. Supplementary Table S1 compares the ten closest studies. The proposed gap remains an evidence requirement, not an achieved predictive capability.
 
-<!-- PAGE -->
 ### 3. Computational methodology
 ### 3.1. Research framework
 
@@ -104,7 +103,7 @@ For strain linear in reduced time, the implemented update is
 
 EQ: r<sub>i</sub> = Δξ/τ<sub>i</sub>, &nbsp; A<sub>i</sub> = exp(−r<sub>i</sub>),<br/>B<sub>i</sub> = [1 − exp(−r<sub>i</sub>)]/r<sub>i</sub>,<br/>s<sub>i</sub><sup>n+1</sup> = A<sub>i</sub>s<sub>i</sub><sup>n</sup> + B<sub>i</sub>C<sub>i</sub> : Δε<sup>m</sup>. &nbsp;&nbsp; (11)
 
-The exponential difference is evaluated accurately near zero. The physical-time update uses midpoint temperature to approximate reduced-time increments; it is exact for an isothermal linear-strain segment and requires refinement for a changing temperature. No verified full non-isothermal ANSYS adapter exists. Positive moduli and times support the isothermal reference, not validity under arbitrary strain, duration or annealing history.
+The exponential difference is evaluated accurately near zero. The physical-time update uses midpoint temperature to approximate reduced-time increments; it is exact for an isothermal linear-strain segment and requires refinement for a changing temperature. No verified full non-isothermal ANSYS adapter exists. Positive moduli and times support the isothermal reference, not validity under arbitrary strain, duration or annealing history. The very short fitted relaxation times describe a source master-curve representation; this study neither independently resolves nor assigns molecular meaning to every branch. ν and α are constant source assumptions, and equal bulk/shear relaxation fractions are not a measurement of volumetric relaxation.
 
 ### 3.5. Thermal formulation
 
@@ -112,15 +111,15 @@ The executed transient conduction reference solves
 
 EQ: ρc<sub>p</sub> ∂T/∂t = ∇ · (k ∇T). &nbsp;&nbsp; (12)
 
-Here ρ, c<sub>p</sub> and k are density, heat capacity and conductivity. The verified problem uses constant fixtures and convection, specified in Section 3.9. Radiation is omitted from this benchmark to retain an analytical comparison. Production still needs compatible thermal functions, physical convection, a radiation decision and thermal-contact conductance; no absent coefficient is replaced by zero.
+Here ρ, c<sub>p</sub> and k are density, heat capacity and conductivity. The verified problem uses constant numerical coefficients and convection, specified in Section 3.9. Radiation is omitted from this benchmark to retain an analytical comparison. Production still needs compatible thermal functions, physical convection, a radiation decision and thermal-contact conductance; no absent coefficient is replaced by zero.
 
 ### 3.6. Mechanical formulation
 
-The static reference cases solve small-strain equilibrium without body force,
+The reference cases solve quasi-static force balance without body force,
 
 EQ: ∇ · σ = 0. &nbsp;&nbsp; (13)
 
-Uniform expansion, imposed eigenstrain and isothermal memory are isolated before contact is introduced. Production extraction would require fixed landmarks, aligned signed dimensions and a declared cooled/released state. The three-dimensional dimensional-error and best-fit-plane extractors are not implemented and are not presented as executed equations. The convergence benchmark instead measures the maximum normal residual from a fitted line along a deformed two-dimensional top edge.
+The uniform SOLID185 tests and plane-stress cantilever use small-deformation kinematics. The separate plane-strain surface-contact model uses NLGEOM,ON; its equilibrium is evaluated in the current configuration. It is a geometrically nonlinear elastic contact benchmark, not the small-strain Prusament production model. Uniform expansion, imposed eigenstrain and isothermal memory are isolated before contact is introduced. Production extraction would require fixed landmarks, aligned signed dimensions and a declared cooled/released state. The three-dimensional dimensional-error and best-fit-plane extractors are not implemented and are not presented as executed equations. The convergence benchmark instead measures the maximum absolute vertical deviation from an ordinary least-squares line through the deformed two-dimensional top edge at 62 s. W<sub>max</sub> denotes this coordinate-dependent benchmark measure, not perpendicular distance or a rigid-rotation-invariant surface-flatness measure.
 
 ### 3.7. Annealing strain
 
@@ -134,7 +133,7 @@ Ideal unilateral normal contact satisfies
 
 EQ: g<sub>n</sub> ≥ 0, &nbsp; p<sub>n</sub> ≥ 0, &nbsp; g<sub>n</sub>p<sub>n</sub> = 0. &nbsp;&nbsp; (14)
 
-Positive g<sub>n</sub> denotes separation and p<sub>n</sub> compressive pressure. CONTA178 node-to-stop and two-dimensional CONTA172/TARGE169 models verify limited forms of this relation. Penalty enforcement permits numerical penetration; normal-Lagrange comparison supplies the reported zero-penetration solution. Production three-dimensional fixture contact, friction, spacers and heat transfer are incomplete. A stiff plate is neither infinitely rigid nor thermally inert.
+Positive g<sub>n</sub> denotes separation and p<sub>n</sub> compressive pressure. CONTA178 node-to-stop and two-dimensional CONTA172/TARGE169 models verify limited forms of this relation. The latter uses a 10 mm × 4 mm plane-strain elastic block, a 0.020 mm rigid-stop gap, E = 2000 MPa, ν = 0.3 and α = 10⁻⁴ K⁻¹, heated uniformly from 20 °C to 120 °C. These are synthetic reference inputs. Its lower edge has zero vertical displacement and only its lower-left node zero horizontal displacement; this is not a traction-free coupon. The pressure mean is the arithmetic mean of nonnegative exported element pressures, including zero entries, rather than reaction divided by a measured current contact area. Peak pressure is the largest exported element value. Reaction has units N mm⁻¹ of out-of-plane depth. A positive element-average pressure is only an engagement screen; it does not prove closure at every integration point. Penalty enforcement permits numerical penetration; normal-Lagrange comparison supplies the reported zero-penetration solution. Production three-dimensional fixture contact, friction, spacers and heat transfer are incomplete. A stiff plate is neither infinitely rigid nor thermally inert.
 
 ### 3.9. Boundary conditions
 
@@ -146,11 +145,11 @@ Intended FREE surfaces are traction-free with verified rigid-body stabilization.
 
 The thermal reference uses SOLID70; uniform structural tests use one eight-node SOLID185 brick of 10 mm × 1 mm × 1 mm. Convergence is studied separately on a plane wall, a 60 mm × 4 mm two-layer Prony cantilever of unit thickness and a 10 mm × 4 mm plane-strain contact block with 0.020 mm stop gap. The 65 °C cantilever has an upper-layer relaxation-time multiplier of 10, a numerical fixture rather than a PLA property.
 
-Structural refinement measures fitted-line warpage, residual displacement and the 95th percentile of interior element-centroid von Mises stress over 6 mm ≤ x ≤ 54 mm. Thermal refinement measures 300 s lag, gradient and profiles. Contact refinement measures pressures, reaction and penetration. Adjacent relative change is
+Structural refinement measures vertical fitted-line warpage, maximum top-edge displacement magnitude and the 95th percentile of interior element-centroid von Mises stress over 6 mm ≤ x ≤ 54 mm at 62 s. The cantilever remains clamped; these are finite-time post-unloading responses, not fully released or permanent residuals. Thermal lag is the 80 °C ambient setpoint minus center temperature at 300 s. The reported thermal secant gradient is the absolute difference between mean surface and center temperatures divided by 5 mm at that instant; it is not the maximum local field gradient. The profile measure is the root-mean-square temperature excursion from 20 °C over archived nodes at 300 s, 900 s, 1200 s and 1800 s. Contact refinement measures exported element-average pressures, reaction and penetration. Adjacent relative change is
 
 EQ: δ<sub>q</sub> = |q<sub>fine</sub> − q<sub>medium</sub>| / |q<sub>fine</sub>| × 100%. &nbsp;&nbsp; (15)
 
-A zero denominator leaves percentage change undefined. Two zero values establish only zero absolute change. Predeclared limits are 2% for global mesh responses and 5% for local stress/peak pressure. The full matrices remain archived. No production mesh is selected from these differently configured problems.
+A zero denominator leaves percentage change undefined. Two zero values establish only zero absolute change. The historical convergence CSV uses a zero-percent sentinel for zero-to-zero penetration; the corrected audit table leaves those percentage cells blank and records the absolute comparison separately. Predeclared limits are 2% for global mesh responses and 5% for local stress/peak pressure. These limits are engineering screening choices, not formal error bounds. Adjacent changes do not prove an asymptotic convergence rate or an extrapolated exact solution. Mesh and time are refined separately, so their interaction is not bounded. The full matrices remain archived. No production mesh is selected from these differently configured problems.
 
 ### 3.11. Time stepping
 
@@ -211,7 +210,7 @@ A future sampled Pareto set remains conditional on feasibility, resolution and u
 ### 4. Results
 ### 4.1. Verification
 
-All solver results below are numerical reference responses, not production PLA coupon predictions or independent physical validation. The plane-wall maximum absolute error is 0.005180700 °C, maximum kelvin-based error 0.001700533% and maximum excursion-relative error 0.157660518%, meeting both limits. Four preceding attempts remain archived: extraction failure, two rejected time-step comparisons and a file-mapping termination.
+All solver results below are numerical reference responses, not production PLA coupon predictions or independent physical validation. Across nine preselected center-temperature samples, the plane-wall maximum absolute error is 0.005180700 °C, maximum kelvin-based error 0.001700533% and maximum excursion-relative error 0.157660518%, meeting both limits. This is not a maximum over all field locations or solution times. Retained decimal digits support reproduction of exported numbers and do not imply physical measurement accuracy. Four preceding attempts remain archived: extraction failure, two rejected time-step comparisons and a file-mapping termination.
 
 Six structural/contact cases pass all 114 comparisons. Maximum axial-displacement and gap errors are 2.331 × 10⁻¹⁴ mm and 9.500 × 10⁻¹¹ mm. Contact is open at 30 °C, closed at 80 °C and open after cooling. Free elastic cycling recovers original dimensions; the imposed-eigenstrain case retains its prescribed contraction. These are implementation findings, not PLA shrinkage measurements.
 
@@ -225,8 +224,10 @@ Retained strain, cooled free: displacement | −0.010000000 mm | −0.010000000 
 Retained strain, cooled fixed: stress | 2.000000000 MPa | 2.000000000 MPa
 Retained strain, released: displacement | −0.010000000 mm | −0.010000000 mm
 Contact, 80 °C: axial displacement | 0.002000000 mm | 0.002000000 mm
-Contact, 80 °C: normal force | −0.800000012 N | −0.800000000 N
+Contact, 80 °C: signed element axial force | −0.800000012 N | −0.800000000 N
 Contact, cooled: open separation | 0.002000000095 mm | 0.002000000000 mm
+
+The negative contact-force entry follows the CONTA178 axial output convention; its magnitude is 0.800000012 N. Compressive surface pressure in Eq. (14) is positive, and is a different quantity.
 
 The Prony reference has maximum stress error 3.8271 × 10⁻⁶ MPa, maximum relative stress error 0.019740% and maximum reaction error 3.8280 × 10⁻⁶ N. The earlier 0.01 s ramp attempt failed the fixed criterion and remains archived. Negative stress after unloading is held-strain memory. Detailed thermal and Prony comparisons are in Supplementary Tables S5 and S6.
 
@@ -237,10 +238,10 @@ Initial medium-to-fine structural changes were 9.9345% for warpage, 7.9763% for 
 TABLE: Selected verification meshes and confirmation changes
 Configuration | Selected / confirmation grid | Confirmation changes, δ<sub>q</sub>
 Two-layer Prony cantilever | 90 × 12 / 120 × 16 elements | W<sub>max</sub> 0.9327%; displacement 0.5821%; σ<sub>res,95</sub> 2.0266%
-Plane-wall thermal field | 32 / 64 elements through thickness | 300 s lag 0.0009423%; gradient 0.0060073%
+Plane-wall thermal field | 32 / 64 elements through thickness | 300 s lag 0.0009423%; secant gradient 0.0060073%
 Normal-Lagrange contact | 40 / 60 interface elements | Mean pressure 0.12698%; peak pressure 0.36127%; reaction 0.13831%
 
-IMAGE: figures/publication/mesh_convergence.png
+IMAGE: figures/publication_stage19/mesh_convergence.png
 CAPTION: Figure 2. Genuine MAPDL mesh-refinement responses for numerical structural, thermal and surface-contact configurations. Every point traces to an archived solver run; no point is a production annealing prediction.
 
 These selections apply only to the benchmark configurations. Twenty-eight unique runs populate the convergence tables; all 43 technical directories, including 15 excluded attempts, remain archived. No production mesh or time step is selected.
@@ -249,16 +250,16 @@ These selections apply only to the benchmark configurations. Twenty-eight unique
 
 TABLE: Selected verification time increments and confirmation changes
 Configuration | Selected / confirmation increments | Confirmation changes, δ<sub>q</sub>
-Plane-wall thermal history | 0.25 s / 0.125 s | Lag 0.005285%; gradient 0.005369%; profile L₂ 0.002811%; profile RMSE 0.00202088 °C
+Plane-wall thermal history | 0.25 s / 0.125 s | Lag 0.005285%; secant gradient 0.005369%; profile RMS excursion 0.002811%; profile RMSE 0.00202088 °C
 Two-layer structural history | 0.01/0.1 s / 0.005/0.05 s ramp/hold | W<sub>max</sub> 0.003094%; displacement 0.003213%; σ<sub>res,95</sub> 0.13636%
 
-IMAGE: figures/publication/timestep_convergence.png
-CAPTION: Figure 3. Thermal and structural time-step verification. The thermal profile comparison gives RMSE = 0.00202088 °C. Confirmation changes satisfy the predeclared benchmark limits.
+IMAGE: figures/publication_stage19/timestep_convergence.png
+CAPTION: Figure 3. Thermal and structural time-step verification. The thermal profile comparison gives RMSE = 0.00202088 °C. Confirmation changes satisfy the predeclared benchmark limits. Structural abscissae are ramp increments; hold increments are ten times larger. Profile RMS excursion is distinct from pairwise profile RMSE.
 
-Contact-control variation is distinct from discretization. At F<sub>KN</sub> = 10, an edge element is open and the all-elements-closed screen fails despite convergence. Penalty and augmented-Lagrange solutions coincide only for the declared monotonic frictionless benchmark. Under the same augmented-Lagrange F<sub>KN</sub> = 1 control, increasing μ from 0 to 0.3 changes mean pressure from 17.5368 to 20.0334 MPa and peak pressure from 24.4284 to 51.8788 MPa (Supplementary Table S7). This is numerical-fixture sensitivity, not a measured PLA–steel friction effect.
+Contact-control variation is distinct from discretization. At F<sub>KN</sub> = 10, an edge element reports zero average pressure and the positive-pressure engagement screen fails despite convergence. The data do not resolve closure at every integration point. Penalty and augmented-Lagrange solutions coincide only for the declared monotonic frictionless benchmark. Under the same augmented-Lagrange F<sub>KN</sub> = 1 control, increasing μ from 0 to 0.3 changes mean pressure from 17.5368 to 20.0334 MPa and peak pressure from 24.4284 to 51.8788 MPa (Supplementary Table S7). This is numerical-fixture sensitivity, not a measured PLA–steel friction effect.
 
-IMAGE: figures/publication/contact_sensitivity.png
-CAPTION: Figure 4. Contact-control responses in the numerical fixture. Penalty stiffness and friction are declared perturbations rather than sourced production interface parameters. Algorithm differences must be retained when comparing cases.
+IMAGE: figures/publication_stage19/contact_sensitivity.png
+CAPTION: Figure 4. Contact-control responses in the numerical fixture. Penalty stiffness and friction are declared perturbations rather than sourced production interface parameters. Overlapping penalty/augmented curves are retained; the F<sub>KN</sub> = 10 points fail the positive-pressure engagement screen. Algorithm differences must be retained when comparing cases.
 
 ### 4.4. Validation
 
@@ -294,7 +295,7 @@ No signed production dimensional change, combined error or suppression percentag
 
 ### 4.12. Warpage
 
-Fitted-line warpage is a two-layer cantilever response, not released three-dimensional coupon best-fit-plane warpage.
+Vertical fitted-line warpage is a two-layer cantilever response, not released three-dimensional coupon best-fit-plane warpage.
 
 ### 4.13. Residual stress
 
@@ -322,7 +323,7 @@ No recommendation, neighbor or matched FREE point was selected. No new confirmat
 
 ### 5. Discussion
 
-The findings support implementation-level confidence for specified thermal, elastic, imposed-eigenstrain, isothermal viscoelastic and contact problems. They also demonstrate why solver completion is insufficient: early time increments missed criteria, contact-control placement required correction, and one converged case failed its closure screen. Preserving these attempts prevents successful terminal status from being mistaken for adequacy.
+The findings support implementation-level confidence for specified thermal, elastic, imposed-eigenstrain, isothermal viscoelastic and contact problems. They also demonstrate why solver completion is insufficient: early time increments missed criteria, contact-control placement required correction, and one converged case failed its element-pressure engagement screen. Preserving these attempts prevents successful terminal status from being mistaken for adequacy.
 
 The evidence does not yet answer the clearance–distortion–stress question. Initial printed state and irreversible strain are central: reversible expansion does not supply an absent annealing mechanism, and finite-time delayed deformation is not necessarily irreversible. Combining recovered pre-strain, initial stress and crystallization distortion without identification could count the same response twice. The implemented relaxation clock likewise cannot be multiplied by an unrelated modulus-reduction curve without justification.
 
@@ -330,17 +331,17 @@ Fixture engagement can alter thermal exposure and restraint. Attribution require
 
 Validation is blocked by compatibility, not demonstrated failure of finite elements to reproduce PLA. Prusament DMA parameters cannot supply Ultimaker recovery, furnace setpoint cannot reconstruct unknown cooling, and geometric agreement alone cannot validate stress or pressure. Reserved observations expose missing links before fitting. Verification convergence and surrogate agreement cannot replace independent physical validation.
 
-Limitations include small-strain isotropy, absent thermal/recovery functions, unknown fixture expansion convention and unresolved boundaries. Orthotropy, crystallization and finite rotations require evidence and implementation rather than decorative equations. Sand/salt remains literature context; no discrete-element model or new physical experiment is claimed. The contribution is reproducible verification, not manufacturing qualification, strength enhancement or optimized treatment.
+Limitations include small-strain isotropy, absent thermal/recovery functions, unknown fixture expansion convention and unresolved boundaries. Orthotropy, crystallization and finite rotations require evidence and implementation rather than decorative equations. Sand/salt remains literature context; no discrete-element model or new physical experiment is claimed. The contribution is reproducible verification, not manufacturing qualification, strength enhancement or optimized treatment. The intended ideal centered fixture omits gravity, actual spacer expansion and assembly tolerances; its clearances are not demonstrated achievable shop-floor settings. No productivity, cost, energy or service-life improvement has been calculated. Normal-Lagrange refinement establishes stability of the sampled reference pressures over the tested meshes, not a unique physical contact solution or convergence of edge singularities.
 
 ### 6. Conclusions
 
 Seven quantitative findings are supported by archived numerical reference cases:
 
-1. The plane-wall maximum absolute temperature error is 0.005180700 °C and maximum excursion-relative error 0.157660518%, below the declared 0.05 °C and 0.25% limits.
+1. Across nine sampled center temperatures, the plane-wall maximum absolute temperature error is 0.005180700 °C and maximum excursion-relative error 0.157660518%, below the declared 0.05 °C and 0.25% limits.
 2. Six structural/contact cases pass 114 comparisons, with maximum displacement and gap errors of 2.331 × 10⁻¹⁴ mm and 9.500 × 10⁻¹¹ mm.
 3. The 23-branch isothermal Prony reference has maximum stress error 3.8271 × 10⁻⁶ MPa and relative stress error 0.019740%. This checks the 65 °C adapter, not non-isothermal recovery.
-4. Structural refinement from 90 × 12 to 120 × 16 elements changes fitted-line warpage, displacement and interior stress by 0.9327%, 0.5821% and 2.0266%.
-5. Thermal refinement from 32 to 64 through-thickness elements changes 300 s lag by 0.0009423% and gradient by 0.0060073%.
+4. Structural refinement from 90 × 12 to 120 × 16 elements changes vertical fitted-line warpage, displacement and interior stress by 0.9327%, 0.5821% and 2.0266%.
+5. Thermal refinement from 32 to 64 through-thickness elements changes 300 s lag by 0.0009423% and secant gradient by 0.0060073%.
 6. The 0.25 s versus 0.125 s thermal comparison changes lag by 0.005285% and gives profile RMSE 0.00202088 °C. Structural ramp/hold refinement from 0.01/0.1 s to 0.005/0.05 s changes warpage by 0.003094% and stress by 0.13636%.
 7. Normal-Lagrange refinement from 40 to 60 interface elements changes mean pressure, peak pressure and reaction by 0.12698%, 0.36127% and 0.13831%, with zero reported penetration.
 
@@ -358,7 +359,6 @@ Material relations, MAPDL deck generation, analytical references, metric functio
 
 No new physical specimens, human participants or animal studies form part of this computational work. Names and affiliation are retained from the supplied base manuscript. Author contributions, corresponding-author details, funding and competing-interest declarations require author confirmation before submission; absence is not inferred. This is not a completed production-annealing or optimization article ready for submission.
 
-<!-- PAGE -->
 ### References
 [1] Javaid Butt, Raghunath Bhaskar. Investigating the Effects of Annealing on the Mechanical Properties of FFF-Printed Thermoplastics. <i>Journal of Manufacturing and Materials Processing</i> 4(2), 38 (2020). <link href="https://doi.org/10.3390/jmmp4020038" color="#24576b">doi:10.3390/jmmp4020038</link>.
 
@@ -368,7 +368,7 @@ No new physical specimens, human participants or animal studies form part of thi
 
 [4] George Derringer, Ronald Suich. Simultaneous Optimization of Several Response Variables. <i>Journal of Quality Technology</i> 12(4), 214-219 (1980). <link href="https://doi.org/10.1080/00224065.1980.11980968" color="#24576b">doi:10.1080/00224065.1980.11980968</link>.
 
-[5] Irina BUTE, Sergejs TARASOVS, Jevgenijs SEVCENKO, Andrey ANISKEVICH. Thermomechanical Analysis and Numerical Simulations of Fused Filament Fabricated Polylactic Acid Parts. <i>Materials Science</i> 30(2), 217-225 (2024). <link href="https://doi.org/10.5755/j02.ms.35076" color="#24576b">doi:10.5755/j02.ms.35076</link>.
+[5] Irina Bute, Sergejs Tarasovs, Jevgenijs Sevcenko, Andrey Aniskevich. Thermomechanical Analysis and Numerical Simulations of Fused Filament Fabricated Polylactic Acid Parts. <i>Materials Science</i> 30(2), 217-225 (2024). <link href="https://doi.org/10.5755/j02.ms.35076" color="#24576b">doi:10.5755/j02.ms.35076</link>.
 
 [6] Bas Wijnen, Paul Sanders, Joshua M. Pearce. Improved model and experimental validation of deformation in fused filament fabrication of polylactic acid. <i>Progress in Additive Manufacturing</i> 3(4), 193-203 (2018). <link href="https://doi.org/10.1007/s40964-018-0052-4" color="#24576b">doi:10.1007/s40964-018-0052-4</link>.
 
@@ -444,12 +444,14 @@ No new physical specimens, human participants or animal studies form part of thi
 
 [40] Ansys, Inc. <i>Ansys Student — Free Software Download</i>, 2026 R1 product page. <link href="https://www.ansys.com/en-in/academic/students/ansys-student" color="#24576b">Official product page</link>. Accessed 13 September 2026.
 
+[41] Heba Hussam, MEmad S. Soliman, Ibrahim M. Hassab-Allah, Yasser Abdelrhman. Effect of annealing on FDM-manufactured ABS parts. <i>The International Journal of Advanced Manufacturing Technology</i> 138, 2233–2243 (2025). <link href="https://doi.org/10.1007/s00170-025-15455-5" color="#24576b">doi:10.1007/s00170-025-15455-5</link>.
+
 <!-- PAGE -->
 
 ### Supplementary information
 ### S1. Literature comparison and reproducibility tables
 
-Literature values below are source evidence, not new experiments or solver findings. Full matrices, formulation flags and exact locators remain in the repository. Reference identities were checked against the existing bibliography; no literature search beyond the stated review cutoff is claimed.
+Literature values below are source evidence, not new experiments or solver findings. Full matrices, formulation flags and exact locators remain in the repository. Reference identities were checked against the bibliography. The focused September 2026 audit adds an ABS clearance precedent [41] without treating it as PLA material evidence.
 
 SUPPTABLE: Closest competing studies and implications for scope
 Study | Established overlap | Distinction still requiring evidence
@@ -525,8 +527,8 @@ Time (s) | ANSYS stress (MPa) | Analytical stress (MPa) | Absolute error (MPa)
 1 | 0.0375536568 | 0.0375574835 | 0.0000038266
 11 | 0.0243886374 | 0.0243886379 | 0.0000000005
 31 | 0.0183896348 | 0.0183896352 | 0.0000000005
-32 | -0.0193833038 | -0.0193871309 | 0.0000038271
-62 | -0.0045757745 | -0.0045757747 | 0.0000000001
+32 | −0.0193833038 | −0.0193871309 | 0.0000038271
+62 | −0.0045757745 | −0.0045757747 | 0.0000000001
 
 SUPPTABLE: Contact-control sensitivity on the 40-element interface
 Control | Maximum penetration (mm) | Mean / peak pressure (MPa)
@@ -539,7 +541,7 @@ Augmented, F<sub>KN</sub> = 1, μ = 0.3 | 3.24243 × 10<super>−4</super> | 20.
 
 ### S2. Evidence and reproduction boundaries
 
-The literature matrix contains 34 journal studies. The base paper is immutable. Property records preserve units, temperatures, formulation, exact source location and use restrictions. Full convergence CSVs contain 39 mesh, 24 time-step and nine contact-control rows; these are response records, not independent experiments. All 43 technical convergence directories remain archived, including 15 excluded attempts.
+The original literature matrix contains 34 journal studies; the separate audit addendum records the additional ABS clearance study [41]. The base paper is immutable. Property records preserve units, temperatures, formulation, exact source location and use restrictions. Full convergence CSVs contain 39 mesh, 24 time-step and nine contact-control rows; these are response records, not independent experiments. All 43 technical convergence directories remain archived, including 15 excluded attempts.
 
 Verification constants, load schedules, relaxation mismatch and clearance screens are design choices. The assembly construction is not a solved annealing model. The validation archive retains 45 published observations: 18 reserved means, 24 context records and three quarantined maxima. Prediction/error fields remain blank. Empty registries do not mean zero physical response.
 

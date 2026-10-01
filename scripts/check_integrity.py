@@ -1,4 +1,4 @@
-"""Stage 18 document, provenance, verification and convergence checks."""
+"""Stage 19 document, provenance, verification and scientific-audit checks."""
 from pathlib import Path
 import csv, hashlib, json, re, subprocess, sys
 from pypdf import PdfReader
@@ -30,7 +30,7 @@ def main():
     source=(ROOT/'manuscript/current.md').read_text(encoding='utf-8')
     refs=json.loads((ROOT/'data/literature/verified_sources.json').read_text(encoding='utf-8'))
     citations=set(map(int,re.findall(r'\[(\d+)\]',source)))
-    check('Retained references and citations correspond',citations==set(range(1,41)))
+    check('Retained references and citations correspond',citations==set(range(1,42)))
     check('Retained DOIs present',all(r['doi'] in source for r in refs))
     check('Seven quantitative conclusions',re.findall(r'^(\d)\. ',source,re.M)==list('1234567'))
     check('Equations numbered consecutively',re.findall(r'\((\d+)\)\s*$', '\n'.join(l for l in source.splitlines() if l.startswith('EQ:')),re.M)==list(map(str,range(1,22))))
@@ -82,11 +82,11 @@ def main():
     subprocess.run([sys.executable,str(ROOT/'scripts/build_manuscript.py')],check=True,cwd=ROOT,capture_output=True)
     check('PDF reproducible byte-for-byte',digest(PDF)==before)
     reader=PdfReader(PDF)
-    check('Complete manuscript page count matches reviewed stage record',len(reader.pages)==json.loads((ROOT/'docs/stage_18_pdf_review.json').read_text())['page_count'])
-    review=json.loads((ROOT/'docs/stage_18_pdf_review.json').read_text())
+    check('Complete manuscript page count matches reviewed stage record',len(reader.pages)==json.loads((ROOT/'docs/stage_19_pdf_review.json').read_text())['page_count'])
+    review=json.loads((ROOT/'docs/stage_19_pdf_review.json').read_text())
     check('All pages visually reviewed for the current PDF hash',review['visual_status']=='pass' and review['reviewed_pdf_sha256']==digest(PDF) and review['reviewed_pages']==list(range(1,len(reader.pages)+1)))
     text='\n'.join(p.extract_text() for p in reader.pages)
-    for pattern in [r'F3498',r'sqrt\s*\(',r'epsilon_ann',r'Delta L',r'95 C',r'3 x 3',r'130 physical specimens',r'\bTODO\b',r'\bTBD\b',r'\ufffd']:
+    for pattern in [r'F3498',r'sqrt\s*\(',r'epsilon_',r'sigma_',r'\bDelta\b',r'95 C',r'3 x 3',r'130 (?:physical )?specimens',r'\bINSERT\b',r'\bTODO\b',r'\bTBD\b',r'Version B',r'Experimental Framework',r'student measurements unavailable',r'\ufffd']:
         check('Forbidden manuscript pattern absent: '+pattern,not re.search(pattern,text))
     check('Evidence boundary explicitly reported','Six structural/contact' in source and 'not production PLA coupon predictions' in source)
     check('Accepted thermal error values reported',all(v in text for v in ['0.005180700 °C','0.001700533%','0.157660518%']))
@@ -142,16 +142,31 @@ def main():
     check('Optimization limits integrated in full manuscript',all(t in source for t in ['No Pareto front','no validated strength/fracture model','No new confirmation run']))
     reconstruction=json.loads((ROOT/'docs/stage_18_reconstruction_checks.json').read_text())
     check('Stage 18 reconstruction and equation audit passed',reconstruction['passed'] and reconstruction['equations']==21 and reconstruction['unit_tests']==81 and not reconstruction['production_science_complete'])
-    check('Stage 18 reconstruction hashes match',all(digest(ROOT/p)==h for p,h in reconstruction['source_hashes'].items()))
+    # The prior report describes prior manuscript bytes, not the corrected article.
+    previous_commit=json.loads((ROOT/'docs/stage_18_delivery.json').read_text())['content_commit']
+    changed_documents={'manuscript/current.md','docs/manuscript_equation_map.csv','scripts/build_manuscript.py'}
+    check('Stage 18 historical reconstruction hashes match their declared content commit',all((hashlib.sha256(subprocess.check_output(['git','show',previous_commit+':'+p],cwd=ROOT)).hexdigest() if p in changed_documents else digest(ROOT/p))==h for p,h in reconstruction['source_hashes'].items()))
     figures=json.loads((ROOT/'docs/stage_18_figure_manifest.json').read_text())
     check('Publication figures retain traceable numerical sources',all(digest(ROOT/p)==h for p,h in figures['source_hashes'].items()))
+    reviewed_figures=json.loads((ROOT/'docs/stage_19_figure_manifest.json').read_text())
+    check('Corrected figure labels retain traceable numerical sources',all(digest(ROOT/p)==h for p,h in reviewed_figures['source_hashes'].items()))
+    audit19=json.loads((ROOT/'docs/stage_19_numerical_audit.json').read_text())
+    check('Fresh independent numerical audit passes',audit19['passed'] and audit19['mesh_time_response_rows']==63 and audit19['contact_response_comparisons']==36 and audit19['structural_comparisons']==114 and audit19['thermal_samples']==9)
+    check('Fresh audit input and code hashes match',all(digest(ROOT/p)==h for p,h in audit19['source_hashes'].items()))
+    check('Zero denominators corrected without rewriting solver evidence',audit19['corrected_zero_denominators']==3 and 'zero-percent sentinel' in source)
+    check('Measurand and kinematics corrections integrated',all(t in source for t in ['absolute vertical deviation','secant gradient','NLGEOM,ON','element-average pressure','signed element axial force','finite-time post-unloading']))
+    check('Novelty prior art acknowledged','Hussam et al. [41' in source and 'not novel by itself' in source)
+    test_text=(ROOT/'docs/stage_19_tests.txt').read_text(encoding='utf-8-sig')
+    check('85 current numerical/automation tests pass','Ran 85 tests' in test_text and test_text.rstrip().endswith('OK'))
+    originality=json.loads((ROOT/'docs/stage_19_originality_screen.json').read_text())
+    check('Limited originality screen matches current manuscript',originality['manuscript_sha256']==digest(ROOT/'manuscript/current.md') and originality['total_matches']==0)
     with pdfplumber.open(PDF) as pdf:
         bad=[]
         for n,p in enumerate(pdf.pages,1):
             for c in p.chars:
                 if c['text'].strip() and (c['x0']<48 or c['x1']>p.width-46 or c['top']<30 or c['bottom']>p.height-18): bad.append(n)
         check('All text lies inside page safety bounds',not bad)
-    report={'stage':18,'date':'2026-09-30','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'material_manifest_sha256':digest(ROOT/'material/build_manifest.json'),'geometry_manifest_sha256':digest(ROOT/'simulation/geometry/stage07_plate_gap/manifest.json'),'thermal_manifest_sha256':digest(ROOT/'simulation/verification/stage08_attempt_05/manifest.json'),'convergence_report_sha256':digest(ROOT/'docs/stage_10_convergence_checks.json'),'scope':'Document, source, property, environment, geometry, genuine MAPDL verification and verification-configuration convergence integrity. No production PLA coupon solution, production mesh or physical validation.'}
+    report={'stage':19,'date':'2026-10-01','checks':checks,'count':len(checks),'pdf_sha256':digest(PDF),'manuscript_sha256':digest(ROOT/'manuscript/current.md'),'material_manifest_sha256':digest(ROOT/'material/build_manifest.json'),'geometry_manifest_sha256':digest(ROOT/'simulation/geometry/stage07_plate_gap/manifest.json'),'thermal_manifest_sha256':digest(ROOT/'simulation/verification/stage08_attempt_05/manifest.json'),'convergence_report_sha256':digest(ROOT/'docs/stage_10_convergence_checks.json'),'scope':'Document, source, property, environment, geometry, genuine MAPDL verification and fresh scientific audit integrity. No production PLA coupon solution, production mesh or physical validation.'}
     (ROOT/'docs/integrity_report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     print(f'{len(checks)} integrity checks passed; PDF SHA-256 {digest(PDF)}')
 

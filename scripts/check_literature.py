@@ -23,13 +23,18 @@ if property_path.exists():
  import csv
  with property_path.open(encoding='utf-8-sig') as f:property_sources=list(csv.DictReader(f))
 property_dois={r['doi_or_reference'].lower() for r in property_sources if re.fullmatch(r'10\.\S+',r['doi_or_reference'])}
-check('BibTeX DOI set corresponds to verified matrix, material sources and ASTM',set(x.lower() for x in re.findall(r'doi = \{([^}]+)\}',bib))=={r['doi'].lower() for r in rows}|property_dois|{'10.1520/f3489-23'})
+additions=json.loads((ROOT/'literature/stage_19_reference_additions.json').read_text())
+for r in additions:
+ m=json.loads((ROOT/r['metadata_path']).read_bytes())['message']
+ check(r['key']+' audit-addendum DOI and metadata hash',m['DOI'].lower()==r['doi'].lower() and digest(ROOT/r['metadata_path'])==r['sha256'])
+check('BibTeX DOI set corresponds to verified matrix, material sources, audit addendum and ASTM',set(x.lower() for x in re.findall(r'doi = \{([^}]+)\}',bib))=={r['doi'].lower() for r in rows}|property_dois|{r['doi'].lower() for r in additions}|{'10.1520/f3489-23'})
 source=(ROOT/'manuscript/current.md').read_text(encoding='utf-8')
 check('No unresolved citation keys or doubled HTML entities','[@' not in source and '&amp;amp;' not in source)
 check('All journal DOIs in complete manuscript',all(r['doi'] in source for r in rows))
 check('All DOI-bearing material sources in complete manuscript',all(doi in source for doi in property_dois))
 body=source[:source.index('### References')]
-expected_citations=set(range(1,41)) if "[40] Ansys" in source else set(range(1,40)) if "[39] ANSYS" in source else set(range(1,39)) if property_sources else set(range(1,36))
+expected_citations=set(map(int,re.findall(r'^\[(\d+)\]',source[source.index('### References'):],re.M)))
+check('Forty-one consecutive bibliography labels',expected_citations==set(range(1,42)))
 def citation_numbers(text):
  """Read numeric citation groups/ranges, excluding trailing source locators."""
  numbers=set()

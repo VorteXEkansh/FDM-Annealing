@@ -1,0 +1,13 @@
+[
+  {
+    "key": "Hussam2025",
+    "reference_number": 41,
+    "doi": "10.1007/s00170-025-15455-5",
+    "metadata_path": "literature/evidence/stage_19/Hussam2025_metadata.json",
+    "sha256": "a04539debaa3e6e05793da834b0f9cae89ba5e561fbec3853a03d3d122cfa7a9",
+    "source_url": "https://link.springer.com/article/10.1007/s00170-025-15455-5",
+    "source_locator": "Section 2.2; Figure 4; Conclusions",
+    "role": "ABS mould-clearance prior art only; not transferable PLA data",
+    "access_date": "2026-09-30"
+  }
+]

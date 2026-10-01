@@ -1,6 +1,6 @@
 {
-  "stage": 18,
-  "date": "2026-09-30",
+  "stage": 19,
+  "date": "2026-10-01",
   "checks": [
     {
       "check": "Base PDF hash preserved",
@@ -199,11 +199,15 @@
       "status": "pass"
     },
     {
-      "check": "Forbidden manuscript pattern absent: epsilon_ann",
+      "check": "Forbidden manuscript pattern absent: epsilon_",
       "status": "pass"
     },
     {
-      "check": "Forbidden manuscript pattern absent: Delta L",
+      "check": "Forbidden manuscript pattern absent: sigma_",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: \\bDelta\\b",
       "status": "pass"
     },
     {
@@ -215,7 +219,11 @@
       "status": "pass"
     },
     {
-      "check": "Forbidden manuscript pattern absent: 130 physical specimens",
+      "check": "Forbidden manuscript pattern absent: 130 (?:physical )?specimens",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: \\bINSERT\\b",
       "status": "pass"
     },
     {
@@ -224,6 +232,18 @@
     },
     {
       "check": "Forbidden manuscript pattern absent: \\bTBD\\b",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: Version B",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: Experimental Framework",
+      "status": "pass"
+    },
+    {
+      "check": "Forbidden manuscript pattern absent: student measurements unavailable",
       "status": "pass"
     },
     {
@@ -399,7 +419,7 @@
       "status": "pass"
     },
     {
-      "check": "Stage 18 reconstruction hashes match",
+      "check": "Stage 18 historical reconstruction hashes match their declared content commit",
       "status": "pass"
     },
     {
@@ -407,16 +427,48 @@
       "status": "pass"
     },
     {
+      "check": "Corrected figure labels retain traceable numerical sources",
+      "status": "pass"
+    },
+    {
+      "check": "Fresh independent numerical audit passes",
+      "status": "pass"
+    },
+    {
+      "check": "Fresh audit input and code hashes match",
+      "status": "pass"
+    },
+    {
+      "check": "Zero denominators corrected without rewriting solver evidence",
+      "status": "pass"
+    },
+    {
+      "check": "Measurand and kinematics corrections integrated",
+      "status": "pass"
+    },
+    {
+      "check": "Novelty prior art acknowledged",
+      "status": "pass"
+    },
+    {
+      "check": "85 current numerical/automation tests pass",
+      "status": "pass"
+    },
+    {
+      "check": "Limited originality screen matches current manuscript",
+      "status": "pass"
+    },
+    {
       "check": "All text lies inside page safety bounds",
       "status": "pass"
     }
   ],
-  "count": 102,
-  "pdf_sha256": "fc4567322b65e6fe230da104a3d7297cc1893b4a3e79a8875d8b431cf472b31b",
-  "manuscript_sha256": "4f3e3e54f068b3b50e4da9b6f1f90ad6c2e229b0273b0dda1fa00653752b39a3",
+  "count": 115,
+  "pdf_sha256": "9582497b13d31b32f0abdc60a803a0f0f367e8b7f1551f1d88576e06605ab68d",
+  "manuscript_sha256": "913c12277ffa29ac28ddc3eacdad8b3ba36c94e49f1d57a5751e36567ed7ea0b",
   "material_manifest_sha256": "362ef609095cd253f3e62def720fd486cb7a27301395b82a95a67a3a5b0b3083",
   "geometry_manifest_sha256": "d76d855563cb38fa34c51995092edfbb35ead325bc4eb2c3a8bd18fefc0d8369",
   "thermal_manifest_sha256": "f1942fd9932f7fbc2a1678edcec6576fde89b602c04b38761c7183f08c85eca1",
   "convergence_report_sha256": "718349134512c2bf01bb114c575b96b04fdccd38224979510f36f55156dbfb08",
-  "scope": "Document, source, property, environment, geometry, genuine MAPDL verification and verification-configuration convergence integrity. No production PLA coupon solution, production mesh or physical validation."
+  "scope": "Document, source, property, environment, geometry, genuine MAPDL verification and fresh scientific audit integrity. No production PLA coupon solution, production mesh or physical validation."
 }

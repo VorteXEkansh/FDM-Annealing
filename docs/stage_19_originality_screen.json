@@ -1,0 +1,92 @@
+{
+  "stage": 19,
+  "scope": "Exact 12-word phrase screen of main article prose against available local source text. Excludes bibliography, equations and tables. Does not detect paraphrase or assess inaccessible sources; manual review remains necessary.",
+  "records": [
+    {
+      "path": "literature/evidence/stage_04/Chapuis2025_supplement.pdf",
+      "sha256": "19630d6f0be479f4feacc1c33ca921467406786c651eeadc82db42c8b0513f48",
+      "words": 2020,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_04/Li2024_orthotropic.pdf",
+      "sha256": "4c6ebe7c4ce6dd3fcb1000a21ced9ef7e8d3e16159a462766848c664ec542c17",
+      "words": 10357,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_04/Luberto2024_PMC.html",
+      "sha256": "b5b344253e538cc5849090a911269cd3911483a2544c26c8470be5c17783f562",
+      "words": 6145,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_04/Meng2026_AISI304_PMC.html",
+      "sha256": "636a917dd78c697b6703ab274b6dd36f61b582967d9a0745a6501b9d285edf1b",
+      "words": 9662,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_04/Prusament_PLA_TDS_2022_EN.pdf",
+      "sha256": "6b141fb50fbfd31d58bd69ade88a3d952b182a0e953e2c924241df40e859e811",
+      "words": 355,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_05/ANSYS_2026R1_viscoelasticity.html",
+      "sha256": "f03da8bcd5e3c635754ee7838b6eae707a31bf0b72e5390d46006ce170bb8a8c",
+      "words": 2450,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_05/Bute2024.pdf",
+      "sha256": "9638cf851454a53a48e341e779494e0252555114f94b3d884f5d29e641a389e5",
+      "words": 5560,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_05/Laminate2025.pdf",
+      "sha256": "b6ec6b2d8c70b3628e27dbea07735c44b44d30f7dda666a43e94e5585c0180a7",
+      "words": 10861,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_05/Relaxation2022.xml",
+      "sha256": "105e3378d16c0cbab778e519f6dc5b92fc7ea8b17f270a83c1e4e2612550a98b",
+      "words": 5037,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_05/Trofimov2022.pdf",
+      "sha256": "42742d361e0fe0e6f1a266676b1022cf18cfe27f156a60415113f8e3db01e198",
+      "words": 1451,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_11/Mould2022.xml",
+      "sha256": "368d1b0cceab0e5eccdc12cb85a0c3f04a6d91826443f5846b5c3c1830247ae4",
+      "words": 5788,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_11/Stojkovic2023.xml",
+      "sha256": "ce9bb67510a3830e3c2dda9c631b5eb2c496473e2df9167bb94c7bb34e96d9d5",
+      "words": 10300,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_12/Ultimaker_PLA_TDS.pdf",
+      "sha256": "6236bdb0c8b41fd63669a92011d99bbb05ca49923faa03712f358b498ae73ca5",
+      "words": 856,
+      "exact_twelve_word_matches": []
+    },
+    {
+      "path": "literature/evidence/stage_19/Hussam2025.html",
+      "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+      "words": 181,
+      "exact_twelve_word_matches": []
+    }
+  ],
+  "total_matches": 0,
+  "manuscript_sha256": "913c12277ffa29ac28ddc3eacdad8b3ba36c94e49f1d57a5751e36567ed7ea0b"
+}

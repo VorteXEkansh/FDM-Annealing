@@ -1,7 +1,7 @@
 # Authoritative project state
 
-Stage: **Prompt 18/20 — complete manuscript reconstruction; production study remains incomplete**.
-Date: 2026-09-30 (Asia/Calcutta).
+Stage: **Prompt 19/20 — scientific audit and corrections; production study remains incomplete**.
+Date: 2026-10-01 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
 ## Research identity
@@ -329,3 +329,16 @@ The full manuscript is rebuilt with Introduction, Background, 16 methodology sub
 Current numbered equations map through docs/manuscript_equation_map.csv. There are 21 implemented reference/calculation relations. The former three unimplemented production extraction formulas are omitted, and the strain partition now matches the actual thermal-plus-viscoelastic update without an unimplemented bulk annealing term. The earlier equation map remains historical. docs/manuscript_reconstruction_audit.md details scope, corrections and quantitative provenance.
 
 All 81 repository unit tests were rerun successfully in this stage; no new solver run occurred. Publication readiness is not claimed: required production science and author declarations remain missing. Stop at Prompt 18; do not automatically continue.
+
+
+## Scientific peer-review-style audit — Stage 19 (current)
+
+The title is now **Thermal, viscoelastic and contact verification toward gap-constrained annealing of FFF-printed PLA**. Six internal reviewer perspectives led to 18 documented findings in docs/peer_review_audit.md. This is not external peer review. The manuscript corrects vertical fitted-line warpage, secant thermal gradient, element-pressure averaging and engagement, contact-force sign, actual NLGEOM ON contact kinematics/boundaries, finite-time clamped residuals and sampled-error scope. Adjacent convergence is not an error bound or combined mesh/time convergence.
+
+A focused literature update adds Hussam2025, DOI 10.1007/s00170-025-15455-5, as ABS annealing mould-clearance precedent. Reference 41 and the addendum are current; the original 34-study matrix remains historical. Quantified clearance alone is not novel. No ABS property or clearance recommendation is transferred.
+
+Independent extraction reproduces 63 mesh/time response values and 36 contact response comparisons, and checks 114 structural/contact errors plus nine thermal samples. Three zero-denominator percentages in the historical mesh CSV used zero sentinels; current analysis/review_metrics.py and convergence/stage_19_audited_refinement.csv report undefined percentages and absolute zero change. Original files remain unchanged. The current equation map points to the corrected function.
+
+All 85 current unit tests pass; the local exact-phrase screen finds no 12-word main-prose matches across 14 accessible documents, with coverage limits disclosed. No input/solution defect required a new ANSYS run. The same missing material, recovery, boundary, non-isothermal and validation prerequisites block production, sensitivity, UQ and optimization. This is an audited verification draft, not a publication-ready completed annealing study. Stop at Prompt 19; do not continue automatically.
+
+Stage 19 audit and page inspection occurred on 30 September; final Git integrity and delivery were completed on 1 October 2026. The PDF retains its audit revision date.
