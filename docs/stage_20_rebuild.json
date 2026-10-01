@@ -1,0 +1,9 @@
+{
+  "byte_identical": true,
+  "sha256": {
+    "output\\release\\Constrained-Annealing-2026-Supplementary.pdf": "17971aabb5b31e50e3cad856ac59cf959187a9113f1cfe69b9281adc07b515d3",
+    "output\\release\\Constrained-Annealing-2026.docx": "11166cdd9af98765e8f9ebbd98fa5cd4644c44d15ab4924dc32cf3612bbffddb",
+    "output\\release\\Constrained-Annealing-2026.pdf": "57dd647de793cd5181ca020d8e9c8abfc37aaaad42a1ff9c3332d7667d41e66d"
+  },
+  "scope": "Final three artifacts rebuilt from source; no solver execution"
+}

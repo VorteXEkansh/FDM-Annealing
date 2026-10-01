@@ -4,7 +4,9 @@ Aadit Jain · Dheeraj Yadav · Ekansh Malhotra
 
 Production and Industrial Engineering, Delhi Technological University
 
-Computational research manuscript · 30 September 2026
+Verification-only research package · 1 October 2026
+
+This release reports numerical reference problems. Independent physical validation, the production annealing campaign, sensitivity and uncertainty analysis, optimization and new optimization-confirmation solves are not complete. It is not a validated processing recommendation or a completed production research article.
 
 ### Abstract
 

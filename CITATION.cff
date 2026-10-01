@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Cite this as a verification-only research package, not as a validated annealing process study. Author names follow the supplied base manuscript and require author approval before journal submission."
+title: "Thermal, viscoelastic and contact verification toward gap-constrained annealing of FFF-printed PLA"
+type: software
+authors:
+  - family-names: Jain
+    given-names: Aadit
+  - family-names: Yadav
+    given-names: Dheeraj
+  - family-names: Malhotra
+    given-names: Ekansh
+version: "0.20.0-verification"
+date-released: 2026-10-01
+repository-code: "https://github.com/VorteXEkansh/FDM-Annealing"
+abstract: "Immutable ANSYS numerical-reference evidence and reproducible verification analysis. Independent physical validation and production annealing optimization are incomplete."

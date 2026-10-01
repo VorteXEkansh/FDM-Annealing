@@ -1,6 +1,6 @@
 # Authoritative project state
 
-Stage: **Prompt 19/20 — scientific audit and corrections; production study remains incomplete**.
+Stage: **Prompt 20/20 — verification-only reproducibility release; production study remains incomplete**.
 Date: 2026-10-01 (Asia/Calcutta).
 Repository: https://github.com/VorteXEkansh/FDM-Annealing
 
@@ -10,6 +10,8 @@ This is a computational thermo-mechanical study intended for genuine ANSYS execu
 
 Current manuscript: `manuscript/current.md`.
 Current PDF: `output/pdf/Constrained-Annealing-2026-DRAFT.pdf`.
+Final verification-only package: `output/release/Constrained-Annealing-2026.pdf`, `output/release/Constrained-Annealing-2026.docx`, and `output/release/Constrained-Annealing-2026-Supplementary.pdf`.
+User explicitly authorized a clearly labelled verification-only release after clarification. This does not waive missing scientific evidence or turn verification into validation. No v1.0.0 completion tag is appropriate.
 Base source: `data/source/DTU_Constrained_Annealing_Final_Submission.pdf`; immutable, with SHA-256 in `data/source/manifest.json`.
 
 ## Completed in Stage 1
@@ -342,3 +344,11 @@ Independent extraction reproduces 63 mesh/time response values and 36 contact re
 All 85 current unit tests pass; the local exact-phrase screen finds no 12-word main-prose matches across 14 accessible documents, with coverage limits disclosed. No input/solution defect required a new ANSYS run. The same missing material, recovery, boundary, non-isothermal and validation prerequisites block production, sensitivity, UQ and optimization. This is an audited verification draft, not a publication-ready completed annealing study. Stop at Prompt 19; do not continue automatically.
 
 Stage 19 audit and page inspection occurred on 30 September; final Git integrity and delivery were completed on 1 October 2026. The PDF retains its audit revision date.
+
+## Stage 20 verification-only release
+
+The user explicitly chose a clearly labelled verification-only final package. The three release artifacts are an 18-page main PDF, editable native-equation Word manuscript (17-page native Word render), and 21-page supplementary PDF. The complete evolving DRAFT remains 22 pages. The main quantitative findings are unchanged genuine reference results; no production case or new solver run was added.
+
+Reproducibility now includes 384 traceability records, four figure records, 15 table records, final-file/source checksums, a current README, CITATION.cff and exact export requirements. All 38 bibliography DOIs were rechecked against live Crossref metadata on 1 October 2026; all 41 references are cited. The 85 unit tests, 137 literature checks and 29 material checks pass. The release gate independently recomputes reference metrics and checks 1,121 frozen evidence records. Final three artifacts reproduce byte-for-byte. See docs/stage_20_quality.md, docs/stage_20_visual_review.json and docs/stage_20_integrity.json.
+
+Publisher/supplier PDFs, a large superseded solver scratch file and an expired signed-URL search log are omitted from the current Git tree while remaining locally unchanged with hashes and acquisition/context records. Older Git history was not rewritten. The release secret-pattern scan applies to the current tree, not a certification of all history. No v1.0.0 tag is assigned because physical validation and the production study remain incomplete. No later stage begins automatically. Git push/delivery verification is recorded separately after publication of the release commit.

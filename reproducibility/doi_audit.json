@@ -1,0 +1,424 @@
+{
+  "date": "2026-10-01",
+  "verification": "Crossref DOI identity; original source/title appraisal in prior literature audits",
+  "records": [
+    {
+      "doi": "10.1002/app.71150",
+      "status": "verified",
+      "title": [
+        "Thermal Annealing of Injection‐Molded\n                    <scp>PLA</scp>\n                    Grades: Trade‐Offs Between Crystallinity Development, Dimensional Stability, Secondary Shrinkage, and Mechanical Performance"
+      ],
+      "publisher": "Wiley",
+      "url": "https://api.crossref.org/works/10.1002%2Fapp.71150",
+      "metadata_path": "literature/metadata/stage20/3bfcdd68190cc12a.json",
+      "sha256": "8bf3f9d68621d3d5d733abecde5567eecdedf23774ac632161097f5e526f0f74"
+    },
+    {
+      "doi": "10.1002/mame.201800169",
+      "status": "verified",
+      "title": [
+        "Enhancement of Mechanical Properties of FDM‐PLA Parts via Thermal Annealing"
+      ],
+      "publisher": "Wiley",
+      "url": "https://api.crossref.org/works/10.1002%2Fmame.201800169",
+      "metadata_path": "literature/metadata/stage20/f539a1042704d6fe.json",
+      "sha256": "c0a2fce36eba00e0fc73445306b70ffb49e0ecca8c9d30fe5c232ccfacb51655"
+    },
+    {
+      "doi": "10.1002/mame.202500204",
+      "status": "verified",
+      "title": [
+        "Analysis of Crystallization Kinetics of PLA Filament for Fused Filament Fabrication"
+      ],
+      "publisher": "Wiley",
+      "url": "https://api.crossref.org/works/10.1002%2Fmame.202500204",
+      "metadata_path": "literature/metadata/stage20/14c5b864c921f7fa.json",
+      "sha256": "bfb533de22856e2405b923ae994504d5b64c1099a71f1c25c1d472810a16aabe"
+    },
+    {
+      "doi": "10.1002/pen.24404",
+      "status": "verified",
+      "title": [
+        "Influence of temperature on viscoelastic–viscoplastic behavior of poly(lactic acid) under loading–unloading"
+      ],
+      "publisher": "Wiley",
+      "url": "https://api.crossref.org/works/10.1002%2Fpen.24404",
+      "metadata_path": "literature/metadata/stage20/cc56cd2bcf2fbc8c.json",
+      "sha256": "d1b4faa3badbebb0b3b7379b402542b55fb4ea4c45063d45e69c635dcf7f0044"
+    },
+    {
+      "doi": "10.1002/pen.70250",
+      "status": "verified",
+      "title": [
+        "Dimensional Stability and Mechanical Performance of Thermally Conditioned High‐Heat Polylactic Acid Parts Produced by Fused Filament Fabrication"
+      ],
+      "publisher": "Wiley",
+      "url": "https://api.crossref.org/works/10.1002%2Fpen.70250",
+      "metadata_path": "literature/metadata/stage20/dfb50ee2622231ed.json",
+      "sha256": "f38b7b149aef96aaa19faf81736bb3c04f5d70bd7624cf4837fc729a22569651"
+    },
+    {
+      "doi": "10.1002/pol.20240703",
+      "status": "verified",
+      "title": [
+        "Crystal Evolution of Amorphous Poly(lactic acid) During Simultaneous Multi‐step Tensile Deformation and Annealing"
+      ],
+      "publisher": "Wiley",
+      "url": "https://api.crossref.org/works/10.1002%2Fpol.20240703",
+      "metadata_path": "literature/metadata/stage20/27e012a44189f252.json",
+      "sha256": "1a01dda34e137f873f08e74a56acbabbb238ef5fbbb847bf27abb501def72eff"
+    },
+    {
+      "doi": "10.1007/s00170-025-15455-5",
+      "status": "verified",
+      "title": [
+        "Effect of annealing on FDM-manufactured ABS parts"
+      ],
+      "publisher": "Springer Science and Business Media LLC",
+      "url": "https://api.crossref.org/works/10.1007%2Fs00170-025-15455-5",
+      "metadata_path": "literature/metadata/stage20/cea992a0666a8a1a.json",
+      "sha256": "a04539debaa3e6e05793da834b0f9cae89ba5e561fbec3853a03d3d122cfa7a9"
+    },
+    {
+      "doi": "10.1007/s40964-018-0052-4",
+      "status": "verified",
+      "title": [
+        "Improved model and experimental validation of deformation in fused filament fabrication of polylactic acid"
+      ],
+      "publisher": "Springer Science and Business Media LLC",
+      "url": "https://api.crossref.org/works/10.1007%2Fs40964-018-0052-4",
+      "metadata_path": "literature/metadata/stage20/d8062d53993ea0d5.json",
+      "sha256": "7c6047f4cd38d48a58e16b449c60fd7c4ab15f17c582174ee529f9047b384801"
+    },
+    {
+      "doi": "10.1007/s40964-024-00891-8",
+      "status": "verified",
+      "title": [
+        "Phase-field modeling of the morphological and thermal evolution of additively manufactured polylactic acid layers and their influence on the effective elastic mechanical properties"
+      ],
+      "publisher": "Springer Science and Business Media LLC",
+      "url": "https://api.crossref.org/works/10.1007%2Fs40964-024-00891-8",
+      "metadata_path": "literature/metadata/stage20/9ad3b514b46363f8.json",
+      "sha256": "59d2126e74880bb36fce49d935e9a5664662d796a73eb8b457baeac222668d68"
+    },
+    {
+      "doi": "10.1007/s43939-026-00769-2",
+      "status": "verified",
+      "title": [
+        "Multiscale modeling and multiobjective optimization of the mechanical behavior of annealed and non-annealed material extrusion printed PLA"
+      ],
+      "publisher": "Springer Science and Business Media LLC",
+      "url": "https://api.crossref.org/works/10.1007%2Fs43939-026-00769-2",
+      "metadata_path": "literature/metadata/stage20/9497d6762870c08f.json",
+      "sha256": "64a9fe2efa85b8ea9993632a65c62893ec54f6b6b4861f43bd24fb87206f275c"
+    },
+    {
+      "doi": "10.1016/j.addma.2022.102693",
+      "status": "verified",
+      "title": [
+        "Experimentally validated modeling of the temperature distribution and the distortion during the Fused Filament Fabrication process"
+      ],
+      "publisher": "Elsevier BV",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.addma.2022.102693",
+      "metadata_path": "literature/metadata/stage20/21b9a8e1f27100e3.json",
+      "sha256": "7371b52e0ee38452f5d9ce94fda97da834c6e21dec2ba18dcdbb73ff35399806"
+    },
+    {
+      "doi": "10.1016/j.engfailanal.2021.105932",
+      "status": "verified",
+      "title": [
+        "Using thermal annealing and salt remelting to increase tensile properties of 3D FDM prints"
+      ],
+      "publisher": "Elsevier BV",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.engfailanal.2021.105932",
+      "metadata_path": "literature/metadata/stage20/6d16261de51df0ac.json",
+      "sha256": "a22d1afe099a5528b04e5dfbca30c9391fdadf631f0b5e8df9c8c9e3df20716f"
+    },
+    {
+      "doi": "10.1016/j.jmapro.2023.03.030",
+      "status": "verified",
+      "title": [
+        "Efficient simulation of the heat transfer in fused filament fabrication"
+      ],
+      "publisher": "Elsevier BV",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.jmapro.2023.03.030",
+      "metadata_path": "literature/metadata/stage20/58dbc27405e99e5f.json",
+      "sha256": "6d75335c22f6b0fb94a789a4f6702dba5acf4eb560411110155fa98ff611c236"
+    },
+    {
+      "doi": "10.1016/j.mtcomm.2024.109266",
+      "status": "verified",
+      "title": [
+        "Effects of heat treatment on the mechanical properties of 3D-printed polylactic acid: Study of competition between crystallization and interlayer bonding"
+      ],
+      "publisher": "Elsevier BV",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.mtcomm.2024.109266",
+      "metadata_path": "literature/metadata/stage20/a5a698f5d4fabb5f.json",
+      "sha256": "f074393245557711e4ef2033dc4b89236031b3d137d3a2fb74bd31a8d29c4678"
+    },
+    {
+      "doi": "10.1016/j.polymdegradstab.2010.04.018",
+      "status": "verified",
+      "title": [
+        "Crystallization kinetics of virgin and processed poly(lactic acid)"
+      ],
+      "publisher": "Elsevier BV",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.polymdegradstab.2010.04.018",
+      "metadata_path": "literature/metadata/stage20/94dc1fc8cd4d74eb.json",
+      "sha256": "03e8a700935337401640ce4a02213c201283ef79a83a0484dce59754d5a72311"
+    },
+    {
+      "doi": "10.1016/j.polymertesting.2025.108735",
+      "status": "verified",
+      "title": [
+        "Thermal annealing optimization for improved mechanical performance of PLA parts produced via 3D printing"
+      ],
+      "publisher": "Elsevier BV",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.polymertesting.2025.108735",
+      "metadata_path": "literature/metadata/stage20/bf94221a769d5c2d.json",
+      "sha256": "46859cc6ea9b43c1a7355de916f7f36b8ff7f02faaf520338a73ca8d220276f7"
+    },
+    {
+      "doi": "10.1016/j.rineng.2026.110279",
+      "status": "verified",
+      "title": [
+        "Thermo-constrained physics informed neural network based optimization of mechanical performance in recycled PLA additive manufacturing"
+      ],
+      "publisher": "Elsevier BV",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.rineng.2026.110279",
+      "metadata_path": "literature/metadata/stage20/91322406495e08db.json",
+      "sha256": "6b089fe4f873b31f9916bf5efbe38a3da0f51e41a636567c7dd4264916cb2247"
+    },
+    {
+      "doi": "10.1016/j.tca.2011.05.034",
+      "status": "verified",
+      "title": [
+        "Nucleation and crystallization kinetics of poly(lactic acid)"
+      ],
+      "publisher": "Elsevier BV",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.tca.2011.05.034",
+      "metadata_path": "literature/metadata/stage20/b9c5ed6d9bf31cd2.json",
+      "sha256": "730598488e067303050a28ec3efb4956f4f0ec7d7f3867de3b2327fbc002b14f"
+    },
+    {
+      "doi": "10.1016/j.tws.2024.111800",
+      "status": "verified",
+      "title": [
+        "Orthotropic mechanical properties of PLA materials fabricated by fused deposition modeling"
+      ],
+      "publisher": "Elsevier BV",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.tws.2024.111800",
+      "metadata_path": "literature/metadata/stage20/576ac6e29cbcf4d4.json",
+      "sha256": "1e79ac7ae8af502bff6a553a4641dde02af7a2b95c5a022e3d7d66c7ac5f9f08"
+    },
+    {
+      "doi": "10.1021/acsomega.8b00129",
+      "status": "verified",
+      "title": [
+        "Improving the Impact Strength and Heat Resistance of 3D Printed Models: Structure,\nProperty, and Processing Correlationships during Fused Deposition\nModeling (FDM) of Poly(Lactic Acid)"
+      ],
+      "publisher": "American Chemical Society (ACS)",
+      "url": "https://api.crossref.org/works/10.1021%2Facsomega.8b00129",
+      "metadata_path": "literature/metadata/stage20/88b43cf22a89c7e9.json",
+      "sha256": "a7c3f21edba160c20d82e5fab48932fea2a2f67a459869423b0e44ab54503cc2"
+    },
+    {
+      "doi": "10.1021/ja01619a008",
+      "status": "verified",
+      "title": [
+        "The Temperature Dependence of Relaxation Mechanisms in Amorphous Polymers and Other Glass-forming Liquids"
+      ],
+      "publisher": "American Chemical Society (ACS)",
+      "url": "https://api.crossref.org/works/10.1021%2Fja01619a008",
+      "metadata_path": "literature/metadata/stage20/adb3267cff4215c7.json",
+      "sha256": "3e4ed3b3427bea79c67ded1c4cb68ab06a5ef368248b510e0fe22839eab530fe"
+    },
+    {
+      "doi": "10.1038/s41598-026-45542-w",
+      "status": "verified",
+      "title": [
+        "Saturation behavior and full-field reconstruction of residual stress in quenched AISI 304 stainless steel via the contour method"
+      ],
+      "publisher": "Springer Science and Business Media LLC",
+      "url": "https://api.crossref.org/works/10.1038%2Fs41598-026-45542-w",
+      "metadata_path": "literature/metadata/stage20/d4d5b8f3bf01ac13.json",
+      "sha256": "fbfc138b17d16e70766c7c0eeeb5d4f9c80545f0253cc227fcfb39d1a04503a6"
+    },
+    {
+      "doi": "10.1080/00224065.1980.11980968",
+      "status": "verified",
+      "title": [
+        "Simultaneous Optimization of Several Response Variables"
+      ],
+      "publisher": "Informa UK Limited",
+      "url": "https://api.crossref.org/works/10.1080%2F00224065.1980.11980968",
+      "metadata_path": "literature/metadata/stage20/b4cfb69e277883e2.json",
+      "sha256": "ce587885ecc576398b472c2143960be458e1d28c67c743a3edf9810ce6ff744c"
+    },
+    {
+      "doi": "10.1080/20550340.2023.2171940",
+      "status": "verified",
+      "title": [
+        "Residual stress and warpage of additively manufactured SCF/PLA composite parts"
+      ],
+      "publisher": "Informa UK Limited",
+      "url": "https://api.crossref.org/works/10.1080%2F20550340.2023.2171940",
+      "metadata_path": "literature/metadata/stage20/9b4806bbbe781267.json",
+      "sha256": "bed69e6b962e7a4bd2f4dfe8635cdaf4550659a9135e8d702ed83bf66b5cd946"
+    },
+    {
+      "doi": "10.1088/1361-665x/adeee4",
+      "status": "verified",
+      "title": [
+        "Thermo-viscoelastic laminate-based finite element modeling of fused filament fabrication direct 4D printing"
+      ],
+      "publisher": "IOP Publishing",
+      "url": "https://api.crossref.org/works/10.1088%2F1361-665x%2Fadeee4",
+      "metadata_path": "literature/metadata/stage20/0584cfc44625cbd7.json",
+      "sha256": "39eb44dde3bbcd5d20717fdcd049e304029366dd1544c8c4d612c5e485b3c0e6"
+    },
+    {
+      "doi": "10.1089/3dp.2022.0282",
+      "status": "verified",
+      "title": [
+        "Finite Difference Modeling and Experimental Investigation of Cyclic Thermal Heating in the Fused Filament Fabrication Process"
+      ],
+      "publisher": "SAGE Publications",
+      "url": "https://api.crossref.org/works/10.1089%2F3dp.2022.0282",
+      "metadata_path": "literature/metadata/stage20/3496d680c2f1c1cd.json",
+      "sha256": "979fe3b96b1dee9a29390e1e62e8218fa9d412b092ac6fda346e7b2b1a41ade6"
+    },
+    {
+      "doi": "10.1108/rpj-04-2021-0090",
+      "status": "verified",
+      "title": [
+        "The effect of annealing on deformation and mechanical strength of tough PLA and its application in 3D printed prosthetic sockets"
+      ],
+      "publisher": "Emerald",
+      "url": "https://api.crossref.org/works/10.1108%2Frpj-04-2021-0090",
+      "metadata_path": "literature/metadata/stage20/36b33f025ff276f0.json",
+      "sha256": "8e00b9af6fb22f1317e93a27c045c5a4ea8412cb32542275669ddec9e55a913b"
+    },
+    {
+      "doi": "10.1108/rpj-08-2020-0205",
+      "status": "verified",
+      "title": [
+        "The influence of porosity, crystallinity and interlayer adhesion on the tensile strength of 3D printed polylactic acid (PLA)"
+      ],
+      "publisher": "Emerald",
+      "url": "https://api.crossref.org/works/10.1108%2Frpj-08-2020-0205",
+      "metadata_path": "literature/metadata/stage20/07c9c05c2e301ca7.json",
+      "sha256": "bc2cb760a8bd1bd556dc14372bdff23bee9f1a31b5e46f6c6be6c74f8eaeb429"
+    },
+    {
+      "doi": "10.1177/16878132221120737",
+      "status": "verified",
+      "title": [
+        "Enhancing mechanical properties of 3D printed thermoplastic polymers by annealing in moulds"
+      ],
+      "publisher": "SAGE Publications",
+      "url": "https://api.crossref.org/works/10.1177%2F16878132221120737",
+      "metadata_path": "literature/metadata/stage20/c1c69b2a41093d74.json",
+      "sha256": "d7a95c3139dcc65fc7f1a904f3b5e6664f04f4ec64ee0ff1e0569e7dc41ed995"
+    },
+    {
+      "doi": "10.1520/F3489-23",
+      "status": "verified",
+      "title": [
+        "Standard Guide for Additive Manufacturing of Polymers  Material Extrusion   Recommendation for Material Handling and Evaluation of Static  Mechanical Properties"
+      ],
+      "publisher": "ASTM International",
+      "url": "https://api.crossref.org/works/10.1520%2FF3489-23",
+      "metadata_path": "literature/metadata/stage20/e51e2c5fd3996c37.json",
+      "sha256": "8a0d14dec7817e0ae1e08c3772c92b5974acf539eff54921bc35b724c53392f2"
+    },
+    {
+      "doi": "10.3390/jfb16090334",
+      "status": "verified",
+      "title": [
+        "Sustainable Thermal Post-Processing of PLA 3D Prints: Increased Dimensional Precision and Autoclave Compatibility"
+      ],
+      "publisher": "MDPI AG",
+      "url": "https://api.crossref.org/works/10.3390%2Fjfb16090334",
+      "metadata_path": "literature/metadata/stage20/572bdbbdef7e518e.json",
+      "sha256": "c4902a86af3c07b0c5ffa69e671a3d4ca2956c08b18617e2aecee182b9fe827b"
+    },
+    {
+      "doi": "10.3390/jmmp4020038",
+      "status": "verified",
+      "title": [
+        "Investigating the Effects of Annealing on the Mechanical Properties of FFF-Printed Thermoplastics"
+      ],
+      "publisher": "MDPI AG",
+      "url": "https://api.crossref.org/works/10.3390%2Fjmmp4020038",
+      "metadata_path": "literature/metadata/stage20/7e79242ec66892ea.json",
+      "sha256": "58560482656deec82654884b28a17d98f95f81fc48dad704df9d7744d87e377b"
+    },
+    {
+      "doi": "10.3390/ma15103509",
+      "status": "verified",
+      "title": [
+        "Stress Relaxation Behavior of Additively Manufactured Polylactic Acid (PLA)"
+      ],
+      "publisher": "MDPI AG",
+      "url": "https://api.crossref.org/works/10.3390%2Fma15103509",
+      "metadata_path": "literature/metadata/stage20/7de259911ba92479.json",
+      "sha256": "d81ec431a789508b252e11c40d6f33cbcbff63157bd815acc00eaa186ec03eef"
+    },
+    {
+      "doi": "10.3390/ma16134574",
+      "status": "verified",
+      "title": [
+        "An Experimental Study on the Impact of Layer Height and Annealing Parameters on the Tensile Strength and Dimensional Accuracy of FDM 3D Printed Parts"
+      ],
+      "publisher": "MDPI AG",
+      "url": "https://api.crossref.org/works/10.3390%2Fma16134574",
+      "metadata_path": "literature/metadata/stage20/b0397a62ff1513e9.json",
+      "sha256": "3953087ef88d4ac75c7f9a6e197e772fd3c722e2190d08e6ca51f267e1bf9ec7"
+    },
+    {
+      "doi": "10.3390/ma18194537",
+      "status": "verified",
+      "title": [
+        "Thermo-Mechanical Approach to Material Extrusion Process During Fused Filament Fabrication of Polymeric Samples"
+      ],
+      "publisher": "MDPI AG",
+      "url": "https://api.crossref.org/works/10.3390%2Fma18194537",
+      "metadata_path": "literature/metadata/stage20/4aba5dc943d09cef.json",
+      "sha256": "899254334e597b18046479b46b9d287b51f96d264ff990c15222133657e5742a"
+    },
+    {
+      "doi": "10.3390/polym14132607",
+      "status": "verified",
+      "title": [
+        "Influence of Thermal Annealing Temperatures on Powder Mould Effectiveness to Avoid Deformations in ABS and PLA 3D-Printed Parts"
+      ],
+      "publisher": "MDPI AG",
+      "url": "https://api.crossref.org/works/10.3390%2Fpolym14132607",
+      "metadata_path": "literature/metadata/stage20/5801afad6a690e1f.json",
+      "sha256": "5479039172cdf0ede39263ac94435a7135b40c48af10d99d7abdef52603caf32"
+    },
+    {
+      "doi": "10.3390/polym15051162",
+      "status": "verified",
+      "title": [
+        "Prediction of The Mechanical Behavior of Polylactic Acid Parts with Shape Memory Effect Fabricated by FDM"
+      ],
+      "publisher": "MDPI AG",
+      "url": "https://api.crossref.org/works/10.3390%2Fpolym15051162",
+      "metadata_path": "literature/metadata/stage20/eefac0cf4a212e5e.json",
+      "sha256": "8b6d60460f7b8bf98a5c035dc4c87e3c54b33909c0b659620a0b0f514dcbddc2"
+    },
+    {
+      "doi": "10.5755/j02.ms.35076",
+      "status": "verified",
+      "title": [
+        "Thermomechanical Analysis and Numerical Simulations of Fused Filament Fabricated Polylactic Acid Parts"
+      ],
+      "publisher": "Kaunas University of Technology (KTU)",
+      "url": "https://api.crossref.org/works/10.5755%2Fj02.ms.35076",
+      "metadata_path": "literature/metadata/stage20/32c2b18ab301910a.json",
+      "sha256": "e79012d77e899182e5e6bda80903d779fad605055875e45d9e863532b8eef5ea"
+    }
+  ]
+}

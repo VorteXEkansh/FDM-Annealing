@@ -10,10 +10,12 @@ from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_LEFT, TA_CENTER
 from reportlab.lib.pagesizes import A4
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle, Flowable, Image, KeepTogether
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle, Flowable, Image, KeepTogether, CondPageBreak
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'output/pdf/Constrained-Annealing-2026-DRAFT.pdf'
+EMBED_TABLE_CAPTIONS = False
+CAPTION_MIN_SPACE = 0
 FONT = Path(os.environ.get('RESEARCH_FONT_DIR', 'C:/Windows/Fonts'))
 for name, file in [('Body','times.ttf'),('Body-Bold','timesbd.ttf'),('Body-Italic','timesi.ttf'),('Sans','arial.ttf'),('Sans-Bold','arialbd.ttf')]:
     pdfmetrics.registerFont(TTFont(name, str(FONT / file)))
@@ -90,8 +92,9 @@ def footer(c, doc):
     c.drawRightString(A4[0]-54,27,str(doc.page))
     c.restoreState()
 
-def build():
-    text = (ROOT/'manuscript/current.md').read_text(encoding='utf-8')
+def build(text=None):
+    if text is None:
+        text = (ROOT/'manuscript/current.md').read_text(encoding='utf-8')
     lines = text.splitlines()
     story=[]
     i=0
@@ -109,14 +112,21 @@ def build():
             else:
                 table_num+=1
                 caption=f'Table {table_num}. '+line[6:].strip()
-            story.append(P(caption,ST['tablecaption']))
+            if not EMBED_TABLE_CAPTIONS:
+                if CAPTION_MIN_SPACE:story.append(CondPageBreak(CAPTION_MIN_SPACE))
+                story.append(P(caption,ST['tablecaption']))
             rows=[]; i+=1
             while i<len(lines) and ' | ' in lines[i]:
                 rows.append([v.strip() for v in lines[i].split('|')]); i+=1
             data=[[P(cell,ST['thead'] if r==0 else ST['cell']) for cell in row] for r,row in enumerate(rows)]
             widths = [117,143,227] if len(data[0]) == 3 else [55,145,145,142] if len(data[0]) == 4 else [487/len(data[0])]*len(data[0])
-            tab=Table(data,colWidths=widths,repeatRows=1,hAlign='LEFT')
+            if caption.startswith('Table S11.'):widths=[100,140,110,137]
+            if EMBED_TABLE_CAPTIONS:
+                data.insert(0,[P(caption,ST['caption'])]+['']*(len(data[0])-1))
+            tab=Table(data,colWidths=widths,repeatRows=2 if EMBED_TABLE_CAPTIONS else 1,hAlign='LEFT')
             tab.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#24576b')),('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),7),('RIGHTPADDING',(0,0),(-1,-1),7),('TOPPADDING',(0,0),(-1,-1),7),('BOTTOMPADDING',(0,0),(-1,-1),7),('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.HexColor('#f0f5f7'),colors.white]),('LINEBELOW',(0,-1),(-1,-1),0.4,colors.HexColor('#ccd8de'))]))
+            if EMBED_TABLE_CAPTIONS:
+                tab.setStyle(TableStyle([('SPAN',(0,0),(-1,0)),('BACKGROUND',(0,0),(-1,0),colors.white),('BACKGROUND',(0,1),(-1,1),colors.HexColor('#24576b')),('ROWBACKGROUNDS',(0,2),(-1,-1),[colors.HexColor('#f0f5f7'),colors.white])]))
             story.extend([tab,Spacer(1,12)])
             continue
         elif line.startswith('FIGURE:'): story.append(GapFigure())

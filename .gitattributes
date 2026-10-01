@@ -4,6 +4,9 @@
 *.jpg binary
 
 *.xlsx binary
+*.docx binary
+literature/metadata/stage20/** -text
+reproducibility/*.json -text
 literature/metadata/*.json -text
 literature/search_logs/*.json -text
 literature/evidence/** -text -diff

@@ -1,49 +1,39 @@
-# FDM-Annealing
+# FDM Annealing
 
-Computational research on quantified gap-controlled constraint during sub-melting annealing of FFF-printed PLA.
+**Verification-only research package — 1 October 2026.** This repository preserves genuine ANSYS reference calculations toward gap-controlled annealing of FFF-printed PLA. It is not a completed or independently validated production annealing study. Read [PROJECT_STATE](docs/PROJECT_STATE.md) before changing research scope.
 
-**Read [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md) first.** This is a staged research repository, not a completed ANSYS study. Stage 7 defines a 60 mm × 10 mm × 4 mm plate specimen, opposed AISI 304 fixture plates and a normalized clearance screen, and verifies their three-volume construction in a geometry-only MAPDL run. Missing bulk irreversible strain, thermal functions, discretization, contact inputs and the fixture expansion convention still block production ANSYS annealing predictions.
+The release contains one accepted thermal reference case, six structural/contact reference cases and 28 unique accepted convergence runs. Forty-three convergence attempt directories retain 15 excluded attempts. The component verification and discretization findings cannot establish production coupon performance, an optimal clearance or released residual warpage.
 
-## Structure
+## Manuscripts
 
-- `docs/`: authoritative state, conversion audit, restructuring map and quality records.
-- `data/source/`: immutable user-supplied base paper and extraction.
-- `data/literature/`: historical verification and empty property/validation registries.
-- `literature/`: current XLSX matrix, BibTeX, curated JSON, DOI metadata and search evidence.
-- `data/processed/`: traceable derived numerical data, when available.
-- `models/ansys/`: genuine ANSYS model inputs and run documentation, when available.
-- `results/`: solver provenance registry; no placeholder results.
-- `manuscript/`: complete editable manuscript source.
-- `material/`: formulation-specific source tables, uncertainty gaps and calculated reference conversion.
-- `geometry/`: authoritative specimen/fixture definition and candidate-clearance audit.
-- `simulation/geometry/`: hashed geometry-only MAPDL input, raw output and saved database.
-- `src/`: tested constitutive reference relations; no ANSYS solver wrapper yet.
-- `scripts/`: reproducible PDF build and integrity checks.
-- `tests/`: checks appropriate to the research stage.
-- `output/pdf/`: current complete manuscript PDF.
+- [Main PDF](output/release/Constrained-Annealing-2026.pdf)
+- [Editable Word manuscript](output/release/Constrained-Annealing-2026.docx)
+- [Supplementary PDF](output/release/Constrained-Annealing-2026-Supplementary.pdf)
+- [Complete evolving draft](output/pdf/Constrained-Annealing-2026-DRAFT.pdf)
 
-## Reproduce
+All outputs are explicitly labelled verification-only. Author and declaration approval remains necessary before journal submission. No completion tag v1.0.0 is assigned.
 
-Python 3.11 or later, with dependencies in `requirements.txt`, and Poppler for visual rendering:
+## Evidence and reproduction
 
-```text
-python scripts/build_manuscript.py
-python scripts/build_material_database.py
-python scripts/build_constitutive_reference.py
-python scripts/check_materials.py 5
-python scripts/check_constitutive.py
-python scripts/check_geometry.py
-python scripts/check_integrity.py
-python scripts/check_literature.py 7
-pdftoppm -r 150 -png output/pdf/Constrained-Annealing-2026-DRAFT.pdf tmp/pdfs/current
-```
+Start with [reproduction instructions](reproducibility/README.md), [claim traceability](reproducibility/result_traceability.csv), [figure manifest](reproducibility/figure_manifest.csv), [table manifest](reproducibility/table_manifest.csv) and [checksums](reproducibility/sha256_manifest.csv). Solver reproduction requires compatible licensed ANSYS; reading, recalculating and checking archived exports does not.
 
-The builder uses Windows Times New Roman, Arial and Segoe UI Symbol by default. On other systems set `RESEARCH_FONT_DIR` to a directory containing `times.ttf`, `timesbd.ttf`, `timesi.ttf`, `arial.ttf`, `arialbd.ttf` and `seguisym.ttf`. Fonts are not redistributed. Rendered pages must be visually reviewed after changes. Artifact regeneration alone is not scientific verification.
+| Directory | Contents |
+|---|---|
+| docs | Authoritative state, decisions, scientific audits and checks |
+| literature / material | Verified references, appraisal matrix, formulation-specific properties and restrictions |
+| geometry / ansys / simulation | Candidate geometry, automation, archived input decks and genuine raw solver evidence |
+| verification / convergence | Analytical comparisons and reference discretization results |
+| validation | Reserved literature observations and explicit unsolved validation status |
+| data/raw / data/processed | Production evidence registries; no invented campaign data |
+| analysis / src / tests | Reproducible calculations, constitutive material-point code and unit tests |
+| sensitivity / uncertainty / optimization | Explicit status and admission limits; no manufactured findings |
+| figures / tables / supplementary | Scientific plots, source tables and detailed supplementary manuscript |
+| reproducibility | Traceability, release audits, checksums and instructions |
 
-Source paper authorship is retained; the original course cover and institutional logo are omitted. No journal submission or institutional approval is claimed. No license to third-party publications is implied.
+The current release omits third-party PDF redistribution and a large superseded scratch file while retaining their original local hashes. Older Git commits were not rewritten and may still contain those files. See the reproduction README. No repository license is invented for third-party material; comply with each source's terms.
 
-## Literature reproducibility
+## Scientific boundaries
 
-The XLSX is generated from `literature/literature_matrix.json` by `scripts/build_literature.mjs`, using the Codex bundled `@oai/artifact-tool` dependency runtime. A `scripts/node_modules` junction to that runtime is local and ignored. Run `node scripts/build_literature.mjs` in that environment. `scripts/curate_literature.py` regenerates the curated matrix JSON and BibTeX from verified metadata and explicit appraisal notes. It does not extract or invent missing properties. `scripts/verify_literature.py` reuses archived Crossref responses and verifies their identity; a new search/date must be recorded as a later stage, not silently overwrite raw evidence.
+Compatible thermal properties, bulk irreversible strain, printed initial state, physical fixture/contact inputs and a non-isothermal ANSYS material adapter are incomplete. Independent physical validation, production sweeps, surrogate fitting, global sensitivity, uncertainty propagation and optimization confirmation have not been performed. Reserved published observations are not ANSYS validation results. Simulation repetitions are not independent physical specimens.
 
-The maintained complete manuscript is `manuscript/current.md`; `manuscript/literature_review.md` is the literature-section working source with citation keys, not a second deliverable. Source and output hashes, known access limitations and quality checks accompany the stage records.
+Every numerical result is solver-backed, a reproducible calculation or verified published evidence. Design values are labelled choices. Raw evidence is immutable. Future work must satisfy the missing evidence and validation gates before making process recommendations.
