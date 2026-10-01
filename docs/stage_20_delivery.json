@@ -1,0 +1,18 @@
+{
+  "stage": 20,
+  "date": "2026-10-01",
+  "scope": "Verification-only release; incomplete physical validation and production science",
+  "release_commit": "ddd8310e11ca394886df122debc4f1cca2854355",
+  "branch": "codex/stage-01-conversion",
+  "remote": "https://github.com/VorteXEkansh/FDM-Annealing.git",
+  "remote_branch_matches_release_commit": true,
+  "artifacts_match_remote_commit_and_reviewed_bytes": true,
+  "post_push_rebuild_matches_reviewed_bytes": true,
+  "sha256": {
+    "output/release/Constrained-Annealing-2026.pdf": "57dd647de793cd5181ca020d8e9c8abfc37aaaad42a1ff9c3332d7667d41e66d",
+    "output/release/Constrained-Annealing-2026-Supplementary.pdf": "17971aabb5b31e50e3cad856ac59cf959187a9113f1cfe69b9281adc07b515d3",
+    "output/release/Constrained-Annealing-2026.docx": "11166cdd9af98765e8f9ebbd98fa5cd4644c44d15ab4924dc32cf3612bbffddb",
+    "output/pdf/Constrained-Annealing-2026-DRAFT.pdf": "26d6d2ecea1c61e12541fc4ab56bc4dbda9648384f9c7bb8fba707eae5db2fa8"
+  },
+  "tag": "No v1.0.0 completion tag; production study incomplete"
+}
