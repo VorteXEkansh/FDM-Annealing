@@ -1,0 +1,12 @@
+{
+  "application": "Microsoft Word native PDF export via pywin32; source opened read-only",
+  "version": "16.0",
+  "build": "16.0.20527",
+  "equation_transform": "Office16 MML2OMML.XSL",
+  "export_format": 17,
+  "doc_structure_tags": false,
+  "include_properties": false,
+  "input": "output/master/Constrained-Annealing-2026.docx",
+  "output": "output/master/Constrained-Annealing-2026.pdf",
+  "note": "PDF metadata may vary; generated DOCX is not modified by export"
+}

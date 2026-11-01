@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-01",
+  "authoring": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\asus\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "reportlab": "4.4.9",
+      "pypdf": "6.10.0",
+      "pdfplumber": "0.11.9",
+      "Pillow": "12.3.0",
+      "python-docx": "1.2.0",
+      "lxml": "6.1.1",
+      "latex2mathml": "3.78.1",
+      "numpy": "2.3.5",
+      "pywin32": "311"
+    }
+  },
+  "plotting": {
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Python314\\python.exe",
+    "numpy": "2.4.4",
+    "matplotlib": "3.10.8"
+  },
+  "solver": "Ansys Student 2026 R1 / MAPDL 26.1 update 20260202",
+  "rendering": "Word 16.0.20527, pywin32 311 explicit ExportAsFixedFormat with repagination; Poppler 150 dpi page images",
+  "export_recovery": "PowerShell automation reached export but stalled; task-owned instances were terminated. Explicit pywin32 export arguments and repagination succeeded. No solver archive was affected."
+}

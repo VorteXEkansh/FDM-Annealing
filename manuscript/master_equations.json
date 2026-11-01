@@ -1,0 +1,10 @@
+[
+  "\\sigma=E_\\infty\\varepsilon^m+\\sum_{j=1}^{23}s_j,\\quad\\frac{ds_j}{d\\xi}+\\frac{s_j}{\\tau_j}=E_j\\frac{d\\varepsilon^m}{d\\xi}",
+  "\\xi(t)=\\int_0^t\\frac{du}{a_T(T(u))},\\quad\\varepsilon^{th}=\\alpha_p(T-T_r)",
+  "\\log_{10}a_T=\\begin{cases}35000(1/T_K-1/338.15),&T<65\\ ^\\circ\\mathrm C\\\\-17.4(T-65)/(51.6+T-65),&T\\ge65\\ ^\\circ\\mathrm C\\end{cases}",
+  "h_0(0)=E_\\infty p,\\quad h_j(0)=-h_0(0)\\frac{E_j}{\\sum_k E_k},\\quad\\sum_{j=0}^{23}h_j(0)=0",
+  "\\Delta\\varepsilon^m=-\\frac{h_0^n+\\sum_j A_jh_j^n}{E_\\infty+\\sum_j E_jB_j},\\quad A_j=e^{-r_j},\\quad B_j=\\frac{1-e^{-r_j}}{r_j}",
+  "c=g_0+U-h_0[\\alpha_p\\Delta T+e],\\quad e_{crit}=\\frac{g_0+U}{h_0}-\\alpha_p\\Delta T",
+  "U=0,\\quad U=(h_0+g_0)\\varepsilon_s,\\quad U=-2b\\varepsilon_s",
+  "d_i=(\\mathbf x_i-\\bar{\\mathbf x})\\cdot\\mathbf n,\\quad W_{max}=\\max_i|d_i|,\\quad W_{RMS}=\\sqrt{\\frac{1}{N}\\sum_i d_i^2}"
+]

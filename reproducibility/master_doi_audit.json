@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-01",
+  "records": [
+    {
+      "doi": "10.1007/s00170-025-15455-5",
+      "title": "Effect of annealing on FDM-manufactured ABS parts",
+      "metadata_path": "literature/metadata/master_material/hussam2025.json",
+      "sha256": "88fe9545a199ccb38a939c861b8ee0a1eb6ec1ff8968e474ca9b45b04db51714",
+      "status": "Crossref identity verified; source access limits in search/material audits"
+    },
+    {
+      "doi": "10.1007/s43939-026-00769-2",
+      "title": "Multiscale modeling and multiobjective optimization of the mechanical behavior of annealed and non-annealed material extrusion printed PLA",
+      "metadata_path": "literature/metadata/master_material/benamor2026.json",
+      "sha256": "2c59971fc5bd0c574f94578f4478020b78bfb6cd2cf096ee54c79f31d5ea8aa1",
+      "status": "Crossref identity verified; source access limits in search/material audits"
+    },
+    {
+      "doi": "10.1016/j.addma.2022.102693",
+      "title": "Experimentally validated modeling of the temperature distribution and the distortion during the Fused Filament Fabrication process",
+      "metadata_path": "literature/metadata/master/trofimov2022.json",
+      "sha256": "d9eb909733cef825bb7adba8c5509a31beff140d4d04194285fbc3948a8ae429",
+      "status": "Crossref identity verified; source access limits in search/material audits"
+    },
+    {
+      "doi": "10.1016/j.matdes.2023.112163",
+      "title": "Redeployable, 4D printed wave spring actuators",
+      "metadata_path": "literature/metadata/master_material/chapuis2023.json",
+      "sha256": "05b911bb46bb201433dc5c1f3cbeb30f55adc2b73c853faf5a173b2e641f7e15",
+      "status": "Crossref identity verified; source access limits in search/material audits"
+    },
+    {
+      "doi": "10.1088/1361-665x/adeee4",
+      "title": "Thermo-viscoelastic laminate-based finite element modeling of fused filament fabrication direct 4D printing",
+      "metadata_path": "literature/metadata/master_material/chapuis2025.json",
+      "sha256": "602cd308910db9bf3400e37549ebedab8fa99fcb36814083fca23dd84f900072",
+      "status": "Crossref identity verified; source access limits in search/material audits"
+    },
+    {
+      "doi": "10.17973/mmsj.2020_11_2020048",
+      "title": "THE INFLUENCE OF ANNEALING TEMPERATURE ON TENSILE STRENGTH OF POLYLACTIC ACID",
+      "metadata_path": "literature/metadata/master/suder2020.json",
+      "sha256": "53f6e05f51fe3c4c05a3ab1ea06d9ada963f41695076678aecf2d9269c203a88",
+      "status": "Crossref identity verified; source access limits in search/material audits"
+    },
+    {
+      "doi": "10.21741/9781644903131-11",
+      "title": "Preliminary study on the impact of thermal processing on the performances of parts obtained by fused deposition modeling (FDM)",
+      "metadata_path": "literature/metadata/master_material/lorenzoni2024.json",
+      "sha256": "d1ea977a996aa18fb34d7c9a8f09124a662f2e6b6a2defe686b4cdb5974b9378",
+      "status": "Crossref identity verified; source access limits in search/material audits"
+    },
+    {
+      "doi": "10.21741/9781644903599-246",
+      "title": "Mechanical and kinetic characterization of additively manufactured PLA structures for improved process and warpage modeling",
+      "metadata_path": "literature/metadata/master_material/frolich2025.json",
+      "sha256": "dac4ed8b5a71aab9a6165982980771a42d1e822fc47ac8cfe49969e251a861e6",
+      "status": "Crossref identity verified; source access limits in search/material audits"
+    },
+    {
+      "doi": "10.3390/polym14132607",
+      "title": "Influence of Thermal Annealing Temperatures on Powder Mould Effectiveness to Avoid Deformations in ABS and PLA 3D-Printed Parts",
+      "metadata_path": "literature/metadata/master/lluch2022.json",
+      "sha256": "dcf780cd0a2feb02095ec250b6ae7fb0bb76a1cb033caf6223304fb54637d516",
+      "status": "Crossref identity verified; source access limits in search/material audits"
+    },
+    {
+      "doi": "10.5755/j02.ms.35076",
+      "title": "Thermomechanical Analysis and Numerical Simulations of Fused Filament Fabricated Polylactic Acid Parts",
+      "metadata_path": "literature/metadata/master_material/bute2024.json",
+      "sha256": "59dae2ebea91f25e151abfe4ac254d6dddf6b7261f48009f482d1bc3364d43fb",
+      "status": "Crossref identity verified; source access limits in search/material audits"
+    }
+  ],
+  "author_corrections": "literature/master_metadata_corrections.json"
+}

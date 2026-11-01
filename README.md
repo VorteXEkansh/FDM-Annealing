@@ -1,21 +1,23 @@
 # FDM Annealing
 
-**Verification-only research package — 1 October 2026.** This repository preserves genuine ANSYS reference calculations toward gap-controlled annealing of FFF-printed PLA. It is not a completed or independently validated production annealing study. Read [PROJECT_STATE](docs/PROJECT_STATE.md) before changing research scope.
+**Numerical verification and contact feasibility — 1 November 2026.** This repository preserves genuine ANSYS reference calculations toward gap-controlled annealing of FFF-printed PLA. It is not a completed or independently validated production annealing study. Read [PROJECT_STATE](docs/PROJECT_STATE.md) before changing research scope.
 
-The release contains one accepted thermal reference case, six structural/contact reference cases and 28 unique accepted convergence runs. Forty-three convergence attempt directories retain 15 excluded attempts. The component verification and discretization findings cannot establish production coupon performance, an optimal clearance or released residual warpage.
+The master investigation adds six accepted ANSYS reference runs among thirteen preserved attempts: three non-isothermal refinements and three elastic stop checks. It also adds a source-conditioned programmed-road recovery calculation and ninety mount/clearance screens. The earlier one thermal reference, six structural/contact references and 28 selected convergence runs remain intact. These checks do not establish production coupon performance, an optimal clearance or released residual warpage. There are zero production cases.
 
 ## Manuscripts
 
-- [Main PDF](output/release/Constrained-Annealing-2026.pdf)
-- [Editable Word manuscript](output/release/Constrained-Annealing-2026.docx)
-- [Supplementary PDF](output/release/Constrained-Annealing-2026-Supplementary.pdf)
+- [Main PDF](output/master/Constrained-Annealing-2026.pdf)
+- [Editable Word manuscript](output/master/Constrained-Annealing-2026.docx)
+- [Supplementary PDF](output/master/Constrained-Annealing-2026-Supplementary.pdf)
 - [Complete evolving draft](output/pdf/Constrained-Annealing-2026-DRAFT.pdf)
 
-All outputs are explicitly labelled verification-only. Author and declaration approval remains necessary before journal submission. No completion tag v1.0.0 is assigned.
+The current title is **Contact feasibility and non-isothermal verification for gap-constrained annealing of FFF-printed PLA**. Outputs retain the verification label. Author and declaration approval remains necessary before journal submission. No official completion release or v1.0.0 tag is assigned. `output/release/` preserves the historical Stage 20 package.
+
+The [master delivery report](docs/master_completion_report.md) records achieved findings, document counts and unresolved requirements. The main PDF has eight pages; the supplement has 32. All pages were inspected and all 98 unit tests pass. These checks do not establish physical validation.
 
 ## Evidence and reproduction
 
-Start with [reproduction instructions](reproducibility/README.md), [claim traceability](reproducibility/result_traceability.csv), [figure manifest](reproducibility/figure_manifest.csv), [table manifest](reproducibility/table_manifest.csv) and [checksums](reproducibility/sha256_manifest.csv). Solver reproduction requires compatible licensed ANSYS; reading, recalculating and checking archived exports does not.
+Start with [current reproduction instructions](reproducibility/MASTER_README.md), [new claim traceability](reproducibility/master_result_traceability.csv), [equation map](docs/master_equation_map.csv), [checksums](reproducibility/master_checksums.json) and [remaining scientific dependencies](docs/master_remaining_blockers.md). The earlier trace, figure/table manifests and release instructions remain unchanged historical records. Solver repetition requires compatible licensed ANSYS; recalculating and checking archived exports does not.
 
 | Directory | Contents |
 |---|---|
@@ -34,6 +36,6 @@ The current release omits third-party PDF redistribution and a large superseded 
 
 ## Scientific boundaries
 
-Compatible thermal properties, bulk irreversible strain, printed initial state, physical fixture/contact inputs and a non-isothermal ANSYS material adapter are incomplete. Independent physical validation, production sweeps, surrogate fitting, global sensitivity, uncertainty propagation and optimization confirmation have not been performed. Reserved published observations are not ANSYS validation results. Simulation repetitions are not independent physical specimens.
+Non-isothermal shifting now passes its defined reference checks, but compatible thermal properties, bulk recovery/initial state and physical fixture/contact inputs remain missing. The Prusament characterization envelope is 23–85 °C, not a validated annealing recommendation. Independent physical validation, production sweeps, surrogate fitting, global sensitivity, uncertainty propagation and optimization confirmation have not been performed. Reserved published observations are not ANSYS validation results. Simulation repetitions are not independent physical specimens.
 
 Every numerical result is solver-backed, a reproducible calculation or verified published evidence. Design values are labelled choices. Raw evidence is immutable. Future work must satisfy the missing evidence and validation gates before making process recommendations.

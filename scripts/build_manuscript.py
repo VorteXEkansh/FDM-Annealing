@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'output/pdf/Constrained-Annealing-2026-DRAFT.pdf'
 EMBED_TABLE_CAPTIONS = False
 CAPTION_MIN_SPACE = 0
+TABLE_WIDTHS = {}
 FONT = Path(os.environ.get('RESEARCH_FONT_DIR', 'C:/Windows/Fonts'))
 for name, file in [('Body','times.ttf'),('Body-Bold','timesbd.ttf'),('Body-Italic','timesi.ttf'),('Sans','arial.ttf'),('Sans-Bold','arialbd.ttf')]:
     pdfmetrics.registerFont(TTFont(name, str(FONT / file)))
@@ -121,6 +122,7 @@ def build(text=None):
             data=[[P(cell,ST['thead'] if r==0 else ST['cell']) for cell in row] for r,row in enumerate(rows)]
             widths = [117,143,227] if len(data[0]) == 3 else [55,145,145,142] if len(data[0]) == 4 else [487/len(data[0])]*len(data[0])
             if caption.startswith('Table S11.'):widths=[100,140,110,137]
+            widths=TABLE_WIDTHS.get(caption.split('.',1)[0],widths)
             if EMBED_TABLE_CAPTIONS:
                 data.insert(0,[P(caption,ST['caption'])]+['']*(len(data[0])-1))
             tab=Table(data,colWidths=widths,repeatRows=2 if EMBED_TABLE_CAPTIONS else 1,hAlign='LEFT')

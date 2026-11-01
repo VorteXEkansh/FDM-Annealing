@@ -1,0 +1,9 @@
+equation,implemented_relation,implementation,scope
+1,Generalized Maxwell stress and branch evolution,src/constitutive.py; scripts/run_master_nonisothermal.py,Uniaxial reference and isotropic Prony adapter
+2,Reduced time and reversible thermal strain,src/constitutive.py,Source-conditioned material reference
+3,Arrhenius and WLF piecewise clock,src/constitutive.py; scripts/run_master_nonisothermal.py,23 to 85 degrees Celsius guard
+4,Balanced print-programmed initial stresses,src/programmed_recovery.py,Scalar free-road reference only
+5,Force-free incremental initialized recovery,src/programmed_recovery.py,Scalar free-road reference only
+6,Total opening and first-contact threshold,scripts/screen_fixture_mechanism.py,Flat uniform-temperature kinematic limit
+7,Three alternative mount opening changes,scripts/screen_fixture_mechanism.py; scripts/check_mount_kinematics.py,Alternative specified boundaries not random uncertainty
+8,Orthogonal best-plane warpage,analysis/surface_metrics.py,Tested extractor without production fields

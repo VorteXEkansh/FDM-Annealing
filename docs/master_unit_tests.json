@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-01",
+  "command": "python -m unittest discover -s tests -v",
+  "python": "C:/Users/asus/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+  "passed": true,
+  "count": 98,
+  "log": "docs/master_unit_tests.log",
+  "log_sha256": "0f7adb77719ae73b1dbdb0b4f5daadea1e5287b3c252524947bdd55a375a842e",
+  "test_sha256": {
+    "tests/test_ansys_automation.py": "183dcdcedecabb401a4681bd0d326849e8ecbc2e747eb59a0969ef3320270dfb",
+    "tests/test_constitutive.py": "2e95e3e225ed3b5567370ed4933fb4f0b167c4012e4a81c4c4a0e0405c1ca8ab",
+    "tests/test_convergence.py": "1787d48ce3bdcc225ddccc1bcdc2daefcfb8dcab94798257ab488dcdb8f480d2",
+    "tests/test_geometry.py": "8a60839697db8be936ccc073db66c8cd01e8a9d07e0a7413a37480fd6e7f5296",
+    "tests/test_master_evidence.py": "4e60e7a6df70f31a442411915175e1563483bc5317883da86882bbeda396915e",
+    "tests/test_programmed_recovery.py": "73dbf1dfeed6b351cd5d6fdf548fb670e985685923f76e5c9057948c8f859c35",
+    "tests/test_review_metrics.py": "0fed594256a5549dd2a94dac665ac2a1b1b0a5411f80cbe3ad0956bd812f5078",
+    "tests/test_structural_verification.py": "895836245e5edc1e3e9a3bee5a8ce7f1862042f0884dbec7226866ff558228a9",
+    "tests/test_surface_metrics.py": "85a711cc4194fecdb2696060e27140e20b7bcd49bc34e8b6ec40dc5f8e9eb6a5",
+    "tests/test_thermal_model.py": "a5d06382151c5644d35f88656a4cbfc64a81b9dd0eb2c7dc6cd7c92f18e882a0",
+    "tests/test_thermal_verification.py": "a3140ead7138507c9541d995691386bbcfc766cb4e444842f60241da00fd295e",
+    "tests/test_validation_admission.py": "35973b706f1bdcfcf945e6341a7f40d99cbbe7c5df431836137fa44bad98735a",
+    "tests/test_validation_metrics.py": "561525d95d2eb65c3e2729aaf76f3eec85ee4f79aad60b6e60d2debbc95c9046"
+  }
+}
