@@ -1,0 +1,29 @@
+{
+  "accepted": false,
+  "error": null,
+  "returncode": 0,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\fdm_stop_b7y_ipja\\input.dat",
+    "-o",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\fdm_stop_b7y_ipja\\mapdl.out",
+    "-j",
+    "stop",
+    "-np",
+    "1"
+  ],
+  "runtime_s": 22.358999999938533,
+  "files": {
+    "case.json": "259f9f7dbb8d4bc23d0003f7b1d980e0fc95d81ad9c098778b37aa01ed3adb5b",
+    "comparison.csv": "62dadcae6492a1028b4abf58a9f1e32a8ce8d10b9dd04bfb55ff475b45bedf95",
+    "input.dat": "91a6d2c289cea28fdeb6b3a8a583e442fabede590e0038b3275917ae5da44d33",
+    "mapdl.out": "9bbe09dfe103a13d7d29a2d29cce3bba122c6efb88e8b8fc26342b5ff77dc411",
+    "raw.csv": "13869f0717d2cb72d446b32f76740f3684800a6c94b9e8d21560be8fd160f907",
+    "snapshot.py": "e5479ff9be1cef40b3712cd949a84d65b74787ca054fed1027d62fa0799f427e",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stop.err": "87d5a1e22e147945e3547bbf1a5622c0ab9d0a35f0195475658cf1e512029cd2"
+  }
+}

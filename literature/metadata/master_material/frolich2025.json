@@ -1,0 +1,55 @@
+{
+  "DOI": "10.21741/9781644903599-246",
+  "title": [
+    "Mechanical and kinetic characterization of additively manufactured PLA structures for improved process and warpage modeling"
+  ],
+  "author": [
+    {
+      "given": "Felix",
+      "family": "FRÖLICH",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "Materials Research Proceedings",
+    "Material Forming: ESAFORM 2025"
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "published-online": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "type": "proceedings-article",
+  "resource": {
+    "primary": {
+      "URL": "https://mrforum.com/product/9781644903599-246"
+    }
+  },
+  "URL": "https://doi.org/10.21741/9781644903599-246",
+  "crossref_url": "https://api.crossref.org/works/10.21741/9781644903599-246",
+  "retrieved": "2026-10-31",
+  "response_sha256": "0faba0cb8973fc67146a47b8b90fcfea27d4060f0e15d59457b3f16087164b2f"
+}

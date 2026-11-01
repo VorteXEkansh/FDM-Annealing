@@ -1,0 +1,64 @@
+{
+  "DOI": "10.2478/msp-2025-0039",
+  "title": [
+    "Sliding elements made from biodegradable plastic – friction and wear of poly(lactic acid) compared to polyamide 6"
+  ],
+  "author": [
+    {
+      "given": "Maciej",
+      "family": "Kujawa",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Department of Fundamentals of Machine Design and Mechatronic Systems, Faculty of Mechanical Engineering, Wroclaw University of Science and Technology, Politechnika Wroclawska , Wroclaw , Poland"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "Materials Science-Poland"
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        1
+      ]
+    ]
+  },
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        11,
+        28
+      ]
+    ]
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        1
+      ]
+    ]
+  },
+  "type": "journal-article",
+  "resource": {
+    "primary": {
+      "URL": "https://reference-global.com/article/10.2478/msp-2025-0039"
+    }
+  },
+  "URL": "https://doi.org/10.2478/msp-2025-0039",
+  "crossref_url": "https://api.crossref.org/works/10.2478/msp-2025-0039",
+  "retrieved": "2026-10-31",
+  "response_sha256": "f39dc44ab63600b9974a0a3c7dbc6ea6fec09f199bd313ebe748e20ae03c3733"
+}

@@ -1,0 +1,11 @@
+{
+  "scope": "B reproducible kinematic calculation, not solver output or validated material prediction",
+  "files": {
+    "scripts/screen_fixture_mechanism.py": "9201af0774203aa416ade1e52617f32307b9a8f6fabf1b789e7bb8f6734d12ed",
+    "src/constitutive.py": "493ef6f262c3011c858e619f5de82cb97c0b2a1cfe47e4d523d358b99195d41e",
+    "material/pla_properties.csv": "b5df9aee11b99a22f978c78efa60388f4bdcada0325ed2ea8d2415d5f6e9f6f7",
+    "geometry/geometry_definition.json": "a4e2eae16f311d617d78b2f1448df7032cef9763e4ab3933edc12d43da1a1a94",
+    "material/master_fixture_source.json": "0710d7032821ee1bf64434741c469c58283f7102862213281c48167a97977554",
+    "data/processed/master_fixture_screen.csv": "0760606ea46c64e511ef483c25235f4e6b2a747cbba0b4c28e428be7e90bcb89"
+  }
+}

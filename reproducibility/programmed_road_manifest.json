@@ -1,0 +1,14 @@
+{
+  "scope": "Class B, 1D road calculation. No ANSYS run or validated coupon prediction.",
+  "sha256": {
+    "material/programmed_road.json": "5847a24ee2d73643bf1d7122eae00b499d5b2a939f5f536741b3c70121bdabd2",
+    "material/pla_properties.csv": "b5df9aee11b99a22f978c78efa60388f4bdcada0325ed2ea8d2415d5f6e9f6f7",
+    "src/constitutive.py": "493ef6f262c3011c858e619f5de82cb97c0b2a1cfe47e4d523d358b99195d41e",
+    "src/programmed_recovery.py": "088bfee985870c2a6a25f9d158c2b5d255c753d80f41cf7cf3d2a1192dcef9d3",
+    "scripts/check_programmed_recovery.py": "4bce68b2039b0bc6e11bc7a072c9fccfc18be381038068270ae978efb426ab9e",
+    "tests/test_programmed_recovery.py": "73dbf1dfeed6b351cd5d6fdf548fb670e985685923f76e5c9057948c8f859c35",
+    "verification/programmed_road_check.csv": "829bfedf23c8b417fc88d97ade9d69b5d9770e911577de77e95c4900f93a4bd3",
+    "validation/master_spring_targets.csv": "d65957556ba086640e9ff2c25802ab642ae45d3eb27d862f0c8cffc4263455ff",
+    "literature/evidence/stage_04/Chapuis2025_UMAT_SMPViscoShells.f": "d90a9b48057a432dd380ead7901a53dfcf430b5ae82b02dbdaa86539a9cebcc8"
+  }
+}

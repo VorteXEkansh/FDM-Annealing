@@ -1,0 +1,27 @@
+/COM,ANSYS RELEASE 2026 R1           BUILD 26.1      UP20260202       12:51:56
+
+ *** WARNING ***                         ELAPSED TIME =       6.074   TIME= 12:51:58
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 2.033403207E-03 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+
+ *** WARNING ***                         ELAPSED TIME =      78.015   TIME= 12:53:10
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 9.991667359E-03 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+
+ *** WARNING ***                         ELAPSED TIME =     139.716   TIME= 12:54:12
+ During this session the elapsed time exceeds the CPU time by 227%.      
+ This often indicates either a lack of physical memory (RAM) required    
+ to efficiently handle this simulation or a particularly slow hard       
+ drive configuration.  This simulation can be expected to run faster on  
+ identical hardware if additional RAM or a faster hard drive             
+ configuration is made available.  For more details, please see the      
+ Mechanical APDL Performance Guide which is part of the Ansys Help       
+ system.                                                                 

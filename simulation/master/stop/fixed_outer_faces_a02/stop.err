@@ -1,0 +1,89 @@
+/COM,ANSYS RELEASE 2026 R1           BUILD 26.1      UP20260202       12:48:19
+
+ *** WARNING ***                         ELAPSED TIME =       5.723   TIME= 12:48:20
+ Brick element 1 has an aspect ratio of 30, which exceeds the warning    
+ limit of 20.                                                            
+
+ *** WARNING ***                         ELAPSED TIME =       5.749   TIME= 12:48:20
+ Constraints on both nodes of CONTA178 2 have been detected.  This may   
+ cause overconstraint (zero pivot).                                      
+
+ *** WARNING ***                         ELAPSED TIME =       5.749   TIME= 12:48:20
+ Previous testing revealed that 1 of the 2 selected elements violate     
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** WARNING ***                         ELAPSED TIME =       5.963   TIME= 12:48:20
+ Pivoting has been activated for the Sparse Matrix Solver.  The memory   
+ required may greatly exceed the predicted amount.  In that event, use   
+ the DSPOPTION command to change the memory mode and/or memory size      
+ used by the Sparse Matrix Solver.                                       
+
+ *** WARNING ***                         ELAPSED TIME =       5.983   TIME= 12:48:20
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 3.123340056E-16 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+
+ *** WARNING ***                         ELAPSED TIME =       6.279   TIME= 12:48:21
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 1.060094521E-15 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+
+ *** WARNING ***                         ELAPSED TIME =       6.574   TIME= 12:48:21
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 2.345349048E-15 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+
+ *** WARNING ***                         ELAPSED TIME =       6.828   TIME= 12:48:21
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 1.374412722E-15 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+
+ *** WARNING ***                         ELAPSED TIME =       8.308   TIME= 12:48:23
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 3.048202108E-15 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+
+ *** WARNING ***                         ELAPSED TIME =       8.581   TIME= 12:48:23
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 4.116689568E-15 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+
+ *** WARNING ***                         ELAPSED TIME =       8.892   TIME= 12:48:23
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 1.332031081E-15 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+
+ *** WARNING ***                         ELAPSED TIME =       9.172   TIME= 12:48:24
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 7.892061738E-16 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+
+ *** WARNING ***                         ELAPSED TIME =       9.532   TIME= 12:48:24
+ The ETABLE command has requested item = NMISC, comp = 1 of element 1    
+ (element type SOLID185).  0.0 is output, as this item does not exist.   
+ Checking for this discontinues.                                         

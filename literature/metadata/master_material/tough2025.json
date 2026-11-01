@@ -1,0 +1,107 @@
+{
+  "DOI": "10.3390/jfb16090334",
+  "title": [
+    "Sustainable Thermal Post-Processing of PLA 3D Prints: Increased Dimensional Precision and Autoclave Compatibility"
+  ],
+  "author": [
+    {
+      "given": "Florina",
+      "family": "Chiscop",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Robots and Production Systems Department, Faculty of Industrial Engineering and Robotics, National University of Science and Technology POLITEHNICA Bucharest, Splaiul Independenței 313, 060041 Bucharest, Romania"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-1163-9462",
+      "authenticated-orcid": false,
+      "given": "Carmen-Cristiana",
+      "family": "Cazacu",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Robots and Production Systems Department, Faculty of Industrial Engineering and Robotics, National University of Science and Technology POLITEHNICA Bucharest, Splaiul Independenței 313, 060041 Bucharest, Romania"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Dragos-Alexandru",
+      "family": "Cazacu",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Education Team, PTC Eastern Europe SRL, Splaiul Independenței 319, 060044 Bucharest, Romania"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-8719-2743",
+      "authenticated-orcid": false,
+      "given": "Costel Emil",
+      "family": "Cotet",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Robots and Production Systems Department, Faculty of Industrial Engineering and Robotics, National University of Science and Technology POLITEHNICA Bucharest, Splaiul Independenței 313, 060041 Bucharest, Romania"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "Journal of Functional Biomaterials"
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        9,
+        8
+      ]
+    ]
+  },
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        9,
+        8
+      ]
+    ]
+  },
+  "type": "journal-article",
+  "resource": {
+    "primary": {
+      "URL": "https://www.mdpi.com/2079-4983/16/9/334"
+    }
+  },
+  "URL": "https://doi.org/10.3390/jfb16090334",
+  "crossref_url": "https://api.crossref.org/works/10.3390/jfb16090334",
+  "retrieved": "2026-10-31",
+  "response_sha256": "bdb776640e4f880c43659a7a3b98e1bc76c587a95010305d035037a57558df72"
+}

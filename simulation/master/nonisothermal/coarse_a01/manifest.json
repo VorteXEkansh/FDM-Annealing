@@ -1,0 +1,10 @@
+{
+  "accepted": false,
+  "solver_started": false,
+  "error": "Python FileNotFoundError [WinError 3]: scratch parent did not exist before solver launch. No solver output.",
+  "files": {
+    "case.json": "197db6529c878c7d00fe48691415a670ce7d09f0b5d89107c13386b54e2241ce",
+    "input.dat": "6295d560b7e956e3168a887e3b4b31b930577bf05ed0ec5385ca9f8e747c5907",
+    "script_snapshot.py": "3109f568b93d0e58a816956d7b80fd4c120ff57df975609fb9339cc8331f9608"
+  }
+}

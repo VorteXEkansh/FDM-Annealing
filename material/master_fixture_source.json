@@ -1,0 +1,10 @@
+{
+  "source": "Outokumpu Core range datasheet, physical properties Table 7 (p. 10), Core 304/4301 row",
+  "url": "https://www.outokumpu.com/en/products/product-ranges/-/media/files/products/core/outokumpu-core-range-datasheet.pdf?hash=0DB21994AD31F93E9C62A531BE9C36E6&modified=20251117111909&revision=025e9931-a1d5-4c8f-8ff5-f881d38916da",
+  "reviewed": "2026-10-30",
+  "quantity": "linear thermal expansion coefficient across 20 to 100 degrees Celsius",
+  "value_per_K": 0.000016,
+  "temperature_interval_C": [20, 100],
+  "role": "Grade-level interval mean. Treating it as constant between the endpoints is an engineering approximation for the kinematic screen only; not a measured stop or a pointwise tangent function.",
+  "uncertainty": "Not reported. No probability distribution assigned."
+}

@@ -1,0 +1,95 @@
+{
+  "DOI": "10.5755/j02.ms.35076",
+  "title": [
+    "Thermomechanical Analysis and Numerical Simulations of Fused Filament Fabricated Polylactic Acid Parts"
+  ],
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-7592-3502",
+      "authenticated-orcid": false,
+      "given": "Irina",
+      "family": "BUTE",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-5091-3770",
+      "authenticated-orcid": false,
+      "given": "Sergejs",
+      "family": "TARASOVS",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-1198-6202",
+      "authenticated-orcid": false,
+      "given": "Jevgenijs",
+      "family": "SEVCENKO",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-1242-6570",
+      "authenticated-orcid": false,
+      "given": "Andrey",
+      "family": "ANISKEVICH",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "Materials Science"
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        5,
+        15
+      ]
+    ]
+  },
+  "published-online": {
+    "date-parts": [
+      [
+        2024,
+        5,
+        15
+      ]
+    ]
+  },
+  "type": "journal-article",
+  "resource": {
+    "primary": {
+      "URL": "https://matsc.ktu.lt/index.php/MatSc/article/view/35076"
+    }
+  },
+  "URL": "https://doi.org/10.5755/j02.ms.35076",
+  "crossref_url": "https://api.crossref.org/works/10.5755/j02.ms.35076",
+  "retrieved": "2026-10-31",
+  "response_sha256": "e79012d77e899182e5e6bda80903d779fad605055875e45d9e863532b8eef5ea"
+}

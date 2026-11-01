@@ -1,0 +1,83 @@
+{
+  "purpose": "Non-isothermal numerical verification only; not physical validation",
+  "source": "Chapuis2025; DOI10.1088/1361-665X/adeee4; source-converted spectrum",
+  "history_s_C": [
+    [
+      0.0,
+      23.0
+    ],
+    [
+      42.0,
+      65.0
+    ],
+    [
+      57.0,
+      80.0
+    ],
+    [
+      117.0,
+      80.0
+    ],
+    [
+      132.0,
+      65.0
+    ],
+    [
+      174.0,
+      23.0
+    ],
+    [
+      234.0,
+      23.0
+    ]
+  ],
+  "sample_times_s": [
+    1.0,
+    10.0,
+    20.0,
+    30.0,
+    40.0,
+    42.0,
+    45.0,
+    50.0,
+    55.0,
+    57.0,
+    60.0,
+    70.0,
+    90.0,
+    117.0,
+    120.0,
+    125.0,
+    130.0,
+    132.0,
+    140.0,
+    150.0,
+    160.0,
+    170.0,
+    174.0,
+    180.0,
+    200.0,
+    234.0
+  ],
+  "dt_s": 0.1,
+  "shift_table_spacing_C": 0.25,
+  "temperature_domain_C": [
+    23,
+    85
+  ],
+  "reference_C": 23,
+  "alpha_per_K": 6.8e-05,
+  "geometry_mm": [
+    10,
+    1,
+    1
+  ],
+  "element": "one SOLID185;8nodes",
+  "boundary": "x=0 and10 axial restraint; y=0 UY=0; z=0 UZ=0; transverse faces free",
+  "strain_model": "thermal+isotropic generalized Maxwell; matching normalized shear/bulk spectra",
+  "absolute_stress_tolerance_MPa": 0.0001,
+  "relative_stress_tolerance": 0.002,
+  "relative_refinement_limit": 0.002,
+  "reference_dt_s": 0.001,
+  "reference_confirmation_dt_s": 0.0005
+}

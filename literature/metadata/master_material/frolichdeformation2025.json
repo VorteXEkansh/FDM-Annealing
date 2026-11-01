@@ -1,0 +1,149 @@
+{
+  "DOI": "10.1016/j.addma.2025.105023",
+  "title": [
+    "An orientation-based homogenization approach for predicting process-induced deformations in extrusion-based additive manufacturing"
+  ],
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-2575-4752",
+      "authenticated-orcid": false,
+      "given": "Felix",
+      "family": "Frölich",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0009-0007-3718-2820",
+      "authenticated-orcid": false,
+      "given": "Mario Emanuele",
+      "family": "Di Nardo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-3401-2619",
+      "authenticated-orcid": false,
+      "given": "Constantin",
+      "family": "Krauß",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-1054-942X",
+      "authenticated-orcid": false,
+      "given": "Anselm",
+      "family": "Heuer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-1855-6237",
+      "authenticated-orcid": false,
+      "given": "Wilfried V.",
+      "family": "Liebig",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-8693-7264",
+      "authenticated-orcid": false,
+      "given": "Florian",
+      "family": "Wittemann",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-8727-0457",
+      "authenticated-orcid": false,
+      "given": "Pierpaolo",
+      "family": "Carlone",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-6534-6518",
+      "authenticated-orcid": false,
+      "given": "Luise",
+      "family": "Kärger",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "Additive Manufacturing"
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        9
+      ]
+    ]
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2025,
+        9
+      ]
+    ]
+  },
+  "type": "journal-article",
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2214860425003884"
+    }
+  },
+  "URL": "https://doi.org/10.1016/j.addma.2025.105023",
+  "crossref_url": "https://api.crossref.org/works/10.1016/j.addma.2025.105023",
+  "retrieved": "2026-10-31",
+  "response_sha256": "d5fce1224dfd5056812043b4476525d7bf200be78eaf0917b4e1aa951a4f8331"
+}

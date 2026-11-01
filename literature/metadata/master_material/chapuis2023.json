@@ -1,0 +1,63 @@
+{
+  "DOI": "10.1016/j.matdes.2023.112163",
+  "title": [
+    "Redeployable, 4D printed wave spring actuators"
+  ],
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-4209-3466",
+      "authenticated-orcid": false,
+      "given": "Joël N.",
+      "family": "Chapuis",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Kristina",
+      "family": "Shea",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "Materials &amp; Design"
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        8
+      ]
+    ]
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2023,
+        8
+      ]
+    ]
+  },
+  "type": "journal-article",
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0264127523005786"
+    }
+  },
+  "URL": "https://doi.org/10.1016/j.matdes.2023.112163",
+  "crossref_url": "https://api.crossref.org/works/10.1016/j.matdes.2023.112163",
+  "retrieved": "2026-10-31",
+  "response_sha256": "b8ead5314809ad9d1f2e299e0d1619ed00951f8538d1dc1f4b32dd13aa52cb94"
+}

@@ -23,3 +23,9 @@ material/*.json -text
 docs/*integrity*.json -text
 docs/stage_05*.json -text
 docs/stage_*.json -text -diff
+simulation/master/** -text
+literature/metadata/master/** -text
+literature/metadata/master_material/** -text
+reproducibility/*_manifest.json -text
+scripts/run_master_nonisothermal.py -text
+docs/master* -text

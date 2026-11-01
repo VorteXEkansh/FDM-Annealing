@@ -1,0 +1,16 @@
+{
+  "source": "https://doi.org/10.1088/1361-665X/adeee4",
+  "formulation": "Prusament PLA; intentionally programmed active layer of direct-4D-printed spring; uniaxial reduction only",
+  "source_locator": "Chapuis et al., equations 3–8, Table 1 and Table 5 row 1; SI Tables B.1–B.2 and WaveSpring/AbaqusWaveSpringInput.inp, *Material PLA_UMAT_Active (55 constants)",
+  "active_axial_prestrain": 0.056175,
+  "prestrain_unit": "1",
+  "prestrain_class": "Coefficient calibrated to bilayer curvature: 195 °C nozzle, 75 °C activation, 0.1 mm layer, 15 mm^3/s. Effective coefficient for this process; neither a direct free-shrinkage measurement nor a direction-independent bulk coefficient.",
+  "equilibrium_MPa": 10.5981,
+  "equilibrium_class": "Source model coefficient in the example deck; SI table rounds this to 10.598 MPa. All 23 other branch pairs come from the grade-specific database.",
+  "test_domain_C": [23, 85],
+  "characterization": "1–18 Hz tensile DMA and time-temperature superposition; not independent validation of long holds, solid plate bulk strain or multiaxial stresses",
+  "prescribed_numerical_history": [["heat",23,75,30],["hold",75,75,10],["cool",75,23,10]],
+  "history_class": "Designed material-point check, temperature endpoints in degrees Celsius and duration in seconds. Adapts the SOURCE NUMERICAL spring program to 23 °C instead of 22 °C to remain inside the characterized range. This is not a measured specimen temperature, oven or validation reproduction.",
+  "confidence": "High confidence in transcription, no probabilistic uncertainty assigned to inferred initial strain or transfer beyond source scope",
+  "excluded": "Do not add this mechanism to an independent eigenstrain describing the same recovery. Do not initialize ordinary unprogrammed production coupons with this coefficient."
+}

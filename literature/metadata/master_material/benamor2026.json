@@ -1,0 +1,63 @@
+{
+  "DOI": "10.1007/s43939-026-00769-2",
+  "title": [
+    "Multiscale modeling and multiobjective optimization of the mechanical behavior of annealed and non-annealed material extrusion printed PLA"
+  ],
+  "author": [
+    {
+      "given": "Rania",
+      "family": "Ben Amor",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Slim",
+      "family": "Souissi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "Discover Materials"
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        25
+      ]
+    ]
+  },
+  "published-online": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        25
+      ]
+    ]
+  },
+  "type": "journal-article",
+  "resource": {
+    "primary": {
+      "URL": "https://link.springer.com/10.1007/s43939-026-00769-2"
+    }
+  },
+  "URL": "https://doi.org/10.1007/s43939-026-00769-2",
+  "crossref_url": "https://api.crossref.org/works/10.1007/s43939-026-00769-2",
+  "retrieved": "2026-10-31",
+  "response_sha256": "bd2c0f89088fcd688722ef44d6ad958205ef28c8e19cee2679ce3928be36e890"
+}

@@ -1,0 +1,185 @@
+{
+  "cutoff": "2026-10-31",
+  "scope": "Targeted extension of Stage 2/4/11/19 search. Primary publisher and institutional author records preferred. Not systematic or exhaustive. Negative findings mean not admitted from material inspected, not nonexistent.",
+  "queries": [
+    "PLA annealing finite element irreversible strain Black Devil Design Bute 2024",
+    "Prusament PLA thermal conductivity heat capacity temperature Chapuis 2025 2026",
+    "PLA constrained annealing thermomechanical simulation optimization 2025 2026",
+    "PLA annealing recovery constitutive model independent validation crystallization dimensional strain",
+    "\"Prusament\" \"thermal conductivity\" \"heat capacity\"",
+    "\"Bute\" \"Thermal Properties of 3D Printed Products\"",
+    "\"PLA\" \"annealing\" \"finite element\" \"2026\"",
+    "\"PLA\" \"irreversible\" \"strain\" \"2025\"",
+    "\"Prusament\" \"heat capacity\"",
+    "\"Prusament\" \"conductivity\" PLA annealing",
+    "\"Devil Design\" PLA \"heat capacity\"",
+    "\"Mechanical and kinetic characterization\" PLA",
+    "\"PLA\" \"Prusament\" \"specific heat\"",
+    "\"PLA\" \"annealing\" \"constrained\" \"simulation\" 2026 2025",
+    "\"PLA\" \"thermal contact\" \"steel\" annealing",
+    "\"PLA\" \"friction\" \"steel\" \"temperature\"",
+    "Chapuis Shea 4D printed wave spring Prusament PLA 195 water 2023 activation bath 31.9 mm material",
+    "\"Prusament PLA\" annealing shrinkage fixture clearance October 2026 irreversible recovery",
+    "PLA fixture clearance annealing polylactic acid distortion paired plates October 2026 \"model\"",
+    "\"Ultrafuse PLA\" annealing \"warpage\" temperature thermal conductivity cold crystallization model Frölich"
+  ],
+  "routes": [
+    "Web search and publisher primary records",
+    "Backward citation: Chapuis 2025 §3.2.2→Chapuis & Shea 2023 original physical spring",
+    "Backward citation: Bute 2024 §2.3→Bute 2023",
+    "KIT experimental proceedings→KIT doctoral thesis→corresponding primary articles",
+    "Crossref works endpoint: exact DOI/title identity on 31 October 2026"
+  ],
+  "retained_sources": {
+    "benamor2026": {
+      "doi": "10.1007/s43939-026-00769-2",
+      "title": "Multiscale modeling and multiobjective optimization of the mechanical behavior of annealed and non-annealed material extrusion printed PLA",
+      "verified_record": "literature/metadata/master_material/benamor2026.json",
+      "record_sha256": "2c59971fc5bd0c574f94578f4478020b78bfb6cd2cf096ee54c79f31d5ea8aa1",
+      "publisher": "https://link.springer.com/10.1007/s43939-026-00769-2",
+      "access_and_disposition": "Publisher abstract/author conclusions; precedent for tensile FE validation and optimization on annealed MEX PLA."
+    },
+    "bute2023": {
+      "doi": "10.1007/s00170-022-10657-7",
+      "title": "Thermal properties of 3D printed products from the most common polymers",
+      "verified_record": "literature/metadata/master_material/bute2023.json",
+      "record_sha256": "c0b64e032e24f387e0c7af2c8fe0eb991be69c486b87814bd6aed563c4de3930",
+      "publisher": "https://link.springer.com/10.1007/s00170-022-10657-7",
+      "access_and_disposition": "Publisher abstract (subscription full text). Red/LAVA PLA and directionally measured thermal behavior; do not assume formulation matches Black."
+    },
+    "bute2024": {
+      "doi": "10.5755/j02.ms.35076",
+      "title": "Thermomechanical Analysis and Numerical Simulations of Fused Filament Fabricated Polylactic Acid Parts",
+      "verified_record": "literature/metadata/master_material/bute2024.json",
+      "record_sha256": "59dae2ebea91f25e151abfe4ac254d6dddf6b7261f48009f482d1bc3364d43fb",
+      "publisher": "https://matsc.ktu.lt/index.php/MatSc/article/view/35076",
+      "access_and_disposition": "Primary full text local and publisher; sections 2.1–2.3 and 3.1–3.3. Black Devil Design TMA and qualitative thermal-stress comparison; no transferable Prusament law."
+    },
+    "chapuis2023": {
+      "doi": "10.1016/j.matdes.2023.112163",
+      "title": "Redeployable, 4D printed wave spring actuators",
+      "verified_record": "literature/metadata/master_material/chapuis2023.json",
+      "record_sha256": "05b911bb46bb201433dc5c1f3cbeb30f55adc2b73c853faf5a173b2e641f7e15",
+      "publisher": "https://linkinghub.elsevier.com/retrieve/pii/S0264127523005786",
+      "access_and_disposition": "Primary full article (ETH author repository). Sections 2.1.4 and 3.1–3.2, Tables 1–2. Original bath and two-grade architecture; height n=15, force test n=5."
+    },
+    "chapuis2025": {
+      "doi": "10.1088/1361-665x/adeee4",
+      "title": "Thermo-viscoelastic laminate-based finite element modeling of fused filament fabrication direct 4D printing",
+      "verified_record": "literature/metadata/master_material/chapuis2025.json",
+      "record_sha256": "602cd308910db9bf3400e37549ebedab8fa99fcb36814083fca23dd84f900072",
+      "publisher": "https://iopscience.iop.org/article/10.1088/1361-665X/adeee4",
+      "access_and_disposition": "Local primary full article, supplementary PDF, ABAQUS input/mesh and UMAT. Sections 2.1–3.2; Tables 1–5 and Fig. 9. Constitutive calibration and separately reserved geometric/force observations."
+    },
+    "frolich2025": {
+      "doi": "10.21741/9781644903599-246",
+      "title": "Mechanical and kinetic characterization of additively manufactured PLA structures for improved process and warpage modeling",
+      "verified_record": "literature/metadata/master_material/frolich2025.json",
+      "record_sha256": "dac4ed8b5a71aab9a6165982980771a42d1e822fc47ac8cfe49969e251a861e6",
+      "publisher": "https://mrforum.com/product/9781644903599-246",
+      "access_and_disposition": "Primary ten-page KIT author PDF, sections Methods to Conclusions and Figs 1–6. Ultrafuse PLA, calorimetry, DMA and directional TMA; does not provide a validated arbitrarily timed anneal law."
+    },
+    "frolichdeformation2025": {
+      "doi": "10.1016/j.addma.2025.105023",
+      "title": "An orientation-based homogenization approach for predicting process-induced deformations in extrusion-based additive manufacturing",
+      "verified_record": "literature/metadata/master_material/frolichdeformation2025.json",
+      "record_sha256": "dd5823198538b3561f8caca59fd8755da82bf02830958cc6c3684540432e98bd",
+      "publisher": "https://linkinghub.elsevier.com/retrieve/pii/S2214860425003884",
+      "access_and_disposition": "Primary KIT repository/source and corresponding thesis chapter 6. Printing-process warpage, not post-annealing gap response."
+    },
+    "hussam2025": {
+      "doi": "10.1007/s00170-025-15455-5",
+      "title": "Effect of annealing on FDM-manufactured ABS parts",
+      "verified_record": "literature/metadata/master_material/hussam2025.json",
+      "record_sha256": "88fe9545a199ccb38a939c861b8ee0a1eb6ec1ff8968e474ca9b45b04db51714",
+      "publisher": "https://link.springer.com/10.1007/s00170-025-15455-5",
+      "access_and_disposition": "Existing publisher primary HTML saved stage19; ABS mould-clearance precedent, not PLA coefficient."
+    },
+    "kujawa2025": {
+      "doi": "10.2478/msp-2025-0039",
+      "title": "Sliding elements made from biodegradable plastic – friction and wear of poly(lactic acid) compared to polyamide 6",
+      "verified_record": "literature/metadata/master_material/kujawa2025.json",
+      "record_sha256": "cd63099705b20761a11979fa5cf305a06fc4346e8a4444d7bb393419642801b7",
+      "publisher": "https://reference-global.com/article/10.2478/msp-2025-0039",
+      "access_and_disposition": "Publisher primary Conclusions: finite sliding velocity, pressure and wear; not incipient near-static hot fixture contact."
+    },
+    "lakshmaiya2026": {
+      "doi": "10.1016/j.rineng.2026.110279",
+      "title": "Thermo-constrained physics informed neural network based optimization of mechanical performance in recycled PLA additive manufacturing",
+      "verified_record": "literature/metadata/master_material/lakshmaiya2026.json",
+      "record_sha256": "fb127cd12a799da78de46251a99ef867866d3a482784a3039f24a6005676e41c",
+      "publisher": "https://linkinghub.elsevier.com/retrieve/pii/S2590123026013137",
+      "access_and_disposition": "Publisher primary text, Methods/Results: recycled PLA strengths, surrogates and optimization. Not a gap-controlled prediction."
+    },
+    "lorenzoni2024": {
+      "doi": "10.21741/9781644903131-11",
+      "title": "Preliminary study on the impact of thermal processing on the performances of parts obtained by fused deposition modeling (FDM)",
+      "verified_record": "literature/metadata/master_material/lorenzoni2024.json",
+      "record_sha256": "d1ea977a996aa18fb34d7c9a8f09124a662f2e6b6a2defe686b4cdb5974b9378",
+      "publisher": "https://www.mrforum.com/product/9781644903131-11",
+      "access_and_disposition": "Full paper via validation-audit teammate, pp. 103–104; hand-tightened Al plate-annealing precedent."
+    },
+    "tough2025": {
+      "doi": "10.3390/jfb16090334",
+      "title": "Sustainable Thermal Post-Processing of PLA 3D Prints: Increased Dimensional Precision and Autoclave Compatibility",
+      "verified_record": "literature/metadata/master_material/tough2025.json",
+      "record_sha256": "4841211f5a371bf2655d05f56121acf3f90f92c7110e018c8d1196c3fb05be3d",
+      "publisher": "https://www.mdpi.com/2079-4983/16/9/334",
+      "access_and_disposition": "Publisher primary Materials subsection: Ultrafuse PLA Tough, distinct formulation, not interchangeable with neat Ultrafuse."
+    }
+  },
+  "external_files_not_redistributed": [
+    {
+      "local_review_copy": "tmp/literature/Laminate2025.pdf",
+      "source": "https://doi.org/10.1088/1361-665X/adeee4",
+      "sha256": "b6ec6b2d8c70b3628e27dbea07735c44b44d30f7dda666a43e94e5585c0180a7"
+    },
+    {
+      "local_review_copy": "tmp/literature/Laminate2025_supp1.zip",
+      "source": "https://doi.org/10.1088/1361-665X/adeee4",
+      "sha256": "7735e4421160fb795d14784fca5bd0e0049e8a2ba4a293fba89aabb4fa7ba41f"
+    },
+    {
+      "local_review_copy": "tmp/literature/Laminate2025_supp1_stage4/AbaqusWaveSpringInput.inp",
+      "source": "supplement archive, member AbaqusWaveSpringInput.inp",
+      "sha256": "77bb997a36faa0cad21ebf3a1b7f07400abce99c17192ca74c9f9c8b487e3e97"
+    },
+    {
+      "local_review_copy": "tmp/literature/Laminate2025_supp1_stage4/AbaqusWaveSpringInput.inc",
+      "source": "supplement archive, member AbaqusWaveSpringInput.inc",
+      "sha256": "890e374114376513b220db5e5a4caf742ffcc781673c728811383f76cea6e3ee"
+    },
+    {
+      "local_review_copy": "tmp/literature/Frolich2025.pdf",
+      "source": "https://publikationen.bibliothek.kit.edu/1000181445/159679298",
+      "sha256": "759fc3783151ea76c992ff41db3cf46a258927755542bcb6e4fddb33b06333ce"
+    },
+    {
+      "local_review_copy": "tmp/literature/FrolichThesis.pdf",
+      "source": "https://publikationen.bibliothek.kit.edu/1000188526/171002731",
+      "sha256": "98fa47d8e67c63ffb53b5a10875b709d4a87b638f1027279a507011725726b68"
+    },
+    {
+      "local_review_copy": "tmp/literature/Bute2024.pdf",
+      "source": "https://doi.org/10.5755/j02.ms.35076",
+      "sha256": "9638cf851454a53a48e341e779494e0252555114f94b3d884f5d29e641a389e5"
+    }
+  ],
+  "limitations": [
+    "Not a subscription Scopus/WoS search. One Bute thermal paper was accessible as publisher abstract only. Digitization of one thermal path cannot identify a general time-temperature law.",
+    "Prusament hits from recycled/filled/sensor/other polymer materials and forum discussions were screened out as evidence for the specified unfilled PLA.",
+    "Crossref metadata snapshots here contain identity fields and response hashes (raw response not redistributed). The original bibliography and Stage20 identity audit remain separate."
+  ],
+  "final_targeted_check": "2026-11-01",
+  "additional_check": {
+    "queries": [
+      "PLA annealing clearance simulation2026",
+      "Prusament annealing recovery2026",
+      "Influence of Annealing Time Prusament dimensions"
+    ],
+    "record": "Suder2020 MM Science Journal DOI10.17973/MMSJ.2020_11_2020048 verified via publisher PDF and Crossref; companion EAN2020 university record pp476-482,110C outside range",
+    "source_url": "https://www.mmscience.eu/journal/issues/november-2020/articles/the-influence-of-annealing-temperature-on-tensile-strength-of-polylactic-acid/download",
+    "method": "publisher full PDF text via web; direct download403; no copied PDF in Git",
+    "disposition": "four independent candidate means reserved; no matched initial-state law or measured specimen history"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "layout": "coexpanding_inside_spacers",
+  "gap_mm": 0.02,
+  "temperature_C": [
+    30,
+    45,
+    60,
+    70,
+    75,
+    80,
+    75,
+    70,
+    60,
+    45,
+    30,
+    23
+  ],
+  "reference_C": 23,
+  "units": "N, mm, MPa",
+  "thermal_input": "prescribed uniform temperature; load index is not physical time",
+  "material": "Constant equilibrium modulus k0, no recovery: limiting elastic verification only",
+  "young_MPa": 10.598,
+  "poisson": 0.35,
+  "alpha_pla_per_K": 6.8e-05,
+  "alpha_steel_per_K": 1.6e-05,
+  "selection": "For g=0.02 mm compare three different mount idealisations. No fitted values. Free thermal expansion before contact is the analytical comparator.",
+  "tolerance": "absolute gap error <= 1e-7 mm; absolute force error <= 1e-4 N; correct status at all sampled loads"
+}

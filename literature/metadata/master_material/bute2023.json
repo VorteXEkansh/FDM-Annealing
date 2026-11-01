@@ -1,0 +1,121 @@
+{
+  "DOI": "10.1007/s00170-022-10657-7",
+  "title": [
+    "Thermal properties of 3D printed products from the most common polymers"
+  ],
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-7592-3502",
+      "authenticated-orcid": false,
+      "given": "Irina",
+      "family": "Bute",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Sergejs",
+      "family": "Tarasovs",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Sergejs",
+      "family": "Vidinejevs",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Laima",
+      "family": "Vevere",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jevgenijs",
+      "family": "Sevcenko",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Andrey",
+      "family": "Aniskevich",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "The International Journal of Advanced Manufacturing Technology"
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2022,
+        12,
+        17
+      ]
+    ]
+  },
+  "published-online": {
+    "date-parts": [
+      [
+        2022,
+        12,
+        17
+      ]
+    ]
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2023,
+        2
+      ]
+    ]
+  },
+  "type": "journal-article",
+  "resource": {
+    "primary": {
+      "URL": "https://link.springer.com/10.1007/s00170-022-10657-7"
+    }
+  },
+  "URL": "https://doi.org/10.1007/s00170-022-10657-7",
+  "crossref_url": "https://api.crossref.org/works/10.1007/s00170-022-10657-7",
+  "retrieved": "2026-10-31",
+  "response_sha256": "ee24f7ceaeec8c451875db30299c9ac6cf93992d0c3b62676199e9c8c86625a4"
+}

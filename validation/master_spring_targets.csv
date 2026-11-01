@@ -1,0 +1,3 @@
+target_id,observable,unit,reported_mean,reported_sd,n,source_doi,locator,cohort,status,project_prediction,project_error
+WS-H,Maximum free height after initial deployment,mm,31.9,2.29,15,10.1016/j.matdes.2023.112163,Table 2 and section 3.1,Multiple-turn springs; not the bilayer curvature calibration specimens,Conditional external physical target only; dual PLA grades and bath-vs-nodal temperature mismatch,,
+WS-F,Axial reaction magnitude at 40 percent compression,N,43.69,,5,10.1088/1361-665X/adeee4,Section 3.2.2 and Figure 9f,Five physical springs in force curve; do not count height subset and force cohort as independent validation groups,Conditional external physical target only; plotted spread not extracted; no material-point-to-force mapping,,

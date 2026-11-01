@@ -1,0 +1,61 @@
+{
+  "DOI": "10.21741/9781644903131-11",
+  "title": [
+    "Preliminary study on the impact of thermal processing on the performances of parts obtained by fused deposition modeling (FDM)"
+  ],
+  "author": [
+    {
+      "given": "Margaux",
+      "family": "LORENZONI",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "Materials Research Proceedings",
+    "Material Forming: ESAFORM 2024"
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        5,
+        15
+      ]
+    ]
+  },
+  "published-online": {
+    "date-parts": [
+      [
+        2024,
+        5,
+        15
+      ]
+    ]
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2024,
+        5,
+        25
+      ]
+    ]
+  },
+  "type": "proceedings-article",
+  "resource": {
+    "primary": {
+      "URL": "https://www.mrforum.com/product/9781644903131-11"
+    }
+  },
+  "URL": "https://doi.org/10.21741/9781644903131-11",
+  "crossref_url": "https://api.crossref.org/works/10.21741/9781644903131-11",
+  "retrieved": "2026-10-31",
+  "response_sha256": "37c38a29c6913929925259b3dc343a5db4c1cf42750b7a67aa731512757758ff"
+}

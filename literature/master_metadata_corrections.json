@@ -1,0 +1,16 @@
+{
+  "checked": "2026-11-01",
+  "purpose": "Publisher author lists supplement incomplete Crossref records; raw metadata is unchanged.",
+  "master/lorenzoni2024": {
+    "authors": ["Lorenzoni, M.", "Odent, J.", "Rivière-Lorphèvre, É.", "Spitaels, L.", "Homrani, M.K.", "Ducobu, F."],
+    "volume": "41", "page": "100–109",
+    "source": "https://mrforum.com/wp-content/uploads/open_access/9781644903131/11.pdf",
+    "location": "First page author line"
+  },
+  "master/frolich2025": {
+    "authors": ["Frölich, F.", "Dörr, D.", "Jackstadt, A.", "Wittemann, F.", "Kärger, L."],
+    "volume": "54", "page": "2281–2290",
+    "source": "https://mrforum.com/product/9781644903599-246/",
+    "location": "Publisher bibliographic header"
+  }
+}

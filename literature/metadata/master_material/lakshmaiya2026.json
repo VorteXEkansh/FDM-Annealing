@@ -1,0 +1,51 @@
+{
+  "DOI": "10.1016/j.rineng.2026.110279",
+  "title": [
+    "Thermo-constrained physics informed neural network based optimization of mechanical performance in recycled PLA additive manufacturing"
+  ],
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0003-1001-3422",
+      "authenticated-orcid": false,
+      "given": "Natrayan",
+      "family": "Lakshmaiya",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "Results in Engineering"
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2026,
+        6
+      ]
+    ]
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2026,
+        6
+      ]
+    ]
+  },
+  "type": "journal-article",
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2590123026013137"
+    }
+  },
+  "URL": "https://doi.org/10.1016/j.rineng.2026.110279",
+  "crossref_url": "https://api.crossref.org/works/10.1016/j.rineng.2026.110279",
+  "retrieved": "2026-10-31",
+  "response_sha256": "a841c613262da0eb42545617efab8d83940a2e2b670df7d414ef639e9b31a91b"
+}

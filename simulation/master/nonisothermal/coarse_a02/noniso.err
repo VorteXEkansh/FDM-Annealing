@@ -1,0 +1,10 @@
+/COM,ANSYS RELEASE 2026 R1           BUILD 26.1      UP20260202       13:06:54
+
+ *** ERROR ***                           ELAPSED TIME =      27.868   TIME= 13:07:11
+ Solution not converged at time 41 (load step 6 substep 1).              
+  Run terminated.                                                        
+
+ *** WARNING ***                         ELAPSED TIME =      27.868   TIME= 13:07:11
+ The unconverged solution (identified as time 42 substep 999999) is      
+ output for analysis debug purposes.  Results should not be used for     
+ any other purpose.                                                      

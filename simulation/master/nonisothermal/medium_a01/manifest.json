@@ -1,0 +1,32 @@
+{
+  "accepted": false,
+  "error": "",
+  "returncode": 0,
+  "runtime_s": 49.23399999993853,
+  "command": [
+    "C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\ansys\\bin\\winx64\\ANSYS261.exe",
+    "-b",
+    "-i",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM-Annealing\\noniso_medium_a01\\input.dat",
+    "-o",
+    "C:\\Users\\asus\\AppData\\Local\\Temp\\FDM-Annealing\\noniso_medium_a01\\mapdl.out",
+    "-j",
+    "noniso",
+    "-smp",
+    "-np",
+    "1"
+  ],
+  "material_sha256": "1770a657e81e7b8f94ae291f3527ef586bd7c06c9a3882702dd1361aa90eae20",
+  "files": {
+    "case.json": "1d63c8d56feb927d9c0f733c2d4d8079614b50899b9d7864de3c775f43138fb9",
+    "comparison.csv": "4a3c5246560ad987728d04733e80ab2003bbc1fe90580b86c7dfe1eb2c0bb720",
+    "input.dat": "0f98d19fb26ea8fa5e4e713179d037947f28cbc3bc7a31018548558737fce69d",
+    "mapdl.out": "ee317e1175cd62e08644912261a248edb2ee110ce5a1794a5f8f77001d495504",
+    "noniso.err": "1a8ddb8ca69fc5c6c7d3577ce6afa3fc8664c224fdd07183c9a8b3b4c5133634",
+    "noniso.rst": "c8fba6a5dbfed7a4831446efe94257f143001f3d517c0f0ba1aacfd7b02b68d3",
+    "script_snapshot.py": "a616743d25cef1ea8927dbd3b136644e4980b0e342dff3628d0b1704ea464f00",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "values.csv": "ebaa40fde87f224856114cebc13fb2d2cf57026ed40cf2a7ca7ab1d13b820085"
+  }
+}

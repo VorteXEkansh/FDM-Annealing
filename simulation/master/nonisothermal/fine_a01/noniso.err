@@ -1,0 +1,17 @@
+/COM,ANSYS RELEASE 2026 R1           BUILD 26.1      UP20260202       12:50:32
+
+ *** WARNING ***                         ELAPSED TIME =       6.014   TIME= 12:50:34
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 4.066743012E-03 is less than a      
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+
+ *** WARNING ***                         ELAPSED TIME =      39.296   TIME= 12:51:07
+ A reference force value times the tolerance is used by the              
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference FORCE CONVERGENCE VALUE = 9.89154501E-03 is less than a       
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      

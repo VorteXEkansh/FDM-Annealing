@@ -1,0 +1,8 @@
+axis,coarse,fine,max_difference_MPa,max_relative_difference_percent,passed_samples,sample_count,all_pass
+timestep,coarse_a03,confirm_a01,0.005041241645930006,9.13189670174973,21,26,False
+timestep,coarse_a03,fine_a01,0.00506591796875,8.964091857584325,20,26,False
+timestep,coarse_a03,medium_a01,0.005095124244689941,8.611211712037552,20,26,False
+timestep,fine_a01,confirm_a01,9.330362078009691e-05,0.22324988870006698,26,26,True
+timestep,medium_a01,confirm_a01,0.00024855509402210013,0.5697471204799449,25,26,False
+shift_table_spacing,confirm_a01,table_confirm_a01,6.079673769976424e-06,0.0018343210486664223,26,26,True
+timestep,medium_a01,fine_a01,0.00016814097762780228,0.38613067549912594,26,26,True
